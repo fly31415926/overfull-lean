@@ -87,6 +87,8 @@ import Overfull.MatchingRepair
 import Overfull.Dense.BalanceRepair
 import Overfull.Replacement
 import Overfull.PrescribedMatching
+import Overfull.ForceMatching
+import Overfull.SafePrescription
 /-!
 # Partial formalization of the overfull manuscript
 

@@ -66,6 +66,8 @@ Overfull.mainTheorem_of_criticalExclusion
 | Lemma 4.1: reserve repair | `Overfull.MatchingRepair.reserve_repair` | Uniform constants, actual disjoint repaired matchings perfect outside the prescribed sets, and degree at most `μm` in both the used-reserve and released-original-edge unions |
 | Lemma 4.7: matching-deletion probabilities | `Overfull.MatchingProbability.Distribution.odd_failure_probability`, `even_toggles_failure_probability`, and `family_failure_probability` | All three probability bounds, with the actual residual graph identified; also generalized to loopless multigraphs |
 | Lemma 4.8: retaining prescribed exceptional edges | `Overfull.prescribed_exceptional_core_matching` | An actual perfect matching omitting at most `135720` prescribed matching edges, with all path, connectivity, parity, and Tutte conditions proved from the graph |
+| Lemma 4.9: preserving prescribed exceptional edges | `Overfull.safe_prescription` | An actual perfect matching retaining all but `c₁ = 2q₀ + 4c₀` prescribed edges, fixing the sampled boundary and leaving no overfull set, with uniform constants |
+| Lemma 4.11: forcing an exceptional star | `Overfull.force_exceptional_star` | For each exceptional-centered star of more than `11*2^(t+4)` edges, an actual perfect matching meeting that star, obtained from a compressed matching with a proved forest projection; its deletion leaves no overfull set |
 | Lemma 5.3: encoding a precoloring by triangles | `Overfull.dense_encoding` | Local balance, exact deficit identities, and both directions of the extension/decomposition equivalence |
 | Lemma 5.4: the explicit cycle absorber | `Overfull.Dense.CycleAbsorber.in_host` | Every positive cycle length; both triangle decompositions and the exact counts |
 | Lemma 5.5: the finite absorber | `Overfull.Dense.FiniteAbsorber.finite_absorber_subgraph` | One actual absorber for every allowed balanced remainder, with simultaneous placement and total size at most `4h²2^(h²)` |
@@ -78,7 +80,7 @@ Overfull.mainTheorem_of_criticalExclusion
 | Proposition 7.1: the sharpness family | `Overfull.sharpness_family` | Connectivity, order, maximum degree, class 2, edge count, and no overfull set |
 | Corollary 7.2: arbitrarily large examples below one quarter | `Overfull.arbitrarily_large_class_two_graphs` | Every real coefficient below `1/4` and every order threshold |
 
-These are 37 of the manuscript's 69 numbered assertions. The remaining 32, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
+These are 39 of the manuscript's 69 numbered assertions. The remaining 30, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
 
 ## Further checked inputs
 
@@ -211,6 +213,22 @@ The proof constructs each repair in the unused reserve. [`Overfull/MatchingRepai
 [`Overfull/PrescribedMatching.lean`](Overfull/PrescribedMatching.lean) proves full Lemma 4.8. In a graph with at most four large core cliques and an exceptional set, an actual perfect matching retains all but at most `135720` edges of the prescribed matching. The hypotheses include the existence of an initial perfect matching, as in the manuscript. The formal theorem also permits overlapping core cliques and prescribed edges with both endpoints exceptional.
 
 The proof constructs paths with at most twelve vertices and a bounded set preserving core connectivity after any deletion of at most three vertices. It discards only prescribed matching edges meeting that set, proves actual component and parity comparisons, checks all three ranges of Tutte deletion sets, and completes the retained matching. No path, witness, or Tutte feasibility statement is assumed in the public theorem. [`docs/prescribed-matching.md`](docs/prescribed-matching.md) records the exact hypotheses and the six proof modules.
+
+### Preserving prescribed edges and odd-set inequalities
+
+[`Overfull/SafePrescription.lean`](Overfull/SafePrescription.lean) proves Lemma 4.9. For the stated regular graph, robust cores, cluster groups, and prescribed exceptional matching, it constructs a perfect matching whose deletion leaves no overfull set and which omits at most `c₁ = 2q₀ + 4c₀` prescribed edges. Here `q₀ = 4096(t₀+6)` and `c₀ = 135720`. The marked-set bound `t₀` is fixed before the error tolerance and order threshold. Both constants precede the graph and the actual exceptional order, which may grow with `n` subject to `a + |Z| + 1 ≤ εn`.
+
+The proof samples an actual perfect matching preserving the tested cuts and constructs its exact boundary submatching, consisting of edges meeting the marked set or joining different clusters. The finite Markov estimate bounds this submatching by `q₀` edges. After its vertices are removed, one application of Lemma 4.8 across all surviving cores, followed by compression, gives an actual retained partial matching `F`. This proves the stronger intermediate loss bound `2q₀ + c₀`. Every retained edge belongs to the original graph, and completion inside the actual robust cores preserves `F`.
+
+The proof derives the small-cut classification from the group condition and actual core expansion. Fixing the boundary transfers the tested odd-cut inequalities on whole-cluster unions and their one-vertex changes. The residual core bounds then exclude every overfull set after the perfect matching is deleted. This proves one safe-prescription step. The iterative refinement in Proposition 4.10 and the repeated forcing and absorption in Proposition 4.12 remain unverified.
+
+### Forcing an exceptional star
+
+[`Overfull/ForceMatching.lean`](Overfull/ForceMatching.lean) proves Lemma 4.11. In the stated `h`-regular graph with no `h`-overfull set, at most four disjoint robust cores, and at most `t` exceptional vertices, every star of more than `11*2^(t+4)` edges centered at an exceptional vertex is met by a perfect matching whose deletion leaves no overfull set at degree `h−1`. The robust range and positive error tolerance are fixed before `t`; only the lower bound on the graph order may depend on `t`.
+
+The proof constructs all three actual matchings: the sampled perfect matching, its compressed submatching, and the perfect completion inside the cores. [`Overfull/Compression/Matching.lean`](Overfull/Compression/Matching.lean) retains every exceptional-incident edge and at most three joining edges whose projected labels form a forest, and proves even uncovered order in every core. The probability argument counts the actual tested family and uses the exact star probability `|S|/h`. Completion preserves the whole-union cut-edge sets of the compressed matching. The parity of perfect-matching cuts controls every one-vertex toggle, and the small-cut theorem then excludes every overfull set in the actual residual graph.
+
+This is one forcing step. The repeated forcing and absorption required by Proposition 4.12 remain unproved; the result does not supply an adaptive sequence by repeated halving of the robust parameter.
 
 ### The coloring encoding and balanced reserve
 
