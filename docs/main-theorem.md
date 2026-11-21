@@ -120,6 +120,7 @@ The following results are separate from that unproved structural exclusion.
 | Full adaptive ordinary packing, with uniform constants, actual matchings, and robust expansion after every prefix | `Overfull.adaptive_ordinary_packing` |
 | An actual balanced robust cut crosses every edge of the supplied matching | `Overfull.PairedCut.exists_matching_cut` |
 | The bipartite outcome yields actual equal retained sides of size at least `n/3` and the stated crossing-degree bounds | `Overfull.BalancedCore.balanced_core_of_bipartite_outcome` |
+| An actual robust core replacement retains the exterior and preserves the maximum-degree bound and every overfull-set inequality | `Overfull.robust_core_replacement` |
 | Actual released-edge degree is bounded by actual reserve-use degree, including disjoint families | `Overfull.MatchingRepairAccounting.released_degree_le` and `released_union_degree_le` |
 | Actual reserve use is bounded by internal load plus endpoint incidence, and insertion preserves internal capacity | `Overfull.MatchingRepairLoad.actual_load_le_internal_add_endpoints` and `internalLoad_update_insert_matching` |
 | One matching is completed in the actual unused reserve while protecting the specified covered vertices | `Overfull.MatchingRepairStep.exists_protected_completion` |
@@ -133,6 +134,7 @@ The following results are separate from that unproved structural exclusion.
 | One bounded absorber in the actual dense host for every balanced remainder on U, with exact total bound `4h²2^(h²)` | `Overfull.Dense.FiniteAbsorber.finite_absorber_subgraph` |
 | All three matching-deletion probability bounds, including all one-vertex changes of an even set | `Overfull.MatchingProbability.Distribution.odd_failure_probability`, `even_toggles_failure_probability`, and `family_failure_probability` |
 | The same three probability bounds for loopless multigraphs, with the actual deleted-edge graph identified | `Overfull.MultigraphMatchingProbability.Distribution.odd_failure_probability`, `even_toggles_failure_probability`, and `family_failure_probability` |
+| An actual perfect matching retains all but at most `135720` prescribed exceptional matching edges | `Overfull.prescribed_exceptional_core_matching` |
 | Signed flows with the balanced bound `d/λ` and unequal-side bound `3θ/(2c−1)` | `Overfull.dense_signed_flow` and `Overfull.dense_unequal_flow` |
 | The exact equivalence between extending the prescribed edge-copy coloring and decomposing the encoded graph into triangles | `Overfull.dense_encoding` |
 | Positive, exactly balanced probabilities on all six directed pairs, with constants depending only on the density parameter | `Overfull.dense_reserve` |
@@ -245,8 +247,21 @@ deleted degree is at most `5√ξn`, and the residual is locally balanced.
 All routing hypotheses are derived from the stated graph densities and
 the proved deletion bounds.
 
-There are complete proofs of 35 of the 69 numbered assertions. The remaining
-34 include the main theorem and the structural exclusion on which its
+Lemma 3.3 is complete. It constructs the replacement core on its actual
+vertex set, deletes every forbidden exterior edge, and proves the degree
+and robust-expansion bounds. Actual core cuts and exact induced-edge
+identities rule out every new overfull set. The constants precede the
+graph and original core. See [`replacement.md`](replacement.md).
+
+Lemma 4.8 is complete. Its twelve-vertex paths and finite witness are
+constructed from the graph. Restricting the prescribed matching to avoid
+that witness loses at most `135720` actual edges. The proof establishes
+the required component correspondences, parity transfer, and all Tutte
+inequalities before constructing the perfect matching. See
+[`prescribed-matching.md`](prescribed-matching.md).
+
+There are complete proofs of 37 of the 69 numbered assertions. The remaining
+32 include the main theorem and the structural exclusion on which its
 checked reduction depends.
 
 ## What remains
