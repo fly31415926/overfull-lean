@@ -92,6 +92,39 @@ import Overfull.SafePrescription
 import Overfull.OrdinaryPackingPrefix
 import Overfull.ForeignEdges.Minority
 import Overfull.ForeignEdges.ColorClasses
+import Overfull.ForeignEdges.Adaptive
+import Overfull.ForeignEdges.Assignment
+import Overfull.ForeignEdges.Completion
+import Overfull.ForeignEdges.EpochParameters
+import Overfull.ForeignEdges.FinalCount
+import Overfull.ForeignEdges.Incidence
+import Overfull.ForeignEdges.PackingSchedule
+import Overfull.ForeignEdges.Phase
+import Overfull.ForeignEdges.PhaseConclusion
+import Overfull.ForeignEdges.Refinement
+import Overfull.ForeignEdges.RefinementCore
+import Overfull.ForeignEdges.RuleCompletion
+import Overfull.ForeignEdges.RuleStep
+import Overfull.ForeignEdges.SmallCutRefinement
+import Overfull.ForeignEdges.Transcript
+import Overfull.SafePrescription.Adaptive
+import Overfull.ForeignEdges.Concatenation
+import Overfull.ForeignEdges.ConfiguredEpoch
+import Overfull.ForeignEdges.Epoch
+import Overfull.ForeignEdges.EpochConclusion
+import Overfull.ForeignEdges.EpochState
+import Overfull.ForeignEdges.GlobalParameters
+import Overfull.ForeignEdges.PrefixParameters
+import Overfull.ForeignEdges.PreparationRule
+import Overfull.ForeignEdges.ProcessParameters
+import Overfull.ForeignEdges.ProcessRefinement
+import Overfull.ForeignEdges.ProcessState
+import Overfull.ForeignEdges.Reduction
+import Overfull.ForeignEdges.ReductionError
+import Overfull.ForeignEdges.ReductionResult
+import Overfull.ForeignEdges.RefinementHistory
+import Overfull.Absorption.Bounded
+import Overfull.Patterns.Frequent
 /-!
 # Partial formalization of the overfull manuscript
 
