@@ -1,5 +1,7 @@
 # Lean formalization of the overfull manuscript
 
+[Repository](https://github.com/fly31415926/overfull-lean) · [Verification workflow](https://github.com/fly31415926/overfull-lean/actions)
+
 **The main theorem is not yet verified in Lean.** This project proves several of its supporting results, Vizing's edge-coloring bound, the critical-graph reduction, and the full sharpness construction. The structural exclusion needed to finish the main theorem remains unproved.
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
@@ -60,8 +62,10 @@ Overfull.mainTheorem_of_criticalExclusion
 | Lemma 2.21: balanced robust realization | `Overfull.balanced_robust_realization` | Exact prescribed labelled degrees, a simple robust expander, and constants chosen before the order and degree sequence |
 | Lemma 2.22: robust auxiliary completion | `Overfull.robust_auxiliary_completion` | The least auxiliary order, even regular completion, original edge copies retained, simple added edges, a robust auxiliary core, and no overfull set |
 | Lemma 2.25: balanced-core extraction | `Overfull.BalancedCore.balanced_core_of_bipartite_outcome` | From the stated bipartite outcome, actual equal retained sides of size at least `n/3`, at most `6√ρn` deleted vertices, and crossing degrees between `Δ−8√ρn` and `Δ` |
+| Lemma 3.3: replacing a dense core | `Overfull.robust_core_replacement` | An actual robust replacement on the prescribed even vertex set, retaining the exterior and preserving the maximum-degree bound and every overfull-set inequality, with uniform constants |
 | Lemma 4.1: reserve repair | `Overfull.MatchingRepair.reserve_repair` | Uniform constants, actual disjoint repaired matchings perfect outside the prescribed sets, and degree at most `μm` in both the used-reserve and released-original-edge unions |
 | Lemma 4.7: matching-deletion probabilities | `Overfull.MatchingProbability.Distribution.odd_failure_probability`, `even_toggles_failure_probability`, and `family_failure_probability` | All three probability bounds, with the actual residual graph identified; also generalized to loopless multigraphs |
+| Lemma 4.8: retaining prescribed exceptional edges | `Overfull.prescribed_exceptional_core_matching` | An actual perfect matching omitting at most `135720` prescribed matching edges, with all path, connectivity, parity, and Tutte conditions proved from the graph |
 | Lemma 5.3: encoding a precoloring by triangles | `Overfull.dense_encoding` | Local balance, exact deficit identities, and both directions of the extension/decomposition equivalence |
 | Lemma 5.4: the explicit cycle absorber | `Overfull.Dense.CycleAbsorber.in_host` | Every positive cycle length; both triangle decompositions and the exact counts |
 | Lemma 5.5: the finite absorber | `Overfull.Dense.FiniteAbsorber.finite_absorber_subgraph` | One actual absorber for every allowed balanced remainder, with simultaneous placement and total size at most `4h²2^(h²)` |
@@ -74,7 +78,7 @@ Overfull.mainTheorem_of_criticalExclusion
 | Proposition 7.1: the sharpness family | `Overfull.sharpness_family` | Connectivity, order, maximum degree, class 2, edge count, and no overfull set |
 | Corollary 7.2: arbitrarily large examples below one quarter | `Overfull.arbitrarily_large_class_two_graphs` | Every real coefficient below `1/4` and every order threshold |
 
-These are 35 of the manuscript's 69 numbered assertions. The remaining 34, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
+These are 37 of the manuscript's 69 numbered assertions. The remaining 32, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
 
 ## Further checked inputs
 
@@ -190,11 +194,23 @@ The proof constructs an equitable regularity partition using mathlib's proved re
 
 [`Overfull/BalancedCore.lean`](Overfull/BalancedCore.lean) proves Lemma 2.25 from the precise bipartite outcome properties supplied by Lemma 2.24. It defines the vertices with too few neighbors across the original partition, deletes this actual set, and trims the larger surviving side. The retained sides have the same size, at least `n/3`; at most `6√ρn` vertices are lost, and every degree in the actual crossing graph lies between `Δ−8√ρn` and `Δ`. The construction includes the zero-error case. The preceding existence and classification assertion in Lemma 2.24 remains unproved.
 
+### Replacing a dense core
+
+[`Overfull/Replacement.lean`](Overfull/Replacement.lean) proves full Lemma 3.3. For fixed `β > 0` and `0 < τ ≤ min(β/16,1/4)`, it chooses positive `μ`, `ξ`, and an order threshold before the graph and its even core vertex set. The output is an actual robust `(μ,τ)`-expander on that set, with minimum degree at least `k−2a−1`. Its edges avoid the retained exterior, and the ambient replacement has maximum degree at most `k` and no `k`-overfull set.
+
+The proof constructs a regular robust graph using Lemma 2.21 and deletes its forbidden exterior edges. Exact graph identities control the degrees and induced edge counts. Actual robust core cuts reduce a possible overfull set to the four small or complementary-small core intersections; regular degree counts handle each case. [`docs/replacement.md`](docs/replacement.md) gives the statement and proof map. The subsequent coloring of the comparison graph remains a separate task.
+
 ### Repairing a family of matchings
 
 [`Overfull/MatchingRepair.lean`](Overfull/MatchingRepair.lean) proves full Lemma 4.1. For every sufficiently small positive `μ`, it chooses a positive error and an order threshold before the reserve graph and matching family. The resulting matchings are perfect outside the prescribed forbidden sets, use only their own original edges and reserve edges, and are pairwise edge-disjoint. Both the actual used-reserve union and the actual released-original-edge union have degree at most `μm` at every vertex.
 
 The proof constructs each repair in the unused reserve. [`Overfull/MatchingRepairStep.lean`](Overfull/MatchingRepairStep.lean) constructs the required robust cut and completes a matching while protecting specified covered vertices. [`Overfull/MatchingRepairLoad.lean`](Overfull/MatchingRepairLoad.lean) separates internal reserve incidence from incidence at the original uncovered vertices and preserves the integer internal capacity through each update. [`Overfull/MatchingRepairFamily.lean`](Overfull/MatchingRepairFamily.lean) proves disjointness of the updated family, and [`Overfull/MatchingRepairAccounting.lean`](Overfull/MatchingRepairAccounting.lean) bounds released-edge degree by used-reserve degree. All parameter choices and the finite-family induction are proved. [`docs/matching-repair.md`](docs/matching-repair.md) records the hypotheses, numerical choices, and proof map.
+
+### Retaining prescribed exceptional edges
+
+[`Overfull/PrescribedMatching.lean`](Overfull/PrescribedMatching.lean) proves full Lemma 4.8. In a graph with at most four large core cliques and an exceptional set, an actual perfect matching retains all but at most `135720` edges of the prescribed matching. The hypotheses include the existence of an initial perfect matching, as in the manuscript. The formal theorem also permits overlapping core cliques and prescribed edges with both endpoints exceptional.
+
+The proof constructs paths with at most twelve vertices and a bounded set preserving core connectivity after any deletion of at most three vertices. It discards only prescribed matching edges meeting that set, proves actual component and parity comparisons, checks all three ranges of Tutte deletion sets, and completes the retained matching. No path, witness, or Tutte feasibility statement is assumed in the public theorem. [`docs/prescribed-matching.md`](docs/prescribed-matching.md) records the exact hypotheses and the six proof modules.
 
 ### The coloring encoding and balanced reserve
 

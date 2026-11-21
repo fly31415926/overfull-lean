@@ -85,6 +85,8 @@ import Overfull.Dense.BalanceRepair.Graph
 import Overfull.Dense.BalanceRepair.Routing
 import Overfull.MatchingRepair
 import Overfull.Dense.BalanceRepair
+import Overfull.Replacement
+import Overfull.PrescribedMatching
 /-!
 # Partial formalization of the overfull manuscript
 
