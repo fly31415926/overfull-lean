@@ -24,7 +24,7 @@
       "manuscript_label": "sharp:thm:family",
       "manuscript_number": "7.1",
       "proved": true,
-      "scope": "The full assertion of Proposition 7.1 for every odd Delta >= 3: a connected simple graph on Fin (4*Delta+5), maximum degree Delta, no proper Delta-edge-coloring, a proper (Delta+1)-edge-coloring, no Delta-overfull vertex set, and exactly 2*Delta*(Delta+1) edges. The two coloring statements express the exact class-2 conclusion without invoking Vizing\u2019s theorem.",
+      "scope": "The full assertion of Proposition 7.1 for every odd Delta >= 3: a connected simple graph on Fin (4*Delta+5), maximum degree Delta, no proper Delta-edge-coloring, a proper (Delta+1)-edge-coloring, no Delta-overfull vertex set, and exactly 2*Delta*(Delta+1) edges. The two coloring statements express the exact class-2 conclusion without invoking Vizing’s theorem.",
       "proof_declaration": "Overfull.sharpness_family",
       "proof_file": "Overfull/Sharpness/Theorems.lean"
     }
@@ -32,7 +32,7 @@
   "coverage_file": "coverage.json",
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
-  "fully_verified_numbered_assertions": 37,
+  "fully_verified_numbered_assertions": 39,
   "additional_complete_results": [
     {
       "lean_name": "Overfull.arbitrarily_large_class_two_graphs",
@@ -43,5 +43,51 @@
       "scope": "For every real c < 1/4 and every natural order bound N, a connected simple class-2 graph exists on Fin n for some n >= N, with maximum degree at least c*n and no overfull vertex set at its maximum degree."
     }
   ],
-  "density_corollary_verified": true
+  "density_corollary_verified": true,
+  "additional_checked_components": [
+    {
+      "file": "Overfull/OrdinaryPackingPrefix.lean",
+      "lean_declarations": [
+        "Overfull.OrdinaryPackingStrategy.exists_prefix_rule",
+        "Overfull.adaptive_ordinary_packing_prefix"
+      ],
+      "manuscript_locations": [
+        "two:lem:adaptive",
+        "three:prop:foreign, interrupted packing phases"
+      ],
+      "scope": "Choose one ordinary-packing rule before the adversary and stopping index. Every admissible finite prefix up to the prescribed horizon gives actual edge-disjoint matchings perfect outside the supplied forbidden sets and fixed-parameter robust expansion of the exact unused graph. The uniform constants precede the graph, and admissibility is required only for inputs already presented. The public theorem supplies local feasibility from the proved reserve and round construction. It supports interrupted phases, but does not assemble the assignment, refinement, or phase iteration in Proposition 4.10."
+    },
+    {
+      "file": "Overfull/ForeignEdges/Minority.lean",
+      "lean_declarations": [
+        "Overfull.ForeignRefinement.minorityVertices_card_le",
+        "Overfull.ForeignRefinement.minorityVertices_subset",
+        "Overfull.ForeignRefinement.surviving_core_membership",
+        "Overfull.ForeignRefinement.minority_shore_deletion"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, minority-shore refinement"
+      ],
+      "scope": "From an actual partition into an exceptional set and disjoint cores of order at least three, and a total cut-minority bound of one, construct an actual set of at most one core vertex to move into the exceptional set. The surviving cores retain their labels, partition the remaining vertices, have at least two vertices each, and lie wholly on their original majority shores. The minority-sum inequality is an explicit input. This component proves the actual deletion and partition conclusions, but does not choose a small cut, maintain cluster data, or complete the repeated refinement in Proposition 4.10."
+    },
+    {
+      "file": "Overfull/ForeignEdges/ColorClasses.lean",
+      "lean_declarations": [
+        "Overfull.ForeignColoring.selectedMatching_isMatching_of_edge_copies",
+        "Overfull.ForeignColoring.selectedMatching_spanning_disjoint",
+        "Overfull.ForeignColoring.mem_hostColorClass",
+        "Overfull.ForeignColoring.hostColorClass_subset",
+        "Overfull.ForeignColoring.hostColorClass_isMatching",
+        "Overfull.ForeignColoring.hostColorClass_pairwise_disjoint",
+        "Overfull.ForeignColoring.hostColorClass_union",
+        "Overfull.ForeignColoring.selectedMatching_edgeUnion",
+        "Overfull.ForeignColoring.exists_color_classes",
+        "Overfull.ForeignColoring.exists_three_quarter_color_classes"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, foreign-edge color classes"
+      ],
+      "scope": "Apply the proved multigraph König theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case. Actual bipartiteness and the incidence-degree bound are hypotheses. The foreign-core assignment establishing those hypotheses and the adaptive phase iteration remain unproved here."
+    }
+  ]
 }

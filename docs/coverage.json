@@ -8,8 +8,8 @@
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
-  "fully_verified_numbered_assertion_count": 37,
-  "scope": "37 of the 69 numbered assertions have complete checked proofs. The remaining 32, including the main theorem, have no complete proof here. Checked components and conditional implications do not count as complete proofs of their parent assertions. Lemma 2.2 is represented by its finite probability laws.",
+  "fully_verified_numbered_assertion_count": 39,
+  "scope": "39 of the 69 numbered assertions have complete checked proofs. The remaining 30, including the main theorem, have no complete proof here. Checked components and conditional implications do not count as complete proofs of their parent assertions. Lemma 2.2 is represented by its finite probability laws.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -313,7 +313,7 @@
         "Overfull.Sharpness.Family.rawColor_injective_of_adj",
         "Overfull.Sharpness.Family.has_upper_coloring"
       ],
-      "scope_limit": "This is a construction for this family; it is not a formalization of Vizing\u2019s theorem for all simple graphs.",
+      "scope_limit": "This is a construction for this family; it is not a formalization of Vizing’s theorem for all simple graphs.",
       "manuscript_locations": [
         "sharp:thm:family, upper bound on the chromatic index"
       ]
@@ -536,7 +536,7 @@
     {
       "id": "hall_and_deficiency",
       "kind": "graph_theoretic_result",
-      "description": "Hall\u2019s equivalence and its deficiency form are proved for actual matching subgraphs, with arbitrary finite side sizes. The deficiency construction uses h dummy vertices and counts the unmatched original vertices.",
+      "description": "Hall’s equivalence and its deficiency form are proved for actual matching subgraphs, with arbitrary finite side sizes. The deficiency construction uses h dummy vertices and counts the unmatched original vertices.",
       "lean_declarations": [
         "Overfull.bipartite_hall_iff",
         "Overfull.bipartite_hall_defect"
@@ -666,9 +666,9 @@
         "Overfull.Multigraph.EdgeColoring.degree_le",
         "Overfull.Multigraph.konig_edgeColoring_iff"
       ],
-      "scope_limit": "Complete K\u00f6nig edge-coloring input in Section 2.3; no multigraph fan elementarity theorem is supplied.",
+      "scope_limit": "Complete König edge-coloring input in Section 2.3; no multigraph fan elementarity theorem is supplied.",
       "manuscript_locations": [
-        "Section 2.3, K\u00f6nig edge-coloring theorem"
+        "Section 2.3, König edge-coloring theorem"
       ]
     },
     {
@@ -694,7 +694,7 @@
         "Overfull.Multigraph.EdgeColoring.not_overfull",
         "Overfull.Multigraph.overfull_not_edgeColorable"
       ],
-      "scope_limit": "The necessary no-overfull condition for all finite loopless multigraphs. Sufficiency in the bipartite case is proved separately by K\u00f6nig\u2019s theorem.",
+      "scope_limit": "The necessary no-overfull condition for all finite loopless multigraphs. Sufficiency in the bipartite case is proved separately by König’s theorem.",
       "manuscript_locations": [
         "Section 2.3, multigraph edge colorings",
         "old:pre:matching"
@@ -1903,6 +1903,297 @@
       "manuscript_locations": [
         "three:lem:prescribed"
       ]
+    },
+    {
+      "id": "compression_parity_forest",
+      "kind": "graph_theoretic_result",
+      "description": "Select at most three actual joining-edge copies whose projected labels form a forest and preserve every core-label degree parity. The finite four-label assertion is checked by the Lean kernel, and the fiber-parity proof lifts the selection to original copies.",
+      "lean_declarations": [
+        "Overfull.Compression.four_label_parity_forest",
+        "Overfull.Compression.oddPairs_degree_parity",
+        "Overfull.Compression.exists_parity_subset",
+        "Overfull.Compression.exists_endpoint_parity_forest"
+      ],
+      "scope_limit": "The selection concerns actual edge copies and their endpoint labels. No native decision axiom or assumed forest existence is used.",
+      "manuscript_locations": [
+        "three:sec:inputs, compression of joining edges",
+        "three:lem:force"
+      ]
+    },
+    {
+      "id": "compression_actual_matching",
+      "kind": "graph_theoretic_result",
+      "description": "Construct an actual compressed submatching of a perfect matching. Retain every edge meeting the exceptional set, retain at most three joining edges with an actual forest projection, cover all exceptional vertices, and prove the edge, endpoint, and even uncovered-core counts.",
+      "lean_declarations": [
+        "Overfull.Compression.exists_selected_matching",
+        "Overfull.Compression.selectedMatching_verts_card",
+        "Overfull.Compression.selected_edges_card_le_of_endpoint",
+        "Overfull.Compression.selected_core_cut_parity",
+        "Overfull.Compression.exists_compressed_matching"
+      ],
+      "scope_limit": "The core sets form a disjoint partition together with the exceptional set. All graph edges, covered vertices, and projected labels refer to the constructed submatching.",
+      "manuscript_locations": [
+        "three:sec:inputs",
+        "three:lem:force"
+      ]
+    },
+    {
+      "id": "force_matching_star_probability",
+      "kind": "graph_theoretic_result",
+      "description": "Enumerate the actual family of whole-core and exceptional-singleton unions, bound its size by 2^(t+4), prove that a perfect matching with uniform marginals meets a given star with probability |S|/h, and construct a star-hitting perfect matching preserving all tested odd-cut inequalities.",
+      "lean_declarations": [
+        "Overfull.ForceMatching.wholeUnions_card_le",
+        "Overfull.ForceMatching.Distribution.expected_selected_edges",
+        "Overfull.ForceMatching.Distribution.star_hit_probability",
+        "Overfull.ForceMatching.exists_star_matching_for_family",
+        "Overfull.ForceMatching.exists_star_matching"
+      ],
+      "scope_limit": "The actual uniform-marginal distribution is obtained from the proved perfect-matching polytope theorem; it is not an existence assumption. The exact star threshold is 11*2^(t+4).",
+      "manuscript_locations": [
+        "three:lem:force, probability comparison"
+      ]
+    },
+    {
+      "id": "force_matching_core_completion",
+      "kind": "graph_theoretic_result",
+      "description": "Construct actual perfect matchings in robust cores after bounded even vertex deletion, assemble them with the compressed matching, and prove the actual residual core inclusion, degree loss of at most one, and robust parameter nu/2.",
+      "lean_declarations": [
+        "Overfull.ForceMatching.exists_ordinary_perfect_matching_threshold",
+        "Overfull.ForceMatching.exists_core_completion_parameters",
+        "Overfull.ForceMatching.assembledMatching_perfect",
+        "Overfull.ForceMatching.residualCore_degree_loss",
+        "Overfull.ForceMatching.residualCore_robust",
+        "Overfull.ForceMatching.exists_compressed_completion_parameters"
+      ],
+      "scope_limit": "This is a single completion. Its tolerance and order threshold precede the graph and deleted sets. It does not establish a repeated or adaptive sequence of forced star deletions.",
+      "manuscript_locations": [
+        "three:lem:force, completion inside the cores"
+      ]
+    },
+    {
+      "id": "force_matching_cut_preservation",
+      "kind": "graph_theoretic_result",
+      "description": "Prove equality of the completed and compressed cut-edge sets on each whole-core union. Perfect-matching cut parity then shows that every one-vertex toggle also has no more crossing matching edges. Transfer the entire tested family of residual cut inequalities.",
+      "lean_declarations": [
+        "Overfull.ForceMatching.completed_cutEdges_eq",
+        "Overfull.ForceMatching.toggle_cut_le_of_cut_subset",
+        "Overfull.ForceMatching.completed_cut_comparison",
+        "Overfull.ForceMatching.family_safe_after_completion"
+      ],
+      "scope_limit": "All comparisons use actual matching edge finsets. The toggle conclusion holds for every vertex, including exceptional vertices.",
+      "manuscript_locations": [
+        "three:sec:inputs, preservation of small cuts",
+        "three:lem:force"
+      ]
+    },
+    {
+      "id": "force_matching_residual_exclusion",
+      "kind": "graph_theoretic_result",
+      "description": "Apply the proved small-cut theorem to actual embedded residual cores. Classify every relevant odd shore as a whole-core union or its one-vertex toggle, and rule out every overfull set in the actual graph after the perfect matching is deleted. Prove retention of the chosen exceptional-star edge.",
+      "lean_declarations": [
+        "Overfull.ForceMatching.wholeUnions_whole",
+        "Overfull.ForceMatching.classified_of_minority",
+        "Overfull.ForceMatching.safe_cut_of_classified",
+        "Overfull.ForceMatching.graphCutCount_eq_cutSize",
+        "Overfull.ForceMatching.residual_no_overfull",
+        "Overfull.ForceMatching.starHit_of_exceptional_retention",
+        "Overfull.ForceMatching.starHit_mono"
+      ],
+      "scope_limit": "The small-cut classification is proved from the residual core degrees, robust expansion, and explicit order bounds. No classification or no-overfull conclusion is assumed.",
+      "manuscript_locations": [
+        "three:lem:force, final small-cut argument"
+      ]
+    },
+    {
+      "id": "force_matching_uniform_parameters",
+      "kind": "graph_theoretic_result",
+      "description": "Choose the error tolerance before the exceptional-set bound t. For each t choose an order threshold satisfying the bounded core-deletion load, core-completion order, residual density, and small-cut requirements, then assemble a safe actual completion.",
+      "lean_declarations": [
+        "Overfull.ForceMatching.range_bounds",
+        "Overfull.ForceMatching.uniform_order_threshold",
+        "Overfull.ForceMatching.exists_safe_completion_parameters"
+      ],
+      "scope_limit": "The fixed range and error choices do not depend on t; the lower order threshold may depend on t. The theorem supplies one completion, not an adaptive sequence.",
+      "manuscript_locations": [
+        "three:lem:force, uniform parameter choices"
+      ]
+    },
+    {
+      "id": "force_exceptional_star",
+      "kind": "complete_manuscript_assertion",
+      "description": "Under the regularity, no-overfull, and robust-core hypotheses, for each exceptional-centered star with more than 11*2^(t+4) edges construct a sampled perfect matching, its actual compressed submatching with at most three joining edges forming a forest, and a perfect completion meeting that star whose deletion leaves no overfull set at degree h-1.",
+      "lean_declarations": [
+        "Overfull.force_exceptional_star"
+      ],
+      "scope_limit": "Full one-step Lemma 4.11, with positive density, sufficiently small fixed robust range, and error tolerance chosen before t. The statement allows at most four cores. The iterative absorption proposition 4.12 and the main theorem remain unverified.",
+      "manuscript_locations": [
+        "three:lem:force"
+      ]
+    },
+    {
+      "id": "safe_prescription_boundary",
+      "kind": "graph_theoretic_result",
+      "description": "Count actual edges meeting the marked set or joining different clusters, and construct the exact submatching of a sampled matching consisting of those edges. Prove its adjacency description and exact covered-vertex count.",
+      "lean_declarations": [
+        "Overfull.SafePrescription.pair_mem_boundaryEdges",
+        "Overfull.SafePrescription.boundaryEdges_card_bound",
+        "Overfull.SafePrescription.exists_boundary_submatching"
+      ],
+      "scope_limit": "The boundary is an actual finset of host edges. Its cardinal bound follows from regularity, the marked-set bound, and the actual intercluster count.",
+      "manuscript_locations": [
+        "three:lem:safe-prescription, fixed boundary matching"
+      ]
+    },
+    {
+      "id": "safe_prescription_sampling",
+      "kind": "graph_theoretic_result",
+      "description": "Use the actual uniform-marginal perfect-matching distribution and a finite Markov estimate to select a matching preserving every tested cut inequality while using at most q0 = 4096*(t0+6) boundary edges. Construct its exact boundary submatching.",
+      "lean_declarations": [
+        "Overfull.SafePrescription.exists_bounded_matching_for_family",
+        "Overfull.SafePrescription.exists_bounded_matching",
+        "Overfull.SafePrescription.exists_sampled_boundary"
+      ],
+      "scope_limit": "The exact constants 44, 1024, and 4096 are proved. The comparison h > k0/1024 uses real division. Neither a favorable sample nor its probability is assumed.",
+      "manuscript_locations": [
+        "three:lem:safe-prescription, sampling and Markov bound"
+      ]
+    },
+    {
+      "id": "safe_prescription_degree_counts",
+      "kind": "graph_theoretic_result",
+      "description": "Identify actual cut incidence with a graph degree, bound it at a core vertex by the core degree error, and bound it at an unmarked exceptional vertex by the marked order plus measured foreign incidences. Count the remaining neighbors in the same cluster outside the exceptional set.",
+      "lean_declarations": [
+        "Overfull.SafePrescription.cutGraph_degree",
+        "Overfull.SafePrescription.cut_incident_core_bound",
+        "Overfull.SafePrescription.cut_incident_cluster_bound",
+        "Overfull.SafePrescription.same_cluster_neighbors_lower"
+      ],
+      "scope_limit": "All quantities are degrees or cardinalities in the actual graph. The neighbor lower bound subtracts the full exceptional order and the actual foreign incidences; no additional marked-order loss is needed.",
+      "manuscript_locations": [
+        "three:lem:safe-prescription, boundary degree and retained neighbors"
+      ]
+    },
+    {
+      "id": "safe_prescription_retention",
+      "kind": "graph_theoretic_result",
+      "description": "Delete the fixed boundary vertices, complete the surviving cores to cliques, apply the prescribed-edge theorem once across all clusters, compress the resulting matching, and return its retained edges to the original graph. Adjoin the fixed boundary and prove coverage, edge bounds, even uncovered core orders, and edge locations.",
+      "lean_declarations": [
+        "Overfull.SafePrescription.cliqueAux_has_perfect_matching",
+        "Overfull.SafePrescription.cliqueAux_original_edge",
+        "Overfull.SafePrescription.uncovered_embed_union_card",
+        "Overfull.SafePrescription.exists_retained_partial_matching"
+      ],
+      "scope_limit": "The constructed partial matching loses at most 2*q0+c0 prescribed edges, where c0=135720, which is stronger than the manuscript allowance 2*q0+4*c0. Every retained edge is an original graph edge; no artificial clique edge survives.",
+      "manuscript_locations": [
+        "three:lem:safe-prescription, retention and compression"
+      ]
+    },
+    {
+      "id": "safe_prescription_small_cut_classification",
+      "kind": "graph_theoretic_result",
+      "description": "Construct a union of whole clusters and marked singletons from agreement of core majorities. Prove the simultaneous symmetric-difference cut identity and lower bound, and derive that every relevant small cut is a tested union or a one-vertex change of one, using the actual embedded robust cores.",
+      "lean_declarations": [
+        "Overfull.SafePrescription.family_same_label",
+        "Overfull.SafePrescription.family_whole_cores",
+        "Overfull.SafePrescription.cluster_union_approximation",
+        "Overfull.SafePrescription.cut_symmDiff_identity",
+        "Overfull.SafePrescription.cut_symmDiff_lower_bound",
+        "Overfull.SafePrescription.classified_small_cut",
+        "Overfull.SafePrescription.classified_robust_small_cut"
+      ],
+      "scope_limit": "The manuscript group condition is the input about larger shores. The minority bound, actual cluster approximation, and resulting cut classification are proved, including the marked-vertex agreement and the 2*|Z| <= b < h/10 arithmetic.",
+      "manuscript_locations": [
+        "three:lem:safe-prescription, classification of small odd cuts"
+      ]
+    },
+    {
+      "id": "safe_prescription_residual_exclusion",
+      "kind": "graph_theoretic_result",
+      "description": "Bound the actual exterior edge set of the completed matching by the prescribed partial matching. A shore with total core minority at most one is crossed by at most that exterior count plus one matching edges. Apply the small-cut theorem to actual residual cores and transfer a possible overfull shore to an original tested small cut.",
+      "lean_declarations": [
+        "Overfull.SafePrescription.exteriorEdges_card_le",
+        "Overfull.SafePrescription.matching_cut_le_exterior_add_one",
+        "Overfull.SafePrescription.original_cut_lt_of_overfull",
+        "Overfull.SafePrescription.residual_no_overfull_of_small_cut_classification"
+      ],
+      "scope_limit": "The component accepts the original small-cut classification as an input; the full safe_prescription theorem supplies it using classified_robust_small_cut. It applies to the actual residual graph and its actual embedded cores.",
+      "manuscript_locations": [
+        "three:lem:safe-prescription, final residual contradiction"
+      ]
+    },
+    {
+      "id": "safe_prescription_uniform_parameters",
+      "kind": "graph_theoretic_result",
+      "description": "For fixed density and robust parameters and fixed marked-set bound t0, choose a positive error tolerance and order threshold before the graph and actual exceptional order. Prove all sampling, cut-classification, neighbor-surplus, and core-completion inequalities simultaneously.",
+      "lean_declarations": [
+        "Overfull.SafePrescription.exists_prescription_parameters"
+      ],
+      "scope_limit": "The exceptional order t may grow with n subject to a+t+1 <= epsilon*n. Both epsilon and n0 precede t; the fixed t0 and q0 may enter the order threshold.",
+      "manuscript_locations": [
+        "three:lem:safe-prescription, uniform numerical choices"
+      ]
+    },
+    {
+      "id": "safe_prescription",
+      "kind": "complete_manuscript_assertion",
+      "description": "Under the regularity, no-overfull, actual robust-core, intercluster-incidence, and group hypotheses, construct the sampled matching K, its exact boundary B, a retained partial matching F, and a perfect completion N. The completion retains all but at most c1=2*q0+4*c0 prescribed edges and its deletion leaves no overfull set at degree h-1.",
+      "lean_declarations": [
+        "Overfull.safe_prescription"
+      ],
+      "scope_limit": "Full one-step Lemma 4.9, with uniform constants and the stronger intermediate retention bound 2*q0+c0. The theorem permits at most four cores and prescribed same-cluster matching edges with an exceptional endpoint. The iterative refinement of Proposition 4.10, iterative absorption of Proposition 4.12, and main theorem remain unverified.",
+      "manuscript_locations": [
+        "three:lem:safe-prescription"
+      ]
+    },
+    {
+      "id": "ordinary_packing_prefix",
+      "kind": "graph_theoretic_result",
+      "description": "Choose one ordinary-packing rule before the adversary and stopping index. Every admissible finite prefix up to the prescribed horizon gives actual edge-disjoint matchings perfect outside the supplied forbidden sets and fixed-parameter robust expansion of the exact unused graph. The uniform constants precede the graph, and admissibility is required only for inputs already presented.",
+      "lean_declarations": [
+        "Overfull.OrdinaryPackingStrategy.exists_prefix_rule",
+        "Overfull.adaptive_ordinary_packing_prefix"
+      ],
+      "scope_limit": "The public theorem supplies local feasibility from the proved reserve and round construction. It supports interrupted phases, but does not assemble the assignment, refinement, or phase iteration in Proposition 4.10.",
+      "manuscript_locations": [
+        "two:lem:adaptive",
+        "three:prop:foreign, interrupted packing phases"
+      ]
+    },
+    {
+      "id": "foreign_minority_deletion",
+      "kind": "graph_theoretic_result",
+      "description": "From an actual partition into an exceptional set and disjoint cores of order at least three, and a total cut-minority bound of one, construct an actual set of at most one core vertex to move into the exceptional set. The surviving cores retain their labels, partition the remaining vertices, have at least two vertices each, and lie wholly on their original majority shores.",
+      "lean_declarations": [
+        "Overfull.ForeignRefinement.minorityVertices_card_le",
+        "Overfull.ForeignRefinement.minorityVertices_subset",
+        "Overfull.ForeignRefinement.surviving_core_membership",
+        "Overfull.ForeignRefinement.minority_shore_deletion"
+      ],
+      "scope_limit": "The minority-sum inequality is an explicit input. This component proves the actual deletion and partition conclusions, but does not choose a small cut, maintain cluster data, or complete the repeated refinement in Proposition 4.10.",
+      "manuscript_locations": [
+        "three:prop:foreign, minority-shore refinement"
+      ]
+    },
+    {
+      "id": "foreign_color_classes",
+      "kind": "graph_theoretic_result",
+      "description": "Apply the proved multigraph König theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case.",
+      "lean_declarations": [
+        "Overfull.ForeignColoring.selectedMatching_isMatching_of_edge_copies",
+        "Overfull.ForeignColoring.selectedMatching_spanning_disjoint",
+        "Overfull.ForeignColoring.mem_hostColorClass",
+        "Overfull.ForeignColoring.hostColorClass_subset",
+        "Overfull.ForeignColoring.hostColorClass_isMatching",
+        "Overfull.ForeignColoring.hostColorClass_pairwise_disjoint",
+        "Overfull.ForeignColoring.hostColorClass_union",
+        "Overfull.ForeignColoring.selectedMatching_edgeUnion",
+        "Overfull.ForeignColoring.exists_color_classes",
+        "Overfull.ForeignColoring.exists_three_quarter_color_classes"
+      ],
+      "scope_limit": "Actual bipartiteness and the incidence-degree bound are hypotheses. The foreign-core assignment establishing those hypotheses and the adaptive phase iteration remain unproved here.",
+      "manuscript_locations": [
+        "three:prop:foreign, foreign-edge color classes"
+      ]
     }
   ],
   "numbered_assertions": [
@@ -2421,11 +2712,13 @@
         "matching_preserving_robust_cut",
         "ordinary_packing_actual_round",
         "ordinary_packing_strategy",
-        "adaptive_ordinary_packing"
+        "adaptive_ordinary_packing",
+        "ordinary_packing_prefix"
       ],
       "imported_statement": false,
       "lean_theorems": [
-        "Overfull.adaptive_ordinary_packing"
+        "Overfull.adaptive_ordinary_packing",
+        "Overfull.adaptive_ordinary_packing_prefix"
       ]
     },
     {
@@ -2830,10 +3123,26 @@
         2756
       ],
       "statement_sha256": "13d7182c6e5e7ba2dfbf93ce3e4bc5d36e93423b53f77771bc8684c8fe04fbcb",
-      "full_assertion_verified": false,
-      "status": "not_formalized_here",
-      "checked_components": [],
-      "imported_statement": false
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "safe_prescription_boundary",
+        "safe_prescription_sampling",
+        "safe_prescription_degree_counts",
+        "safe_prescription_retention",
+        "safe_prescription_small_cut_classification",
+        "safe_prescription_residual_exclusion",
+        "safe_prescription_uniform_parameters",
+        "safe_prescription",
+        "prescribed_exceptional_core_matching",
+        "compression_actual_matching",
+        "force_matching_core_completion",
+        "force_matching_cut_preservation"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.safe_prescription"
+      ]
     },
     {
       "number": "4.10",
@@ -2848,8 +3157,12 @@
       ],
       "statement_sha256": "3bd2c92fbb7ce6c54247d541fdb10a3ca0636bf02c0e6e7e9fc221de91d5d6c3",
       "full_assertion_verified": false,
-      "status": "not_formalized_here",
-      "checked_components": [],
+      "status": "checked_components_only",
+      "checked_components": [
+        "ordinary_packing_prefix",
+        "foreign_minority_deletion",
+        "foreign_color_classes"
+      ],
       "imported_statement": false
     },
     {
@@ -2864,10 +3177,22 @@
         2905
       ],
       "statement_sha256": "d872af4834f6d179681701c4f53f0ca3ff124c9f2d137f29d3b291358b8ab67f",
-      "full_assertion_verified": false,
-      "status": "not_formalized_here",
-      "checked_components": [],
-      "imported_statement": false
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "compression_parity_forest",
+        "compression_actual_matching",
+        "force_matching_star_probability",
+        "force_matching_core_completion",
+        "force_matching_cut_preservation",
+        "force_matching_residual_exclusion",
+        "force_matching_uniform_parameters",
+        "force_exceptional_star"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.force_exceptional_star"
+      ]
     },
     {
       "number": "4.12",
@@ -3403,7 +3728,7 @@
     },
     {
       "bibliography_key": "Berge1958",
-      "required_result": "Tutte\u2013Berge maximum-matching deficiency formula",
+      "required_result": "Tutte–Berge maximum-matching deficiency formula",
       "pinpoints": [],
       "coverage_status": "fully_proved_for_actual_finite_simple_graph_matchings_with_attained_integer_maximum",
       "lean_declarations": [
@@ -3424,7 +3749,7 @@
     },
     {
       "bibliography_key": "Konig",
-      "required_result": "K\u0151nig edge-coloring theorem for bipartite multigraphs",
+      "required_result": "Kőnig edge-coloring theorem for bipartite multigraphs",
       "pinpoints": [],
       "coverage_status": "fully_proved_for_actual_finite_loopless_bipartite_multigraphs",
       "lean_declarations": [
@@ -3478,7 +3803,7 @@
       "required_result": "Robust partition theorem for almost-regular graphs",
       "pinpoints": [
         "Theorem 5.1",
-        "conditions C1\u2013C3 and D1\u2013D7"
+        "conditions C1–C3 and D1–D7"
       ],
       "coverage_status": "not_formalized_or_matched_to_a_checked_declaration_here"
     },
@@ -3527,8 +3852,8 @@
       "required_result": "Bipartite robust setup, refinements, universal walk and robust decomposition",
       "pinpoints": [
         "Corollary 5.5",
-        "Lemmas 5.7, 5.14\u20135.15, 6.8\u20136.10, 6.24 and 7.2",
-        "Definitions 6.7, 6.14, 6.16 and 6.21\u20136.23"
+        "Lemmas 5.7, 5.14–5.15, 6.8–6.10, 6.24 and 7.2",
+        "Definitions 6.7, 6.14, 6.16 and 6.21–6.23"
       ],
       "coverage_status": "not_formalized_or_matched_to_a_checked_declaration_here"
     }
@@ -3549,7 +3874,10 @@
     "Lemma 2.20 chooses its positive error, retained robust parameter, and order threshold before the graph, and one fixed rule before the adaptive input. Its complete proof passed a strict Lean build and an independent semantic review.",
     "Lemma 2.25 is proved from the precise bipartite outcome properties stated in Lemma 2.24; it constructs the actual retained sets and crossing graph. Lemma 2.24 is not thereby proved. The balanced-core theorem passed a strict Lean build and a separate semantic review.",
     "Lemma 3.3 constructs its regular robust core using the full labelled realization theorem, then proves all actual deletion, degree, cut, and overfull-preservation conclusions. Its constants precede the graph. The complete theorem and helpers passed strict builds, scoped axiom audits, and an independent semantic review.",
-    "Lemma 4.8 proves the exact bound 135720 on omitted prescribed edges. The short paths, bounded witness, actual matching restriction, component connectivity and parity, and all Tutte deletion ranges are proved internally. The statement also permits overlapping core cliques and exceptional-exceptional prescribed edges. Strict builds, scoped axiom audits, and an independent semantic review passed."
+    "Lemma 4.8 proves the exact bound 135720 on omitted prescribed edges. The short paths, bounded witness, actual matching restriction, component connectivity and parity, and all Tutte deletion ranges are proved internally. The statement also permits overlapping core cliques and exceptional-exceptional prescribed edges. Strict builds, scoped axiom audits, and an independent semantic review passed.",
+    "Lemma 4.9 constructs the actual sampled boundary, retained partial matching, and perfect core completion. Its constants precede the graph and actual exceptional order, with the marked-set bound fixed in advance. The partial matching loses at most 2*q0+c0 prescribed edges, and the final theorem states the manuscript bound c1=2*q0+4*c0. The small-cut classification is proved from the group condition and actual robust cores. Strict builds, scoped axiom audits, and independent semantic reviews passed. No iterative refinement or absorption conclusion is claimed for Propositions 4.10 or 4.12.",
+    "Lemma 4.11 proves one exceptional-star forcing step with the exact threshold 11*2^(t+4). The sampled, compressed, and completed matchings are actual graph subgraphs; the compressed joining edges have a proved forest projection. The range and error tolerance precede t, and only the order threshold depends on t. Strict builds, scoped axiom audits, and independent semantic reviews passed. No repeated forcing or iterative absorption conclusion is claimed for Proposition 4.12.",
+    "The ordinary finite-prefix rule, actual minority-shore deletion, and actual König matching classes are checked supporting components for Proposition 4.10. The prefix rule assumes admissibility only before the requested stopping time. The foreign-core assignment, refinement transitions, and adaptive phase assembly remain unproved; the count remains 39 of 69 and the main theorem remains unverified."
   ],
   "density_corollary_verified": true
 }
