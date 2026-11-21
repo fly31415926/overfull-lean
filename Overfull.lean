@@ -125,6 +125,12 @@ import Overfull.ForeignEdges.ReductionResult
 import Overfull.ForeignEdges.RefinementHistory
 import Overfull.Absorption.Bounded
 import Overfull.Patterns.Frequent
+import Overfull.CompatibleCircuits.Deletion
+import Overfull.CompatibleCircuits.SmallKernel
+import Overfull.CompatibleCircuits.ThreeVertexFlow
+import Overfull.CompatibleCircuits.VirtualPartition
+import Overfull.Patterns.CircuitRemainders
+import Overfull.Patterns.IncidenceLoad
 /-!
 # Partial formalization of the overfull manuscript
 
