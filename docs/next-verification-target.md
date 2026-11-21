@@ -102,6 +102,13 @@ in the one-/two-core construction. Do not reuse the simple-graph
 
 ## Compatible circuits for Lemma 4.15 and Proposition 4.16
 
+The independent circuit track now has checked actual quotient lifting,
+ordinary four-label Eulerian decomposition, virtual-circuit classification,
+Hall pairing, retained forests, and actual surplus-circuit partitions.
+See [four-odd-circuits.md](four-odd-circuits.md) for the exact scope. The
+small finite compatible kernels do not establish the reduction from
+arbitrary incidence classes. Lemma 4.15 is therefore still incomplete.
+
 The manuscript invokes Fan--Zhang's compatible-circuit theorem through
 its consequence for Eulerian quotients on at most four vertices.
 `docs/coverage.json` records this external dependency as not yet

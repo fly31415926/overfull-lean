@@ -259,6 +259,12 @@ The proof encodes a proved perfect-matching distribution, chooses and rounds a f
 
 The next target is the boundary-extension argument of Lemma 4.14, including its unresolved bounded-input factorization dependency. [`docs/next-verification-target.md`](docs/next-verification-target.md) records that work and the later compatible-circuit and terminal-factorization dependencies. The manuscript main theorem remains unverified.
 
+### Four-odd-part circuit components
+
+The independent Lemma 4.15 track now has actual edge-copy circuit and incidence-class definitions, necessary half-cut accounting, quotient-to-matching equivalence, and ordinary Eulerian circuit decomposition on four labels. Hall pairing under `12 * a < u` constructs disjoint-support pairs of the two small matching families. Their all-odd projections yield actual matching-or-star forests and genuine circuit partitions of every discarded copy, with exact coverage and disjointness.
+
+The virtual augmentation retains original and virtual copy identities and classifies circuits with zero, one, or two virtual copies. Finite compatible partitions of five small regular templates are checked by the kernel. These components do not supply the compatible-circuit existence theorem for arbitrary admissible incidence classes; **Lemma 4.15 remains incomplete and the count remains 42 of 69**. [`docs/four-odd-circuits.md`](docs/four-odd-circuits.md) records the checked statements and the remaining reductions.
+
 ### The coloring encoding and balanced reserve
 
 [`Overfull/Dense/Encoding.lean`](Overfull/Dense/Encoding.lean) models the simple part by an injective map into the host edge copies. The prescribed coloring remains fixed on every complementary copy, including parallel edges. Its missing colors define the other two parts of the encoded tripartite graph. The proof establishes local balance, all stated deficit identities, and an exact equivalence between full coloring extensions and actual triangle decompositions.
