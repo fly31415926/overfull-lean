@@ -1,0 +1,3372 @@
+{
+  "schema_version": 1,
+  "status": "partial_formalization",
+  "manuscript": {
+    "filename": "Four_Robust_Component_Cases_2026-11-20.tex",
+    "sha256": "4605bdf3ee5b241a7b52dd59d08537fa0a439335cd6f119394cddd4609efffc1"
+  },
+  "main_theorem_verified": false,
+  "full_sharpness_proposition_verified": true,
+  "numbered_assertion_count": 69,
+  "fully_verified_numbered_assertion_count": 35,
+  "scope": "35 of the 69 numbered assertions have complete checked proofs. The remaining 34, including the main theorem, have no complete proof here. Checked components and conditional implications do not count as complete proofs of their parent assertions. Lemma 2.2 is represented by its finite probability laws.",
+  "verification_evidence": "../verification/results.json",
+  "checked_component_catalog": [
+    {
+      "id": "overfull_obstruction",
+      "kind": "graph_theoretic_result",
+      "description": "A proper k-edge-coloring gives at most floor(|X|/2) edges of each color inside X, hence at most k*floor(|X|/2) induced edges. An overfull set prevents such a coloring.",
+      "lean_declarations": [
+        "Overfull.EdgeColoring.colorClass_card_le",
+        "Overfull.EdgeColoring.internalEdges_card_le",
+        "Overfull.EdgeColoring.not_overfull",
+        "Overfull.overfull_not_edgeColorable"
+      ],
+      "scope_limit": "The necessary direction only; no sufficient condition for edge-colorability is proved.",
+      "manuscript_locations": [
+        "Introduction, overfullness counting argument",
+        "main:quarter, necessary direction"
+      ]
+    },
+    {
+      "id": "coloring_degree_bound",
+      "kind": "graph_theoretic_result",
+      "description": "Every proper k-edge-coloring of a finite simple graph has degree at most k at each vertex and maximum degree at most k.",
+      "lean_declarations": [
+        "Overfull.EdgeColoring.degree_le",
+        "Overfull.EdgeColoring.maxDegree_le"
+      ],
+      "scope_limit": "This is a lower bound on the number of colors, not Vizing's upper bound.",
+      "manuscript_locations": [
+        "Section 2.3, edge-coloring definitions",
+        "main:quarter, interpretation of class 1"
+      ]
+    },
+    {
+      "id": "saturated_color_classes",
+      "kind": "graph_theoretic_result",
+      "description": "At every vertex of degree k each of the k colors occurs exactly once. In a k-regular simple graph each color subgraph is a perfect matching. Equality in the internal-edge count saturates every color class.",
+      "lean_declarations": [
+        "Overfull.EdgeColoring.neighborColor_bijective_of_degree_eq",
+        "Overfull.EdgeColoring.existsUnique_incident_color_of_degree_eq",
+        "Overfull.EdgeColoring.colorClassSubgraph_isPerfectMatching",
+        "Overfull.EdgeColoring.colorClass_card_eq_of_internalEdges_card_eq"
+      ],
+      "scope_limit": "These consequences require a supplied proper coloring. Boundary-color injectivity and the actual odd-clique contraction are proved in separate checked components.",
+      "manuscript_locations": [
+        "sharp:thm:family, saturation step in the coloring obstruction"
+      ]
+    },
+    {
+      "id": "deficiency_arithmetic",
+      "kind": "arithmetic_implication",
+      "description": "Integer deficiency, cut parity and odd-set threshold identities, with the incidence-counting identity supplied where needed.",
+      "lean_declarations": [
+        "Overfull.Arithmetic.deficiency_cut_identity",
+        "Overfull.Arithmetic.regular_cut_parity",
+        "Overfull.Arithmetic.odd_deficiency_iff",
+        "Overfull.Arithmetic.odd_deficiency_parity"
+      ],
+      "scope_limit": "This component proves arithmetic implications. The corresponding identity for actual graph edges is proved separately in the graph_incidence_and_deficiency component.",
+      "manuscript_locations": [
+        "two:eq:deficiency"
+      ]
+    },
+    {
+      "id": "auxiliary_even_rounding",
+      "kind": "arithmetic_implication",
+      "description": "If f is even, d <= f and 2e <= d+1, then 2e <= f.",
+      "lean_declarations": [
+        "Overfull.Arithmetic.even_rounding"
+      ],
+      "scope_limit": "The numerical rounding implication. The actual incidence inequality and the completion odd-set proof are recorded separately under auxiliary_balanced_incidences and auxiliary_odd_sets.",
+      "manuscript_locations": [
+        "two:lem:robust-auxiliary-completion"
+      ]
+    },
+    {
+      "id": "five_component_counts",
+      "kind": "arithmetic_implication",
+      "description": "The nonnegative integer pairs with 0 < q+l and q+2l < 4 are exactly (1,0), (0,1), (2,0), (3,0) and (1,1).",
+      "lean_declarations": [
+        "Overfull.Arithmetic.five_component_cases",
+        "Overfull.Arithmetic.five_component_cases_converse"
+      ],
+      "scope_limit": "The input counting bound is assumed. No robust partition, critical-graph estimate or exclusion of a component case is proved.",
+      "manuscript_locations": [
+        "bip:part:five-cases"
+      ]
+    },
+    {
+      "id": "critical_order_arithmetic",
+      "kind": "arithmetic_implication",
+      "description": "The order threshold n1 <= n' follows from 4*n1 <= n, n <= 4*Delta and Delta+1 <= n'.",
+      "lean_declarations": [
+        "Overfull.Arithmetic.critical_subgraph_order_threshold"
+      ],
+      "scope_limit": "Only the numerical threshold transfer; existence and properties of a critical subgraph are not proved.",
+      "manuscript_locations": [
+        "main:quarter, final proof"
+      ]
+    },
+    {
+      "id": "absorber_degree_arithmetic",
+      "kind": "arithmetic_implication",
+      "description": "The supplied absorber parameter equations imply the selected-color total, reserved-degree identity, residual degree 2r and total k colors.",
+      "lean_declarations": [
+        "Overfull.Arithmetic.absorber_reserved_degree",
+        "Overfull.Arithmetic.absorber_selected_colors",
+        "Overfull.Arithmetic.residual_degree",
+        "Overfull.Arithmetic.reserved_degree_slack",
+        "Overfull.Arithmetic.colors_exhausted"
+      ],
+      "scope_limit": "The parameter equalities and degree inequalities are hypotheses. Existence, disjointness, graph-degree identities and exhaustion of actual edges are not proved.",
+      "manuscript_locations": [
+        "two:lem:bip-special, Section 6.4.4",
+        "old:fac:reserved-degree",
+        "old:fac:selected-total",
+        "old:fac:remaining-degree"
+      ]
+    },
+    {
+      "id": "family_order_degrees_connectedness",
+      "kind": "graph_theoretic_result",
+      "description": "For the actual graph on (Fin 4 x Fin Delta) + Fin 5, adjacency is symmetric and irreflexive; order is 4*Delta+5. For every Delta >= 3, the complete degree formulas, maximum degree Delta and connectedness are proved.",
+      "lean_declarations": [
+        "Overfull.Sharpness.Family.adjacent_symmetric",
+        "Overfull.Sharpness.Family.adjacent_irreflexive",
+        "Overfull.Sharpness.Family.vertex_count",
+        "Overfull.Sharpness.Family.degree_clique_vertex",
+        "Overfull.Sharpness.Family.degree_additional_vertex",
+        "Overfull.Sharpness.Family.maximum_degree",
+        "Overfull.Sharpness.Family.connected"
+      ],
+      "scope_limit": "These order and degree proofs apply for every Delta >= 3. The coloring and no-overfull conclusions are proved in separate checked components with odd Delta.",
+      "manuscript_locations": [
+        "sharp:thm:family"
+      ]
+    },
+    {
+      "id": "family_actual_edge_count",
+      "kind": "graph_theoretic_result",
+      "description": "For every Delta >= 3, the actual graph has degree sum 4*Delta*(Delta+1) and edgeFinset cardinality 2*Delta*(Delta+1).",
+      "lean_declarations": [
+        "Overfull.Sharpness.Family.degree_deficiency_identity",
+        "Overfull.Sharpness.Family.degree_sum",
+        "Overfull.Sharpness.Family.edge_count"
+      ],
+      "scope_limit": "This component counts all edges of the actual graph. The bounds for every induced vertex set are proved separately in the family_no_overfull component.",
+      "manuscript_locations": [
+        "sharp:thm:family, additional edge-count clause"
+      ]
+    },
+    {
+      "id": "weighted_petersen_obstruction",
+      "kind": "graph_theoretic_result",
+      "description": "The actual Petersen multigraph with Delta-2 separate copies of each spoke has no proper Delta-edge-coloring for every Delta >= 3. Ordinary Petersen non-3-edge-colorability is a specialization.",
+      "lean_declarations": [
+        "Overfull.Sharpness.weighted_petersen_not_edge_colorable",
+        "Overfull.Sharpness.weighted_petersen_not_Delta_edge_colorable",
+        "Overfull.Sharpness.petersen_not_three_edge_colorable"
+      ],
+      "scope_limit": "This component concerns the complete weighted Petersen multigraph. Deleting one vertex and transferring the obstruction through the four expanded cliques are proved separately.",
+      "manuscript_locations": [
+        "sharp:thm:family, weighted Petersen obstruction"
+      ]
+    },
+    {
+      "id": "petersen_matching_classification",
+      "kind": "graph_theoretic_result",
+      "description": "The finite matching encodings give zero or four nonspoke edges in each perfect matching, and such patterns cannot cover all ten nonspoke edges exactly once.",
+      "lean_declarations": [
+        "Overfull.Sharpness.compatible_counts",
+        "Overfull.Sharpness.perfect_matching_nonspoke_count",
+        "Overfull.Sharpness.compatible_iff_has_matching",
+        "Overfull.Sharpness.no_nonspoke_decomposition"
+      ],
+      "scope_limit": "This finite classification is used by the weighted Petersen obstruction. The actual expansion is handled in the family_coloring_obstruction component.",
+      "manuscript_locations": [
+        "sharp:thm:family, matching obstruction"
+      ]
+    },
+    {
+      "id": "petersen_odd_cut_certificates",
+      "kind": "finite_certificate_and_arithmetic",
+      "description": "For each of the 1024 ten-bit masks with odd vertex count, the explicit Petersen cut sum is at least three and the spoke-cut sum is at least one; the weighted cut expression is at least Delta for Delta >= 3.",
+      "lean_declarations": [
+        "Overfull.Sharpness.odd_cut_certificate",
+        "Overfull.Sharpness.weighted_odd_cut"
+      ],
+      "scope_limit": "These are proofs of the finite mask cut inequalities. Their correspondence with arbitrary whole-clique subsets of the actual family is proved in the family_whole_clique_counting component.",
+      "manuscript_locations": [
+        "sharp:thm:family, whole-clique odd sets"
+      ]
+    },
+    {
+      "id": "sharpness_local_arithmetic",
+      "kind": "arithmetic_implication",
+      "description": "The clique cut inequality, odd-deficiency rounding, edge-count expression, whole-order threshold and degree-ratio gap satisfy the numerical identities used in Section 7.",
+      "lean_declarations": [
+        "Overfull.SharpnessArithmetic.clique_cut_lower_bound",
+        "Overfull.Arithmetic.odd_rounding",
+        "Overfull.Arithmetic.odd_rounding_int",
+        "Overfull.SharpnessArithmetic.odd_clique_edge_count",
+        "Overfull.SharpnessArithmetic.sharpness_edge_count",
+        "Overfull.SharpnessArithmetic.sharpness_whole_graph_threshold",
+        "Overfull.SharpnessArithmetic.sharpness_whole_graph_deficiency",
+        "Overfull.SharpnessArithmetic.sharpness_ratio_below_quarter",
+        "Overfull.SharpnessArithmetic.sharpness_ratio_gap"
+      ],
+      "scope_limit": "Arithmetic components only; a numerical inequality involving a putative cut does not prove the graph cut has that value.",
+      "manuscript_locations": [
+        "sharp:thm:family"
+      ]
+    },
+    {
+      "id": "asymptotic_sharpness_parameters",
+      "kind": "real_and_integer_arithmetic",
+      "description": "For every real c < 1/4, sufficiently large parameters satisfy c <= Delta/(4*Delta+5), and arbitrarily large odd parameters >=3 satisfy this inequality.",
+      "lean_declarations": [
+        "Overfull.SharpnessArithmetic.eventually_above_coefficient",
+        "Overfull.SharpnessArithmetic.arbitrarily_large_odd_parameters"
+      ],
+      "scope_limit": "This component proves the numerical quantifiers. The complete graph-existence statement is tracked separately as Corollary 7.2.",
+      "manuscript_locations": [
+        "sharp:cor:density"
+      ]
+    },
+    {
+      "id": "graph_incidence_and_deficiency",
+      "kind": "graph_theoretic_result",
+      "description": "For every finite simple graph and actual vertex set, internal-edge degree sums, internal-plus-boundary counting, deficiency identities, and the equivalence between odd-set overfullness and small deficiency are proved. A partially intersected clique contributes its actual crossing-edge lower bound.",
+      "lean_declarations": [
+        "Overfull.internal_degree_sum",
+        "Overfull.internal_edges_add_boundary",
+        "Overfull.internal_edges_le_degree_bound",
+        "Overfull.not_overfull_of_even_card",
+        "Overfull.deficiency_identity",
+        "Overfull.overfull_iff_odd_deficiency",
+        "Overfull.no_overfull_iff_odd_deficiency",
+        "Overfull.clique_cut_bound"
+      ],
+      "scope_limit": "These are generic graph-counting theorems. They do not supply any robust partition or sufficient coloring condition for the main theorem.",
+      "manuscript_locations": [
+        "two:eq:deficiency",
+        "sharp:thm:family, no-overfull proof"
+      ]
+    },
+    {
+      "id": "odd_clique_boundary_colors",
+      "kind": "graph_theoretic_result",
+      "description": "Actual clique edge counts imply saturation for an odd clique with as many colors as vertices. Each color misses exactly one vertex of any saturated odd set, so distinct edges crossing its boundary have distinct colors.",
+      "lean_declarations": [
+        "Overfull.clique_internal_edge_count",
+        "Overfull.saturated_odd_clique",
+        "Overfull.EdgeColoring.uncoveredVertices_card_eq_one",
+        "Overfull.EdgeColoring.crossing_edges_eq_of_color_eq",
+        "Overfull.EdgeColoring.boundary_color_injective"
+      ],
+      "scope_limit": "The color statements assume a supplied proper coloring and prove the consequences needed for contraction.",
+      "manuscript_locations": [
+        "sharp:thm:family, odd-clique contraction"
+      ]
+    },
+    {
+      "id": "deleted_petersen_obstruction",
+      "kind": "graph_theoretic_result",
+      "description": "A proper coloring of the weighted Petersen graph with outer vertex zero deleted would extend across the deleted vertex. Regularity, the remaining order, the exact remaining edge count, unique missing vertices, and properness of the restored coloring are proved for the actual edge copies. Thus deletion preserves the Delta-coloring obstruction.",
+      "lean_declarations": [
+        "Overfull.Sharpness.Deletion.extendedColor_proper",
+        "Overfull.Sharpness.DeletedPetersen.regular",
+        "Overfull.Sharpness.DeletedPetersen.remaining_vertex_count",
+        "Overfull.Sharpness.DeletedPetersen.old_edge_count",
+        "Overfull.Sharpness.DeletedPetersen.not_edge_colorable",
+        "Overfull.Sharpness.DeletedPetersen.not_Delta_edge_colorable"
+      ],
+      "scope_limit": "The specialization proves the obstruction for the deleted weighted multigraph. The expansion into a simple graph is proved separately.",
+      "manuscript_locations": [
+        "sharp:thm:family, deleting and restoring the Petersen vertex"
+      ]
+    },
+    {
+      "id": "family_coloring_obstruction",
+      "kind": "graph_theoretic_result",
+      "description": "For every odd Delta >= 3, a hypothetical proper Delta-edge-coloring of the actual simple graph descends through its four odd cliques to a proper coloring of the deleted weighted Petersen graph, which is impossible. The correspondence of edge endpoints, injectivity of the lifted edges, and properness after contraction are proved.",
+      "lean_declarations": [
+        "Overfull.Sharpness.ColoringObstruction.liftedEdge_injective",
+        "Overfull.Sharpness.ColoringObstruction.fiber_odd_and_saturated",
+        "Overfull.Sharpness.ColoringObstruction.liftedEdge_crosses_fiber",
+        "Overfull.Sharpness.Family.not_edge_colorable"
+      ],
+      "scope_limit": "This component proves the Delta-coloring obstruction for the actual family. The explicit Delta+1 coloring is a separate component.",
+      "manuscript_locations": [
+        "sharp:thm:family, lower bound on the chromatic index"
+      ]
+    },
+    {
+      "id": "family_explicit_upper_coloring",
+      "kind": "graph_theoretic_result",
+      "description": "For every odd Delta >= 3, the actual sharpness graph admits an explicitly defined proper edge coloring with Delta+1 colors. The assignment is well-defined on unordered edges and injective on edges incident at each vertex.",
+      "lean_declarations": [
+        "Overfull.Sharpness.Family.rawColor_symmetric",
+        "Overfull.Sharpness.Family.rawColor_lt",
+        "Overfull.Sharpness.Family.rawColor_injective_of_adj",
+        "Overfull.Sharpness.Family.has_upper_coloring"
+      ],
+      "scope_limit": "This is a construction for this family; it is not a formalization of Vizing\u2019s theorem for all simple graphs.",
+      "manuscript_locations": [
+        "sharp:thm:family, upper bound on the chromatic index"
+      ]
+    },
+    {
+      "id": "family_whole_clique_counting",
+      "kind": "graph_theoretic_result",
+      "description": "Canonical whole-clique subsets of the actual graph have a proved vertex count and induced-edge count. Their actual deficiency equals the weighted Petersen mask cut. Every arbitrary whole-clique subset is encoded by a ten-bit mask with matching membership and parity.",
+      "lean_declarations": [
+        "Overfull.Sharpness.WholeCliques.subset_card",
+        "Overfull.Sharpness.WholeCliques.internal_edge_count",
+        "Overfull.Sharpness.WholeCliques.internal_edges_add_weighted_cut",
+        "Overfull.Sharpness.WholeCliques.subset_parity",
+        "Overfull.Sharpness.WholeCliques.eq_subset_setMask",
+        "Overfull.Sharpness.WholeCliques.whole_cliques_not_overfull"
+      ],
+      "scope_limit": "This component handles sets containing each clique wholly or not at all. Partially intersected cliques are handled by the family_no_overfull component.",
+      "manuscript_locations": [
+        "sharp:thm:family, whole-clique odd sets"
+      ]
+    },
+    {
+      "id": "family_no_overfull",
+      "kind": "graph_theoretic_result",
+      "description": "For every odd Delta >= 3 and every vertex subset X of the actual sharpness graph, the number of edges internal to X is at most Delta*floor(|X|/2). The proof covers even sets, partially intersected cliques, and whole-clique sets.",
+      "lean_declarations": [
+        "Overfull.Sharpness.OddSets.partial_clique_not_overfull",
+        "Overfull.Sharpness.OddSets.whole_of_no_partial_clique",
+        "Overfull.Sharpness.Family.no_overfull"
+      ],
+      "scope_limit": "The conclusion quantifies over all actual vertex subsets of the constructed family. It does not assert the main theorem for arbitrary graphs.",
+      "manuscript_locations": [
+        "sharp:thm:family, no-overfull conclusion"
+      ]
+    },
+    {
+      "id": "graph_relabeling",
+      "kind": "graph_theoretic_result",
+      "description": "A graph isomorphism preserves edge-colorability, degrees, maximum degree, actual internal-edge counts, and the absence of overfull vertex sets.",
+      "lean_declarations": [
+        "Overfull.iso_edgeColorable_iff",
+        "Overfull.iso_degree_eq",
+        "Overfull.iso_maxDegree_eq",
+        "Overfull.iso_internalEdges_card",
+        "Overfull.iso_overfull_iff",
+        "Overfull.iso_no_overfull_iff"
+      ],
+      "scope_limit": "These transport statements allow the explicitly constructed vertex type to be relabelled as Fin n; they are not graph-existence assertions by themselves.",
+      "manuscript_locations": [
+        "sharp:thm:family, finite vertex labels"
+      ]
+    },
+    {
+      "id": "complete_sharpness_family",
+      "kind": "complete_manuscript_assertion",
+      "description": "For every odd Delta >= 3, there exists a connected simple graph on Fin (4*Delta+5) with maximum degree Delta, no proper Delta-edge-coloring, a proper (Delta+1)-edge-coloring, no Delta-overfull vertex set, and exactly 2*Delta*(Delta+1) edges. The order and edge identities also give |E|=Delta*(|V|-1)/2.",
+      "lean_declarations": [
+        "Overfull.sharpness_family",
+        "Overfull.SharpnessArithmetic.sharpness_whole_graph_threshold"
+      ],
+      "scope_limit": "The complete statement of Proposition 7.1. It does not prove the main asymptotic coloring theorem.",
+      "manuscript_locations": [
+        "sharp:thm:family"
+      ]
+    },
+    {
+      "id": "complete_density_corollary",
+      "kind": "complete_manuscript_assertion",
+      "description": "For every real c < 1/4 and every order bound N, there is a connected simple graph of order n >= N, maximum degree at least c*n, no proper coloring with maxDegree colors, a proper coloring with maxDegree+1 colors, and no maxDegree-overfull vertex set.",
+      "lean_declarations": [
+        "Overfull.arbitrarily_large_class_two_graphs"
+      ],
+      "scope_limit": "The complete statement of Corollary 7.2. The examples approach the quarter coefficient from below and leave the boundary Delta >= n/4 open.",
+      "manuscript_locations": [
+        "sharp:cor:density"
+      ]
+    },
+    {
+      "id": "robust_range_reduction",
+      "kind": "graph_theoretic_result",
+      "description": "The robust range can be reduced from tau to any positive tau_prime at most tau under a linear minimum-degree bound, with output neighborhood parameter min(nu, eta*tau_prime/2). All neighborhoods use actual graph neighbor counts.",
+      "lean_declarations": [
+        "Overfull.robust_range_reduction"
+      ],
+      "scope_limit": "Complete Lemma 2.17; no robust partition or coloring theorem is supplied.",
+      "manuscript_locations": [
+        "pre:range-reduction"
+      ]
+    },
+    {
+      "id": "robust_deletion_stability",
+      "kind": "graph_theoretic_result",
+      "description": "Both bipartite robust-expansion deletion assertions are proved, using actual degree losses and the actual graph induced on the retained sides. The ordinary spanning edge-deletion version is also proved.",
+      "lean_declarations": [
+        "Overfull.IsBipartiteRobustExpander.after_edge_deletion_of_degree_bound",
+        "Overfull.IsBipartiteRobustExpander.after_vertex_deletion",
+        "Overfull.IsRobustExpander.after_edge_deletion"
+      ],
+      "scope_limit": "Complete Lemma 2.13 with the manuscript robust-parameter conventions made explicit; no random-subgraph estimate or sequence of matchings is proved here.",
+      "manuscript_locations": [
+        "bip:bip:stable"
+      ]
+    },
+    {
+      "id": "bipartite_robust_perfect_matching",
+      "kind": "graph_theoretic_result",
+      "description": "A balanced bipartite robust expander with crossing minimum degrees at least tau times a side order has a mathlib perfect-matching subgraph. Hall inequalities and the actual matching construction are proved.",
+      "lean_declarations": [
+        "Overfull.bipartite_robust_hall",
+        "Overfull.bipartite_robust_bijection",
+        "Overfull.bipartite_robust_perfect_matching"
+      ],
+      "scope_limit": "A supporting existence result, not the adaptive matching-packing theorem. The general Hall theorem is proved separately in the hall_and_deficiency component.",
+      "manuscript_locations": [
+        "bip:sec:core"
+      ]
+    },
+    {
+      "id": "regular_perfect_matching_distribution",
+      "kind": "graph_theoretic_result",
+      "description": "For every positive regular simple graph with no overfull set, the uniform vector belongs to the convex hull of actual perfect-matching indicators. A finite nonnegative probability distribution is constructed with each edge marginal exactly 1/k.",
+      "lean_declarations": [
+        "Overfull.FractionalMatching.integral_eq_matchingIndicators",
+        "Overfull.FractionalMatching.uniform_mem_convexHull",
+        "Overfull.FractionalMatching.exists_perfectMatching_distribution"
+      ],
+      "scope_limit": "The simple-graph perfect-matching application. The full loopless multigraph matching-polytope theorem and distributions are now proved in separate components.",
+      "manuscript_locations": [
+        "old:pre:matching",
+        "three:lem:probability"
+      ]
+    },
+    {
+      "id": "explicit_cycle_absorber",
+      "kind": "graph_theoretic_result",
+      "description": "For every positive ell and every injective placement of the specified vertices in a host graph, presence of the specified edges implies both triangle decompositions, disjointness from the cycle, exactly 9 * ell absorber edges, and exactly 2 * ell + 1 support vertices outside the cycle.",
+      "lean_declarations": [
+        "Overfull.Dense.CycleAbsorber.in_host"
+      ],
+      "scope_limit": "This component proves the explicit cycle gadget. Its simultaneous placement and packing in the dense host are proved separately by finite_remainder_absorber. Approximate integral packing, iterative absorption and the full dense extension remain unproved.",
+      "manuscript_locations": [
+        "dense:cycle"
+      ]
+    },
+    {
+      "id": "critical_graph_reduction",
+      "kind": "graph_theoretic_result",
+      "description": "Extracts an edge-minimal noncolorable graph by its actual edge count, removes isolated vertices, proves inheritance of no-overfullness and maximum-degree preservation, and relabels by an actual graph isomorphism to Fin m. The same-maximum-degree extraction explicitly uses Vizing upper bounds.",
+      "lean_declarations": [
+        "Overfull.exists_edgeMinimal_noncolorable",
+        "Overfull.IsEdgeMinimalNoncolorable.colorable_succ",
+        "Overfull.maxDegree_induce_support",
+        "Overfull.exists_critical_on_fin_of_vizing"
+      ],
+      "scope_limit": "The structural exclusion of dense critical graphs is not supplied.",
+      "manuscript_locations": [
+        "main:quarter, final critical-subgraph reduction"
+      ]
+    },
+    {
+      "id": "conditional_main_reduction",
+      "kind": "conditional_implication",
+      "description": "The exact MainTheorem specification follows from the explicitly stated LargeCriticalExclusion proposition; Vizing is now supplied by its checked proof. The quantifier, density, and threshold transfers are proved.",
+      "lean_declarations": [
+        "Overfull.mainTheorem_of_vizing_and_criticalExclusion",
+        "Overfull.mainTheorem_of_criticalExclusion"
+      ],
+      "scope_limit": "A conditional theorem. LargeCriticalExclusion remains an unproved proposition and is not introduced as an axiom. This implication does not verify the main theorem.",
+      "manuscript_locations": [
+        "main:quarter, final deduction"
+      ]
+    },
+    {
+      "id": "matching_cut_failure_probabilities",
+      "kind": "graph_theoretic_probability_result",
+      "description": "For finite distributions of actual perfect matchings with exact marginals 1/k, proves failure probability < 1/k for each odd set, at most 10/k for all one-vertex changes of an even set, and at most 11 * ell / k for a family of ell sets. The residual graph, its degree k-1, cut incidences, parity, toggle identities, and all probability bounds are proved.",
+      "lean_declarations": [
+        "Overfull.MatchingProbability.Distribution.odd_failure_probability",
+        "Overfull.MatchingProbability.Distribution.even_toggles_failure_probability",
+        "Overfull.MatchingProbability.Distribution.family_failure_probability",
+        "Overfull.MatchingProbability.exists_distribution",
+        "Overfull.MatchingProbability.cutFailure_iff_actual_cut",
+        "Overfull.MatchingProbability.remaining_regular"
+      ],
+      "scope_limit": "Complete Lemma 4.7 for finite simple graphs. Prescribing edges while retaining these cut bounds and repeated adaptive matching deletions remain separate arguments.",
+      "manuscript_locations": [
+        "three:lem:probability"
+      ]
+    },
+    {
+      "id": "vizing_upper_bound",
+      "kind": "graph_theoretic_result",
+      "description": "The complete verified Misra-Gries algorithm is transported from its adjacency-list representation to actual finite simple graphs and proper unordered-edge colorings, proving the upper bound Delta(G)+1.",
+      "lean_declarations": [
+        "Overfull.vizing_finite",
+        "Overfull.finite_vizing_bound"
+      ],
+      "scope_limit": "Vizing supplies the maximum-degree preservation in the critical reduction; it does not prove the dense critical exclusion.",
+      "manuscript_locations": [
+        "Section2.3, Vizing upper bound",
+        "main:quarter, critical reduction"
+      ]
+    },
+    {
+      "id": "overfull_subgraph_equivalence",
+      "kind": "graph_theoretic_result",
+      "description": "The host-maximum-degree overfull vertex-set predicate is proved equivalent to existence of an intrinsically overfull mathlib subgraph with exactly the same maximum degree. The induced witness, equality of its maximum degree, actual edge counts, and the converse for arbitrary subgraphs are all proved.",
+      "lean_declarations": [
+        "Overfull.overfull_induce_same_maxDegree",
+        "Overfull.exists_overfull_set_iff_same_degree_subgraph",
+        "Overfull.no_overfull_iff_no_same_degree_overfull_subgraph",
+        "Overfull.no_overfull_iff_not_exists_same_degree_overfull_subgraph"
+      ],
+      "scope_limit": "This establishes exact agreement of the formal target with the manuscript obstruction; it does not prove sufficiency for edge coloring.",
+      "manuscript_locations": [
+        "Introduction, overfullness definition",
+        "main:quarter, statement formulation"
+      ]
+    },
+    {
+      "id": "hall_and_deficiency",
+      "kind": "graph_theoretic_result",
+      "description": "Hall\u2019s equivalence and its deficiency form are proved for actual matching subgraphs, with arbitrary finite side sizes. The deficiency construction uses h dummy vertices and counts the unmatched original vertices.",
+      "lean_declarations": [
+        "Overfull.bipartite_hall_iff",
+        "Overfull.bipartite_hall_defect"
+      ],
+      "scope_limit": "Complete Theorem 2.3 and Corollary 2.4. No balanced-side hypothesis is imposed.",
+      "manuscript_locations": [
+        "bip:pre:hall",
+        "bip:pre:hall-defect"
+      ]
+    },
+    {
+      "id": "full_matching_polytope",
+      "kind": "graph_theoretic_result",
+      "description": "For every finite loopless multigraph, the convex hull of actual matching indicators equals the nonnegative edge weights satisfying the degree and odd-set inequalities. Parallel copies are retained. The degree-inequality polytope is reduced to the proved perfect-matching polytope by a doubled graph; both directions and the matching-indicator correspondence are proved.",
+      "lean_declarations": [
+        "Overfull.Multigraph.matching_polytope",
+        "Overfull.MatchingPolytope.doubled_odd_cut",
+        "Overfull.Multigraph.integral_eq_matchingIndicators"
+      ],
+      "scope_limit": "Complete Theorem 2.9, not only its perfect-matching application.",
+      "manuscript_locations": [
+        "old:pre:matching"
+      ]
+    },
+    {
+      "id": "multigraph_matching_distributions",
+      "kind": "graph_theoretic_result",
+      "description": "Every point of the actual multigraph matching polytope has a finite distribution on actual matchings with the prescribed edge-copy marginals. Uniform weights 1/k are feasible under degree at most k and no k-overfull set. Every positive-weight matching covers all degree-k vertices. For a positive regular multigraph the distribution is supported on perfect matchings, with all zero-weight indices removed.",
+      "lean_declarations": [
+        "Overfull.Multigraph.exists_matching_distribution",
+        "Overfull.Multigraph.uniform_mem_matchingPolytope",
+        "Overfull.Multigraph.positive_weight_matching_covers",
+        "Overfull.Multigraph.exists_uniform_matching_distribution",
+        "Overfull.Multigraph.exists_perfectMatching_distribution"
+      ],
+      "scope_limit": "Proves the consequences following Theorem 2.9 for arbitrary loopless multigraphs. It does not prove the later adaptive matching-packing arguments.",
+      "manuscript_locations": [
+        "old:pre:matching",
+        "three:lem:probability"
+      ]
+    },
+    {
+      "id": "bipartite_augmenting_path",
+      "kind": "graph_theoretic_result",
+      "description": "The robust graph hypotheses produce an explicit simple alternating path avoiding W, with prescribed uncovered endpoints and at most ceil(2/theta)+1 matching edges. Both vertex sequences are injective, actual matching edges are distinct, and each forward graph edge is outside the matching. The matching need not lie in G.",
+      "lean_declarations": [
+        "Overfull.bipartite_robust_augmenting_path",
+        "Overfull.BipartiteAugmentingPath.matching_edges_injective",
+        "Overfull.BipartiteAugmentingPath.graph_edges_not_matching"
+      ],
+      "scope_limit": "Complete Lemma 2.15. Repeated matching-packing and reserve arguments remain separate.",
+      "manuscript_locations": [
+        "bip:bip:augment"
+      ]
+    },
+    {
+      "id": "multigraph_small_cuts",
+      "kind": "graph_theoretic_result",
+      "description": "Actual simple robust cores are embedded by endpoint-preserving injective maps into the finite host multigraph edge copies. Under the stated real degree and error bounds, every cut of size at most k+b has total minority shore size at most one. An actual union of whole cores differs in at most one vertex. A uniform order threshold is proved before quantifying graph data.",
+      "lean_declarations": [
+        "Overfull.SmallCuts.small_cut_lemma",
+        "Overfull.SmallCuts.minority_sum_le_one",
+        "Overfull.SmallCuts.union_of_cores_close",
+        "Overfull.SmallCuts.exists_order_threshold"
+      ],
+      "scope_limit": "Complete Lemma 2.18, with real k, a, b and explicit sufficient threshold 3 < nu^2*c^2*n. It does not supply a robust partition.",
+      "manuscript_locations": [
+        "two:lem:small-cut"
+      ]
+    },
+    {
+      "id": "dense_signed_flows",
+      "kind": "graph_theoretic_result",
+      "description": "For actual finite bipartite graphs, the crossing-degree assumptions imply the necessary finite-network cut inequalities and yield real edge weights with prescribed row and column sums. The balanced bound is d/lambda. The unequal-side bound is strengthened to 2*theta/(2*c-1), implying the stated 3*theta/(2*c-1). Weights vanish on nonedges and empty sides are included.",
+      "lean_declarations": [
+        "Lovasz.hoffman_circulation",
+        "Overfull.BoundedFlow.exists_of_cut",
+        "Overfull.bipartite_signed_flow_of_cut",
+        "Overfull.dense_signed_flow",
+        "Overfull.dense_unequal_flow_strong",
+        "Overfull.dense_unequal_flow"
+      ],
+      "scope_limit": "Complete Lemmas 5.6 and 5.9. The circulation theorem is proved in included, attributed source; no flow or cut existence is assumed in the graph results.",
+      "manuscript_locations": [
+        "dense:signed-flow",
+        "dense:unequal-flow"
+      ]
+    },
+    {
+      "id": "bipartite_range_reduction",
+      "kind": "graph_theoretic_result",
+      "description": "The side-normalized bipartite robust-expansion range shrinks from tau to any positive sigma at most tau, with new parameter min(nu,alpha*sigma/4), under the stated crossing-degree bounds. All incidence estimates use actual graph edges.",
+      "lean_declarations": [
+        "Overfull.bipartite_robust_range_reduction"
+      ],
+      "scope_limit": "Complete neighborhood-expansion conclusion of Lemma 6.4. The usual new-parameter inequality mu <= sigma follows for positive order; the empty-graph branch proves the expansion inequality without claiming this additional parameter admissibility.",
+      "manuscript_locations": [
+        "old:fac:range"
+      ]
+    },
+    {
+      "id": "multigraph_matching_cut_probabilities",
+      "kind": "graph_theoretic_probability_result",
+      "description": "The three matching-deletion probability bounds are proved also for loopless multigraphs, with all parallel copies counted separately. Deleting a matching is realized as a multigraph on the subtype of remaining edge copies; the residual cut and degree identities are proved. The required perfect-matching distributions are constructed.",
+      "lean_declarations": [
+        "Overfull.MultigraphMatchingProbability.Distribution.odd_failure_probability",
+        "Overfull.MultigraphMatchingProbability.Distribution.even_toggles_failure_probability",
+        "Overfull.MultigraphMatchingProbability.Distribution.family_failure_probability",
+        "Overfull.MultigraphMatchingProbability.exists_distribution",
+        "Overfull.MultigraphMatchingProbability.cutFailure_iff_actual_cut",
+        "Overfull.MultigraphMatchingProbability.remaining_regular",
+        "Overfull.MultigraphMatchingProbability.remaining_degree_add_selected"
+      ],
+      "scope_limit": "Strengthens Lemma 4.7 to the multigraph setting used in the completion arguments. Edge prescriptions and adaptive repeated deletions are not proved here.",
+      "manuscript_locations": [
+        "three:lem:probability"
+      ]
+    },
+    {
+      "id": "konig_multigraph_edge_coloring",
+      "kind": "graph_theoretic_result",
+      "description": "Every finite loopless bipartite multigraph has a proper k-edge-coloring exactly when all degrees are at most k. Every parallel edge copy receives its own color value. The proof derives no-overfullness by counting the smaller bipartition shore, obtains a matching covering maximum-degree vertices from the proved matching polytope, deletes its actual copies, and inducts on k. The zero-degree case is included.",
+      "lean_declarations": [
+        "Overfull.Multigraph.bipartite_not_overfull",
+        "Overfull.Multigraph.exists_matching_covers_degree",
+        "Overfull.Multigraph.exists_edgeColoring_of_bipartite",
+        "Overfull.Multigraph.EdgeColoring.degree_le",
+        "Overfull.Multigraph.konig_edgeColoring_iff"
+      ],
+      "scope_limit": "Complete K\u00f6nig edge-coloring input in Section 2.3; no multigraph fan elementarity theorem is supplied.",
+      "manuscript_locations": [
+        "Section 2.3, K\u00f6nig edge-coloring theorem"
+      ]
+    },
+    {
+      "id": "geometric_correction_series",
+      "kind": "analysis_support_result",
+      "description": "For finite real coordinate spaces and a linear map into a specified subspace, a proved halving correction at every residual gives an exact correction with twice the one-step norm bound. The correction series, continuity, convergence, exactness, and coordinate bounds are proved.",
+      "lean_declarations": [
+        "Overfull.GeometricCorrection.exists_exact_correction"
+      ],
+      "scope_limit": "An internal analytic helper. It does not establish the graph-specific one-step corrections or the manuscript fractional triangle-decomposition lemma by itself.",
+      "manuscript_locations": [
+        "dense:fractional, geometric-series step"
+      ]
+    },
+    {
+      "id": "multigraph_overfull_obstruction",
+      "kind": "graph_theoretic_result",
+      "description": "Actual color classes of a proper multigraph edge coloring are edge-copy matchings. Each color contributes at most floor(|X|/2) internal copies, so every k-colored multigraph has at most k*floor(|X|/2) internal edges on each vertex set.",
+      "lean_declarations": [
+        "Overfull.Multigraph.IsMatching.internal_edges_card_le",
+        "Overfull.Multigraph.EdgeColoring.colorClass_isMatching",
+        "Overfull.Multigraph.EdgeColoring.internalEdges_card_le",
+        "Overfull.Multigraph.EdgeColoring.not_overfull",
+        "Overfull.Multigraph.overfull_not_edgeColorable"
+      ],
+      "scope_limit": "The necessary no-overfull condition for all finite loopless multigraphs. Sufficiency in the bipartite case is proved separately by K\u00f6nig\u2019s theorem.",
+      "manuscript_locations": [
+        "Section 2.3, multigraph edge colorings",
+        "old:pre:matching"
+      ]
+    },
+    {
+      "id": "fractional_triangle_decomposition",
+      "kind": "graph_theoretic_result",
+      "description": "For every 0<eta<1/2, the positive threshold eps0=min(eta,1/(32*(2+10/eta))) is chosen before all finite vertex types and actual simple tripartite graphs. Under the exact local-balance, degree, and missing-neighbor hypotheses, actual triangle weights have incidence one on every actual edge and lie in [1/(2k),3/(2k)]. The signed link corrections, residual contraction, uniform-deficit bounds, and convergent correction series are all proved and composed. Empty first and second parts are included with the third part unrestricted.",
+      "lean_declarations": [
+        "Overfull.TripartiteGraph.exists_link_correction",
+        "Overfull.TripartiteGraph.spread_residual_bound",
+        "Overfull.TripartiteGraph.uniform_residual_bound",
+        "Overfull.TripartiteGraph.exists_triangle_correction",
+        "Overfull.TripartiteGraph.fractional_triangles_of_small_error",
+        "Overfull.dense_fractional_triangles"
+      ],
+      "scope_limit": "This is a fractional decomposition of the actual tripartite graph. The finite absorber is proved separately. Approximate integral packing, iterative absorption and the full dense extension remain unproved.",
+      "manuscript_locations": [
+        "dense:fractional"
+      ]
+    },
+    {
+      "id": "tutte_berge_formula",
+      "kind": "graph_theoretic_result",
+      "description": "For every finite simple graph, a maximum matching leaves exactly the maximum of the untruncated integer differences o(G-X)-|X| vertices uncovered. The odd-component count uses the actual vertex-deleted graph. All integer differences are bounded and an actual vertex set attains equality. A matching attaining the deficiency is constructed by adding universal vertices, applying the proved Tutte theorem, and restricting the perfect matching. Maximum is measured by actual unordered edge counts. The empty graph is included.",
+      "lean_declarations": [
+        "Overfull.TutteBerge.deficiency_integer_bound",
+        "Overfull.TutteBerge.deficiency_integer_attained",
+        "Overfull.TutteBerge.augmented_has_perfectMatching",
+        "Overfull.TutteBerge.exists_perfectMatching_augmented_uncovered",
+        "Overfull.TutteBerge.exists_matching_of_perfect_augmented",
+        "Overfull.TutteBerge.matching_uncovered_add_twice_edges",
+        "Overfull.TutteBerge.oddCount_le_add_uncovered",
+        "Overfull.TutteBerge.exists_matching_attaining_deficiency",
+        "Overfull.TutteBerge.isMaximumMatching_iff_deficiency",
+        "Overfull.TutteBerge.exists_maximum_matching",
+        "Overfull.TutteBerge.tutte_berge",
+        "Overfull.TutteBerge.tutte_berge_integer_maximum"
+      ],
+      "scope_limit": "Complete Theorem 2.5 for finite simple graphs. The underlying Tutte theorem is a proved declaration in the pinned mathlib dependency, not an assumed formula.",
+      "manuscript_locations": [
+        "pre:tutte-berge"
+      ]
+    },
+    {
+      "id": "balanced_edge_coloring",
+      "kind": "graph_theoretic_result",
+      "description": "Full Lemma 2.10 for actual loopless multigraph edge colorings: all exceptional vertices are covered, both sides have equal color-class coverage, the side sizes differ by at most two between colors, each vertex is covered in exactly its degree many colors, and both footprint bounds hold. The proof constructs actual two-color switches and minimizes two finite potentials.",
+      "lean_declarations": [
+        "Overfull.Multigraph.balanced_edgeColoring",
+        "Overfull.Multigraph.EdgeColoring.exists_balanced",
+        "Overfull.Multigraph.EdgeColoring.exists_balanced_spread"
+      ],
+      "scope_limit": "The initial q-edge-colorability is a hypothesis of the manuscript lemma; existence of that initial coloring in the later applications is a separate obligation.",
+      "manuscript_locations": [
+        "bip:color:balance"
+      ]
+    },
+    {
+      "id": "one_high_degree_coloring",
+      "kind": "graph_theoretic_result",
+      "description": "Full Lemma 2.11: color the actual edge copies at the distinguished vertex injectively, then extend greedily under the strict 2s<k bound for all other degrees.",
+      "lean_declarations": [
+        "Overfull.Multigraph.edgeColoring_one_high",
+        "Overfull.Multigraph.PartialEdgeColoring.exists_edgeColoring_extending"
+      ],
+      "scope_limit": "This lemma treats a finite loopless multigraph with at most one high-degree vertex.",
+      "manuscript_locations": [
+        "old:color:onehigh"
+      ]
+    },
+    {
+      "id": "sparse_vertex_deletion_coloring",
+      "kind": "graph_theoretic_result",
+      "description": "Full Lemma 2.12, including real q: an actual sparse vertex deletion, the three-vertex edge bounds, and 6q<k give a proper coloring of all edge copies. The proof colors the core and two stars, assigns palettes by Hall, and colors the central parallel copies.",
+      "lean_declarations": [
+        "Overfull.Multigraph.edgeColoring_sparse_vertex_deletion_real",
+        "Overfull.Multigraph.edgeColoring_sparse_deleteVertex",
+        "Overfull.Multigraph.deleteVertex_degree"
+      ],
+      "scope_limit": "The deletion and degree bounds are properties of actual edge copies, including arbitrary parallel multiplicities.",
+      "manuscript_locations": [
+        "old:color:sparse"
+      ]
+    },
+    {
+      "id": "finite_independent_edge_sampling",
+      "kind": "finite_probability_result",
+      "description": "The explicit finite product of Bernoulli masses is normalized, nonnegative for 0<=p<=1, and has the required joint coordinate probabilities. Unused coordinates are marginalized exactly.",
+      "lean_declarations": [
+        "Overfull.Bernoulli.sum_weight",
+        "Overfull.Bernoulli.weight_nonneg",
+        "Overfull.Bernoulli.probability_assignment",
+        "Overfull.Bernoulli.probability_retained"
+      ],
+      "scope_limit": "The model samples finitely many independent Boolean coordinates with a common probability p.",
+      "manuscript_locations": [
+        "bip:bip:random",
+        "bip:pre:chernoff"
+      ]
+    },
+    {
+      "id": "bernoulli_concentration",
+      "kind": "finite_probability_result",
+      "description": "Exact expectation and exponential-moment bounds for the finite common-p product model, with two-sided Chernoff constant 1/3 and an additive degree estimate. The analytic exponential estimate is proved rather than assumed.",
+      "lean_declarations": [
+        "Overfull.Bernoulli.expected_retainedCount",
+        "Overfull.Bernoulli.exponential_moment_general_le",
+        "Overfull.Bernoulli.chernoff",
+        "Overfull.Bernoulli.additive_chernoff"
+      ],
+      "scope_limit": "The common-probability specialization. The unequal-probability and hypergeometric finite laws are proved in the additional concentration modules; Lemma 2.2 is complete in that formulation.",
+      "manuscript_locations": [
+        "bip:pre:chernoff"
+      ]
+    },
+    {
+      "id": "random_bipartite_reserve",
+      "kind": "graph_theoretic_result",
+      "description": "Full Lemma 2.14 for the actual independently sampled subgraph. A failed robust-neighborhood condition yields actual vertex-set witnesses. Their edge-count tails and a union bound give failure probability at most 4^m exp(-p*nu^2*m^2/24), strengthening the manuscript factor 2.",
+      "lean_declarations": [
+        "Overfull.RandomReserve.bipartite_random_reserve",
+        "Overfull.RandomReserve.failure_probability",
+        "Overfull.RandomReserve.sampledGraph_le"
+      ],
+      "scope_limit": "This proves robust expansion for the sample. Simultaneous degree control is proved separately, and the later adaptive packing is not established by the reserve lemma alone.",
+      "manuscript_locations": [
+        "bip:bip:random"
+      ]
+    },
+    {
+      "id": "almost_regular_robust_reserve",
+      "kind": "graph_theoretic_result",
+      "description": "A uniform order threshold, chosen before the vertex types or graph, produces one actual bipartite spanning subgraph contained in G with robust parameter p*nu/2 and all degree deviations from p*Delta strictly below 2*epsilon*m. This proves the reserve-selection step of adaptive packing.",
+      "lean_declarations": [
+        "Overfull.RandomReserve.exists_reserve_with_degree_control",
+        "Overfull.RandomReserve.exists_almost_regular_reserve",
+        "Overfull.RandomReserve.crossingDegree_eq_degree",
+        "Overfull.RandomReserve.some_degree_failure_probability"
+      ],
+      "scope_limit": "The reserve-selection component of Step 1; it is now assembled into the complete adaptive packing theorem.",
+      "manuscript_locations": [
+        "bip:pack:adaptive, Step 1"
+      ]
+    },
+    {
+      "id": "dense_coloring_triangle_encoding",
+      "kind": "graph_theoretic_result",
+      "description": "Full Lemma 5.3: the actual simple part is injected into the multigraph edge copies; its complement retains every other copy. The actual prescribed coloring determines missing-color edges, local balance, exact deficit identities, and an equivalence between full coloring extensions and exact triangle decompositions.",
+      "lean_declarations": [
+        "Overfull.dense_encoding",
+        "Overfull.Dense.Encoding.SimplePart.extension_iff_triangleDecomposition",
+        "Overfull.Dense.Encoding.SimplePart.encoded_locallyBalanced"
+      ],
+      "scope_limit": "The equivalence does not itself prove that the encoded graph has a triangle decomposition.",
+      "manuscript_locations": [
+        "dense:encoding"
+      ]
+    },
+    {
+      "id": "finite_balanced_remainder_enumeration",
+      "kind": "graph_theoretic_result",
+      "description": "Every actual locally balanced subgraph of G[U] is enumerated and decomposed into positive simple directed cycles. The tagged finite family covers each remainder exactly, is edge-disjoint within each tag, has all cycle vertices in U, and satisfies sum(3*length)<=|U|^2*2^(|U|^2).",
+      "lean_declarations": [
+        "Overfull.Dense.FiniteAbsorber.cyclePartition_exists",
+        "Overfull.Dense.FiniteAbsorber.remainderCycles_exists",
+        "Overfull.Dense.FiniteAbsorber.RemainderCycles.budget_of_card_le"
+      ],
+      "scope_limit": "This enumerates and counts the cycles; placement and assembly of the absorber in the dense host are separate results.",
+      "manuscript_locations": [
+        "dense:finite"
+      ]
+    },
+    {
+      "id": "six_pair_balanced_reserve",
+      "kind": "graph_theoretic_result",
+      "description": "Full Lemma 5.10 for an actual directed graph whose edges advance through six classes. Graph-derived common vertex demands are corrected by the unequal-side flow theorem. The resulting supported edge probabilities lie strictly in (0,1), are exactly balanced at every vertex, and differ from mu by at most c1*mu*theta.",
+      "lean_declarations": [
+        "Overfull.dense_reserve",
+        "Overfull.dense_reserve_explicit",
+        "Overfull.Dense.SixCycleGraph.sum_reserveDemand",
+        "Overfull.Dense.SixCycleGraph.exists_pair_weights"
+      ],
+      "scope_limit": "Explicit choices are c1=12/(2c-1) and theta0=min(1/4,1/(4c1)); both depend only on c. This constructs expected balance, not a sampled integral reserve.",
+      "manuscript_locations": [
+        "dense:reserve"
+      ]
+    },
+    {
+      "id": "finite_remainder_absorber",
+      "kind": "graph_theoretic_result",
+      "description": "Full Lemma 5.5: from the actual tripartite density and missing-neighbor bounds, a uniform threshold gives one finite absorber for every locally balanced subgraph of G[U]. Its actual edges avoid G[Z], its vertex support outside U avoids Z, its edge-plus-auxiliary-vertex count is at most 4*h^2*2^(h^2), and both its default decomposition and every activated decomposition consist of actual host triangles. Cycle enumeration, simultaneous disjoint placements and exact edge coverage are all proved. A literal mathlib subgraph adapter proves that its vertex set is exactly its support and that its actual edge and vertex counts are the quantities bounded in the manuscript.",
+      "lean_declarations": [
+        "Overfull.Dense.FiniteAbsorber.finite_absorber",
+        "Overfull.Dense.FiniteAbsorber.finite_absorber_graph",
+        "Overfull.Dense.FiniteAbsorber.finite_absorber_subgraph",
+        "Overfull.Dense.FiniteAbsorber.supportedSubgraph_verts_eq_support",
+        "Overfull.Dense.FiniteAbsorber.supportedSubgraph_edgeCount"
+      ],
+      "scope_limit": "The epsilon restriction is written 16*h*epsilon<=gamma, equivalent to the manuscript for h>0 and meaningful when h=0. This is the bounded finite absorber; approximate integral packing and iterative absorption are still separate obligations.",
+      "manuscript_locations": [
+        "dense:finite"
+      ]
+    },
+    {
+      "id": "maximum_matching_preserving_coverage",
+      "kind": "graph_theoretic_result",
+      "description": "For every prescribed matching in an actual finite simple graph, there is an actual maximum matching covering all vertices covered by the original. The proof switches actual two-color components and maximizes retained coverage secondarily. A greedy matching covers any prescribed set Z whose vertices each have degree greater than 2|Z|; the maximum-matching extension retains this coverage.",
+      "lean_declarations": [
+        "Overfull.MatchingExtension.exists_maximum_covering",
+        "Overfull.MatchingExtension.exists_matching_covering_small_set",
+        "Overfull.MatchingExtension.exists_maximum_covering_small_set"
+      ],
+      "scope_limit": "These are matching-selection inputs to Step 2 of adaptive packing. They do not derive the degree inequalities for the actual outside-reserve graph or prove the adaptive matching sequence and load invariant.",
+      "manuscript_locations": [
+        "bip:pack:adaptive, Step 2",
+        "two:eq:outside-degrees and the subsequent matching choice"
+      ]
+    },
+    {
+      "id": "bipartite_maximum_matching_deficiency",
+      "kind": "graph_theoretic_result",
+      "description": "An actual maximum matching internally supplies a Hall witness. Double-counting actual graph edges proves that its uncovered left-side count is at most (2*a*m+t)/d when both side orders are at most the ambient m, ordinary degrees lie between d-a and d+a+u(v), the load u is nonnegative with total at most t, d>0 and a>=0. Exact matching-edge/covered-vertex identities also prove equal uncovered side counts for balanced graphs.",
+      "lean_declarations": [
+        "Overfull.BipartitePackingDeficiency.maximum_matching_hall_witness",
+        "Overfull.BipartitePackingDeficiency.degree_sum_le_neighbor_sum",
+        "Overfull.BipartitePackingDeficiency.maximum_matching_deficiency",
+        "Overfull.BipartitePackingDeficiency.matching_uncovered_sides_eq"
+      ],
+      "scope_limit": "The degree-based deficiency theorem. The actual outside-reserve graph, its degree identities, matching completion and adaptive invariant are proved by the later packing modules and assembled in Overfull.adaptive_bipartite_packing.",
+      "manuscript_locations": [
+        "bip:pack:adaptive, Step 2",
+        "bip:pack:deficiency"
+      ]
+    },
+    {
+      "id": "bipartite_packing_matching_selection",
+      "kind": "graph_theoretic_result",
+      "description": "From actual degree and total-load bounds, construct an actual globally maximum matching covering the prescribed saturated vertices. The positive-capacity variant derives the saturated vertex set and its size from the load function. The manuscript specialization keeps the ambient m distinct from the reduced side sizes, proves equal uncovered-side counts, and obtains exactly h<=(16+2*c0)*epsilon*m/gamma.",
+      "lean_declarations": [
+        "Overfull.BipartitePackingStep.exists_maximum_matching_with_deficiency",
+        "Overfull.BipartitePackingStep.exists_matching_covering_saturated_load",
+        "Overfull.BipartitePackingStep.exists_packing_matching"
+      ],
+      "scope_limit": "The degree-based matching-selection component. The actual working graph, completion and adaptive induction are now proved and assembled in Overfull.adaptive_bipartite_packing.",
+      "manuscript_locations": [
+        "bip:pack:adaptive, Step 2",
+        "bip:pack:deficiency"
+      ]
+    },
+    {
+      "id": "independent_indicator_concentration",
+      "kind": "finite_probability_result",
+      "description": "The finite Bernoulli product law permits a distinct success probability at every coordinate. Its normalization, exact joint probabilities, exact expectation, exponential moment, and both Chernoff tails are proved. An event and expectation transfer theorem covers arbitrary finite outcome spaces satisfying the independent joint law.",
+      "lean_declarations": [
+        "Overfull.IndependentBernoulli.sum_weight",
+        "Overfull.IndependentBernoulli.probability_assignment",
+        "Overfull.IndependentBernoulli.expected_retainedCount",
+        "Overfull.IndependentBernoulli.chernoff",
+        "Overfull.IndependentBernoulli.expected_count_of_joint_law",
+        "Overfull.IndependentBernoulli.chernoff_of_independent_indicators"
+      ],
+      "scope_limit": "Finite joint-law formulation of the independent-indicator part of Lemma 2.2. No Mathlib measure-space interface for infinite underlying outcome spaces is included; every finite independent-indicator law used in the manuscript is represented.",
+      "manuscript_locations": [
+        "bip:pre:chernoff"
+      ]
+    },
+    {
+      "id": "hypergeometric_concentration",
+      "kind": "finite_probability_result",
+      "description": "Uniform sampling of actual k-element subsets of a finite population. Exact subset counts and complement sampling prove the exponential-moment bounds for both signs. The actual expectation and the two-sided Chernoff constant 1/3 are proved, including the empty population and all degenerate samples.",
+      "lean_declarations": [
+        "Overfull.Hypergeometric.sum_weight",
+        "Overfull.Hypergeometric.containing_samples_card",
+        "Overfull.Hypergeometric.probability_containing_le",
+        "Overfull.Hypergeometric.probability_disjoint_le",
+        "Overfull.Hypergeometric.exponential_moment_le_binomial",
+        "Overfull.Hypergeometric.expected_count",
+        "Overfull.Hypergeometric.chernoff"
+      ],
+      "scope_limit": "The actual hypergeometric finite law, not an assumed concentration or moment estimate.",
+      "manuscript_locations": [
+        "bip:pre:chernoff"
+      ]
+    },
+    {
+      "id": "actual_matching_augmentation",
+      "kind": "graph_theoretic_result",
+      "description": "Switch an actual matching along one alternating path, or simultaneously along a vertex-disjoint family relative to the original matching. Covered vertices are exactly the old covered set and the path ends. Every reserve edge and its degree contribution are tracked in the original reserve even when paths use only its unused subgraph.",
+      "lean_declarations": [
+        "Overfull.BipartiteAugmentingPath.augmented_isMatching",
+        "Overfull.BipartiteAugmentingPath.augmented_verts",
+        "Overfull.BipartiteAugmentingPath.vertexSet_partner_closed",
+        "Overfull.BipartitePathFamily.augmented_isMatching",
+        "Overfull.BipartitePathFamily.augmented_verts",
+        "Overfull.BipartitePathFamily.augmented_reserve_degree_of_le",
+        "Overfull.BipartitePathFamily.augmented_reserve_degree_sum_le"
+      ],
+      "scope_limit": "Actual augmentation of supplied paths; construction of the disjoint paths is proved separately and used in the complete packing theorem.",
+      "manuscript_locations": [
+        "bip:pack:adaptive, Steps 3-4"
+      ]
+    },
+    {
+      "id": "disjoint_augmenting_path_construction",
+      "kind": "graph_theoretic_result",
+      "description": "Construct all required short, pairwise vertex-disjoint augmenting paths from robust expansion, minimum degree, unmatched endpoint pairs, and the numerical forbidden-set budget. The paths are not assumed. An induction protects the last pair while constructing the preceding paths, then joins that pair outside their union.",
+      "lean_declarations": [
+        "Overfull.BipartitePathPacking.path_union_card",
+        "Overfull.BipartitePathPacking.exists_disjoint_paths"
+      ],
+      "scope_limit": "The path-family construction used in the full matching-completion and packing theorems.",
+      "manuscript_locations": [
+        "bip:pack:adaptive, Step 3"
+      ]
+    },
+    {
+      "id": "bipartite_matching_completion",
+      "kind": "graph_theoretic_result",
+      "description": "Construct a partner-closed forbidden set, enumerate the actual uncovered pairs, find disjoint short paths and complete the matching. The resulting actual ambient subgraph has vertex set exactly the complement of S, uses no reserve edge at S or the saturated set Z, uses at most one at every vertex, and has total reserve degree at most 2*ell*h.",
+      "lean_declarations": [
+        "Overfull.BipartiteMatchingCompletion.exists_partner_closed_set",
+        "Overfull.BipartiteMatchingCompletion.exists_completion",
+        "Overfull.BipartiteMatchingCompletion.exists_completion_in_graph"
+      ],
+      "scope_limit": "A complete local matching-completion theorem; it is assembled with actual residual-graph selection and online induction in Theorem 2.16.",
+      "manuscript_locations": [
+        "bip:pack:adaptive, Steps 3-4"
+      ]
+    },
+    {
+      "id": "bipartite_packing_degree_accounting",
+      "kind": "graph_theoretic_result",
+      "description": "Exact degree and reserve-load identities for the actual union of pairwise edge-disjoint matching subgraphs. Working degrees after vertex deletion, equality with the manuscript load counts, exact load increments, integer-capacity preservation, and the unused reserve degree are proved.",
+      "lean_declarations": [
+        "Overfull.BipartitePackingAccounting.residual_degree_identity",
+        "Overfull.BipartitePackingAccounting.residual_degree_eq",
+        "Overfull.BipartitePackingAccounting.working_degree_bounds",
+        "Overfull.BipartitePackingAccounting.reserveLoad_eq_count",
+        "Overfull.BipartitePackingAccounting.reserveLoad_insert_le_capacity",
+        "Overfull.BipartitePackingAccounting.total_reserveLoad_insert",
+        "Overfull.BipartitePackingAccounting.unused_reserve_degree"
+      ],
+      "scope_limit": "All degrees are degrees of actual graph deletions; none of the required working-degree conclusions is assumed.",
+      "manuscript_locations": [
+        "bip:pack:adaptive, Steps 2-4"
+      ]
+    },
+    {
+      "id": "bipartite_packing_actual_working_graph",
+      "kind": "graph_theoretic_result",
+      "description": "Identify the deleted graph with the sum of the remaining bipartite sides, preserve degrees and exact uncovered counts, and construct an actual ambient matching outside both the reserve and all old edges. It covers every remaining saturated vertex and satisfies both deficiency bounds using the actual total reserve load.",
+      "lean_declarations": [
+        "Overfull.BipartitePackingDeletion.deletedGraph_degree",
+        "Overfull.BipartitePackingDeletion.remaining_sides_balanced",
+        "Overfull.BipartitePackingDeletion.liftMatching_isMatching",
+        "Overfull.BipartitePackingWorking.exists_large_matching_outside_reserve"
+      ],
+      "scope_limit": "The complete graph-theoretic Step 2, with the small-constant hypotheses supplied by the parameter lemmas.",
+      "manuscript_locations": [
+        "bip:pack:adaptive, Step 2"
+      ]
+    },
+    {
+      "id": "bipartite_packing_numerical_bounds",
+      "kind": "numerical_result",
+      "description": "Solve the exact finite reserve-use recurrence, bound its geometric factor by exp(8*ell/gamma), justify the rounded capacity and saturated-set size, and choose all small constants and order slack before the graph. The permitted round count includes the zero-round case.",
+      "lean_declarations": [
+        "Overfull.BipartitePackingBounds.reserve_recurrence_bound",
+        "Overfull.BipartitePackingBounds.reserve_step_bound",
+        "Overfull.BipartitePackingBounds.saturated_vertices_bound",
+        "Overfull.BipartitePackingBounds.exists_order_threshold",
+        "Overfull.BipartitePackingParameters.exists_parameters",
+        "Overfull.BipartitePackingParameters.capacity_budget",
+        "Overfull.BipartitePackingParameters.completion_budget",
+        "Overfull.BipartitePackingParameters.round_count_bounds"
+      ],
+      "scope_limit": "Numerical components of Theorem 2.16, combined with the actual graph construction rather than used as substitutes for it.",
+      "manuscript_locations": [
+        "bip:pack:epsilon-choice",
+        "bip:pack:induction",
+        "bip:pack:adaptive, Step 4"
+      ]
+    },
+    {
+      "id": "bipartite_packing_initialization_and_retention",
+      "kind": "graph_theoretic_result",
+      "description": "A uniform threshold produces the initial actual reserve with expansion, degree control, minimum degree and integer slack. Subsequent reserve degree loss equals the actual used-edge load; the unused reserve and the entire graph left after all selected matchings retain half its original robust parameter.",
+      "lean_declarations": [
+        "Overfull.BipartitePackingInitial.exists_initial_reserve",
+        "Overfull.BipartitePackingReserve.unused_reserve_robust_half",
+        "Overfull.BipartitePackingReserve.residual_graph_robust_of_capacity"
+      ],
+      "scope_limit": "The initial and residual graphs are actual graphs. These results provide the initialization and final expansion assertion of Theorem 2.16.",
+      "manuscript_locations": [
+        "bip:pack:adaptive, Steps 1 and 4"
+      ]
+    },
+    {
+      "id": "bipartite_packing_round_and_history",
+      "kind": "graph_theoretic_result",
+      "description": "One actual round constructs an ambient matching perfect outside the current forbidden set, disjoint from all old edges, preserving the integer reserve capacity and satisfying the total-load recurrence. Exact Fin.snoc graph and load identities connect the enlarged union to the next finite history.",
+      "lean_declarations": [
+        "Overfull.BipartitePackingRound.exists_round",
+        "Overfull.BipartitePackingHistory.edgeUnion_snoc",
+        "Overfull.BipartitePackingHistory.pairwise_disjoint_snoc",
+        "Overfull.BipartitePackingHistory.reserveLoad_snoc_graph",
+        "Overfull.BipartitePackingStrategy.exists_extension"
+      ],
+      "scope_limit": "No completion or working-graph degree conclusion is assumed by the round theorem.",
+      "manuscript_locations": [
+        "bip:pack:adaptive, Steps 2-4"
+      ]
+    },
+    {
+      "id": "adaptive_bipartite_packing",
+      "kind": "graph_theoretic_result",
+      "description": "Full Theorem 2.16. The positive error and order threshold are chosen before the graph. One fixed rule, selected before the adversary, constructs actual pairwise edge-disjoint matchings perfect outside the sets presented so far and leaves a bipartite robust (p*nu/4,tau)-expander after every permitted prefix. All reserve choices, path constructions, degree/load accounting, rounded capacities and quantitative induction are proved.",
+      "lean_declarations": [
+        "Overfull.BipartitePackingOnline.run_congr_prefix",
+        "Overfull.BipartitePackingStrategy.exists_strategy",
+        "Overfull.adaptive_bipartite_packing",
+        "Overfull.bipartite_matching_packing",
+        "Overfull.bipartite_perfect_matching_packing",
+        "Overfull.packing_remainder_robust_of_subfamily"
+      ],
+      "scope_limit": "Full Theorem 2.16, with uniform constants and one rule for all admissible adaptive inputs. Direct prescribed-set and perfect-matching corollaries prove robust expansion after removing any subfamily. This does not prove the manuscript main theorem.",
+      "manuscript_locations": [
+        "bip:pack:adaptive"
+      ]
+    },
+    {
+      "id": "multigraph_fan_elementarity",
+      "kind": "graph_theoretic_result",
+      "description": "Actual edge-copy deletion, missing-color counts, existence of a k-minimal edge restriction, and the elementary two-edge fan property. The fan proof constructs a two-color component switch and uses a proved bound on its endpoints.",
+      "lean_declarations": [
+        "Overfull.Multigraph.exists_kMinimal_subset",
+        "Overfull.Multigraph.IsKMinimal.missing_disjoint",
+        "Overfull.Multigraph.IsKMinimal.two_edge_fan_elementary"
+      ],
+      "scope_limit": "The E1 and E2 cases used in the manuscript are proved. This does not assert the general multifan theorem for fans of arbitrary length.",
+      "manuscript_locations": [
+        "Edge-coloring preliminaries, E1 and E2",
+        "bip:color:fan"
+      ]
+    },
+    {
+      "id": "multigraph_fan_consequences",
+      "kind": "graph_theoretic_result",
+      "description": "Both parts of Lemma 2.6 for loopless k-minimal multigraphs: adjacent endpoint degrees sum to at least k+2, and the stated exterior-incidence and maximum-multiplicity budget excludes every edge to the low-degree set. The real degree-bound variant is included.",
+      "lean_declarations": [
+        "Overfull.Multigraph.IsKMinimal.endpoint_degree_sum",
+        "Overfull.Multigraph.IsKMinimal.no_edgesTo_low_set",
+        "Overfull.Multigraph.IsKMinimal.fan_low_degree_set",
+        "Overfull.Multigraph.IsKMinimal.fan_low_degree_set_real"
+      ],
+      "scope_limit": "Complete Lemma 2.6. Criticality is the actual absence of a proper k-coloring together with colorability after deleting any one edge copy, not a fan conclusion assumed as a hypothesis.",
+      "manuscript_locations": [
+        "bip:color:fan"
+      ]
+    },
+    {
+      "id": "first_fan_core_exclusion",
+      "kind": "graph_theoretic_result",
+      "description": "A k-minimal edge restriction in the exterior of a regular multigraph has no internal core edge. A vertex with more than 2a original incidences into the core has no such incidence in the restriction, and its degree is at most k minus its original core-incidence count and is strictly below k.",
+      "lean_declarations": [
+        "Overfull.Multigraph.first_fan_of_core_degree",
+        "Overfull.Multigraph.first_fan"
+      ],
+      "scope_limit": "Complete Lemma 2.7 with real a. The theorem is stronger in allowing every ambient vertex in the second conclusion and not requiring a support condition on the deleted edges.",
+      "manuscript_locations": [
+        "bip:color:firstfan"
+      ]
+    },
+    {
+      "id": "bounded_core_move",
+      "kind": "graph_theoretic_result",
+      "description": "Deleting only the retained simple core on U minus Z leaves an actual proper k-edge-coloring and exterior degree at most a+|Z| on the remaining core vertices. Simplicity is injectivity of the unordered endpoint map on the distinguished core copies, while the host may have parallel edges.",
+      "lean_declarations": [
+        "Overfull.Multigraph.moved_core_degree_le",
+        "Overfull.Multigraph.bounded_core_move_nat",
+        "Overfull.Multigraph.bounded_core_move",
+        "Overfull.Multigraph.bounded_core_move_full"
+      ],
+      "scope_limit": "Complete Lemma 2.8. The full wrapper requires no extra nonnegativity hypothesis on a and includes the empty-core case. The initial exterior coloring is exactly the hypothesis of the manuscript.",
+      "manuscript_locations": [
+        "bip:fac:bounded-move"
+      ]
+    },
+    {
+      "id": "balanced_robust_realization",
+      "kind": "graph_theoretic_result",
+      "description": "Every sufficiently large prescribed degree sequence with linear minimum, spread at most one, upper bound n-1 and even sum is realized by an actual simple robust expander on Fin n. The positive robust parameter and order threshold precede both n and the sequence. Cycle powers and actual disjoint pairs give the exact degree multiset, a connected arrangement of consecutive blocks gives robustness, and a permutation gives the prescribed labels.",
+      "lean_declarations": [
+        "Overfull.RobustRealization.cyclePower_degree",
+        "Overfull.RobustRealization.pairGraph_degree",
+        "Overfull.RobustRealization.exists_degree_multiset",
+        "Overfull.RobustRealization.robust_of_blocks",
+        "Overfull.RobustRealization.robust_of_cyclePower",
+        "Overfull.RobustRealization.exists_cyclePower_robust_parameters",
+        "Overfull.RobustRealization.robust_comap_equiv",
+        "Overfull.balanced_robust_realization"
+      ],
+      "scope_limit": "Complete Lemma 2.21. No graphicality, graph-existence, or robustness conclusion is supplied as a hypothesis; all parity cases and the complete-graph endpoint are constructed.",
+      "manuscript_locations": [
+        "two:lem:balanced-robust-realization"
+      ]
+    },
+    {
+      "id": "ordinary_random_reserve",
+      "kind": "graph_theoretic_result",
+      "description": "Each unordered edge is sampled once. An ordinary robust (nu,tau)-expander yields a robust (p*nu/4,tau) sampled graph with failure probability at most 4^n exp(-p*nu^2*n^2/48). Actual incidence counts handle overlap between the two witness vertex sets.",
+      "lean_declarations": [
+        "Overfull.OrdinaryRandomReserve.ordinary_random_reserve",
+        "Overfull.OrdinaryRandomReserve.failure_probability",
+        "Overfull.OrdinaryRandomReserve.orderedEdges_card_le_twice"
+      ],
+      "scope_limit": "The ordinary reserve sampling input for Lemma 2.20; the full adaptive sequence is constructed in Overfull.adaptive_ordinary_packing.",
+      "manuscript_locations": [
+        "two:lem:adaptive, reserve selection"
+      ]
+    },
+    {
+      "id": "ordinary_almost_regular_reserve",
+      "kind": "graph_theoretic_result",
+      "description": "A uniform order threshold gives one actual contained ordinary reserve with robust parameter p*nu/4 and simultaneous degree deviations less than 2*epsilon*n from p*Delta. The proof combines the expansion event with all actual degree concentration events.",
+      "lean_declarations": [
+        "Overfull.OrdinaryRandomReserve.exists_reserve_with_degree_control",
+        "Overfull.OrdinaryRandomReserve.exists_almost_regular_reserve",
+        "Overfull.OrdinaryRandomReserve.some_degree_failure_probability"
+      ],
+      "scope_limit": "The reserve and degree-control component of Lemma 2.20, assembled with the actual round and adaptive strategy in Overfull.adaptive_ordinary_packing.",
+      "manuscript_locations": [
+        "two:lem:adaptive, reserve selection"
+      ]
+    },
+    {
+      "id": "ordinary_robust_deletion",
+      "kind": "graph_theoretic_result",
+      "description": "Actual induced neighbor and degree counts prove ordinary robust expansion after simultaneous bounded edge and vertex deletion, with parameters (nu/2,2*tau). The unused reserve and the residual graph retain expansion under bounds on actual reserveLoad.",
+      "lean_declarations": [
+        "Overfull.OrdinaryRobustStability.induced_degree_bounds",
+        "Overfull.IsRobustExpander.after_edge_and_vertex_deletion",
+        "Overfull.IsRobustExpander.after_vertex_deletion",
+        "Overfull.OrdinaryPackingReserve.unused_reserve_robust",
+        "Overfull.OrdinaryPackingReserve.residual_graph_robust",
+        "Overfull.OrdinaryPackingReserve.unused_reserve_after_vertex_deletion"
+      ],
+      "scope_limit": "Deletion and reserve-retention implications for specified graphs and actual load bounds. Their use in the adaptive induction is proved in Overfull.adaptive_ordinary_packing.",
+      "manuscript_locations": [
+        "two:lem:adaptive, reserve retention"
+      ]
+    },
+    {
+      "id": "ordinary_maximum_matching_deficiency",
+      "kind": "graph_theoretic_result",
+      "description": "The proved Tutte-Berge formula and actual component boundary counts imply h <= (m+2*a*m+t)/(d-a+1) under degree bounds d-a <= degree(v) <= d+a+u(v), total nonnegative load at most t, and order at most m. It derives h <= (30/gamma)*(epsilon*m+t/m), constructs a maximum matching covering the saturated vertices, and proves even uncovered count on even order.",
+      "lean_declarations": [
+        "Overfull.OrdinaryPackingDeficiency.component_count_degree_bound",
+        "Overfull.OrdinaryPackingDeficiency.maximum_matching_deficiency",
+        "Overfull.OrdinaryPackingDeficiency.deficiency_scale",
+        "Overfull.OrdinaryPackingDeficiency.exists_maximum_matching_with_deficiency",
+        "Overfull.OrdinaryPackingDeficiency.exists_matching_covering_saturated_load",
+        "Overfull.OrdinaryPackingDeficiency.matching_uncovered_even"
+      ],
+      "scope_limit": "The actual ordinary maximum-matching selection and deficiency estimates in Lemma 2.20. A perfect completion through the reserve is not asserted here.",
+      "manuscript_locations": [
+        "two:lem:adaptive, maximum-matching selection"
+      ]
+    },
+    {
+      "id": "ordinary_packing_actual_working_graph",
+      "kind": "graph_theoretic_result",
+      "description": "Construct the graph after deleting the reserve, prior matching edges, and the current forbidden vertices, derive its degree bounds from the actual edge union and reserve load, and lift an actual maximum matching to the ambient graph. The lifted matching avoids both deleted edge sets, covers every surviving saturated vertex, and has even uncovered count satisfying the exact and scaled deficiency bounds.",
+      "lean_declarations": [
+        "Overfull.OrdinaryPackingWorking.liftMatching_isMatching",
+        "Overfull.OrdinaryPackingWorking.liftMatching_uncovered_card",
+        "Overfull.OrdinaryPackingWorking.exists_large_matching_outside_reserve"
+      ],
+      "scope_limit": "The working-graph matching selection in Lemma 2.20. The actual paired cut, completion, and uniform adaptive assembly are proved separately.",
+      "manuscript_locations": [
+        "two:lem:adaptive, working graph"
+      ]
+    },
+    {
+      "id": "auxiliary_balanced_incidences",
+      "kind": "graph_theoretic_result",
+      "description": "Construct actual auxiliary neighbor sets with every prescribed left degree, right loads differing by at most one, and right load at most the ceiling of the average. Each right vertex receives at most one left neighbor of deficiency one. An actual bipartite simple graph adapter and the inequality 2*incidences(S,z) <= sum_deficiency(S)+1 are proved.",
+      "lean_declarations": [
+        "Overfull.AuxiliaryCompletion.exists_auxiliary_neighbors",
+        "Overfull.AuxiliaryCompletion.exists_balanced_incidence_graph",
+        "Overfull.AuxiliaryCompletion.sum_rightLoad",
+        "Overfull.AuxiliaryCompletion.twice_incidence_card_le_deficiency_sum_add_one"
+      ],
+      "scope_limit": "The incidence construction and singleton-neighbor estimate for Lemma 2.22. No full auxiliary-completion conclusion is assumed in these components.",
+      "manuscript_locations": [
+        "two:lem:robust-auxiliary-completion"
+      ]
+    },
+    {
+      "id": "auxiliary_core_cuts",
+      "kind": "graph_theoretic_result",
+      "description": "Every actual cut of the auxiliary simple graph with at least two auxiliary vertices on each shore has more than k edges. Small shores use simplicity and minimum degree k-b; the other shores use actual robust-neighborhood counts. The wrapper derives the small-shore range from |U| <= 3*n, alpha*n <= k and tau < alpha/24.",
+      "lean_declarations": [
+        "Overfull.AuxiliaryCompletion.core_cut_gt_of_ranges",
+        "Overfull.AuxiliaryCompletion.core_cut_gt"
+      ],
+      "scope_limit": "The cut estimate for a supplied auxiliary robust graph with b <= k/8 and k < nu^2*|U|^2. The construction and uniform choice of this graph are separate.",
+      "manuscript_locations": [
+        "two:lem:robust-auxiliary-completion"
+      ]
+    },
+    {
+      "id": "auxiliary_completion_graph",
+      "kind": "graph_theoretic_result",
+      "description": "An actual loopless completion has separate edge types for original copies, crossing incidences, and simple auxiliary edges. Its left and right degrees and internal edge counts are proved. The original vertices induce exactly the original copies, the auxiliary vertices induce exactly the chosen simple graph, and each added edge has multiplicity one and meets a new vertex.",
+      "lean_declarations": [
+        "Overfull.AuxiliaryCompletion.left_degree",
+        "Overfull.AuxiliaryCompletion.right_degree",
+        "Overfull.AuxiliaryCompletion.internal_card_disjSum",
+        "Overfull.AuxiliaryCompletion.internal_original_edges",
+        "Overfull.AuxiliaryCompletion.internal_auxiliary_edges",
+        "Overfull.AuxiliaryCompletion.added_edge_simple",
+        "Overfull.AuxiliaryCompletion.added_edge_meets_aux"
+      ],
+      "scope_limit": "The actual graph model and structural identities for Lemma 2.22, conditional on the chosen incidence family and auxiliary graph.",
+      "manuscript_locations": [
+        "two:lem:robust-auxiliary-completion"
+      ]
+    },
+    {
+      "id": "auxiliary_odd_sets",
+      "kind": "graph_theoretic_result",
+      "description": "The actual completion has no k-overfull set once it is even-order and k-regular, the original graph has no such set, the incidence family satisfies its prescribed degrees and deficiency-one restriction, and every auxiliary cut with both shores of order at least two has more than k edges. Cuts with zero or one auxiliary vertex are handled directly, including the even-deficiency rounding step.",
+      "lean_declarations": [
+        "Overfull.AuxiliaryCompletion.cut_ge_one_aux",
+        "Overfull.AuxiliaryCompletion.cut_ge_small_aux",
+        "Overfull.AuxiliaryCompletion.not_overfull_of_regular_cuts",
+        "Overfull.AuxiliaryCompletion.no_overfull"
+      ],
+      "scope_limit": "The full odd-set argument for the actual completion. The incidence family, robust auxiliary graph, and uniform parameters are supplied by separate construction results.",
+      "manuscript_locations": [
+        "two:lem:robust-auxiliary-completion"
+      ]
+    },
+    {
+      "id": "prescribed_pair_cut_sampling",
+      "kind": "graph_theoretic_result",
+      "description": "One actual equal bipartition splits every prescribed pair, gives crossing minimum degree at least alpha*n/3, and simultaneously balances every member of a fixed bounded family of linearly sized clusters. The order threshold precedes the graph, pairing, labels, and cluster family. Concentration is proved for orientations of the actual pairs.",
+      "lean_declarations": [
+        "Overfull.PairedCut.splitCount_concentration",
+        "Overfull.PairedCut.exists_orientation",
+        "Overfull.PairedCut.exists_prescribed_pair_cut"
+      ],
+      "scope_limit": "The sampling and crossing-degree component of Lemma 2.19. Its robust-expansion conclusion is supplied by the separate regularity and lifting proofs, combined in paired_cut.",
+      "manuscript_locations": [
+        "two:lem:paired-cut"
+      ]
+    },
+    {
+      "id": "auxiliary_core_construction",
+      "kind": "graph_theoretic_result",
+      "description": "Uniform positive nu and epsilon and an order threshold produce the actual balanced incidence family and the robust simple auxiliary graph with exact degrees k-rightLoad(z). The least auxiliary order has the prescribed parity, the auxiliary degree sum is even, right loads are at most b=ceil(s/m), 8*b <= k, m <= 3*n, and k < nu^2*m^2.",
+      "lean_declarations": [
+        "Overfull.AuxiliaryCompletion.auxiliaryOrder_le_of_le_of_mod_two",
+        "Overfull.AuxiliaryCompletion.auxiliaryOrder_mod_two",
+        "Overfull.AuxiliaryCompletion.auxiliary_degree_sum_even",
+        "Overfull.AuxiliaryCompletion.auxiliary_load_bound",
+        "Overfull.AuxiliaryCompletion.exists_auxiliary_core"
+      ],
+      "scope_limit": "The construction input for full Lemma 2.22. Constants are chosen before the vertex and edge types, multigraph, degree bound, and deficiency sequence. No absence-of-overfull assumption is needed until the odd-set argument.",
+      "manuscript_locations": [
+        "two:lem:robust-auxiliary-completion"
+      ]
+    },
+    {
+      "id": "robust_auxiliary_completion",
+      "kind": "graph_theoretic_result",
+      "description": "Full Lemma 2.22 with uniform positive constants and the least prescribed auxiliary order. The actual completion is even-order and k-regular, retains exactly the original induced multigraph and its separate parallel edge copies, has multiplicity one at every added edge, induces the constructed simple robust auxiliary graph of minimum degree at least k-b, and has no k-overfull vertex set.",
+      "lean_declarations": [
+        "Overfull.robust_auxiliary_completion"
+      ],
+      "scope_limit": "Complete Lemma 2.22. This constructs the regular completion used in later coloring arguments; it does not prove that this completion has a k-edge-coloring or establish the manuscript main theorem.",
+      "manuscript_locations": [
+        "two:lem:robust-auxiliary-completion"
+      ]
+    },
+    {
+      "id": "paired_cut_regular_clusters",
+      "kind": "graph_theoretic_result",
+      "description": "Mathlib equitable regularity yields an actual partition. The proof bounds the total deleted degree, proves robust expansion in the actual graph of regular dense pairs, and trims the parts to equal clusters. The number of clusters is bounded, the exceptional set is small, and every reduced edge satisfies the required lower bound on actual incidences between large subsets. The bound, density, and order threshold precede the graph.",
+      "lean_declarations": [
+        "Overfull.PairedCut.robust_after_total_degree_loss",
+        "Overfull.PairedCut.robust_quotient",
+        "Overfull.PairedCut.regularity_total_degree_loss",
+        "Overfull.PairedCut.equalized_clusters",
+        "Overfull.PairedCut.trimmed_pair_lower_regular",
+        "Overfull.PairedCut.exists_robust_regular_clusters"
+      ],
+      "scope_limit": "The ordinary graph regularity and robust inheritance needed for Lemma 2.19. The general directed regularity statements cited in the manuscript are not claimed separately.",
+      "manuscript_locations": [
+        "two:lem:paired-cut, regularity and reduced expansion"
+      ]
+    },
+    {
+      "id": "paired_cut_robust_lifting",
+      "kind": "graph_theoretic_result",
+      "description": "Lower bounds on actual incidences in regular cluster pairs lift reduced robust expansion to the actual crossing graph of a balanced cut. The proof includes active sets above the tested reduced-graph range and the integral rounding in that case. It identifies the crossing graph on the side types and converts the global threshold to the side-normalized bipartite parameter.",
+      "lean_declarations": [
+        "Overfull.PairedCut.reduced_robust_large_set",
+        "Overfull.PairedCut.lower_regular_cut_expansion",
+        "Overfull.PairedCut.balanced_cluster_cut_expands",
+        "Overfull.PairedCut.cutSidesGraph_cross_adj",
+        "Overfull.PairedCut.cutSidesGraph_degree",
+        "Overfull.PairedCut.cutSides_robustNeighbors_card",
+        "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters"
+      ],
+      "scope_limit": "This implication takes actual clusters, lower-regular pairs, and an actual reduced robust graph. Their existence is supplied by paired_cut_regular_clusters in the full theorem.",
+      "manuscript_locations": [
+        "two:lem:paired-cut, deterministic lifting"
+      ]
+    },
+    {
+      "id": "paired_cut",
+      "kind": "graph_theoretic_result",
+      "description": "For fixed alpha > 0 and 0 < nu <= tau <= 1/8, positive xi and an order threshold are chosen before the graph and any prescribed partition into pairs. The theorem constructs disjoint exhaustive equal sides splitting every pair, crossing minimum degree at least alpha*n/3, and bipartite robust expansion with parameters (xi,4*tau).",
+      "lean_declarations": [
+        "Overfull.PairedCut.paired_cut"
+      ],
+      "scope_limit": "The complete assertion of Lemma 2.19. The supplied equivalence from I times Bool represents the prescribed partition into pairs. Bipartite expansion uses the manuscript ordered-side convention.",
+      "manuscript_locations": [
+        "two:lem:paired-cut"
+      ]
+    },
+    {
+      "id": "matching_pairing",
+      "kind": "graph_theoretic_result",
+      "description": "Every actual matching with even uncovered count extends to a partition of the entire vertex set into pairs. An explicit equivalence indexes the matching edges and the additional uncovered pairs, and every matching edge is retained as a pair. A wrapper derives the required parity from even total order.",
+      "lean_declarations": [
+        "Overfull.MatchingPairing.exists_pairing_of_even_uncovered",
+        "Overfull.MatchingPairing.exists_pairing"
+      ],
+      "scope_limit": "The pairing input for applying Lemma 2.19 to the actual working matching. It does not assert a matching completion or an adaptive packing.",
+      "manuscript_locations": [
+        "two:lem:adaptive, completing the working matching to a pairing"
+      ]
+    },
+    {
+      "id": "ordinary_initial_reserve",
+      "kind": "graph_theoretic_result",
+      "description": "Reduce the robust range of the original graph before sampling and choose one actual contained reserve with robust parameters (p*min(nu,alpha*sigma/4)/4,sigma), degrees within 2*epsilon*m of p*Delta, and minimum degree at least p*alpha*m/2. One uniform order threshold also supplies the numerical slack and the bound Delta < 2*m.",
+      "lean_declarations": [
+        "Overfull.OrdinaryPackingInitial.nominal_degree_lt_twice_order",
+        "Overfull.OrdinaryPackingInitial.exists_initial_reserve"
+      ],
+      "scope_limit": "The initial reserve and uniform order estimates used in the complete proof of Lemma 2.20.",
+      "manuscript_locations": [
+        "two:lem:adaptive, initial reserve"
+      ]
+    },
+    {
+      "id": "ordinary_packing_load_bounds",
+      "kind": "numerical_estimate",
+      "description": "Derive the ordinary reserve-load recurrence from the actual matching-deficiency bound and a reserve-use bound. Over at most 2*m rounds, its solution is at most (exp(120*ell/gamma)-1)*epsilon*m^2. The same estimates give the saturated-set and deficiency budget required by completion, including the additive unit of slack at the actual side order.",
+      "lean_declarations": [
+        "Overfull.OrdinaryPackingBounds.geometric_factor_bound",
+        "Overfull.OrdinaryPackingBounds.reserve_step_bound",
+        "Overfull.OrdinaryPackingBounds.reserve_recurrence_bound",
+        "Overfull.OrdinaryPackingBounds.deficiency_with_total_bound",
+        "Overfull.OrdinaryPackingBounds.path_budget_from_ambient",
+        "Overfull.OrdinaryPackingBounds.completion_budget"
+      ],
+      "scope_limit": "Numerical implications from explicit deficiency, reserve-use, and recurrence hypotheses. The actual graph construction and recurrence are assembled in Overfull.adaptive_ordinary_packing.",
+      "manuscript_locations": [
+        "two:lem:adaptive, reserve-load recurrence and completion budget"
+      ]
+    },
+    {
+      "id": "ordinary_matching_completion",
+      "kind": "graph_theoretic_result",
+      "description": "Given an actual balanced robust cut crossing the working matching, construct a matching perfect outside the forbidden vertices through the proved bipartite augmenting-path argument. The output uses only working-matching edges and unused reserve edges. Its actual reserve degree vanishes at forbidden and protected vertices, is at most one at every vertex, and has total at most ell*h, where h is the total uncovered count.",
+      "lean_declarations": [
+        "Overfull.OrdinaryMatchingCompletion.crossingMatching_uncovered_balance",
+        "Overfull.OrdinaryMatchingCompletion.crossingMatching_uncovered_total",
+        "Overfull.OrdinaryMatchingCompletion.exists_completion_of_balanced_cut",
+        "Overfull.OrdinaryMatchingCompletion.exists_completion_outside_set"
+      ],
+      "scope_limit": "A completion theorem conditional on an actual robust cut and the explicit path budget. The cut is constructed and these hypotheses are discharged in the complete proof of Lemma 2.20.",
+      "manuscript_locations": [
+        "two:lem:adaptive, matching completion"
+      ]
+    },
+    {
+      "id": "ordinary_packing_parameters",
+      "kind": "numerical_estimate",
+      "description": "Choose all positive reserve, reduced-range, error, and capacity constants uniformly before the graph, in the order needed by ordinary packing. The explicit inequalities include the completion budget and the exponential total-use constant.",
+      "lean_declarations": [
+        "Overfull.OrdinaryPackingParameters.reserve_parameters",
+        "Overfull.OrdinaryPackingParameters.exists_error_parameter"
+      ],
+      "scope_limit": "Parameter choices used by the complete adaptive ordinary-packing theorem.",
+      "manuscript_locations": [
+        "two:lem:adaptive, parameter hierarchy"
+      ]
+    },
+    {
+      "id": "matching_preserving_robust_cut",
+      "kind": "graph_theoretic_result",
+      "description": "Extend an actual matching to a complete pairing, then construct an equal cut crossing every matching edge. The actual crossing graph has the stated minimum degrees and side-normalized bipartite robust expansion; its constants precede the graph and matching.",
+      "lean_declarations": [
+        "Overfull.PairedCut.exists_matching_cut"
+      ],
+      "scope_limit": "The matching-preserving application of the complete paired-cut theorem, used by ordinary matching completion.",
+      "manuscript_locations": [
+        "two:lem:paired-cut, matching application",
+        "two:lem:adaptive, paired cut"
+      ]
+    },
+    {
+      "id": "ordinary_packing_actual_round",
+      "kind": "graph_theoretic_result",
+      "description": "Construct an actual new matching perfect outside the current forbidden set, disjoint from all previous matchings, by choosing a large working matching and completing it through the actual unused reserve. Prove the resulting internal capacity and total reserve-use bounds.",
+      "lean_declarations": [
+        "Overfull.OrdinaryPackingRound.exists_round"
+      ],
+      "scope_limit": "One round under explicit current-history bounds; the adaptive strategy proves that these bounds continue to hold.",
+      "manuscript_locations": [
+        "two:lem:adaptive, one-round construction"
+      ]
+    },
+    {
+      "id": "ordinary_packing_strategy",
+      "kind": "graph_theoretic_result",
+      "description": "Prove the empty and appended packing invariants, the geometric load bound, the incidence estimate, and residual robust expansion. Choose a single rule before the adaptive input and prove the invariant for every admissible history.",
+      "lean_declarations": [
+        "Overfull.OrdinaryPackingStrategy.invariant_zero",
+        "Overfull.OrdinaryPackingStrategy.Invariant.total_le",
+        "Overfull.OrdinaryPackingStrategy.Invariant.missing_le",
+        "Overfull.OrdinaryPackingStrategy.geometric_step",
+        "Overfull.OrdinaryPackingStrategy.append_invariant",
+        "Overfull.OrdinaryPackingStrategy.Invariant.remaining_robust",
+        "Overfull.OrdinaryPackingStrategy.exists_rule"
+      ],
+      "scope_limit": "The rule theorem takes one-step feasibility as an explicit input; Overfull.adaptive_ordinary_packing supplies it using the actual round theorem.",
+      "manuscript_locations": [
+        "two:lem:adaptive, adaptive induction"
+      ]
+    },
+    {
+      "id": "adaptive_ordinary_packing",
+      "kind": "graph_theoretic_result",
+      "description": "Full Lemma 2.20: positive error and retained robust parameter and a uniform order threshold precede the graph. One fixed rule works for every admissible adaptive forbidden-set policy and yields actual edge-disjoint matchings perfect outside the presented sets, with ordinary robust expansion after every prefix.",
+      "lean_declarations": [
+        "Overfull.adaptive_ordinary_packing"
+      ],
+      "scope_limit": "Complete under the manuscript density, robust-range, near-regularity, parity, size, and incidence assumptions. It does not prove the subsequent critical-graph partition or coloring cases.",
+      "manuscript_locations": [
+        "two:lem:adaptive"
+      ]
+    },
+    {
+      "id": "balanced_core_extraction",
+      "kind": "graph_theoretic_result",
+      "description": "Delete the actual set of vertices with insufficient crossing degree and equalize the surviving sides. From the precise bipartite outcome properties, retain equal actual subsets of size at least n/3, delete at most 6*sqrt(rho)*n vertices, and bound every degree of the actual crossing graph between Delta-8*sqrt(rho)*n and Delta.",
+      "lean_declarations": [
+        "Overfull.BalancedCore.crossing_left_degree",
+        "Overfull.BalancedCore.crossing_right_degree",
+        "Overfull.BalancedCore.extract",
+        "Overfull.BalancedCore.balanced_core_of_bipartite_outcome"
+      ],
+      "scope_limit": "Full Lemma 2.25 from its stated bipartite outcome input. The existence and classification of the outcome in Lemma 2.24 remain unproved.",
+      "manuscript_locations": [
+        "bip:part:balanced-core"
+      ]
+    },
+    {
+      "id": "matching_repair_release_accounting",
+      "kind": "graph_theoretic_result",
+      "description": "For an actual matching repair that preserves old coverage and uses only old or reserve edges, bound released old-edge degree by actual used-reserve degree. Extend the inequality to actual edge unions of disjoint original and repaired families.",
+      "lean_declarations": [
+        "Overfull.MatchingRepairAccounting.released_degree_le",
+        "Overfull.MatchingRepairAccounting.released_union_degree_le"
+      ],
+      "scope_limit": "Accounting components of Lemma 4.1; these theorems do not construct the repaired family.",
+      "manuscript_locations": [
+        "two:lem:reserve-repair, released-edge degree"
+      ]
+    },
+    {
+      "id": "matching_repair_load_accounting",
+      "kind": "graph_theoretic_result",
+      "description": "Define internal reserve load by excluding the prescribed endpoint sets and count endpoint incidence. Prove actual reserve-union degree is at most internal load plus endpoint incidence; total internal use is at most actual total use. Prove update and insertion identities, capacity preservation, and a bound on the number of internally saturated vertices.",
+      "lean_declarations": [
+        "Overfull.MatchingRepairLoad.actual_load_le_internal_add_endpoints",
+        "Overfull.MatchingRepairLoad.internal_le_actual",
+        "Overfull.MatchingRepairLoad.total_internal_le_actual",
+        "Overfull.MatchingRepairLoad.internalLoad_update_insert_le_capacity",
+        "Overfull.MatchingRepairLoad.internalLoad_update_insert_matching",
+        "Overfull.MatchingRepairLoad.total_actual_load_update_insert",
+        "Overfull.MatchingRepairLoad.saturated_internal_count_le_actual"
+      ],
+      "scope_limit": "Accounting and insertion components of Lemma 4.1. The one-color feasibility and complete family construction are separate.",
+      "manuscript_locations": [
+        "two:lem:reserve-repair, internal load and endpoint incidence"
+      ]
+    },
+    {
+      "id": "matching_repair_parameters",
+      "kind": "numerical_result",
+      "description": "Choose a positive repair error after the robust cut parameter, path-length bound, and internal capacity, then choose a uniform order threshold for the rounding and completion budgets.",
+      "lean_declarations": [
+        "Overfull.MatchingRepairParameters.exists_error",
+        "Overfull.MatchingRepairParameters.exists_order_threshold"
+      ],
+      "scope_limit": "Numerical choices used in the full reserve-repair theorem; the graph and matching family are quantified after these constants.",
+      "manuscript_locations": [
+        "two:lem:reserve-repair, uniform parameters"
+      ]
+    },
+    {
+      "id": "matching_repair_protected_completion",
+      "kind": "graph_theoretic_result",
+      "description": "Complete one actual matching outside its forbidden set using an actual surviving reserve. Construct the matching-preserving robust cut from the graph, protect every specified covered vertex from reserve use, and bound both per-vertex and total new reserve incidence.",
+      "lean_declarations": [
+        "Overfull.MatchingRepairStep.exists_protected_completion"
+      ],
+      "scope_limit": "The cut and augmenting paths are constructed from the reserve hypotheses. The resulting one-matching theorem is used in the full finite-family construction.",
+      "manuscript_locations": [
+        "two:lem:reserve-repair, one matching"
+      ]
+    },
+    {
+      "id": "matching_repair_family_disjointness",
+      "kind": "graph_theoretic_result",
+      "description": "If a repair uses only its own original matching edges and currently unused reserve edges, prove it is disjoint from the actual union of previous repairs and that updating the family preserves pairwise edge disjointness.",
+      "lean_declarations": [
+        "Overfull.MatchingRepairFamily.fresh_disjoint_union",
+        "Overfull.MatchingRepairFamily.update_pairwise_disjoint"
+      ],
+      "scope_limit": "Actual graph and family update identities used by the reserve-repair induction.",
+      "manuscript_locations": [
+        "two:lem:reserve-repair, disjointness"
+      ]
+    },
+    {
+      "id": "matching_repair",
+      "kind": "graph_theoretic_result",
+      "description": "Construct the entire family of repaired matchings with uniform constants, exact coverage outside the prescribed forbidden sets, inclusion in the corresponding original matching plus the reserve, and pairwise edge disjointness. Bound the degrees of the actual used-reserve union and actual released-original-edge union by mu*m.",
+      "lean_declarations": [
+        "Overfull.MatchingRepair.Invariant.load_le",
+        "Overfull.MatchingRepair.Invariant.internal_total_le",
+        "Overfull.MatchingRepair.reserve_union_degree",
+        "Overfull.MatchingRepair.reserve_repair"
+      ],
+      "scope_limit": "Full Lemma 4.1. The positive upper bound on mu precedes mu; the positive error and order threshold precede every graph and matching family. The general host graph includes the manuscript setting by taking the host to be complete. The theorem assumes no completion, cut, path, or repaired-family existence statement.",
+      "manuscript_locations": [
+        "two:lem:reserve-repair"
+      ]
+    },
+    {
+      "id": "dense_balance_repair_bounds",
+      "kind": "numerical_result",
+      "description": "Fix positive missing-neighbor and imbalance thresholds, then choose the order threshold after the imbalance parameter. Prove all strict routing margins, internal-capacity rounding estimates, saturation bounds, and the final factor-five degree bound.",
+      "lean_declarations": [
+        "Overfull.Dense.BalanceRepairBounds.routing_bounds",
+        "Overfull.Dense.BalanceRepairBounds.thresholds"
+      ],
+      "scope_limit": "Explicit sufficient constants for the full integer balance-repair theorem, chosen before the graph.",
+      "manuscript_locations": [
+        "dense:balance-repair, parameter and routing bounds"
+      ]
+    },
+    {
+      "id": "dense_balance_repair_path_model",
+      "kind": "graph_theoretic_result",
+      "description": "Represent actual cyclically oriented graph arcs and their incoming, outgoing, and integer imbalance counts. Construct the actual directed paths of lengths two, three, and four with exact endpoint and internal incidence.",
+      "lean_declarations": [
+        "Overfull.Dense.BalanceRepair.sum_arcBalance",
+        "Overfull.Dense.BalanceRepair.routingPath_two",
+        "Overfull.Dense.BalanceRepair.routingPath_three",
+        "Overfull.Dense.BalanceRepair.routingPath_four"
+      ],
+      "scope_limit": "Finite directed-arc identities and actual path constructions used in Lemma 5.11.",
+      "manuscript_locations": [
+        "dense:balance-repair, directed paths"
+      ]
+    },
+    {
+      "id": "dense_balance_repair_routing",
+      "kind": "graph_theoretic_result",
+      "description": "Construct an actual directed path of length at most four for every ordered pair of distinct endpoints, treating all nine ordered part cases. Internal vertices avoid the supplied forbidden set, while endpoints may belong to it.",
+      "lean_declarations": [
+        "Overfull.Dense.BalanceRepair.exists_routing_path"
+      ],
+      "scope_limit": "The explicit density margins imply routing. The full theorem derives these margins for every actual residual graph.",
+      "manuscript_locations": [
+        "dense:balance-repair, short-path existence"
+      ]
+    },
+    {
+      "id": "dense_balance_repair_graph",
+      "kind": "graph_theoretic_result",
+      "description": "Select and delete actual cyclic arcs as tripartite subgraphs. Prove the exact simple-graph difference identity, identify deleted degree with incoming plus outgoing arc counts, identify zero cyclic imbalance with local balance, and derive routing conditions after actual edge deletion.",
+      "lean_declarations": [
+        "Overfull.Dense.BalanceRepair.selectArcs_le",
+        "Overfull.Dense.BalanceRepair.eraseArcs_eq_sdiff",
+        "Overfull.Dense.BalanceRepair.arcSet_eraseArcs",
+        "Overfull.Dense.BalanceRepair.degree_eq_arc_counts",
+        "Overfull.Dense.BalanceRepair.locallyBalanced_iff",
+        "Overfull.Dense.BalanceRepair.selectArcs_degree",
+        "Overfull.Dense.BalanceRepair.routingConditions_after_deletion"
+      ],
+      "scope_limit": "Every bound concerns the actual selected or residual graph. No degree or balance identity is assumed.",
+      "manuscript_locations": [
+        "dense:balance-repair, graph realization and residual density"
+      ]
+    },
+    {
+      "id": "dense_balance_repair_cancellation",
+      "kind": "graph_theoretic_result",
+      "description": "Maintain actual deleted arcs with bounded internal incidence and signed imbalance between zero and its initial value. Prove the degree and saturation bounds, preservation under an available path, and finite termination by increasing the repaired positive mass.",
+      "lean_declarations": [
+        "Overfull.Dense.BalanceRepair.CancellationState.positiveMass_le",
+        "Overfull.Dense.BalanceRepair.CancellationState.deleted_degree_le",
+        "Overfull.Dense.BalanceRepair.CancellationState.saturated_card_bound",
+        "Overfull.Dense.BalanceRepair.CancellationState.add_path",
+        "Overfull.Dense.BalanceRepair.exists_balanced_deletion"
+      ],
+      "scope_limit": "The finite cancellation theorem takes a local routing input; the full balance-repair theorem proves that input from its actual graph hypotheses.",
+      "manuscript_locations": [
+        "dense:balance-repair, finite cancellation"
+      ]
+    },
+    {
+      "id": "dense_balance_repair",
+      "kind": "graph_theoretic_result",
+      "description": "From the stated tripartite part sizes, dense first pair, almost complete other pairs, and bounded actual cyclic imbalances, construct an actual deleted subgraph and the exact locally balanced residual. Bound the deleted degree at every vertex by 5*sqrt(xi)*n.",
+      "lean_declarations": [
+        "Overfull.Dense.BalanceRepair.positive_balance_sum_le",
+        "Overfull.dense_balance_repair"
+      ],
+      "scope_limit": "Full Lemma 5.11. The choices c0=min(eta,1)/1000, c1=5, and xi0=(c0/100)^2 precede the graph. The order threshold follows fixed positive xi. Initial positive mass and all routing hypotheses are proved from the graph; no path, cancellation, degree-bound, or balanced-residual existence is assumed.",
+      "manuscript_locations": [
+        "dense:balance-repair"
+      ]
+    }
+  ],
+  "numbered_assertions": [
+    {
+      "number": "1.1",
+      "kind": "theorem",
+      "labels": [
+        "main:quarter"
+      ],
+      "section": 1,
+      "statement_source_lines": [
+        54,
+        62
+      ],
+      "statement_sha256": "4736e6ae8a35998968fc24025b79c17bc3663a92bc267ea6e12f8075c71e14ba",
+      "full_assertion_verified": false,
+      "status": "checked_components_only",
+      "checked_components": [
+        "overfull_obstruction",
+        "coloring_degree_bound",
+        "critical_order_arithmetic",
+        "critical_graph_reduction",
+        "conditional_main_reduction",
+        "vizing_upper_bound",
+        "overfull_subgraph_equivalence"
+      ],
+      "imported_statement": false
+    },
+    {
+      "number": "1.2",
+      "kind": "theorem",
+      "labels": [
+        "three:thm:main"
+      ],
+      "section": 1,
+      "statement_source_lines": [
+        114,
+        127
+      ],
+      "statement_sha256": "9b5f67b17f74bda5e830dba24fcf319fb825981566e6282ece5ff73302ae07ac",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "1.3",
+      "kind": "theorem",
+      "labels": [
+        "mixed:thm:mixed"
+      ],
+      "section": 1,
+      "statement_source_lines": [
+        135,
+        157
+      ],
+      "statement_sha256": "48222c9d86264d03781d72cdce2b7929cdf6e3dd6328d5c28d98d256498a229a",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "2.2",
+      "kind": "lemma",
+      "labels": [
+        "bip:pre:chernoff"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        253,
+        260
+      ],
+      "statement_sha256": "b9eb6acbd94c678e34c5ab8d705cd1a7b88fb4531034c682f9489dadd2c1ff08",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "finite_independent_edge_sampling",
+        "bernoulli_concentration",
+        "independent_indicator_concentration",
+        "hypergeometric_concentration"
+      ],
+      "imported_statement": true,
+      "lean_theorems": [
+        "Overfull.IndependentBernoulli.chernoff_of_independent_indicators",
+        "Overfull.IndependentBernoulli.expected_count_of_joint_law",
+        "Overfull.Hypergeometric.chernoff",
+        "Overfull.Hypergeometric.expected_count"
+      ],
+      "formalization_scope": "Complete finite joint-law formulation; no measure-space interface for arbitrary infinite underlying outcome spaces is included."
+    },
+    {
+      "number": "2.3",
+      "kind": "theorem",
+      "labels": [
+        "bip:pre:hall"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        269,
+        273
+      ],
+      "statement_sha256": "4a4cfba1cccbb12aed7512da90843d86d8b645e347f62ef3a42712f289923b2e",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "hall_and_deficiency"
+      ],
+      "imported_statement": true,
+      "lean_theorems": [
+        "Overfull.bipartite_hall_iff"
+      ]
+    },
+    {
+      "number": "2.4",
+      "kind": "corollary",
+      "labels": [
+        "bip:pre:hall-defect"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        278,
+        282
+      ],
+      "statement_sha256": "5be977ef2c8d604691ce1452ae76c56ef9f597c3bb2a4946741b546d23757f8e",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "hall_and_deficiency"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.bipartite_hall_defect"
+      ]
+    },
+    {
+      "number": "2.5",
+      "kind": "theorem",
+      "labels": [
+        "pre:tutte-berge"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        292,
+        298
+      ],
+      "statement_sha256": "ef917bdf9ee68661a85b4424a4816cc8f547f6e40fdca64119454a82915ba479",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "tutte_berge_formula"
+      ],
+      "imported_statement": true,
+      "lean_theorems": [
+        "Overfull.TutteBerge.tutte_berge_integer_maximum",
+        "Overfull.TutteBerge.exists_maximum_matching"
+      ]
+    },
+    {
+      "number": "2.6",
+      "kind": "lemma",
+      "labels": [
+        "bip:color:fan"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        335,
+        346
+      ],
+      "statement_sha256": "37be0cbac80e08319df00530035cfc844c54ea6049359730ffed99e763c2bf2f",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "multigraph_fan_elementarity",
+        "multigraph_fan_consequences"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.Multigraph.IsKMinimal.endpoint_degree_sum",
+        "Overfull.Multigraph.IsKMinimal.fan_low_degree_set_real"
+      ]
+    },
+    {
+      "number": "2.7",
+      "kind": "lemma",
+      "labels": [
+        "bip:color:firstfan"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        368,
+        377
+      ],
+      "statement_sha256": "d926fbc71ded66a2ec9baeecc2cc4496a38f269f692cde67399768b315cd327d",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "first_fan_core_exclusion"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.Multigraph.first_fan"
+      ]
+    },
+    {
+      "number": "2.8",
+      "kind": "lemma",
+      "labels": [
+        "bip:fac:bounded-move"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        395,
+        402
+      ],
+      "statement_sha256": "9e998aa94469557b5c4907068d8627d7e669c4f61d8668517a460632b1825ed6",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "bounded_core_move"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.Multigraph.bounded_core_move_full"
+      ]
+    },
+    {
+      "number": "2.9",
+      "kind": "theorem",
+      "labels": [
+        "old:pre:matching"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        428,
+        439
+      ],
+      "statement_sha256": "fcfef544b663da189f1b6242421a8908ef7dbd4cf031187db3b6a6c7c8f2d897",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "full_matching_polytope",
+        "multigraph_matching_distributions",
+        "regular_perfect_matching_distribution"
+      ],
+      "imported_statement": true,
+      "lean_theorems": [
+        "Overfull.Multigraph.matching_polytope"
+      ]
+    },
+    {
+      "number": "2.10",
+      "kind": "lemma",
+      "labels": [
+        "bip:color:balance"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        454,
+        473
+      ],
+      "statement_sha256": "dc867cf52aecdfff7ab5d4df3fd7e00dbd544b601a7437e3a62fd0af50f81000",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "balanced_edge_coloring"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.Multigraph.balanced_edgeColoring"
+      ]
+    },
+    {
+      "number": "2.11",
+      "kind": "lemma",
+      "labels": [
+        "old:color:onehigh"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        523,
+        527
+      ],
+      "statement_sha256": "de4d85791f24a61a779332a422f7e3156d59d49a5d657934a8f8037ba171c126",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "one_high_degree_coloring"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.Multigraph.edgeColoring_one_high"
+      ]
+    },
+    {
+      "number": "2.12",
+      "kind": "lemma",
+      "labels": [
+        "old:color:sparse"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        539,
+        544
+      ],
+      "statement_sha256": "aeaf61743afe2f6854c8daed3ca6c8adf3bcea530a4aa77c7089ff233ceea115",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "sparse_vertex_deletion_coloring"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.Multigraph.edgeColoring_sparse_vertex_deletion_real"
+      ]
+    },
+    {
+      "number": "2.13",
+      "kind": "lemma",
+      "labels": [
+        "bip:bip:stable"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        585,
+        596
+      ],
+      "statement_sha256": "93974af002b08156f928d772ff24e4e3cad232e8bb6023556171b2cbf74917d3",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "robust_deletion_stability"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.IsBipartiteRobustExpander.after_edge_deletion_of_degree_bound",
+        "Overfull.IsBipartiteRobustExpander.after_vertex_deletion"
+      ]
+    },
+    {
+      "number": "2.14",
+      "kind": "lemma",
+      "labels": [
+        "bip:bip:random"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        616,
+        622
+      ],
+      "statement_sha256": "1bfb46047f3f37c121ca9c05b398644b0e5c4cd13d58262078f90f59d9288b33",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "random_bipartite_reserve"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.RandomReserve.bipartite_random_reserve"
+      ]
+    },
+    {
+      "number": "2.15",
+      "kind": "lemma",
+      "labels": [
+        "bip:bip:augment"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        656,
+        675
+      ],
+      "statement_sha256": "a8c8e88f87eb09311c9a70daa45d708ef3838e91a2cb7584f51dfee97ff4bad3",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "bipartite_augmenting_path"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.bipartite_robust_augmenting_path"
+      ]
+    },
+    {
+      "number": "2.16",
+      "kind": "theorem",
+      "labels": [
+        "bip:pack:adaptive"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        728,
+        751
+      ],
+      "statement_sha256": "474d8daaa9a0ea6474e2b19fd69127a055bf8316553a47466d80dd595f421d37",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "almost_regular_robust_reserve",
+        "maximum_matching_preserving_coverage",
+        "bipartite_maximum_matching_deficiency",
+        "bipartite_packing_matching_selection",
+        "actual_matching_augmentation",
+        "disjoint_augmenting_path_construction",
+        "bipartite_matching_completion",
+        "bipartite_packing_degree_accounting",
+        "bipartite_packing_actual_working_graph",
+        "bipartite_packing_numerical_bounds",
+        "bipartite_packing_initialization_and_retention",
+        "bipartite_packing_round_and_history",
+        "adaptive_bipartite_packing"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.adaptive_bipartite_packing",
+        "Overfull.bipartite_matching_packing",
+        "Overfull.bipartite_perfect_matching_packing"
+      ]
+    },
+    {
+      "number": "2.17",
+      "kind": "lemma",
+      "labels": [
+        "pre:range-reduction"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        939,
+        947
+      ],
+      "statement_sha256": "eb6aefb2fc4d25c05acc84da6b16aa14d40c3283d4942577a1b26452fed5c5c7",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "robust_range_reduction"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.robust_range_reduction"
+      ]
+    },
+    {
+      "number": "2.18",
+      "kind": "lemma",
+      "labels": [
+        "two:lem:small-cut"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        979,
+        996
+      ],
+      "statement_sha256": "2389f1f214ea4348da3f8da43197a7354e3800967b021d281109da5fb7cb0a33",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "multigraph_small_cuts"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.SmallCuts.small_cut_lemma"
+      ]
+    },
+    {
+      "number": "2.19",
+      "kind": "lemma",
+      "labels": [
+        "two:lem:paired-cut"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        1021,
+        1029
+      ],
+      "statement_sha256": "9688a3ff207fe8fcbee981f960c7125709c24ef1cb85112ea6e0a05ea77f57af",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "prescribed_pair_cut_sampling",
+        "paired_cut_regular_clusters",
+        "paired_cut_robust_lifting",
+        "paired_cut"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.PairedCut.paired_cut"
+      ]
+    },
+    {
+      "number": "2.20",
+      "kind": "lemma",
+      "labels": [
+        "two:lem:adaptive"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        1088,
+        1109
+      ],
+      "statement_sha256": "3ad4f72306a5c267eca6654ca9caf93b7818ef90a01f660e668a5c0f35517267",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "ordinary_random_reserve",
+        "ordinary_almost_regular_reserve",
+        "ordinary_robust_deletion",
+        "maximum_matching_preserving_coverage",
+        "ordinary_maximum_matching_deficiency",
+        "ordinary_packing_actual_working_graph",
+        "matching_pairing",
+        "paired_cut",
+        "ordinary_initial_reserve",
+        "ordinary_packing_load_bounds",
+        "ordinary_matching_completion",
+        "ordinary_packing_parameters",
+        "matching_preserving_robust_cut",
+        "ordinary_packing_actual_round",
+        "ordinary_packing_strategy",
+        "adaptive_ordinary_packing"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.adaptive_ordinary_packing"
+      ]
+    },
+    {
+      "number": "2.21",
+      "kind": "lemma",
+      "labels": [
+        "two:lem:balanced-robust-realization"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        1290,
+        1303
+      ],
+      "statement_sha256": "5da5130e63b3637833db6b80e43b0e7c24a0e634b20ae971c10d2ee021d6409b",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "balanced_robust_realization"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.balanced_robust_realization"
+      ]
+    },
+    {
+      "number": "2.22",
+      "kind": "lemma",
+      "labels": [
+        "two:lem:robust-auxiliary-completion"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        1365,
+        1384
+      ],
+      "statement_sha256": "d8efc14cbfa37fc9359fbe822957cf9a242715c336e9aa4bf4e107008fea4216",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "auxiliary_even_rounding",
+        "auxiliary_balanced_incidences",
+        "balanced_robust_realization",
+        "auxiliary_core_cuts",
+        "auxiliary_completion_graph",
+        "auxiliary_odd_sets",
+        "auxiliary_core_construction",
+        "robust_auxiliary_completion"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.robust_auxiliary_completion"
+      ]
+    },
+    {
+      "number": "2.23",
+      "kind": "theorem",
+      "labels": [
+        "bip:part:imported"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        1452,
+        1480
+      ],
+      "statement_sha256": "be076a6b6c07e78af1793be025ddfde0ac2b3360914be0360ff48fb5866dbf31",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": true
+    },
+    {
+      "number": "2.24",
+      "kind": "proposition",
+      "labels": [
+        "bip:part:five-cases"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        1482,
+        1514
+      ],
+      "statement_sha256": "66775d3cb6f96d803cc013edb8e359cb083134f7f4b60590a281dc7dcbc27cb7",
+      "full_assertion_verified": false,
+      "status": "checked_components_only",
+      "checked_components": [
+        "five_component_counts"
+      ],
+      "imported_statement": false
+    },
+    {
+      "number": "2.25",
+      "kind": "lemma",
+      "labels": [
+        "bip:part:balanced-core"
+      ],
+      "section": 2,
+      "statement_source_lines": [
+        1595,
+        1604
+      ],
+      "statement_sha256": "1656d33686fb2399f39ae9f51c3106d4a4c036c9f7cbc603eccd07f46bb815d8",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "balanced_core_extraction"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.BalancedCore.balanced_core_of_bipartite_outcome"
+      ]
+    },
+    {
+      "number": "3.1",
+      "kind": "lemma",
+      "labels": [
+        "single:lem:coloring"
+      ],
+      "section": 3,
+      "statement_source_lines": [
+        1639,
+        1650
+      ],
+      "statement_sha256": "e367990020005abeac5226b4f90e96728cafec20b584b7db4d442fda779af0fe",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "3.2",
+      "kind": "corollary",
+      "labels": [
+        "three:cor:critical",
+        "two:cor:critical",
+        "single:cor:critical"
+      ],
+      "section": 3,
+      "statement_source_lines": [
+        1687,
+        1694
+      ],
+      "statement_sha256": "64b4da9bb77675dc01c8895e7b9fed92dd289050eae127f581b2aa1be8d1c747",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "3.3",
+      "kind": "lemma",
+      "labels": [
+        "mixed:lem:replacement"
+      ],
+      "section": 3,
+      "statement_source_lines": [
+        1744,
+        1763
+      ],
+      "statement_sha256": "0064f29f9e266844f71183cc1658451048753c8a31c2744005f2fca29be00d3c",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "3.4",
+      "kind": "corollary",
+      "labels": [
+        "mixed:cor:critical"
+      ],
+      "section": 3,
+      "statement_source_lines": [
+        1886,
+        1893
+      ],
+      "statement_sha256": "a10bd00d11bfe929bdb4aacd0aa5afeca45abd3bcf9762d08dc19f8d0a3d2d36",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "3.5",
+      "kind": "theorem",
+      "labels": [
+        "bip:thm:main"
+      ],
+      "section": 3,
+      "statement_source_lines": [
+        1992,
+        2002
+      ],
+      "statement_sha256": "59ed7a06b9e3942cf1229f57310dab66368e2883b757f816982ca46988a5cb3b",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "3.6",
+      "kind": "corollary",
+      "labels": [
+        "bip:fac:bipartite-case"
+      ],
+      "section": 3,
+      "statement_source_lines": [
+        2040,
+        2047
+      ],
+      "statement_sha256": "8efee731304f329a622425f0d64dc19a1096cf6b1d7b19724b7a6bde211a74d8",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "3.7",
+      "kind": "corollary",
+      "labels": [
+        "pad:cor:all"
+      ],
+      "section": 3,
+      "statement_source_lines": [
+        2065,
+        2072
+      ],
+      "statement_sha256": "0f000713ac09b666b85374553a5e41a7009051198603a9bb1fc274755f9b9a2f",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "4.1",
+      "kind": "lemma",
+      "labels": [
+        "two:lem:reserve-repair"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        2133,
+        2155
+      ],
+      "statement_sha256": "cbc892fdfb1bf92cc1d73924a7a2833596e3646a3c75a394239e1d16e6ab4007",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "matching_repair_release_accounting",
+        "matching_repair_load_accounting",
+        "matching_repair_parameters",
+        "matching_repair_protected_completion",
+        "matching_repair_family_disjointness",
+        "matching_repair"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.MatchingRepair.reserve_repair"
+      ]
+    },
+    {
+      "number": "4.2",
+      "kind": "lemma",
+      "labels": [
+        "two:lem:ordinary-special"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        2207,
+        2220
+      ],
+      "statement_sha256": "480b2fb39565bc86acf278addac00ca843da67be5638db6b4328af1ddf08ea97",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "4.4",
+      "kind": "lemma",
+      "labels": [
+        "two:short:fixed-pattern"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        2386,
+        2398
+      ],
+      "statement_sha256": "653e8b0aa8fa12f4368816ce9d9ce8b9d84a49015bce07638fd9c49e94523c2b",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "4.5",
+      "kind": "corollary",
+      "labels": [
+        "two:thm:two-four-exceptions"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        2587,
+        2591
+      ],
+      "statement_sha256": "89d8e8281fc3e4b7d8b6a81bccac3eb1d49f92622106228a5bee504d3eff1d61",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "4.6",
+      "kind": "corollary",
+      "labels": [
+        "three:lem:bounded-input"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        2600,
+        2608
+      ],
+      "statement_sha256": "86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "4.7",
+      "kind": "lemma",
+      "labels": [
+        "three:lem:probability"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        2644,
+        2655
+      ],
+      "statement_sha256": "5b85a303bd0f3b6b315f0ea4bbcf9f39365dc65242d49697d34280b0f9ae7fe5",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "regular_perfect_matching_distribution",
+        "matching_cut_failure_probabilities",
+        "multigraph_matching_cut_probabilities"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.MatchingProbability.Distribution.odd_failure_probability",
+        "Overfull.MatchingProbability.Distribution.even_toggles_failure_probability",
+        "Overfull.MatchingProbability.Distribution.family_failure_probability",
+        "Overfull.MultigraphMatchingProbability.Distribution.odd_failure_probability",
+        "Overfull.MultigraphMatchingProbability.Distribution.even_toggles_failure_probability",
+        "Overfull.MultigraphMatchingProbability.Distribution.family_failure_probability"
+      ]
+    },
+    {
+      "number": "4.8",
+      "kind": "lemma",
+      "labels": [
+        "three:lem:prescribed"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        2682,
+        2690
+      ],
+      "statement_sha256": "6703e3485289fb1acbb84e24e9ffc25035d9fd2b18c697cf1eaa7508c79fd2e5",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "4.9",
+      "kind": "lemma",
+      "labels": [
+        "three:lem:safe-prescription"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        2747,
+        2756
+      ],
+      "statement_sha256": "13d7182c6e5e7ba2dfbf93ce3e4bc5d36e93423b53f77771bc8684c8fe04fbcb",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "4.10",
+      "kind": "proposition",
+      "labels": [
+        "three:prop:foreign"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        2828,
+        2835
+      ],
+      "statement_sha256": "3bd2c92fbb7ce6c54247d541fdb10a3ca0636bf02c0e6e7e9fc221de91d5d6c3",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "4.11",
+      "kind": "lemma",
+      "labels": [
+        "three:lem:force"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        2895,
+        2905
+      ],
+      "statement_sha256": "d872af4834f6d179681701c4f53f0ca3ff124c9f2d137f29d3b291358b8ab67f",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "4.12",
+      "kind": "proposition",
+      "labels": [
+        "three:prop:band"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        2924,
+        2935
+      ],
+      "statement_sha256": "0f0671e432e88ea08512077ee6c460bb11bea466989d2d7ef0b752dfa5c0af88",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "4.13",
+      "kind": "lemma",
+      "labels": [
+        "three:lem:pattern"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        2987,
+        3008
+      ],
+      "statement_sha256": "557d62e4c4ab7c00ac7cc29fa403d80601a2b9851e7c7eb62cdeb4caa1d40c3b",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "4.14",
+      "kind": "lemma",
+      "labels": [
+        "three:lem:boundary"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        3119,
+        3128
+      ],
+      "statement_sha256": "67baedd4ae2e0451a8842fd27ea0976f50db94c9054eacd2f5dd40ce2cfa21e3",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "4.15",
+      "kind": "lemma",
+      "labels": [
+        "three:lem:four-odd"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        3149,
+        3161
+      ],
+      "statement_sha256": "95942bcc2f458912f740b61cecad49f74bcfe9e8679ec1a30e2819e039591eb0",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "4.16",
+      "kind": "proposition",
+      "labels": [
+        "three:prop:terminal"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        3235,
+        3238
+      ],
+      "statement_sha256": "1ba102e379594ab72de4ba73cf41c88d9fbdadf1c132e2943b48da04e8c2cc1c",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "4.17",
+      "kind": "theorem",
+      "labels": [
+        "three:thm:regular-four"
+      ],
+      "section": 4,
+      "statement_source_lines": [
+        3354,
+        3365
+      ],
+      "statement_sha256": "b271893680e87b1c06c35172a138050dbf84009964eb618dce53c53ba595e322",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "5.1",
+      "kind": "theorem",
+      "labels": [
+        "dense:factorization"
+      ],
+      "section": 5,
+      "statement_source_lines": [
+        3463,
+        3473
+      ],
+      "statement_sha256": "44b9169870fa5f2ddf6795fac411835113645349c21f3cb26b19817043bcb07b",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "5.3",
+      "kind": "lemma",
+      "labels": [
+        "dense:encoding"
+      ],
+      "section": 5,
+      "statement_source_lines": [
+        3494,
+        3509
+      ],
+      "statement_sha256": "094c2662f1ddb232ec180527f017be4a3012e9c59c1bce934a23b29e8a91f23f",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "dense_coloring_triangle_encoding"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.dense_encoding"
+      ]
+    },
+    {
+      "number": "5.4",
+      "kind": "lemma",
+      "labels": [
+        "dense:cycle"
+      ],
+      "section": 5,
+      "statement_source_lines": [
+        3532,
+        3548
+      ],
+      "statement_sha256": "0d220ad93ef6a2774b0a2061fbc7fb48c0db5862c6fee2faeab5e0e2b6fa4af0",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "explicit_cycle_absorber"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.Dense.CycleAbsorber.in_host"
+      ]
+    },
+    {
+      "number": "5.5",
+      "kind": "lemma",
+      "labels": [
+        "dense:finite"
+      ],
+      "section": 5,
+      "statement_source_lines": [
+        3567,
+        3591
+      ],
+      "statement_sha256": "1201f26b77374716078cdb90f4dc42ceafb70f934746c16cac720e3f4dc1e594",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "finite_balanced_remainder_enumeration",
+        "finite_remainder_absorber"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.Dense.FiniteAbsorber.finite_absorber_subgraph"
+      ]
+    },
+    {
+      "number": "5.6",
+      "kind": "lemma",
+      "labels": [
+        "dense:signed-flow"
+      ],
+      "section": 5,
+      "statement_source_lines": [
+        3642,
+        3648
+      ],
+      "statement_sha256": "44486d09f350a3aea219e9003acee44b2d8a81b2779af25e18daa5c425be08c5",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "dense_signed_flows"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.dense_signed_flow"
+      ]
+    },
+    {
+      "number": "5.7",
+      "kind": "lemma",
+      "labels": [
+        "dense:fractional"
+      ],
+      "section": 5,
+      "statement_source_lines": [
+        3666,
+        3682
+      ],
+      "statement_sha256": "8d28321d627f54d80ff4dce4c7225983c71c72323550885e2d4b6759cb78b50e",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "dense_signed_flows",
+        "geometric_correction_series",
+        "fractional_triangle_decomposition"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.dense_fractional_triangles"
+      ]
+    },
+    {
+      "number": "5.8",
+      "kind": "lemma",
+      "labels": [
+        "dense:approximate"
+      ],
+      "section": 5,
+      "statement_source_lines": [
+        3752,
+        3758
+      ],
+      "statement_sha256": "ad85c5524e4389823ae6c564e224d56730cf985c8b2a689ff34de424bfb51dea",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "5.9",
+      "kind": "lemma",
+      "labels": [
+        "dense:unequal-flow"
+      ],
+      "section": 5,
+      "statement_source_lines": [
+        3812,
+        3818
+      ],
+      "statement_sha256": "4f18f507f8473066d4b1b85159dee7203608b6b40b88424b0e4534c1784473b2",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "dense_signed_flows"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.dense_unequal_flow"
+      ]
+    },
+    {
+      "number": "5.10",
+      "kind": "lemma",
+      "labels": [
+        "dense:reserve"
+      ],
+      "section": 5,
+      "statement_source_lines": [
+        3835,
+        3851
+      ],
+      "statement_sha256": "7cd7ea99f9deaccd078bc09ff2a3ee1deb32ca0ba1d90eb2cc7f73573f0a1329",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "six_pair_balanced_reserve"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.dense_reserve"
+      ]
+    },
+    {
+      "number": "5.11",
+      "kind": "lemma",
+      "labels": [
+        "dense:balance-repair"
+      ],
+      "section": 5,
+      "statement_source_lines": [
+        3873,
+        3883
+      ],
+      "statement_sha256": "0845c9a8899e767bdf99ba33c277a4c312ef341b077d35cf271ef13614a7b6e8",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "dense_balance_repair_bounds",
+        "dense_balance_repair_path_model",
+        "dense_balance_repair_routing",
+        "dense_balance_repair_graph",
+        "dense_balance_repair_cancellation",
+        "dense_balance_repair"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.dense_balance_repair"
+      ]
+    },
+    {
+      "number": "5.12",
+      "kind": "lemma",
+      "labels": [
+        "dense:link-packing"
+      ],
+      "section": 5,
+      "statement_source_lines": [
+        3914,
+        3925
+      ],
+      "statement_sha256": "1d5d07d6cfa237c907e332ee99db407b81dd14a39c99ad0904939c710c8fe2f1",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": true
+    },
+    {
+      "number": "5.13",
+      "kind": "theorem",
+      "labels": [
+        "dense:triangles"
+      ],
+      "section": 5,
+      "statement_source_lines": [
+        3928,
+        3933
+      ],
+      "statement_sha256": "ac23e5ecb25f0e6137b33a138da1394166ce592f0cd81415d461dc90754d9478",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "5.14",
+      "kind": "theorem",
+      "labels": [
+        "dense:precoloring"
+      ],
+      "section": 5,
+      "statement_source_lines": [
+        4192,
+        4202
+      ],
+      "statement_sha256": "365b9fec948654ff6516d936d3f101641654223d90d833692ebd49f7bb7567e0",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "6.1",
+      "kind": "theorem",
+      "labels": [
+        "ext:thm:robust"
+      ],
+      "section": 6,
+      "statement_source_lines": [
+        4239,
+        4252
+      ],
+      "statement_sha256": "86933f6910acbd8ca4e8216aa3325e78be13c2db52b6d61bc90201a1e33b6242",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": false
+    },
+    {
+      "number": "6.2",
+      "kind": "proposition",
+      "labels": [
+        "two:lem:bip-special"
+      ],
+      "section": 6,
+      "statement_source_lines": [
+        4259,
+        4285
+      ],
+      "statement_sha256": "7701fb854bcaa2a974bd46c55e38bf7e2745e9135238e03a9bcf92ff4c218a7a",
+      "full_assertion_verified": false,
+      "status": "checked_components_only",
+      "checked_components": [
+        "absorber_degree_arithmetic"
+      ],
+      "imported_statement": false
+    },
+    {
+      "number": "6.3",
+      "kind": "theorem",
+      "labels": [
+        "old:fac:absorber"
+      ],
+      "section": 6,
+      "statement_source_lines": [
+        4983,
+        5015
+      ],
+      "statement_sha256": "b55e0cae4e73c328ce8889a2e944e93c7575858be2610ed25e602f9161b8d9c9",
+      "full_assertion_verified": false,
+      "status": "not_formalized_here",
+      "checked_components": [],
+      "imported_statement": true
+    },
+    {
+      "number": "6.4",
+      "kind": "lemma",
+      "labels": [
+        "old:fac:range"
+      ],
+      "section": 6,
+      "statement_source_lines": [
+        5176,
+        5182
+      ],
+      "statement_sha256": "a84f146710ee4f5cb69909cd2355947cf3c5cf25557a2936fe05c1f6a76331f6",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "bipartite_range_reduction"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.bipartite_robust_range_reduction"
+      ]
+    },
+    {
+      "number": "7.1",
+      "kind": "proposition",
+      "labels": [
+        "sharp:thm:family"
+      ],
+      "section": 7,
+      "statement_source_lines": [
+        5293,
+        5303
+      ],
+      "statement_sha256": "83a96c36c3cd52bee33305daeaf0d74668746b322d45167902a9926e875ad5cb",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "saturated_color_classes",
+        "family_order_degrees_connectedness",
+        "family_actual_edge_count",
+        "weighted_petersen_obstruction",
+        "petersen_matching_classification",
+        "petersen_odd_cut_certificates",
+        "sharpness_local_arithmetic",
+        "graph_incidence_and_deficiency",
+        "odd_clique_boundary_colors",
+        "deleted_petersen_obstruction",
+        "family_coloring_obstruction",
+        "family_explicit_upper_coloring",
+        "family_whole_clique_counting",
+        "family_no_overfull",
+        "graph_relabeling",
+        "complete_sharpness_family"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.sharpness_family"
+      ]
+    },
+    {
+      "number": "7.2",
+      "kind": "corollary",
+      "labels": [
+        "sharp:cor:density"
+      ],
+      "section": 7,
+      "statement_source_lines": [
+        5450,
+        5454
+      ],
+      "statement_sha256": "d0223ccd05f932cfa3d03d4bb46fff956665b80b07bbf38058deeb6ae8e0a2c7",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "asymptotic_sharpness_parameters",
+        "complete_sharpness_family",
+        "complete_density_corollary"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.arbitrarily_large_class_two_graphs"
+      ]
+    }
+  ],
+  "external_proof_dependencies": [
+    {
+      "bibliography_key": "JLR",
+      "required_result": "Chernoff bounds for independent indicators and hypergeometric variables",
+      "pinpoints": [
+        "Corollary 2.3",
+        "Theorems 2.8 and 2.10"
+      ],
+      "coverage_status": "fully_proved_in_finite_joint_law_form_for_unequal_independent_indicators_and_hypergeometric_sampling",
+      "lean_declarations": [
+        "Overfull.IndependentBernoulli.chernoff_of_independent_indicators",
+        "Overfull.Hypergeometric.chernoff"
+      ]
+    },
+    {
+      "bibliography_key": "Hall",
+      "required_result": "Hall matching theorem",
+      "pinpoints": [],
+      "coverage_status": "fully_proved_for_actual_bipartite_graph_matchings_including_deficiency_form",
+      "lean_declarations": [
+        "Overfull.bipartite_hall_iff",
+        "Overfull.bipartite_hall_defect"
+      ]
+    },
+    {
+      "bibliography_key": "Berge1958",
+      "required_result": "Tutte\u2013Berge maximum-matching deficiency formula",
+      "pinpoints": [],
+      "coverage_status": "fully_proved_for_actual_finite_simple_graph_matchings_with_attained_integer_maximum",
+      "lean_declarations": [
+        "Overfull.TutteBerge.tutte_berge_integer_maximum",
+        "Overfull.TutteBerge.exists_maximum_matching"
+      ]
+    },
+    {
+      "bibliography_key": "Vizing64",
+      "required_result": "Vizing edge-coloring bound for simple graphs",
+      "pinpoints": [],
+      "coverage_status": "fully_proved_and_adapted_to_project_graph_and_coloring_definitions",
+      "lean_declarations": [
+        "Overfull.vizing_finite",
+        "Overfull.finite_vizing_bound"
+      ],
+      "source_provenance": "vizing-source.json"
+    },
+    {
+      "bibliography_key": "Konig",
+      "required_result": "K\u0151nig edge-coloring theorem for bipartite multigraphs",
+      "pinpoints": [],
+      "coverage_status": "fully_proved_for_actual_finite_loopless_bipartite_multigraphs",
+      "lean_declarations": [
+        "Overfull.Multigraph.konig_edgeColoring_iff"
+      ]
+    },
+    {
+      "bibliography_key": "SSTF",
+      "required_result": "Multifan elementarity in k-minimal loopless multigraphs",
+      "pinpoints": [
+        "Theorem 2.1"
+      ],
+      "coverage_status": "required_two_edge_fan_cases_proved_from_actual_recolorings",
+      "lean_declarations": [
+        "Overfull.Multigraph.IsKMinimal.missing_disjoint",
+        "Overfull.Multigraph.IsKMinimal.two_edge_fan_elementary"
+      ],
+      "scope_limit": "The E1 and E2 special cases used in the manuscript are proved; the general multifan theorem is not asserted."
+    },
+    {
+      "bibliography_key": "Edmonds",
+      "required_result": "Matching-polytope theorem for loopless multigraphs",
+      "pinpoints": [
+        "Theorem (P)"
+      ],
+      "coverage_status": "full_loopless_multigraph_matching_polytope_proved_and_adapted_to_actual_matchings",
+      "lean_declarations": [
+        "Lovasz.BMatch.thmA",
+        "Overfull.Multigraph.matching_polytope",
+        "Overfull.Multigraph.exists_uniform_matching_distribution",
+        "Overfull.Multigraph.exists_perfectMatching_distribution"
+      ],
+      "source_provenance": "bmatching-source.json"
+    },
+    {
+      "bibliography_key": "KuhnOsthus2013",
+      "required_result": "Degree-form regularity and reduced robust-expansion inheritance",
+      "pinpoints": [
+        "Lemmas 4.1 and 5.1"
+      ],
+      "coverage_status": "required_ordinary_graph_consequences_proved_from_equitable_regularity",
+      "lean_declarations": [
+        "Overfull.PairedCut.robust_after_total_degree_loss",
+        "Overfull.PairedCut.robust_quotient",
+        "Overfull.PairedCut.exists_robust_regular_clusters"
+      ],
+      "scope": "The ordinary equal-cluster regularity and robust reduced-graph inheritance needed for Lemma 2.19 are proved from mathlib equitable regularity and actual edge counts. The general directed degree-form and inheritance theorems are not claimed separately."
+    },
+    {
+      "bibliography_key": "KLOS2015",
+      "required_result": "Robust partition theorem for almost-regular graphs",
+      "pinpoints": [
+        "Theorem 5.1",
+        "conditions C1\u2013C3 and D1\u2013D7"
+      ],
+      "coverage_status": "not_formalized_or_matched_to_a_checked_declaration_here"
+    },
+    {
+      "bibliography_key": "CaoChen2020",
+      "required_result": "Average degree of edge-chromatic critical graphs",
+      "pinpoints": [
+        "Theorem 3"
+      ],
+      "coverage_status": "not_formalized_or_matched_to_a_checked_declaration_here"
+    },
+    {
+      "bibliography_key": "Kahn",
+      "required_result": "Asymptotic list-chromatic-index theorem for multigraphs",
+      "pinpoints": [
+        "Theorem 1.1"
+      ],
+      "coverage_status": "not_formalized_or_matched_to_a_checked_declaration_here"
+    },
+    {
+      "bibliography_key": "FZ",
+      "required_result": "Compatible circuit decomposition of Eulerian graphs with no K5 minor",
+      "pinpoints": [
+        "Theorem 1.1"
+      ],
+      "coverage_status": "not_formalized_or_matched_to_a_checked_declaration_here"
+    },
+    {
+      "bibliography_key": "EGJ",
+      "required_result": "Weighted nearly-perfect hypergraph matching theorem",
+      "pinpoints": [
+        "Theorem 1.2"
+      ],
+      "coverage_status": "not_formalized_or_matched_to_a_checked_declaration_here"
+    },
+    {
+      "bibliography_key": "BKLOT",
+      "required_result": "Disjoint matching packing in tripartite links",
+      "pinpoints": [
+        "Lemma 9.1, r=3"
+      ],
+      "coverage_status": "not_formalized_or_matched_to_a_checked_declaration_here"
+    },
+    {
+      "bibliography_key": "Granet",
+      "required_result": "Bipartite robust setup, refinements, universal walk and robust decomposition",
+      "pinpoints": [
+        "Corollary 5.5",
+        "Lemmas 5.7, 5.14\u20135.15, 6.8\u20136.10, 6.24 and 7.2",
+        "Definitions 6.7, 6.14, 6.16 and 6.21\u20136.23"
+      ],
+      "coverage_status": "not_formalized_or_matched_to_a_checked_declaration_here"
+    }
+  ],
+  "notes": [
+    "The count of audited Lean declarations includes generated and private support lemmas; it is not the number of verified manuscript assertions.",
+    "The three numbered manuscript definitions are excluded from the count of 69 assertions.",
+    "The main theorem is an unproved proposition definition in Overfull/Specifications.lean, not an axiom. The complete SharpnessFamily specification, including its edge-count clause, is proved by Overfull.sharpness_family.",
+    "The explicit upper coloring of the sharpness family is independent of Vizing. The general Vizing bound is now also proved through a checked source adapter.",
+    "The degree ratios Delta/(4*Delta+5) approach one quarter from below. The family leaves the boundary Delta >= n/4 open.",
+    "The full manuscript text is not included.",
+    "The cycle absorber and robust deletion/range lemmas are fully checked. Their verification does not establish the robust partition, the dense decomposition, or the robust decomposition used in the main theorem.",
+    "Lemma 2.2 is formalized at the finite joint-law level, including unequal Bernoulli probabilities and actual sampling without replacement. A Mathlib measure-space transport interface for infinite underlying outcome spaces is not included.",
+    "Theorem 2.16 is proved by one rule chosen before the adaptive forbidden-set policy. Its local incidence condition concerns previous sets only, which is implied by the manuscript total-incidence condition. The positive error and order threshold are chosen before the graph.",
+    "Lemma 2.21 chooses the positive robust parameter and order threshold before the labelled degree sequence. Lemmas 2.6-2.8 use actual edge-copy colorings and proved fan recolorings; the full Lemma 2.8 wrapper includes the empty-core case without an extra nonnegativity assumption.",
+    "Lemma 2.22 constructs an actual even-order regular completion with the least allowed auxiliary order, retains all original edge copies, and proves every required odd-set inequality. It supplies no coloring of that completion.",
+    "Lemma 2.19 constructs the regularity partition and actual reduced robust graph, then proves the full pair-splitting cut conclusion with side-normalized bipartite expansion. Its constants precede the graph and pairing. Its application crossing an actual matching is assembled with ordinary matching completion in the full proof of Lemma 2.20.",
+    "Lemma 2.20 chooses its positive error, retained robust parameter, and order threshold before the graph, and one fixed rule before the adaptive input. Its complete proof passed a strict Lean build and an independent semantic review.",
+    "Lemma 2.25 is proved from the precise bipartite outcome properties stated in Lemma 2.24; it constructs the actual retained sets and crossing graph. Lemma 2.24 is not thereby proved. The balanced-core theorem passed a strict Lean build and a separate semantic review."
+  ],
+  "density_corollary_verified": true
+}

@@ -1,0 +1,359 @@
+{
+  "repository": "https://github.com/aroheebhoja/vizing",
+  "commit": "c4fc77be6af1a48a44351234120898ad3cf6b545",
+  "tree": "5b7afcf725c427bcef61992ad81355195cd8640b",
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 17,
+      "sha": "aa0b9a3007914eac25968abe725d513ed5eac76b",
+      "upstream_sha256": "88f3e439048564ca4a2462f2c06c20ebe92309ef6f35be7681085610c382f4f9",
+      "ported_sha256": "88f3e439048564ca4a2462f2c06c20ebe92309ef6f35be7681085610c382f4f9",
+      "installed": true
+    },
+    {
+      "path": "README.md",
+      "size": 116,
+      "sha": "3f95dfcbb1b22804289c0fb09965dbc8416d3fa7",
+      "upstream_sha256": "8b2ef2389a86d5f7d669f5a4e039c5af30da2e703b32e60e5534692c684ff1f4",
+      "ported_sha256": "8b2ef2389a86d5f7d669f5a4e039c5af30da2e703b32e60e5534692c684ff1f4",
+      "installed": true
+    },
+    {
+      "path": "Vizing.lean",
+      "size": 197,
+      "sha": "2762fccb32caadc338add8e7e58d97a9a897c18b",
+      "upstream_sha256": "b0354ba353ee6e835bc6e278c12c97cd85466586812bcf269c7ba96104207c8a",
+      "ported_sha256": "b0354ba353ee6e835bc6e278c12c97cd85466586812bcf269c7ba96104207c8a",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Aux.lean",
+      "size": 107,
+      "sha": "c38939e656b6c308045acd1191c5db893fa19ee1",
+      "upstream_sha256": "6f0514ef5e5c7a3cc8c0386700bfd34414ffa7c17e819bd5fb138a400b2362ab",
+      "ported_sha256": "6f0514ef5e5c7a3cc8c0386700bfd34414ffa7c17e819bd5fb138a400b2362ab",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Aux/Adjacent.lean",
+      "size": 2149,
+      "sha": "781fbd3870e7e348ad084cb54aabba79a3b0dcd3",
+      "upstream_sha256": "1ae94fafc3e77d06a5878f9567ae062da4f6679f5024e6ff240c353bf4d44176",
+      "ported_sha256": "1ae94fafc3e77d06a5878f9567ae062da4f6679f5024e6ff240c353bf4d44176",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Aux/SetSet.lean",
+      "size": 6232,
+      "sha": "342400f163eabfa06b5b5975939b85a3b6e98b6f",
+      "upstream_sha256": "b70bc6380c5361f7e5f0720de6062083357008922c6afaf765464189ce6ec308",
+      "ported_sha256": "2e63fecd2751dcc0f66ba9dc931438a3b7704e0084d4d1b9cba971df210d85c4",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Aux/TakeUntil.lean",
+      "size": 1847,
+      "sha": "0e0b541f2d8bd8fddefa41af56e5d5fd10b86332",
+      "upstream_sha256": "4cceade48045599e5cd37fc367e4e6c340d82b8e92910c39bf9afc907222443b",
+      "ported_sha256": "672cef18e73c00b5eb8c4483ceeadf714555f0abf3306f4be7d3565c54a8901c",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Aux/Upstream.lean",
+      "size": 8121,
+      "sha": "9743fe1e9fe40bc303ed4ff4dfdb8ecb8d4fcd7a",
+      "upstream_sha256": "285cc70f1331f007c33944806c4d7214cfaa742b2c0a352850eb5150724d68a3",
+      "ported_sha256": "f9f20dea869deda5a41325e5d487e1e903afaf2b5c14cba3146766853b253198",
+      "installed": true
+    },
+    {
+      "path": "Vizing/EdgeColoring.lean",
+      "size": 144,
+      "sha": "4c40b973f371fdc02365c757b9c1a1f952378e6f",
+      "upstream_sha256": "edaf62181db0d3f25cc43de9ef87343c67f953ef47d028c4128db7d0b320461d",
+      "ported_sha256": "edaf62181db0d3f25cc43de9ef87343c67f953ef47d028c4128db7d0b320461d",
+      "installed": true
+    },
+    {
+      "path": "Vizing/EdgeColoring/Defs.lean",
+      "size": 3012,
+      "sha": "6f4b5df4400ee8d247cc175c623545d1c1cbd107",
+      "upstream_sha256": "56ccd96c0ec45aed3060638e888333f1ba780045bd42fad0b4a56649d8ab3c37",
+      "ported_sha256": "56ccd96c0ec45aed3060638e888333f1ba780045bd42fad0b4a56649d8ab3c37",
+      "installed": true
+    },
+    {
+      "path": "Vizing/EdgeColoring/Lemmas.lean",
+      "size": 6397,
+      "sha": "42f8f84411dcd70469855395ecb3355b717afa69",
+      "upstream_sha256": "c6d097d68248a16150b3e8e6409a2aff08dd1c819f19a0bd5421efaff92cf718",
+      "ported_sha256": "c6d097d68248a16150b3e8e6409a2aff08dd1c819f19a0bd5421efaff92cf718",
+      "installed": true
+    },
+    {
+      "path": "Vizing/EdgeColoring/SetColor.lean",
+      "size": 9820,
+      "sha": "aed150b9b92c50c9e28062adacbd9b1190b527d6",
+      "upstream_sha256": "3a5eab0791c4b0516f5d9034abe107cf382537059705ef300344a0602d61b985",
+      "ported_sha256": "db1143048a574b32bf2b4052c1e35c553b0649dc4dfdddb9923498c11a6bf994",
+      "installed": true
+    },
+    {
+      "path": "Vizing/EdgeColoring/SetColorLemmas.lean",
+      "size": 8957,
+      "sha": "2a397ca4bf5c79e6bb9891ea52b94ba93dce575c",
+      "upstream_sha256": "86ea2c040e967fd58c6f6a17800f67e637211eeff4ddc19e38c2a7409f1d4e46",
+      "ported_sha256": "500b6e7fa87dc27104b1614543eb6ad2fb7596d3a3a7d62fdff1304cf4080eb2",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Fan.lean",
+      "size": 102,
+      "sha": "8be2315db0f765e00ec0232783b4b3f74d70aa69",
+      "upstream_sha256": "d3c6d83ddb2cc1e056db206decf30c9b7c3a0f213531de182d38f172092c3de0",
+      "ported_sha256": "d3c6d83ddb2cc1e056db206decf30c9b7c3a0f213531de182d38f172092c3de0",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Fan/Defs.lean",
+      "size": 1509,
+      "sha": "0f6c86b70b6faff63312098c9c6a383c64f1d63d",
+      "upstream_sha256": "70540700491428ca55b26e9231998eb64a9fdf83bd9898b250f820f6a3417532",
+      "ported_sha256": "c304219618bca38701fe9203d14b91deca37dc763d897b7545ee9d4edcffb975",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Fan/Maximal.lean",
+      "size": 6327,
+      "sha": "8c0a17a28b0e7defb883fb23b809733f64cd9bfd",
+      "upstream_sha256": "e55f9aa28805529b4d91cda31e70cce735ba90a91cdebac424566aca5300cb78",
+      "ported_sha256": "59df5257a726b0fd466565432c5112df453309e5c513d5db6fac280538aefa8a",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Fan/RotateFan.lean",
+      "size": 7638,
+      "sha": "a7f6f45eaa6efb53ca14d0339851f44030b9d06b",
+      "upstream_sha256": "b33b3fc46cdcbb117f080f2cca6d72c07c820a980beefb3f7cb324387d733f56",
+      "ported_sha256": "cf36f3b9fc7870c9454c59795d05dc0bdeb4598832ff9a356a8aab9ae828222e",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Fan/Subfan.lean",
+      "size": 2486,
+      "sha": "4b0725b072f4db51b2eb34854050caa867e87d23",
+      "upstream_sha256": "7ba119bc3f570b800b93022e2904b2a5c3106e0532c33e6c7560155dd5b01ac8",
+      "ported_sha256": "ff6669c3228d082afdd0a04ae3851b8f6ae77187774db7ddff2cb2b5a0c0e199",
+      "installed": true
+    },
+    {
+      "path": "Vizing/FindSubfan.lean",
+      "size": 3476,
+      "sha": "8d1a1bfc681561b48ace9de311353e4806077501",
+      "upstream_sha256": "635f9a678e11066a3e425570f85c321220ffabba2fc4547334c24cb1eb2178f5",
+      "ported_sha256": "635f9a678e11066a3e425570f85c321220ffabba2fc4547334c24cb1eb2178f5",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Graph.lean",
+      "size": 4542,
+      "sha": "c1ad9e6c1fc3e4b811fffe0f7649d97026dc8563",
+      "upstream_sha256": "dc39df29d854904b423e948b0ca7d847760995011a8e870e788e5c975c37e5e4",
+      "ported_sha256": "7b3aa8c37b25f9c71902d56238e63a393e6bd0c342b0416e85e6538a9427d42c",
+      "installed": true
+    },
+    {
+      "path": "Vizing/InversionGuarantee.lean",
+      "size": 12840,
+      "sha": "b0753530e32fdd2277868963eb901b8b8a8a0f10",
+      "upstream_sha256": "1dee327f64569a59efcaa49ce29966d3df6d0f2ef96bacc97919add3d53b0914",
+      "ported_sha256": "529b5da1e27e599fe1257030c52fbd6baf373274aee32ccef076a7a52de96a72",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Main.lean",
+      "size": 5668,
+      "sha": "edc393236b76237e07ba69ab6dca79a23bc84abc",
+      "upstream_sha256": "06895060f3065e2473e67237a93d927b09c8f4805c92cb0b38e232ed79f237ac",
+      "ported_sha256": "06895060f3065e2473e67237a93d927b09c8f4805c92cb0b38e232ed79f237ac",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Path.lean",
+      "size": 111,
+      "sha": "0d180fcb190ffa815f08894ea8c7d4796edf5515",
+      "upstream_sha256": "24827e9a3643515b6a63195907296f2636b7457a1a51eecd0dd1952bba277f26",
+      "ported_sha256": "24827e9a3643515b6a63195907296f2636b7457a1a51eecd0dd1952bba277f26",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Path/AlternatingPred.lean",
+      "size": 4744,
+      "sha": "0b23851214ac5d07bdb4be1d8ce9f5f16fc82b68",
+      "upstream_sha256": "5ab4e19e9b8e25a7920aeb01f6890369800a2b0096585d20ef9a4c6aeef1d751",
+      "ported_sha256": "4bb7bcd3a101492e0a5c1f2ac91d344d2ab90b7a20f0a70060bfc9df39af5487",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Path/Defs.lean",
+      "size": 2485,
+      "sha": "73f231a2f87ecd65b8381778619c552aac1b6104",
+      "upstream_sha256": "8f6abf48867f3bf9902d661c39f1e73ea467323031040c4ffc033206e6361ec7",
+      "ported_sha256": "8f6abf48867f3bf9902d661c39f1e73ea467323031040c4ffc033206e6361ec7",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Path/Extend.lean",
+      "size": 7447,
+      "sha": "dc3029cf148ddb638ef119740a55b5acac7d6922",
+      "upstream_sha256": "8b6b0da816dd4c4f1d1c49c5c7de863078b0a666dc9a511e0b6ea6afbc9ea531",
+      "ported_sha256": "8b6b0da816dd4c4f1d1c49c5c7de863078b0a666dc9a511e0b6ea6afbc9ea531",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Path/Invert.lean",
+      "size": 15154,
+      "sha": "960617c2ef8a6bacf443fb428fec09874d2d814b",
+      "upstream_sha256": "1523e4cfe6214572dd88e4cd260ed74c89915098c150336c02d4dcd0114f7ba2",
+      "ported_sha256": "dd6d0f26a81a55279797b2ee37e21c73e3b0689c49439187b2ab5e7590331e16",
+      "installed": true
+    },
+    {
+      "path": "Vizing/Path/PathEdges.lean",
+      "size": 6094,
+      "sha": "b5d99317ed19630d1e0482e341e373fca1c1d568",
+      "upstream_sha256": "1de7dce2477b2ffd36a92bbf2f250e207ff0928dc7fa9d98a5cc98bad8bc1bb0",
+      "ported_sha256": "1de7dce2477b2ffd36a92bbf2f250e207ff0928dc7fa9d98a5cc98bad8bc1bb0",
+      "installed": true
+    },
+    {
+      "path": "citation.cff",
+      "size": 488,
+      "sha": "cfc08dc5f75bc7097184347715185a23ca8772ee",
+      "upstream_sha256": "32dd70f8256b3aaf1fbd795211e55b9926a69c110f6e9f78bc378b46629f9f50",
+      "ported_sha256": "32dd70f8256b3aaf1fbd795211e55b9926a69c110f6e9f78bc378b46629f9f50",
+      "installed": true
+    },
+    {
+      "path": "lake-manifest.json",
+      "size": 3093,
+      "sha": "1a428cbd60e117fe85b72b316bb8459fc56882f8",
+      "upstream_sha256": "b4b14c682932e40af4f17dc36a21f39adf32700e5e32cfab3bd136d38e69dd08",
+      "ported_sha256": "b4b14c682932e40af4f17dc36a21f39adf32700e5e32cfab3bd136d38e69dd08",
+      "installed": false
+    },
+    {
+      "path": "lakefile.lean",
+      "size": 513,
+      "sha": "2c233efae24aca9fca6e30f8d88d3b0b29054685",
+      "upstream_sha256": "10bcb65a9e3e72bc0aa95adc5be2ec5ab1ac7c08c315a00d679956cfcb8b144e",
+      "ported_sha256": "10bcb65a9e3e72bc0aa95adc5be2ec5ab1ac7c08c315a00d679956cfcb8b144e",
+      "installed": true
+    },
+    {
+      "path": "lean-toolchain",
+      "size": 29,
+      "sha": "1efd365585bf21a29cb6b480e37f5dec31d18a83",
+      "upstream_sha256": "4a621e65aac8f17691d825e7dfedb432e2658f3a96002cab94fad5320a18c9fc",
+      "ported_sha256": "4a621e65aac8f17691d825e7dfedb432e2658f3a96002cab94fad5320a18c9fc",
+      "installed": true
+    }
+  ],
+  "redistribution": "No complete upstream source files are included. Setup fetches the pinned public upstream source and applies the recorded compatibility patch locally.",
+  "author": "Arohee Bhoja",
+  "paper": "https://arxiv.org/abs/2512.13999",
+  "upstream_toolchain": "leanprover/lean4:v4.21.0-rc3",
+  "tested_toolchain": "leanprover/lean4:v4.24.0",
+  "tested_mathlib_commit": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+  "entry_module": "Vizing.Main",
+  "dependency_directory": ".lake/packages/vizing",
+  "setup_script": "scripts/setup_vizing.py",
+  "compatibility_patch": "patches/vizing-lean-4.24.patch",
+  "compatibility_patch_sha256": "1f50d4aa24ee428032d14bb90c1705df9906ab90581bf0046eedf49bf3d70c76",
+  "license_status": {
+    "license_file_in_complete_pinned_tree": false,
+    "github_api_license": null,
+    "source_license_notice_found": false,
+    "full_upstream_source_redistributed": false
+  },
+  "verification_status": "Verified. The full Vizing.Main proof closure and Overfull.Vizing.Theorem pass a strict Lean 4.24 build against the unchanged pinned mathlib. Every final exported theorem passes a transitive kernel-environment axiom audit.",
+  "notes": [
+    "The pinned upstream Vizing.lean root imports a missing Vizing.Basic module. The adapter imports the existing, complete Vizing.Main proof closure directly.",
+    "The compatibility patch updates List.IsChain APIs and tactic proofs without adding hypotheses or changing the graph/coloring specification.",
+    "Upstream source is fetched by setup into an untracked dependency directory, not included in this repository.",
+    "Overfull.mainTheorem_of_criticalExclusion remains conditional on LargeCriticalExclusion.",
+    "The pinned upstream lake-manifest.json is verified, then omitted from the prepared dependency so the main project retains its exact mathlib and transitive dependency pins.",
+    "Compatibility changes also remove obsolete or unused simp arguments so the port can pass a strict warning-free build."
+  ],
+  "omitted_upstream_files": [
+    "lake-manifest.json"
+  ],
+  "compatibility_modified_files": [
+    "Vizing/Aux/SetSet.lean",
+    "Vizing/Aux/TakeUntil.lean",
+    "Vizing/Aux/Upstream.lean",
+    "Vizing/EdgeColoring/SetColor.lean",
+    "Vizing/EdgeColoring/SetColorLemmas.lean",
+    "Vizing/Fan/Defs.lean",
+    "Vizing/Fan/Maximal.lean",
+    "Vizing/Fan/RotateFan.lean",
+    "Vizing/Fan/Subfan.lean",
+    "Vizing/Graph.lean",
+    "Vizing/InversionGuarantee.lean",
+    "Vizing/Path/AlternatingPred.lean",
+    "Vizing/Path/Invert.lean"
+  ],
+  "integrated_theorems": [
+    "Overfull.vizing",
+    "Overfull.vizing_finite",
+    "Overfull.finite_vizing_bound",
+    "Overfull.mainTheorem_of_criticalExclusion"
+  ],
+  "conditional_theorems": {
+    "Overfull.mainTheorem_of_criticalExclusion": "Requires the explicit unproved input Overfull.LargeCriticalExclusion. This is not a proof of the full main theorem."
+  },
+  "strict_build": {
+    "command": "lake build Overfull.Vizing.Theorem --wfail",
+    "exit_code": 0,
+    "warnings": 0
+  },
+  "initial_full_sandbox_audit": {
+    "status": "passed_in_separate_sandbox",
+    "upstream_theorems": 742,
+    "upstream_definitions": 178,
+    "adapter_theorems": 24,
+    "adapter_definitions": 6,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "final_theorem": "Overfull.finite_vizing_bound",
+    "final_theorem_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "scope": "All theorems and definitions from the 25 imported upstream modules and the initial adapter, before removal of unused simp arguments for the strict build."
+  },
+  "axiom_audit": {
+    "status": "passed",
+    "method": "Lean.Util.CollectAxioms on final imported kernel declarations",
+    "theorems": [
+      "Overfull.vizing",
+      "Overfull.vizing_finite",
+      "Overfull.finite_vizing_bound",
+      "Overfull.mainTheorem_of_criticalExclusion"
+    ],
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "forbidden_axioms_found": false
+  },
+  "finite_vizing_bound_proved": true,
+  "main_theorem_proved": false,
+  "remaining_main_theorem_input": "Overfull.LargeCriticalExclusion"
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "title": "An Asymptotically Sharp Form of the Overfull Conjecture",
+  "filename": "Four_Robust_Component_Cases_2026-11-20.tex",
+  "sha256": "4605bdf3ee5b241a7b52dd59d08537fa0a439335cd6f119394cddd4609efffc1",
+  "size_bytes": 262639,
+  "version_date_in_manuscript": "November 20, 2026",
+  "manuscript_included": false,
+  "numbered_mathematical_assertions": 69,
+  "numbered_definitions": 3,
+  "source_identification": "The filename and SHA256 identify the exact reviewed TeX source. No manuscript text is reproduced in this repository.",
+  "specifications": [
+    {
+      "lean_name": "Overfull.MainTheorem",
+      "file": "Overfull/Specifications.lean",
+      "manuscript_label": "main:quarter",
+      "manuscript_number": "1.1",
+      "proved": false,
+      "scope": "The main asymptotic assertion, formulated for labelled finite simple graphs on Fin n, existence of a proper edge coloring with maxDegree colors, and absence of overfull induced vertex sets."
+    },
+    {
+      "lean_name": "Overfull.SharpnessFamily",
+      "file": "Overfull/Specifications.lean",
+      "manuscript_label": "sharp:thm:family",
+      "manuscript_number": "7.1",
+      "proved": true,
+      "scope": "The full assertion of Proposition 7.1 for every odd Delta >= 3: a connected simple graph on Fin (4*Delta+5), maximum degree Delta, no proper Delta-edge-coloring, a proper (Delta+1)-edge-coloring, no Delta-overfull vertex set, and exactly 2*Delta*(Delta+1) edges. The two coloring statements express the exact class-2 conclusion without invoking Vizing\u2019s theorem.",
+      "proof_declaration": "Overfull.sharpness_family",
+      "proof_file": "Overfull/Sharpness/Theorems.lean"
+    }
+  ],
+  "coverage_file": "coverage.json",
+  "main_theorem_verified": false,
+  "full_sharpness_proposition_verified": true,
+  "fully_verified_numbered_assertions": 35,
+  "additional_complete_results": [
+    {
+      "lean_name": "Overfull.arbitrarily_large_class_two_graphs",
+      "file": "Overfull/Sharpness/Theorems.lean",
+      "manuscript_label": "sharp:cor:density",
+      "manuscript_number": "7.2",
+      "proved": true,
+      "scope": "For every real c < 1/4 and every natural order bound N, a connected simple class-2 graph exists on Fin n for some n >= N, with maximum degree at least c*n and no overfull vertex set at its maximum degree."
+    }
+  ],
+  "density_corollary_verified": true
+}
