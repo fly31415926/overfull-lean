@@ -8,8 +8,8 @@
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
-  "fully_verified_numbered_assertion_count": 35,
-  "scope": "35 of the 69 numbered assertions have complete checked proofs. The remaining 34, including the main theorem, have no complete proof here. Checked components and conditional implications do not count as complete proofs of their parent assertions. Lemma 2.2 is represented by its finite probability laws.",
+  "fully_verified_numbered_assertion_count": 37,
+  "scope": "37 of the 69 numbered assertions have complete checked proofs. The remaining 32, including the main theorem, have no complete proof here. Checked components and conditional implications do not count as complete proofs of their parent assertions. Lemma 2.2 is represented by its finite probability laws.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -1741,6 +1741,168 @@
       "manuscript_locations": [
         "dense:balance-repair"
       ]
+    },
+    {
+      "id": "replacement_graph",
+      "kind": "graph_theoretic_result",
+      "description": "Construct the ambient lift of a graph on the prescribed core subtype and the actual replacement graph. Prove exterior disjointness and retention, exact degree and induced-edge identities, and the comparison between actual core and ambient cuts.",
+      "lean_declarations": [
+        "Overfull.Replacement.exterior_disjoint_core",
+        "Overfull.Replacement.exterior_le",
+        "Overfull.Replacement.graph_degree_identity",
+        "Overfull.Replacement.graph_degree_le",
+        "Overfull.Replacement.graph_internal_count_identity",
+        "Overfull.Replacement.cut_core_le"
+      ],
+      "scope_limit": "Exact graph identities for a supplied original core and proposed regular graph; the full replacement theorem constructs that regular graph.",
+      "manuscript_locations": [
+        "mixed:lem:replacement, ambient replacement graph"
+      ]
+    },
+    {
+      "id": "replacement_small_shores",
+      "kind": "graph_theoretic_result",
+      "description": "Compare actual induced edge counts on empty, singleton, whole, and single-vertex-complement shores using regular degrees and handshaking. Use actual core cut bounds to reduce every possible overfull set to those shores.",
+      "lean_declarations": [
+        "Overfull.Replacement.internal_count_small",
+        "Overfull.Replacement.internal_compl_singleton",
+        "Overfull.Replacement.regular_small_shore_comparison",
+        "Overfull.Replacement.no_overfull_of_core_cuts"
+      ],
+      "scope_limit": "The overfull-preservation helper takes core cut and small-shore inequalities. The full theorem derives both from the graph and its constructed regular robust core.",
+      "manuscript_locations": [
+        "mixed:lem:replacement, overfull preservation"
+      ]
+    },
+    {
+      "id": "replacement_parameters",
+      "kind": "numerical_result",
+      "description": "Choose the positive error tolerance after the robust parameter, and then choose a uniform order threshold giving the realization order, deletion tolerance, minimum-degree margin, and a robust quadratic cut bound greater than k.",
+      "lean_declarations": [
+        "Overfull.Replacement.exists_replacement_parameters"
+      ],
+      "scope_limit": "The constants precede the order, core size, degree bound, and real degree error. The explicit sufficient robust-range condition is tau <= beta/16.",
+      "manuscript_locations": [
+        "mixed:lem:replacement, uniform constants"
+      ]
+    },
+    {
+      "id": "replacement_deletion",
+      "kind": "graph_theoretic_result",
+      "description": "Delete precisely the edges of the proposed core that belong to the retained exterior. Bound the actual forbidden degree and core degree loss, and derive robust expansion and the minimum-degree bound after deletion.",
+      "lean_declarations": [
+        "Overfull.Replacement.forbidden_degree_le",
+        "Overfull.Replacement.core_degree_loss",
+        "Overfull.Replacement.core_degree_lower",
+        "Overfull.Replacement.core_robust"
+      ],
+      "scope_limit": "The robust input graph is supplied to these deletion helpers and is constructed from full Lemma 2.21 in the public replacement theorem.",
+      "manuscript_locations": [
+        "mixed:lem:replacement, construction of the new core"
+      ]
+    },
+    {
+      "id": "robust_core_replacement",
+      "kind": "complete_manuscript_assertion",
+      "description": "Construct an actual simple robust replacement core on the prescribed even vertex set and the exact ambient replacement graph. Prove exterior disjointness and retention, minimum core degree at least k-2a-1, maximum ambient degree at most k, and absence of every k-overfull set.",
+      "lean_declarations": [
+        "Overfull.robust_core_replacement"
+      ],
+      "scope_limit": "Full Lemma 3.3 for the explicit sufficient range 0 < tau <= min(beta/16,1/4). Positive mu, xi, and the order threshold precede every graph and core. The regular robust realization, deletion bounds, cut inequalities, and small-shore comparisons are proved inputs, not assumed existence conclusions. This does not color the comparison graph.",
+      "manuscript_locations": [
+        "mixed:lem:replacement"
+      ]
+    },
+    {
+      "id": "forbidden_set_witness",
+      "kind": "graph_theoretic_result",
+      "description": "For a finite family of bounded-size vertex sets, choose a bounded subfamily preserving the existence of a member avoiding any forbidden set of bounded size. Combine up to six families with set size twelve and forbidden-set size three to obtain the exact 135720 vertex bound.",
+      "lean_declarations": [
+        "Overfull.ForbiddenSetWitness.exists_subfamily",
+        "Overfull.ForbiddenSetWitness.exists_vertex_witness",
+        "Overfull.ForbiddenSetWitness.exists_six_family_witness",
+        "Overfull.ForbiddenSetWitness.six_twelve_vertex_bound"
+      ],
+      "scope_limit": "A finite-set theorem; the prescribed-matching short-path construction supplies the actual graph path families to which it is applied.",
+      "manuscript_locations": [
+        "three:lem:prescribed, bounded connectivity witness"
+      ]
+    },
+    {
+      "id": "prescribed_matching_paths",
+      "kind": "graph_theoretic_result",
+      "description": "Construct actual paths with at most twelve vertices between connected core cliques after the allowed deletions. Build a common vertex witness of size at most 135720 preserving every required connection after deleting at most three vertices.",
+      "lean_declarations": [
+        "Overfull.PrescribedMatching.short_core_path",
+        "Overfull.PrescribedMatching.short_path_avoiding",
+        "Overfull.PrescribedMatching.exists_core_connection_witness"
+      ],
+      "scope_limit": "The short-path theorem uses actual clique and attachment hypotheses, all derived from the stated core orders and exceptional degrees in the final theorem.",
+      "manuscript_locations": [
+        "three:lem:prescribed, paths and witness"
+      ]
+    },
+    {
+      "id": "prescribed_matching_components",
+      "kind": "graph_theoretic_result",
+      "description": "Derive exceptional attachment after vertex deletion, component-count bounds, survival of original components, and actual connectivity preservation through a retained path witness.",
+      "lean_declarations": [
+        "Overfull.PrescribedMatching.component_card_le_cores_add_exceptional",
+        "Overfull.PrescribedMatching.core_attachment_after_deletion",
+        "Overfull.PrescribedMatching.component_card_le_after_attachment",
+        "Overfull.PrescribedMatching.component_has_survivor",
+        "Overfull.PrescribedMatching.reachable_reflection_of_witness"
+      ],
+      "scope_limit": "These prove the graph inputs to the three Tutte deletion ranges. They use actual induced graphs and paths, and also permit overlapping core cliques.",
+      "manuscript_locations": [
+        "three:lem:prescribed, component correspondence"
+      ]
+    },
+    {
+      "id": "prescribed_matching_parity",
+      "kind": "graph_theoretic_result",
+      "description": "Construct matching restrictions and completion unions on actual induced complements. Prove component parity under deletion of matched pairs, transfer actual odd-component counts, and complete a matching from all induced Tutte inequalities.",
+      "lean_declarations": [
+        "Overfull.PrescribedMatching.complete_from_induced_complement",
+        "Overfull.PrescribedMatching.survivingComponentEquiv_support",
+        "Overfull.PrescribedMatching.matching_component_inter_even",
+        "Overfull.PrescribedMatching.oddComponents_after_remaining_deletion",
+        "Overfull.PrescribedMatching.remaining_odd_bound",
+        "Overfull.PrescribedMatching.complete_of_induced_odd_bounds",
+        "Overfull.PrescribedMatching.remainingDeletion_oddComponents"
+      ],
+      "scope_limit": "The component-transfer hypotheses and all Tutte inequalities are established from the graph in the full prescribed-matching theorem; they are not assumptions of its public statement.",
+      "manuscript_locations": [
+        "three:lem:prescribed, parity and Tutte completion"
+      ]
+    },
+    {
+      "id": "prescribed_matching_selection",
+      "kind": "graph_theoretic_result",
+      "description": "Restrict the actual prescribed matching to edges avoiding the witness. Bound the omitted edge count by the witness size, the number of covered core vertices by the exceptional-set size, and the final omitted count after extension.",
+      "lean_declarations": [
+        "Overfull.PrescribedMatching.avoidVertices_omitted_edges_le",
+        "Overfull.PrescribedMatching.matching_covered_outside_le",
+        "Overfull.PrescribedMatching.select_prescribed_matching",
+        "Overfull.PrescribedMatching.omitted_edges_le_of_extension"
+      ],
+      "scope_limit": "The prescribed matching may also contain exceptional-exceptional edges. All bounds count the actual matching edge and vertex sets.",
+      "manuscript_locations": [
+        "three:lem:prescribed, discarding witness-incident edges"
+      ]
+    },
+    {
+      "id": "prescribed_exceptional_core_matching",
+      "kind": "complete_manuscript_assertion",
+      "description": "Under the core-clique size, exceptional-neighbor, and original perfect-matching hypotheses, construct an actual perfect matching retaining all but at most 135720 prescribed matching edges. Prove every path, witness, component, parity, selection, and Tutte obligation internally.",
+      "lean_declarations": [
+        "Overfull.PrescribedMatching.complete_avoiding_witness",
+        "Overfull.prescribed_exceptional_core_matching"
+      ],
+      "scope_limit": "Full Lemma 4.8. The formal theorem strengthens the statement by allowing overlapping core cliques and prescribed edges with both endpoints exceptional. The original perfect-matching existence hypothesis is retained exactly as required by the manuscript.",
+      "manuscript_locations": [
+        "three:lem:prescribed"
+      ]
     }
   ],
   "numbered_assertions": [
@@ -2423,10 +2585,19 @@
         1763
       ],
       "statement_sha256": "0064f29f9e266844f71183cc1658451048753c8a31c2744005f2fca29be00d3c",
-      "full_assertion_verified": false,
-      "status": "not_formalized_here",
-      "checked_components": [],
-      "imported_statement": false
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "replacement_graph",
+        "replacement_small_shores",
+        "replacement_parameters",
+        "replacement_deletion",
+        "robust_core_replacement"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.robust_core_replacement"
+      ]
     },
     {
       "number": "3.4",
@@ -2632,10 +2803,20 @@
         2690
       ],
       "statement_sha256": "6703e3485289fb1acbb84e24e9ffc25035d9fd2b18c697cf1eaa7508c79fd2e5",
-      "full_assertion_verified": false,
-      "status": "not_formalized_here",
-      "checked_components": [],
-      "imported_statement": false
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "forbidden_set_witness",
+        "prescribed_matching_paths",
+        "prescribed_matching_components",
+        "prescribed_matching_parity",
+        "prescribed_matching_selection",
+        "prescribed_exceptional_core_matching"
+      ],
+      "imported_statement": false,
+      "lean_theorems": [
+        "Overfull.prescribed_exceptional_core_matching"
+      ]
     },
     {
       "number": "4.9",
@@ -3366,7 +3547,9 @@
     "Lemma 2.22 constructs an actual even-order regular completion with the least allowed auxiliary order, retains all original edge copies, and proves every required odd-set inequality. It supplies no coloring of that completion.",
     "Lemma 2.19 constructs the regularity partition and actual reduced robust graph, then proves the full pair-splitting cut conclusion with side-normalized bipartite expansion. Its constants precede the graph and pairing. Its application crossing an actual matching is assembled with ordinary matching completion in the full proof of Lemma 2.20.",
     "Lemma 2.20 chooses its positive error, retained robust parameter, and order threshold before the graph, and one fixed rule before the adaptive input. Its complete proof passed a strict Lean build and an independent semantic review.",
-    "Lemma 2.25 is proved from the precise bipartite outcome properties stated in Lemma 2.24; it constructs the actual retained sets and crossing graph. Lemma 2.24 is not thereby proved. The balanced-core theorem passed a strict Lean build and a separate semantic review."
+    "Lemma 2.25 is proved from the precise bipartite outcome properties stated in Lemma 2.24; it constructs the actual retained sets and crossing graph. Lemma 2.24 is not thereby proved. The balanced-core theorem passed a strict Lean build and a separate semantic review.",
+    "Lemma 3.3 constructs its regular robust core using the full labelled realization theorem, then proves all actual deletion, degree, cut, and overfull-preservation conclusions. Its constants precede the graph. The complete theorem and helpers passed strict builds, scoped axiom audits, and an independent semantic review.",
+    "Lemma 4.8 proves the exact bound 135720 on omitted prescribed edges. The short paths, bounded witness, actual matching restriction, component connectivity and parity, and all Tutte deletion ranges are proved internally. The statement also permits overlapping core cliques and exceptional-exceptional prescribed edges. Strict builds, scoped axiom audits, and an independent semantic review passed."
   ],
   "density_corollary_verified": true
 }

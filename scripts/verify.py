@@ -14,6 +14,8 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "verification"
 MATHLIB_REVISION = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
+NUMBERED_ASSERTION_COUNT = 69
+COMPLETED_NUMBERED_ASSERTION_COUNT = 37
 
 
 def run(arguments: list[str], log_name: str) -> str:
@@ -238,12 +240,43 @@ def main() -> None:
         "dense_balance_repair_finite_cancellation": "Overfull.Dense.BalanceRepair.exists_balanced_deletion",
         "dense_balance_repair_positive_mass": "Overfull.Dense.BalanceRepair.positive_balance_sum_le",
         "dense_balance_repair": "Overfull.dense_balance_repair",
+        "replacement_uniform_parameters": "Overfull.Replacement.exists_replacement_parameters",
+        "replacement_degree_identity": "Overfull.Replacement.graph_degree_identity",
+        "replacement_induced_edge_identity": "Overfull.Replacement.graph_internal_count_identity",
+        "replacement_actual_core_cut": "Overfull.Replacement.cut_core_le",
+        "replacement_small_shore_comparison": "Overfull.Replacement.regular_small_shore_comparison",
+        "replacement_overfull_preservation": "Overfull.Replacement.no_overfull_of_core_cuts",
+        "replacement_degree_loss": "Overfull.Replacement.core_degree_loss",
+        "replacement_core_robustness": "Overfull.Replacement.core_robust",
+        "robust_core_replacement": "Overfull.robust_core_replacement",
+        "forbidden_set_subfamily": "Overfull.ForbiddenSetWitness.exists_subfamily",
+        "forbidden_set_vertex_witness": "Overfull.ForbiddenSetWitness.exists_vertex_witness",
+        "six_family_connectivity_witness": "Overfull.ForbiddenSetWitness.exists_six_family_witness",
+        "prescribed_matching_short_paths": "Overfull.PrescribedMatching.short_path_avoiding",
+        "prescribed_matching_core_witness": "Overfull.PrescribedMatching.exists_core_connection_witness",
+        "prescribed_matching_component_bound": "Overfull.PrescribedMatching.component_card_le_cores_add_exceptional",
+        "prescribed_matching_core_attachment": "Overfull.PrescribedMatching.core_attachment_after_deletion",
+        "prescribed_matching_component_survival": "Overfull.PrescribedMatching.component_has_survivor",
+        "prescribed_matching_actual_connectivity": "Overfull.PrescribedMatching.reachable_reflection_of_witness",
+        "prescribed_matching_component_parity": "Overfull.PrescribedMatching.matching_component_inter_even",
+        "prescribed_matching_odd_component_transfer": "Overfull.PrescribedMatching.oddComponents_after_remaining_deletion",
+        "prescribed_matching_remaining_odd_bound": "Overfull.PrescribedMatching.remaining_odd_bound",
+        "prescribed_matching_tutte_completion": "Overfull.PrescribedMatching.complete_of_induced_odd_bounds",
+        "prescribed_matching_discard_bound": "Overfull.PrescribedMatching.avoidVertices_omitted_edges_le",
+        "prescribed_matching_covered_core_bound": "Overfull.PrescribedMatching.matching_covered_outside_le",
+        "prescribed_matching_actual_selection": "Overfull.PrescribedMatching.select_prescribed_matching",
+        "prescribed_matching_final_edge_difference": "Overfull.PrescribedMatching.omitted_edges_le_of_extension",
+        "prescribed_matching_witness_completion": "Overfull.PrescribedMatching.complete_avoiding_witness",
+        "prescribed_exceptional_core_matching": "Overfull.prescribed_exceptional_core_matching",
     }
     audited_names = {item["name"] for item in declarations}
     if missing := sorted(set(completed_results.values()) - audited_names):
         raise SystemExit("Completed results absent from the axiom audit: " + ", ".join(missing))
 
     coverage = json.loads((ROOT / "docs/coverage.json").read_text())
+    if (coverage["numbered_assertion_count"] != NUMBERED_ASSERTION_COUNT
+            or len(coverage["numbered_assertions"]) != NUMBERED_ASSERTION_COUNT):
+        raise SystemExit("The manuscript assertion inventory is inconsistent.")
     for component in coverage["checked_component_catalog"]:
         if missing := sorted(set(component["lean_declarations"]) - audited_names):
             raise SystemExit(
@@ -254,6 +287,11 @@ def main() -> None:
                             if a["full_assertion_verified"]]
     if len(completed_assertions) != coverage["fully_verified_numbered_assertion_count"]:
         raise SystemExit("The coverage assertion count is inconsistent.")
+    if len(completed_assertions) != COMPLETED_NUMBERED_ASSERTION_COUNT:
+        raise SystemExit("The completed assertion count differs from the reviewed scope.")
+    manuscript_source = json.loads((ROOT / "docs/manuscript-source.json").read_text())
+    if manuscript_source["fully_verified_numbered_assertions"] != len(completed_assertions):
+        raise SystemExit("The manuscript source record has an inconsistent completed count.")
     for assertion in completed_assertions:
         names = assertion.get("lean_theorems", [])
         if not names or not set(names) <= audited_names:
