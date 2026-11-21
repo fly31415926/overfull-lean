@@ -32,7 +32,7 @@
   "coverage_file": "coverage.json",
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
-  "fully_verified_numbered_assertions": 39,
+  "fully_verified_numbered_assertions": 42,
   "additional_complete_results": [
     {
       "lean_name": "Overfull.arbitrarily_large_class_two_graphs",
@@ -41,6 +41,38 @@
       "manuscript_number": "7.2",
       "proved": true,
       "scope": "For every real c < 1/4 and every natural order bound N, a connected simple class-2 graph exists on Fin n for some n >= N, with maximum degree at least c*n and no overfull vertex set at its maximum degree."
+    },
+    {
+      "lean_name": "Overfull.foreign_edge_reduction",
+      "file": "Overfull/ForeignEdges/Reduction.lean",
+      "manuscript_label": "three:prop:foreign",
+      "manuscript_number": "4.10",
+      "proved": true,
+      "scope": "Construct the full actual foreign-edge reduction with constants before the graph: an original-host sequence of pairwise edge-disjoint perfect matchings, its exact regular non-overfull residual with factor-256 degree reserve, actual surviving robust cores and partition, at most three core losses and exceptional additions, and the stated total exceptional unassigned-core incidence bound."
+    },
+    {
+      "lean_name": "Overfull.foreign_edge_reduction_with_small_error",
+      "file": "Overfull/ForeignEdges/ReductionError.lean",
+      "manuscript_label": "three:prop:foreign",
+      "manuscript_number": "4.10",
+      "proved": true,
+      "scope": "Full Proposition 4.10 with the robust output parameter fixed before every positive requested final error. The original error tolerance and order threshold precede all graph data. The constructed result also satisfies the requested combined final core-error and exceptional-order bound and retains a linear lower bound on every actual final core."
+    },
+    {
+      "lean_name": "Overfull.bounded_exceptional_absorption",
+      "file": "Overfull/Absorption/Bounded.lean",
+      "manuscript_label": "three:prop:band",
+      "manuscript_number": "4.12",
+      "proved": true,
+      "scope": "Full Proposition 4.12. Construct actual perfect-matching deletions from the regular non-overfull robust-core partition and total foreign-incidence bound. The exact regular non-overfull residual retains at least three quarters of the original degree, has enlarged robust cores, and has a bounded remaining exceptional set. The positive robust output precedes every arbitrary positive function f. The exceptional bound, positive initial error, and order threshold precede all graph data. The final core error is at most f(|Z_final|) times the actual residual degree, with no monotonicity assumption on f. Lemma 4.13 is proved separately; the terminal factorization and manuscript main theorem remain unverified."
+    },
+    {
+      "lean_name": "Overfull.frequent_boundary_pattern",
+      "file": "Overfull/Patterns/Frequent.lean",
+      "manuscript_label": "three:lem:pattern",
+      "manuscript_number": "4.13",
+      "proved": true,
+      "scope": "Full Lemma 4.13. From a simple regular non-overfull graph with three or four robust cores and at most t exceptional vertices, construct actual perfect-matching deletions and absorb every exceptional vertex. The exact residual has no overfull set after every prefix, degree h >= k/(3*b4(t)), and disjoint enlarged robust cores covering all vertices. The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Lemmas 4.14-4.15, Proposition 4.16, and the manuscript main theorem remain unverified."
     }
   ],
   "density_corollary_verified": true,
@@ -55,7 +87,7 @@
         "two:lem:adaptive",
         "three:prop:foreign, interrupted packing phases"
       ],
-      "scope": "Choose one ordinary-packing rule before the adversary and stopping index. Every admissible finite prefix up to the prescribed horizon gives actual edge-disjoint matchings perfect outside the supplied forbidden sets and fixed-parameter robust expansion of the exact unused graph. The uniform constants precede the graph, and admissibility is required only for inputs already presented. The public theorem supplies local feasibility from the proved reserve and round construction. It supports interrupted phases, but does not assemble the assignment, refinement, or phase iteration in Proposition 4.10."
+      "scope": "Choose one ordinary-packing rule before the adversary and stopping index. Every admissible finite prefix up to the prescribed horizon gives actual edge-disjoint matchings perfect outside the supplied forbidden sets and fixed-parameter robust expansion of the exact unused graph. The uniform constants precede the graph, and admissibility is required only for inputs already presented. The public theorem supplies local feasibility from the proved reserve and round construction. The actual epoch induction applies this prefix interface to the constructed ambient matching process in Proposition 4.10; the stand-alone theorem concerns one supplied core and its admissible prefix."
     },
     {
       "file": "Overfull/ForeignEdges/Minority.lean",
@@ -68,7 +100,7 @@
       "manuscript_locations": [
         "three:prop:foreign, minority-shore refinement"
       ],
-      "scope": "From an actual partition into an exceptional set and disjoint cores of order at least three, and a total cut-minority bound of one, construct an actual set of at most one core vertex to move into the exceptional set. The surviving cores retain their labels, partition the remaining vertices, have at least two vertices each, and lie wholly on their original majority shores. The minority-sum inequality is an explicit input. This component proves the actual deletion and partition conclusions, but does not choose a small cut, maintain cluster data, or complete the repeated refinement in Proposition 4.10."
+      "scope": "From an actual partition into an exceptional set and disjoint cores of order at least three, and a total cut-minority bound of one, construct an actual set of at most one core vertex to move into the exceptional set. The surviving cores retain their labels, partition the remaining vertices, have at least two vertices each, and lie wholly on their original majority shores. This stand-alone helper assumes the minority-sum inequality. The actual small-cut refinement derives that inequality, and the completed process maintains the resulting partition through at most three vertex moves."
     },
     {
       "file": "Overfull/ForeignEdges/ColorClasses.lean",
@@ -87,7 +119,555 @@
       "manuscript_locations": [
         "three:prop:foreign, foreign-edge color classes"
       ],
-      "scope": "Apply the proved multigraph König theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case. Actual bipartiteness and the incidence-degree bound are hypotheses. The foreign-core assignment establishing those hypotheses and the adaptive phase iteration remain unproved here."
+      "scope": "Apply the proved multigraph König theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case. This stand-alone helper assumes actual bipartiteness and the incidence-degree bound. The maximizing-assignment theorem derives both hypotheses, and the configured epoch reconstructs the entire current foreign graph and its classes at every restart of the completed process."
+    },
+    {
+      "id": "foreign_assignment",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignAssignment.exists_assignment_color_classes_of_cores",
+        "Overfull.ForeignAssignment.foreignGraph_subgraph_eq",
+        "Overfull.ForeignAssignment.foreignEdges_surviving",
+        "Overfull.ForeignAssignment.exterior_degree_le_error"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, fresh maximizing assignment and coloring"
+      ],
+      "scope": "Construct actual maximizing assignments to same-cluster cores and actual matching color classes for the foreign graph. Derive exceptional and core degree bounds from at most four disjoint embedded cores, and prove exact edge persistence under a fixed assignment. A represented core label is required for each unmarked exceptional vertex. The actual entry and refinement invariants provide this hypothesis and the explicit graph-degree and partition bounds. The completed process chooses a fresh maximizing assignment at every epoch."
+    },
+    {
+      "id": "foreign_refinement",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignRefinement.exists_small_cut_refinement",
+        "Overfull.ForeignRefinement.exists_refinement_step",
+        "Overfull.ForeignRefinement.core_refinement_chain_length",
+        "Overfull.ForeignRefinement.encode_labels_fin_four",
+        "Overfull.ForeignRefinement.history_crossing_edges_le_six",
+        "Overfull.ForeignRefinement.heavyVertices_card_le",
+        "Overfull.ForeignRefinement.marking_leaves_represented_labels",
+        "Overfull.ForeignRefinement.survivingCore_restart",
+        "Overfull.ForeignRefinement.RefinementStep.marked_card_growth",
+        "Overfull.ForeignRefinement.RefinementStep.crossing_edges_bound"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, refinement and marked-vertex accounting"
+      ],
+      "scope": "An actual small cut separating two core majorities produces an actual refinement with at most one moved vertex, actual heavy marks, surviving robust embedded core graphs, Fin-4 labels, strictly more occupied core groups, and controlled intercluster degrees. Recorded-cut history gives at most 6*k0 actual intercluster edges and the actual heavy-set bound. The local refinement consumes an actual triggering cut and the stated small-cut and partition hypotheses; it derives the minority bound internally. RefinementHistory and the actual Entry update maintain the recorded cuts, marks, and strict group increase used by the completed outer induction."
+    },
+    {
+      "id": "foreign_actual_incidence",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignIncidence.footprintCount_add_core_degree_le",
+        "Overfull.ForeignIncidence.footprintCount_le_real_error",
+        "Overfull.ForeignIncidence.next_footprint_le_error",
+        "Overfull.ForeignIncidence.remainingCore_degree_identity",
+        "Overfull.ForeignIncidence.remainingCore_real_degree_bounds",
+        "Overfull.ForeignIncidence.assembled_remainingCore_le_residual",
+        "Overfull.ForeignIncidence.perfect_deletion_regular",
+        "Overfull.ForeignIncidence.allowed_of_partial_prefix"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, adaptive incidence and whole unused core"
+      ],
+      "scope": "Derive the actual covered-core footprint budget from distinct exterior edges, including the current partial matching before its completion exists. Prove exact whole-unused-core and ambient degree identities, actual core embedding, and the precise Allowed predicate from graph-level inputs. These local theorems concern actual supplied partial and completed matching prefixes. The Valid-state and epoch induction construct those prefixes and derive the admissibility of each current partial matching before constructing its core completion."
+    },
+    {
+      "id": "foreign_safe_adaptive_completion",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.prepare_safe_prescription",
+        "Overfull.safe_prescription_of_core_matchings",
+        "Overfull.ForeignCompletion.assemble_core_completions",
+        "Overfull.ForeignRuleCompletion.exists_certified_core_rules",
+        "Overfull.ForeignRuleCompletion.core_matching_from_certificate",
+        "Overfull.ForeignRuleCompletion.assemble_from_certificates",
+        "Overfull.ForeignRuleCompletion.safe_complete_from_certificates"
+      ],
+      "manuscript_locations": [
+        "three:lem:safe-prescription, independent core completion",
+        "three:prop:foreign, fixed-rule safe matching deletion"
+      ],
+      "scope": "Prepare a bounded exceptional partial matching with caller-selected footprint tolerance, then construct its ambient perfect completion from actual certified fixed-rule core outputs. Prove exact induced core matching identities, robust exact residual cores, prescribed-edge loss, and absence of every overfull set in the residual. The preparation constants precede the graph. Completion consumes the safety clause supplied by preparation and actual consistent, admissible core transcripts with their ambient embeddings. The Valid-state and epoch construction maintain these inputs and obtain robust next outputs from the certified fixed packing rules."
+    },
+    {
+      "id": "foreign_fixed_rule_transcripts",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignTranscript.run_eq_prefix",
+        "Overfull.adaptive_ordinary_packing_transcript",
+        "Overfull.ForeignRuleStep.step_of_certificate",
+        "Overfull.ForeignRuleStep.exists_step_rule"
+      ],
+      "manuscript_locations": [
+        "two:lem:adaptive, finite transcript form",
+        "three:prop:foreign, stopped packing epochs"
+      ],
+      "scope": "Identify a finite actual transcript with the online execution of its fixed rule. The proved packing theorem supplies a rule before any transcript. Updating the current entry yields the actual next matching inside the whole unused core, with exact complement coverage, prior-edge disjointness, and unchanged certificate robustness. Admissibility and rule consistency are required only for the actual presented prefix; no future inputs are constrained. The actual Valid-state, inner epoch induction, and outer reduction apply these local interfaces to the complete ambient process."
+    },
+    {
+      "id": "foreign_epoch_parameters",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignPackingSchedule.exists_epoch_parameters",
+        "Overfull.ForeignPackingSchedule.exists_packing_schedule",
+        "Overfull.ForeignEpochParameters.color_horizon_le_packing_horizon",
+        "Overfull.ForeignEpochParameters.common_reserve",
+        "Overfull.ForeignEpochParameters.strict_safe_reserve",
+        "Overfull.ForeignEpochParameters.exists_uniform_epoch_parameters"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, synchronized restarts and uniform constants"
+      ],
+      "scope": "Choose the adaptive packing schedule before any graph, with output range tau/2 and next input half the output robust parameter. Choose one positive original error and order threshold after four fixed positive tolerances and thresholds, uniformly in the exceptional order and up to three vertex moves. Prove the exact phase horizon and strict safe reserve. These scalar and packing-schedule results supply local parameter choices. The uniform process-parameter theorem composes them with safe preparation and all actual core losses and exceptional-set increases, using one original error and order choice for the completed four-epoch construction."
+    },
+    {
+      "id": "foreign_phase_final_count",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignPhase.currentClass_loss",
+        "Overfull.ForeignPhase.complete_phase_card_le_of_prescribed_loss",
+        "Overfull.ForeignPhase.four_phase_degree_reserve",
+        "Overfull.ForeignPhase.complete_foreign_phase_card_le",
+        "Overfull.ForeignPhase.exists_fresh_phase_data",
+        "Overfull.ForeignAssignment.allForeignEdges_incidence_sum",
+        "Overfull.ForeignAssignment.allForeignEdges_incidence_le",
+        "Overfull.ForeignAssignment.final_foreign_incidence_bound"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, full phase and final incidence count"
+      ],
+      "scope": "Choose fresh actual assignment/color-class data before later deletions. Rehost current classes with exact loss identities and prove that a completed phase leaves at most c1 times its number of colors in the actual residual foreign graph. Four phase degree bounds give factor 256. Count every actual exceptional incidence once and obtain 256*(c1+6+t0)*h from the final phase, recorded-cut, marked-set, and retained-degree bounds. The local completed-phase bound consumes an actual deletion sequence with per-class losses and actual recorded-cut and marking bounds. The constructed Valid epoch and maintained process history supply these inputs in the completed reduction. Every refinement rebuilds the entire current foreign graph; the final fresh assignment gives the coefficient with c1 rather than 4*c1."
+    },
+    {
+      "id": "foreign_actual_concatenation",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignConcatenation.appendEpoch_suffix",
+        "Overfull.ForeignConcatenation.appendEpoch_perfect",
+        "Overfull.ForeignConcatenation.appendEpoch_present",
+        "Overfull.ForeignConcatenation.appendEpoch_pairwise_disjoint",
+        "Overfull.ForeignConcatenation.concatenate_epochs",
+        "Overfull.ForeignConcatenation.epoch_degree_reserve",
+        "Overfull.ForeignConcatenation.within_epoch_degree_reserve",
+        "Overfull.ForeignConcatenation.actual_prefix_degree_reserve",
+        "Overfull.ForeignConcatenation.actual_prefix_four_epoch_reserve"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, original-host matching sequence and all-prefix degree reserve"
+      ],
+      "scope": "Rehost actual local perfect matchings in the original graph and concatenate epoch prefixes with exact global-to-local residual identities, current-host containment, perfectness, and pairwise edge disjointness. Derive the factor-four reserve after every epoch and at every interior prefix, giving factor 256 throughout the first four epochs. The concatenation helpers consume actual local matching prefixes. The completed reduction constructs these prefixes and uses their exact residual identities, including at interrupted epochs."
+    },
+    {
+      "id": "foreign_recorded_history",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignRefinement.CutHistory.edge_separated",
+        "Overfull.ForeignRefinement.CutHistory.crossing_card_le_six",
+        "Overfull.ForeignRefinement.RefinementHistory.length_le_three",
+        "Overfull.ForeignRefinement.RefinementHistory.length_lt_three_of_group_increase",
+        "Overfull.ForeignRefinement.RefinementHistory.crossing_card_le_six",
+        "Overfull.ForeignRefinement.RefinementHistory.append_recorded",
+        "Overfull.ForeignRefinement.RefinementHistory.append_shores",
+        "Overfull.ForeignRefinement.RefinementHistory.marked_card_le_nat"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, accumulated cut and marked-vertex history"
+      ],
+      "scope": "Maintain actual recorded host graphs and cut shores under graph deletion, marking, relabeling, and refinement. Every current crossing edge is separated by a recorded cut. The history bounds the number of refinements by three, the crossing edges by 6*k0, and the actual marked-set cardinality. History data records actual graph cuts and survives intervening matching deletions. The actual Entry constructors and refinement transition maintain this history throughout the completed process."
+    },
+    {
+      "id": "foreign_uniform_process_parameters",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignEpochParameters.exists_safe_parameters",
+        "Overfull.ForeignEpochParameters.exists_restart_parameters",
+        "Overfull.ForeignEpochParameters.RestartParameters.safe_parameter_bounds",
+        "Overfull.ForeignEpochParameters.RestartParameters.uniform_initial_parameters",
+        "Overfull.ForeignEpochParameters.prefix_scalar_bounds",
+        "Overfull.ForeignEpochParameters.RestartParameters.exists_process_parameters"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, uniform parameters and actual moving core types"
+      ],
+      "scope": "Choose all four packing and safe-preparation rules and robust restart parameters before the graph. One original positive error and graph-order threshold supplies every actual retained-core packing budget, ambient safe-preparation budget, small-cut bound, robust size inequality, and density and degree reserve at every possible epoch prefix. The original error and order choices precede the vertex and core types, graph, exceptional order, core error, and all actual Entry states. No additional per-stage smallness assumption or local feasibility oracle is introduced."
+    },
+    {
+      "id": "foreign_actual_epoch_state",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignEpoch.valid_zero",
+        "Overfull.ForeignEpoch.Valid.append",
+        "Overfull.ForeignEpoch.Valid.allowed",
+        "Overfull.ForeignEpoch.Valid.allowed_next",
+        "Overfull.ForeignEpoch.Valid.graph_degree",
+        "Overfull.ForeignEpoch.Valid.core_embed",
+        "Overfull.ForeignEpoch.Valid.core_packing",
+        "Overfull.ForeignEpoch.Valid.core_degree",
+        "Overfull.ForeignEpoch.Transcript.currentCore_eq_remaining"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, actual adaptive transcripts and residual cores"
+      ],
+      "scope": "Track actual ambient and partial matchings together with every core transcript. Prove valid initialization and append, actual admissibility before and after completion, exact residual degree, whole-unused-core embedding, sharp degree loss, and certificate robustness at each prefix. Admissibility is derived from actual partial matchings and distinct exterior edges. The state does not assume an admissibility or future-completion oracle; the epoch induction constructs all matching steps."
+    },
+    {
+      "id": "foreign_constructed_epoch",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignProcess.Entry.core_degree_upper",
+        "Overfull.ForeignProcess.Entry.exists_core_rules",
+        "Overfull.ForeignProcess.Entry.exists_fresh_epoch",
+        "Overfull.ForeignEpoch.Setup.degree_reserve",
+        "Overfull.ForeignEpoch.Setup.initial_packing_degrees",
+        "Overfull.ForeignEpoch.Setup.extend_no_trigger",
+        "Overfull.ForeignEpoch.Setup.finish_from_valid",
+        "Overfull.ForeignEpoch.Setup.exists_stopping_transcript"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, fresh epoch configuration and inner induction"
+      ],
+      "scope": "At every actual entry choose fresh maximizing assignment and exact foreign-edge classes together with fixed certified core rules. Construct a safe next ambient perfect matching whenever no actual trigger exists. Finite induction produces a valid stopping transcript that either processes every class or exhibits an actual triggering cut. The inner induction calls the proved safe-preparation and fixed-rule completion constructions on actual graphs. It has no assumption that arbitrary complete phases already exist. Its stopping cut is the input to the actual outer refinement."
+    },
+    {
+      "id": "foreign_actual_process_refinement",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignEpochParameters.RestartParameters.refine_current",
+        "Overfull.ForeignEpochParameters.RestartParameters.refine_at_prefix",
+        "Overfull.ForeignProcess.Entry.graph_le_original",
+        "Overfull.ForeignProcess.Entry.marked_card_le",
+        "Overfull.ForeignProcess.Entry.crossing_card_le",
+        "Overfull.ForeignProcess.Entry.core_card_lower",
+        "Overfull.ForeignProcess.Entry.labels_injective_at_three",
+        "Overfull.ForeignProcess.Entry.no_trigger_at_three",
+        "Overfull.ForeignProcess.Entry.refine_from_prefix"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, actual restart transition and terminal epoch"
+      ],
+      "scope": "Construct the next actual process entry from a triggering cut at a valid interrupted prefix, retaining the original-host matching history and updating the actual surviving cores and exceptional set. At index three the occupied core labels are injective, which rules out every further trigger. The refinement wrapper constructs the actual RefinementStep and next Entry from the proved small-cut theorem. Strict occupied-group growth and at most four original cores give termination after at most three refinements."
+    },
+    {
+      "id": "foreign_completed_epoch_result",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignEpochParameters.RestartParameters.finalOutput_pos",
+        "Overfull.ForeignEpochParameters.RestartParameters.finalOutput_le",
+        "Overfull.ForeignEpochParameters.RestartParameters.finalOutput_le_range",
+        "Overfull.ForeignEpoch.Valid.final_incidence_bound",
+        "Overfull.ForeignEpoch.Valid.common_core_guarantees",
+        "Overfull.ForeignProcess.ReductionResult.graph_le_original",
+        "Overfull.ForeignProcess.ReductionResult.pairwise_disjoint"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, final actual graph and incidence conclusion"
+      ],
+      "scope": "A completed actual epoch has the required exceptional unassigned-neighbor sum and exact unused robust cores at one common positive output parameter. The ReductionResult carries an actual original-host perfect-matching sequence, its exact regular non-overfull residual, factor-256 degree reserve, actual partition and assignment, and at most three core losses and exceptional additions. These theorem-level guarantees apply to actual valid transcripts and the constructed result. The deterministic completed-epoch constructor appends the real local matching sequence; the outer induction proves that a completed epoch is reached."
+    },
+    {
+      "id": "foreign_edge_reduction",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.foreign_edge_reduction",
+        "Overfull.foreign_edge_reduction_with_small_error",
+        "Overfull.ForeignProcess.reduce_from_entry",
+        "Overfull.ForeignProcess.final_error_of_initial_budget",
+        "Overfull.ForeignProcess.final_core_size_of_initial_budget"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign"
+      ],
+      "scope": "Full Proposition 4.10. The inner and outer inductions construct the actual matching deletions and at most three refinements from the original robust partition. The result has a regular non-overfull residual of degree at least k0/256, actual surviving robust cores, at most three additional exceptional vertices, and total exceptional unassigned-core incidence at most 256*(classLoss+6+markedLimit)*h. One positive robust output parameter is fixed before an arbitrary requested final error; the original error and order threshold then precede all graph data. Complete under the manuscript density, robust-core, near-regularity, partition, and no-overfull assumptions. The small-error theorem supplies the requested combined final error and a linear lower bound for every actual final core, with output robustness independent of that error request. The manuscript main theorem remains unverified; bounded exceptional absorption is proved separately as Proposition 4.12."
+    },
+    {
+      "id": "absorption_threshold_selection",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.AbsorptionThresholds.bands_disjoint",
+        "Overfull.AbsorptionThresholds.total_band_mass_le",
+        "Overfull.AbsorptionThresholds.exists_light_band",
+        "Overfull.AbsorptionThresholds.absorption_card_bounds"
+      ],
+      "manuscript_locations": [
+        "three:prop:band, threshold bands and exceptional cardinalities"
+      ],
+      "scope": "Partition actual nonnegative exceptional loads into disjoint threshold bands, select a band of small total load, and bound the vertices remaining after each of the two absorptions. These finite counting theorems consume a nonnegative load function and its total bound. The public absorption theorem supplies the actual unassigned-core incidences and all graph-level conclusions."
+    },
+    {
+      "id": "absorption_uniform_parameters",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.AbsorptionThresholds.lowerEnvelope_pos",
+        "Overfull.AbsorptionThresholds.lowerEnvelope_le",
+        "Overfull.AbsorptionThresholds.exists_long_threshold_schedule",
+        "Overfull.AbsorptionThresholds.uniform_final_error_actual_card",
+        "Overfull.AbsorptionParameters.exists_uniform_phase_parameters"
+      ],
+      "manuscript_locations": [
+        "three:prop:band, uniform constants and actual-cardinality error"
+      ],
+      "scope": "Choose the finite threshold schedule, phase error and order threshold, and final error budget before the graph. A positive lower envelope permits the supplied function to be evaluated at the actual remaining exceptional cardinality. The choices supply the degree reserves, packing horizons, footprint bounds, and vertex-addition bounds for the constructed phase. The robust output precedes the arbitrary positive final error function; no monotonicity of that function is assumed."
+    },
+    {
+      "id": "absorption_actual_core_enlargement",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.Absorption.robust_after_addition",
+        "Overfull.Absorption.enlargedCore_degree_lower",
+        "Overfull.Absorption.enlargedCore_robust",
+        "Overfull.Absorption.enlargedSets_pairwise_disjoint",
+        "Overfull.Absorption.enlargedSets_disjoint_remaining",
+        "Overfull.Absorption.enlargedSets_cover",
+        "Overfull.Absorption.enlargedGraphs_degree_lower",
+        "Overfull.Absorption.enlargedGraphs_robust"
+      ],
+      "manuscript_locations": [
+        "three:prop:band, first and second core enlargement"
+      ],
+      "scope": "Construct actual enlarged vertex sets and embedded core graphs, preserve the disjoint partition, and prove the old and added vertices satisfy the required degree and robust-neighborhood bounds. The vertex-addition lemmas require their stated actual addition-size and degree bounds. The two applications in the public theorem derive these bounds from the selected threshold bands and constructed forcing transcript."
+    },
+    {
+      "id": "absorption_forced_star_preparation",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.prepare_forced_star_of_bounds",
+        "Overfull.prepare_forced_star"
+      ],
+      "manuscript_locations": [
+        "three:lem:force, preparation before adaptive completion",
+        "three:prop:band, safe forced matching deletion"
+      ],
+      "scope": "Sample and compress an actual perfect matching to a bounded partial matching meeting the prescribed exceptional-centered star, with safety for every compatible completion having the stated actual robust residual cores. Preparation precedes the adaptive core completion and preserves the exact threshold 11*2^(t+4). The fixed-rule forcing process supplies the compatible completion and its residual robustness."
+    },
+    {
+      "id": "absorption_actual_potential",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.Absorption.outsideStar_card",
+        "Overfull.Absorption.forcingPotential_decreases",
+        "Overfull.Absorption.outsideDegree_le_originalForeign_add",
+        "Overfull.Absorption.forcingPotential_le_originalForeign_add"
+      ],
+      "manuscript_locations": [
+        "three:prop:band, actual decreasing forcing potential"
+      ],
+      "scope": "Count actual outside-neighbor incidences, including exceptional-exceptional edges. Meeting the actual outside star strictly decreases this sum; the initial sum is bounded by the original foreign incidences plus exceptional-set incidences. The decrease concerns the exact graph difference after deleting the actual matching. No proxy count omitting edges between exceptional vertices is used."
+    },
+    {
+      "id": "absorption_fixed_rule_forcing",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.Absorption.ForcingSetup.current_degree_bounds",
+        "Overfull.Absorption.ForcingSetup.extend",
+        "Overfull.Absorption.ForcingSetup.finish_from_valid",
+        "Overfull.Absorption.ForcingSetup.exists_terminal_transcript"
+      ],
+      "manuscript_locations": [
+        "three:prop:band, fixed-rule forcing and finite termination"
+      ],
+      "scope": "Construct each actual safe perfect-matching deletion using one fixed family of certified core rules. Derive admissibility before completion and terminate by induction on the actual potential, retaining s+Phi_s <= Phi_0 and the same robust output parameter. The local process takes static scalar reserves and proved packing certificates. It assumes no future preparation, admissibility, or completion oracle. The public theorem constructs this setup from uniform parameters and actual graph data, including the zero-round case."
+    },
+    {
+      "id": "absorption_actual_result",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.Absorption.enlargedGraphs_degree_lower_of_outside",
+        "Overfull.Absorption.retained_degree_three_quarters",
+        "Overfull.Absorption.AbsorptionResult.graph_le_original",
+        "Overfull.Absorption.AbsorptionResult.pairwise_disjoint"
+      ],
+      "manuscript_locations": [
+        "three:prop:band, exact final residual and second absorption"
+      ],
+      "scope": "Convert the terminal outside-degree bound into the actual enlarged-core degree bound, retain at least three quarters of the original regular degree, and identify the exact residual with an original-host sequence of edge-disjoint perfect matchings. The result structure records the exact residual and graph-level conclusions. The public bounded absorption theorem constructs this result; defining the structure alone is not counted as a proof."
+    },
+    {
+      "id": "bounded_exceptional_absorption",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.bounded_exceptional_absorption"
+      ],
+      "manuscript_locations": [
+        "three:prop:band"
+      ],
+      "scope": "Full Proposition 4.12. Construct actual perfect-matching deletions from the regular non-overfull robust-core partition and total foreign-incidence bound. The exact regular non-overfull residual retains at least three quarters of the original degree, has enlarged robust cores, and has a bounded remaining exceptional set. The positive robust output precedes every arbitrary positive function f. The exceptional bound, positive initial error, and order threshold precede all graph data. The final core error is at most f(|Z_final|) times the actual residual degree, with no monotonicity assumption on f. Lemma 4.13 is proved separately; the terminal factorization and manuscript main theorem remain unverified."
+    },
+    {
+      "id": "frequent_pattern_fixed_encoding",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.Compression.exists_compressed_matching_fixed_code",
+        "Overfull.Patterns.exists_compressed_encoding",
+        "Overfull.Patterns.card_pattern_le",
+        "Overfull.Patterns.Encodes.boundary_edges"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, common pattern encoding and finite count"
+      ],
+      "scope": "Compress every actual support matching using one fixed embedding of the core labels into Fin 4. Construct its finite exceptional-pair, assignment and forest pattern and prove the exact boundary image and the bound b4(t). One common code is chosen before all support matchings. A pattern is backed by actual compressed host edges; the ambient finite pattern type may also contain invalid patterns, which receive weight zero."
+    },
+    {
+      "id": "frequent_pattern_weighted_distribution",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.Patterns.exists_encoded_distribution",
+        "Overfull.Patterns.EncodedDistribution.internal_pairs_empty_of_weight_gt_one",
+        "Overfull.Patterns.EncodedDistribution.pair_capacity",
+        "Overfull.Patterns.EncodedDistribution.positive_odd_cut",
+        "Overfull.Patterns.EncodedDistribution.whole_union_capacity"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, actual fractional input and weighted cuts"
+      ],
+      "scope": "Construct the encoded distribution from the proved matching polytope, with total scaled weight k and original edge marginals. Prove actual pair and whole-cut capacities, absence of internal exceptional pairs in a pattern of weight greater than one, and positive odd crossings on the support. The internal-pair weight bound uses simplicity. These are original-host capacities. No fractional matching decomposition of a later greedily realized residual is assumed."
+    },
+    {
+      "id": "frequent_pattern_rounding_selection",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.Patterns.reserve_floor_bounds",
+        "Overfull.Patterns.pair_cut_discard_bound",
+        "Overfull.Patterns.exists_pattern_selection",
+        "Overfull.Patterns.enumeratedPattern_count"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, common rounding, discards and frequent reserve"
+      ],
+      "scope": "Choose a maximum-weight common pattern, reserve r0=floor(lambda0/2), and construct all accepted integer multiplicities using a single original proposal for sparse-pair and protected-even-cut tests. Prove r0 >= k/(3*b4(t)), retained-degree bounds, endpoint slack, and reserved pair capacities. The explicit discard coefficient is (4*t+6)*(t+8)+2^(t+5). Every accepted internal-exceptional-pair multiplicity is zero. The actual edge realization is a separately proved construction, not a selection hypothesis."
+    },
+    {
+      "id": "frequent_pattern_actual_realization",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.PatternRealization.selectedMatching_isMatching_of_endpoints",
+        "Overfull.Patterns.exists_realized_boundary_family_of_slack",
+        "Overfull.Patterns.RealizedBoundaryFamily.even_uncovered"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, greedy actual boundary realization"
+      ],
+      "scope": "Choose fresh actual edges from disjoint boundary pools while avoiding occupied core endpoints. Construct pairwise edge-disjoint boundary matchings with the exact selected pattern images, complete exceptional coverage, bounded footprints and correct uncovered-core parity. Realizability is derived from candidate counts and actual exterior incidence bounds, including the zero-demand case. No preexisting boundary matching family is assumed in the public selection-to-completion construction."
+    },
+    {
+      "id": "frequent_pattern_fixed_completion",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.Patterns.fixed_boundary_allowed",
+        "Overfull.Patterns.exists_core_boundary_completion",
+        "Overfull.Patterns.exists_boundary_completion",
+        "Overfull.Patterns.exists_completed_pattern_family"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, simultaneous fixed-rule completion"
+      ],
+      "scope": "Derive admissibility for each exact boundary footprint and run one fixed certified packing rule per core. Construct actual ambient perfect matchings, their presence when deleted, exact regular residuals, and embedded residual robust cores with the sharp degree-error bound. The local completion interface takes proved rule certificates and actual boundary data. The public frequent-pattern theorem supplies those certificates and constructs the boundary family; no future completion or admissibility oracle is assumed."
+    },
+    {
+      "id": "frequent_pattern_prefix_safety",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.Patterns.pattern_cut_accounting",
+        "Overfull.Patterns.proposed_cut_dichotomy",
+        "Overfull.Patterns.no_overfull_after_pattern_deletions",
+        "Overfull.Patterns.BoundaryCompletion.safe_selected_prefixes"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, exact prefix cut accounting and no-overfull preservation"
+      ],
+      "scope": "Prove exact cut subtraction in the common pattern coordinates, odd-cut lower bounds, the large-or-preserved even-cut dichotomy, and safety of every required vertex toggle. Apply the proved small-cut classification to every actual completed prefix. The concrete wrapper discharges original capacities, positive odd crossings, prefix multiplicity bounds and protected-cut conditions from the encoded distribution and selection. No residual no-overfull hypothesis or residual fractional decomposition appears as an input."
+    },
+    {
+      "id": "frequent_pattern_reserved_supply",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.Patterns.afterDeletions_pool_accounting",
+        "Overfull.Patterns.reserved_boundaryPool_card",
+        "Overfull.Patterns.survivingPool_exceptional_card_le_neighbors",
+        "Overfull.Patterns.survivingPool_joining_card_le",
+        "Overfull.Patterns.forest_supply_of_pair_supply"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, actual surviving reserve and forest supply"
+      ],
+      "scope": "Count actual surviving host-edge pools after the completed deletions. Turn the numerical reserve into actual assigned neighbors, actual joining edges between enlarged parts, and every asserted forest-cut lower bound. Supply is a cardinality statement about actual residual edges, not a claim that numerical remaining pattern weights are realized by residual perfect matchings. Distinct joining-pair edge sets are disjoint."
+    },
+    {
+      "id": "frequent_pattern_absorption_parity",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.Patterns.Encodes.exists_core_assignment",
+        "Overfull.Patterns.Encodes.enlarged_part_parity",
+        "Overfull.Patterns.odd_leafForest_classification",
+        "Overfull.Patterns.Encodes.forestShape_of_four_odd_enlarged"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, complete exceptional absorption and forest shape"
+      ],
+      "scope": "Construct the actual core assignment of every exceptional vertex of the frequent pattern, prove the enlarged-part parity equals the joining-forest degree parity, and classify all-odd forests on four labels as a perfect matching or a three-edge star. The assignment is extracted from an actual positive-weight sample and the parity from its covered exceptional vertices and even uncovered core orders. The finite forest classification is checked by the Lean kernel without native_decide."
+    },
+    {
+      "id": "frequent_pattern_uniform_parameters",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.Patterns.exists_pattern_parameters"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, uniform scalar choices"
+      ],
+      "scope": "Choose rounding, initial error and order thresholds supplying the frequent-weight threshold, all core packing reserves, footprint bounds, small-cut classification inequalities, absorption-size bounds and final relative error. The positive packing output and density parameters are fixed before the arbitrary final error request. The initial error and order threshold then precede the graph, actual core orders and actual exceptional cardinality."
+    },
+    {
+      "id": "frequent_boundary_pattern",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.frequent_boundary_pattern"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern"
+      ],
+      "scope": "Full Lemma 4.13. From a simple regular non-overfull graph with three or four robust cores and at most t exceptional vertices, construct actual perfect-matching deletions and absorb every exceptional vertex. The exact residual has no overfull set after every prefix, degree h >= k/(3*b4(t)), and disjoint enlarged robust cores covering all vertices. The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Lemmas 4.14-4.15, Proposition 4.16, and the manuscript main theorem remain unverified."
+    }
+  ],
+  "later_statement_comparisons": [
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "40d84a4e2f22b328d133958e22050058b1022120358432a126cf2d034b583042",
+      "comparison_date": "2026-11-21",
+      "scope": "Complete statement-environment byte hashes only. The numbered inventory and canonical manuscript source remain pinned to the recorded November 20 file; no claim is made that the full manuscripts are identical.",
+      "assertions": [
+        {
+          "manuscript_number": "4.6",
+          "manuscript_label": "three:lem:bounded-input",
+          "statement_sha256": "86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26",
+          "matches_pinned_statement": true
+        },
+        {
+          "manuscript_number": "4.13",
+          "manuscript_label": "three:lem:pattern",
+          "statement_sha256": "557d62e4c4ab7c00ac7cc29fa403d80601a2b9851e7c7eb62cdeb4caa1d40c3b",
+          "matches_pinned_statement": true
+        },
+        {
+          "manuscript_number": "4.14",
+          "manuscript_label": "three:lem:boundary",
+          "statement_sha256": "67baedd4ae2e0451a8842fd27ea0976f50db94c9054eacd2f5dd40ce2cfa21e3",
+          "matches_pinned_statement": true
+        },
+        {
+          "manuscript_number": "4.15",
+          "manuscript_label": "three:lem:four-odd",
+          "statement_sha256": "95942bcc2f458912f740b61cecad49f74bcfe9e8679ec1a30e2819e039591eb0",
+          "matches_pinned_statement": true
+        },
+        {
+          "manuscript_number": "4.16",
+          "manuscript_label": "three:prop:terminal",
+          "statement_sha256": "1ba102e379594ab72de4ba73cf41c88d9fbdadf1c132e2943b48da04e8c2cc1c",
+          "matches_pinned_statement": true
+        }
+      ]
     }
   ]
 }
