@@ -2735,6 +2735,165 @@
       "manuscript_locations": [
         "three:lem:pattern"
       ]
+    },
+    {
+      "id": "compatible_circuit_copy_accounting",
+      "kind": "graph_theoretic_result",
+      "description": "Actual edge-copy circuits, necessary half-cut inequalities, exact endpoint-class equivalence with original matchings, and exact admissibility correction after deletion.",
+      "lean_declarations": [
+        "Overfull.Multigraph.IsCircuit.card_le",
+        "Overfull.Multigraph.CompatibleCircuitPartition.admissibleOn",
+        "Overfull.Multigraph.compatible_endpointClass_iff",
+        "Overfull.Multigraph.isMatching_of_compatible_embedding",
+        "Overfull.Multigraph.admissibleOn_sdiff_iff",
+        "Overfull.Multigraph.admissibleOn_sdiff_of_critical_cuts"
+      ],
+      "scope_limit": "The half-cut condition is proved necessary. Its sufficiency for arbitrary incidence classes is not proved. Deletion safety retains its explicit critical-cut hypotheses.",
+      "manuscript_locations": [
+        "three:lem:four-odd",
+        "two:eq:compatible-cut-condition"
+      ]
+    },
+    {
+      "id": "four_label_eulerian_circuits",
+      "kind": "graph_theoretic_result",
+      "description": "Constructs an actual circuit partition of every finite even-degree multigraph edge set on four labels by removing parallel pairs and checking the remaining simple graph. Preserves compatibility when the entire input set is already compatible.",
+      "lean_declarations": [
+        "Overfull.CompatibleCircuits.simple_even_isLabelCircuit",
+        "Overfull.Multigraph.isCircuit_parallel_pair",
+        "Overfull.Multigraph.exists_circuitPartition",
+        "Overfull.Multigraph.exists_compatibleCircuitPartition_of_compatible"
+      ],
+      "scope_limit": "Whole-set compatibility is stronger than admissibility; this theorem applies to the discarded copies of an actual matching and is not the general restricted Fan-Zhang theorem.",
+      "manuscript_locations": [
+        "three:lem:four-odd, surplus-circuit step"
+      ]
+    },
+    {
+      "id": "four_odd_hall_pairing",
+      "kind": "graph_theoretic_result",
+      "description": "Finite supports of size at most b with vertex load at most a admit a disjoint-support bijection when the equal family size exceeds 2*b*a. Gives actual matching unions and the six-endpoint specialization 12*a<u.",
+      "lean_declarations": [
+        "Overfull.Patterns.support_conflicts_card_le",
+        "Overfull.Patterns.exists_equiv_of_few_conflicts",
+        "Overfull.Patterns.exists_disjoint_support_equiv",
+        "Overfull.Patterns.exists_matching_pairing",
+        "Overfull.Patterns.exists_six_endpoint_pairing"
+      ],
+      "scope_limit": "Matching families and their stated size and load bounds are inputs; the upstream compatible circuit partition is not constructed by Hall pairing.",
+      "manuscript_locations": [
+        "three:lem:four-odd, pairing the one-virtual families"
+      ]
+    },
+    {
+      "id": "four_odd_matching_forests",
+      "kind": "graph_theoretic_result",
+      "description": "Retains actual injectively projected matching-or-star forests from all-odd projected matchings, proves the discarded projected degrees even, and preserves exact coverage and disjointness across paired families.",
+      "lean_declarations": [
+        "Overfull.Patterns.exists_odd_matching_forest",
+        "Overfull.Patterns.exists_paired_matching_forests",
+        "Overfull.Patterns.paired_unions_cover",
+        "Overfull.Patterns.paired_unions_pairwise_disjoint",
+        "Overfull.Patterns.selected_family_remainders_cover",
+        "Overfull.Patterns.selected_family_remainders_disjoint"
+      ],
+      "scope_limit": "The input matching and projected parity conditions are explicit. The existence of the original path families is not assumed to have been proved.",
+      "manuscript_locations": [
+        "three:lem:four-odd, final parity-forest extraction"
+      ]
+    },
+    {
+      "id": "four_odd_circuit_remainders",
+      "kind": "graph_theoretic_result",
+      "description": "From an actual matching with all four quotient degrees odd, constructs an actual retained matching/star and a genuine compatible circuit partition of every discarded original copy. Every surplus circuit lifts to a matching with at most four copies. Includes Hall-paired and finite-family versions.",
+      "lean_declarations": [
+        "Overfull.Patterns.exists_odd_matching_forest_circuit_split",
+        "Overfull.Patterns.exists_paired_forest_circuit_splits",
+        "Overfull.Patterns.ForestCircuitSplit.circuit_matching",
+        "Overfull.Patterns.ForestCircuitSplit.circuit_card_le",
+        "Overfull.Patterns.ForestCircuitSplit.cover",
+        "Overfull.Patterns.forest_circuit_splits_cover",
+        "Overfull.Patterns.forest_circuit_splits_disjoint"
+      ],
+      "scope_limit": "The supplied host consists of joining copies with distinct endpoint labels. Remainder compatibility is derived from the actual matching; no initial compatible-decomposition theorem is supplied.",
+      "manuscript_locations": [
+        "three:lem:four-odd, final forest and surplus-circuit construction"
+      ]
+    },
+    {
+      "id": "four_label_virtual_circuits",
+      "kind": "graph_theoretic_result",
+      "description": "Constructs the actual virtual perfect-matching augmentation, proves its degree increment, bounds virtual copies in compatible sets, and classifies compatible circuits with zero, one, or two virtual copies.",
+      "lean_declarations": [
+        "Overfull.Multigraph.Compatible.original_of_virtual",
+        "Overfull.Multigraph.Compatible.virtualFamily_card_le_one",
+        "Overfull.Multigraph.Compatible.virtual_card_le_two",
+        "Overfull.Multigraph.virtual_degreeOn_split",
+        "Overfull.Multigraph.IsCircuit.two_virtual_original",
+        "Overfull.Multigraph.IsCircuit.one_virtual_original",
+        "Overfull.Multigraph.IsCircuit.no_virtual_original",
+        "Overfull.Multigraph.virtualAugmentation_degree"
+      ],
+      "scope_limit": "Classifies supplied compatible circuits. The one-virtual conclusion gives the exact endpoint parity and size bound; connected-path structure is not asserted separately. No compatible partition existence is inferred.",
+      "manuscript_locations": [
+        "three:lem:four-odd, virtual-edge construction and circuit classification"
+      ]
+    },
+    {
+      "id": "compatible_circuit_small_kernels",
+      "kind": "finite_graph_theoretic_result",
+      "description": "Explicit kernel-checked actual compatible partitions for 279 canonical local pair-class assignments on five small regular multigraph templates, with an incidence-class refinement wrapper.",
+      "lean_declarations": [
+        "Overfull.CompatibleCircuits.SmallKernel.exists_partition",
+        "Overfull.CompatibleCircuits.SmallKernel.exists_partition_of_refinement"
+      ],
+      "scope_limit": "Only the active edge copies of the five explicit templates are covered. Canonical transport and the minimal-counterexample, cut-vertex, suppression, and general forbidden-class reductions are not proved.",
+      "manuscript_locations": [
+        "FZ Theorem 1.1, prospective four-label special case"
+      ]
+    },
+    {
+      "id": "three_vertex_integer_flow",
+      "kind": "arithmetic_implication",
+      "description": "Zero total integer demand and the three singleton capacity bounds yield an explicit integral signed flow on three vertices with all capacity bounds and net-outflow identities.",
+      "lean_declarations": [
+        "Overfull.CompatibleCircuits.three_vertex_integer_flow"
+      ],
+      "scope_limit": "Arithmetic only. Actual edge selection, orientation, and the intended one-forbidden-vertex circuit construction remain separate graph-theoretic steps.",
+      "manuscript_locations": [
+        "FZ Theorem 1.1, prospective one-forbidden-vertex reduction"
+      ]
+    },
+    {
+      "id": "four_odd_virtual_family_counts",
+      "kind": "graph_theoretic_result",
+      "description": "From a genuine partition of the augmented copies, sums actual virtual families and proves u_b+r=h, equality of the two one-virtual family sizes, u=h-r, and r+u=h. Retains original-copy disjointness.",
+      "lean_declarations": [
+        "Overfull.Multigraph.CompatibleCircuitPartition.virtual_family_card_sum",
+        "Overfull.Multigraph.CompatibleCircuitPartition.oneVirtualParts_card_add_twoVirtualParts_card",
+        "Overfull.Multigraph.CompatibleCircuitPartition.oneVirtualParts_card_eq",
+        "Overfull.Multigraph.CompatibleCircuitPartition.oneVirtualParts_card_eq_sub",
+        "Overfull.Multigraph.CompatibleCircuitPartition.original_parts_disjoint"
+      ],
+      "scope_limit": "The actual compatible partition is an explicit input. This proves its exact counts and disjointness, not existence of the partition or the lower bound u>=s.",
+      "manuscript_locations": [
+        "three:lem:four-odd, count of the virtual path families"
+      ]
+    },
+    {
+      "id": "four_odd_actual_incidence_loads",
+      "kind": "graph_theoretic_result",
+      "description": "Bounds endpoint support by twice the actual edge-copy count and bounds family membership at each vertex by its actual pool degree for an edge-disjoint family. Derives the six-endpoint Hall pairing from three-edge size and original degree bounds.",
+      "lean_declarations": [
+        "Overfull.Multigraph.edgeSupport_card_le",
+        "Overfull.Multigraph.edgeSupport_card_le_six",
+        "Overfull.Multigraph.family_support_load_le_degreeOn",
+        "Overfull.Patterns.exists_three_edge_pairing_of_degree_bound"
+      ],
+      "scope_limit": "The family members are supplied actual sets contained in an actual pool. Per-family disjointness is explicit; any claimed global partition additionally needs disjointness between the two families.",
+      "manuscript_locations": [
+        "three:lem:four-odd, deriving the Hall conflict bounds"
+      ]
     }
   ],
   "numbered_assertions": [
@@ -3844,8 +4003,18 @@
       ],
       "statement_sha256": "95942bcc2f458912f740b61cecad49f74bcfe9e8679ec1a30e2819e039591eb0",
       "full_assertion_verified": false,
-      "status": "not_formalized_here",
-      "checked_components": [],
+      "status": "checked_components_only",
+      "checked_components": [
+        "compatible_circuit_copy_accounting",
+        "four_label_eulerian_circuits",
+        "four_odd_hall_pairing",
+        "four_odd_matching_forests",
+        "four_odd_circuit_remainders",
+        "four_label_virtual_circuits",
+        "compatible_circuit_small_kernels",
+        "four_odd_virtual_family_counts",
+        "four_odd_actual_incidence_loads"
+      ],
       "imported_statement": false
     },
     {
@@ -4415,7 +4584,14 @@
       "pinpoints": [
         "Theorem 1.1"
       ],
-      "coverage_status": "not_formalized_or_matched_to_a_checked_declaration_here"
+      "coverage_status": "checked_finite_cases_and_supporting_components_only_full_theorem_unproved",
+      "checked_component_ids": [
+        "compatible_circuit_copy_accounting",
+        "four_label_eulerian_circuits",
+        "compatible_circuit_small_kernels",
+        "three_vertex_integer_flow"
+      ],
+      "scope_limit": "Actual finite compatible partitions and ordinary circuit decomposition are checked; no theorem constructs a compatible partition of every admissible Eulerian four-label quotient."
     },
     {
       "bibliography_key": "EGJ",
@@ -4465,7 +4641,8 @@
     "Lemma 4.11 proves one exceptional-star forcing step with the exact threshold 11*2^(t+4). The sampled, compressed, and completed matchings are actual graph subgraphs; the compressed joining edges have a proved forest projection. The range and error tolerance precede t, and only the order threshold depends on t. Strict builds, scoped axiom audits, and independent semantic reviews passed. Its preparation form is used with one fixed family of packing rules in the completed bounded exceptional absorption proof of Proposition 4.12.",
     "Proposition 4.10 is proved by the actual inner epoch and outer refinement inductions, using fresh maximizing assignments, actual matching classes, certified fixed core rules, maintained recorded cuts, and exact original-host concatenation. One original parameter choice supplies every stage; the positive robust output parameter is fixed before the requested final error. The final exceptional incidence counts actual edges in the constructed residual. This proves Proposition 4.10; the main theorem remains unverified.",
     "Proposition 4.12 is proved by a finite threshold-band choice, two actual core enlargements, and a fixed-rule forcing process whose actual potential strictly decreases. Its robust output parameter precedes every arbitrary positive final error function. The final error uses that function at the actual remaining exceptional cardinality without a monotonicity assumption. The frequent-pattern reduction is proved separately in Lemma 4.13; the terminal factorization and main theorem remain unverified. The verification script requires every named supporting and public proof declaration to appear in the checked axiom inventory.",
-    "Lemma 4.13 constructs the common finite patterns, original scaled distribution, maximum-weight reserve, common rounded selection, actual edge-disjoint boundary realization, fixed-rule completion, safe residuals at every prefix, and complete exceptional absorption. Its positive robust output precedes every arbitrary final relative error. Actual residual edge counts prove the forest supplies; remaining numerical pattern weights are not assumed to give a residual fractional matching decomposition. The completed inventory is 42 of 69; the boundary extension, bounded-input and compatible-circuit dependencies, terminal factorization, and main theorem remain unverified."
+    "Lemma 4.13 constructs the common finite patterns, original scaled distribution, maximum-weight reserve, common rounded selection, actual edge-disjoint boundary realization, fixed-rule completion, safe residuals at every prefix, and complete exceptional absorption. Its positive robust output precedes every arbitrary final relative error. Actual residual edge counts prove the forest supplies; remaining numerical pattern weights are not assumed to give a residual fractional matching decomposition. The completed inventory is 42 of 69; the boundary extension, bounded-input and compatible-circuit dependencies, terminal factorization, and main theorem remain unverified.",
+    "Lemma 4.15 has checked actual virtual-circuit classification, Hall pairing, matching-forest extraction, and surplus-circuit partitions. Small compatible kernels do not establish the reduction from arbitrary incidence classes. The full assertion remains unverified and the completed numbered count remains 42."
   ],
   "density_corollary_verified": true
 }
