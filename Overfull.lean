@@ -89,6 +89,9 @@ import Overfull.Replacement
 import Overfull.PrescribedMatching
 import Overfull.ForceMatching
 import Overfull.SafePrescription
+import Overfull.OrdinaryPackingPrefix
+import Overfull.ForeignEdges.Minority
+import Overfull.ForeignEdges.ColorClasses
 /-!
 # Partial formalization of the overfull manuscript
 

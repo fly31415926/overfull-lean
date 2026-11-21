@@ -43,7 +43,7 @@ Overfull.mainTheorem_of_criticalExclusion
 | Lemma 2.2: concentration | `Overfull.IndependentBernoulli.chernoff_of_independent_indicators` and `Overfull.Hypergeometric.chernoff` | Both distributional cases, including unequal indicator probabilities, with the actual means; formulated as finite probability laws |
 | Theorem 2.3: Hall's theorem | `Overfull.bipartite_hall_iff` | Full equivalence for actual bipartite matching subgraphs, with arbitrary side sizes |
 | Corollary 2.4: Hall's deficiency form | `Overfull.bipartite_hall_defect` | At most `h` uncovered left vertices under the stated deficiency inequalities |
-| Theorem 2.5: the Tutte–Berge formula | `Overfull.TutteBerge.tutte_berge_integer_maximum` | The exact attained maximum of `o(G−X)−|X|`, using integer differences and actual maximum matchings |
+| Theorem 2.5: the Tutte–Berge formula | `Overfull.TutteBerge.tutte_berge_integer_maximum` | The exact attained maximum of `o(G−X)−\|X\|`, using integer differences and actual maximum matchings |
 | Lemma 2.6: fan consequences | `Overfull.Multigraph.IsKMinimal.endpoint_degree_sum` and `fan_low_degree_set_real` | Both the endpoint-degree inequality and the exclusion of edges to the low-degree set, with parallel edge copies |
 | Lemma 2.7: the first fan argument | `Overfull.Multigraph.first_fan` | No internal core edge, exclusion of the specified exceptional-to-core edges, and the resulting degree bounds |
 | Lemma 2.8: moving a bounded set out of the core | `Overfull.Multigraph.bounded_core_move_full` | An actual coloring after the move and the stated degree bound, including an empty core |
@@ -180,6 +180,8 @@ under the specified degree and total-load bounds. It derives the manuscript esti
 
 [`Overfull/OrdinaryPackingRound.lean`](Overfull/OrdinaryPackingRound.lean) proves that a new matching satisfying the capacity and total-load bounds exists at every admissible step. [`Overfull/OrdinaryPackingStrategy.lean`](Overfull/OrdinaryPackingStrategy.lean) chooses one fixed rule and proves its invariant for every adaptive forbidden-set policy. [`Overfull/OrdinaryPacking.lean`](Overfull/OrdinaryPacking.lean) assembles these results into full Lemma 2.20. The positive error, retained robust parameter, and order threshold precede the graph; the rule precedes the adaptive input. Every output is an actual matching perfect outside its current forbidden set, the matchings are edge-disjoint, and the remaining graph retains the prescribed robust range after every prefix.
 
+[`Overfull/OrdinaryPackingPrefix.lean`](Overfull/OrdinaryPackingPrefix.lean) strengthens the strategy interface for an interrupted phase. One fixed rule gives an actual packing and a robust unused graph after every prefix whose inputs satisfy the size, parity, and incidence conditions up to that point. The rule is chosen before both the adaptive input and the stopping index. No condition is imposed on later inputs; the constants retain the quantifier order of Lemma 2.20.
+
 ### A cut splitting prescribed pairs
 
 [`Overfull/PairedCut/Full.lean`](Overfull/PairedCut/Full.lean) proves Lemma 2.19. For fixed `α > 0` and `0 < ν ≤ τ ≤ 1/8`, it chooses `ξ > 0` and an order threshold before the graph and prescribed pairing. The resulting equal bipartition splits every pair, has crossing minimum degree at least `αn/3`, and is a bipartite robust `(ξ,4τ)`-expander.
@@ -229,6 +231,14 @@ The proof derives the small-cut classification from the group condition and actu
 The proof constructs all three actual matchings: the sampled perfect matching, its compressed submatching, and the perfect completion inside the cores. [`Overfull/Compression/Matching.lean`](Overfull/Compression/Matching.lean) retains every exceptional-incident edge and at most three joining edges whose projected labels form a forest, and proves even uncovered order in every core. The probability argument counts the actual tested family and uses the exact star probability `|S|/h`. Completion preserves the whole-union cut-edge sets of the compressed matching. The parity of perfect-matching cuts controls every one-vertex toggle, and the small-cut theorem then excludes every overfull set in the actual residual graph.
 
 This is one forcing step. The repeated forcing and absorption required by Proposition 4.12 remain unproved; the result does not supply an adaptive sequence by repeated halving of the robust parameter.
+
+### Components for iterative refinement
+
+[`Overfull/ForeignEdges/Minority.lean`](Overfull/ForeignEdges/Minority.lean) constructs the actual set of at most one minority core vertex supplied by the small-cut inequality. Removing this set makes every surviving core lie wholly on its majority shore and preserves the partition into cores and exceptional vertices. Each core retains at least two vertices when its original order is at least three.
+
+[`Overfull/ForeignEdges/ColorClasses.lean`](Overfull/ForeignEdges/ColorClasses.lean) converts the proved König edge coloring into actual matching subgraphs of a simple host graph. Their edge sets are pairwise disjoint and partition exactly the supplied bipartite edge set. The degree inequality `4*degree ≤ 3*h₀` gives `floor(3*h₀/4)` available color classes, including the zero-color case.
+
+Together with the finite-prefix packing rule, these supply components for Proposition 4.10. The foreign-core assignment, refinement transitions, and coupled adaptive phases remain to be assembled. Proposition 4.10 is still marked incomplete.
 
 ### The coloring encoding and balanced reserve
 
