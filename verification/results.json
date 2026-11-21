@@ -165,7 +165,74 @@
     "prescribed_matching_actual_selection": "Overfull.PrescribedMatching.select_prescribed_matching",
     "prescribed_matching_final_edge_difference": "Overfull.PrescribedMatching.omitted_edges_le_of_extension",
     "prescribed_matching_witness_completion": "Overfull.PrescribedMatching.complete_avoiding_witness",
-    "prescribed_exceptional_core_matching": "Overfull.prescribed_exceptional_core_matching"
+    "prescribed_exceptional_core_matching": "Overfull.prescribed_exceptional_core_matching",
+    "compression_four_label_forest": "Overfull.Compression.four_label_parity_forest",
+    "compression_actual_parity_selection": "Overfull.Compression.exists_parity_subset",
+    "compression_endpoint_parity_forest": "Overfull.Compression.exists_endpoint_parity_forest",
+    "compression_selected_matching": "Overfull.Compression.exists_selected_matching",
+    "compression_selected_vertex_count": "Overfull.Compression.selectedMatching_verts_card",
+    "compression_core_cut_parity": "Overfull.Compression.selected_core_cut_parity",
+    "compressed_matching": "Overfull.Compression.exists_compressed_matching",
+    "force_core_perfect_matching_threshold": "Overfull.ForceMatching.exists_ordinary_perfect_matching_threshold",
+    "force_core_completion_parameters": "Overfull.ForceMatching.exists_core_completion_parameters",
+    "compressed_matching_completion": "Overfull.ForceMatching.exists_compressed_completion_parameters",
+    "force_residual_core_degree": "Overfull.ForceMatching.residualCore_degree_loss",
+    "force_residual_core_robustness": "Overfull.ForceMatching.residualCore_robust",
+    "force_whole_union_card": "Overfull.ForceMatching.wholeUnions_card_le",
+    "force_star_probability": "Overfull.ForceMatching.Distribution.star_hit_probability",
+    "safe_star_sampling": "Overfull.ForceMatching.exists_star_matching",
+    "compressed_cut_comparison": "Overfull.ForceMatching.completed_cut_comparison",
+    "force_toggle_cut_comparison": "Overfull.ForceMatching.toggle_cut_le_of_cut_subset",
+    "force_family_safety": "Overfull.ForceMatching.family_safe_after_completion",
+    "force_whole_union_classification": "Overfull.ForceMatching.classified_of_minority",
+    "force_residual_no_overfull": "Overfull.ForceMatching.residual_no_overfull",
+    "force_star_retention": "Overfull.ForceMatching.starHit_of_exceptional_retention",
+    "force_uniform_parameters": "Overfull.ForceMatching.uniform_order_threshold",
+    "safe_compressed_completion": "Overfull.ForceMatching.exists_safe_completion_parameters",
+    "force_exceptional_star": "Overfull.force_exceptional_star",
+    "safe_boundary_adjacency": "Overfull.SafePrescription.pair_mem_boundaryEdges",
+    "safe_boundary_edge_count": "Overfull.SafePrescription.boundaryEdges_card_bound",
+    "safe_actual_boundary_submatching": "Overfull.SafePrescription.exists_boundary_submatching",
+    "safe_prescription_finite_sampling": "Overfull.SafePrescription.exists_bounded_matching_for_family",
+    "safe_prescription_sampling_constants": "Overfull.SafePrescription.exists_bounded_matching",
+    "safe_prescription_sampled_boundary": "Overfull.SafePrescription.exists_sampled_boundary",
+    "safe_cut_incidence_degree": "Overfull.SafePrescription.cutGraph_degree",
+    "safe_core_boundary_degree": "Overfull.SafePrescription.cut_incident_core_bound",
+    "safe_exceptional_boundary_degree": "Overfull.SafePrescription.cut_incident_cluster_bound",
+    "safe_cluster_neighbor_count": "Overfull.SafePrescription.same_cluster_neighbors_lower",
+    "safe_clique_auxiliary_matching": "Overfull.SafePrescription.cliqueAux_has_perfect_matching",
+    "safe_retained_original_edges": "Overfull.SafePrescription.cliqueAux_original_edge",
+    "safe_retained_core_parity_transport": "Overfull.SafePrescription.uncovered_embed_union_card",
+    "safe_retained_partial_matching": "Overfull.SafePrescription.exists_retained_partial_matching",
+    "safe_family_cluster_membership": "Overfull.SafePrescription.family_same_label",
+    "safe_family_whole_cores": "Overfull.SafePrescription.family_whole_cores",
+    "safe_cluster_union_approximation": "Overfull.SafePrescription.cluster_union_approximation",
+    "safe_simultaneous_toggle_identity": "Overfull.SafePrescription.cut_symmDiff_identity",
+    "safe_simultaneous_toggle_bound": "Overfull.SafePrescription.cut_symmDiff_lower_bound",
+    "safe_small_cut_classification": "Overfull.SafePrescription.classified_small_cut",
+    "safe_robust_small_cut_classification": "Overfull.SafePrescription.classified_robust_small_cut",
+    "safe_exterior_matching_count": "Overfull.SafePrescription.exteriorEdges_card_le",
+    "safe_matching_cut_exterior_bound": "Overfull.SafePrescription.matching_cut_le_exterior_add_one",
+    "safe_original_cut_from_residual": "Overfull.SafePrescription.original_cut_lt_of_overfull",
+    "safe_residual_no_overfull": "Overfull.SafePrescription.residual_no_overfull_of_small_cut_classification",
+    "safe_prescription_uniform_parameters": "Overfull.SafePrescription.exists_prescription_parameters",
+    "safe_prescription": "Overfull.safe_prescription",
+    "ordinary_finite_prefix_rule": "Overfull.OrdinaryPackingStrategy.exists_prefix_rule",
+    "adaptive_ordinary_packing_prefix": "Overfull.adaptive_ordinary_packing_prefix",
+    "foreign_minority_card_bound": "Overfull.ForeignRefinement.minorityVertices_card_le",
+    "foreign_minority_core_subset": "Overfull.ForeignRefinement.minorityVertices_subset",
+    "foreign_surviving_core_membership": "Overfull.ForeignRefinement.surviving_core_membership",
+    "foreign_minority_deletion": "Overfull.ForeignRefinement.minority_shore_deletion",
+    "selected_host_matching_adapter": "Overfull.ForeignColoring.selectedMatching_isMatching_of_edge_copies",
+    "selected_host_matching_disjointness": "Overfull.ForeignColoring.selectedMatching_spanning_disjoint",
+    "host_color_class_membership": "Overfull.ForeignColoring.mem_hostColorClass",
+    "host_color_class_subset": "Overfull.ForeignColoring.hostColorClass_subset",
+    "host_color_class_matching": "Overfull.ForeignColoring.hostColorClass_isMatching",
+    "host_color_class_disjointness": "Overfull.ForeignColoring.hostColorClass_pairwise_disjoint",
+    "host_color_class_union": "Overfull.ForeignColoring.hostColorClass_union",
+    "selected_matching_graph_union": "Overfull.ForeignColoring.selectedMatching_edgeUnion",
+    "actual_host_color_classes": "Overfull.ForeignColoring.exists_color_classes",
+    "three_quarter_host_color_classes": "Overfull.ForeignColoring.exists_three_quarter_color_classes"
   },
   "lean_build_passed": true,
   "axiom_audit_passed": true,
@@ -602,7 +669,7 @@
     "Classical.choice",
     "Quot.sound"
   ],
-  "verified_declaration_count": 4982,
+  "verified_declaration_count": 5286,
   "declaration_count_includes_generated_support_lemmas": true,
   "verified_declarations": [
     {
@@ -9668,6 +9735,661 @@
     {
       "axioms": [
         "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.Parity",
+      "name": "Overfull.Compression.copyDegree.eq_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.coreLabel._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.coreLabel.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.coreLabel_eq_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.coreLabel_of_mem"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.covered_count_of_incident"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.covered_count_of_incident._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.covered_count_of_incident._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.covered_count_of_incident._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.crosses_core_iff"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.crosses_core_iff._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.exceptionalEdges.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.exceptional_disjoint_joining"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Matching",
+      "name": "Overfull.Compression.exists_compressed_matching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Matching",
+      "name": "Overfull.Compression.exists_compressed_matching._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Matching",
+      "name": "Overfull.Compression.exists_compressed_matching._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Matching",
+      "name": "Overfull.Compression.exists_compressed_matching._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.Matching",
+      "name": "Overfull.Compression.exists_compressed_matching._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.Matching",
+      "name": "Overfull.Compression.exists_compressed_matching._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Compression.Matching",
+      "name": "Overfull.Compression.exists_compressed_matching._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Matching",
+      "name": "Overfull.Compression.exists_compressed_matching._simp_1_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.exists_endpoint_parity_forest"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.exists_endpoint_parity_forest._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.exists_endpoint_parity_forest._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Parity",
+      "name": "Overfull.Compression.exists_parity_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Parity",
+      "name": "Overfull.Compression.exists_parity_subset._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Parity",
+      "name": "Overfull.Compression.exists_parity_subset._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.Parity",
+      "name": "Overfull.Compression.exists_parity_subset._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.exists_selected_matching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Parity",
+      "name": "Overfull.Compression.four_label_parity_forest"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.incidentCount_matchingEdges_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.incidentCount_matchingEdges_degree._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.incidentCount_matchingEdges_degree._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.joiningEdges.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.matching_core_cut_partition"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.matching_core_cut_partition._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.matching_core_cut_partition._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.matching_core_cut_partition._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Matching",
+      "name": "Overfull.Compression.nonexceptionalEdges.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Parity",
+      "name": "Overfull.Compression.oddPairs.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Parity",
+      "name": "Overfull.Compression.oddPairs_degree_parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Parity",
+      "name": "Overfull.Compression.oddPairs_degree_parity._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Parity",
+      "name": "Overfull.Compression.oddPairs_degree_parity._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Compression.Parity",
+      "name": "Overfull.Compression.oddPairs_degree_parity._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.Parity",
+      "name": "Overfull.Compression.pairDegree.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_covered_count"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_covered_count._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_covered_count._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_covered_count._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_edgeSet_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_edges"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_edges._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_edges._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_edges._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_incidentCount"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_isMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_le._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_le._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_le._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_mem_edge"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_mem_verts"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selectedMatching_verts_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.selected_core_cut_parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.selected_core_cut_parity._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.selected_core_cut_partition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.selected_core_cut_partition._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.selected_edge_not_internal"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selected_edges_card_le_of_endpoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selected_edges_card_le_of_incident"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selected_edges_card_le_of_incident._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.SelectedEdges",
+      "name": "Overfull.Compression.selected_edges_card_le_of_incident._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.selected_insideCount_eq_zero"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Compression.Labels",
+      "name": "Overfull.Compression.selected_insideCount_eq_zero._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
         "Quot.sound",
         "Classical.choice"
       ],
@@ -15135,6 +15857,896 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.Distribution.expected_selected_edges"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.Distribution.star_hit_probability"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.assembledMatching._proof_1"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.assembledMatching._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.assembledMatching_contains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.assembledMatching_perfect"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Family",
+      "name": "Overfull.ForceMatching.classified_of_minority"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Cuts",
+      "name": "Overfull.ForceMatching.completed_cutEdges_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Cuts",
+      "name": "Overfull.ForceMatching.completed_cut_comparison"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.coveredCore.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.coveredCore_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.coveredCore_card._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Cuts",
+      "name": "Overfull.ForceMatching.cutEdges_mono"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Cuts",
+      "name": "Overfull.ForceMatching.cutFailure_of_matching_cut_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Cuts",
+      "name": "Overfull.ForceMatching.cutFailure_of_matching_cut_le._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.embedCoreMatching_edge"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.embedCoreMatching_isMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.embedCoreMatching_verts"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Residual",
+      "name": "Overfull.ForceMatching.embeddedCore._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Residual",
+      "name": "Overfull.ForceMatching.embeddedCore._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Family",
+      "name": "Overfull.ForceMatching.eq_or_toggle_of_difference_card_le_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Family",
+      "name": "Overfull.ForceMatching.eq_or_toggle_of_difference_card_le_one._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Family",
+      "name": "Overfull.ForceMatching.eq_or_toggle_of_difference_card_le_one._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Family",
+      "name": "Overfull.ForceMatching.even_of_toggle_odd"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Family",
+      "name": "Overfull.ForceMatching.even_of_toggle_odd._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Family",
+      "name": "Overfull.ForceMatching.even_of_toggle_odd._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.exists_compressed_completion_parameters"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.CoreCompletion",
+      "name": "Overfull.ForceMatching.exists_core_completion_parameters"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.CoreCompletion",
+      "name": "Overfull.ForceMatching.exists_core_completion_parameters._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.CoreCompletion",
+      "name": "Overfull.ForceMatching.exists_core_completion_parameters._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.CoreCompletion",
+      "name": "Overfull.ForceMatching.exists_core_completion_parameters._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.CoreCompletion",
+      "name": "Overfull.ForceMatching.exists_ordinary_perfect_matching_threshold"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.SafeCompletion",
+      "name": "Overfull.ForceMatching.exists_safe_completion_parameters"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.SafeCompletion",
+      "name": "Overfull.ForceMatching.exists_safe_completion_parameters._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.SafeCompletion",
+      "name": "Overfull.ForceMatching.exists_safe_completion_parameters._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.SafeCompletion",
+      "name": "Overfull.ForceMatching.exists_safe_completion_parameters._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.exists_star_matching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.exists_star_matching_for_family"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.exists_star_matching_for_family._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.exists_star_matching_for_family._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.exists_star_matching_for_family._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Cuts",
+      "name": "Overfull.ForceMatching.family_safe_after_completion"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Residual",
+      "name": "Overfull.ForceMatching.graphCutCount_eq_cutSize"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Cuts",
+      "name": "Overfull.ForceMatching.incidentCount_mono"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Cuts",
+      "name": "Overfull.ForceMatching.matchingEdges_mono"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.mem_coveredCore"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.mem_coveredCore._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.mem_wholeUnions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.mem_wholeUnions._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.mem_wholeUnions._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.mem_wholeUnions._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.mem_wholeUnions._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Parameters",
+      "name": "Overfull.ForceMatching.range_bounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Residual",
+      "name": "Overfull.ForceMatching.regular_overfull_cut"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.residualCore.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.residualCore_degree_loss"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.residualCore_degree_loss._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.residualCore_degree_loss._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.residualCore_degree_loss._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.residualCore_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.residualCore_robust"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Residual",
+      "name": "Overfull.ForceMatching.residual_no_overfull"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Residual",
+      "name": "Overfull.ForceMatching.residual_no_overfull._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Family",
+      "name": "Overfull.ForceMatching.safe_cut_of_classified"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Cuts",
+      "name": "Overfull.ForceMatching.same_core_membership"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Residual",
+      "name": "Overfull.ForceMatching.starHit_mono"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Residual",
+      "name": "Overfull.ForceMatching.starHit_of_exceptional_retention"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.star_matching_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.star_matching_card._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.star_matching_card_le_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Cuts",
+      "name": "Overfull.ForceMatching.toggle_cut_le_of_cut_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Cuts",
+      "name": "Overfull.ForceMatching.toggle_cut_le_of_cut_subset._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Cuts",
+      "name": "Overfull.ForceMatching.toggle_cut_le_of_cut_subset._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Cuts",
+      "name": "Overfull.ForceMatching.toggle_cut_le_of_cut_subset._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.uncoveredCore_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Assembly",
+      "name": "Overfull.ForceMatching.uncoveredCore_card._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Parameters",
+      "name": "Overfull.ForceMatching.uniform_order_threshold"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Parameters",
+      "name": "Overfull.ForceMatching.uniform_order_threshold._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.wholeUnions.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.wholeUnions_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.wholeUnions_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.wholeUnions_card_le._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.ForceMatching.wholeUnions_card_le._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Family",
+      "name": "Overfull.ForceMatching.wholeUnions_whole"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.ColorClasses",
+      "name": "Overfull.ForeignColoring.exists_color_classes"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.ColorClasses",
+      "name": "Overfull.ForeignColoring.exists_three_quarter_color_classes"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.ColorClasses",
+      "name": "Overfull.ForeignColoring.exists_three_quarter_color_classes._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.ColorClasses",
+      "name": "Overfull.ForeignColoring.hostColorClass_isMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.ColorClasses",
+      "name": "Overfull.ForeignColoring.hostColorClass_pairwise_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.ColorClasses",
+      "name": "Overfull.ForeignColoring.hostColorClass_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.ColorClasses",
+      "name": "Overfull.ForeignColoring.hostColorClass_union"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.ColorClasses",
+      "name": "Overfull.ForeignColoring.mem_hostColorClass"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.ColorClasses",
+      "name": "Overfull.ForeignColoring.selectedMatching_edgeUnion"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.ColorClasses",
+      "name": "Overfull.ForeignColoring.selectedMatching_isMatching_of_edge_copies"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.ColorClasses",
+      "name": "Overfull.ForeignColoring.selectedMatching_spanning_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.Minority",
+      "name": "Overfull.ForeignRefinement.minorityVertices_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.Minority",
+      "name": "Overfull.ForeignRefinement.minorityVertices_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.Minority",
+      "name": "Overfull.ForeignRefinement.minority_shore_deletion"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.Minority",
+      "name": "Overfull.ForeignRefinement.minority_shore_deletion._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.Minority",
+      "name": "Overfull.ForeignRefinement.minority_shore_deletion._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.Minority",
+      "name": "Overfull.ForeignRefinement.minority_shore_deletion._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.Minority",
+      "name": "Overfull.ForeignRefinement.surviving_core_membership"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.FractionalMatching",
       "name": "Overfull.FractionalMatching.edge_eq"
     },
@@ -17072,6 +18684,15 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.ForceMatching.Probability",
+      "name": "Overfull.MatchingProbability.FamilyFailure.congr_simp"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.MatchingProbability",
       "name": "Overfull.MatchingProbability.crosses_iff_endpoints"
     },
@@ -17185,6 +18806,15 @@
       ],
       "module": "Overfull.MatchingProbability",
       "name": "Overfull.MatchingProbability.exists_distribution"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching.Residual",
+      "name": "Overfull.MatchingProbability.graphCutCount.eq_1"
     },
     {
       "axioms": [
@@ -23220,6 +24850,15 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.OrdinaryPackingPrefix",
+      "name": "Overfull.OrdinaryPackingStrategy.exists_prefix_rule"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.OrdinaryPackingStrategy",
       "name": "Overfull.OrdinaryPackingStrategy.exists_rule"
     },
@@ -27925,6 +29564,941 @@
       ],
       "module": "Overfull.RobustRealization.Blocks",
       "name": "Overfull.RobustRealization.sum_inter_block_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Boundary",
+      "name": "Overfull.SafePrescription.boundaryEdges.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Boundary",
+      "name": "Overfull.SafePrescription.boundaryEdges_card_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Boundary",
+      "name": "Overfull.SafePrescription.boundaryEdges_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.classified_robust_small_cut"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.classified_small_cut"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.classified_small_cut._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.classified_small_cut._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.classified_small_cut._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.cliqueAux._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.cliqueAux._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.cliqueAux_cluster"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.cliqueAux_has_perfect_matching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.cliqueAux_isClique"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.cliqueAux_neighbors_large"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.cliqueAux_neighbors_large._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.cliqueAux_original_edge"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.clusterSets.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.clusterSets_cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.clusterSets_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.clusterSets_disjoint_marked"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.cluster_union_approximation"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.cluster_union_approximation._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.cluster_union_approximation._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.cluster_union_approximation._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.cutCount_univ_eq_cutSize"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.cutGraph._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.cutGraph._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.cutGraph.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.cutGraph_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.cutGraph_degree._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.cutGraph_degree._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.cut_incident_cluster_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.cut_incident_core_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.cut_incident_core_bound._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.cut_incident_core_bound._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.cut_incident_eq_neighbors"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.cut_symmDiff_identity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.cut_symmDiff_identity._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.cut_symmDiff_identity._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.cut_symmDiff_lower_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.cut_symmDiff_lower_bound._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.embed.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.embed_adj"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.embed_edgeSet"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.embed_edgeSet_card"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.embed_isMatching"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.embed_restrict_eq"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.embed_verts"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.embed_verts_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Boundary",
+      "name": "Overfull.SafePrescription.exists_boundary_submatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Boundary",
+      "name": "Overfull.SafePrescription.exists_boundary_submatching._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Boundary",
+      "name": "Overfull.SafePrescription.exists_boundary_submatching._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Boundary",
+      "name": "Overfull.SafePrescription.exists_boundary_submatching._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Sampling",
+      "name": "Overfull.SafePrescription.exists_bounded_matching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Sampling",
+      "name": "Overfull.SafePrescription.exists_bounded_matching._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Sampling",
+      "name": "Overfull.SafePrescription.exists_bounded_matching._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Sampling",
+      "name": "Overfull.SafePrescription.exists_bounded_matching_for_family"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Parameters",
+      "name": "Overfull.SafePrescription.exists_prescription_parameters"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Parameters",
+      "name": "Overfull.SafePrescription.exists_prescription_parameters._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.exists_retained_partial_matching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.exists_retained_partial_matching._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.exists_retained_partial_matching._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.exists_retained_partial_matching._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Sampling",
+      "name": "Overfull.SafePrescription.exists_sampled_boundary"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Sampling",
+      "name": "Overfull.SafePrescription.exists_sampled_boundary._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.exteriorEdges_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.exteriorEdges_subset_prescribed"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.family_same_label"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.family_whole_cores"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.incidentCount_subgraph_edges"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.marked_subset_boundary"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.matchingEdges_card_ncard"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.matchingEdges_card_ncard._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.matchingEdges_card_ncard._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.matchingEdges_card_ncard._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.matchingEdges_card_ncard._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.matching_cut_le_exterior_add_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.matching_cut_le_exterior_add_one._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.matching_cut_le_exterior_of_whole"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Boundary",
+      "name": "Overfull.SafePrescription.mem_boundaryEdges"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Boundary",
+      "name": "Overfull.SafePrescription.mem_boundaryEdges._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription.Boundary",
+      "name": "Overfull.SafePrescription.mem_boundaryEdges._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.mem_clusterSets"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Classification",
+      "name": "Overfull.SafePrescription.mem_clusterSets._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.mem_surviving"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.mem_surviving._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.original_cut_lt_of_overfull"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.original_cut_lt_of_overfull._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.original_cut_lt_of_overfull._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Boundary",
+      "name": "Overfull.SafePrescription.pair_mem_boundaryEdges"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.SafePrescription.Boundary",
+      "name": "Overfull.SafePrescription.pair_mem_boundaryEdges._simp_1_1"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.rehost_isMatching"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.rehost_isPerfectMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.residual_no_overfull_of_small_cut_classification"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Residual",
+      "name": "Overfull.SafePrescription.residual_no_overfull_of_small_cut_classification._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.same_cluster_core_neighbors_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.same_cluster_core_neighbors_lower._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.same_cluster_neighbors_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Counting",
+      "name": "Overfull.SafePrescription.same_cluster_neighbors_lower._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.surviving.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.surviving_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.surviving_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.surviving_core_large"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.surviving_core_large._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.surviving_cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.surviving_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.surviving_uncovered_image"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription.Construction",
+      "name": "Overfull.SafePrescription.uncovered_embed_union_card"
     },
     {
       "axioms": [
@@ -34049,6 +36623,24 @@
         "Classical.choice",
         "Quot.sound"
       ],
+      "module": "Overfull.OrdinaryPackingPrefix",
+      "name": "Overfull.adaptive_ordinary_packing_prefix"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryPackingPrefix",
+      "name": "Overfull.adaptive_ordinary_packing_prefix._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "module": "Overfull.Sharpness.Theorems",
       "name": "Overfull.arbitrarily_large_class_two_graphs"
     },
@@ -34946,6 +37538,33 @@
     {
       "axioms": [
         "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ForceMatching",
+      "name": "Overfull.force_exceptional_star"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching",
+      "name": "Overfull.force_exceptional_star._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForceMatching",
+      "name": "Overfull.force_exceptional_star._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
         "Quot.sound",
         "Classical.choice"
       ],
@@ -35822,6 +38441,76 @@
       ],
       "module": "Overfull.RobustExpansion",
       "name": "Overfull.robust_range_reduction"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription",
+      "name": "Overfull.safe_prescription"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription",
+      "name": "Overfull.safe_prescription._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription",
+      "name": "Overfull.safe_prescription._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription",
+      "name": "Overfull.safe_prescription._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription",
+      "name": "Overfull.safe_prescription._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.SafePrescription",
+      "name": "Overfull.safe_prescription._proof_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription",
+      "name": "Overfull.safe_prescription._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.SafePrescription",
+      "name": "Overfull.safe_prescription._simp_1_3"
     },
     {
       "axioms": [
@@ -39200,6 +41889,15 @@
       "name": "_private.Overfull.Dense.UnequalFlow.0.Overfull.weighted_product_le"
     },
     {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ForeignEdges.Minority",
+      "name": "_private.Overfull.ForeignEdges.Minority.0.Overfull.ForeignRefinement.minority_piece_card"
+    },
+    {
       "axioms": [],
       "module": "Overfull.HallDefect",
       "name": "_private.Overfull.HallDefect.0.Overfull.matchingFromPartialMap._proof_1"
@@ -41769,6 +44467,10 @@
     "Overfull.CliqueColors",
     "Overfull.ColorClasses",
     "Overfull.ColorCoverage",
+    "Overfull.Compression.Labels",
+    "Overfull.Compression.Matching",
+    "Overfull.Compression.Parity",
+    "Overfull.Compression.SelectedEdges",
     "Overfull.CriticalMultigraph",
     "Overfull.CutCounting",
     "Overfull.Dense.BalanceRepair",
@@ -41806,6 +44508,17 @@
     "Overfull.External.FiniteCirculation",
     "Overfull.External.PerfectBMatching",
     "Overfull.ForbiddenSetWitness",
+    "Overfull.ForceMatching",
+    "Overfull.ForceMatching.Assembly",
+    "Overfull.ForceMatching.CoreCompletion",
+    "Overfull.ForceMatching.Cuts",
+    "Overfull.ForceMatching.Family",
+    "Overfull.ForceMatching.Parameters",
+    "Overfull.ForceMatching.Probability",
+    "Overfull.ForceMatching.Residual",
+    "Overfull.ForceMatching.SafeCompletion",
+    "Overfull.ForeignEdges.ColorClasses",
+    "Overfull.ForeignEdges.Minority",
     "Overfull.FractionalMatching",
     "Overfull.HallDefect",
     "Overfull.Konig",
@@ -41832,6 +44545,7 @@
     "Overfull.OrdinaryPackingDeficiency",
     "Overfull.OrdinaryPackingInitial",
     "Overfull.OrdinaryPackingParameters",
+    "Overfull.OrdinaryPackingPrefix",
     "Overfull.OrdinaryPackingRound",
     "Overfull.OrdinaryPackingStrategy",
     "Overfull.OrdinaryPackingWorking",
@@ -41875,6 +44589,14 @@
     "Overfull.RobustRealization.Relabeling",
     "Overfull.RobustRealization.Uniform",
     "Overfull.RobustStability",
+    "Overfull.SafePrescription",
+    "Overfull.SafePrescription.Boundary",
+    "Overfull.SafePrescription.Classification",
+    "Overfull.SafePrescription.Construction",
+    "Overfull.SafePrescription.Counting",
+    "Overfull.SafePrescription.Parameters",
+    "Overfull.SafePrescription.Residual",
+    "Overfull.SafePrescription.Sampling",
     "Overfull.Sharpness.ColoringObstruction",
     "Overfull.Sharpness.DeletedPetersen",
     "Overfull.Sharpness.Encoding",
@@ -41925,7 +44647,7 @@
     "Vizing.Path.Invert",
     "Vizing.Path.PathEdges"
   ],
-  "fully_verified_numbered_assertion_count": 37,
+  "fully_verified_numbered_assertion_count": 39,
   "fully_verified_numbered_assertions": [
     "2.2",
     "2.3",
@@ -41953,6 +44675,8 @@
     "4.1",
     "4.7",
     "4.8",
+    "4.9",
+    "4.11",
     "5.3",
     "5.4",
     "5.5",
@@ -41966,7 +44690,7 @@
     "7.2"
   ],
   "source_sha256": {
-    "Overfull.lean": "9b51b089bef7fae78bdce2d3e5f761f3a8a843243dfbd54e2faba9802c6c85fb",
+    "Overfull.lean": "bd9d360da6ec5189a593581e287285f3bc994fc7849425dd3ebd55f2b3aa3587",
     "Audit.lean": "76886fd9261a3a7b07660f9a434272c0347130a4013cf57da6e1761a34fc6603",
     "Overfull/Arithmetic.lean": "8900852dcfc451630615376c9def333908c11c03a99bc02e7f51043162a7f3a8",
     "Overfull/AuxiliaryCompletion/BalancedIncidence.lean": "7fa4de3a988c859cdcc82bf7d9ea21fcd698274bca653fa32fe5ec3b2870d253",
@@ -42008,6 +44732,10 @@
     "Overfull/CliqueColors.lean": "4cdf3b4f9fec811cc96957759c29d6dabe12e9dba101c26d09de41beae0498cc",
     "Overfull/ColorClasses.lean": "75e6e478e6db42624dfec606e38d2c6baecb471336f6806d55fb305da5600290",
     "Overfull/ColorCoverage.lean": "320ec451286415074306b40fc6da26707feca83edbe39af07311d519f741d26e",
+    "Overfull/Compression/Labels.lean": "a511af0fbff01793a6161cde076ba397bcaf3f5a86f555e6ced6b029b02bfb05",
+    "Overfull/Compression/Matching.lean": "86b120f0803b651245a5edfdc87c7f20d9a656f4ea73bbf9261960cd3b873139",
+    "Overfull/Compression/Parity.lean": "2fdcf9b0eda67ed75e649dc12c629bc220c91b06c697af4c9736f756f9b0369c",
+    "Overfull/Compression/SelectedEdges.lean": "e209638e9fd6057de596a76e7c865710cf7a3a340cfc1389b059e805f4b26152",
     "Overfull/CriticalMultigraph.lean": "ded448d1853c4aad09b72fc290da91e84c2cd4a5a67a63cf0faaf43880d01d09",
     "Overfull/CutCounting.lean": "ac6e6c08717dafec5f25108e597cbb75ee276c8c5003dbf6b19b3d3fef038175",
     "Overfull/Dense/BalanceRepair/Cancellation.lean": "58662ee182aa079b71e685316e64c01d32280f5d4944a2d8265f8d71ddf04a86",
@@ -42045,6 +44773,17 @@
     "Overfull/External/FiniteCirculation.lean": "6b0a28be60527d79e4769496d829d3ed227455de3fb4e76dbc20a1b3a512b368",
     "Overfull/External/PerfectBMatching.lean": "8a3f5cb9fbf2f44c8a8c22b86db196437666749527d6dcdc3133f0819253c81f",
     "Overfull/ForbiddenSetWitness.lean": "fc3260ea15a6abc514c800d5d6956725501053e01bd4f95628a4900b66b0c17d",
+    "Overfull/ForceMatching/Assembly.lean": "c405649470c581d1e1edb4d978182b807855cac0e65a018386d8c0aa31698805",
+    "Overfull/ForceMatching/CoreCompletion.lean": "598e4d36b7a285c193c014730ea93f8c67973ecc0abab162002f5e22ff7cd1ac",
+    "Overfull/ForceMatching/Cuts.lean": "c233ad45367a00adb058047224248d74a73bee31f9129aacfdb8660497f91b05",
+    "Overfull/ForceMatching/Family.lean": "d51bb5791c89318d3b46b868a6f1465b3c611d86d8db6a35757fce77de5c1bc8",
+    "Overfull/ForceMatching/Parameters.lean": "e10c5defb09fd1643916399a30b5117893ed1db61a63d39d855a7e9d4d6575bb",
+    "Overfull/ForceMatching/Probability.lean": "de66611363bd86472fbdb040cb9554a6da0bbe034cfc979b4e4bed27f7240e98",
+    "Overfull/ForceMatching/Residual.lean": "36bf6259736d8ce058ce5699a4ca54231a64efeca79748d820c4ca458175a0a5",
+    "Overfull/ForceMatching/SafeCompletion.lean": "b27311a43c220d7fa8b2bde7585cfb208743b5e27a5c1073eec6e527959d6b32",
+    "Overfull/ForceMatching.lean": "af9b4b0ed31e03f877102f471c050c2f570402b0854487744e0d82c70d7baed1",
+    "Overfull/ForeignEdges/ColorClasses.lean": "5b309682b30988e181613fe069fd93897cd0785dba9d36fc203bb4d5de20a800",
+    "Overfull/ForeignEdges/Minority.lean": "497c85d4d4b3c16b23b95c0fadcb9f35a617368883dc75582f80cddd32013600",
     "Overfull/FractionalMatching.lean": "710adc515247ea081044942157a5bcd90901d19ac0546f411cf0a19c81b9af82",
     "Overfull/HallDefect.lean": "f677dc42ecf8502855e723745168d3e4d3b99f297d2dfc4e4b08926920caa3af",
     "Overfull/Konig.lean": "aaa6eea1f4507d6d6659da11e7fbf37ab8eccda81c70251855bd821444acf98a",
@@ -42071,6 +44810,7 @@
     "Overfull/OrdinaryPackingDeficiency.lean": "07aaed7431b1692c53f77681e827bcd3e7c536e1dd0733664d443ed6a17e6780",
     "Overfull/OrdinaryPackingInitial.lean": "ad8d7944076a68e352cab3531e3183a647f747ed0bf3533ecc5e9a1eae57f2b8",
     "Overfull/OrdinaryPackingParameters.lean": "11d78e028d19379d7765ab0c4391a5af21f64e3089c63a5ac57e6c2cc80b4737",
+    "Overfull/OrdinaryPackingPrefix.lean": "4b5659907c46acb25c0bfe3fc46d6e714c641575737ef66e0ea549bd0fb3bc19",
     "Overfull/OrdinaryPackingRound.lean": "9fad21891cbb81960f80cd2356157521464d09464be04653d903b84884504bcf",
     "Overfull/OrdinaryPackingStrategy.lean": "7e7033c55761b48d54282ca98695c3c28e46a15ad88ae5bdddfa322290d7a081",
     "Overfull/OrdinaryPackingWorking.lean": "70a86a62dc2fdf6b24e4ad147ffcee42c1f23236e4bf6022d9ea55c7f4234ce6",
@@ -42114,6 +44854,14 @@
     "Overfull/RobustRealization/Uniform.lean": "8d0f2a543daf2f707bb58c5f78f6361abc56b2b3ff9400ed33452d736442cfbf",
     "Overfull/RobustRealization.lean": "153886239a2a83f1a5418a50f9920b521260800cc94e19b92bf381b6a0a25601",
     "Overfull/RobustStability.lean": "035170a1afb8e93305f41d87df2abc11ee66fe659d778527b0b33e8b05d5d086",
+    "Overfull/SafePrescription/Boundary.lean": "03544086a9ba7b4e0829499ba096d3d232d5b5d9a3c99b865479662d865d039d",
+    "Overfull/SafePrescription/Classification.lean": "951ac2adfaad3abbca967ce205a76903d9494cfaaebbb5d47e6776d448acee9a",
+    "Overfull/SafePrescription/Construction.lean": "c308921fdfc8c382affd63bb16e952e9f517cc07c83df69b3c0c832a1214750e",
+    "Overfull/SafePrescription/Counting.lean": "b706b1e1ad73f0230ba1066d030155bc056412597b039bcde74caa51f0499407",
+    "Overfull/SafePrescription/Parameters.lean": "0cbf96c2e2c69861b1bcbe6c28e12b339988451b72d2e899131efcc83ab44d70",
+    "Overfull/SafePrescription/Residual.lean": "2e59869424ad91909fdcbd0b6e39aa1e36308a12bc1b820ee83e1efe6346552d",
+    "Overfull/SafePrescription/Sampling.lean": "5c0b871137bc1508e4b025553dc94cc3073ac8e7c3e53102c838372c95bbac43",
+    "Overfull/SafePrescription.lean": "bf9262050bb8efcf5d60c659fd6726dcae4893b4427177b8a83f49c7751e2782",
     "Overfull/Sharpness/ColoringObstruction.lean": "7eef79b078db67d764486276a01d3c2a91fc80c8dc0068727754c271c0d77dea",
     "Overfull/Sharpness/DeletedPetersen.lean": "6e9da48bc99813da9f0136ad636ffbc74e71eed6d8812d33c6da765e4313c149",
     "Overfull/Sharpness/Encoding.lean": "788b46430ee57baaa3700e1c769b17f0073dd59ed0ef54715b4965961b0c3f0f",
@@ -42141,15 +44889,15 @@
     ".github/workflows/lean.yml": "bf5cd8ff5d9c54814b5a0a2a98732a90dae5e4d1a7268954fe9deba218753e83",
     "CIRCULATION_NOTICE.txt": "c8913077edf119bdb2ff790f24c3a27188a14b37d3cbc03121c917aee157a419",
     "LICENSE_BMATCHING.txt": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
-    "README.md": "32327ba468b7c4657a460ec2a4cba974a0e9f1638c512091069883a28b07781f",
+    "README.md": "d634ba2b53e6a1e4fc2a64be111d0b19a7d80373a3a6da28119e0a24ed36f5ea",
     "THIRD_PARTY_NOTICES.txt": "9002356e653c2943115b2feeba04713b005074a3d7c283bd894a47d8ca63dcd7",
     "docs/adaptive-packing.md": "eed3d11bde80300511bfa046813661c1617bb0ddc4c131efbed9576a33e53c7e",
     "docs/auxiliary-completion.md": "3c4787a8cef05bcca13c19e7293591878c1ba5a069e0ef22c34907f8b1030453",
     "docs/bmatching-source.json": "2cb433874d3b356dd6ff933d504fa6c61886d255c739eec7da1e870c9bf0dcf8",
     "docs/circulation-source.json": "2b3d7bdf1b05c6b8445e2961efe99fe3eb6100a9c08c1eb3af8bbb4fd28350aa",
-    "docs/coverage.json": "1b69f2c01ac22de4104f9340ecc241cb3d135855e86248ffebd30b50cd993c97",
-    "docs/main-theorem.md": "545d07723b0b12bb55d08bb5c6d18f8273a0247e394993f5f13958a4753e4264",
-    "docs/manuscript-source.json": "cb7570e25266bc566a243b4ef9bb110f53a073f8416572de15a983d288f09fca",
+    "docs/coverage.json": "3fd0d0ecd68f4b73b62e2886ff81c69233d3bec51e6486a72c48d200d8773d50",
+    "docs/main-theorem.md": "79eace4a90c6a30a931ffd144440750d7ad37ba612e3ea77f91b4131a0796bbc",
+    "docs/manuscript-source.json": "9decf690e8df56791a25e674c4b15c63667947ae4832e93f3e3218ba22479202",
     "docs/matching-repair.md": "29d0c587ba983a568eb98b40484e531a90e0f96fbd4dc98069bfd12214481cca",
     "docs/prescribed-matching.md": "9d37e1f0b7df42dd65fb379d51fb7604793440b56c5adac307e95a486dc510f5",
     "docs/replacement.md": "5643ebc060c37602f7e160f76c021e5cc7edfb576b2151f45248bfcf6ca5484e",
@@ -42160,7 +44908,7 @@
     "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
     "patches/vizing-lean-4.24.patch": "1f50d4aa24ee428032d14bb90c1705df9906ab90581bf0046eedf49bf3d70c76",
     "scripts/setup_vizing.py": "42ab626c3d40e8012aeed8d90b08a32757c3c5ee844b52ee2dc704e89b276094",
-    "scripts/verify.py": "85cc7bdb049ab273d160ae7e522b9db79fa2727e3d6a7841a74e97643129ed0d"
+    "scripts/verify.py": "77408bcda925cef29fd4ccc35125770aa5e15270ab2a5a2d9c9279d46ed5b89d"
   },
   "scope": "The named supporting results and the full sharpness results are proved by audited declarations. Vizing's bound is proved. The final implication to the main theorem still assumes LargeCriticalExclusion, which is not proved. A successful build is not a verification of the main theorem or the full manuscript."
 }

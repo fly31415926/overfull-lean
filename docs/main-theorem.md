@@ -118,6 +118,7 @@ The following results are separate from that unproved structural exclusion.
 | One actual ordinary-packing round preserves capacity and the geometric total-load bound | `Overfull.OrdinaryPackingRound.exists_round` |
 | A fixed ordinary-packing rule preserves the invariant for every admissible adaptive policy | `Overfull.OrdinaryPackingStrategy.exists_rule` |
 | Full adaptive ordinary packing, with uniform constants, actual matchings, and robust expansion after every prefix | `Overfull.adaptive_ordinary_packing` |
+| One fixed rule works at every stopping prefix, with admissibility required only for inputs already presented | `Overfull.adaptive_ordinary_packing_prefix` |
 | An actual balanced robust cut crosses every edge of the supplied matching | `Overfull.PairedCut.exists_matching_cut` |
 | The bipartite outcome yields actual equal retained sides of size at least `n/3` and the stated crossing-degree bounds | `Overfull.BalancedCore.balanced_core_of_bipartite_outcome` |
 | An actual robust core replacement retains the exterior and preserves the maximum-degree bound and every overfull-set inequality | `Overfull.robust_core_replacement` |
@@ -135,6 +136,9 @@ The following results are separate from that unproved structural exclusion.
 | All three matching-deletion probability bounds, including all one-vertex changes of an even set | `Overfull.MatchingProbability.Distribution.odd_failure_probability`, `even_toggles_failure_probability`, and `family_failure_probability` |
 | The same three probability bounds for loopless multigraphs, with the actual deleted-edge graph identified | `Overfull.MultigraphMatchingProbability.Distribution.odd_failure_probability`, `even_toggles_failure_probability`, and `family_failure_probability` |
 | An actual perfect matching retains all but at most `135720` prescribed exceptional matching edges | `Overfull.prescribed_exceptional_core_matching` |
+| A prescribed exceptional matching is retained apart from at most `2q₀+4c₀` edges in a perfect matching whose deletion leaves no overfull set, with uniform constants | `Overfull.safe_prescription` |
+| An actual deletion of at most one minority vertex preserves the core partition and places each surviving core on one cut shore | `Overfull.ForeignRefinement.minority_shore_deletion` |
+| Actual bipartite host edges of degree at most `3h₀/4` partition into `floor(3h₀/4)` matching subgraphs | `Overfull.ForeignColoring.exists_three_quarter_color_classes` |
 | Signed flows with the balanced bound `d/λ` and unequal-side bound `3θ/(2c−1)` | `Overfull.dense_signed_flow` and `Overfull.dense_unequal_flow` |
 | The exact equivalence between extending the prescribed edge-copy coloring and decomposing the encoded graph into triangles | `Overfull.dense_encoding` |
 | Positive, exactly balanced probabilities on all six directed pairs, with constants depending only on the density parameter | `Overfull.dense_reserve` |
@@ -214,6 +218,10 @@ consists of actual edge-disjoint matchings perfect outside their presented
 sets, and its residual graph has robust expansion in the prescribed range.
 The parameter choices, one-round construction, and adaptive induction are
 separately checked.
+The finite-prefix theorem also permits stopping at any admissible prefix
+without imposing conditions on future inputs. Its one rule precedes both
+the adversary and the stopping index, and its local feasibility is supplied
+by the proved round construction.
 
 Lemma 2.22 is also complete. It constructs the actual even regular
 completion with the least prescribed auxiliary order, preserves the
@@ -260,8 +268,37 @@ the required component correspondences, parity transfer, and all Tutte
 inequalities before constructing the perfect matching. See
 [`prescribed-matching.md`](prescribed-matching.md).
 
-There are complete proofs of 37 of the 69 numbered assertions. The remaining
-32 include the main theorem and the structural exclusion on which its
+Lemma 4.9 is complete as a one-step result. For a fixed marked-set bound
+`t₀`, its error tolerance and order threshold precede the graph and actual
+exceptional order. Sampling constructs a perfect matching that preserves
+the tested cuts and uses at most `q₀ = 4096(t₀+6)` boundary edges. The
+boundary is fixed exactly. A global application of Lemma 4.8 and actual
+compression give a retained partial matching losing at most `2q₀+c₀`
+prescribed edges, where `c₀ = 135720`. Completion inside the actual cores
+retains that partial matching and satisfies the manuscript allowance
+`c₁ = 2q₀+4c₀`. The small-cut classification is proved from the group
+condition and actual robust cores; it rules out every overfull set in the
+residual. The iterative refinement of Proposition 4.10 remains unverified.
+
+Three supporting components for Proposition 4.10 are checked: the preceding
+finite-prefix packing rule, an actual minority-shore deletion of at most one
+core vertex, and actual König color classes with the exact
+`floor(3h₀/4)` bound. The minority deletion uses the supplied minority-sum
+inequality; the coloring uses actual bipartiteness and the degree bound.
+The foreign-core assignment, refinement transitions, and adaptive phase
+assembly remain unproved. These components do not change the number of
+fully verified assertions.
+
+Lemma 4.11 is complete as a one-step result. For each exceptional-centered
+star with more than `11*2^(t+4)` edges, it constructs a perfect matching
+meeting that star, with an actual compressed matching and forest projection
+as intermediate witnesses. Its deletion leaves no overfull set at the
+remaining degree. The range and error tolerance are chosen before `t`;
+only the graph-order threshold may depend on `t`. The repeated forcing
+and absorption needed for Proposition 4.12 remain unverified.
+
+There are complete proofs of 39 of the 69 numbered assertions. The remaining
+30 include the main theorem and the structural exclusion on which its
 checked reduction depends.
 
 ## What remains
