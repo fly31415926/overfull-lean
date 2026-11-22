@@ -1,20 +1,27 @@
-# Ordinary-core factorization: constructive reduction to the bipartite case
+# Ordinary-core factorization: general reduction and complete one-apex case
 
-**Lemma 4.2 is not yet fully verified.** Its ordinary-core preprocessing
-is now constructed by
-`Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction`.
-The remaining formalization is factorization of the resulting actual
-regular multigraph through its bipartite robust core, as required by
-Theorem 6.1. Lemma 4.14 and the main theorem also remain unverified.
-The current completed numbered-assertion count is **45 of 69**, with 24
-remaining, after the [complete proof of Lemma 4.15](four-odd-decomposition.md).
+**The general Lemma 4.2 remains incomplete. The one-apex specialization
+needed for Lemma 4.14 is now fully proved.**
+`Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction`
+constructs the general ordinary-core preprocessing. The new
+[`Overfull.OneCore.exists_uniform_one_apex_factorization`](../Overfull/OneCore/Factorization.lean)
+adds actual neighbor-pairing and palette choices, retains a two-shore
+incidence supply at the moved ordinary vertex, and applies the new
+constructed two-apex cleanup.
 
-The subsequent [reserved-remainder continuation](residual-factorization.md)
+This specialization completes the prescribed boundary extension in
+[Lemma 4.14](boundary-extension.md), bringing the numbered inventory to
+**46 of 69**, with **23** remaining. The full Lemma 4.2, Corollary 4.6,
+Theorem 6.1, and the main theorem remain unverified.
+
+The earlier [reserved-remainder continuation](residual-factorization.md)
 constructs the coupled numerical parameters and proves the complete final
 packing stage through an exact oriented regular core. The missing input
 remains the spanning setup, special path systems and robust absorber that
 produce the required reservation and support whole-host reconstruction.
-The new supporting results do not complete Lemma 4.2.
+Those supporting results do not complete Lemma 4.2. The latest one-apex
+proof instead supplies the particular factorization needed by the boundary
+extension without the general Section 6 absorber.
 
 This is a formalization status, not a finding of a defect in the
 manuscript's mathematical proof. The source proof invokes Theorem 6.1;
@@ -199,7 +206,89 @@ The first-half construction gives `ε ≤ p` and `δ ≤ pα/32`. Since
 `α ≤ 1`, these imply `a' ≤ 4pm`, hence both `a' ≤ ηm/2` and
 `2a' < k-h`. All choices occur before the input graph.
 
-## Module map and remaining obligation
+## Complete one-apex specialization
+
+The public theorem
+[`OneCore.exists_uniform_one_apex_factorization`](../Overfull/OneCore/Factorization.lean)
+uses `0 < α ≤ 1` and `0 < ν ≤ τ ≤ α/8`. It chooses `ε > 0` and `m₀`
+before an arbitrary finite loopless regular multigraph, its odd core,
+regular degree, error, and single exterior vertex. From
+
+```text
+Uᶜ = {z},
+degree_G(v) = k for every vertex,
+k ≥ α*U.card,
+0 ≤ a ≤ ε*U.card,
+degree_C(v) ≥ k-a,
+C.graph is an ordinary (ν,τ)-robust expander,
+```
+
+it constructs `Nonempty (G.EdgeColoring k)`. No original complementary
+coloring, selected coloring, or full residual coloring is an assumption.
+
+The proof moves a vertex `y` of the odd core outside and uses the checked
+`even_core_complement` construction. The remaining core is even and its
+exterior is exactly `{z,y}`. Two additional choices strengthen the
+ordinary preprocessing for this graph:
+
+- [NeighborPairing.lean](../Overfull/OneCore/NeighborPairing.lean) pairs the
+  moved vertex's original simple-core neighbors internally, apart from
+  at most one vertex. Every cut splitting those prescribed pairs gives
+  both shores at least half that neighbor count, rounded down.
+  [MovedNeighbors.lean](../Overfull/OneCore/MovedNeighbors.lean) connects
+  the counted neighbors to actual original incidence copies.
+- [ApexPalette.lean](../Overfull/OrdinaryFactorization/ApexPalette.lean)
+  chooses balanced numbers of first-group labels from the moved vertex's
+  two shore rows. [ApexChoices.lean](../Overfull/OneCore/ApexChoices.lean)
+  proves the exact residual incidence identity and a positive linear
+  supply in both rows. The core matching completions remove no extra
+  copies at this exterior vertex.
+
+The public `exists_uniform_first_half_with_choices` and
+`exists_uniform_bipartite_reduction_with_choices` preserve those actual
+choices. The earlier general APIs remain available as their special
+cases. [OneCore/Reduction.lean](../Overfull/OneCore/Reduction.lean) composes
+the moved-core bounds, pair construction, palette choice, and residual
+bounds with uniform constants. [ResidualShores.lean](../Overfull/OneCore/ResidualShores.lean)
+identifies the exact pulled-back crossing graph and the same ambient
+shore images appearing in the retained-incidence estimates.
+
+The output is now sufficient for
+[`TwoApexFactorization.exists_uniform_two_apex_factorization`](../Overfull/TwoApexFactorization/Theorem.lean).
+That theorem has exactly two exterior vertices and requires a positive
+linear supply from one of them into both core shores. It constructs a
+selected graph containing every noncore internal copy and all apex copies
+incompatible with an augmented bipartition, with equal selected degree
+at the two apices. The multigraph fan criterion supplies its coloring;
+equal selected side-degree sums permit balanced coloring. Robust
+bipartite packing completes its small footprints. The actual whole
+remaining host is then bipartite and regular, so König colors it.
+This conclusion is stronger than merely obtaining a bipartite core or a
+coloring of its complement.
+
+The parameter order also remains uniform. The one-core reduction first
+fixes `ν₁,τ₁,ξ` with `τ₁ ≤ α/512`. The two-apex theorem is applied with
+
+```text
+density fraction = α/4,
+apex supply fraction = α/100,
+robust neighborhood parameter = min(ξ/2,4τ₁),
+robust range = 4τ₁.
+```
+
+Its required error tolerance is passed to the ordinary reduction before
+that reduction's reserve and coloring parameters are chosen. Its minimum
+side order is passed before the final original order threshold is chosen.
+The resulting residual coloring is supplied to the actual reconstruction
+function, yielding the full coloring of the one-apex host.
+
+Finally, `Overfull.boundary_extension` applies this theorem to the exact
+contraction constructed by the earlier boundary reduction. Its palette
+restoration preserves every original prescribed boundary label. The
+[boundary-extension notes](boundary-extension.md) give the complete
+statement and proof map.
+
+## Module map and remaining general obligation
 
 | Construction | Main modules |
 | --- | --- |
@@ -211,15 +300,27 @@ The first-half construction gives `ε ≤ p` and `δ ≤ pα/32`. Since
 | Actual residual core, degrees, palettes, and coloring | `OrdinaryFactorization/{Residual,Palette,ResidualColoring,ResidualGeometry,ResidualInternal,ResidualCore,ResidualComplement}` |
 | Uniform public reduction | `OrdinaryFactorization/Reduction` |
 
-The next factorization obligation is Theorem 6.1 (`ext:thm:robust`), or
-a sufficient specialization covering the actual residuals above. The
-whole residual multigraph may have same-side and exceptional edges;
-König's theorem for bipartite multigraphs does not supply its factorization.
-The manuscript's robust decomposition and Hamilton decomposition inputs
-to Theorem 6.1 remain separate formalization work.
+For the full Lemma 4.2, the remaining factorization obligation is Theorem
+6.1 (`ext:thm:robust`), or another proved result covering every residual
+configuration permitted by that lemma. The general residual can have
+same-side edges and an arbitrary bounded set of exceptional vertices.
+The two-apex cleanup above does not cover all those inputs: it uses exactly
+two exterior vertices and a proved two-shore incidence supply at one of
+them. The generic preprocessing theorem does not automatically produce
+that additional structure for an arbitrary bounded exceptional set.
 
-After that obligation is proved, its constants must be composed with
-this reduction, and the resulting ordinary-core factorization must be
-composed with the one-apex reduction and the boundary-extension
-construction to finish Lemma 4.14. Supporting constructions alone do
-not increase the completed numbered-assertion count.
+The source's spanning bi-setup, special path systems, robust absorber,
+and final reconstruction for Theorem 6.1 remain separate formalization
+work. The checked reserved-remainder stage is still available once its
+actual reservation and colored exterior inputs are constructed. Its
+existence theorem does not by itself construct those inputs.
+
+The full fixed-pattern and bounded-input results, including Corollary
+4.6, therefore remain open. Proposition 4.16 still needs its all-even and
+mixed-parity terminal factorizations and the complete joining-edge
+assembly. The new one-apex theorem and full Lemma 4.14 resolve one
+specific application; they do not establish every terminal case.
+
+Supporting constructions are registered separately from complete numbered
+assertions. This checkpoint adds the full Lemma 4.14, producing the current
+**46/69** count; the general ordinary-core Lemma 4.2 is not counted.

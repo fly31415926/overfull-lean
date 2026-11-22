@@ -1239,7 +1239,13 @@
     "four_odd_actual_surplus_circuits": "Overfull.FourOdd.Decomposition.surplus_circuit",
     "four_odd_complete_matching_case": "Overfull.FourOdd.exists_matching_decomposition",
     "four_odd_complete_star_case": "Overfull.FourOdd.exists_star_decomposition",
-    "four_odd_arbitrary_label_forest": "Overfull.FourOdd.exists_joining_decomposition"
+    "four_odd_arbitrary_label_forest": "Overfull.FourOdd.exists_joining_decomposition",
+    "boundary_extension_complete": "Overfull.boundary_extension",
+    "one_apex_complete_factorization": "Overfull.OneCore.exists_uniform_one_apex_factorization",
+    "two_apex_complete_factorization": "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization",
+    "one_apex_uniform_supplied_reduction": "Overfull.OneCore.exists_uniform_two_apex_reduction",
+    "bernoulli_variance_sensitive_bounded_differences": "Overfull.BernoulliDifferences.exponential_moment_le",
+    "bernoulli_two_sided_tail": "Overfull.BernoulliDifferences.two_sided_tail"
   },
   "lean_build_passed": true,
   "axiom_audit_passed": true,
@@ -1676,7 +1682,7 @@
     "Classical.choice",
     "Quot.sound"
   ],
-  "verified_declaration_count": 11056,
+  "verified_declaration_count": 11318,
   "declaration_count_includes_generated_support_lemmas": true,
   "verified_declarations": [
     {
@@ -9915,6 +9921,231 @@
       ],
       "module": "Overfull.Probability.Bernoulli",
       "name": "Overfull.Bernoulli.weight_nonneg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.CoordinateBound.neg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.bernoulli_centered_moment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.coordinateBound_mean_last"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.coordinateBound_of_boolean_update"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.coordinateBound_reindex"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.exp_quadratic_unit"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.exponential_moment_fin"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.exponential_moment_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.exponential_moment_le_of_budget"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.lower_tail"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.mass_nonneg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.mean_bernoulli_centered_moment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.mean_bool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.mean_reindex"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.mean_reindex._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.mean_snoc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.sum_mass"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.two_sided_tail"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.two_sided_tail_of_budget"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.upper_tail"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.varianceBudget.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.varianceBudget_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.varianceBudget_nonneg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.weight_reindex"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.BernoulliDifferences",
+      "name": "Overfull.BernoulliDifferences.weight_snoc"
     },
     {
       "axioms": [
@@ -58986,8 +59217,106 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_balancing_pairing"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_balancing_pairing._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_balancing_pairing._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_pairing_meeting_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_pairing_with_internal_pairs"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_pairing_with_internal_pairs._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_pairing_with_internal_pairs._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_pairing_with_internal_pairs._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_pairing_with_internal_pairs._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ApexChoices",
+      "name": "Overfull.OneCore.apexSupply_residual_rows"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.OneCore.Complement",
       "name": "Overfull.OneCore.boundary_incidence_le_complement"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.comap_cutSidesEquiv_eq"
     },
     {
       "axioms": [
@@ -59135,6 +59464,24 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.cutSidesEquiv_leftShore"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.cutSidesEquiv_rightShore"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.OneCore.Cuts",
       "name": "Overfull.OneCore.cutSize_singleton"
     },
@@ -59193,6 +59540,33 @@
     {
       "axioms": [
         "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ApexChoices",
+      "name": "Overfull.OneCore.exists_apexSupply"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ApexChoices",
+      "name": "Overfull.OneCore.exists_apexSupply._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ApexChoices",
+      "name": "Overfull.OneCore.exists_apexSupply._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
         "Classical.choice",
         "Quot.sound"
       ],
@@ -59207,6 +59581,67 @@
       ],
       "module": "Overfull.OneCore.Cuts",
       "name": "Overfull.OneCore.exists_one_exterior_cut_threshold._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.Factorization",
+      "name": "Overfull.OneCore.exists_uniform_one_apex_factorization"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.Reduction",
+      "name": "Overfull.OneCore.exists_uniform_two_apex_reduction"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.Reduction",
+      "name": "Overfull.OneCore.exists_uniform_two_apex_reduction._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.Reduction",
+      "name": "Overfull.OneCore.exists_uniform_two_apex_reduction._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.Reduction",
+      "name": "Overfull.OneCore.exists_uniform_two_apex_reduction._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.Reduction",
+      "name": "Overfull.OneCore.exists_uniform_two_apex_reduction._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.Reduction",
+      "name": "Overfull.OneCore.exists_uniform_two_apex_reduction._simp_1_6"
     },
     {
       "axioms": [
@@ -59228,12 +59663,89 @@
     },
     {
       "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.mem_movedNeighbors"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.mem_movedNeighbors._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.mem_movedNeighbors._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.mem_movedNeighbors._simp_1_3"
+    },
+    {
+      "axioms": [
         "propext",
         "Quot.sound",
         "Classical.choice"
       ],
       "module": "Overfull.OneCore.Complement",
       "name": "Overfull.OneCore.move_one_complement_colorable"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.movedNeighbors.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.movedNeighbors_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.movedNeighbors_card._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.movedNeighbors_shore_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.movedNeighbors_shore_le._simp_1_1"
     },
     {
       "axioms": [
@@ -59322,6 +59834,105 @@
       ],
       "module": "Overfull.OneCore.Complement",
       "name": "Overfull.OneCore.one_apex_complement_colorable"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShoreEquiv._proof_1"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShoreEquiv._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShoreEquiv._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShoreEquiv._proof_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShore_balance"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShore_bipartite"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShore_comap"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShore_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShore_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShore_robust"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShore_robust_of_reserve"
     },
     {
       "axioms": [
@@ -60107,6 +60718,15 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.OneCore.ApexChoices",
+      "name": "Overfull.OrdinaryFactorization.FirstHalfData.remaining_apex_supply"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.OrdinaryFactorization.FirstHalfData",
       "name": "Overfull.OrdinaryFactorization.FirstHalfData.remaining_degree_lower"
     },
@@ -60372,6 +60992,24 @@
       ],
       "module": "Overfull.OrdinaryFactorization.MatchingBridge",
       "name": "Overfull.OrdinaryFactorization.colorMatching_verts"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.colorsOn_rows_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.complement_apex_row_card"
     },
     {
       "axioms": [
@@ -60805,6 +61443,42 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_labels_preserving_rows"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_labels_preserving_rows._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_labels_preserving_rows._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_labels_with_range"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.OrdinaryFactorization.ResidualComplement",
       "name": "Overfull.OrdinaryFactorization.exists_residualCrossingComplement_coloring"
     },
@@ -60825,6 +61499,46 @@
       ],
       "module": "Overfull.OrdinaryFactorization.ResidualComplement",
       "name": "Overfull.OrdinaryFactorization.exists_residualCrossingComplement_coloring_preserving_original"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_two_row_labels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_two_row_labels._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_two_row_labels._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_two_row_labels._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_two_row_labels._simp_1_4"
     },
     {
       "axioms": [
@@ -60852,6 +61566,33 @@
       ],
       "module": "Overfull.OrdinaryFactorization.Reduction",
       "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_choices"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_choices._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_choices._proof_1_2"
     },
     {
       "axioms": [
@@ -60930,6 +61671,75 @@
       ],
       "module": "Overfull.OrdinaryFactorization.FirstHalf",
       "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half._simp_1_9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._proof_1_10"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._simp_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._simp_1_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._simp_1_9"
     },
     {
       "axioms": [
@@ -62052,6 +62862,24 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.residualGraph.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.residualGraph_apex_row_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.OrdinaryFactorization.Residual",
       "name": "Overfull.OrdinaryFactorization.residualGraph_degree_add"
     },
@@ -62126,6 +62954,32 @@
       ],
       "module": "Overfull.OrdinaryFactorization.ResidualColoring",
       "name": "Overfull.OrdinaryFactorization.restrictionPartialColoring_eq_none._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.row_selected_colors_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.row_selected_colors_card._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.row_selected_colors_card._simp_1_3"
     },
     {
       "axioms": [
@@ -64362,6 +65216,15 @@
       ],
       "module": "Overfull.PairedCut.Sides",
       "name": "Overfull.PairedCut.cutSidesEquiv._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.PairedCut.cutSidesEquiv.congr_simp"
     },
     {
       "axioms": [
@@ -82682,6 +83545,1290 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.classes_disjoint"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.classes_isMatching"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.classes_isPerfectMatching"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.edgeColorable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.edgeColorable._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.edgeColorable._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.edgeColorable._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.edgeColorable._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.edgeColorable._simp_1_5"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.index._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.index_mem"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.isMatching"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.mem_used"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.mem_used._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.mem_used._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.mem_used._simp_1_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.mk.inj"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.mk.injEq"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.selected_used"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.used.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.usedColoring._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.used_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.used_degree._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.used_degree._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.used_degree._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.used_degree._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.used_degree._simp_1_5"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.verts"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.apex_core_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.apex_core_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.apex_degree_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.apex_degree_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.core_complement"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.core_survives"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.degree_le_complement"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.internal_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.internal_eq._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.internal_eq._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.mk.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.mk.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.outside_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.outside_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_bipartite"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_cross"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_exterior_cross"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_internal_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_internal_eq._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_internal_eq._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_side"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_side._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_side._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.same_shore_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.same_shore_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.subset_complement"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.xy_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.xy_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.apex_core_counts_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.apex_core_counts_eq._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.augmented_shore_compl"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.augmented_shore_compl._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.augmented_shore_compl._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.augmented_shore_compl._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.augmented_shore_compl._simp_1_4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.colorCopies.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.colorCopies_disjoint"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.colorCopies_isMatching"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.colorCopies_subset"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.completionOfPacking._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.completionOfPacking._proof_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.completionOfPacking._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.core_copies_cross"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.core_copies_cross._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.degree_sums_of_crossing"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.degree_sums_of_crossing._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.exists_balanced_selection_coloring"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.exists_balanced_selection_coloring._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.exists_balanced_selection_coloring._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.exists_selection"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.exists_selection._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.exists_selection._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.exists_selection._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.exists_selection._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.exists_selection._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Packing",
+      "name": "Overfull.TwoApexFactorization.exists_uniform_selected_coloring"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Packing",
+      "name": "Overfull.TwoApexFactorization.exists_uniform_selected_coloring._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Theorem",
+      "name": "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Theorem",
+      "name": "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Theorem",
+      "name": "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Theorem",
+      "name": "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Theorem",
+      "name": "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization._simp_1_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.footprint.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.footprint_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.footprint_card._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.footprint_card._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.footprint_iff_incident"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.internal_two_apices_bipartite"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.internal_two_apices_bipartite._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.internal_two_apices_bipartite._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.leftEmbedding._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.leftEmbedding.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.leftShore.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.leftShore_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.leftShore_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.left_covered_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.left_covered_card._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.left_covered_card._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.left_covered_card._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.left_covered_card._simp_1_5"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_colorCopies"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_colorCopies._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_colorCopies._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_colorCopies._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_colorCopies._simp_1_4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_footprint"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_footprint._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_footprint._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_footprint._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.mem_leftShore"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.mem_leftShore._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.mem_rightShore"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.mem_rightShore._simp_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_sideFootprint"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_sideFootprint._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_sideFootprint._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.rightEmbedding._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.rightEmbedding.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.rightShore.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.rightShore_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.rightShore_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.right_covered_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.right_covered_card._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.right_covered_card._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.right_covered_card._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.right_covered_card._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.selected_degree_sums"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.selected_degree_sums._proof_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.selected_degree_sums._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.selection_core_degree_sums"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.selection_core_degree_sums._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.shores_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.shores_union"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.sideFootprint.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.sideFootprint_card"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.sideFootprint_load"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.side_edges_sum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.side_edges_sum._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.Vizing.Graph",
       "name": "Overfull.VizingAdapter.degree_eq"
     },
@@ -83444,6 +85591,15 @@
       ],
       "module": "Overfull.Dense.SignedFlow",
       "name": "Overfull.bipartite_signed_flow_of_cut._simp_1_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundaryExtension.Full",
+      "name": "Overfull.boundary_extension"
     },
     {
       "axioms": [
@@ -93268,6 +95424,24 @@
     {
       "axioms": [
         "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.ApexChoices",
+      "name": "_private.Overfull.OneCore.ApexChoices.0.Overfull.OneCore.row_budget"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.Factorization",
+      "name": "_private.Overfull.OneCore.Factorization.0.Overfull.OneCore.bipartite_robust_change_instances"
+    },
+    {
+      "axioms": [
+        "propext",
         "Quot.sound",
         "Classical.choice"
       ],
@@ -94086,6 +96260,121 @@
       ],
       "module": "Overfull.SparseColoring",
       "name": "_private.Overfull.SparseColoring.0.Overfull.Multigraph.incident_two_endpoints"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "_private.Overfull.TwoApexFactorization.Completion.0.Overfull.TwoApexFactorization.Completion.no_common"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.edgesTo_mono"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.four_piece_incidence"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.four_piece_incidence._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.four_piece_incidence._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.four_piece_to_core"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.four_piece_to_core._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.four_piece_to_core._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.internal_endpoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.internal_insert_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.other_apex_not_incident"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.outside_edgesTo"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.parallel_symm"
     },
     {
       "axioms": [
@@ -95971,6 +98260,7 @@
     "Overfull.BoundaryExtension.Colors",
     "Overfull.BoundaryExtension.Contraction",
     "Overfull.BoundaryExtension.ContractionCuts",
+    "Overfull.BoundaryExtension.Full",
     "Overfull.BoundaryExtension.Packing",
     "Overfull.BoundaryExtension.Palette",
     "Overfull.BoundaryExtension.Reassembly",
@@ -96162,8 +98452,15 @@
     "Overfull.MultigraphFanApplications",
     "Overfull.MultigraphGreedy",
     "Overfull.MultigraphMatchingProbability",
+    "Overfull.OneCore.ApexChoices",
     "Overfull.OneCore.Complement",
     "Overfull.OneCore.Cuts",
+    "Overfull.OneCore.Factorization",
+    "Overfull.OneCore.MovedNeighbors",
+    "Overfull.OneCore.NeighborPairing",
+    "Overfull.OneCore.Reduction",
+    "Overfull.OneCore.ResidualShores",
+    "Overfull.OrdinaryFactorization.ApexPalette",
     "Overfull.OrdinaryFactorization.Assembly",
     "Overfull.OrdinaryFactorization.ColorRepair",
     "Overfull.OrdinaryFactorization.CutReserve",
@@ -96243,6 +98540,7 @@
     "Overfull.PrescribedMatching.Selection",
     "Overfull.PrescribedMatching.ShortPaths",
     "Overfull.Probability.Bernoulli",
+    "Overfull.Probability.BernoulliDifferences",
     "Overfull.Probability.CappedMean",
     "Overfull.Probability.Concentration",
     "Overfull.Probability.Hypergeometric",
@@ -96313,6 +98611,12 @@
     "Overfull.TutteBerge",
     "Overfull.TutteBerge.Graph",
     "Overfull.TutteBerge.Matching",
+    "Overfull.TwoApexFactorization.Balance",
+    "Overfull.TwoApexFactorization.Completion",
+    "Overfull.TwoApexFactorization.Packing",
+    "Overfull.TwoApexFactorization.Selection",
+    "Overfull.TwoApexFactorization.Shores",
+    "Overfull.TwoApexFactorization.Theorem",
     "Overfull.TwoColorEndpoints",
     "Overfull.TwoColorSwitch",
     "Overfull.Vizing.Coloring",
@@ -96346,7 +98650,7 @@
     "Vizing.Path.Invert",
     "Vizing.Path.PathEdges"
   ],
-  "fully_verified_numbered_assertion_count": 45,
+  "fully_verified_numbered_assertion_count": 46,
   "fully_verified_numbered_assertions": [
     "2.2",
     "2.3",
@@ -96380,6 +98684,7 @@
     "4.11",
     "4.12",
     "4.13",
+    "4.14",
     "4.15",
     "5.3",
     "5.4",
@@ -96408,8 +98713,15 @@
     "module_count": 8,
     "numbered_assertions_completed": 0
   },
+  "boundary_extension_declaration_map": {
+    "path": "verification/boundary-extension-full-declarations.json",
+    "sha256": "2508f4daec0c1490546f3972e9b6d07e86500162964d6a2a5e6c166471457511",
+    "verified_declaration_count": 269,
+    "module_count": 17,
+    "manuscript_number": "4.14"
+  },
   "source_sha256": {
-    "Overfull.lean": "010d10d0a3b1426aac88cbab1008d184fad665bdc2d8054248a6c9dc69f0c379",
+    "Overfull.lean": "d14622b549fd29ee0cb9b2af3cd3c5b67f5c4c33e39dcecfedac62011f04b484",
     "Audit.lean": "76886fd9261a3a7b07660f9a434272c0347130a4013cf57da6e1761a34fc6603",
     "Overfull/Absorption/Bounded.lean": "722ca71ecdc9b0f4c17b400c32d51a284d9eac61211e1a52e448fcc8f5bb2f52",
     "Overfull/Absorption/Core.lean": "1f5f39cd8497918341bf336db7f1735b131c9f564077b158b7245fbb474a0946",
@@ -96510,10 +98822,11 @@
     "Overfull/BoundaryExtension/Colors.lean": "7de6eea33e139e3e5725d2c13aec9fb49a2386e140a6ecba84e4192a12d574ef",
     "Overfull/BoundaryExtension/Contraction.lean": "5ad451a33fb5abe63191aca85ca83ec6bca37e2496a23be7be8ebbf805313c80",
     "Overfull/BoundaryExtension/ContractionCuts.lean": "afee38226db9686c07dafbd2f2d14db4517de1c064a7474dec512b5c555085aa",
+    "Overfull/BoundaryExtension/Full.lean": "699c40739b67d47034d13c1d83a732d2b06de6576f38d052779238cefa0d5a54",
     "Overfull/BoundaryExtension/Packing.lean": "08c70716c809d2e0e0ae1f963dfa966f7eb780b9cd9b31f28da77c73aa854718",
     "Overfull/BoundaryExtension/Palette.lean": "bc91e7648f46b4a3b1061bacc6949975df2b7e6d0218797901b6baf2c3aba363",
     "Overfull/BoundaryExtension/Reassembly.lean": "6696505436beb63b90450dc02dc89d306efc72aba82dd8f0087de98c1fe64459",
-    "Overfull/BoundaryExtension/Reduction.lean": "914e022e8ecfb4b60bce84e77270929edfe12c2543c3943450998ff02a09a4e1",
+    "Overfull/BoundaryExtension/Reduction.lean": "7c102b110d7a11b8239b6f14f3a1298ea96b1c71f9983a60a58d9362fd6eb3c6",
     "Overfull/BoundaryExtension/Residual.lean": "6633328cb0b9a8ad564a42ffafb48a4fc3209ed2fb28933f0925010e9bb74460",
     "Overfull/BoundaryExtension/Result.lean": "5aa3ad6b186a1957f35404f7e77dd47be40d5e82d669ae79b18e8916fe8338fe",
     "Overfull/BoundaryExtension/SurvivingLabels.lean": "6b9c4cf0d547f2d1dd00ec05d093cbe270c55081daed02691cdc4e5a2b07f3cb",
@@ -96701,19 +99014,26 @@
     "Overfull/MultigraphFanApplications.lean": "4c351e024b6d515c77aab5d76f66f954200b0373cc35243b00f8092b01d95a2b",
     "Overfull/MultigraphGreedy.lean": "aeaadd9a5c1beef6c2825bf840b369e80f505767e33c043740c7c56b5f519473",
     "Overfull/MultigraphMatchingProbability.lean": "376fda0fa9f99763af1d638879f380e89d29ade6671d30f16445ce2911fec527",
+    "Overfull/OneCore/ApexChoices.lean": "f603fb89fb7ce1b337e44bc679f4a9cce118173e6467a2f2e6a296a66f66d298",
     "Overfull/OneCore/Complement.lean": "8b7a6bde5fb928d9adde64434f8b17c878053392407247e2ee4d38dfd8c920fd",
     "Overfull/OneCore/Cuts.lean": "4d35f610069561767c4028b49ba94e11c245d8ee7227bc6b17136e0b1762e9e6",
+    "Overfull/OneCore/Factorization.lean": "af5235ffb7a8fbf6930fd248f0df44a6e21a853c6339b20b2ae8498607f37840",
+    "Overfull/OneCore/MovedNeighbors.lean": "8256641c955095f29ae80cc3015ae39e019759349daa05207b5e8523c12056e3",
+    "Overfull/OneCore/NeighborPairing.lean": "f5f5d87bbd15c33e83e4827638dac771ec8aac99df3b29ff8caad8ec87de9eb0",
+    "Overfull/OneCore/Reduction.lean": "3578b3ec5b8b726ccd16870025e6fe484cc6f29617bb1fa947ce04f7a3dc6136",
+    "Overfull/OneCore/ResidualShores.lean": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c",
+    "Overfull/OrdinaryFactorization/ApexPalette.lean": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206",
     "Overfull/OrdinaryFactorization/Assembly.lean": "d307a695db2b35642bdc660c0bc5942f2a78f927d3fd3ec069a9c21da4d24919",
     "Overfull/OrdinaryFactorization/ColorRepair.lean": "0a2e508cd99b9b46698097fc3f318a8d186eb96c18ed0da36d9be59c62946b34",
     "Overfull/OrdinaryFactorization/CutReserve.lean": "a8ac33a5853400ccc9518699095f34abb172dbcc1a9b3ae0bbff29d03317ae92",
     "Overfull/OrdinaryFactorization/CutReserveBounds.lean": "ee62ec3688e68e424a54788415cbe6becd19d732707ab1315f357051e1b7d9f5",
     "Overfull/OrdinaryFactorization/ExteriorSelection.lean": "22dd0bc17962eed368b2e315aa2297b9c68e46de90a7c56bac16bb2e76cac2b5",
-    "Overfull/OrdinaryFactorization/FirstHalf.lean": "44b951a78514e9789361bbc2cebf602ac6d62338365489a066903b4aead47515",
+    "Overfull/OrdinaryFactorization/FirstHalf.lean": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468",
     "Overfull/OrdinaryFactorization/FirstHalfData.lean": "ded66042cafdaea4f3137692cb14f9265ab922d4f6bc9327d0360617e20fdb1d",
     "Overfull/OrdinaryFactorization/Geometry.lean": "53340a909c866bb9d979ec175c5b5de29a8375833eec72812e354101c720d76a",
     "Overfull/OrdinaryFactorization/MatchingBridge.lean": "8fe744fd8839eb010ba38736843ddc98f9e62d3ae6185b2a11061db4bdd2bb57",
     "Overfull/OrdinaryFactorization/Palette.lean": "b5a03d68600c41ff72991ee02cc6901ce8561bb42bf2a9a80df503dc2bf131a8",
-    "Overfull/OrdinaryFactorization/Reduction.lean": "83f9bc6cb21ce10bb85d4cb612fd608000ede621450e27fd5d20443ffee068bf",
+    "Overfull/OrdinaryFactorization/Reduction.lean": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a",
     "Overfull/OrdinaryFactorization/Residual.lean": "3cee5cca2089ec5b5d899daa48afb94e43942ee44a432392db3b1f274fbbbd00",
     "Overfull/OrdinaryFactorization/ResidualColoring.lean": "53369e65add4ab5ddc8d4d7eb7c7932bbe1a799bfd5b636a579cde813280875e",
     "Overfull/OrdinaryFactorization/ResidualComplement.lean": "4871a3535e524e9e1e5d4607adfc11ac746fc2561d9e5d3a3b1b6cdac74aebde",
@@ -96782,6 +99102,7 @@
     "Overfull/PrescribedMatching/ShortPaths.lean": "4c58288aa4fc6e76aa366e0bcbdf8d075b153f5e820cf4f46493bdce81aa0712",
     "Overfull/PrescribedMatching.lean": "cf2c9c25f603846bbdcf9f3845f3e08de087fd05d42af8e3756f473f10d989f1",
     "Overfull/Probability/Bernoulli.lean": "48b4000559dfd1d0280eb29ca92701dc06d60b93d5b8445eadda8b3b91643207",
+    "Overfull/Probability/BernoulliDifferences.lean": "2d8cae29f49f30a5ad8152a87fe07f98c7fc884a312795a5800c72abf5d24449",
     "Overfull/Probability/CappedMean.lean": "d2394d792d9182c5ebdb1b9536bc08a238a59335c4472d1852ae544b30676299",
     "Overfull/Probability/Concentration.lean": "397c0c522e51dba47f0e6d9ec987495842feb039c1fe95977fb07e64938a81ae",
     "Overfull/Probability/Hypergeometric.lean": "ff06ec34dfb98d9c989e408cacd3387041367d0b737384d4ba0d84310320a3e3",
@@ -96852,6 +99173,12 @@
     "Overfull/TutteBerge/Graph.lean": "6a5e4705f16a80197af063cd4e3db324f5719ad2cc392893af48425ac98469fc",
     "Overfull/TutteBerge/Matching.lean": "02b22c864d3ab335507fe4f4273cacd2f33e54523a0d11dbaae0eab77d3390d9",
     "Overfull/TutteBerge.lean": "867681a9c54742a8cd8cbac41ac3fa63da2506e20670a69b7c21413a5b9e47b4",
+    "Overfull/TwoApexFactorization/Balance.lean": "848701e2afb9e65add2adc935fa56c2b7398d02a24fa0a0c9e84e40f4f933adf",
+    "Overfull/TwoApexFactorization/Completion.lean": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759",
+    "Overfull/TwoApexFactorization/Packing.lean": "3d4e9d283c2a72a5c096c2a46763fec968d562de7144261fb1dabce6504159ee",
+    "Overfull/TwoApexFactorization/Selection.lean": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a",
+    "Overfull/TwoApexFactorization/Shores.lean": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776",
+    "Overfull/TwoApexFactorization/Theorem.lean": "f9893e26a750968ecfe07bf49b8e6e60a11e775ecbd74a2e2fee36ea206c4984",
     "Overfull/TwoColorEndpoints.lean": "7b9532e9a4784380dc45ff9a11aef648e4f8d3a0d00b08127007a021cacb3559",
     "Overfull/TwoColorSwitch.lean": "c6fc3f1f177057dedf993d8106a4b1a2958c9aea4a8f3c8b1f2a488afd9b344a",
     "Overfull/Vizing/Coloring.lean": "c148fa5edee576949c76306d421c599ae9c9be41c7559d8963d2ed0f0f2e9923",
@@ -96862,7 +99189,7 @@
     ".github/workflows/lean.yml": "bf5cd8ff5d9c54814b5a0a2a98732a90dae5e4d1a7268954fe9deba218753e83",
     "CIRCULATION_NOTICE.txt": "c8913077edf119bdb2ff790f24c3a27188a14b37d3cbc03121c917aee157a419",
     "LICENSE_BMATCHING.txt": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
-    "README.md": "a93835fe6e37ed78c886eab21f648cbf82a98bea5aa30e553bb60c8d9c5eae7a",
+    "README.md": "2e7f27060ad64074c3894dd65c373733da4524c630e9e60031cb9ba592c0569e",
     "THIRD_PARTY_NOTICES.txt": "9002356e653c2943115b2feeba04713b005074a3d7c283bd894a47d8ca63dcd7",
     "docs/adaptive-packing.md": "eed3d11bde80300511bfa046813661c1617bb0ddc4c131efbed9576a33e53c7e",
     "docs/auxiliary-completion.md": "3c4787a8cef05bcca13c19e7293591878c1ba5a069e0ef22c34907f8b1030453",
@@ -96874,9 +99201,11 @@
     "docs/bipartite-simultaneous-selection.md": "91163e8891b6ea25105d8dd53102c663941212c06f644b7fb8f5b50bcfefdd83",
     "docs/bipartite-two-families.md": "c09e6b7da1b39489713d0dab147b2244888bef9fc60a7f087f9bb3948bd7ace4",
     "docs/bmatching-source.json": "2cb433874d3b356dd6ff933d504fa6c61886d255c739eec7da1e870c9bf0dcf8",
-    "docs/boundary-extension.md": "10d11aeda918a49bde76c177e20d48ed8ec0686a716d9e959c2613a3788013ae",
+    "docs/boundary-extension-full-semantic-review.md": "14eb9c9e046e39c9d5fa817e8a63cc4beefb0d7a1fafdaaad04be53e8fe04a55",
+    "docs/boundary-extension-full-source.json": "b9ecf5128ee336b8bcec11476fd7c1ecbf0fb6567f0260360a4f56610fd2b641",
+    "docs/boundary-extension.md": "b509151397ae43b2a6d57eac75d3e5586216e8b814ad18ea39d3ddb72ce7e968",
     "docs/circulation-source.json": "2b3d7bdf1b05c6b8445e2961efe99fe3eb6100a9c08c1eb3af8bbb4fd28350aa",
-    "docs/coverage.json": "babcdfcf73ba3444943b06ad50fe12e3f3d5034e1da771a562f91f3dc5c44229",
+    "docs/coverage.json": "4412b25b38889068604ebad656c0c6574450ce0d01a93c3241395285c5df09b8",
     "docs/critical-partition-consequences.md": "e27d3ee74746f3d635e344b3242a0458923dcb825e2bf47c72110f8254d62deb",
     "docs/dense-link-packing.md": "85643f82684632e6d7bb20b741f9f617c8a1572d98c031537df5113cd671ccd6",
     "docs/exceptional-absorption.md": "5fc25d8f075878fd04257ca6370ed6d70bce2991c8ab36b29d4f80cde4784eb7",
@@ -96888,10 +99217,10 @@
     "docs/frequent-pattern.md": "e0f4b947f96d233224832e6fb71b4e57835f9135be23fca846644406614e5d73",
     "docs/frequent-patterns.md": "37eb2de401abc5ba79e8c22729fcf19b3b347ad0bd173dee640d061201b8eee0",
     "docs/main-theorem.md": "56e6e2aae6abea8e6ba267c417ac3885688a15c2064272f250c1b38424cee3ee",
-    "docs/manuscript-source.json": "c52f1984b05d0dd7393c82c4384837ee5d86a6223e716587988ade7cc012879e",
+    "docs/manuscript-source.json": "41549563236d1c73c4437aa0221cebf74c7f77f55787335d8ffeba5d9f52f23d",
     "docs/matching-repair.md": "29d0c587ba983a568eb98b40484e531a90e0f96fbd4dc98069bfd12214481cca",
-    "docs/next-verification-target.md": "23ee4b88d822c1b94d306bbe1d43c62ef5b8e46871915deda7d47cbc5f69fb7f",
-    "docs/ordinary-factorization.md": "cd9ddebd81117ff305fed56d83aa595d907ec87aa75b936d151a02668d1edbe3",
+    "docs/next-verification-target.md": "13e1170af0b3f5091f7d159d16d14609756340861f6869d6589729ec7b338a12",
+    "docs/ordinary-factorization.md": "4a9985610708882f83982d0643246db994b1b59acadc6a791f8a75a5bd56717e",
     "docs/prescribed-matching.md": "9d37e1f0b7df42dd65fb379d51fb7604793440b56c5adac307e95a486dc510f5",
     "docs/replacement.md": "5643ebc060c37602f7e160f76c021e5cc7edfb576b2151f45248bfcf6ca5484e",
     "docs/residual-factorization-semantic-review.md": "e5c4b26a99575f8020797cecde1fbbcf26bdc5df520cec52f1d0a036a10087b4",
@@ -96907,7 +99236,7 @@
     "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
     "patches/vizing-lean-4.24.patch": "1f50d4aa24ee428032d14bb90c1705df9906ab90581bf0046eedf49bf3d70c76",
     "scripts/setup_vizing.py": "42ab626c3d40e8012aeed8d90b08a32757c3c5ee844b52ee2dc704e89b276094",
-    "scripts/verify.py": "875c7b6fe6242a15d5407633e284aa862dd52f5a6ae642be286c338175528bf5"
+    "scripts/verify.py": "aff58f38f539df4466ce964c453c0a492d6d90ba3e2bab0876077d80095522a1"
   },
-  "scope": "45 of 69 numbered manuscript assertions have complete checked proofs; 24, including the main theorem, remain incomplete. Constructed coupled integer absorber parameters, source palette budgets and divisibilities; exact original-copy reservation, arbitrary-reserve bipartite packing, complete exterior-class completion, exact simple regular remainder, and actual balanced orientation. ReservedRemainder composes these graph steps from an original regular host and explicit reserved copies with a supplied compressed balanced exterior coloring. The geometric spanning setup, special path systems, robust absorber, construction of those stage inputs, and final whole-host factorization remain unproved. No numbered assertion is added. All earlier completed assertions and source-recovery mappings are preserved."
+  "scope": "46 of 69 numbered manuscript assertions have complete checked proofs; 23, including the main theorem, remain incomplete. Full Lemma 4.14 is proved by Overfull.boundary_extension: for every original proper singleton/triple boundary coloring of a sufficiently large odd robust core, construct an actual coloring of every original incident edge copy preserving every prescribed boundary label. A direct uniform one-apex reduction and constructed two-apex factorization supply the former missing coloring, using proved fan recoloring, balanced footprints, robust matching packing, and bipartite edge coloring. All constants precede the graph. The general ordinary/bipartite factorization, compatible spanning setup, special path systems, robust absorber, and critical average-degree input remain separate open obligations. All earlier completed assertions and historical source-recovery mappings are preserved."
 }

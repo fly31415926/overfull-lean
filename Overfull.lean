@@ -213,6 +213,8 @@ import Overfull.BipartiteFactorization.CompletionTransport
 import Overfull.BipartiteFactorization.ReservedCore
 import Overfull.BipartiteFactorization.UniformRemainder
 import Overfull.BipartiteFactorization.ReservedRemainder
+import Overfull.BoundaryExtension.Full
+import Overfull.Probability.BernoulliDifferences
 
 /-!
 # Partial formalization of the overfull manuscript

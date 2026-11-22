@@ -9,8 +9,8 @@ import Overfull.BoundaryExtension.Colors
 The selected triple classes, their internal completions, the residual
 multigraph, and its robust embedded core are constructed from the original
 data. An actual coloring of the resulting contraction then gives the exact
-prescribed extension. The existence of that contracted coloring remains
-the separate, unproved factorization input to Lemma 4.14.
+prescribed extension. `OneCore.Factorization` supplies that coloring, and
+`BoundaryExtension.Full` assembles the complete Lemma 4.14.
 -/
 
 namespace Overfull.BoundaryExtension

@@ -8,8 +8,8 @@
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
-  "fully_verified_numbered_assertion_count": 45,
-  "scope": "45 of 69 numbered manuscript assertions have complete checked proofs; 24, including the main theorem, remain incomplete. Constructed coupled integer absorber parameters, source palette budgets and divisibilities; exact original-copy reservation, arbitrary-reserve bipartite packing, complete exterior-class completion, exact simple regular remainder, and actual balanced orientation. ReservedRemainder composes these graph steps from an original regular host and explicit reserved copies with a supplied compressed balanced exterior coloring. The geometric spanning setup, special path systems, robust absorber, construction of those stage inputs, and final whole-host factorization remain unproved. No numbered assertion is added. All earlier completed assertions and source-recovery mappings are preserved.",
+  "fully_verified_numbered_assertion_count": 46,
+  "scope": "46 of 69 numbered manuscript assertions have complete checked proofs; 23, including the main theorem, remain incomplete. Full Lemma 4.14 is proved by Overfull.boundary_extension: for every original proper singleton/triple boundary coloring of a sufficiently large odd robust core, construct an actual coloring of every original incident edge copy preserving every prescribed boundary label. A direct uniform one-apex reduction and constructed two-apex factorization supply the former missing coloring, using proved fan recoloring, balanced footprints, robust matching packing, and bipartite edge coloring. All constants precede the graph. The general ordinary/bipartite factorization, compatible spanning setup, special path systems, robust absorber, and critical average-degree input remain separate open obligations. All earlier completed assertions and historical source-recovery mappings are preserved.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -313,7 +313,7 @@
         "Overfull.Sharpness.Family.rawColor_injective_of_adj",
         "Overfull.Sharpness.Family.has_upper_coloring"
       ],
-      "scope_limit": "This is a construction for this family; it is not a formalization of Vizing\u2019s theorem for all simple graphs.",
+      "scope_limit": "This is a construction for this family; it is not a formalization of Vizing’s theorem for all simple graphs.",
       "manuscript_locations": [
         "sharp:thm:family, upper bound on the chromatic index"
       ]
@@ -536,7 +536,7 @@
     {
       "id": "hall_and_deficiency",
       "kind": "graph_theoretic_result",
-      "description": "Hall\u2019s equivalence and its deficiency form are proved for actual matching subgraphs, with arbitrary finite side sizes. The deficiency construction uses h dummy vertices and counts the unmatched original vertices.",
+      "description": "Hall’s equivalence and its deficiency form are proved for actual matching subgraphs, with arbitrary finite side sizes. The deficiency construction uses h dummy vertices and counts the unmatched original vertices.",
       "lean_declarations": [
         "Overfull.bipartite_hall_iff",
         "Overfull.bipartite_hall_defect"
@@ -666,9 +666,9 @@
         "Overfull.Multigraph.EdgeColoring.degree_le",
         "Overfull.Multigraph.konig_edgeColoring_iff"
       ],
-      "scope_limit": "Complete K\u00f6nig edge-coloring input in Section 2.3; no multigraph fan elementarity theorem is supplied.",
+      "scope_limit": "Complete König edge-coloring input in Section 2.3; no multigraph fan elementarity theorem is supplied.",
       "manuscript_locations": [
-        "Section 2.3, K\u00f6nig edge-coloring theorem"
+        "Section 2.3, König edge-coloring theorem"
       ]
     },
     {
@@ -694,7 +694,7 @@
         "Overfull.Multigraph.EdgeColoring.not_overfull",
         "Overfull.Multigraph.overfull_not_edgeColorable"
       ],
-      "scope_limit": "The necessary no-overfull condition for all finite loopless multigraphs. Sufficiency in the bipartite case is proved separately by K\u00f6nig\u2019s theorem.",
+      "scope_limit": "The necessary no-overfull condition for all finite loopless multigraphs. Sufficiency in the bipartite case is proved separately by König’s theorem.",
       "manuscript_locations": [
         "Section 2.3, multigraph edge colorings",
         "old:pre:matching"
@@ -2177,7 +2177,7 @@
     {
       "id": "foreign_color_classes",
       "kind": "graph_theoretic_result",
-      "description": "Apply the proved multigraph K\u00f6nig theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case.",
+      "description": "Apply the proved multigraph König theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case.",
       "lean_declarations": [
         "Overfull.ForeignColoring.selectedMatching_isMatching_of_edge_copies",
         "Overfull.ForeignColoring.selectedMatching_spanning_disjoint",
@@ -2742,7 +2742,7 @@
         "Overfull.BoundaryExtension.BoundaryColoring.triple_horizon",
         "Overfull.BoundaryExtension.BoundaryColoring.tripleLabel_range"
       ],
-      "scope_limit": "Supporting construction or reduction for Lemma 4.14. The actual one-apex factorization and the full Lemma 4.14 remain unproved; no coloring or factorization oracle is added.",
+      "scope_limit": "This component supplies the stated step of the prescribed boundary extension. The complete one-apex coloring and full Lemma 4.14 are now proved separately by OneCore.Factorization and BoundaryExtension.Full; this supporting result alone does not assert them.",
       "manuscript_locations": [
         "three:lem:boundary"
       ]
@@ -2757,7 +2757,7 @@
         "Overfull.BoundaryExtension.boundary_degree_le_error",
         "Overfull.BoundaryExtension.exists_triple_core_packing"
       ],
-      "scope_limit": "Supporting construction or reduction for Lemma 4.14. The actual one-apex factorization and the full Lemma 4.14 remain unproved; no coloring or factorization oracle is added.",
+      "scope_limit": "This component supplies the stated step of the prescribed boundary extension. The complete one-apex coloring and full Lemma 4.14 are now proved separately by OneCore.Factorization and BoundaryExtension.Full; this supporting result alone does not assert them.",
       "manuscript_locations": [
         "three:lem:boundary"
       ]
@@ -2778,7 +2778,7 @@
         "Overfull.BoundaryExtension.remainingEmbeddedCore_degree_lower",
         "Overfull.BoundaryExtension.completedTriples_boundary"
       ],
-      "scope_limit": "Supporting construction or reduction for Lemma 4.14. The actual one-apex factorization and the full Lemma 4.14 remain unproved; no coloring or factorization oracle is added.",
+      "scope_limit": "This component supplies the stated step of the prescribed boundary extension. The complete one-apex coloring and full Lemma 4.14 are now proved separately by OneCore.Factorization and BoundaryExtension.Full; this supporting result alone does not assert them.",
       "manuscript_locations": [
         "three:lem:boundary"
       ]
@@ -2798,7 +2798,7 @@
         "Overfull.BoundaryExtension.contractCore_degree",
         "Overfull.BoundaryExtension.contractCore_robust"
       ],
-      "scope_limit": "Supporting construction or reduction for Lemma 4.14. The actual one-apex factorization and the full Lemma 4.14 remain unproved; no coloring or factorization oracle is added.",
+      "scope_limit": "This component supplies the stated step of the prescribed boundary extension. The complete one-apex coloring and full Lemma 4.14 are now proved separately by OneCore.Factorization and BoundaryExtension.Full; this supporting result alone does not assert them.",
       "manuscript_locations": [
         "three:lem:boundary"
       ]
@@ -2813,7 +2813,7 @@
         "Overfull.OneCore.robust_one_exterior_no_overfull",
         "Overfull.BoundaryExtension.exists_contraction_cut_threshold"
       ],
-      "scope_limit": "Supporting construction or reduction for Lemma 4.14. The actual one-apex factorization and the full Lemma 4.14 remain unproved; no coloring or factorization oracle is added.",
+      "scope_limit": "This component supplies the stated step of the prescribed boundary extension. The complete one-apex coloring and full Lemma 4.14 are now proved separately by OneCore.Factorization and BoundaryExtension.Full; this supporting result alone does not assert them.",
       "manuscript_locations": [
         "three:lem:boundary"
       ]
@@ -2830,7 +2830,7 @@
         "Overfull.BoundaryExtension.BoundaryColoring.residual_cutSize_eq_singletons",
         "Overfull.BoundaryExtension.BoundaryColoring.residual_cutSize_eq_sub"
       ],
-      "scope_limit": "Supporting construction or reduction for Lemma 4.14. The actual one-apex factorization and the full Lemma 4.14 remain unproved; no coloring or factorization oracle is added.",
+      "scope_limit": "This component supplies the stated step of the prescribed boundary extension. The complete one-apex coloring and full Lemma 4.14 are now proved separately by OneCore.Factorization and BoundaryExtension.Full; this supporting result alone does not assert them.",
       "manuscript_locations": [
         "three:lem:boundary"
       ]
@@ -2847,7 +2847,7 @@
         "Overfull.BoundaryExtension.reassemble_deleted_colors",
         "Overfull.BoundaryExtension.extend_from_completed_triples"
       ],
-      "scope_limit": "Supporting construction or reduction for Lemma 4.14. The actual one-apex factorization and the full Lemma 4.14 remain unproved; no coloring or factorization oracle is added.",
+      "scope_limit": "This component supplies the stated step of the prescribed boundary extension. The complete one-apex coloring and full Lemma 4.14 are now proved separately by OneCore.Factorization and BoundaryExtension.Full; this supporting result alone does not assert them.",
       "manuscript_locations": [
         "three:lem:boundary"
       ]
@@ -2865,7 +2865,7 @@
         "Overfull.OneCore.restrictCore_one_robust",
         "Overfull.OneCore.even_core_complement"
       ],
-      "scope_limit": "Supporting construction or reduction for Lemma 4.14. The actual one-apex factorization and the full Lemma 4.14 remain unproved; no coloring or factorization oracle is added.",
+      "scope_limit": "This component supplies the stated step of the prescribed boundary extension. The complete one-apex coloring and full Lemma 4.14 are now proved separately by OneCore.Factorization and BoundaryExtension.Full; this supporting result alone does not assert them.",
       "manuscript_locations": [
         "three:lem:boundary"
       ]
@@ -2877,7 +2877,7 @@
       "lean_declarations": [
         "Overfull.boundary_extension_reduction"
       ],
-      "scope_limit": "Supporting construction or reduction for Lemma 4.14. The actual one-apex factorization and the full Lemma 4.14 remain unproved; no coloring or factorization oracle is added.",
+      "scope_limit": "This component supplies the stated step of the prescribed boundary extension. The complete one-apex coloring and full Lemma 4.14 are now proved separately by OneCore.Factorization and BoundaryExtension.Full; this supporting result alone does not assert them.",
       "manuscript_locations": [
         "three:lem:boundary"
       ]
@@ -2998,7 +2998,7 @@
         "Overfull.OrdinaryFactorization.residualCutSides_balance",
         "Overfull.OrdinaryFactorization.residualCutSides_robust_admissible"
       ],
-      "scope_limit": "The new complementary coloring is constructed under its proved support and explicit numerical degree/slack bounds. Reconstruction requires an actual coloring of the whole residual as an explicit input. The remaining bipartite-core factorization, Theorem 6.1, full Lemmas 4.2 and 4.14, and the main theorem are not proved here.",
+      "scope_limit": "The complementary coloring is constructed under its proved support and numerical degree/slack bounds. This general reconstruction interface takes an actual whole-residual coloring. OneCore.Factorization now constructs that coloring for the one-apex specialization needed by Lemma 4.14. Full ordinary Lemma 4.2, Theorem 6.1, and the main theorem remain incomplete.",
       "manuscript_locations": [
         "two:lem:ordinary-special, exact residual and reconstruction",
         "three:lem:boundary, indirect ordinary-core prerequisite"
@@ -4442,7 +4442,7 @@
         "Overfull.RobustPartition.total_deficiency_lt_of_average_degree",
         "Overfull.RobustPartition.exists_uniform_partition_of_average_degree"
       ],
-      "scope_limit": "The average-degree estimate is an explicit numerical hypothesis. Cao\u2013Chen criticality-to-average-degree remains unformalized, so Proposition 2.24 stays incomplete.",
+      "scope_limit": "The average-degree estimate is an explicit numerical hypothesis. Cao–Chen criticality-to-average-degree remains unformalized, so Proposition 2.24 stays incomplete.",
       "manuscript_locations": [
         "bip:part:five-cases"
       ]
@@ -4587,7 +4587,7 @@
       "lean_declarations": [
         "Overfull.circuit_frequent_boundary_pattern"
       ],
-      "scope_limit": "The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Lemma 4.14, Proposition 4.16, and the manuscript main theorem remain unverified; Lemma 4.15 is now completed by the separate direct FourOdd construction.",
+      "scope_limit": "The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Proposition 4.16 and the manuscript main theorem remain unverified. Lemmas 4.14 and 4.15 are completed separately by the direct boundary-extension and FourOdd constructions.",
       "manuscript_locations": [
         "three:lem:pattern"
       ]
@@ -4870,6 +4870,87 @@
         "old:degree-accounting"
       ],
       "scope_limit": "The actual reserved set and compressed balanced exterior coloring remain explicit stage inputs. Full spanning setup, special factors, robust absorber and final original-host factorization are not proved."
+    },
+    {
+      "id": "one_apex_supplied_reduction",
+      "kind": "graph_theoretic_result",
+      "description": "Move one original core vertex outside, choose a prescribed pairing that balances its actual original simple neighbors, and choose a proper-color palette with balanced row counts. Uniformly construct an actual bipartite-core residual while the moved vertex retains a linear number of original incidences into both shores. Exact copy and shore identities are proved.",
+      "lean_declarations": [
+        "Overfull.OneCore.NeighborPairing.exists_balancing_pairing",
+        "Overfull.OneCore.movedNeighbors_card",
+        "Overfull.OneCore.movedNeighbors_shore_le",
+        "Overfull.OrdinaryFactorization.exists_labels_preserving_rows",
+        "Overfull.OrdinaryFactorization.residualGraph_apex_row_card",
+        "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices",
+        "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_choices",
+        "Overfull.OneCore.exists_apexSupply",
+        "Overfull.OrdinaryFactorization.FirstHalfData.remaining_apex_supply",
+        "Overfull.OneCore.exists_uniform_two_apex_reduction",
+        "Overfull.OneCore.residualShore_comap",
+        "Overfull.OneCore.residualShore_left",
+        "Overfull.OneCore.residualShore_right"
+      ],
+      "scope_limit": "Uniform reduction for the exactly one-apex input. It makes the supplied-apex hypotheses available for the complete two-apex theorem; it is not the general bounded-exterior factorization.",
+      "manuscript_locations": [
+        "three:lem:boundary, one-core factorization step"
+      ]
+    },
+    {
+      "id": "two_apex_factorization",
+      "kind": "graph_theoretic_result",
+      "description": "From a regular host with an actual balanced robust bipartite core, exactly two exterior vertices, small core-complement degree, and linear incidence supply from one exterior vertex to both shores, construct an actual coloring with the regular degree. Select all required original exceptional copies, construct the selected fan coloring, balance its footprints, complete its colors by robust core matchings, and color the entire bipartite remainder.",
+      "lean_declarations": [
+        "Overfull.TwoApexFactorization.exists_selection",
+        "Overfull.TwoApexFactorization.exists_balanced_selection_coloring",
+        "Overfull.TwoApexFactorization.exists_uniform_selected_coloring",
+        "Overfull.TwoApexFactorization.Completion.edgeColorable",
+        "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization"
+      ],
+      "scope_limit": "The error tolerance and order threshold precede all host data. The linear shore supply at one apex is an explicit input here and is derived by the one-apex reduction. No complementary coloring or full residual factorization is assumed. This does not prove general Theorem 6.1.",
+      "manuscript_locations": [
+        "three:lem:boundary, direct replacement for the source one-core factorization application"
+      ]
+    },
+    {
+      "id": "one_apex_factorization",
+      "kind": "graph_theoretic_result",
+      "description": "Uniformly construct a degree-coloring of a finite regular loopless multigraph with an odd robust simple core and exactly one exterior vertex, directly from linear degree and sufficiently small core error. The supplied two-apex reduction and the complete two-apex factorization are composed with exact original-host reconstruction.",
+      "lean_declarations": [
+        "Overfull.OneCore.exists_uniform_one_apex_factorization"
+      ],
+      "scope_limit": "Complete one-apex specialization with parameters 0<alpha<=1 and 0<nu<=tau<=alpha/8. It does not assert the full several-core or arbitrary bounded-exterior results.",
+      "manuscript_locations": [
+        "three:lem:boundary, factorization of the apex contraction"
+      ]
+    },
+    {
+      "id": "boundary_extension_full",
+      "kind": "complete_manuscript_assertion",
+      "description": "Full Lemma 4.14. For an arbitrary original proper boundary coloring with singleton/triple classes and linearly many singleton colors, construct a proper coloring of every original copy incident with the odd robust core, agreeing pointwise with each prescribed boundary label.",
+      "lean_declarations": [
+        "Overfull.boundary_extension"
+      ],
+      "scope_limit": "Positive error and order threshold precede the graph and prescribed coloring. The finite-edge loopless multigraph formulation permits parallel copies and imposes no regularity outside the core. The direct one-apex/two-apex proof replaces the manuscript application of general Corollary 4.6 without claiming that broader result.",
+      "manuscript_locations": [
+        "three:lem:boundary"
+      ]
+    },
+    {
+      "id": "bernoulli_variance_bounded_differences",
+      "kind": "finite_probability_result",
+      "description": "For the actual product of prescribed Bernoulli masses and a statistic with coordinate oscillations c, derive the centered exponential moment bound exp(theta^2*sum p*(1-p)*c^2) when theta*c<=1, and upper, lower, and two-sided tail bounds. Finite prefix integration and arbitrary finite reindexing prove the conditional steps internally.",
+      "lean_declarations": [
+        "Overfull.BernoulliDifferences.exponential_moment_le",
+        "Overfull.BernoulliDifferences.exponential_moment_le_of_budget",
+        "Overfull.BernoulliDifferences.upper_tail",
+        "Overfull.BernoulliDifferences.lower_tail",
+        "Overfull.BernoulliDifferences.two_sided_tail",
+        "Overfull.BernoulliDifferences.two_sided_tail_of_budget"
+      ],
+      "scope_limit": "Additional reusable probability support. It is not needed by the direct boundary-extension proof and does not complete the approximate triangle-packing or any additional numbered assertion.",
+      "manuscript_locations": [
+        "dense:approximate, supporting finite concentration tool"
+      ]
     }
   ],
   "numbered_assertions": [
@@ -5492,7 +5573,7 @@
         "uniform_average_degree_partition_reduction"
       ],
       "imported_statement": false,
-      "formalization_scope": "The full deterministic argument is proved from the actual average-degree estimate (1-zeta^3/2)*Delta <= sum degrees/n. Uniform zeta and gamma precede the graph, and zeta may be below any prescribed positive bound. The actual low-degree set and induced complement are constructed, with strict deleted-set bound, surviving order, actual minimum/maximum degree transfer, full robust partition, rho <= (theta/100)^3, all five component alternatives, and every original-order degree-exception and shore-size bound. The criticality-to-average-degree implication from Cao\u2013Chen is not formalized. Proposition 2.24 remains incomplete."
+      "formalization_scope": "The full deterministic argument is proved from the actual average-degree estimate (1-zeta^3/2)*Delta <= sum degrees/n. Uniform zeta and gamma precede the graph, and zeta may be below any prescribed positive bound. The actual low-degree set and induced complement are constructed, with strict deleted-set bound, surviving order, actual minimum/maximum degree transfer, full robust partition, rho <= (theta/100)^3, all five component alternatives, and every original-order degree-exception and shore-size bound. The criticality-to-average-degree implication from Cao–Chen is not formalized. Proposition 2.24 remains incomplete."
     },
     {
       "number": "2.25",
@@ -5989,8 +6070,8 @@
         3128
       ],
       "statement_sha256": "67baedd4ae2e0451a8842fd27ea0976f50db94c9054eacd2f5dd40ce2cfa21e3",
-      "full_assertion_verified": false,
-      "status": "checked_components_only",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
       "checked_components": [
         "boundary_color_footprints",
         "boundary_triple_packing",
@@ -6000,10 +6081,17 @@
         "boundary_surviving_singletons",
         "boundary_color_restoration",
         "one_apex_even_core_complement",
-        "boundary_extension_reduction"
+        "boundary_extension_reduction",
+        "one_apex_supplied_reduction",
+        "two_apex_factorization",
+        "one_apex_factorization",
+        "boundary_extension_full"
       ],
       "imported_statement": false,
-      "formalization_scope": "The complete constructive boundary-extension reduction remains checked. New ordinary-core first-group and residual components support its even-core specialization indirectly, but the necessary full residual factorization and the resulting one-apex coloring are not proved; Lemma 4.14 remains incomplete."
+      "formalization_scope": "Full Lemma 4.14. For an arbitrary original proper boundary coloring with singleton/triple classes and linearly many singleton colors, construct a proper coloring of every original copy incident with the odd robust core, agreeing pointwise with each prescribed boundary label. Positive error and order threshold precede the graph and prescribed coloring. The finite-edge loopless multigraph formulation permits parallel copies and imposes no regularity outside the core. The direct one-apex/two-apex proof replaces the manuscript application of general Corollary 4.6 without claiming that broader result.",
+      "lean_theorems": [
+        "Overfull.boundary_extension"
+      ]
     },
     {
       "number": "4.15",
@@ -6637,7 +6725,7 @@
     },
     {
       "bibliography_key": "Berge1958",
-      "required_result": "Tutte\u2013Berge maximum-matching deficiency formula",
+      "required_result": "Tutte–Berge maximum-matching deficiency formula",
       "pinpoints": [],
       "coverage_status": "fully_proved_for_actual_finite_simple_graph_matchings_with_attained_integer_maximum",
       "lean_declarations": [
@@ -6658,7 +6746,7 @@
     },
     {
       "bibliography_key": "Konig",
-      "required_result": "K\u0151nig edge-coloring theorem for bipartite multigraphs",
+      "required_result": "Kőnig edge-coloring theorem for bipartite multigraphs",
       "pinpoints": [],
       "coverage_status": "fully_proved_for_actual_finite_loopless_bipartite_multigraphs",
       "lean_declarations": [
@@ -6712,7 +6800,7 @@
       "required_result": "Robust partition theorem for almost-regular graphs",
       "pinpoints": [
         "Theorem 5.1",
-        "conditions C1\u2013C3 and D1\u2013D7"
+        "conditions C1–C3 and D1–D7"
       ],
       "coverage_status": "manuscript_theorem_2_23_fully_proved_by_actual_finite_refinement",
       "lean_declarations": [
@@ -6780,8 +6868,8 @@
       "required_result": "Bipartite robust setup, refinements, universal walk and robust decomposition",
       "pinpoints": [
         "Corollary 5.5",
-        "Lemmas 5.7, 5.14\u20135.15, 6.8\u20136.10, 6.24 and 7.2",
-        "Definitions 6.7, 6.14, 6.16 and 6.21\u20136.23"
+        "Lemmas 5.7, 5.14–5.15, 6.8–6.10, 6.24 and 7.2",
+        "Definitions 6.7, 6.14, 6.16 and 6.21–6.23"
       ],
       "coverage_status": "not_formalized_or_matched_to_a_checked_declaration_here"
     }
@@ -6807,17 +6895,18 @@
     "Lemma 4.11 proves one exceptional-star forcing step with the exact threshold 11*2^(t+4). The sampled, compressed, and completed matchings are actual graph subgraphs; the compressed joining edges have a proved forest projection. The range and error tolerance precede t, and only the order threshold depends on t. Strict builds, scoped axiom audits, and independent semantic reviews passed. Its preparation form is used with one fixed family of packing rules in the completed bounded exceptional absorption proof of Proposition 4.12.",
     "Proposition 4.10 is proved by the actual inner epoch and outer refinement inductions, using fresh maximizing assignments, actual matching classes, certified fixed core rules, maintained recorded cuts, and exact original-host concatenation. One original parameter choice supplies every stage; the positive robust output parameter is fixed before the requested final error. The final exceptional incidence counts actual edges in the constructed residual. This proves Proposition 4.10; the main theorem remains unverified.",
     "Proposition 4.12 is proved by a finite threshold-band choice, two actual core enlargements, and a fixed-rule forcing process whose actual potential strictly decreases. Its robust output parameter precedes every arbitrary positive final error function. The final error uses that function at the actual remaining exceptional cardinality without a monotonicity assumption. Proposition 4.12 supplies the bounded exceptional set used by the subsequent pattern reduction; the main theorem remains unverified. The verification script requires every named supporting and public proof declaration to appear in the checked axiom inventory.",
-    "Lemma 4.13 is proved by common fixed-label compression of an actual fractional matching distribution, one simultaneous rounding/discard plan, actual edge-disjoint boundary realization, fixed certified core completion, actual cut accounting and no-overfull safety at every prefix, and complete absorption from reserved distinct neighbors. The positive output robust parameter precedes the requested relative error. The final result includes the linear integer reserve, actual enlarged-part parity, and actual pair and cut supply for the matching or three-edge star in the four-odd-part case. The larger explicit discard coefficient 2^(t+4)*(t+10) overcounts the finite test family without changing b4(t) or the retained fraction. Lemma 4.14 and the main theorem remain unverified.",
-    "The complete constructive boundary-extension reduction is proved by Overfull.boundary_extension_reduction: uniform parameters precede the graph and prescribed coloring; actual completed triple copies give an exact residual robust core, singleton boundary, and even regular no-overfull apex contraction; an actual coloring of that precise contraction reconstructs the exact original boundary labels. The one-apex coloring itself remains unproved, so Lemma 4.14 and the main theorem remain unverified and their numbered status is unchanged. The proved even-core complement reduction permits an eventual application of ordinary-core Lemma 4.2 with s=2, bypassing the general fixed-pattern/Fan-Zhang steps only for this specialization.",
-    "The ordinary-core supporting development now constructs a quantitative paired cut, one robust reserve with simultaneous side-degree control, a feasible constrained internal coloring, and an actual repaired first group of completed colors with parameters chosen before the graph. Exact residual-copy accounting, palette compression, a robust embedded crossing core, and a coloring of its complement are proved. Reconstructing a full host coloring still takes an actual full-residual coloring as an explicit input. These supporting results do not complete Lemma 4.2, Lemma 4.14, or the main theorem; these supporting results do not change their numbered status.",
+    "Historical supporting checkpoint: Lemma 4.13 is proved by common fixed-label compression of an actual fractional matching distribution, one simultaneous rounding/discard plan, actual edge-disjoint boundary realization, fixed certified core completion, actual cut accounting and no-overfull safety at every prefix, and complete absorption from reserved distinct neighbors. The positive output robust parameter precedes the requested relative error. The final result includes the linear integer reserve, actual enlarged-part parity, and actual pair and cut supply for the matching or three-edge star in the four-odd-part case. The larger explicit discard coefficient 2^(t+4)*(t+10) overcounts the finite test family without changing b4(t) or the retained fraction. Lemma 4.14 and the main theorem remain unverified.",
+    "Historical supporting checkpoint: The complete constructive boundary-extension reduction is proved by Overfull.boundary_extension_reduction: uniform parameters precede the graph and prescribed coloring; actual completed triple copies give an exact residual robust core, singleton boundary, and even regular no-overfull apex contraction; an actual coloring of that precise contraction reconstructs the exact original boundary labels. The one-apex coloring itself remains unproved, so Lemma 4.14 and the main theorem remain unverified and their numbered status is unchanged. The proved even-core complement reduction permits an eventual application of ordinary-core Lemma 4.2 with s=2, bypassing the general fixed-pattern/Fan-Zhang steps only for this specialization.",
+    "Historical supporting checkpoint before the full Lemma 4.14 proof: The ordinary-core supporting development now constructs a quantitative paired cut, one robust reserve with simultaneous side-degree control, a feasible constrained internal coloring, and an actual repaired first group of completed colors with parameters chosen before the graph. Exact residual-copy accounting, palette compression, a robust embedded crossing core, and a coloring of its complement are proved. Reconstructing a full host coloring still takes an actual full-residual coloring as an explicit input. These supporting results do not complete Lemma 4.2, Lemma 4.14, or the main theorem; these supporting results do not change their numbered status. Full Lemma 4.14 is now proved separately by Overfull.boundary_extension; the general ordinary-core factorization and the main theorem remain open.",
     "The specialized forbidden-label step is proved by permutation-fiber counting and sparse-conflict greedy repair, with Vizing providing the initial simple-graph coloring. This is not a proof of the general Kahn list-edge-coloring theorem. The robust decomposition input in Theorem 6.1 remains unformalized. The pinned November 20, 2026 manuscript source and its statement inventory are unchanged.",
-    "The simultaneous-selection continuation adds 75 public theorem proofs in ten modules. It replaces palette and block probability-oracle premises with derived graph-specific failure budgets, and preserves supplied fine/coarse position relations under shared permutations. The budgets themselves and the manuscript integer/uniform realization remain separate hypotheses. That supporting checkpoint left the numbered count at 42 of 69; Proposition 6.2, Theorem 6.1, the robust absorber, Lemmas 4.2 and 4.14, and the main theorem remain incomplete.",
+    "Historical supporting checkpoint: The simultaneous-selection continuation adds 75 public theorem proofs in ten modules. It replaces palette and block probability-oracle premises with derived graph-specific failure budgets, and preserves supplied fine/coarse position relations under shared permutations. The budgets themselves and the manuscript integer/uniform realization remain separate hypotheses. That supporting checkpoint left the numbered count at 42 of 69; Proposition 6.2, Theorem 6.1, the robust absorber, Lemmas 4.2 and 4.14, and the main theorem remain incomplete.",
     "Lemma 5.12 is fully proved by an actual uniform tripartite link-packing construction. The proof uses finite Hall candidates, a total adaptive history, conditional Bernoulli exponential moments, exact local used-edge accounting, and one uniform order threshold. It retains the original constants and explicitly interprets the joint hierarchy as real b>=1 and 0<lambda<=1. Its November 21 statement block is byte-identical to the pinned November 20 statement hash. This completes one additional numbered assertion, bringing that checkpoint to 43 of 69; the main theorem and the Section 6 factorization assertions remain unverified.",
     "Theorem 2.23 is fully proved by Overfull.robust_partition, adding 71 public theorem proofs in nine modules and bringing the current total to 44 of 69. Every scale is chosen before the vertex type and graph; actual finite refinement increases a bounded shore count until every ordinary block expands. All four manuscript clauses are derived from actual incidence and degree counts. The November 21 statement block is byte-identical to the pinned November 20 inventory hash. The main theorem and the remaining 25 assertions remain incomplete.",
     "2026-11-22 continuation from 2eb61f5: 109 new public theorem proofs in 13 modules; actual uniform localization and deterministic critical-partition reduction. Complete numbered coverage remains 44/69. See uniform-localization.md and critical-partition-consequences.md for exact hypotheses and remaining obligations.",
     "The combined development recovers the compatible-circuit and alternate frequent-pattern chain from published main commit 54db7b826be05fbba9845f4140aaba0a7db5ba04 while retaining the subsequent bipartite, dense-link and robust-partition continuation. The alternate frequent-pattern proof is namespaced under CircuitPatterns and proves the same Lemma 4.13, which is counted once. At that recovery checkpoint Lemma 4.15 remained incomplete, and its actual circuit and forest components were retained. The current direct FourOdd construction now completes it; current source and axiom claims refer to the new full audit.",
     "2026-11-22 full Lemma 4.15 continuation from 46b6dc2c44c66a7a2c4ed9590690224bb2d10af4: the direct actual-pool construction adds the forty-fifth complete numbered assertion. The pinned November20 statement hash is unchanged; the inspected November21 statement is byte-identical. The historical 44/69 checkpoint notes above describe earlier states.",
-    "2026-11-22 continuation from 1b12919971be8518b185aa59832c209170ec0656: 99 public theorem proofs in eight modules complete the coupled numerical parameters and exact reserved-remainder packing stage. The complete numbered assertion count remains 45/69. See residual-factorization.md and residual-factorization-source.json."
+    "2026-11-22 continuation from 1b12919971be8518b185aa59832c209170ec0656: 99 public theorem proofs in eight modules complete the coupled numerical parameters and exact reserved-remainder packing stage. The complete numbered assertion count remains 45/69. See residual-factorization.md and residual-factorization-source.json.",
+    "2026-11-22 full Lemma 4.14 continuation from a90d674d0d03f59895633a0f8d64f2b250fcb076: Overfull.boundary_extension completes the forty-sixth numbered assertion by constructing the actual one-apex and two-apex colorings and preserving every prescribed boundary label. The pinned November20 statement hash matches the inspected November21 statement exactly. Earlier notes retaining incomplete4.14 statuses describe historical supporting checkpoints. The current inventory is46/69; the main theorem remains unverified."
   ],
   "density_corollary_verified": true
 }

@@ -1,357 +1,285 @@
-# Boundary-color extension: proved components and the remaining factorization
+# Complete prescribed boundary extension: Lemma 4.14
 
-**Lemma 4.14 remains unverified. The current completed assertion count is
-45 of 69, with 24 remaining**, after the
-[complete proof of Lemma 4.15](four-odd-decomposition.md).
-The public theorem `Overfull.boundary_extension_reduction`
-constructs the prescribed triple-color completions, preserves actual edge
-copies under an apex contraction, proves the required no-overfull
-conclusion for that contraction, and restores an actual residual coloring
-to the prescribed original palette. It does not yet supply the
-factorization of the contracted residual.
+**Lemma 4.14 is complete. The numbered inventory is 46 of 69, with 23
+assertions remaining.** The public theorem
+[`Overfull.boundary_extension`](../Overfull/BoundaryExtension/Full.lean)
+constructs a proper coloring of every original edge copy incident with the
+odd robust core and preserves every prescribed boundary label exactly.
+The main theorem remains unverified.
 
-The manuscript statement is `three:lem:boundary`, lines 3119–3128 of the
-pinned November 20 source. Its statement SHA256 is
+The new proof supplies the actual one-apex factorization that was the
+explicit missing input to `boundary_extension_reduction`. Its direct
+one-apex and two-apex construction uses the proved cut, coloring, repair,
+and packing results. The full general Lemma 4.2, Corollary 4.6, and Theorem
+6.1 remain open; none is assumed in this proof.
+
+## Source identity
+
+The manuscript assertion is Lemma 4.14, label `three:lem:boundary`. The
+numbered inventory remains pinned to
+`Four_Robust_Component_Cases_2026-11-20.tex`, identified in
+[manuscript-source.json](manuscript-source.json). Its statement occupies
+lines 3119–3128 and has SHA256
 `67baedd4ae2e0451a8842fd27ea0976f50db94c9054eacd2f5dd40ce2cfa21e3`.
-The entire source is identified separately in
-[`manuscript-source.json`](manuscript-source.json). The statement and proof
-of this lemma, and those of Lemma 4.2, are unchanged in the November 21
-manuscript inspected during this continuation.
+The statement at lines 3267–3276 of the inspected November 21 source has
+the same hash. The inventory has not been rebased.
 
-## The extension problem
+The [source mapping](boundary-extension-full-source.json) records both
+source identities, the public declaration, the module hashes, and the
+required proof declarations. The
+[semantic review](boundary-extension-full-semantic-review.md) checks the
+source clauses, parameter order, original-copy accounting, and the
+alternative to the source's invocation of Corollary 4.6. The exact strict
+build and transitive axiom audit for the recorded checkpoint are bound to
+source hashes in [verification/results.json](../verification/results.json).
 
-The host is a loopless multigraph with a finite type of edge copies. A
-simple robust graph is embedded on an odd finite vertex set `U`, of order
-`m`. The embedding specifies a distinct original host copy for each core
-edge. Every core vertex has ambient degree `d`, and the embedded core has
-minimum degree at least `d-a`. The host need not be regular outside `U`.
+## Full statement and quantifier order
 
-The input `BoundaryColoring G U d` colors the actual copies in `G.cutEdges U`
-properly with `Fin d`. Every color has exactly one or three boundary copies,
-and at least `γ*m` colors have one copy. Properness is imposed at all
-original vertices, including exterior endpoints.
-
-The required final coloring concerns exactly the original edges with an
-endpoint in `U`. Its palette is still `Fin d`, and its color on every
-original boundary copy must equal the prescribed color. Edges with both
-ends outside `U` are outside this extension problem. Keeping a separate
-edge-copy type is essential: the contraction may create parallel edges
-even when the original host is simple.
-
-## Uniform reduction theorem
-
-[`Reduction.lean`](../Overfull/BoundaryExtension/Reduction.lean) proves
-`Overfull.boundary_extension_reduction`. Given
-`0 < α ≤ 1`, `0 < γ`, and `0 < ν ≤ τ ≤ α/8`, it chooses
-`ε`, `θ`, `σ`, and `m₀` before every graph, embedded core, degree,
-error, and prescribed boundary coloring. The output parameters satisfy
+Fix
 
 ```text
-0 < ε, 0 < θ ≤ σ, 0 < σ ≤ τ, σ ≤ min γ 1 / 20.
+0 < α ≤ 1,  0 < γ,  0 < ν ≤ τ ≤ α/8.
 ```
 
-For every input above with `m₀ ≤ U.card`, odd core order,
-`α*U.card ≤ d`, core robustness `(ν,τ)`, and
-`0 ≤ a ≤ ε*U.card`, the theorem constructs
-`Nonempty (BoundaryReduction G U d a γ θ σ c)`. Its hypotheses contain
-neither completed matchings, a robust residual, nor a coloring or
-factorization oracle.
-
-The retained density is controlled by `β = min γ 1`. The proof chooses
-`σ = min τ (β/100)`, asks the triple-packing theorem for robustness at
-that range, and then sets `θ = min θ₀ σ` and
-`ε = min ε₀ (β/20)`. The order threshold is the maximum of the packing
-and contraction-cut thresholds. These choices ensure that the small-cut
-theorem applies at the density of the retained graph, independently of
-the original density parameter `α`.
-
-## Actual boundary classes and packing
-
-[`BoundaryData.lean`](../Overfull/BoundaryExtension/BoundaryData.lean)
-defines the boundary classes and their core footprints. A boundary edge
-has exactly one endpoint in `U`. Properness makes this endpoint map
-injective within each color class, giving
+The theorem chooses a positive error tolerance `ε` and an order threshold
+`m₀` before the host, core, degree, error, or prescribed coloring. Its input
+is a loopless multigraph `G` with finitely many edge copies and an odd
+finite core vertex set `U`, with `m = U.card ≥ m₀`. An embedded simple
+graph `C.graph` on `U` is an ordinary `(ν,τ)`-robust expander. The input
+satisfies
 
 ```text
-footprint(i).card = classEdges(i).card.
+degree_G(v) = d                    for every v ∈ U,
+α*m ≤ d,
+0 ≤ a ≤ ε*m,
+d-a ≤ degree_C(v)                 for every v ∈ U.
 ```
 
-`footprint_incidence_eq_degree` proves that the number of colors whose
-footprints contain a fixed core vertex is exactly its actual boundary
-degree. `selected_footprint_incidence_le` gives the corresponding bound
-for an injectively selected subpalette.
+The supplied `BoundaryColoring G U d` properly colors the actual copies in
+`G.cutEdges U` with `Fin d`. Every color has exactly one or three boundary
+copies, and at least `γ*m` colors have one copy. Properness is required at
+all original endpoints, including those outside `U`.
 
-The embedding bridge in
-[`OneCore/Complement.lean`](../Overfull/OneCore/Complement.lean) records
-the core copies as `coreEdges C` and proves the exact identity
+The conclusion is
+
+```lean
+∃ full : (retainedGraph G U).EdgeColoring d,
+  ∀ e : G.cutEdges U,
+    full.color (boundaryLift G U e) = c.color e
+```
+
+`retainedGraph G U` contains precisely the original copies with at least
+one endpoint in `U`. The output therefore colors all required interior
+and boundary edges. The final equation retains the input label on each
+individual original boundary copy. Copies with both endpoints outside
+`U` are outside the extension problem.
+
+The host need not be regular outside `U`, and the ambient vertex type need
+not be finite. The core is finite, the edge-copy type is finite, and the
+contracted graph has finite vertex type `U ⊕ Unit`. Parallel copies are
+retained throughout; no step substitutes simple adjacency for their
+multiplicity.
+
+## 1. Complete the triple colors and obtain the exact one-apex graph
+
+The earlier public theorem
+[`boundary_extension_reduction`](../Overfull/BoundaryExtension/Reduction.lean)
+remains the first part of the full construction. It derives the packing
+inputs from the actual prescribed coloring.
+
+A boundary edge has exactly one core endpoint. Properness makes that
+endpoint map injective within each class, so its core footprint has the
+same size as the class. The number of footprints containing a core vertex
+is its actual boundary degree. The embedded-core identity
 
 ```text
 degree(complement of coreEdges C, v) + degree(C.graph, v)
-  = degree(G, v).
+  = degree(G, v)
 ```
 
-Core copies are disjoint from the boundary. Consequently
-`boundary_degree_le_error` in
-[`Triples.lean`](../Overfull/BoundaryExtension/Triples.lean) derives the
-boundary incidence bound `a` using ambient regularity only at vertices of
-`U`. No bound on exterior vertex degrees is needed for this step.
-
-Let `q` be the number of triple colors. Their actual labels are enumerated
-by `tripleLabel : Fin q ↪ Fin d`. Since every color has size one or three,
+bounds that load by `a`. If `q` is the number of triple colors, the
+singleton/triple partition gives
 
 ```text
 singletonColors.card + tripleColors.card = d,
 q ≤ floor(d-γ*m).
 ```
 
-Each selected footprint has size three, hence has the parity of the odd
-core order. The order threshold ensures that three is within the packing
-allowance. The per-vertex footprint load is bounded by `a` and therefore by
-the chosen error allowance.
+The proved ordinary packing theorem constructs pairwise edge-disjoint
+core matchings perfect outside the three-vertex footprints. Joining each
+to its prescribed boundary class covers every core vertex exactly once.
+These completed triple classes retain their original labels and their
+original exterior endpoints.
 
-[`Packing.lean`](../Overfull/BoundaryExtension/Packing.lean), theorem
-`pack_fixed_forbidden_sets`, applies the proved adaptive finite-prefix
-packing theorem to the actual fixed footprint family. It chooses positive
-error and output robustness parameters, and an order threshold, before
-the graph, degree, number of colors, and forbidden sets. Its result
-`CorePacking` contains actual pairwise edge-disjoint core matchings,
-perfect outside their prescribed footprints, and robustness of the exact
-remaining core graph.
+Deleting their exact union leaves degree `h = d-q` at every core vertex.
+The surviving boundary copies are in bijection with the original singleton
+colors. Hence their number is exactly `h`, with `γ*m ≤ h`, and their
+prescribed labels are distinct. The surviving embedded simple core has
+minimum degree at least `h-a` and retains proved ordinary robustness.
 
-`exists_triple_core_packing` derives every packing hypothesis from the
-boundary-extension input. In particular, it obtains the upper core degree
-bound from the actual embedding into the ambient graph; the lower bound
-is the supplied core error condition. The singleton reserve supplies the
-packing horizon. The result assumes neither the completions nor a robust
-residual graph.
+The construction keeps only surviving copies incident with `U` and maps
+all exterior endpoints to one apex. This produces an actual `h`-regular
+multigraph on `U ⊕ Unit`, with even order and the same odd core. The
+existing small-cut argument also proves that the contraction has no
+`h`-overfull set. The new factorization theorem constructs its coloring
+from regularity and the robust core; it does not require a separately
+assumed no-overfull or factorization result.
 
-`CorePacking.degree_identity` also records the exact degree equation
+## 2. Factor the one-apex graph while preserving a useful moved vertex
+
+[`OneCore.exists_uniform_one_apex_factorization`](../Overfull/OneCore/Factorization.lean)
+now proves the required full coloring of a regular graph with one exterior
+vertex and an odd dense robust core. Its constants precede the graph.
+
+The proof moves one ordinary core vertex `y` to the exterior. The core
+becomes even, the exterior consists exactly of the old apex and `y`, and
+`even_core_complement` constructs a proper coloring of its actual
+exceptional complement. Deleting the one core vertex gives the proved
+core-error and robust-expansion bounds.
+
+The moved vertex must retain a linear incidence supply into both shores
+of the later bipartite residual. Two actual choices establish this:
+
+1. **Choose the prescribed pairs from its original neighbors.**
+   `MovedNeighbors.lean` identifies its distinct simple-core neighbors in
+   the surviving core and maps them to actual host copies. The finite
+   theorem in `NeighborPairing.lean` pairs those neighbors internally,
+   apart from at most one vertex, and pairs the remaining population.
+   Every cut splitting these pairs contains at least half the neighbor
+   set, rounded down, on each shore. The already proved paired-cut theorem
+   therefore supplies a robust balanced cut with this additional property.
+2. **Choose the first completed labels from the two actual incidence
+   rows.** `ApexPalette.lean` selects balanced numbers of labels from the
+   moved vertex's two shore rows. Properness supplies the exact
+   correspondence between its incident copies and their colors.
+   `ApexChoices.lean` proves the resulting residual row counts. The core
+   matchings used to complete those colors cannot remove extra incidences
+   at the exterior vertex `y`.
+
+The first-half construction and residual reduction now accept these
+chosen pairs and labels. They construct actual perfect matchings and the
+actual regular residual, with a balanced robust bipartite core and
+arbitrarily small side-normalized error. The moved vertex retains at least
+`(α/100)` times the side order in each actual shore row. The original apex
+does not need such a two-sided supply.
+
+`ResidualShores.lean` identifies the core pulled back along the shore
+indexing with the precise cut-sides graph carrying the proved expansion
+estimate. Its ambient shore images are exactly the sets used in the
+incidence bounds. The resulting graph and counted copies are unchanged.
+
+## 3. Construct the two-apex factorization
+
+[`TwoApexFactorization.exists_uniform_two_apex_factorization`](../Overfull/TwoApexFactorization/Theorem.lean)
+uses a balanced bipartite core of side order `m`, regular host degree `k`,
+core degree at least `k-a`, and exactly two exterior vertices. One exterior
+vertex has at least `λ*m` incidences into each shore. Its parameter domain is
 
 ```text
-remaining.degree(v) + q
-  = originalCore.degree(v) + number of selected footprints containing v.
+0 < α < 1,  0 < λ ≤ α/4,  0 < ν ≤ τ < α/16.
 ```
 
-Thus the remaining simple core has minimum degree at least `d-q-a`.
+There is no extra restriction comparing the robust range `τ` with `λ`.
+The existing bipartite range-reduction and packing results provide the
+needed smaller range. The theorem assumes no coloring of the complement,
+selected graph, or final residual.
 
-## Completing classes in the original host
-
-[`Assembly.lean`](../Overfull/BoundaryExtension/Assembly.lean) maps each
-packed internal matching through the core's specified edge embedding and
-unites those actual copies with the original boundary class. The resulting
-`completedColor` is a matching in the original multigraph. It covers every
-core vertex exactly once, has precisely its prescribed boundary copies,
-and is edge-disjoint from every other completed class.
-
-The internal and boundary pieces are vertex-disjoint because the internal
-matching avoids the boundary footprint. Original boundary properness
-handles all exterior vertices. Every completed edge has an endpoint in
-`U`, so no unrelated exterior edge is selected.
-
-[`Residual.lean`](../Overfull/BoundaryExtension/Residual.lean) defines the
-actual residual host exactly as
+It constructs
 
 ```text
-T = univ.biUnion completedColor,
-R = G.restrictEdges Tᶜ.
+r = ceil(λ*m/4),
+q = k-r.
 ```
 
-`remainingAmbient_degree_add` proves that deleting these classes removes
-one incidence per selected color at each core vertex, giving ambient
-degree `h = d-q` on `U`. `coreCopy_survives_iff` identifies precisely which
-original embedded core copies survive. `remainingEmbeddedCore` therefore
-embeds the packing's actual remaining simple graph into this exact
-residual host, with degree at least `h-a` and the packing's robust
-parameters.
+The uniform order threshold handles rounding and gives `q ≥ α*m/2` and
+`k ≤ 2q`. The two rows of the supplied apex both have size at most `q`; at
+least one row of the other apex has size at most `q`. Choosing which apex
+joins the left augmented shore makes all mandatory same-shore incidences
+fit the `q`-color selection. This exchanges only the apex assignments,
+leaving the original forward robust core unchanged.
 
-[`SurvivingLabels.lean`](../Overfull/BoundaryExtension/SurvivingLabels.lean)
-constructs an edge-copy-preserving bijection between the surviving
-boundary and the original singleton palette. The premise that exactly
-the triple-colored boundary copies were deleted is supplied by
-`completedTriples_boundary`. The actual boundary count
-`residual_cutSize_eq_sub` is consequently `h`, and `residualLabel` is
-injective on surviving boundary copies. These are conclusions of the
-constructed deletion, not extra residual assumptions.
+Let `b` be the common number of copies from either apex into the core;
+regularity proves these two counts agree. `Selection.lean` constructs an
+actual set `F` containing every exceptional copy internal to the core,
+every mandatory same-shore apex copy, enough further apex-to-core copies,
+and exactly `q-b` apex-to-apex copies, with natural subtraction. Both
+selected apex degrees are exactly `q`, and each selected apex-to-core
+degree is exactly `min q b`. The selected degree at every core vertex is
+at most `a`. Every unselected original copy crosses the augmented
+bipartition.
 
-## The edge-copy-preserving contraction and its cuts
+The error choice proves `2a < q` and `2a < min q b`.
+`Balance.lean` applies the proved multigraph fan criterion to construct a
+proper `q`-coloring of `F`. The initially colored inactive residue consists
+only of copies between the two apices and is colored by König's theorem.
+The fan argument therefore does not assume the selected coloring it is
+meant to construct.
 
-[`Contraction.lean`](../Overfull/BoundaryExtension/Contraction.lean)
-first retains exactly the original copies with an endpoint in `U`, then
-maps every exterior endpoint to one apex. Its vertex type is `U ⊕ Unit`.
-The original retained graph and the contracted graph use the same edge
-type, `RetainedEdge`.
+Regularity and the actual bipartite unselected graph give equal selected
+degree sums on the two core shores after the equal apex contributions are
+removed. The proved balanced-coloring theorem then makes each selected
+color's core footprint balanced and bounds its size by `2*m*a/q + 4`.
+Its incidence load at each core vertex is the actual selected degree,
+bounded by `a`.
 
-The proofs establish all of the following directly:
+The uniform fixed-footprint bipartite packing theorem completes all `q`
+selected colors. Each resulting class is a perfect matching of the entire
+host, and distinct classes are disjoint on original copy identities.
+Exactly `q` incidences are deleted at every vertex. The whole remaining
+graph is a subgraph of the explicitly bipartite unselected host, regular
+of degree `k-q`. König supplies its coloring, and disjoint palettes give
+an actual `k`-coloring of the whole original two-apex graph.
 
-- Contraction creates no loop, because every retained edge has a core
-  endpoint and distinct original endpoints remain distinct at that end.
-- Incidence and degree at each core vertex are preserved exactly.
-- Apex incidences correspond bijectively to original boundary copies.
-- The apex degree is the actual boundary size.
-- `contractCore` embeds the original simple core into the contracted host
-  without changing its degrees or robust parameters.
-- An odd core gives an even contracted order.
+## 4. Restore every prescribed original label
 
-For the actual residual above, the contraction is therefore `h`-regular
-of even order, with one exterior vertex and a simple robust core of degree
-at least `h-a`.
+The obtained two-apex coloring is reconstructed through the first-group
+perfect matchings to color the contracted one-apex graph. At its apex,
+regularity makes the colors of all remaining boundary incidences distinct.
+The proved palette permutation sends each of those colors to the
+corresponding original singleton label.
 
-[`OneCore/Cuts.lean`](../Overfull/OneCore/Cuts.lean) proves the uniform
-theorem `robust_one_exterior_no_overfull`. Its core-order-normalized
-conditions include `τ ≤ α/20`, `α*|U| ≤ h`, and
-`a ≤ α*|U|/20`. The host upper-degree bound needed by the small-cut theorem
-is derived from the simple core and its degree error. The theorem does
-not assume that the ambient multigraph is simple.
+The coloring is pulled back to the retained original vertices and edge
+copies. Properness at the original exterior vertices follows from the
+prescribed boundary coloring. The completed triple classes are then
+reinserted with their original labels. The singleton and triple palettes
+are disjoint and partition the original `Fin d` palette.
 
-If an odd cut were smaller than `h`, the proved small-cut theorem would
-give a shore with at most one core vertex. Both shores are odd because the
-whole host order is even. With at most one exterior vertex, that shore has
-at most two vertices and hence is a singleton. Its cut is exactly `h`, a
-contradiction. `no_overfull_of_odd_cuts` then rules out all overfull vertex
-sets, including the even sets in the definition.
+The final wrapper takes `β = min γ 1`. The boundary reduction gives
+`0 < θ ≤ σ ≤ β/20`, which satisfies the one-apex theorem's range bound
+`σ ≤ β/8`. The final input error is the minimum of the reduction and
+factorization errors; the final order threshold is their maximum. These
+choices are made before the original graph and prescribed coloring.
+`BoundaryReduction.extend` is now applied to a constructed coloring of
+its precise contraction, discharging its previously explicit argument.
 
-[`ContractionCuts.lean`](../Overfull/BoundaryExtension/ContractionCuts.lean)
-applies this result to the actual contraction. No factorization hypothesis
-is used to prove its cut inequalities or no-overfullness.
+## Proof map
 
-## Palette restoration and exact reassembly
-
-[`Palette.lean`](../Overfull/BoundaryExtension/Palette.lean) proves that a
-proper coloring with a finite palette uses every palette color exactly
-once at a vertex whose degree equals the palette cardinality. The actual
-incident edge copies give an explicit palette bijection. Prescribed
-distinct labels can also be embedded into a larger original palette,
-allowing previously removed labels to stay unavailable.
-
-Given an actual `h`-coloring of the exact residual contraction,
-[`Colors.lean`](../Overfull/BoundaryExtension/Colors.lean) aligns its
-colors with the distinct prescribed singleton labels. Pullback preserves
-properness at every original vertex: original incidence implies incidence
-at its contracted image, and the edge-copy map is the identity. Injectivity
-of the vertex map is unnecessary. The restored coloring uses only the
-surviving prescribed labels.
-
-[`Reassembly.lean`](../Overfull/BoundaryExtension/Reassembly.lean), theorem
-`reassemble_deleted_colors`, combines that actual residual coloring with
-the completed classes. It accepts the actual matching classes, their
-disjointness and exact boundary membership, and a residual coloring which
-avoids the selected labels. It returns an actual
-`EdgeColoring (retainedGraph G U) d` and proves:
-
-- Exact agreement on every original boundary copy.
-- Exact selected labels on every completed matching class.
-- Exact preservation of the residual coloring on surviving copies.
-
-The result proves properness at exterior vertices as well as at core
-vertices. This is a proved implication from an actual residual coloring;
-it is not an existence theorem for that coloring.
-
-## Component interfaces
-
-All declarations below are in `Overfull.BoundaryExtension`, except the
-public theorem in `Overfull` and the listed `OneCore` declarations in
-`Overfull.OneCore`.
-
-| Construction or obligation | Main declarations |
+| Obligation | Main files or declaration |
 | --- | --- |
-| Uniform construction from the original prescribed coloring | `Overfull.boundary_extension_reduction` |
-| Original boundary copies, prescribed labels, and core footprints | `BoundaryColoring`, `BoundaryColoring.footprint_card`, `BoundaryColoring.footprint_incidence_eq_degree` |
-| Exact triple enumeration and reserve horizon | `BoundaryColoring.tripleLabel`, `BoundaryColoring.tripleLabel_range`, `BoundaryColoring.triple_horizon` |
-| Fixed finite packing and its actual residual | `CorePacking`, `pack_fixed_forbidden_sets`, `CorePacking.degree_identity` |
-| Derive triple packing from the manuscript input | `boundary_degree_le_error`, `exists_triple_core_packing` |
-| Assemble actual original-host matching classes | `completedColor`, `completedColor_isMatching`, `completedColor_covers_uniquely`, `completedColor_boundary`, `completedColor_disjoint` |
-| Exact residual host and simple-core embedding | `completedUnion`, `remainingAmbient`, `remainingAmbient_degree_add`, `remainingEmbeddedCore`, `coreCopy_survives_iff` |
-| Surviving singleton labels and actual boundary size | `BoundaryColoring.singletonBoundaryEquiv`, `BoundaryColoring.residualLabel_injective`, `BoundaryColoring.residual_cutSize_eq_sub` |
-| Actual contraction, retained copies, degrees, and core | `retainedGraph`, `contract`, `boundaryApexEquiv`, `contract_regular`, `contractCore` |
-| Derived odd-cut inequalities and no-overfullness | `OneCore.robust_one_exterior_no_overfull`, `exists_contraction_cut_threshold` |
-| Restore labels from an actual contracted coloring | `restoreSingletonLabels`, `restoreSingletonLabels_boundary`, `restoreSingletonLabels_range` |
-| Reinsert actual completed color classes | `reassemble_deleted_colors` |
-| Even-core shortcut for a one-apex host | `OneCore.restrictCore`, `OneCore.restrictCore_edges`, `OneCore.even_core_complement` |
+| Original boundary classes, footprints, and singleton/triple counts | [BoundaryData.lean](../Overfull/BoundaryExtension/BoundaryData.lean), [Triples.lean](../Overfull/BoundaryExtension/Triples.lean) |
+| Actual triple completion and exact surviving robust core | [Packing.lean](../Overfull/BoundaryExtension/Packing.lean), [Assembly.lean](../Overfull/BoundaryExtension/Assembly.lean), [Residual.lean](../Overfull/BoundaryExtension/Residual.lean) |
+| Exact singleton boundary and one-apex contraction | [SurvivingLabels.lean](../Overfull/BoundaryExtension/SurvivingLabels.lean), [Contraction.lean](../Overfull/BoundaryExtension/Contraction.lean), [ContractionCuts.lean](../Overfull/BoundaryExtension/ContractionCuts.lean) |
+| Moved vertex, prescribed neighbor pairs, and retained incidence rows | [MovedNeighbors.lean](../Overfull/OneCore/MovedNeighbors.lean), [NeighborPairing.lean](../Overfull/OneCore/NeighborPairing.lean), [ApexChoices.lean](../Overfull/OneCore/ApexChoices.lean), [ApexPalette.lean](../Overfull/OrdinaryFactorization/ApexPalette.lean) |
+| Uniform reduction retaining both rows and exact shore transport | [OneCore/Reduction.lean](../Overfull/OneCore/Reduction.lean), [ResidualShores.lean](../Overfull/OneCore/ResidualShores.lean) |
+| Actual selected copies and constructed balanced coloring | [TwoApexFactorization/Selection.lean](../Overfull/TwoApexFactorization/Selection.lean), [Balance.lean](../Overfull/TwoApexFactorization/Balance.lean), [Shores.lean](../Overfull/TwoApexFactorization/Shores.lean) |
+| Uniform core completion and actual bipartite remainder coloring | [TwoApexFactorization/Packing.lean](../Overfull/TwoApexFactorization/Packing.lean), [Completion.lean](../Overfull/TwoApexFactorization/Completion.lean), [Theorem.lean](../Overfull/TwoApexFactorization/Theorem.lean) |
+| Full one-apex factorization | [OneCore/Factorization.lean](../Overfull/OneCore/Factorization.lean), `exists_uniform_one_apex_factorization` |
+| Prescribed-label restoration and original-copy reassembly | [Palette.lean](../Overfull/BoundaryExtension/Palette.lean), [Colors.lean](../Overfull/BoundaryExtension/Colors.lean), [Reassembly.lean](../Overfull/BoundaryExtension/Reassembly.lean) |
+| Full Lemma 4.14 with uniform constants | [BoundaryExtension/Full.lean](../Overfull/BoundaryExtension/Full.lean), `Overfull.boundary_extension` |
 
-[`Result.lean`](../Overfull/BoundaryExtension/Result.lean) defines
-`BoundaryReduction`, recording the actual completed classes and deleted
-set, exact residual degrees and boundary size, retained density, an
-embedded robust residual core, and the regular even-order non-overfull
-contraction. Its `extend` field accepts an actual coloring of that precise
-contraction and returns the required original extension. Existence of a
-contracted coloring is not a field. The public uniform theorem constructs
-this structure from the original input. Its helper
-`extend_from_completed_triples` performs the actual palette restoration
-and reassembly once a coloring of the returned contraction is supplied.
+## Scope of the completion
 
-| Required fact | `BoundaryReduction` field |
-| --- | --- |
-| Actual selected classes and exact deleted union | `completed`, `deleted`, `deleted_eq` |
-| Matching, disjointness, and one incidence at each core vertex | `completed_matching`, `completed_disjoint`, `completed_covers` |
-| Every selected edge belongs to the extension problem | `completed_retained` |
-| Exact prescribed triple colors on boundary copies | `completed_boundary` |
-| Exact residual core degree and boundary size `h=d-q` | `residual_degree`, `residual_boundary` |
-| Positive linear degree reserve | `retained_density` |
-| Actual surviving embedded simple core | `core`, `core_degree`, `core_robust` |
-| Regular, even, no-overfull apex graph | `contracted_regular`, `contracted_even`, `contracted_no_overfull` |
-| Original extension from an actual coloring of that graph | `extend` |
+This proves the full boundary extension asserted in Lemma 4.14. The
+broader ordinary-core Lemma 4.2, bounded-input Corollary 4.6, Theorem 6.1,
+and its spanning-setup and absorber infrastructure remain separate
+obligations. The two-apex theorem requires the derived two-shore incidence
+supply at one apex; it does not assert factorization for every arbitrary
+bounded exceptional configuration.
 
-## A shorter route to the missing one-apex factorization
-
-The manuscript invokes Corollary 4.6, whose proof uses Lemma 4.4 and the
-Fan–Zhang compatible-circuit theorem. The special one-apex graph needed
-here admits a more direct reduction to Lemma 4.2.
-
-In `OneCore/Complement.lean`, `one_apex_complement_colorable` observes that
-every vertex except the apex has degree at most `a` in the exceptional
-complement. The proved `Multigraph.edgeColoring_one_high` supplies a
-`k`-coloring when `2a < k`.
-
-Choose a vertex `x` of the odd core and move it outside. The actual
-`restrictCore C {x}` retains exactly the original core copies whose ends
-both survive. `even_core_complement` proves, under `3(a+1) < k` and the
-explicit vertex-deletion robustness bounds, that:
-
-- The surviving core has even order.
-- Its exterior consists of exactly the old apex and `x`.
-- Its exceptional complement has an actual `k`-coloring, by the proved
-  bounded-core-move theorem.
-- Its minimum degree is at least `k-(a+1)`.
-- Its robust parameters are `(ν/2,2τ)`.
-
-Thus a proved Lemma 4.2 with exceptional bound `s=2` would factor this
-graph directly. This route avoids the full fixed-pattern and compatible-
-circuit machinery for Lemma 4.14. It does not prove Lemma 4.2 itself.
-
-## Remaining dependencies and verification boundary
-
-The full Lemma 4.2 (`two:lem:ordinary-special`) remains unproved, but its
-ordinary-core preprocessing is now constructed by
-`OrdinaryFactorization.exists_uniform_bipartite_reduction`. The theorem
-chooses constants uniformly and constructs the actual first group of
-perfect matchings, exact residual crossing core, and actual coloring of
-that core's complement. See [ordinary-factorization.md](ordinary-factorization.md).
-
-| Input or bridge | Current status |
-| --- | --- |
-| Accurate cut, side-specific reserve, equitable exterior classes, constrained balancing, and actual reserve repair | Proved and assembled in the uniform ordinary-core reduction. |
-| Forbidden exterior colors in the internal graph | The needed specialized result is proved by permutation counting and greedy repair, using Vizing for the initial simple-graph coloring. The general Kahn theorem remains unformalized and is not assumed by this construction. |
-| Theorem 6.1, `ext:thm:robust` | Still unformalized. It factors the whole residual regular multigraph through its bipartite robust core. The ambient residual is not necessarily bipartite, so König's theorem does not apply to it. |
-| Robust decomposition and Hamilton decomposition infrastructure | The manuscript's inputs to Theorem 6.1, including the cited Granet lemma, still need formalization or a proved sufficient replacement. |
-
-The required one-apex factorization is itself substantial. Deleting one
-vertex from an even-order simple regular robust graph gives an odd core
-with error at most one, so such a factorization theorem would already
-cover ordinary regular robust graphs. Packing a fixed number of colors
-with a positive linear reserve does not automatically factor the final
-reserve.
-
-The uniform boundary reduction now exposes the exact contracted residual
-and proves that an actual coloring of that graph produces the desired
-original extension. This establishes the reduction and transport steps;
-it does not establish the missing coloring premise or the full numbered
-lemma. No universal factorization oracle, axiom, or unproved external
-theorem is supplied by these modules.
-
-Count Lemma 4.14 only after an actual factorization of the constructed
-contracted residual is derived, the uniform public extension theorem
-preserves every prescribed original label, and the strict build,
-transitive axiom audit, and semantic review pass. Until then Lemma 4.14
-remains unverified. The current coverage tally is **45 of 69**, with 24
-remaining, after the [complete proof of Lemma 4.15](four-odd-decomposition.md).
-The main theorem remains unverified.
+The full terminal Proposition 4.16 also remains open. Its all-even and
+mixed-parity branches still require their own joining-edge constructions
+and general factorization input. The completed Lemmas 4.14 and 4.15 supply
+substantial inputs to the four-odd-part branch, but they do not constitute
+an already assembled proof of every terminal case. The
+[next-target document](next-verification-target.md) records the remaining
+work and the acceptance conditions for another numbered assertion.

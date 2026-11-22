@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "verification"
 MATHLIB_REVISION = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
 NUMBERED_ASSERTION_COUNT = 69
-COMPLETED_NUMBERED_ASSERTION_COUNT = 45
+COMPLETED_NUMBERED_ASSERTION_COUNT = 46
 
 
 def run(arguments: list[str], log_name: str) -> str:
@@ -83,6 +83,19 @@ def main() -> None:
     if (len(residual_public_names) != residual_source["public_theorem_count"]
             or residual_public_names != set(residual_source["required_proof_declarations"])):
         raise SystemExit("The residual-factorization public proof mapping is inconsistent.")
+
+    # Full prescribed boundary extension: exact reviewed sources and final proof.
+    boundary_source = json.loads((ROOT / "docs/boundary-extension-full-source.json").read_text())
+    boundary_modules = {item["module"]: item for item in boundary_source["modules"]}
+    if len(boundary_modules) != boundary_source["module_count"]:
+        raise SystemExit("The complete boundary-extension source inventory is inconsistent.")
+    for item in boundary_modules.values():
+        path = ROOT / item["path"]
+        if hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]:
+            raise SystemExit(f"Boundary-extension source differs from its reviewed manifest: {item['path']}")
+    probability_source = boundary_source["additional_supporting_probability_module"]
+    if hashlib.sha256((ROOT / probability_source["path"]).read_bytes()).hexdigest() != probability_source["sha256"]:
+        raise SystemExit("The supporting Bernoulli-differences source differs from its manifest.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1423,6 +1436,15 @@ def main() -> None:
         "four_odd_arbitrary_label_forest": "Overfull.FourOdd.exists_joining_decomposition",
     })
 
+    completed_results.update({
+        "boundary_extension_complete": "Overfull.boundary_extension",
+        "one_apex_complete_factorization": "Overfull.OneCore.exists_uniform_one_apex_factorization",
+        "two_apex_complete_factorization": "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization",
+        "one_apex_uniform_supplied_reduction": "Overfull.OneCore.exists_uniform_two_apex_reduction",
+        "bernoulli_variance_sensitive_bounded_differences": "Overfull.BernoulliDifferences.exponential_moment_le",
+        "bernoulli_two_sided_tail": "Overfull.BernoulliDifferences.two_sided_tail",
+    })
+
     audited_names = {item["name"] for item in declarations}
     # BEGIN RECOVERED MAIN PROOF PRESERVATION CHECK
     recovered_source = json.loads((ROOT / "docs/source-recovery.json").read_text())
@@ -1436,6 +1458,9 @@ def main() -> None:
         raise SystemExit("Four-odd mapped proof declarations absent from the audit: " + ", ".join(missing))
     if missing := sorted(residual_public_names - audited_names):
         raise SystemExit("Residual-factorization public proofs absent from the audit: " + ", ".join(missing))
+
+    if missing := sorted(set(boundary_source["required_proof_declarations"]) - audited_names):
+        raise SystemExit("Full boundary-extension mapped proofs absent from the audit: " + ", ".join(missing))
 
     coverage = json.loads((ROOT / "docs/coverage.json").read_text())
     if (coverage["numbered_assertion_count"] != NUMBERED_ASSERTION_COUNT
@@ -1467,10 +1492,15 @@ def main() -> None:
         names = assertion.get("lean_theorems", [])
         if not names or not set(names) <= audited_names:
             raise SystemExit(f"A completed assertion lacks audited proof declarations: {assertion['number']}")
-    for number in ("2.24", "4.2", "4.14", "6.1", "6.2", "6.3"):
+    for number in ("2.24", "4.2", "6.1", "6.2", "6.3"):
         assertion = next(a for a in coverage["numbered_assertions"] if a["number"] == number)
         if assertion["full_assertion_verified"]:
             raise SystemExit(f"Assertion {number} is not completed by the registered supporting results.")
+    boundary_assertion = next(a for a in coverage["numbered_assertions"] if a["number"] == "4.14")
+    if (not boundary_assertion["full_assertion_verified"]
+            or "Overfull.boundary_extension" not in boundary_assertion.get("lean_theorems", [])
+            or boundary_assertion["statement_sha256"] != boundary_source["statement_sha256"]):
+        raise SystemExit("The full boundary-extension proof is not mapped to the pinned complete assertion.")
     if coverage["main_theorem_verified"]:
         raise SystemExit("The main theorem is not proved by this version of the development.")
 
@@ -1513,6 +1543,24 @@ def main() -> None:
         "includes_private_and_generated_proofs": True,
         "proof_declaration_map": residual_declarations,
     }, indent=2) + "\n", encoding="utf-8")
+    boundary_declarations = [
+        {**item, "source_path": boundary_modules[item["module"]]["path"],
+         "source_sha256": boundary_modules[item["module"]]["sha256"]}
+        for item in sorted(declarations, key=lambda item: item["name"])
+        if item["module"] in boundary_modules
+    ]
+    if {item["module"] for item in boundary_declarations} != set(boundary_modules):
+        raise SystemExit("The complete boundary-extension proof mapping omits a reviewed module.")
+    boundary_map_path = OUTPUT / "boundary-extension-full-declarations.json"
+    boundary_map_path.write_text(json.dumps({
+        "schema_version": 1,
+        "manuscript_number": "4.14",
+        "statement_sha256": boundary_source["statement_sha256"],
+        "module_count": len(boundary_modules),
+        "verified_declaration_count": len(boundary_declarations),
+        "includes_private_and_generated_proofs": True,
+        "proof_declaration_map": boundary_declarations,
+    }, indent=2) + "\n", encoding="utf-8")
     results = {
         "status": "partial_formalization",
         "main_theorem_verified": False,
@@ -1549,6 +1597,13 @@ def main() -> None:
             "public_theorem_count": len(residual_public_names),
             "module_count": len(residual_modules),
             "numbered_assertions_completed": 0,
+        },
+        "boundary_extension_declaration_map": {
+            "path": str(boundary_map_path.relative_to(ROOT)),
+            "sha256": hashlib.sha256(boundary_map_path.read_bytes()).hexdigest(),
+            "verified_declaration_count": len(boundary_declarations),
+            "module_count": len(boundary_modules),
+            "manuscript_number": "4.14",
         },
         "source_sha256": {
             str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()

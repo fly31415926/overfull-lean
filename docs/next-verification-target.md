@@ -1,242 +1,195 @@
-# Remaining factorization targets after Lemma 4.15
+# Remaining verification targets after Lemma 4.14
 
-The [reserved-remainder continuation](residual-factorization.md) adds
-99 public theorem proofs in eight modules and keeps the count at **45/69**.
-The coupled absorber integers, exact palette identities, source palette
-budgets and divisibilities are now constructed. The final small-reserve
-packing and actual balanced orientation are also proved, including a
-uniform theorem deriving the prepared graph from the original regular
-host and its explicit reserved edge copies.
+**The completed numbered inventory is 46 of 69, with 23 assertions
+remaining.** The new public theorem
+[`Overfull.boundary_extension`](../Overfull/BoundaryExtension/Full.lean)
+proves the full Lemma 4.14, including pointwise agreement with every
+original prescribed boundary label. The main theorem remains unverified.
+The [boundary-extension notes](boundary-extension.md),
+[source mapping](boundary-extension-full-source.json), and
+[semantic review](boundary-extension-full-semantic-review.md) record the
+completed statement and the direct proof route.
 
-The remaining substantive target is to construct the compatible spanning
-bi-setup, special path systems, and robust absorber. They must supply the
-actual reserved set and compressed balanced remaining-exterior coloring,
-and support the final replacement of auxiliary edges. The new stage
-theorem does not assert those inputs exist from the original hypotheses.
+## What this checkpoint closes
 
-This checkpoint completes [Lemma 4.15](four-odd-decomposition.md), bringing
-the numbered inventory to **45 of 69**, with **24** remaining. Its direct
-proof constructs the required actual joining-edge decomposition from the
-original graph hypotheses, using the sufficient ratio bound `1/1000`.
-Theorem 2.23 brought the earlier `2eb61f5` checkpoint to 44; the subsequent
-109 supporting proofs in 13 modules preserved that earlier count.
+The previously checked boundary reduction constructed actual completed
+triple classes, their exact residual robust core, the remaining singleton
+labels, and an even regular one-apex contraction. Its reconstruction
+function required an actual coloring of that precise contraction.
 
-The combined tree also preserves the published circuit checkpoint
-`54db7b8` and its alternate pattern proof. The [recovery manifest](source-recovery.json)
-records the source identity and exact namespace mapping. The recovered
-[circuit and forest components](four-odd-circuits.md) remain available.
-The new direct proof completes Lemma 4.15 without the general compatible
-decomposition theorem, which remains unproved. The second proof of Lemma
-4.13 does not add another numbered assertion.
+That input is now proved. The direct one-apex construction moves one core
+vertex outside, chooses a prescribed neighbor pairing and first-group
+palette, and preserves a linear supply from that moved vertex into both
+shores of the actual residual bipartite core. The new two-apex theorem
+constructs a selected exceptional coloring by the fan criterion, balances
+its core footprints, completes them through robust bipartite packing, and
+colors the genuinely bipartite whole remainder by König. Uniform choices
+precede the original graph throughout. Reassembly restores the prescribed
+singleton and triple labels on the original copies.
 
-## Newly completed finite constructions
+The completed theorem does not assume full Lemma 4.2, Corollary 4.6,
+Theorem 6.1, a spanning bi-setup, or a robust absorber. Those general
+assertions remain open. The two-apex theorem uses exactly two exterior
+vertices and an actual two-shore incidence supply at one of them; that
+extra structure is constructed for the one-apex application.
 
-The [uniform-localization continuation](uniform-localization.md) now proves:
+## The next full factorization obligations
 
-- Actual simultaneous palettes with graph-specific error and order
-  thresholds, followed by actual positive even rounded palette sizes.
-- Actual equal fine positions, exact coarse unions, and actual simultaneous
-  vertex blocks constructed from divisible parts of sufficient size.
-- Floor-cap intervals, correction-row small-error bounds, and every
-  probability budget, all derived internally from the stated graph bounds.
-- A preferred-row-only sampling theorem for the no-correction branch.
-- The actual normalized boundary weight bound, a light existing cluster,
-  and original-copy pool/row loss bounds for any bounded-weight boundary.
+| Numbered target | Checked inputs | Substantive remaining work |
+| --- | --- | --- |
+| Lemma 4.2: general ordinary-core factorization | Uniform paired cut, sampled reserve, constrained internal coloring, first completed perfect matchings, actual robust bipartite residual and coloring of its complement | Factor every residual allowed by the original bounded-exception hypotheses. The specialized two-apex theorem does not cover an arbitrary bounded exceptional set. |
+| Lemma 4.4 and Corollaries 4.5–4.6 | Pattern and coloring components; completed one-apex application | The full fixed-pattern and bounded-input factorization, including the general ordinary-core input and the required compatible joining-edge constructions. |
+| Proposition 4.16: terminal factorization | Frequent-pattern reduction, full boundary extension (4.14), and full four-odd joining decomposition (4.15) | Complete every parity branch and reassemble the full host factorization. The all-even and mixed-parity branches still require the compatible-circuit and general bounded-input factorization work. |
+| Proposition 4.17 and the structural coloring cases | Safe matching deletions, exceptional absorption, frequent patterns, and the new boundary extension | The remaining terminal factorization and the source-level compositions for the required critical cases. |
+| Theorem 6.1 and Proposition 6.2 | Uniform localization, coupled parameters, actual reserved-remainder packing, and exact regular orientation | Construct the complete compatible spanning setup, special path systems, actual robust absorber/reservation, and final full-host reconstruction from the original hypotheses. |
+
+A practical next factorization target is the full Lemma 4.2 or a proved
+factorization statement sufficient for the remaining bounded-input cases
+of Corollary 4.6. The new two-apex construction provides a concrete
+alternative mechanism for its stated specialization. Extending that
+mechanism requires deriving the relevant exceptional incidence structure
+from the new target's original hypotheses, not inserting it as an
+additional premise.
+
+### Proposition 4.16 is not an immediate composition
+
+The terminal proposition quantifies over the whole graph produced by
+Lemma 4.13. Its even order permits zero, two, or four odd parts. The source
+handles these configurations differently:
+
+- **All parts even:** compatible quotient circuits must lift to actual
+  joining-edge matchings, be assigned to bounded-footprint colors, and be
+  completed. The source then uses Corollary 4.6 on the remaining even
+  regular components.
+- **Exactly two odd parts:** virtual-edge circuit constructions must give
+  actual paths and surplus circuits with the needed endpoint constraints.
+  After preliminary completions, the contracted residual can have one or
+  two cores and two other vertices; the source again invokes the general
+  bounded-input factorization. A two-apex graph with the particular supply
+  used in the new cleanup has not been derived for every such residual.
+- **Four odd parts:** Lemmas 4.14 and 4.15 now provide the full boundary
+  extension and joining decomposition required by this branch. The
+  remaining source-level selection, deletion, boundary-color assignment,
+  and global reassembly must still be assembled on actual original copies.
+
+The existence of the full inputs for the four-odd branch does not prove
+all parity branches of Proposition 4.16. It must retain its incomplete
+status until its full conclusion is obtained under its original scope.
+
+## General Section 6 route: preserve the checked checkpoint
+
+The [reserved-remainder continuation](residual-factorization.md) added
+**99 public theorem proofs in eight modules** and retained the historical
+**45/69** count. It constructs the coupled absorber integers, exact palette
+identities, source palette budgets, and divisibilities. It also proves
+uniform packing through an actual simple regular bipartite remainder and
+constructs its balanced orientation.
+
+Its public `exists_uniform_reserved_remainder` starts with the original
+regular host and an explicit reserved-copy set. It derives the actual
+retained core, robustness, and degree-error bounds and completes the
+supplied balanced remaining exterior coloring. The reserved set and that
+colored exterior remain explicit stage inputs. The theorem does not
+assert their existence from the full original factorization hypotheses.
+
+The [uniform-localization results](uniform-localization.md) already supply:
+
+- Actual simultaneous palettes, positive even rounded palette sizes, and
+  uniform error and order choices.
+- Actual equal fine positions, exact coarse unions, and simultaneous
+  compatible vertex blocks from divisible populations of sufficient size.
+- Derived floor-cap intervals, correction-row small-error bounds, and
+  actual sampling budgets.
+- A preferred-row-only construction for the no-correction branch, including
+  actual zero-correction selection without a correction-score premise.
+- Actual normalized boundary weights, a light existing cluster, and
+  original-copy loss bounds for bounded-weight boundaries.
 - Exact adaptive pool loss, fine-to-coarse reserve accounting, preferred
   supplies, strict coloring reserves, and sampled-to-selection bridges.
-- Actual zero-correction selection without any correction-score premise.
 
-The next Section 6 obligation is the **full compatible spanning setup**:
+The remaining general Section 6 construction is:
 
-1. Construct and normalize the actual regularity partition and its balanced
-   core moves, then connect the proved integer cluster adjustment to it.
-2. Connect the now-constructed coupled absorber integers and positive even
-   palette targets to the full geometric hierarchy and actual bi-setup.
-   The exact identities `k₁=2r₃`, `k₂=2r◇`, structural divisibilities and
-   source palette budgets are proved in `AbsorberParameters.lean`.
+1. Construct and normalize the actual regularity partition and balanced
+   core moves, and connect the proved integer cluster adjustment to that
+   geometric partition.
+2. Connect the constructed coupled absorber integers and positive even
+   palette targets to the full hierarchy and actual bi-setup. The exact
+   identities `k₁=2r₃`, `k₂=2r◇`, structural divisibilities, and source
+   palette budgets already proved in `AbsorberParameters.lean` should be
+   reused.
 3. Construct the final forward-copy boundary after insertions and
-   equalization, proving both its normalized-weight and cardinality bounds.
-4. Assemble the original robust-core hypotheses, allowed colors, both
-   correction orientations, samples, reserves, and exact copy accounting
-   into one uniform construction of both colored families.
+   equalization, with both its normalized-weight and cardinality bounds.
+4. Assemble allowed colors, both correction orientations, samples, reserves,
+   and exact copy accounting into one uniform construction of both colored
+   families from the original robust-core hypotheses.
 5. Construct the special path systems and robust absorber, apply the proved
-   uniform reserved-remainder packing and orientation, and reconstruct
-   the factorization of the actual whole residual multigraph.
+   reserved-remainder packing and orientation, and reconstruct the
+   factorization of the actual entire residual multigraph.
 
-The finite sampling theorems do not themselves supply regularity or the
-absorber. A bipartite core does not make the entire residual host bipartite.
+A graph containing a bipartite robust core may still have same-side and
+exceptional copies. The generic reserved-remainder stage therefore cannot
+finish with König until the whole remainder has been proved bipartite or
+otherwise factored. The new two-apex proof establishes precisely that
+whole-remainder property in its own restricted setting; it does not supply
+it for every Section 6 input.
 
-## Separate near-complete deterministic partition reduction
+## Independent remaining routes
 
-The [critical-partition continuation](critical-partition-consequences.md)
-now derives every conclusion of the deterministic argument from the actual
-normalized average-degree estimate. The parameters precede the graph,
-the low-degree set is the actual manuscript set, and all degree/shore
-bounds refer to the actual induced survivor graph and original order.
-To complete Proposition 2.24, prove the Cao–Chen criticality-to-average-degree
-input and compose its uniform degree threshold. No such theorem is
-assumed as an axiom.
+### Proposition 2.24: criticality to the partition input
 
-## Remaining factorization chain
+The [critical-partition development](critical-partition-consequences.md)
+derives the deterministic conclusions from the actual normalized
+average-degree estimate. Its thresholds precede the graph; the low-degree
+set is the source's actual set; and its degree and shore bounds refer to
+the actual induced survivor and original order.
 
-The boundary-extension reduction for Lemma 4.14 and the ordinary-core
-reduction for Lemma 4.2 are already proved. Their remaining input is an
-actual factorization of the residual supplied by the Section 6 theorem.
-The complete count is **45 of 69**, and the main theorem is unverified.
+The missing input is the Cao–Chen criticality-to-average-degree theorem,
+followed by the uniform threshold composition. The existing deterministic
+partition construction does not prove that estimate. A proof of the
+original criticality result is required before counting Proposition 2.24.
 
-The detailed boundary statement and manuscript identity remain recorded in
-[manuscript-source.json](manuscript-source.json), [coverage.json](coverage.json),
-and [boundary-extension.md](boundary-extension.md). The following description
-records the already completed reductions and the remaining composition.
+### Dense triangle decomposition and coloring extension
 
-## The completed uniform reduction
+The dense development includes the fractional triangle decomposition,
+finite absorbers, signed flows, integer balance repair, and full dense
+link packing. The full triangle decomposition of Lemma 5.13 still needs
+the approximate integral packing and iterative absorption chain. The
+weighted hypergraph matching/nibble input of Lemma 5.8 remains substantive
+new mathematics. The checked encoding equivalence does not itself
+construct the triangle decomposition needed for Lemma 5.14 or the dense
+coloring conclusion of Theorem 5.1.
 
-For `0 < α ≤ 1`, `0 < γ`, and `0 < ν ≤ τ ≤ α/8`,
-[`boundary_extension_reduction`](../Overfull/BoundaryExtension/Reduction.lean)
-chooses positive `ε`, `θ`, `σ`, and a threshold `m₀` before every graph,
-embedded core, degree, error, and prescribed boundary coloring.
-The parameters satisfy `θ ≤ σ ≤ τ` and `σ ≤ min γ 1 / 20`.
+## Historical checkpoints and source preservation
 
-The input is a loopless multigraph with a finite edge-copy type, an odd
-core `U` of order at least `m₀`, and an embedded simple `(ν,τ)`-robust
-graph on `U`. Ambient degrees equal `d` on `U`, the embedded core has
-minimum degree at least `d-a`, `α*U.card ≤ d`, and
-`0 ≤ a ≤ ε*U.card`. No regularity outside `U` is required.
-The actual boundary copies have a proper `Fin d` coloring, every color
-has size one or three, and at least `γ*U.card` colors have size one.
+The direct [Lemma 4.15 proof](four-odd-decomposition.md) raised the inventory
+to **45 of 69**. It uses the sufficient error-ratio bound `1/1000` and
+constructs the complete joining-edge decomposition from the original graph
+hypotheses. Theorem 2.23 had previously raised the count to 44; the
+subsequent 109 supporting proofs in 13 modules retained that earlier count.
+The latest full Lemma 4.14 adds the forty-sixth numbered assertion.
 
-The theorem constructs `BoundaryReduction`, whose data include:
+The combined tree also preserves the published circuit checkpoint
+`54db7b8` and its alternate proof of Lemma 4.13. The
+[recovery manifest](source-recovery.json) records exact source identities
+and namespace mappings. Its [circuit and forest components](four-odd-circuits.md)
+remain available. The general compatible-circuit theorem is still
+unproved; the direct proof of Lemma 4.15 and the new one-apex proof of
+Lemma 4.14 do not depend on that general theorem. Two proofs of Lemma 4.13
+still count as one numbered assertion.
 
-- Actual pairwise edge-disjoint completed triple classes, each covering
-  every core vertex exactly once and retaining its prescribed boundary
-  copies and original color.
-- Their exact union `T`, with actual residual `G.restrictEdges Tᶜ`.
-- Exact residual degree `h=d-q` on `U` and actual boundary size `h`,
-  where `q` is the number of triple colors, with `γ*U.card ≤ h`.
-- The actual embedded surviving simple core, of minimum degree `h-a`
-  and robust parameters `(θ,σ)`.
-- The actual retained-edge contraction on `U ⊕ Unit`, proved
-  `h`-regular, of even order, and without any overfull vertex set.
-- An `extend` function that takes an actual `h`-coloring of that precise
-  contraction and returns a proper coloring of all original edges
-  incident with `U`, exactly agreeing with every prescribed boundary
-  label.
+## Acceptance conditions for another complete assertion
 
-The construction keeps individual original edge copies. It proves
-properness at original exterior endpoints as well as at core vertices.
-Its public hypotheses contain no residual coloring or factorization
-oracle. The only conditional part of the returned object is `extend`'s
-explicit input coloring; existence of that coloring is not asserted.
+Choose a full numbered source statement and retain its original graph
+hypotheses, quantifier order, and conclusion. Every additional structure
+needed by a specialized proof must be constructed from those hypotheses.
+A wrapper that takes the desired residual coloring, decomposition,
+spanning setup, or absorber as an unproved premise is a supporting result,
+not a complete assertion.
 
-## Completed supporting components
-
-The earlier contraction, triple completion, and palette-restoration
-steps are now proved and assembled by the public reduction.
-
-| Completed obligation | Main module or declaration |
-| --- | --- |
-| Actual boundary classes, footprints, incidence load, and triple horizon | [BoundaryData.lean](../Overfull/BoundaryExtension/BoundaryData.lean) |
-| Uniform fixed-footprint packing with an actual robust residual | [Packing.lean](../Overfull/BoundaryExtension/Packing.lean), `pack_fixed_forbidden_sets` |
-| Derive every packing hypothesis from the boundary input | [Triples.lean](../Overfull/BoundaryExtension/Triples.lean), `exists_triple_core_packing` |
-| Complete selected classes using actual original core copies | [Assembly.lean](../Overfull/BoundaryExtension/Assembly.lean), `completedColor` |
-| Exact deletion degrees and actual surviving core embedding | [Residual.lean](../Overfull/BoundaryExtension/Residual.lean), `remainingAmbient`, `remainingEmbeddedCore` |
-| Surviving singleton labels and exact residual boundary size | [SurvivingLabels.lean](../Overfull/BoundaryExtension/SurvivingLabels.lean), `residual_cutSize_eq_sub` |
-| Edge-copy-preserving apex graph and exact incidence correspondence | [Contraction.lean](../Overfull/BoundaryExtension/Contraction.lean), `contract`, `contractCore` |
-| Derived no-overfullness at the retained density | [OneCore/Cuts.lean](../Overfull/OneCore/Cuts.lean), [ContractionCuts.lean](../Overfull/BoundaryExtension/ContractionCuts.lean) |
-| Prescribed singleton palette and proper pullback to original vertices | [Palette.lean](../Overfull/BoundaryExtension/Palette.lean), [Colors.lean](../Overfull/BoundaryExtension/Colors.lean) |
-| Reinsert completed classes with exact original labels | [Reassembly.lean](../Overfull/BoundaryExtension/Reassembly.lean), `reassemble_deleted_colors` |
-| Uniform public construction and its precise result object | [Reduction.lean](../Overfull/BoundaryExtension/Reduction.lean), [Result.lean](../Overfull/BoundaryExtension/Result.lean) |
-| Even-core reduction with two exterior vertices and a colored complement | [OneCore/Complement.lean](../Overfull/OneCore/Complement.lean), `even_core_complement` |
-
-## Shorter route to the missing factorization
-
-The manuscript invokes Corollary 4.6, whose one-core branch uses
-Lemma 4.4. The full fixed-pattern proof also uses Fan–Zhang compatible
-circuits and Lemma 4.2. None of these unproved factorization inputs is
-silently supplied by the boundary reduction.
-
-For this particular one-apex graph, a shorter route is already reduced
-to an even ordinary core with at most two exterior vertices:
-
-1. The exceptional complement of the odd core has degree at most `a`
-   away from the apex. `one_apex_complement_colorable` uses the proved
-   one-high-vertex coloring theorem to color it with `h` colors when
-   `2a < h`.
-2. Move one vertex `x` from the odd core to the exterior.
-   `restrictCore` keeps exactly the original core copies whose endpoints
-   survive. `even_core_complement` proves that the new core has even
-   order, its exterior is exactly the old apex and `x`, and its
-   exceptional complement has an actual `h`-coloring. It also gives
-   minimum degree `h-(a+1)` and robustness `(θ/2,2σ)`, under the explicit
-   scalar and deletion bounds, including `3(a+1) < h`.
-3. A proved ordinary-core Lemma 4.2 with exceptional bound `s=2` would
-   factor this actual regular graph. A uniform wrapper must choose the
-   parameters and threshold to satisfy that theorem and the preceding
-   scalar bounds before the arbitrary input graph.
-
-This route bypasses the full Corollary 4.6/Lemma 4.4/Fan–Zhang chain for
-Lemma 4.14. It does not bypass the substantive factorization content of
-Lemma 4.2. A one-apex factorization theorem would already cover ordinary
-even-order simple regular robust graphs by moving one vertex into an
-apex role, so the remaining step is not just palette bookkeeping.
-
-## Completed ordinary-core preprocessing
-
-The ordinary-core route now has a public uniform construction:
-`OrdinaryFactorization.exists_uniform_bipartite_reduction`. It constructs
-the first group of perfect matchings and the exact residual input for
-Theorem 6.1. Its positive crossing parameter is chosen before the
-requested final tolerance, and all remaining constants precede the graph.
-See [the ordinary-factorization notes](ordinary-factorization.md).
-
-| Input or bridge | Current status and role |
-| --- | --- |
-| Accurate balanced cut and side-specific reserve sampling | Proved on one actual graph and sample, with the crossing robust parameter chosen before later tolerances. |
-| Equitable exterior coloring | Proved from the actual initial coloring; coverage, parity, footprint sizes, and incidence loads are derived. |
-| Feasibility with fixed exterior forbidden labels | Proved by permutation counting and greedy repair, using Vizing for the initial simple-graph coloring. This supplies the specialized consequence needed here; the general Kahn theorem remains unformalized. |
-| Constrained balancing and near-perfect classes | Proved by actual two-color exchanges and degree/deficit accounting, including palette rounding. |
-| Reserve repair | Composed with the proved Lemma 4.1 to construct the actual repaired matching family. |
-| Exact first-group deletion and retained degree | Proved on original edge copies, with residual degree `k-h >= 2k/5`. |
-| Residual crossing robustness | Derived from actual reserve use, with the factor of two converting full order to side order. |
-| Residual complementary coloring | Constructed from the inherited compressed colors by greedy extension; all newly colored copies have both endpoints in the core. |
-| Uniform interface for Theorem 6.1 | Constructs an actual embedded crossing core with error at most `η` times the side order and an actual coloring of its complement, for arbitrary requested positive `η` and side-order threshold. |
-| Theorem 6.1, `ext:thm:robust` | Still unformalized. It factors the whole residual multigraph through the bipartite robust core. |
-| Robust decomposition and Hamilton decomposition infrastructure | The manuscript's inputs to Theorem 6.1, including the cited Granet lemma, still require formalization or a proved sufficient replacement. |
-
-The initial exterior coloring may change during equitization. Its
-selected labels are fixed after that step and retained through internal
-coloring, balancing, and repair. No stronger preservation of the input
-coloring is claimed.
-
-Theorem 6.1's formal interface should use the admissible parameter
-`min(ξ/2,4τ)` if needed, and choose the original range small enough that
-`4τ` lies below its range threshold. Both choices precede the requested
-error tolerance. The host and core vertex sets are unchanged, so an
-original bound on the number of exceptional vertices carries directly
-to the residual.
-
-## Next proof priority and acceptance gate
-
-Prove Theorem 6.1 (`ext:thm:robust`), or a sufficient specialization for
-the actual residuals returned by `exists_uniform_bipartite_reduction`.
-The residual ambient graph can have same-side and exceptional edges.
-König's theorem cannot factor that whole graph just because it contains
-a bipartite robust core.
-
-Then compose the uniform constants to obtain the ordinary-core
-factorization of Lemma 4.2, apply its `s=2` case to the even-core
-one-apex reduction, and compose the resulting actual coloring with
-`boundary_extension_reduction` to prove Lemma 4.14. The general Fan–Zhang
-theorem remains unnecessary for this particular one-apex route and for
-the new direct proof of Lemma 4.15. Its general formalization is a
-separate task.
-
-Do not count Lemma 4.2 or Lemma 4.14 as verified until their actual
-factorization conclusions are derived and the strict build, transitive
-axiom audit, and semantic review pass. Supporting declarations are
-registered separately and do not change the completed assertion tally.
-The current count is 45 of 69, and the main theorem remains unverified.
-
-An unfinished formal dependency is not, by itself, a mathematical gap
-in the written proof. The manuscript invokes Theorem 6.1; the remaining
-work here is to prove and compose that input in Lean.
+The completed conclusion must concern the actual graph and original edge
+copies. Prescribed colors must be restored when the source requires them.
+All graph-independent tolerances and thresholds must be selected before
+the graph. The proof must be imported, source-mapped, semantically reviewed,
+and included in the strict build and complete stock-axiom audit before
+another numbered status is changed. The current accepted target inventory
+is **46/69**, and the main theorem remains unverified.

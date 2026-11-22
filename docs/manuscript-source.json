@@ -24,7 +24,7 @@
       "manuscript_label": "sharp:thm:family",
       "manuscript_number": "7.1",
       "proved": true,
-      "scope": "The full assertion of Proposition 7.1 for every odd Delta >= 3: a connected simple graph on Fin (4*Delta+5), maximum degree Delta, no proper Delta-edge-coloring, a proper (Delta+1)-edge-coloring, no Delta-overfull vertex set, and exactly 2*Delta*(Delta+1) edges. The two coloring statements express the exact class-2 conclusion without invoking Vizing\u2019s theorem.",
+      "scope": "The full assertion of Proposition 7.1 for every odd Delta >= 3: a connected simple graph on Fin (4*Delta+5), maximum degree Delta, no proper Delta-edge-coloring, a proper (Delta+1)-edge-coloring, no Delta-overfull vertex set, and exactly 2*Delta*(Delta+1) edges. The two coloring statements express the exact class-2 conclusion without invoking Vizing’s theorem.",
       "proof_declaration": "Overfull.sharpness_family",
       "proof_file": "Overfull/Sharpness/Theorems.lean"
     }
@@ -32,7 +32,7 @@
   "coverage_file": "coverage.json",
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
-  "fully_verified_numbered_assertions": 45,
+  "fully_verified_numbered_assertions": 46,
   "additional_complete_results": [
     {
       "lean_name": "Overfull.arbitrarily_large_class_two_graphs",
@@ -96,7 +96,7 @@
       "manuscript_label": "three:lem:pattern",
       "manuscript_number": "4.13",
       "proved": true,
-      "scope": "Full Lemma 4.13. From a simple regular non-overfull graph with three or four robust cores and at most t exceptional vertices, construct actual perfect-matching deletions and absorb every exceptional vertex. The exact residual has no overfull set after every prefix, degree h >= k/(3*b4(t)), and disjoint enlarged robust cores covering all vertices. The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Lemma 4.14, Proposition 4.16, and the manuscript main theorem remain unverified; Lemma 4.15 is now completed by the separate direct FourOdd construction."
+      "scope": "Full Lemma 4.13. From a simple regular non-overfull graph with three or four robust cores and at most t exceptional vertices, construct actual perfect-matching deletions and absorb every exceptional vertex. The exact residual has no overfull set after every prefix, degree h >= k/(3*b4(t)), and disjoint enlarged robust cores covering all vertices. The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Proposition 4.16 and the manuscript main theorem remain unverified; Lemma 4.14 is now completed by BoundaryExtension.Full; Lemma 4.15 is now completed by the separate direct FourOdd construction."
     },
     {
       "lean_name": "Overfull.FourOdd.four_odd_parts_decomposition",
@@ -110,6 +110,20 @@
         "Overfull.FourOdd.four_odd_decomposition_nat",
         "Overfull.FourOdd.Decomposition.surplus_circuit"
       ]
+    },
+    {
+      "lean_name": "Overfull.boundary_extension",
+      "file": "Overfull/BoundaryExtension/Full.lean",
+      "manuscript_label": "three:lem:boundary",
+      "manuscript_number": "4.14",
+      "proved": true,
+      "scope": "Full Lemma 4.14. For an arbitrary original proper boundary coloring with singleton/triple classes and linearly many singleton colors, construct a proper coloring of every original copy incident with the odd robust core, agreeing pointwise with each prescribed boundary label. Positive error and order threshold precede the graph and prescribed coloring. The finite-edge loopless multigraph formulation permits parallel copies and imposes no regularity outside the core. The direct one-apex/two-apex proof replaces the manuscript application of general Corollary 4.6 without claiming that broader result.",
+      "related_proof_declarations": [
+        "Overfull.OneCore.exists_uniform_one_apex_factorization",
+        "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization"
+      ],
+      "source_manifest": "boundary-extension-full-source.json",
+      "semantic_review": "boundary-extension-full-semantic-review.md"
     }
   ],
   "density_corollary_verified": true,
@@ -156,7 +170,7 @@
       "manuscript_locations": [
         "three:prop:foreign, foreign-edge color classes"
       ],
-      "scope": "Apply the proved multigraph K\u00f6nig theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case. This stand-alone helper assumes actual bipartiteness and the incidence-degree bound. The maximizing-assignment theorem derives both hypotheses, and the configured epoch reconstructs the entire current foreign graph and its classes at every restart of the completed process."
+      "scope": "Apply the proved multigraph König theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case. This stand-alone helper assumes actual bipartiteness and the incidence-degree bound. The maximizing-assignment theorem derives both hypotheses, and the configured epoch reconstructs the entire current foreign graph and its classes at every restart of the completed process."
     },
     {
       "id": "foreign_assignment",
@@ -675,7 +689,7 @@
       "manuscript_locations": [
         "three:lem:boundary"
       ],
-      "scope": "Actual boundary edge copies have exactly the prescribed footprint cardinality, and total footprint incidence equals boundary degree. The singleton count supplies the exact triple-packing horizon. The full boundary-extension assertion remains unproved."
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Actual boundary edge copies have exactly the prescribed footprint cardinality, and total footprint incidence equals boundary degree. The singleton count supplies the exact triple-packing horizon. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
     },
     {
       "id": "boundary_triple_packing",
@@ -689,7 +703,7 @@
       "manuscript_locations": [
         "three:lem:boundary"
       ],
-      "scope": "Uniformly construct actual disjoint core completions of every prescribed triple class, deriving all forbidden-set budgets from the proper coloring and embedded core. The full boundary-extension assertion remains unproved."
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Uniformly construct actual disjoint core completions of every prescribed triple class, deriving all forbidden-set budgets from the proper coloring and embedded core. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
     },
     {
       "id": "boundary_actual_residual",
@@ -709,7 +723,7 @@
       "manuscript_locations": [
         "three:lem:boundary"
       ],
-      "scope": "Assemble actual original-copy completed classes, prove exact core coverage and boundary agreement, and embed the precise packed residual core in the actual deleted-edge host. The full boundary-extension assertion remains unproved."
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Assemble actual original-copy completed classes, prove exact core coverage and boundary agreement, and embed the precise packed residual core in the actual deleted-edge host. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
     },
     {
       "id": "boundary_apex_contraction",
@@ -728,7 +742,7 @@
       "manuscript_locations": [
         "three:lem:boundary"
       ],
-      "scope": "Retain the exact original incident edge copies and contract all outside endpoints, proving looplessness, exact core and apex degrees, even order, and an actual robust embedded core. The full boundary-extension assertion remains unproved."
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Retain the exact original incident edge copies and contract all outside endpoints, proving looplessness, exact core and apex degrees, even order, and an actual robust embedded core. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
     },
     {
       "id": "one_exterior_odd_cuts",
@@ -742,7 +756,7 @@
       "manuscript_locations": [
         "three:lem:boundary"
       ],
-      "scope": "Derive all odd-cut inequalities and no-overfullness from a robust core omitting at most one vertex, including uniform thresholds and the actual contraction adapter. The full boundary-extension assertion remains unproved."
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Derive all odd-cut inequalities and no-overfullness from a robust core omitting at most one vertex, including uniform thresholds and the actual contraction adapter. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
     },
     {
       "id": "boundary_surviving_singletons",
@@ -758,7 +772,7 @@
       "manuscript_locations": [
         "three:lem:boundary"
       ],
-      "scope": "Prove that the actual surviving boundary is bijective with the original singleton colors and that its inherited labels are injective, deriving the exact remaining boundary count. The full boundary-extension assertion remains unproved."
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Prove that the actual surviving boundary is bijective with the original singleton colors and that its inherited labels are injective, deriving the exact remaining boundary count. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
     },
     {
       "id": "boundary_color_restoration",
@@ -774,7 +788,7 @@
       "manuscript_locations": [
         "three:lem:boundary"
       ],
-      "scope": "From an actual coloring of the exact apex residual, align its palette with the original singleton labels and restore the completed colors with exact agreement and properness at every original vertex. The full boundary-extension assertion remains unproved."
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: From an actual coloring of the exact apex residual, align its palette with the original singleton labels and restore the completed colors with exact agreement and properness at every original vertex. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
     },
     {
       "id": "one_apex_even_core_complement",
@@ -791,7 +805,7 @@
       "manuscript_locations": [
         "three:lem:boundary"
       ],
-      "scope": "Move one vertex out of the actual odd core to obtain an even robust core with exactly two exterior vertices and construct an actual coloring of its exceptional complement. The full boundary-extension assertion remains unproved."
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Move one vertex out of the actual odd core to obtain an even robust core with exactly two exterior vertices and construct an actual coloring of its exceptional complement. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
     },
     {
       "id": "boundary_extension_reduction",
@@ -802,7 +816,7 @@
       "manuscript_locations": [
         "three:lem:boundary"
       ],
-      "scope": "Uniformly construct the exact triple deletions, residual robust core, singleton boundary, and even regular no-overfull apex graph, together with exact reconstruction from an actual coloring of that precise graph. The full boundary-extension assertion remains unproved."
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Uniformly construct the exact triple deletions, residual robust core, singleton boundary, and even regular no-overfull apex graph, together with exact reconstruction from an actual coloring of that precise graph. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
     },
     {
       "id": "bounded_forbidden_coloring",
@@ -919,7 +933,7 @@
         "two:lem:ordinary-special, exact residual and reconstruction",
         "three:lem:boundary, indirect ordinary-core prerequisite"
       ],
-      "scope": "Identify the exact original-copy residual and its surviving exterior labels, compress the unselected palette to k-h colors, and embed the actual remaining crossing graph by its surviving original core copies. Prove crossing robustness after the recorded reserve losses, bound the surviving internal edges and the new complementary degrees, and color the entire new complement by extending its inherited coloring. An explicitly supplied coloring of the whole residual reconstructs a proper original-host coloring with the selected labels preserved. The new complementary coloring is constructed under its proved support and explicit numerical degree/slack bounds. Reconstruction requires an actual coloring of the whole residual as an explicit input. The remaining bipartite-core factorization, Theorem 6.1, full Lemmas 4.2 and 4.14, and the main theorem are not proved here. Uniformly choose the crossing robust parameter before an arbitrary requested complementary error, and then construct a balanced bipartite residual core of any requested side-order threshold with that normalized error, an actual colored complement, and explicit reconstruction from a full residual coloring. The reduction does not construct a coloring of the whole residual host. The recorded actual sides form an equal-size bipartition of the residual core, and the side-indexed graph has a positive robust parameter clipped to its required range; no bipartite factorization is asserted."
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Identify the exact original-copy residual and its surviving exterior labels, compress the unselected palette to k-h colors, and embed the actual remaining crossing graph by its surviving original core copies. Prove crossing robustness after the recorded reserve losses, bound the surviving internal edges and the new complementary degrees, and color the entire new complement by extending its inherited coloring. An explicitly supplied coloring of the whole residual reconstructs a proper original-host coloring with the selected labels preserved. The new complementary coloring is constructed under its proved support and explicit numerical degree/slack bounds. Reconstruction requires an actual coloring of the whole residual as an explicit input. The remaining bipartite-core factorization, Theorem 6.1, full Lemmas 4.2 and 4.14, and the main theorem are not proved here. Uniformly choose the crossing robust parameter before an arbitrary requested complementary error, and then construct a balanced bipartite residual core of any requested side-order threshold with that normalized error, an actual colored complement, and explicit reconstruction from a full residual coloring. The reduction does not construct a coloring of the whole residual host. The recorded actual sides form an equal-size bipartition of the residual core, and the side-indexed graph has a positive robust parameter clipped to its required range; no bipartite factorization is asserted. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
     },
     {
       "id": "bipartite_reverse_robustness",
@@ -2328,7 +2342,7 @@
       "manuscript_locations": [
         "three:lem:pattern"
       ],
-      "scope": "Full Lemma 4.13. From a simple regular non-overfull graph with three or four robust cores and at most t exceptional vertices, construct actual perfect-matching deletions and absorb every exceptional vertex. The exact residual has no overfull set after every prefix, degree h >= k/(3*b4(t)), and disjoint enlarged robust cores covering all vertices. The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Lemma 4.14, Proposition 4.16, and the manuscript main theorem remain unverified; Lemma 4.15 is now completed by the separate direct FourOdd construction."
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Full Lemma 4.13. From a simple regular non-overfull graph with three or four robust cores and at most t exceptional vertices, construct actual perfect-matching deletions and absorb every exceptional vertex. The exact residual has no overfull set after every prefix, degree h >= k/(3*b4(t)), and disjoint enlarged robust cores covering all vertices. The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Lemma 4.14, Proposition 4.16, and the manuscript main theorem remain unverified; Lemma 4.15 is now completed by the separate direct FourOdd construction. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
     },
     {
       "id": "coupled_absorber_integer_parameters",
@@ -2622,6 +2636,16 @@
           "matches_pinned_statement": true
         }
       ]
+    },
+    {
+      "manuscript_number": "4.14",
+      "manuscript_label": "three:lem:boundary",
+      "inspected_filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "inspected_source_sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "statement_sha256": "67baedd4ae2e0451a8842fd27ea0976f50db94c9054eacd2f5dd40ce2cfa21e3",
+      "matches_pinned_statement_sha256": true,
+      "numbered_inventory_rebased": false,
+      "source_manifest": "boundary-extension-full-source.json"
     }
   ],
   "source_recovery": {
