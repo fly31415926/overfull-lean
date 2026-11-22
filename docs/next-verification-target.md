@@ -1,5 +1,12 @@
 # Next verification target: bipartite robust-core factorization
 
+The [complete link-packing theorem](dense-link-packing.md) now proves
+Lemma 5.12, including a uniform order threshold and actual disjoint
+perfect matchings under the original manuscript hypotheses. The
+completed numbered total is **43 of 69**. The factorization work below
+remains a separate unfinished dependency chain; the link-packing result
+does not supply its missing regularity or absorber constructions.
+
 The deterministic two-family construction is now proved by
 `BipartiteFactorization.exists_colored_two_families`. From original
 finite palette, block, and reserve conditions it constructs both
@@ -70,8 +77,8 @@ bipartite regularity setup, uniform realization of the localized exterior
 family data, special path systems, robust absorber, and final factorization
 remain open.
 
-**Lemma 4.14 remains unverified; the completed assertion count remains
-42 of 69.** Its full reduction is now constructed by
+**Lemma 4.14 remains unverified; the completed assertion count is
+43 of 69.** Its full reduction is now constructed by
 `Overfull.boundary_extension_reduction`. The remaining factorization to formalize
 is an actual factorization of the exact one-apex residual returned by
 that theorem. Supplying a coloring as an assumption would not close the
@@ -237,7 +244,7 @@ Do not count Lemma 4.2 or Lemma 4.14 as verified until their actual
 factorization conclusions are derived and the strict build, transitive
 axiom audit, and semantic review pass. Supporting declarations are
 registered separately and do not change the completed assertion tally.
-The current count is 42 of 69, and the main theorem remains unverified.
+The current count is 43 of 69, and the main theorem remains unverified.
 
 An unfinished formal dependency is not, by itself, a mathematical gap
 in the written proof. The manuscript invokes Theorem 6.1; the remaining

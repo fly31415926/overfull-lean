@@ -6,7 +6,30 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest continuation: simultaneous actual palettes and blocks
+## Latest continuation: complete Lemma 5.12
+
+The [dense link-packing theorem](docs/dense-link-packing.md) completes
+**Lemma 5.12**, increasing the verified numbered total to **43 of 69**.
+For every fixed `b ≥ 1` and `0 < λ ≤ 1`, the proof chooses an order
+threshold before the graph and link family. It constructs actual
+pairwise edge-disjoint perfect matchings under the manuscript's original
+degree, intersection, and incidence bounds, retaining the constants
+`81`, `6`, `3`, and `2`.
+
+The public theorem is
+`Overfull.Dense.LinkPacking.exists_tripartite_link_packing` in
+[`Theorem.lean`](Overfull/Dense/LinkPacking/Theorem.lean). The proof derives
+its finite probability estimates and matching candidates from the graph,
+and proves that one complete selection covers every link. No matching
+family, probability estimate, or numerical failure budget is assumed in
+the final statement. The implementation adds **96 public theorem proofs
+across ten modules**; these together establish one complete numbered lemma.
+
+The main theorem remains unverified. The exact strict build, transitive
+axiom audit, and source hashes for this checkpoint are recorded in
+[verification/results.json](verification/results.json).
+
+### Previous continuation: simultaneous actual palettes and blocks
 
 [The simultaneous-selection continuation](docs/bipartite-simultaneous-selection.md)
 adds **75 public theorem proofs in ten modules**. It derives active
@@ -22,10 +45,8 @@ These results complete the finite simultaneous-selection stage under the
 stated graph, size, and numerical hypotheses. Uniform realization from the
 original robust-core assumptions, the spanning regularity setup, special
 path systems, the robust absorber, and full factorization remain open.
-The completed numbered assertion count remains **42 of 69**; the main
-theorem remains unverified. The definitive strict build, transitive axiom
-audit, and exact source hashes are in
-[verification/results.json](verification/results.json).
+That supporting checkpoint left the numbered assertion count at
+**42 of 69**. Completing Lemma 5.12 now adds the forty-third full statement.
 
 ## The main theorem
 
@@ -100,11 +121,12 @@ Overfull.mainTheorem_of_criticalExclusion
 | Lemma 5.9: a signed flow with unequal sides | `Overfull.dense_unequal_flow` | The stated bound `3θ/(2c−1)`, with the stronger bound `2θ/(2c−1)` also proved |
 | Lemma 5.10: balancing six directed pairs | `Overfull.dense_reserve` | Positive edge probabilities, exact balance at every vertex, and explicit constants depending only on `c` |
 | Lemma 5.11: integer balance repair | `Overfull.dense_balance_repair` | Actual deleted edges, an exactly locally balanced residual, and deleted degree at most `5√ξn`, with uniform constants |
+| Lemma 5.12: dense link packing | `Overfull.Dense.LinkPacking.exists_tripartite_link_packing` | A uniform order threshold and actual pairwise edge-disjoint perfect matchings on all balanced two-part links, with the original `81`, `6`, `3`, and `2` constants |
 | Lemma 6.4: reducing the bipartite robust range | `Overfull.bipartite_robust_range_reduction` | The smaller range `σ` and the exact new parameter `min(ν,ασ/4)` |
 | Proposition 7.1: the sharpness family | `Overfull.sharpness_family` | Connectivity, order, maximum degree, class 2, edge count, and no overfull set |
 | Corollary 7.2: arbitrarily large examples below one quarter | `Overfull.arbitrarily_large_class_two_graphs` | Every real coefficient below `1/4` and every order threshold |
 
-These are 42 of the manuscript's 69 numbered assertions. The remaining 27, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
+These are 43 of the manuscript's 69 numbered assertions. The remaining 26, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
 
 ## Further checked inputs
 
@@ -148,7 +170,7 @@ the actual allowed population with the palette fractions, and selects the
 palette and block families under those budgets. The graph-specific uniform
 parameter choices, integer realization, boundary budgets, regularity setup,
 absorber, and full factorization remain open.
-The completed numbered count remains **42 of 69**.
+These factorization components do not themselves complete a numbered assertion.
 
 ### Two selected families and the exact remaining exterior
 
@@ -176,8 +198,7 @@ laws, moment bounds, and actual nonlinear score variance. The
 [simultaneous-selection results](docs/bipartite-simultaneous-selection.md)
 now establish the application bounds and simultaneous families under explicit
 numerical budgets and prescribed positions. Uniform parameter and boundary
-choices, integer realization, the regularity setup, and absorber remain open. The complete
-numbered count remains **42 of 69**.
+choices, integer realization, the regularity setup, and absorber remain open.
 
 ### One-palette construction and localized coloring
 
@@ -205,8 +226,7 @@ results supply the analytic ingredients. The
 [simultaneous-selection results](docs/bipartite-simultaneous-selection.md)
 instantiate the graph estimates and select both kinds of family under explicit
 numerical budgets and prescribed positions. The remaining uniform realization
-from the robust-core hypotheses is recorded in the next-target document. The complete numbered count remains
-**42 of 69**.
+from the robust-core hypotheses is recorded in the next-target document.
 
 ### Finite localization constructions
 
@@ -222,10 +242,10 @@ These results construct actual copy sets and colorings, now composed
 into both selected families and their exact remainder under finite
 supply conditions. The [sampling results](docs/bipartite-sampling.md)
 now provide the weighted moments, capped means, and actual graph-score
-variance. The complete simultaneous application estimates, uniform
-parameter and boundary budgets, regularity setup, and absorber remain
-unformalized. The complete numbered count remains 42 of 69 on this
-recovered branch.
+variance. The simultaneous-selection continuation subsequently completed
+the application estimates and actual simultaneous choices under explicit
+finite budgets. Uniform parameter and boundary realization, regularity
+setup, and the absorber remain unformalized.
 
 ### Three bipartite factorization prerequisites
 
@@ -239,7 +259,8 @@ numerical move budgets are chosen uniformly before the graph.
 These are supporting results for Theorem 6.1 and Proposition 6.2. The full
 factorization and dependent Lemmas 4.2 and 4.14 remain incomplete. This
 branch continues the exactly recovered ordinary-core tree `aab43893d9b1`;
-its complete numbered coverage remains 42 of 69. The later terminal
+its complete numbered coverage was 42 of 69 before the link-packing result.
+The later terminal
 checkpoint `eafe3efc18bb` was unavailable after the source workspace reset
 and is outside this branch's audit. The linked note records the recovery
 and the precise scope of the three new results.
@@ -420,7 +441,7 @@ The distinguished pattern retains an integer reserve `r >= k/(3*b4(t))`. Its act
 
 Contracting the exterior preserves parallel copies and gives an actual even regular graph with one exterior vertex. The small-cut proof derives no-overfullness. An actual coloring of this precise contraction is then transported back to the original labels, and all completed classes are restored with properness at every original vertex. The error tolerance, retained robust parameters, and order threshold are chosen before the graph and coloring.
 
-This is a checked reduction, not a proof that the contracted graph has a factorization. `Overfull.OneCore.even_core_complement` supplies a shorter route to that missing step: it constructs an even robust core with exactly two exterior vertices and an actual coloring of its exceptional complement. The ordinary-core preprocessing described next now constructs the residual input for Theorem 6.1. That factorization theorem remains unformalized, so Lemma 4.2 with `s=2` is still incomplete. **The completed count remains 42 of 69; Lemma 4.14 and the main theorem remain unverified.** See [`docs/boundary-extension.md`](docs/boundary-extension.md).
+This is a checked reduction, not a proof that the contracted graph has a factorization. `Overfull.OneCore.even_core_complement` supplies a shorter route to that missing step: it constructs an even robust core with exactly two exterior vertices and an actual coloring of its exceptional complement. The ordinary-core preprocessing described next now constructs the residual input for Theorem 6.1. That factorization theorem remains unformalized, so Lemma 4.2 with `s=2` is still incomplete. **The completed count is 43 of 69; Lemma 4.14 and the main theorem remain unverified.** See [`docs/boundary-extension.md`](docs/boundary-extension.md).
 
 ### Ordinary-core reduction to a bipartite robust core
 

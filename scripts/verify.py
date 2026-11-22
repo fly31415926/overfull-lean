@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "verification"
 MATHLIB_REVISION = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
 NUMBERED_ASSERTION_COUNT = 69
-COMPLETED_NUMBERED_ASSERTION_COUNT = 42
+COMPLETED_NUMBERED_ASSERTION_COUNT = 43
 
 
 def run(arguments: list[str], log_name: str) -> str:
@@ -1066,6 +1066,105 @@ def main() -> None:
         "simultaneous_block_selection_15": "Overfull.BipartiteFactorization.SimultaneousBlocks.exists_good_blocks",
         "uniform_sampling_failure_budget_1": "Overfull.FiniteProbability.exists_uniform_failure_budget"
     })
+    # Full tripartite link packing: all public proofs in the ten new modules.
+    completed_results.update({
+        "predictable_bernoulli_concentration_1": "Overfull.PredictableBernoulli.count_zero",
+        "predictable_bernoulli_concentration_2": "Overfull.PredictableBernoulli.count_snoc",
+        "predictable_bernoulli_concentration_3": "Overfull.PredictableBernoulli.choiceWeight_nonneg",
+        "predictable_bernoulli_concentration_4": "Overfull.PredictableBernoulli.sum_choiceWeight",
+        "predictable_bernoulli_concentration_5": "Overfull.PredictableBernoulli.weight_nonneg",
+        "predictable_bernoulli_concentration_6": "Overfull.PredictableBernoulli.sum_weight",
+        "predictable_bernoulli_concentration_7": "Overfull.PredictableBernoulli.weight_snoc",
+        "predictable_bernoulli_concentration_8": "Overfull.PredictableBernoulli.mean_snoc",
+        "predictable_bernoulli_concentration_9": "Overfull.PredictableBernoulli.local_exponential_moment_le",
+        "predictable_bernoulli_concentration_10": "Overfull.PredictableBernoulli.exponential_moment_le",
+        "predictable_bernoulli_concentration_11": "Overfull.PredictableBernoulli.exponential_upper_tail",
+        "predictable_bernoulli_concentration_12": "Overfull.PredictableBernoulli.upper_tail_of_budget_half",
+        "predictable_bernoulli_concentration_13": "Overfull.PredictableBernoulli.upper_tail_of_budget_half_add_one",
+        "dense_link_packing_candidates_1": "Overfull.DenseLinkPacking.dense_bipartite_bijection",
+        "dense_link_packing_candidates_2": "Overfull.DenseLinkPacking.subtype_neighbor_card",
+        "dense_link_packing_candidates_3": "Overfull.DenseLinkPacking.exists_matching_on_sides",
+        "dense_link_packing_candidates_4": "Overfull.DenseLinkPacking.cross_degree_after_deletion",
+        "dense_link_packing_candidates_5": "Overfull.DenseLinkPacking.liftOfLE_verts",
+        "dense_link_packing_candidates_6": "Overfull.DenseLinkPacking.liftOfLE_adj",
+        "dense_link_packing_candidates_7": "Overfull.DenseLinkPacking.liftOfLE_isMatching",
+        "dense_link_packing_candidates_8": "Overfull.DenseLinkPacking.exists_matching_on_sides_avoiding",
+        "dense_link_packing_candidates_9": "Overfull.DenseLinkPacking.exists_matching_candidates",
+        "dense_link_packing_candidates_10": "Overfull.DenseLinkPacking.harmfulCandidates_card_le",
+        "dense_link_packing_candidates_11": "Overfull.DenseLinkPacking.harmfulCandidates_card_le_sides",
+        "dense_link_packing_parameters_1": "Overfull.Dense.LinkPacking.Parameters.load_nonneg",
+        "dense_link_packing_parameters_2": "Overfull.Dense.LinkPacking.Parameters.load_pos",
+        "dense_link_packing_parameters_3": "Overfull.Dense.LinkPacking.Parameters.rpow_three_halves",
+        "dense_link_packing_parameters_4": "Overfull.Dense.LinkPacking.Parameters.load_eq_rpow",
+        "dense_link_packing_parameters_5": "Overfull.Dense.LinkPacking.Parameters.choices_pos",
+        "dense_link_packing_parameters_6": "Overfull.Dense.LinkPacking.Parameters.choices_lower",
+        "dense_link_packing_parameters_7": "Overfull.Dense.LinkPacking.Parameters.choices_upper",
+        "dense_link_packing_parameters_8": "Overfull.Dense.LinkPacking.Parameters.load_add_choices_le",
+        "dense_link_packing_parameters_9": "Overfull.Dense.LinkPacking.Parameters.rate_nonneg",
+        "dense_link_packing_parameters_10": "Overfull.Dense.LinkPacking.Parameters.rate_pos",
+        "dense_link_packing_parameters_11": "Overfull.Dense.LinkPacking.Parameters.rate_le_quarter",
+        "dense_link_packing_parameters_12": "Overfull.Dense.LinkPacking.Parameters.local_ratio_le",
+        "dense_link_packing_parameters_13": "Overfull.Dense.LinkPacking.Parameters.rate_incidence",
+        "dense_link_packing_parameters_14": "Overfull.Dense.LinkPacking.Parameters.quadratic_exp_decay_bound",
+        "dense_link_packing_parameters_15": "Overfull.Dense.LinkPacking.Parameters.exists_threshold",
+        "dense_link_packing_history_1": "Overfull.Dense.LinkPacking.candidates_spec",
+        "dense_link_packing_history_2": "Overfull.Dense.LinkPacking.candidates_of_not_exists",
+        "dense_link_packing_history_3": "Overfull.Dense.LinkPacking.candidates_matching",
+        "dense_link_packing_history_4": "Overfull.Dense.LinkPacking.candidates_verts_subset",
+        "dense_link_packing_history_5": "Overfull.Dense.LinkPacking.candidates_avoid",
+        "dense_link_packing_history_6": "Overfull.Dense.LinkPacking.candidates_disjoint",
+        "dense_link_packing_history_7": "Overfull.Dense.LinkPacking.history_snoc",
+        "dense_link_packing_history_8": "Overfull.Dense.LinkPacking.history_matching",
+        "dense_link_packing_history_9": "Overfull.Dense.LinkPacking.history_disjoint",
+        "dense_link_packing_local_probability_1": "Overfull.Dense.LinkPacking.hits_localMean_eq",
+        "dense_link_packing_local_probability_2": "Overfull.Dense.LinkPacking.hits_localMean_le_one",
+        "dense_link_packing_local_probability_3": "Overfull.Dense.LinkPacking.hits_localMean_eq_zero_of_not_mem",
+        "dense_link_packing_local_probability_4": "Overfull.Dense.LinkPacking.hits_harmful_card_le",
+        "dense_link_packing_local_probability_5": "Overfull.Dense.LinkPacking.hits_localMean_le",
+        "dense_link_packing_local_probability_6": "Overfull.Dense.LinkPacking.sum_hitsBound_le",
+        "dense_link_packing_local_probability_7": "Overfull.Dense.LinkPacking.hits_upper_tail",
+        "dense_link_packing_local_feasibility_1": "Overfull.Dense.LinkPacking.cross_degree_after_deletion_local",
+        "dense_link_packing_local_feasibility_2": "Overfull.Dense.LinkPacking.exists_candidateOK_of_local_load",
+        "dense_link_packing_local_feasibility_3": "Overfull.Dense.LinkPacking.exists_candidateOK_of_degree_81",
+        "dense_link_packing_load_accounting_1": "Overfull.Dense.LinkPacking.localLoad_bot",
+        "dense_link_packing_load_accounting_2": "Overfull.Dense.LinkPacking.localLoad_mono",
+        "dense_link_packing_load_accounting_3": "Overfull.Dense.LinkPacking.localLoad_sup",
+        "dense_link_packing_load_accounting_4": "Overfull.Dense.LinkPacking.localLoad_matching_indicator",
+        "dense_link_packing_load_accounting_5": "Overfull.Dense.LinkPacking.history_castSucc",
+        "dense_link_packing_load_accounting_6": "Overfull.Dense.LinkPacking.history_last",
+        "dense_link_packing_load_accounting_7": "Overfull.Dense.LinkPacking.used_history_zero",
+        "dense_link_packing_load_accounting_8": "Overfull.Dense.LinkPacking.used_history_succ",
+        "dense_link_packing_load_accounting_9": "Overfull.Dense.LinkPacking.used_history_init_le",
+        "dense_link_packing_load_accounting_10": "Overfull.Dense.LinkPacking.hits_count_eq_localLoad",
+        "dense_link_packing_load_accounting_11": "Overfull.Dense.LinkPacking.history_covers_of_localLoad",
+        "dense_link_packing_simultaneous_packing_1": "Overfull.Dense.LinkPacking.probability_badLoad_le",
+        "dense_link_packing_simultaneous_packing_2": "Overfull.Dense.LinkPacking.exists_bounded_history",
+        "dense_link_packing_simultaneous_packing_3": "Overfull.Dense.LinkPacking.exists_packing_of_budget",
+        "dense_link_packing_tripartite_geometry_1": "Overfull.DenseLinkPacking.TripartiteGeometry.mem_part",
+        "dense_link_packing_tripartite_geometry_2": "Overfull.DenseLinkPacking.TripartiteGeometry.parts_pairwise_disjoint",
+        "dense_link_packing_tripartite_geometry_3": "Overfull.DenseLinkPacking.TripartiteGeometry.parts_cover",
+        "dense_link_packing_tripartite_geometry_4": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_zero",
+        "dense_link_packing_tripartite_geometry_5": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_one",
+        "dense_link_packing_tripartite_geometry_6": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_two",
+        "dense_link_packing_tripartite_geometry_7": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part",
+        "dense_link_packing_tripartite_geometry_8": "Overfull.DenseLinkPacking.TripartiteGeometry.card_vertices",
+        "dense_link_packing_tripartite_geometry_9": "Overfull.DenseLinkPacking.TripartiteGeometry.not_adj_of_mem_part",
+        "dense_link_packing_tripartite_geometry_10": "Overfull.DenseLinkPacking.TripartiteGeometry.leftIndex_ne_omitted",
+        "dense_link_packing_tripartite_geometry_11": "Overfull.DenseLinkPacking.TripartiteGeometry.rightIndex_ne_omitted",
+        "dense_link_packing_tripartite_geometry_12": "Overfull.DenseLinkPacking.TripartiteGeometry.leftIndex_ne_rightIndex",
+        "dense_link_packing_tripartite_geometry_13": "Overfull.DenseLinkPacking.TripartiteGeometry.index_cases",
+        "dense_link_packing_tripartite_geometry_14": "Overfull.DenseLinkPacking.TripartiteGeometry.local_disjoint",
+        "dense_link_packing_tripartite_geometry_15": "Overfull.DenseLinkPacking.TripartiteGeometry.local_union",
+        "dense_link_packing_tripartite_geometry_16": "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_left",
+        "dense_link_packing_tripartite_geometry_17": "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_right",
+        "dense_link_packing_tripartite_geometry_18": "Overfull.DenseLinkPacking.TripartiteGeometry.induced_degree_eq",
+        "dense_link_packing_tripartite_geometry_19": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.card_Y",
+        "dense_link_packing_tripartite_geometry_20": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.degree_left",
+        "dense_link_packing_tripartite_geometry_21": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.degree_right",
+        "dense_link_packing_tripartite_geometry_22": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_left",
+        "dense_link_packing_tripartite_geometry_23": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_right",
+        "dense_link_packing_1": "Overfull.Dense.LinkPacking.exists_tripartite_link_packing",
+    })
     audited_names = {item["name"] for item in declarations}
     if missing := sorted(set(completed_results.values()) - audited_names):
         raise SystemExit("Completed results absent from the axiom audit: " + ", ".join(missing))
@@ -1150,7 +1249,8 @@ def main() -> None:
         "scope": (
             "The named supporting results, full sharpness results, actual "
             "foreign-edge reduction of Proposition 4.10, and bounded exceptional "
-            "absorption of Proposition 4.12, and frequent boundary patterns of Lemma 4.13 are proved by audited "
+            "absorption of Proposition 4.12, frequent boundary patterns of Lemma 4.13, "
+            "and full tripartite link packing of Lemma 5.12 are proved by audited "
             "declarations. The complete constructive boundary-extension reduction is also "
             "proved, but the one-apex factorization and full Lemma 4.14 remain unverified. "
             "The specialized bounded-forbidden-label coloring step is proved by finite "
@@ -1194,6 +1294,10 @@ def main() -> None:
             "Graph-specific uniform realization, integer sizes and cap floors, "
             "boundary budgets, regularity setup, special paths, absorber, and "
             "full factorization remain unformalized. "
+            "The full Lemma 5.12 theorem chooses its order threshold before every "
+            "graph and link family for real b>=1 and 0<lambda<=1. Its actual Hall "
+            "candidates, adaptive-history load tails, exact graph accounting, and "
+            "finite union budget are all proved internally with the original constants. "
             "This audit continues the recovered ordinary-core source; it does not "
             "include the unavailable later terminal checkpoint. The final implication "
             "to the main theorem still assumes LargeCriticalExclusion, which is not "

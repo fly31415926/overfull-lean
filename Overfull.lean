@@ -173,6 +173,16 @@ import Overfull.BipartiteFactorization.PreferredSampling
 import Overfull.BipartiteFactorization.BlockSelectionBudget
 import Overfull.BipartiteFactorization.SimultaneousBlocks
 import Overfull.Probability.UniformFailureBudget
+import Overfull.Probability.PredictableBernoulli
+import Overfull.Dense.LinkPacking.Candidates
+import Overfull.Dense.LinkPacking.Parameters
+import Overfull.Dense.LinkPacking.History
+import Overfull.Dense.LinkPacking.LocalProbability
+import Overfull.Dense.LinkPacking.Feasible
+import Overfull.Dense.LinkPacking.Load
+import Overfull.Dense.LinkPacking.Packing
+import Overfull.Dense.LinkPacking.Tripartite
+import Overfull.Dense.LinkPacking.Theorem
 /-!
 # Partial formalization of the overfull manuscript
 

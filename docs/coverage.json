@@ -8,8 +8,8 @@
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
-  "fully_verified_numbered_assertion_count": 42,
-  "scope": "42 of the 69 numbered assertions have complete checked proofs. The remaining 27, including the main theorem, have no complete proof here. Checked components and conditional implications do not count as complete proofs of their parent assertions. Lemma 2.2 is represented by its finite probability laws. This branch continues the recovered ordinary-core and published bipartite continuation; the unavailable later terminal checkpoint is not part of this audit. Checked supporting results prove reverse bipartite robustness, actual balanced exterior coloring, bounded-core-move neighborhood conditions, preferred representatives, and actual allowed-color preparation. Palette identities, signed correction accounting, selection after pool-specific adaptive deletions, and preferred filling construct both selected families and their exact remaining exterior with actual localized colorings. Finite sampling proofs derive the actual weighted moments, product score mean and variance, row/pool/preferred-edge tails, and explicit graph-specific union budgets. The simultaneous palette theorem constructs disjoint allowed palettes of prescribed positive sizes. The simultaneous block theorem uses shared part permutations to construct actual blocks preserving prescribed component sizes, inclusions, disjointness, coarse unions, and coverage. Both existence theorems require their explicit total numerical budgets to be below one; block sampling also requires prescribed exact fractions, at least two selections in nonempty parts, graph/cap bounds, and a positive correction pool. A separate scalar theorem chooses a uniform error tolerance and order threshold for budgets of the form u*m*exp(-r*m)+v*a/m+w/m. Deriving all these finite hypotheses from the original robust-core input, including integer partitions, positive even palette sizes, cap floors, boundary losses, and residual reserves, remains open. The spanning regularity setup, special path systems, robust absorber, and full host factorization remain unformalized. No additional numbered assertion is completed.",
+  "fully_verified_numbered_assertion_count": 43,
+  "scope": "43 of the 69 numbered assertions have complete checked proofs. The remaining 26, including the main theorem, have no complete proof here. Checked components and conditional implications do not count as complete proofs of their parent assertions. Lemma 2.2 is represented by its finite probability laws. This branch continues the recovered ordinary-core and published bipartite continuation; the unavailable later terminal checkpoint is not part of this audit. Checked supporting results prove reverse bipartite robustness, actual balanced exterior coloring, bounded-core-move neighborhood conditions, preferred representatives, and actual allowed-color preparation. Palette identities, signed correction accounting, selection after pool-specific adaptive deletions, and preferred filling construct both selected families and their exact remaining exterior with actual localized colorings. Finite sampling proofs derive the actual weighted moments, product score mean and variance, row/pool/preferred-edge tails, and explicit graph-specific union budgets. The simultaneous palette theorem constructs disjoint allowed palettes of prescribed positive sizes. The simultaneous block theorem uses shared part permutations to construct actual blocks preserving prescribed component sizes, inclusions, disjointness, coarse unions, and coverage. Both existence theorems require their explicit total numerical budgets to be below one; block sampling also requires prescribed exact fractions, at least two selections in nonempty parts, graph/cap bounds, and a positive correction pool. A separate scalar theorem chooses a uniform error tolerance and order threshold for budgets of the form u*m*exp(-r*m)+v*a/m+w/m. Deriving all these finite hypotheses from the original robust-core input, including integer partitions, positive even palette sizes, cap floors, boundary losses, and residual reserves, remains open. The spanning regularity setup, special path systems, robust absorber, and full host factorization remain unformalized. Full Lemma 5.12 is now proved by a uniform tripartite link-packing theorem: for fixed real b>=1 and 0<lambda<=1, its order threshold precedes the graph and link family; actual pairwise edge-disjoint perfect matchings satisfy the original degree, overlap, incidence, and family-size hypotheses, with all candidate, local-load, and probability budgets derived internally.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -3883,6 +3883,212 @@
         "old:fac:score",
         "old:fac:swap-variance"
       ]
+    },
+    {
+      "id": "predictable_bernoulli_concentration",
+      "kind": "finite_probability_result",
+      "description": "Derive exponential moments and upper tails for Boolean stages that depend on the complete previous history and the current independent uniform choice; the experiment is the actual finite product law.",
+      "lean_declarations": [
+        "Overfull.PredictableBernoulli.count_zero",
+        "Overfull.PredictableBernoulli.count_snoc",
+        "Overfull.PredictableBernoulli.choiceWeight_nonneg",
+        "Overfull.PredictableBernoulli.sum_choiceWeight",
+        "Overfull.PredictableBernoulli.weight_nonneg",
+        "Overfull.PredictableBernoulli.sum_weight",
+        "Overfull.PredictableBernoulli.weight_snoc",
+        "Overfull.PredictableBernoulli.mean_snoc",
+        "Overfull.PredictableBernoulli.local_exponential_moment_le",
+        "Overfull.PredictableBernoulli.exponential_moment_le",
+        "Overfull.PredictableBernoulli.exponential_upper_tail",
+        "Overfull.PredictableBernoulli.upper_tail_of_budget_half",
+        "Overfull.PredictableBernoulli.upper_tail_of_budget_half_add_one"
+      ],
+      "scope_limit": "Conditional means are bounded for every fixed previous history. The clean tails use either a half-load mean budget or that budget plus one deterministic success; indicator independence is not assumed.",
+      "manuscript_locations": [
+        "dense:link-packing"
+      ]
+    },
+    {
+      "id": "dense_link_packing_candidates",
+      "kind": "graph_theoretic_result",
+      "description": "Construct actual balanced bipartite perfect-matching candidates from crossing-degree surplus, retain exact vertex sets under residual-graph inclusion, and bound harmful candidates by actual link overlap.",
+      "lean_declarations": [
+        "Overfull.DenseLinkPacking.dense_bipartite_bijection",
+        "Overfull.DenseLinkPacking.subtype_neighbor_card",
+        "Overfull.DenseLinkPacking.exists_matching_on_sides",
+        "Overfull.DenseLinkPacking.cross_degree_after_deletion",
+        "Overfull.DenseLinkPacking.liftOfLE_verts",
+        "Overfull.DenseLinkPacking.liftOfLE_adj",
+        "Overfull.DenseLinkPacking.liftOfLE_isMatching",
+        "Overfull.DenseLinkPacking.exists_matching_on_sides_avoiding",
+        "Overfull.DenseLinkPacking.exists_matching_candidates",
+        "Overfull.DenseLinkPacking.harmfulCandidates_card_le",
+        "Overfull.DenseLinkPacking.harmfulCandidates_card_le_sides"
+      ],
+      "scope_limit": "The candidate family is proved by finite Hall and repeated edge deletion. The harmful-candidate bound needs only vertex containment and pairwise edge disjointness, and also covers empty fallback candidates.",
+      "manuscript_locations": [
+        "dense:link-packing"
+      ]
+    },
+    {
+      "id": "dense_link_packing_parameters",
+      "kind": "real_and_integer_arithmetic",
+      "description": "Choose the rounded candidate count, bound the conditional hit rate, identify the load with lambda^(3/2)*n, and choose one uniform order threshold making the complete quadratic failure budget less than one.",
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.Parameters.load_nonneg",
+        "Overfull.Dense.LinkPacking.Parameters.load_pos",
+        "Overfull.Dense.LinkPacking.Parameters.rpow_three_halves",
+        "Overfull.Dense.LinkPacking.Parameters.load_eq_rpow",
+        "Overfull.Dense.LinkPacking.Parameters.choices_pos",
+        "Overfull.Dense.LinkPacking.Parameters.choices_lower",
+        "Overfull.Dense.LinkPacking.Parameters.choices_upper",
+        "Overfull.Dense.LinkPacking.Parameters.load_add_choices_le",
+        "Overfull.Dense.LinkPacking.Parameters.rate_nonneg",
+        "Overfull.Dense.LinkPacking.Parameters.rate_pos",
+        "Overfull.Dense.LinkPacking.Parameters.rate_le_quarter",
+        "Overfull.Dense.LinkPacking.Parameters.local_ratio_le",
+        "Overfull.Dense.LinkPacking.Parameters.rate_incidence",
+        "Overfull.Dense.LinkPacking.Parameters.quadratic_exp_decay_bound",
+        "Overfull.Dense.LinkPacking.Parameters.exists_threshold"
+      ],
+      "scope_limit": "The explicit parameter domain is real b>=1 and lambda>0. The order threshold precedes every graph and link family; the final manuscript theorem also retains lambda<=1.",
+      "manuscript_locations": [
+        "dense:link-packing"
+      ]
+    },
+    {
+      "id": "dense_link_packing_history",
+      "kind": "graph_theoretic_result",
+      "description": "Define an actual total finite choice history using feasible candidate families and empty fallback families, and prove matching, vertex-containment, avoidance, and pairwise edge-disjointness properties at every history.",
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.candidates_spec",
+        "Overfull.Dense.LinkPacking.candidates_of_not_exists",
+        "Overfull.Dense.LinkPacking.candidates_matching",
+        "Overfull.Dense.LinkPacking.candidates_verts_subset",
+        "Overfull.Dense.LinkPacking.candidates_avoid",
+        "Overfull.Dense.LinkPacking.candidates_disjoint",
+        "Overfull.Dense.LinkPacking.history_snoc",
+        "Overfull.Dense.LinkPacking.history_matching",
+        "Overfull.Dense.LinkPacking.history_disjoint"
+      ],
+      "scope_limit": "Exact coverage is not assumed in the total history. It follows later from the actual local-load bounds and the proved dense candidate-feasibility theorem.",
+      "manuscript_locations": [
+        "dense:link-packing"
+      ]
+    },
+    {
+      "id": "dense_link_packing_local_probability",
+      "kind": "finite_probability_result",
+      "description": "Derive each conditional hit probability from actual candidate edges and link intersections, then prove the exponential tail for one monitored link and vertex using the manuscript incidence bound.",
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.hits_localMean_eq",
+        "Overfull.Dense.LinkPacking.hits_localMean_le_one",
+        "Overfull.Dense.LinkPacking.hits_localMean_eq_zero_of_not_mem",
+        "Overfull.Dense.LinkPacking.hits_harmful_card_le",
+        "Overfull.Dense.LinkPacking.hits_localMean_le",
+        "Overfull.Dense.LinkPacking.sum_hitsBound_le",
+        "Overfull.Dense.LinkPacking.hits_upper_tail"
+      ],
+      "scope_limit": "The process can depend on all previous choices. The monitored link own round contributes at most one; the proof does not assume indicator independence or a probability oracle.",
+      "manuscript_locations": [
+        "dense:link-packing"
+      ]
+    },
+    {
+      "id": "dense_link_packing_local_feasibility",
+      "kind": "graph_theoretic_result",
+      "description": "Construct actual candidate families avoiding an arbitrary used graph from balanced local sides, crossing-degree surplus, and the actual used-neighbor load inside the current link.",
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.cross_degree_after_deletion_local",
+        "Overfull.Dense.LinkPacking.exists_candidateOK_of_local_load",
+        "Overfull.Dense.LinkPacking.exists_candidateOK_of_degree_81"
+      ],
+      "scope_limit": "Only local used-edge loss is bounded; the used graph may have arbitrarily large degrees elsewhere. The 81*b*load wrapper derives the rounded candidate budget for b>=1 and load>=8. Empty sides are included.",
+      "manuscript_locations": [
+        "dense:link-packing"
+      ]
+    },
+    {
+      "id": "dense_link_packing_load_accounting",
+      "kind": "graph_theoretic_result",
+      "description": "Identify the predictable hit count exactly with the actual final used-edge degree into each monitored link, and prove that final local-load bounds force exact coverage of every history entry.",
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.localLoad_bot",
+        "Overfull.Dense.LinkPacking.localLoad_mono",
+        "Overfull.Dense.LinkPacking.localLoad_sup",
+        "Overfull.Dense.LinkPacking.localLoad_matching_indicator",
+        "Overfull.Dense.LinkPacking.history_castSucc",
+        "Overfull.Dense.LinkPacking.history_last",
+        "Overfull.Dense.LinkPacking.used_history_zero",
+        "Overfull.Dense.LinkPacking.used_history_succ",
+        "Overfull.Dense.LinkPacking.used_history_init_le",
+        "Overfull.Dense.LinkPacking.hits_count_eq_localLoad",
+        "Overfull.Dense.LinkPacking.history_covers_of_localLoad"
+      ],
+      "scope_limit": "The deterministic covering bridge uses actual candidate feasibility and graph monotonicity. It assumes no prefix-distribution transport or additional probability estimate.",
+      "manuscript_locations": [
+        "dense:link-packing"
+      ]
+    },
+    {
+      "id": "dense_link_packing_simultaneous_packing",
+      "kind": "finite_probability_and_graph_result",
+      "description": "Sum actual load tails over all link-vertex pairs, obtain a supported complete history with every load bounded, and construct actual pairwise edge-disjoint matchings covering the prescribed balanced local sides.",
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.probability_badLoad_le",
+        "Overfull.Dense.LinkPacking.exists_bounded_history",
+        "Overfull.Dense.LinkPacking.exists_packing_of_budget"
+      ],
+      "scope_limit": "The finite interface displays load>=8 and a total numerical failure budget below one. The final uniform theorem discharges both from the order threshold instead of retaining them as assumptions.",
+      "manuscript_locations": [
+        "dense:link-packing"
+      ]
+    },
+    {
+      "id": "dense_link_packing_tripartite_geometry",
+      "kind": "graph_theoretic_result",
+      "description": "Construct the three actual host parts and the two balanced local sides of every omitted-part link, and identify actual induced degrees with opposite-side neighbor counts.",
+      "lean_declarations": [
+        "Overfull.DenseLinkPacking.TripartiteGeometry.mem_part",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.parts_pairwise_disjoint",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.parts_cover",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_zero",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_one",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_two",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.card_part",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.card_vertices",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.not_adj_of_mem_part",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.leftIndex_ne_omitted",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.rightIndex_ne_omitted",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.leftIndex_ne_rightIndex",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.index_cases",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.local_disjoint",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.local_union",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_left",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_right",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.induced_degree_eq",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.card_Y",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.degree_left",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.degree_right",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_left",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_right"
+      ],
+      "scope_limit": "The geometry applies to arbitrary finite tripartite vertex types. All part counts, unions, disjointness, and minimum-degree transfers are proved from the graph and the stated link intersections.",
+      "manuscript_locations": [
+        "dense:link-packing"
+      ]
+    },
+    {
+      "id": "dense_link_packing",
+      "kind": "graph_theoretic_result",
+      "description": "Prove full Lemma 5.12: choose a uniform order threshold and construct actual pairwise edge-disjoint perfect matchings for all balanced omitted-part links under the exact degree, overlap, incidence, and family-size bounds.",
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.exists_tripartite_link_packing"
+      ],
+      "scope_limit": "For fixed real b>=1 and 0<lambda<=1, the order threshold precedes n, all three host vertex types, the tripartite graph, and the entire link family. The constants 81,6,2,3 and the actual induced minimum-degree premise are retained. Candidate existence, local-load bounds, and the total failure budget are proved internally. The explicit b>=1 domain records the joint hierarchy convention in 1/n << 1/b,lambda <= 1. The general r-partite BKLOT lemma and the main theorem are not claimed.",
+      "manuscript_locations": [
+        "dense:link-packing"
+      ]
     }
   ],
   "numbered_assertions": [
@@ -5278,10 +5484,25 @@
         3925
       ],
       "statement_sha256": "1d5d07d6cfa237c907e332ee99db407b81dd14a39c99ad0904939c710c8fe2f1",
-      "full_assertion_verified": false,
-      "status": "not_formalized_here",
-      "checked_components": [],
-      "imported_statement": true
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "predictable_bernoulli_concentration",
+        "dense_link_packing_candidates",
+        "dense_link_packing_parameters",
+        "dense_link_packing_history",
+        "dense_link_packing_local_probability",
+        "dense_link_packing_local_feasibility",
+        "dense_link_packing_load_accounting",
+        "dense_link_packing_simultaneous_packing",
+        "dense_link_packing_tripartite_geometry",
+        "dense_link_packing"
+      ],
+      "imported_statement": true,
+      "lean_theorems": [
+        "Overfull.Dense.LinkPacking.exists_tripartite_link_packing"
+      ],
+      "formalization_scope": "For fixed real b>=1 and 0<lambda<=1, the order threshold precedes n, all three host vertex types, the tripartite graph, and the entire link family. The constants 81,6,2,3 and the actual induced minimum-degree premise are retained. Candidate existence, local-load bounds, and the total failure budget are proved internally. The explicit b>=1 domain records the joint hierarchy convention in 1/n << 1/b,lambda <= 1. The general r-partite BKLOT lemma and the main theorem are not claimed."
     },
     {
       "number": "5.13",
@@ -5677,7 +5898,12 @@
       "pinpoints": [
         "Lemma 9.1, r=3"
       ],
-      "coverage_status": "not_formalized_or_matched_to_a_checked_declaration_here"
+      "coverage_status": "r_equals_three_link_packing_fully_proved_from_actual_graphs_and_finite_probability",
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.exists_tripartite_link_packing"
+      ],
+      "source_url": "https://babarber.uk/wp-content/uploads/2017/03/completing-latin-squares.pdf",
+      "scope_limit": "The required r=3 instance is fully proved within this project. The explicit real domain b>=1 and 0<lambda<=1 expresses the manuscript joint hierarchy convention. The general r-partite theorem is not separately claimed."
     },
     {
       "bibliography_key": "Granet",
@@ -5711,11 +5937,12 @@
     "Lemma 4.11 proves one exceptional-star forcing step with the exact threshold 11*2^(t+4). The sampled, compressed, and completed matchings are actual graph subgraphs; the compressed joining edges have a proved forest projection. The range and error tolerance precede t, and only the order threshold depends on t. Strict builds, scoped axiom audits, and independent semantic reviews passed. Its preparation form is used with one fixed family of packing rules in the completed bounded exceptional absorption proof of Proposition 4.12.",
     "Proposition 4.10 is proved by the actual inner epoch and outer refinement inductions, using fresh maximizing assignments, actual matching classes, certified fixed core rules, maintained recorded cuts, and exact original-host concatenation. One original parameter choice supplies every stage; the positive robust output parameter is fixed before the requested final error. The final exceptional incidence counts actual edges in the constructed residual. This proves Proposition 4.10; the main theorem remains unverified.",
     "Proposition 4.12 is proved by a finite threshold-band choice, two actual core enlargements, and a fixed-rule forcing process whose actual potential strictly decreases. Its robust output parameter precedes every arbitrary positive final error function. The final error uses that function at the actual remaining exceptional cardinality without a monotonicity assumption. Proposition 4.12 supplies the bounded exceptional set used by the subsequent pattern reduction; the main theorem remains unverified. The verification script requires every named supporting and public proof declaration to appear in the checked axiom inventory.",
-    "Lemma 4.13 is proved by common fixed-label compression of an actual fractional matching distribution, one simultaneous rounding/discard plan, actual edge-disjoint boundary realization, fixed certified core completion, actual cut accounting and no-overfull safety at every prefix, and complete absorption from reserved distinct neighbors. The positive output robust parameter precedes the requested relative error. The final result includes the linear integer reserve, actual enlarged-part parity, and actual pair and cut supply for the matching or three-edge star in the four-odd-part case. The larger explicit discard coefficient 2^(t+4)*(t+10) overcounts the finite test family without changing b4(t) or the retained fraction. The completed inventory is 42 of 69; Lemma 4.14 and the main theorem remain unverified.",
-    "The complete constructive boundary-extension reduction is proved by Overfull.boundary_extension_reduction: uniform parameters precede the graph and prescribed coloring; actual completed triple copies give an exact residual robust core, singleton boundary, and even regular no-overfull apex contraction; an actual coloring of that precise contraction reconstructs the exact original boundary labels. The one-apex coloring itself remains unproved, so Lemma 4.14 and the main theorem remain unverified and the completed count stays 42 of 69. The proved even-core complement reduction permits an eventual application of ordinary-core Lemma 4.2 with s=2, bypassing the general fixed-pattern/Fan-Zhang steps only for this specialization.",
-    "The ordinary-core supporting development now constructs a quantitative paired cut, one robust reserve with simultaneous side-degree control, a feasible constrained internal coloring, and an actual repaired first group of completed colors with parameters chosen before the graph. Exact residual-copy accounting, palette compression, a robust embedded crossing core, and a coloring of its complement are proved. Reconstructing a full host coloring still takes an actual full-residual coloring as an explicit input. These supporting results do not complete Lemma 4.2, Lemma 4.14, or the main theorem; the completed numbered count remains 42 of 69.",
+    "Lemma 4.13 is proved by common fixed-label compression of an actual fractional matching distribution, one simultaneous rounding/discard plan, actual edge-disjoint boundary realization, fixed certified core completion, actual cut accounting and no-overfull safety at every prefix, and complete absorption from reserved distinct neighbors. The positive output robust parameter precedes the requested relative error. The final result includes the linear integer reserve, actual enlarged-part parity, and actual pair and cut supply for the matching or three-edge star in the four-odd-part case. The larger explicit discard coefficient 2^(t+4)*(t+10) overcounts the finite test family without changing b4(t) or the retained fraction. Lemma 4.14 and the main theorem remain unverified.",
+    "The complete constructive boundary-extension reduction is proved by Overfull.boundary_extension_reduction: uniform parameters precede the graph and prescribed coloring; actual completed triple copies give an exact residual robust core, singleton boundary, and even regular no-overfull apex contraction; an actual coloring of that precise contraction reconstructs the exact original boundary labels. The one-apex coloring itself remains unproved, so Lemma 4.14 and the main theorem remain unverified and their numbered status is unchanged. The proved even-core complement reduction permits an eventual application of ordinary-core Lemma 4.2 with s=2, bypassing the general fixed-pattern/Fan-Zhang steps only for this specialization.",
+    "The ordinary-core supporting development now constructs a quantitative paired cut, one robust reserve with simultaneous side-degree control, a feasible constrained internal coloring, and an actual repaired first group of completed colors with parameters chosen before the graph. Exact residual-copy accounting, palette compression, a robust embedded crossing core, and a coloring of its complement are proved. Reconstructing a full host coloring still takes an actual full-residual coloring as an explicit input. These supporting results do not complete Lemma 4.2, Lemma 4.14, or the main theorem; these supporting results do not change their numbered status.",
     "The specialized forbidden-label step is proved by permutation-fiber counting and sparse-conflict greedy repair, with Vizing providing the initial simple-graph coloring. This is not a proof of the general Kahn list-edge-coloring theorem. The robust decomposition input in Theorem 6.1 remains unformalized. The pinned November 20, 2026 manuscript source and its statement inventory are unchanged.",
-    "The simultaneous-selection continuation adds 75 public theorem proofs in ten modules. It replaces palette and block probability-oracle premises with derived graph-specific failure budgets, and preserves supplied fine/coarse position relations under shared permutations. The budgets themselves and the manuscript integer/uniform realization remain separate hypotheses. The complete numbered count remains 42 of 69; Proposition 6.2, Theorem 6.1, the robust absorber, Lemmas 4.2 and 4.14, and the main theorem remain incomplete."
+    "The simultaneous-selection continuation adds 75 public theorem proofs in ten modules. It replaces palette and block probability-oracle premises with derived graph-specific failure budgets, and preserves supplied fine/coarse position relations under shared permutations. The budgets themselves and the manuscript integer/uniform realization remain separate hypotheses. That supporting checkpoint left the numbered count at 42 of 69; Proposition 6.2, Theorem 6.1, the robust absorber, Lemmas 4.2 and 4.14, and the main theorem remain incomplete.",
+    "Lemma 5.12 is fully proved by an actual uniform tripartite link-packing construction. The proof uses finite Hall candidates, a total adaptive history, conditional Bernoulli exponential moments, exact local used-edge accounting, and one uniform order threshold. It retains the original constants and explicitly interprets the joint hierarchy as real b>=1 and 0<lambda<=1. Its November 21 statement block is byte-identical to the pinned November 20 statement hash. This completes one additional numbered assertion, bringing the current count to 43 of 69; the main theorem and the Section 6 factorization assertions remain unverified."
   ],
   "density_corollary_verified": true
 }

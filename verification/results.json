@@ -930,7 +930,103 @@
     "simultaneous_block_selection_13": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlocks_realize",
     "simultaneous_block_selection_14": "Overfull.BipartiteFactorization.SimultaneousBlocks.exists_good_permutations",
     "simultaneous_block_selection_15": "Overfull.BipartiteFactorization.SimultaneousBlocks.exists_good_blocks",
-    "uniform_sampling_failure_budget_1": "Overfull.FiniteProbability.exists_uniform_failure_budget"
+    "uniform_sampling_failure_budget_1": "Overfull.FiniteProbability.exists_uniform_failure_budget",
+    "predictable_bernoulli_concentration_1": "Overfull.PredictableBernoulli.count_zero",
+    "predictable_bernoulli_concentration_2": "Overfull.PredictableBernoulli.count_snoc",
+    "predictable_bernoulli_concentration_3": "Overfull.PredictableBernoulli.choiceWeight_nonneg",
+    "predictable_bernoulli_concentration_4": "Overfull.PredictableBernoulli.sum_choiceWeight",
+    "predictable_bernoulli_concentration_5": "Overfull.PredictableBernoulli.weight_nonneg",
+    "predictable_bernoulli_concentration_6": "Overfull.PredictableBernoulli.sum_weight",
+    "predictable_bernoulli_concentration_7": "Overfull.PredictableBernoulli.weight_snoc",
+    "predictable_bernoulli_concentration_8": "Overfull.PredictableBernoulli.mean_snoc",
+    "predictable_bernoulli_concentration_9": "Overfull.PredictableBernoulli.local_exponential_moment_le",
+    "predictable_bernoulli_concentration_10": "Overfull.PredictableBernoulli.exponential_moment_le",
+    "predictable_bernoulli_concentration_11": "Overfull.PredictableBernoulli.exponential_upper_tail",
+    "predictable_bernoulli_concentration_12": "Overfull.PredictableBernoulli.upper_tail_of_budget_half",
+    "predictable_bernoulli_concentration_13": "Overfull.PredictableBernoulli.upper_tail_of_budget_half_add_one",
+    "dense_link_packing_candidates_1": "Overfull.DenseLinkPacking.dense_bipartite_bijection",
+    "dense_link_packing_candidates_2": "Overfull.DenseLinkPacking.subtype_neighbor_card",
+    "dense_link_packing_candidates_3": "Overfull.DenseLinkPacking.exists_matching_on_sides",
+    "dense_link_packing_candidates_4": "Overfull.DenseLinkPacking.cross_degree_after_deletion",
+    "dense_link_packing_candidates_5": "Overfull.DenseLinkPacking.liftOfLE_verts",
+    "dense_link_packing_candidates_6": "Overfull.DenseLinkPacking.liftOfLE_adj",
+    "dense_link_packing_candidates_7": "Overfull.DenseLinkPacking.liftOfLE_isMatching",
+    "dense_link_packing_candidates_8": "Overfull.DenseLinkPacking.exists_matching_on_sides_avoiding",
+    "dense_link_packing_candidates_9": "Overfull.DenseLinkPacking.exists_matching_candidates",
+    "dense_link_packing_candidates_10": "Overfull.DenseLinkPacking.harmfulCandidates_card_le",
+    "dense_link_packing_candidates_11": "Overfull.DenseLinkPacking.harmfulCandidates_card_le_sides",
+    "dense_link_packing_parameters_1": "Overfull.Dense.LinkPacking.Parameters.load_nonneg",
+    "dense_link_packing_parameters_2": "Overfull.Dense.LinkPacking.Parameters.load_pos",
+    "dense_link_packing_parameters_3": "Overfull.Dense.LinkPacking.Parameters.rpow_three_halves",
+    "dense_link_packing_parameters_4": "Overfull.Dense.LinkPacking.Parameters.load_eq_rpow",
+    "dense_link_packing_parameters_5": "Overfull.Dense.LinkPacking.Parameters.choices_pos",
+    "dense_link_packing_parameters_6": "Overfull.Dense.LinkPacking.Parameters.choices_lower",
+    "dense_link_packing_parameters_7": "Overfull.Dense.LinkPacking.Parameters.choices_upper",
+    "dense_link_packing_parameters_8": "Overfull.Dense.LinkPacking.Parameters.load_add_choices_le",
+    "dense_link_packing_parameters_9": "Overfull.Dense.LinkPacking.Parameters.rate_nonneg",
+    "dense_link_packing_parameters_10": "Overfull.Dense.LinkPacking.Parameters.rate_pos",
+    "dense_link_packing_parameters_11": "Overfull.Dense.LinkPacking.Parameters.rate_le_quarter",
+    "dense_link_packing_parameters_12": "Overfull.Dense.LinkPacking.Parameters.local_ratio_le",
+    "dense_link_packing_parameters_13": "Overfull.Dense.LinkPacking.Parameters.rate_incidence",
+    "dense_link_packing_parameters_14": "Overfull.Dense.LinkPacking.Parameters.quadratic_exp_decay_bound",
+    "dense_link_packing_parameters_15": "Overfull.Dense.LinkPacking.Parameters.exists_threshold",
+    "dense_link_packing_history_1": "Overfull.Dense.LinkPacking.candidates_spec",
+    "dense_link_packing_history_2": "Overfull.Dense.LinkPacking.candidates_of_not_exists",
+    "dense_link_packing_history_3": "Overfull.Dense.LinkPacking.candidates_matching",
+    "dense_link_packing_history_4": "Overfull.Dense.LinkPacking.candidates_verts_subset",
+    "dense_link_packing_history_5": "Overfull.Dense.LinkPacking.candidates_avoid",
+    "dense_link_packing_history_6": "Overfull.Dense.LinkPacking.candidates_disjoint",
+    "dense_link_packing_history_7": "Overfull.Dense.LinkPacking.history_snoc",
+    "dense_link_packing_history_8": "Overfull.Dense.LinkPacking.history_matching",
+    "dense_link_packing_history_9": "Overfull.Dense.LinkPacking.history_disjoint",
+    "dense_link_packing_local_probability_1": "Overfull.Dense.LinkPacking.hits_localMean_eq",
+    "dense_link_packing_local_probability_2": "Overfull.Dense.LinkPacking.hits_localMean_le_one",
+    "dense_link_packing_local_probability_3": "Overfull.Dense.LinkPacking.hits_localMean_eq_zero_of_not_mem",
+    "dense_link_packing_local_probability_4": "Overfull.Dense.LinkPacking.hits_harmful_card_le",
+    "dense_link_packing_local_probability_5": "Overfull.Dense.LinkPacking.hits_localMean_le",
+    "dense_link_packing_local_probability_6": "Overfull.Dense.LinkPacking.sum_hitsBound_le",
+    "dense_link_packing_local_probability_7": "Overfull.Dense.LinkPacking.hits_upper_tail",
+    "dense_link_packing_local_feasibility_1": "Overfull.Dense.LinkPacking.cross_degree_after_deletion_local",
+    "dense_link_packing_local_feasibility_2": "Overfull.Dense.LinkPacking.exists_candidateOK_of_local_load",
+    "dense_link_packing_local_feasibility_3": "Overfull.Dense.LinkPacking.exists_candidateOK_of_degree_81",
+    "dense_link_packing_load_accounting_1": "Overfull.Dense.LinkPacking.localLoad_bot",
+    "dense_link_packing_load_accounting_2": "Overfull.Dense.LinkPacking.localLoad_mono",
+    "dense_link_packing_load_accounting_3": "Overfull.Dense.LinkPacking.localLoad_sup",
+    "dense_link_packing_load_accounting_4": "Overfull.Dense.LinkPacking.localLoad_matching_indicator",
+    "dense_link_packing_load_accounting_5": "Overfull.Dense.LinkPacking.history_castSucc",
+    "dense_link_packing_load_accounting_6": "Overfull.Dense.LinkPacking.history_last",
+    "dense_link_packing_load_accounting_7": "Overfull.Dense.LinkPacking.used_history_zero",
+    "dense_link_packing_load_accounting_8": "Overfull.Dense.LinkPacking.used_history_succ",
+    "dense_link_packing_load_accounting_9": "Overfull.Dense.LinkPacking.used_history_init_le",
+    "dense_link_packing_load_accounting_10": "Overfull.Dense.LinkPacking.hits_count_eq_localLoad",
+    "dense_link_packing_load_accounting_11": "Overfull.Dense.LinkPacking.history_covers_of_localLoad",
+    "dense_link_packing_simultaneous_packing_1": "Overfull.Dense.LinkPacking.probability_badLoad_le",
+    "dense_link_packing_simultaneous_packing_2": "Overfull.Dense.LinkPacking.exists_bounded_history",
+    "dense_link_packing_simultaneous_packing_3": "Overfull.Dense.LinkPacking.exists_packing_of_budget",
+    "dense_link_packing_tripartite_geometry_1": "Overfull.DenseLinkPacking.TripartiteGeometry.mem_part",
+    "dense_link_packing_tripartite_geometry_2": "Overfull.DenseLinkPacking.TripartiteGeometry.parts_pairwise_disjoint",
+    "dense_link_packing_tripartite_geometry_3": "Overfull.DenseLinkPacking.TripartiteGeometry.parts_cover",
+    "dense_link_packing_tripartite_geometry_4": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_zero",
+    "dense_link_packing_tripartite_geometry_5": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_one",
+    "dense_link_packing_tripartite_geometry_6": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_two",
+    "dense_link_packing_tripartite_geometry_7": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part",
+    "dense_link_packing_tripartite_geometry_8": "Overfull.DenseLinkPacking.TripartiteGeometry.card_vertices",
+    "dense_link_packing_tripartite_geometry_9": "Overfull.DenseLinkPacking.TripartiteGeometry.not_adj_of_mem_part",
+    "dense_link_packing_tripartite_geometry_10": "Overfull.DenseLinkPacking.TripartiteGeometry.leftIndex_ne_omitted",
+    "dense_link_packing_tripartite_geometry_11": "Overfull.DenseLinkPacking.TripartiteGeometry.rightIndex_ne_omitted",
+    "dense_link_packing_tripartite_geometry_12": "Overfull.DenseLinkPacking.TripartiteGeometry.leftIndex_ne_rightIndex",
+    "dense_link_packing_tripartite_geometry_13": "Overfull.DenseLinkPacking.TripartiteGeometry.index_cases",
+    "dense_link_packing_tripartite_geometry_14": "Overfull.DenseLinkPacking.TripartiteGeometry.local_disjoint",
+    "dense_link_packing_tripartite_geometry_15": "Overfull.DenseLinkPacking.TripartiteGeometry.local_union",
+    "dense_link_packing_tripartite_geometry_16": "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_left",
+    "dense_link_packing_tripartite_geometry_17": "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_right",
+    "dense_link_packing_tripartite_geometry_18": "Overfull.DenseLinkPacking.TripartiteGeometry.induced_degree_eq",
+    "dense_link_packing_tripartite_geometry_19": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.card_Y",
+    "dense_link_packing_tripartite_geometry_20": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.degree_left",
+    "dense_link_packing_tripartite_geometry_21": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.degree_right",
+    "dense_link_packing_tripartite_geometry_22": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_left",
+    "dense_link_packing_tripartite_geometry_23": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_right",
+    "dense_link_packing_1": "Overfull.Dense.LinkPacking.exists_tripartite_link_packing"
   },
   "lean_build_passed": true,
   "axiom_audit_passed": true,
@@ -1367,7 +1463,7 @@
     "Classical.choice",
     "Quot.sound"
   ],
-  "verified_declaration_count": 8408,
+  "verified_declaration_count": 8614,
   "declaration_count_includes_generated_support_lemmas": true,
   "verified_declarations": [
     {
@@ -25283,6 +25379,755 @@
         "propext",
         "Quot.sound"
       ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.choices._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.choices_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.choices_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.choices_upper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.exists_threshold"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.load_add_choices_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.load_eq_rpow"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.load_nonneg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.load_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.local_ratio_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.quadratic_exp_decay_bound"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.quadratic_exp_decay_bound._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.quadratic_exp_decay_bound._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.quadratic_exp_decay_bound._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.quadratic_exp_decay_bound._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.quadratic_exp_decay_bound._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.quadratic_exp_decay_bound._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.quadratic_exp_decay_bound._simp_1_7"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.rate._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.rate_incidence"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.rate_incidence._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.rate_incidence._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.rate_incidence._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.rate_incidence._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.rate_incidence._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.rate_incidence._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.rate_incidence._simp_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.rate_le_quarter"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.rate_nonneg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.rate_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Parameters",
+      "name": "Overfull.Dense.LinkPacking.Parameters.rpow_three_halves"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.History",
+      "name": "Overfull.Dense.LinkPacking.candidates.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.History",
+      "name": "Overfull.Dense.LinkPacking.candidates_avoid"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.History",
+      "name": "Overfull.Dense.LinkPacking.candidates_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.History",
+      "name": "Overfull.Dense.LinkPacking.candidates_matching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.History",
+      "name": "Overfull.Dense.LinkPacking.candidates_of_not_exists"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.History",
+      "name": "Overfull.Dense.LinkPacking.candidates_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.History",
+      "name": "Overfull.Dense.LinkPacking.candidates_verts_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Feasible",
+      "name": "Overfull.Dense.LinkPacking.cross_degree_after_deletion_local"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Feasible",
+      "name": "Overfull.Dense.LinkPacking.cross_degree_after_deletion_local._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Feasible",
+      "name": "Overfull.Dense.LinkPacking.cross_degree_after_deletion_local._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Feasible",
+      "name": "Overfull.Dense.LinkPacking.cross_degree_after_deletion_local._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Feasible",
+      "name": "Overfull.Dense.LinkPacking.cross_degree_after_deletion_local._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Feasible",
+      "name": "Overfull.Dense.LinkPacking.cross_degree_after_deletion_local._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Packing",
+      "name": "Overfull.Dense.LinkPacking.exists_bounded_history"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Feasible",
+      "name": "Overfull.Dense.LinkPacking.exists_candidateOK_of_degree_81"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Feasible",
+      "name": "Overfull.Dense.LinkPacking.exists_candidateOK_of_local_load"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Feasible",
+      "name": "Overfull.Dense.LinkPacking.exists_candidateOK_of_local_load._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Packing",
+      "name": "Overfull.Dense.LinkPacking.exists_packing_of_budget"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Theorem",
+      "name": "Overfull.Dense.LinkPacking.exists_tripartite_link_packing"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Theorem",
+      "name": "Overfull.Dense.LinkPacking.exists_tripartite_link_packing._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Theorem",
+      "name": "Overfull.Dense.LinkPacking.exists_tripartite_link_packing._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Theorem",
+      "name": "Overfull.Dense.LinkPacking.exists_tripartite_link_packing._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.History",
+      "name": "Overfull.Dense.LinkPacking.history.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.History",
+      "name": "Overfull.Dense.LinkPacking.history.eq_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.history_castSucc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.history_covers_of_localLoad"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.History",
+      "name": "Overfull.Dense.LinkPacking.history_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.history_last"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.History",
+      "name": "Overfull.Dense.LinkPacking.history_matching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.History",
+      "name": "Overfull.Dense.LinkPacking.history_snoc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.LocalProbability",
+      "name": "Overfull.Dense.LinkPacking.hitsBound.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.LocalProbability",
+      "name": "Overfull.Dense.LinkPacking.hitsProcess.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.hits_count_eq_localLoad"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.LocalProbability",
+      "name": "Overfull.Dense.LinkPacking.hits_harmful_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.LocalProbability",
+      "name": "Overfull.Dense.LinkPacking.hits_localMean_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.LocalProbability",
+      "name": "Overfull.Dense.LinkPacking.hits_localMean_eq._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.LocalProbability",
+      "name": "Overfull.Dense.LinkPacking.hits_localMean_eq._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.LocalProbability",
+      "name": "Overfull.Dense.LinkPacking.hits_localMean_eq_zero_of_not_mem"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.LocalProbability",
+      "name": "Overfull.Dense.LinkPacking.hits_localMean_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.LocalProbability",
+      "name": "Overfull.Dense.LinkPacking.hits_localMean_le_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.LocalProbability",
+      "name": "Overfull.Dense.LinkPacking.hits_upper_tail"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.localLoad_bot"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.localLoad_matching_indicator"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.localLoad_matching_indicator._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.localLoad_mono"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.localLoad_sup"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.localLoad_sup._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.localLoad_sup._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.localLoad_sup._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.localLoad_sup._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Packing",
+      "name": "Overfull.Dense.LinkPacking.probability_badLoad_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Packing",
+      "name": "Overfull.Dense.LinkPacking.probability_badLoad_le._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.LocalProbability",
+      "name": "Overfull.Dense.LinkPacking.sum_hitsBound_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.used_history_init_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.used_history_succ"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Load",
+      "name": "Overfull.Dense.LinkPacking.used_history_zero"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
       "module": "Overfull.Dense.Reserve.Estimates",
       "name": "Overfull.Dense.SixCycleGraph.commonTotal._proof_1"
     },
@@ -25796,6 +26641,724 @@
       ],
       "module": "Overfull.Dense.CycleAbsorber",
       "name": "Overfull.Dense.triangleEdges_not_diag"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.card_Y"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.card_Y._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.degree_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.degree_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.left_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.left_neighbors"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.left_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.mk.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.mk.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.right_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.right_neighbors"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.right_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.union_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_two"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_zero"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.card_vertices"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.card_vertices._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.index_cases"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.induced_degree_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.induced_degree_eq._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.induced_degree_eq._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.induced_degree_eq._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.leftIndex_ne_omitted"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.leftIndex_ne_omitted._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.leftIndex_ne_rightIndex"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.localLeft.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.localRight.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.localSides._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.localSides._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.localSides._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.localSides._proof_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.localSides._proof_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.local_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.local_union"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.mem_part"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.mem_part._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_left._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_left._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_right._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_right._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.not_adj_of_mem_part"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.part.eq_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.partIndex._proof_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.partIndex.eq_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.partIndex.eq_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.partIndex.eq_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.parts_cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.parts_cover._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.parts_cover._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.parts_pairwise_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.rightIndex_ne_omitted"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "Overfull.DenseLinkPacking.TripartiteGeometry.rightIndex_ne_omitted._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.cross_degree_after_deletion"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.cross_degree_after_deletion._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.cross_degree_after_deletion._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.cross_degree_after_deletion._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.cross_degree_after_deletion._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.cross_degree_after_deletion._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.dense_bipartite_bijection"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.dense_bipartite_bijection._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.dense_bipartite_bijection._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.exists_matching_candidates"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.exists_matching_on_sides"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.exists_matching_on_sides._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.exists_matching_on_sides_avoiding"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.exists_matching_on_sides_avoiding._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.LocalProbability",
+      "name": "Overfull.DenseLinkPacking.harmfulCandidates.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.harmfulCandidates_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.harmfulCandidates_card_le_sides"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.liftOfLE.congr_simp"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.liftOfLE.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.liftOfLE_adj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.liftOfLE_adj._simp_1"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.liftOfLE_isMatching"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.liftOfLE_verts"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.Dense.LinkPacking.Candidates",
+      "name": "Overfull.DenseLinkPacking.subtype_neighbor_card"
     },
     {
       "axioms": [
@@ -53593,6 +55156,176 @@
     {
       "axioms": [
         "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.choiceWeight.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.choiceWeight_nonneg"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.count.eq_1"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.count.eq_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.count_snoc"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.count_zero"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.exponential_moment_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.exponential_upper_tail"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Dense.LinkPacking.LocalProbability",
+      "name": "Overfull.PredictableBernoulli.localMean.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.local_exponential_moment_le"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.local_exponential_moment_le._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.mean_snoc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.sum_choiceWeight"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.sum_weight"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.upper_tail_of_budget_half"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.upper_tail_of_budget_half._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.upper_tail_of_budget_half_add_one"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.upper_tail_of_budget_half_add_one._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.weight.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.weight_nonneg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "Overfull.PredictableBernoulli.weight_snoc"
+    },
+    {
+      "axioms": [
+        "propext",
         "Quot.sound",
         "Classical.choice"
       ],
@@ -69575,6 +71308,66 @@
       "name": "_private.Overfull.Dense.LinkFlows.0.Overfull.TripartiteGraph.sum_extend_subtype"
     },
     {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.History",
+      "name": "_private.Overfull.Dense.LinkPacking.History.0.Overfull.Dense.LinkPacking.history.match_1.eq_1"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.History",
+      "name": "_private.Overfull.Dense.LinkPacking.History.0.Overfull.Dense.LinkPacking.history.match_1.eq_2"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "_private.Overfull.Dense.LinkPacking.Tripartite.0.Overfull.DenseLinkPacking.TripartiteGeometry.partIndex.match_1.eq_1"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "_private.Overfull.Dense.LinkPacking.Tripartite.0.Overfull.DenseLinkPacking.TripartiteGeometry.partIndex.match_1.eq_2"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "_private.Overfull.Dense.LinkPacking.Tripartite.0.Overfull.DenseLinkPacking.TripartiteGeometry.partIndex.match_1.eq_3"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "_private.Overfull.Dense.LinkPacking.Tripartite.0.Overfull.TripartiteGraph.toSimpleGraph.match_1.eq_1"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "_private.Overfull.Dense.LinkPacking.Tripartite.0.Overfull.TripartiteGraph.toSimpleGraph.match_1.eq_2"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "_private.Overfull.Dense.LinkPacking.Tripartite.0.Overfull.TripartiteGraph.toSimpleGraph.match_1.eq_3"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "_private.Overfull.Dense.LinkPacking.Tripartite.0.Overfull.TripartiteGraph.toSimpleGraph.match_1.eq_4"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "_private.Overfull.Dense.LinkPacking.Tripartite.0.Overfull.TripartiteGraph.toSimpleGraph.match_1.eq_5"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "_private.Overfull.Dense.LinkPacking.Tripartite.0.Overfull.TripartiteGraph.toSimpleGraph.match_1.eq_6"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Dense.LinkPacking.Tripartite",
+      "name": "_private.Overfull.Dense.LinkPacking.Tripartite.0.Overfull.TripartiteGraph.toSimpleGraph.match_1.eq_7"
+    },
+    {
       "axioms": [
         "propext",
         "Quot.sound"
@@ -70141,6 +71934,16 @@
       ],
       "module": "Overfull.Probability.PartitionConcentration",
       "name": "_private.Overfull.Probability.PartitionConcentration.0.Overfull.PartitionConcentration.part_exponential_moment_le._proof_1_1"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "_private.Overfull.Probability.PredictableBernoulli.0.Overfull.PredictableBernoulli.count.match_1.eq_1"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.Probability.PredictableBernoulli",
+      "name": "_private.Overfull.Probability.PredictableBernoulli.0.Overfull.PredictableBernoulli.count.match_1.eq_2"
     },
     {
       "axioms": [
@@ -72640,6 +74443,15 @@
     "Overfull.Dense.FractionalTriangles",
     "Overfull.Dense.GeometricCorrection",
     "Overfull.Dense.LinkFlows",
+    "Overfull.Dense.LinkPacking.Candidates",
+    "Overfull.Dense.LinkPacking.Feasible",
+    "Overfull.Dense.LinkPacking.History",
+    "Overfull.Dense.LinkPacking.Load",
+    "Overfull.Dense.LinkPacking.LocalProbability",
+    "Overfull.Dense.LinkPacking.Packing",
+    "Overfull.Dense.LinkPacking.Parameters",
+    "Overfull.Dense.LinkPacking.Theorem",
+    "Overfull.Dense.LinkPacking.Tripartite",
     "Overfull.Dense.Reserve",
     "Overfull.Dense.Reserve.Estimates",
     "Overfull.Dense.Reserve.Flow",
@@ -72802,6 +74614,7 @@
     "Overfull.Probability.PartitionConcentration",
     "Overfull.Probability.PartitionPermutation",
     "Overfull.Probability.PermutationSampling",
+    "Overfull.Probability.PredictableBernoulli",
     "Overfull.Probability.ProductMap",
     "Overfull.Probability.ProductMoments",
     "Overfull.Probability.SwapVariance",
@@ -72885,7 +74698,7 @@
     "Vizing.Path.Invert",
     "Vizing.Path.PathEdges"
   ],
-  "fully_verified_numbered_assertion_count": 42,
+  "fully_verified_numbered_assertion_count": 43,
   "fully_verified_numbered_assertions": [
     "2.2",
     "2.3",
@@ -72926,12 +74739,13 @@
     "5.9",
     "5.10",
     "5.11",
+    "5.12",
     "6.4",
     "7.1",
     "7.2"
   ],
   "source_sha256": {
-    "Overfull.lean": "bc079a08be38915db083a7d9e8b7070b9e17445a5dc2147748e5aa8eed76f38e",
+    "Overfull.lean": "040b6a6f223c24e13cceea8342a74776cd4c6fd98b44b4baac56370dbc59e84e",
     "Audit.lean": "76886fd9261a3a7b07660f9a434272c0347130a4013cf57da6e1761a34fc6603",
     "Overfull/Absorption/Bounded.lean": "722ca71ecdc9b0f4c17b400c32d51a284d9eac61211e1a52e448fcc8f5bb2f52",
     "Overfull/Absorption/Core.lean": "1f5f39cd8497918341bf336db7f1735b131c9f564077b158b7245fbb474a0946",
@@ -73068,6 +74882,15 @@
     "Overfull/Dense/FractionalTriangles.lean": "8b6a6c1684745dc28802b58298f84c8a30b52f959255b077ea66d77254b29a8b",
     "Overfull/Dense/GeometricCorrection.lean": "bf94ecbdd3c70866f2aa59748762df644c62639240d2f18e3fbecd285311a29f",
     "Overfull/Dense/LinkFlows.lean": "9f4b6a8f0fb37888806227a24419ef756f3849376445a74cad3673ec0b930e30",
+    "Overfull/Dense/LinkPacking/Candidates.lean": "999e1c966d96a740d7ec002f5112b20e906637b52a9b67e86596df51e8331f71",
+    "Overfull/Dense/LinkPacking/Feasible.lean": "ae4adee08fbb776be321b13b9f4b155808717feaa870ffa3aa01b3acff8bd7e8",
+    "Overfull/Dense/LinkPacking/History.lean": "a41869651f615278fb9d535a4f050f3e4b184c1bfb60c8c5ae0e271f4c12a785",
+    "Overfull/Dense/LinkPacking/Load.lean": "054f5fda69e92b752988abde3c3409b3778900680c1cb033e9e258a821101fe9",
+    "Overfull/Dense/LinkPacking/LocalProbability.lean": "732f9cf1b6d3c4d362d0f94a5e84e1abc8434539a81d1f5944d472fc65c24b4a",
+    "Overfull/Dense/LinkPacking/Packing.lean": "f0b42ee2b7383e35fa1d0420dabb8cf11a10328af8ef3c4762bd984c7358c425",
+    "Overfull/Dense/LinkPacking/Parameters.lean": "e4288ae47f6dda868f184f4ffdf332e559eb281fff5c3a0d477de325566f66c9",
+    "Overfull/Dense/LinkPacking/Theorem.lean": "a03a99ebeacb1be17acd80b51949ebe896b1a08fd042e0edf0687bf5169aeb8e",
+    "Overfull/Dense/LinkPacking/Tripartite.lean": "946056c39d991f75772009da4fa5f4ae92f6736045085cb984950743193d9f0f",
     "Overfull/Dense/Reserve/Estimates.lean": "a8bb7227fac7f386b296993f5ef00f718049d655f65cd2481865ee22fcae6d05",
     "Overfull/Dense/Reserve/Flow.lean": "dcee37deb0bd27759427c392489b84f71b8c47ec0a6c1e1df4aaff4c49681eeb",
     "Overfull/Dense/Reserve/Graph.lean": "ab3319c253259ce3cd0076eb4d2890aaacb5ad1f62ebbc7ae0da049593a90eb5",
@@ -73230,6 +75053,7 @@
     "Overfull/Probability/PartitionConcentration.lean": "32ea6161f3cc45c6e5bde8eb7fdd1ef1d396d9def127cccfcd21ba30af29ada0",
     "Overfull/Probability/PartitionPermutation.lean": "a2a95e3bead6a515e2c2ba0e57d0d4c931fe95713aba95a3448e41fb2f8026d7",
     "Overfull/Probability/PermutationSampling.lean": "218dc26ce11d8f316c418c724d4884220dec66fc09288839752060dd60fd8364",
+    "Overfull/Probability/PredictableBernoulli.lean": "cb3300c2b60d5104a3042824bc67aa672e2ef826449f6116f378891cf1aa2ee6",
     "Overfull/Probability/ProductMap.lean": "450906549c26deac30f2d9ac1a3cc81f2b6526fd08ad9f54ab841b14fd16daff",
     "Overfull/Probability/ProductMoments.lean": "e3b1ba24a2bb1348b49810b2cb7c1b211c714d2742e7c63175babc37af85c7a4",
     "Overfull/Probability/SwapVariance.lean": "fdf0f35e80bf82df853f39da4a62250384135f466a17dac190047d1acac63e23",
@@ -73290,7 +75114,7 @@
     ".github/workflows/lean.yml": "bf5cd8ff5d9c54814b5a0a2a98732a90dae5e4d1a7268954fe9deba218753e83",
     "CIRCULATION_NOTICE.txt": "c8913077edf119bdb2ff790f24c3a27188a14b37d3cbc03121c917aee157a419",
     "LICENSE_BMATCHING.txt": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
-    "README.md": "13a21dc039b5806de53b911f41ee648e8dc10de8ac5557a2719285d17e12aa9c",
+    "README.md": "2ac3936e7a3cd06e669031e6501ed4168d47cf13a986a71c54e0960d972170d6",
     "THIRD_PARTY_NOTICES.txt": "9002356e653c2943115b2feeba04713b005074a3d7c283bd894a47d8ca63dcd7",
     "docs/adaptive-packing.md": "eed3d11bde80300511bfa046813661c1617bb0ddc4c131efbed9576a33e53c7e",
     "docs/auxiliary-completion.md": "3c4787a8cef05bcca13c19e7293591878c1ba5a069e0ef22c34907f8b1030453",
@@ -73304,14 +75128,15 @@
     "docs/bmatching-source.json": "2cb433874d3b356dd6ff933d504fa6c61886d255c739eec7da1e870c9bf0dcf8",
     "docs/boundary-extension.md": "8c3688ca9181f140a0287179e89061392f32588280702f6c9fbb32b2ce4b4174",
     "docs/circulation-source.json": "2b3d7bdf1b05c6b8445e2961efe99fe3eb6100a9c08c1eb3af8bbb4fd28350aa",
-    "docs/coverage.json": "80e5de44cf9d14a7acc8e6785d4b9a9a5b4e527c30e6c02f5958263645482912",
+    "docs/coverage.json": "864f7c0a5a3b455fb946bb1a8ea6bc765081c7b4a49c77f5daf22cedf294f2e6",
+    "docs/dense-link-packing.md": "f161d806e5d46f9b9014af0ba1041ec032ff040a5d3e5557a544419cb00428b7",
     "docs/exceptional-absorption.md": "5fc25d8f075878fd04257ca6370ed6d70bce2991c8ab36b29d4f80cde4784eb7",
     "docs/foreign-edge-reduction.md": "e6e4c1a0372930a4aed74ea5d1f3bb2d5d0b95fea5b2fa07a9e35dc3260916b5",
     "docs/frequent-patterns.md": "37eb2de401abc5ba79e8c22729fcf19b3b347ad0bd173dee640d061201b8eee0",
     "docs/main-theorem.md": "7cce76c4e196a4a3bd7ab1c88d7f56ffbf00120f9b0e8cadaebd2b9147ae68d8",
-    "docs/manuscript-source.json": "e555ac39b3fb662c92888e54de4487dc8686af84dd051409824031eafaf38721",
+    "docs/manuscript-source.json": "c2563759cf0dbb4c1c939f3a89f185ba97f99043976682d69429d14bf9aabccd",
     "docs/matching-repair.md": "29d0c587ba983a568eb98b40484e531a90e0f96fbd4dc98069bfd12214481cca",
-    "docs/next-verification-target.md": "b7d11ec683800170d4e4046307e8d8f05ee2d3579500adb756c6ca09e781de1c",
+    "docs/next-verification-target.md": "909545ee48d0663cb906422ad0eae73618d5de99ba6cbead65caec17dae87029",
     "docs/ordinary-factorization.md": "27e26b80175ef00e92a2b0db2dc4fab2d1fe4f892da41379692a01d9b6d342d6",
     "docs/prescribed-matching.md": "9d37e1f0b7df42dd65fb379d51fb7604793440b56c5adac307e95a486dc510f5",
     "docs/replacement.md": "5643ebc060c37602f7e160f76c021e5cc7edfb576b2151f45248bfcf6ca5484e",
@@ -73322,7 +75147,7 @@
     "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
     "patches/vizing-lean-4.24.patch": "1f50d4aa24ee428032d14bb90c1705df9906ab90581bf0046eedf49bf3d70c76",
     "scripts/setup_vizing.py": "42ab626c3d40e8012aeed8d90b08a32757c3c5ee844b52ee2dc704e89b276094",
-    "scripts/verify.py": "d3e98968186bcab40b880ba224ad2624f0758e167733d631ca366fa7d2695f7d"
+    "scripts/verify.py": "f611ce1880cc006f46022639a0dfaaf1a2998259d1435eb3ae57abcdf5a65634"
   },
-  "scope": "The named supporting results, full sharpness results, actual foreign-edge reduction of Proposition 4.10, and bounded exceptional absorption of Proposition 4.12, and frequent boundary patterns of Lemma 4.13 are proved by audited declarations. The complete constructive boundary-extension reduction is also proved, but the one-apex factorization and full Lemma 4.14 remain unverified. The specialized bounded-forbidden-label coloring step is proved by finite permutation counting, greedy repair, and Vizing, without the general Kahn theorem. Quantitative cut/reserve control, constrained balancing and deficits, the uniform first completed color group, and exact residual core/complement coloring and conditional reconstruction are supporting results for Lemma 4.2; full residual factorization and Theorem 6.1 remain unproved. Reverse bipartite robustness, actual balanced exterior coloring, and preservation of ordinary neighborhood conditions under bounded core moves are now proved as three supporting results for Section 6. The regularity setup, special path systems, robust absorber, and full factorization remain unformalized. Further finite constructions now supply preferred representatives, actual allowed colors, capped correction selections after arbitrary deletions, and selected-graph colorability with balanced localized footprints. Actual palette rows, the correction imbalance identity, preferred filling, and the deterministic construction of one selected palette graph with its localized balanced coloring are proved. Only deleted copies in the relevant correction pool are charged to its capacity loss. Both correction orientations, two finite selected families with pairwise disjoint original copies, and their exact remaining graph are now constructed and colored from original finite supply bounds. Coarse reserves charge the initial deletion and exact fine-family pool use once. Residual exceptional degrees equal k minus the total selected palette size; the combined footprint load equals the original exterior core degree. Finite permutation marginals and disjoint good samples, weighted sampling moments, capped means, exact numerical tail constants, and weighted swap variance for arbitrary finite independent parts are now proved. Actual allowed-palette counts use their true population size. Actual capped graph scores satisfy the derived product-sampling variance bound from original copy influences and degree/pool accounting. Exact actual vertex-pair laws, internal-copy expectations, exceptional-row means and variances with coefficient one, and the full capped score mean are now proved. Combining these with the actual product variance gives the graph-specific lower-tail bound and a supported block with every prescribed part size. Actual palette-row, pool, ordinary and special preferred-row tails now give explicit union budgets. Disjoint palettes and compatible fine/coarse blocks are constructed simultaneously when those budgets sum to less than one. Shared part permutations preserve all supplied sizes, inclusions, disjointness, coarse unions, and coverage. A scalar theorem chooses uniform error and order thresholds for exponential and inverse-order budgets. Graph-specific uniform realization, integer sizes and cap floors, boundary budgets, regularity setup, special paths, absorber, and full factorization remain unformalized. This audit continues the recovered ordinary-core source; it does not include the unavailable later terminal checkpoint. The final implication to the main theorem still assumes LargeCriticalExclusion, which is not proved. A successful build is not a verification of the main theorem or the full manuscript."
+  "scope": "The named supporting results, full sharpness results, actual foreign-edge reduction of Proposition 4.10, and bounded exceptional absorption of Proposition 4.12, frequent boundary patterns of Lemma 4.13, and full tripartite link packing of Lemma 5.12 are proved by audited declarations. The complete constructive boundary-extension reduction is also proved, but the one-apex factorization and full Lemma 4.14 remain unverified. The specialized bounded-forbidden-label coloring step is proved by finite permutation counting, greedy repair, and Vizing, without the general Kahn theorem. Quantitative cut/reserve control, constrained balancing and deficits, the uniform first completed color group, and exact residual core/complement coloring and conditional reconstruction are supporting results for Lemma 4.2; full residual factorization and Theorem 6.1 remain unproved. Reverse bipartite robustness, actual balanced exterior coloring, and preservation of ordinary neighborhood conditions under bounded core moves are now proved as three supporting results for Section 6. The regularity setup, special path systems, robust absorber, and full factorization remain unformalized. Further finite constructions now supply preferred representatives, actual allowed colors, capped correction selections after arbitrary deletions, and selected-graph colorability with balanced localized footprints. Actual palette rows, the correction imbalance identity, preferred filling, and the deterministic construction of one selected palette graph with its localized balanced coloring are proved. Only deleted copies in the relevant correction pool are charged to its capacity loss. Both correction orientations, two finite selected families with pairwise disjoint original copies, and their exact remaining graph are now constructed and colored from original finite supply bounds. Coarse reserves charge the initial deletion and exact fine-family pool use once. Residual exceptional degrees equal k minus the total selected palette size; the combined footprint load equals the original exterior core degree. Finite permutation marginals and disjoint good samples, weighted sampling moments, capped means, exact numerical tail constants, and weighted swap variance for arbitrary finite independent parts are now proved. Actual allowed-palette counts use their true population size. Actual capped graph scores satisfy the derived product-sampling variance bound from original copy influences and degree/pool accounting. Exact actual vertex-pair laws, internal-copy expectations, exceptional-row means and variances with coefficient one, and the full capped score mean are now proved. Combining these with the actual product variance gives the graph-specific lower-tail bound and a supported block with every prescribed part size. Actual palette-row, pool, ordinary and special preferred-row tails now give explicit union budgets. Disjoint palettes and compatible fine/coarse blocks are constructed simultaneously when those budgets sum to less than one. Shared part permutations preserve all supplied sizes, inclusions, disjointness, coarse unions, and coverage. A scalar theorem chooses uniform error and order thresholds for exponential and inverse-order budgets. Graph-specific uniform realization, integer sizes and cap floors, boundary budgets, regularity setup, special paths, absorber, and full factorization remain unformalized. The full Lemma 5.12 theorem chooses its order threshold before every graph and link family for real b>=1 and 0<lambda<=1. Its actual Hall candidates, adaptive-history load tails, exact graph accounting, and finite union budget are all proved internally with the original constants. This audit continues the recovered ordinary-core source; it does not include the unavailable later terminal checkpoint. The final implication to the main theorem still assumes LargeCriticalExclusion, which is not proved. A successful build is not a verification of the main theorem or the full manuscript."
 }
