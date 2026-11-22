@@ -1,7 +1,9 @@
 # Boundary-color extension: proved components and the remaining factorization
 
-**Lemma 4.14 remains unverified. The completed assertion count remains
-44 of 69.** The public theorem `Overfull.boundary_extension_reduction`
+**Lemma 4.14 remains unverified. The current completed assertion count is
+45 of 69, with 24 remaining**, after the
+[complete proof of Lemma 4.15](four-odd-decomposition.md).
+The public theorem `Overfull.boundary_extension_reduction`
 constructs the prescribed triple-color completions, preserves actual edge
 copies under an apex contraction, proves the required no-overfull
 conclusion for that contraction, and restores an actual residual coloring
@@ -350,5 +352,6 @@ Count Lemma 4.14 only after an actual factorization of the constructed
 contracted residual is derived, the uniform public extension theorem
 preserves every prescribed original label, and the strict build,
 transitive axiom audit, and semantic review pass. Until then Lemma 4.14
-remains unverified. The current coverage tally is **44 of 69**, and the
-main theorem remains unverified.
+remains unverified. The current coverage tally is **45 of 69**, with 24
+remaining, after the [complete proof of Lemma 4.15](four-odd-decomposition.md).
+The main theorem remains unverified.

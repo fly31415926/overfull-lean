@@ -25,7 +25,9 @@ verification-input hashes matched the saved record.
 
 This branch continues that recovered ordinary-core source, whose complete
 numbered inventory was **42 of 69**. The later complete proofs of Lemma 5.12
-and [Theorem 2.23](robust-partition.md) bring the current total to **44 of 69**.
+and [Theorem 2.23](robust-partition.md) brought the total to **44 of 69**.
+The [complete proof of Lemma 4.15](four-odd-decomposition.md) brings the
+current total to **45 of 69**, with 24 remaining.
 The later, previously reported
 43-assertion terminal checkpoint `eafe3efc18bb66f6ad87f715e79f09e5abfe7798`
 was unavailable and is not included in this branch's audit. Its source must

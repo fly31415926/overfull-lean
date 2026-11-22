@@ -6,7 +6,8 @@ is now constructed by
 The remaining formalization is factorization of the resulting actual
 regular multigraph through its bipartite robust core, as required by
 Theorem 6.1. Lemma 4.14 and the main theorem also remain unverified.
-The current completed numbered-assertion count is **44 of 69**.
+The current completed numbered-assertion count is **45 of 69**, with 24
+remaining, after the [complete proof of Lemma 4.15](four-odd-decomposition.md).
 
 This is a formalization status, not a finding of a defect in the
 manuscript's mathematical proof. The source proof invokes Theorem 6.1;

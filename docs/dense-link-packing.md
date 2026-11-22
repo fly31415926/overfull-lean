@@ -9,7 +9,10 @@ links. Its implementation adds 96 public theorem proofs in ten modules.
 
 This completed one additional numbered result, bringing that checkpoint to
 **43 of 69**. The subsequent [robust-partition proof](robust-partition.md)
-completes Theorem 2.23 and brings the current total to **44 of 69**. The main overfull theorem remains unverified. The earlier
+completed Theorem 2.23 and brought the total to **44 of 69**. The subsequent
+[complete proof of Lemma 4.15](four-odd-decomposition.md) brings the current
+total to **45 of 69**, with 24 remaining. The main overfull theorem remains
+unverified. The earlier
 palette and block work consists of supporting results inside unfinished
 factorization statements; those supporting results did not increase the
 numbered total.

@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "verification"
 MATHLIB_REVISION = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
 NUMBERED_ASSERTION_COUNT = 69
-COMPLETED_NUMBERED_ASSERTION_COUNT = 44
+COMPLETED_NUMBERED_ASSERTION_COUNT = 45
 
 
 def run(arguments: list[str], log_name: str) -> str:
@@ -54,6 +54,16 @@ def main() -> None:
         for key in ("license_file", "attribution_file"):
             if not (ROOT / provenance[key]).is_file():
                 raise SystemExit(f"Missing external-source notice: {provenance[key]}")
+
+    # The completed four-odd assertion has an exact reviewed source manifest.
+    four_odd_source = json.loads((ROOT / "docs/four-odd-source.json").read_text())
+    four_odd_modules = {item["module"]: item for item in four_odd_source["modules"]}
+    if len(four_odd_modules) != four_odd_source["module_count"]:
+        raise SystemExit("The four-odd source module inventory is inconsistent.")
+    for item in four_odd_modules.values():
+        path = ROOT / item["path"]
+        if hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]:
+            raise SystemExit(f"Four-odd proof source differs from its reviewed manifest: {item['path']}")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1382,6 +1392,18 @@ def main() -> None:
     })
     # END RECOVERED MAIN CHECKED RESULTS
 
+    # The original-hypothesis theorem and its constructive branches are
+    # required explicitly; compiling supporting modules alone cannot pass.
+    completed_results.update({
+        "four_odd_complete_decomposition": "Overfull.FourOdd.four_odd_parts_decomposition",
+        "four_odd_complete_real_bound": "Overfull.FourOdd.four_odd_decomposition_real",
+        "four_odd_complete_integer_bound": "Overfull.FourOdd.four_odd_decomposition_nat",
+        "four_odd_actual_surplus_circuits": "Overfull.FourOdd.Decomposition.surplus_circuit",
+        "four_odd_complete_matching_case": "Overfull.FourOdd.exists_matching_decomposition",
+        "four_odd_complete_star_case": "Overfull.FourOdd.exists_star_decomposition",
+        "four_odd_arbitrary_label_forest": "Overfull.FourOdd.exists_joining_decomposition",
+    })
+
     audited_names = {item["name"] for item in declarations}
     # BEGIN RECOVERED MAIN PROOF PRESERVATION CHECK
     recovered_source = json.loads((ROOT / "docs/source-recovery.json").read_text())
@@ -1391,6 +1413,8 @@ def main() -> None:
     # END RECOVERED MAIN PROOF PRESERVATION CHECK
     if missing := sorted(set(completed_results.values()) - audited_names):
         raise SystemExit("Completed results absent from the axiom audit: " + ", ".join(missing))
+    if missing := sorted(set(four_odd_source["required_proof_declarations"]) - audited_names):
+        raise SystemExit("Four-odd mapped proof declarations absent from the audit: " + ", ".join(missing))
 
     coverage = json.loads((ROOT / "docs/coverage.json").read_text())
     if (coverage["numbered_assertion_count"] != NUMBERED_ASSERTION_COUNT
@@ -1422,7 +1446,7 @@ def main() -> None:
         names = assertion.get("lean_theorems", [])
         if not names or not set(names) <= audited_names:
             raise SystemExit(f"A completed assertion lacks audited proof declarations: {assertion['number']}")
-    for number in ("2.24", "4.2", "4.14", "4.15", "6.1", "6.2", "6.3"):
+    for number in ("2.24", "4.2", "4.14", "6.1", "6.2", "6.3"):
         assertion = next(a for a in coverage["numbered_assertions"] if a["number"] == number)
         if assertion["full_assertion_verified"]:
             raise SystemExit(f"Assertion {number} is not completed by the registered supporting results.")
@@ -1431,6 +1455,24 @@ def main() -> None:
 
     sources = [ROOT / "Overfull.lean", ROOT / "Audit.lean"]
     sources += sorted((ROOT / "Overfull").rglob("*.lean"))
+    four_odd_declarations = [
+        {**item, "source_path": four_odd_modules[item["module"]]["path"],
+         "source_sha256": four_odd_modules[item["module"]]["sha256"]}
+        for item in sorted(declarations, key=lambda item: item["name"])
+        if item["module"] in four_odd_modules
+    ]
+    if {item["module"] for item in four_odd_declarations} != set(four_odd_modules):
+        raise SystemExit("The complete four-odd proof mapping omits a reviewed module.")
+    four_odd_map_path = OUTPUT / "four-odd-declarations.json"
+    four_odd_map_path.write_text(json.dumps({
+        "schema_version": 1,
+        "manuscript_number": "4.15",
+        "statement_sha256": four_odd_source["statement_sha256"],
+        "module_count": len(four_odd_modules),
+        "verified_declaration_count": len(four_odd_declarations),
+        "includes_private_and_generated_proofs": True,
+        "proof_declaration_map": four_odd_declarations,
+    }, indent=2) + "\n", encoding="utf-8")
     results = {
         "status": "partial_formalization",
         "main_theorem_verified": False,
@@ -1454,6 +1496,12 @@ def main() -> None:
         "audited_external_modules": sorted(external_imports),
         "fully_verified_numbered_assertion_count": len(completed_assertions),
         "fully_verified_numbered_assertions": [a["number"] for a in completed_assertions],
+        "four_odd_declaration_map": {
+            "path": str(four_odd_map_path.relative_to(ROOT)),
+            "sha256": hashlib.sha256(four_odd_map_path.read_bytes()).hexdigest(),
+            "verified_declaration_count": len(four_odd_declarations),
+            "module_count": len(four_odd_modules),
+        },
         "source_sha256": {
             str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
             for path in sources
@@ -1469,7 +1517,7 @@ def main() -> None:
                 ROOT / "LICENSE_BMATCHING.txt",
             ])
         },
-        "scope": "44 of the 69 numbered manuscript assertions have complete checked proofs. The remaining 25, including the main theorem, remain incomplete. Supporting results and conditional reductions are not counted as completed parent assertions. This continuation starts at published commit 2eb61f588a26b3fe41edcf0bcec8610c9c343dd8 and adds 109 public theorem proofs in 13 modules. The full deterministic argument is proved from the actual average-degree estimate (1-zeta^3/2)*Delta <= sum degrees/n. Uniform zeta and gamma precede the graph, and zeta may be below any prescribed positive bound. The actual low-degree set and induced complement are constructed, with strict deleted-set bound, surviving order, actual minimum/maximum degree transfer, full robust partition, rho <= (theta/100)^3, all five component alternatives, and every original-order degree-exception and shore-size bound. The criticality-to-average-degree implication from Cao–Chen is not formalized. Proposition 2.24 remains incomplete. Uniform error tolerances and order thresholds now precede the graph and derive the actual palette and block union budgets from the manuscript linear degree, active-row, large-pool, per-color, and special-count bounds. Actual positive even palette sizes are rounded from fixed target fractions and realized as disjoint allowed palettes. Actual divisible finite populations yield equal fine positions, exact coarse unions, and simultaneous actual fine/coarse blocks with natural floor caps and all preferred-row and large-pool score estimates. The no-correction branch has a separate uniform preferred-row construction and an actual zero-correction palette selection. Actual normalized boundary weights have total at most twice the indexed pool count plus the special count; a light existing cluster and relative original-copy loss bounds are proved. Floor caps, adaptive pool losses, fine-to-coarse costs, preferred-row supplies, and strict selected/residual coloring reserves are proved and connected to actual palette selection and localized coloring. The absorber-specific palette identities and divisibilities, construction of the required spanning regularity partition and final boundary after insertions/equalization, complete uniform composition into both colored families, special path systems, robust absorber, and final host factorization remain unformalized. These supporting results do not complete this numbered assertion. The combined tree also preserves published main checkpoint 54db7b826be05fbba9845f4140aaba0a7db5ba04: ten compatible-circuit modules unchanged and 27 alternate pattern modules under distinct namespaces. Every one of the 1214 mapped historical proof declarations is required in the fresh axiom audit. The alternate proof of Lemma 4.13 counts once, and the recovered circuit, Hall-pairing, forest, virtual-family and incidence components do not complete Lemma 4.15. The previously completed robust-partition Theorem 2.23 and link-packing Lemma 5.12 remain part of the audit, as do the full sharpness family, density corollary, and other registered completed results. Lemma 4.2 and Lemma 4.14 still depend on the unproved residual factorization. LargeCriticalExclusion, required by the final main-theorem implication, remains unproved. A successful build does not verify the complete manuscript.",
+        "scope": coverage["scope"],
     }
     results_path.write_text(json.dumps(results, indent=2) + "\n", encoding="utf-8")
     print(f"Checked {len(declarations)} project declarations; full manuscript status: unverified.")

@@ -1,16 +1,19 @@
-# Next verification target: assemble the spanning bipartite setup
+# Remaining factorization targets after Lemma 4.15
 
-The published `2eb61f5` checkpoint completes Theorem 2.23, with **44 of 69**
-numbered assertions verified. This continuation adds 109 public supporting
-proofs in 13 modules. No further numbered assertion is marked complete.
+This checkpoint completes [Lemma 4.15](four-odd-decomposition.md), bringing
+the numbered inventory to **45 of 69**, with **24** remaining. Its direct
+proof constructs the required actual joining-edge decomposition from the
+original graph hypotheses, using the sufficient ratio bound `1/1000`.
+Theorem 2.23 brought the earlier `2eb61f5` checkpoint to 44; the subsequent
+109 supporting proofs in 13 modules preserved that earlier count.
 
 The combined tree also preserves the published circuit checkpoint
 `54db7b8` and its alternate pattern proof. The [recovery manifest](source-recovery.json)
 records the source identity and exact namespace mapping. The recovered
-[circuit and forest components](four-odd-circuits.md) restore partial
-progress on Lemma 4.15; they do not supply the general compatible
-decomposition or complete that lemma. The second proof of Lemma 4.13
-does not add another numbered assertion.
+[circuit and forest components](four-odd-circuits.md) remain available.
+The new direct proof completes Lemma 4.15 without the general compatible
+decomposition theorem, which remains unproved. The second proof of Lemma
+4.13 does not add another numbered assertion.
 
 ## Newly completed finite constructions
 
@@ -62,7 +65,7 @@ assumed as an axiom.
 The boundary-extension reduction for Lemma 4.14 and the ordinary-core
 reduction for Lemma 4.2 are already proved. Their remaining input is an
 actual factorization of the residual supplied by the Section 6 theorem.
-The complete count is still **44 of 69**, and the main theorem is unverified.
+The complete count is **45 of 69**, and the main theorem is unverified.
 
 The detailed boundary statement and manuscript identity remain recorded in
 [manuscript-source.json](manuscript-source.json), [coverage.json](coverage.json),
@@ -206,15 +209,16 @@ a bipartite robust core.
 Then compose the uniform constants to obtain the ordinary-core
 factorization of Lemma 4.2, apply its `s=2` case to the even-core
 one-apex reduction, and compose the resulting actual coloring with
-`boundary_extension_reduction` to prove Lemma 4.14. The full
-fixed-pattern/Fan–Zhang chain remains unnecessary for this particular
-one-apex route, but remains separate work for the general manuscript.
+`boundary_extension_reduction` to prove Lemma 4.14. The general Fan–Zhang
+theorem remains unnecessary for this particular one-apex route and for
+the new direct proof of Lemma 4.15. Its general formalization is a
+separate task.
 
 Do not count Lemma 4.2 or Lemma 4.14 as verified until their actual
 factorization conclusions are derived and the strict build, transitive
 axiom audit, and semantic review pass. Supporting declarations are
 registered separately and do not change the completed assertion tally.
-The current count is 44 of 69, and the main theorem remains unverified.
+The current count is 45 of 69, and the main theorem remains unverified.
 
 An unfinished formal dependency is not, by itself, a mathematical gap
 in the written proof. The manuscript invokes Theorem 6.1; the remaining

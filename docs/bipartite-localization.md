@@ -22,8 +22,10 @@ application estimates, uniform sampling budgets, rounded palettes,
 compatible positions, and boundary-loss bounds. The complete spanning
 setup, final boundary construction, and absorber remain to be composed.
 This supporting checkpoint had **42 of 69** numbered assertions complete;
-the current combined development has **44 of 69** after Lemma 5.12 and
-Theorem 2.23. The separate unavailable terminal checkpoint remains outside
+Lemma 5.12 and Theorem 2.23 subsequently brought the total to **44 of 69**.
+The current combined development has **45 of 69**, with 24 remaining, after
+the [complete proof of Lemma 4.15](four-odd-decomposition.md).
+The separate unavailable terminal checkpoint remains outside
 this audit; its provenance is recorded in
 [bipartite-prerequisites.md](bipartite-prerequisites.md).
 

@@ -1,6 +1,6 @@
 # Frequent boundary patterns and complete absorption
 
-Recovered from published main commit `54db7b826be05fbba9845f4140aaba0a7db5ba04`. The current combined inventory remains **44 of 69**: the recovered circuit results are supporting components, and the alternate frequent-pattern proof establishes the already-counted Lemma 4.13. Recovered pattern declarations use `Overfull.CircuitPatterns` and `Overfull.CircuitPatternRealization`; `Overfull/Patterns/Compression.lean` is shared with the continuation. Current verification evidence is generated from the combined source tree; no old verification hashes or success reports are reused.
+Recovered from published main commit `54db7b826be05fbba9845f4140aaba0a7db5ba04`. The recovery left the combined inventory at **44 of 69**: the recovered circuit results were supporting components, and the alternate frequent-pattern proof established the already-counted Lemma 4.13. The subsequent [complete proof of Lemma 4.15](four-odd-decomposition.md) brings the current inventory to **45 of 69**, with 24 remaining. Recovered pattern declarations use `Overfull.CircuitPatterns` and `Overfull.CircuitPatternRealization`; `Overfull/Patterns/Compression.lean` is shared with the continuation. Current verification evidence is generated from the combined source tree; no old verification hashes or success reports are reused.
 
 
 The public declaration is `Overfull.circuit_frequent_boundary_pattern` in
@@ -15,7 +15,7 @@ this documentation is not a substitute for those checks.
 
 **The manuscript main theorem remains unverified.** This reduction does
 not assert a one-factorization of its final graph. Boundary extension,
-bounded exceptional multigraph factorization, compatible circuits, and
+bounded exceptional multigraph factorization, the general compatible-circuit theorem, and
 the terminal factorization still require their own proofs.
 
 ## Manuscript correspondence

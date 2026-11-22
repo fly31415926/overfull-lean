@@ -9,7 +9,8 @@ conditions on the original exterior coloring, one palette, two blocks,
 and the unused edge supplies. No selected graph, correction set, or
 coloring of the selected graph is supplied as an assumption.
 
-The current completed numbered inventory is **44 of 69**. The subsequent
+The current completed numbered inventory is **45 of 69**, with 24 remaining,
+after the [complete proof of Lemma 4.15](four-odd-decomposition.md). The subsequent
 [two-family construction](bipartite-two-families.md) now assembles the
 fine and coarse families and colors their exact remaining exterior from
 finite input conditions. The later

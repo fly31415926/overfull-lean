@@ -342,15 +342,16 @@ or three-edge star, with actual pair and cut supply. Positive output
 robustness precedes the requested error, while the explicit input range
 depends on `t`. See [`frequent-patterns.md`](frequent-patterns.md).
 
-There are complete proofs of 42 of the 69 numbered assertions. The remaining
-27 include the main theorem and the structural exclusion on which its
+There are complete proofs of **45 of the 69** numbered assertions after the
+[complete proof of Lemma 4.15](four-odd-decomposition.md). The remaining
+24 include the main theorem and the structural exclusion on which its
 checked reduction depends.
 
 ### Boundary extension reduction
 
 `Overfull.boundary_extension_reduction` proves the full constructive reduction underlying Lemma 4.14. It starts with the actual prescribed one-or-three boundary coloring, completes all triple classes through the robust core, and deletes their exact original edge copies. The residual core, degree, and singleton boundary are constructed and counted. Its exterior contraction is proved even, regular, and free of overfull sets. The result reconstructs the exact prescribed extension from an actual coloring of that returned contraction, preserving properness at original exterior endpoints.
 
-No such contracted coloring is assumed in the reduction theorem's hypotheses or asserted to exist in its conclusion. The missing one-apex factorization can be reduced to ordinary-core Lemma 4.2 with two exterior vertices using the proved `Overfull.OneCore.even_core_complement`. This bypasses the general fixed-pattern and compatible-circuit steps for this specialization. The new `Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction` constructs the ordinary-core preprocessing and its exact residual with an actual colored complement. Its specialized forbidden-label step is proved by permutation counting, greedy repair, and Vizing, without assuming the general Kahn theorem. Theorem 6.1's factorization of the whole residual remains unformalized, so the full Lemmas 4.2 and 4.14 remain incomplete. The current full assertion count is 44 of 69. See [`ordinary-factorization.md`](ordinary-factorization.md), [`boundary-extension.md`](boundary-extension.md), and [`next-verification-target.md`](next-verification-target.md).
+No such contracted coloring is assumed in the reduction theorem's hypotheses or asserted to exist in its conclusion. The missing one-apex factorization can be reduced to ordinary-core Lemma 4.2 with two exterior vertices using the proved `Overfull.OneCore.even_core_complement`. This bypasses the general fixed-pattern and compatible-circuit steps for this specialization. The new `Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction` constructs the ordinary-core preprocessing and its exact residual with an actual colored complement. Its specialized forbidden-label step is proved by permutation counting, greedy repair, and Vizing, without assuming the general Kahn theorem. Theorem 6.1's factorization of the whole residual remains unformalized, so the full Lemmas 4.2 and 4.14 remain incomplete. The current full assertion count is **45 of 69**, with 24 remaining, after [Lemma 4.15](four-odd-decomposition.md). See [`ordinary-factorization.md`](ordinary-factorization.md), [`boundary-extension.md`](boundary-extension.md), and [`next-verification-target.md`](next-verification-target.md).
 
 ## What remains
 

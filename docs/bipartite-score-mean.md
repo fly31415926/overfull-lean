@@ -7,9 +7,11 @@ variance, and constructs a block with the prescribed part sizes when the
 explicit failure bound is below one.
 
 There are **31 new public theorem proofs in five modules**. They are
-supporting results for Section 6. The completed numbered inventory remains
-**44 of 69**; Theorem 6.1, Proposition 6.2, the absorber theorem, and the main
-theorem remain unverified. The definitive strict build, transitive axiom
+supporting results for Section 6. The current completed numbered inventory is
+**45 of 69**, with 24 remaining, after the
+[complete proof of Lemma 4.15](four-odd-decomposition.md). Theorem 6.1,
+Proposition 6.2, the absorber theorem, and the main theorem remain unverified.
+The definitive strict build, transitive axiom
 audit, and exact source hashes are recorded in `verification/results.json`.
 
 ## Sources and principal interfaces

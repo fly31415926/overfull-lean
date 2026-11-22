@@ -4,8 +4,9 @@ This development proves Proposition 4.10, `three:prop:foreign`, of the
 recorded manuscript. Its public declarations are
 `Overfull.foreign_edge_reduction` and
 `Overfull.foreign_edge_reduction_with_small_error`. The inventory contains
-44 of 69 complete numbered assertions, including the subsequent bounded
-absorption proposition and frequent-pattern lemma. The main theorem remains unverified.
+**45 of 69** complete numbered assertions, with 24 remaining, including the
+subsequent bounded absorption proposition, frequent-pattern lemma, and
+[Lemma 4.15](four-odd-decomposition.md). The main theorem remains unverified.
 
 The proof constructs the assignments, matching classes, refinement cuts,
 changed core vertex sets, marks, fixed packing rules, and both local and

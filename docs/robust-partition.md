@@ -2,8 +2,10 @@
 
 `Overfull.robust_partition` proves the full assertion labelled
 `bip:part:imported` in the manuscript. This completes one additional numbered
-theorem and brings verified coverage to **44 of 69**. The main theorem and
-the remaining 25 numbered assertions are not claimed as complete.
+theorem and brought that checkpoint's coverage to **44 of 69**. The subsequent
+[complete proof of Lemma 4.15](four-odd-decomposition.md) brings the current
+total to **45 of 69**. The remaining 24 numbered assertions, including the
+main theorem, are not claimed as complete.
 
 The implementation contains **71 public theorem proofs in nine modules**.
 These supporting declarations collectively prove one numbered assertion.

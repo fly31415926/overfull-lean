@@ -6,11 +6,42 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest continuation: uniform localization and critical-partition reduction
+## Latest continuation: complete Lemma 4.15
 
-This continuation adds **109 public theorem proofs across 13 modules** to
-the published `2eb61f5` checkpoint. The complete numbered count remains
-**44 of 69**; the main theorem and the remaining 25 assertions are incomplete.
+**45 of 69 numbered assertions are now complete.** This checkpoint proves
+[Lemma 4.15](docs/four-odd-decomposition.md), the decomposition of all joining
+edges of four odd parts. The main theorem and the remaining **24** assertions
+are incomplete.
+
+The public theorem is
+`Overfull.FourOdd.four_odd_parts_decomposition` in
+[`Overfull/FourOdd/Theorem.lean`](Overfull/FourOdd/Theorem.lean). From the
+original regular graph, absence of overfull sets, four odd parts, actual
+boundary degrees, and prescribed matching-or-star supplies, it constructs
+an exact partition into actual matchings. Exactly `h` pieces project to
+perfect matchings or three-edge stars; every surplus piece projects to a
+circuit of exact length two. The fixed sufficient bound is **1/1000** for
+both manuscript error ratios. The undivided variants also cover `h = 0`.
+
+The proof uses König coloring, equitable balancing, minority-class
+contraction and Hall pairing. All quotient cut conditions, selections,
+endpoint constraints and exact counts are derived in the 17 new `FourOdd`
+modules. The general Fan–Zhang compatible-circuit theorem remains unproved
+and is not an input to this construction.
+
+The [source manifest](docs/four-odd-source.json),
+[clause mapping and proof](docs/four-odd-decomposition.md),
+[semantic review](docs/four-odd-semantic-review.md), and
+[complete new declaration mapping](verification/four-odd-declarations.json)
+record the exact scope. The strict build, complete transitive axiom log,
+source hashes and verification-input hashes are recorded in
+[verification/results.json](verification/results.json).
+
+## Previous continuation: uniform localization and critical-partition reduction
+
+That continuation added **109 public theorem proofs across 13 modules** to
+the published `2eb61f5` checkpoint and preserved its **44 of 69** count.
+The new Lemma 4.15 proof above adds the forty-fifth complete assertion.
 
 The [uniform-localization results](docs/uniform-localization.md) construct
 actual positive even allowed palettes and actual compatible fine/coarse
@@ -49,12 +80,13 @@ every mapped proof in the new combined axiom audit. These recovered
 declarations include generated support proofs and are separate from the
 109 new public theorem proofs described above.
 
-The [four-odd circuit components](docs/four-odd-circuits.md) restore the
-recorded partial progress on Lemma 4.15: actual circuit copies, finite
+The [four-odd circuit components](docs/four-odd-circuits.md) preserve the
+earlier partial progress on Lemma 4.15: actual circuit copies, finite
 compatible cases, Hall pairing, matching forests, surplus circuits,
 virtual-family counts, and incidence loads. The general compatible
-decomposition and the full lemma remain unproved. The two proofs of
-Lemma 4.13 count as one numbered assertion, so coverage remains **44 of 69**.
+decomposition remains unproved. The separate direct construction above
+now completes the full lemma. The two proofs of Lemma 4.13 still count as
+one numbered assertion; source recovery itself added no numbered assertion.
 
 ### Previous continuation: complete Theorem 2.23
 
@@ -74,8 +106,9 @@ theorem proofs across nine modules**. These establish one complete
 numbered theorem; the broader published robust-partition conditions
 are not separately claimed.
 
-The main theorem and the remaining **25** numbered assertions are still
-unverified. The exact build, axiom inventory, and source hashes appear in
+At that checkpoint the main theorem and **25** numbered assertions remained
+unverified. The current total is **45 of 69**, with **24** remaining. The
+exact build, axiom inventory, and source hashes appear in
 [verification/results.json](verification/results.json).
 
 ### Previous continuation: complete Lemma 5.12
@@ -119,7 +152,7 @@ original robust-core assumptions, the spanning regularity setup, special
 path systems, the robust absorber, and full factorization remain open.
 That supporting checkpoint left the numbered assertion count at
 **42 of 69**. Lemma 5.12 added the forty-third full statement;
-Theorem 2.23 now adds the forty-fourth.
+Theorem 2.23 added the forty-fourth, and Lemma 4.15 now adds the forty-fifth.
 
 ## The main theorem
 

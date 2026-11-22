@@ -1,23 +1,37 @@
-# Checked components of the four-odd-parts argument
+# Preserved compatible-circuit components for four odd parts
 
-Recovered from published main commit `54db7b826be05fbba9845f4140aaba0a7db5ba04`. The current combined inventory remains **44 of 69**: the recovered circuit results are supporting components, and the alternate frequent-pattern proof establishes the already-counted Lemma 4.13. Recovered pattern declarations use `Overfull.CircuitPatterns` and `Overfull.CircuitPatternRealization`; `Overfull/Patterns/Compression.lean` is shared with the continuation. Current verification evidence is generated from the combined source tree; no old verification hashes or success reports are reused.
+These supporting components were recovered from published main commit
+`54db7b826be05fbba9845f4140aaba0a7db5ba04` and are preserved in the combined
+source tree. Recovered pattern declarations use `Overfull.CircuitPatterns`
+and `Overfull.CircuitPatternRealization`;
+`Overfull/Patterns/Compression.lean` is shared with the continuation. The
+alternate frequent-pattern proof establishes the already-counted Lemma 4.13.
 
 
-This checkpoint proves the matching-pairing, parity-forest, and actual
+This page records the checked matching-pairing, parity-forest, and actual
 surplus-circuit construction used at the end of Lemma 4.15. It also
 constructs the virtual-edge multigraph and proves the local classification
 of its compatible circuits. Every edge set contains actual edge copies,
 so parallel copies and original endpoints retain their identities.
 
-**Lemma 4.15 is not yet a complete checked assertion.** The general
-compatible-circuit existence step, its application to the reserved
-augmented quotient, and the final assembly from the manuscript's original
-hypotheses remain unfinished. The manuscript coverage therefore remains
-**44 of 69**, and the main theorem remains unverified.
+**Lemma 4.15 now has a complete direct construction in the new
+`Overfull/FourOdd` modules. The full public theorem has passed strict Lean
+checking and independent semantic review; the full project build and axiom
+audit are pending.** Its
+proof uses actual bipartite edge coloring, equitable balancing, and Hall
+pairing, and does not require the general compatible-circuit existence
+step discussed on this page. See
+[four-odd-decomposition.md](four-odd-decomposition.md) for the full proof,
+the explicit constant `1/1000`, exact coverage and primary counts, and the
+source-to-Lean clause map. The new source checkpoint records **45 of 69**
+complete numbered assertions, with **24 remaining**; the manuscript's main
+theorem remains unverified.
 
-The strict build and full transitive axiom audit are recorded in
-`verification/results.json`. A component is not counted as a complete
-numbered assertion merely because its source compiles.
+The authoritative strict build and full transitive axiom audit are recorded
+in `verification/results.json`. Until the new verification run finishes,
+the existing report covers the preceding source checkpoint. A component is
+not counted as a complete numbered assertion merely because its source
+compiles.
 
 ## Actual circuits and incidence classes
 
@@ -203,10 +217,17 @@ The external target is Fan and Zhang, *Circuit Decompositions of Eulerian
 Graphs*, Journal of Combinatorial Theory, Series B 78 (2000), 1--23,
 [doi:10.1006/jctb.1999.1923](https://doi.org/10.1006/jctb.1999.1923),
 Theorem 1.1 ([author-hosted paper](https://www.math.wvu.edu/~cqzhang/Publication-files/my-paper/JCTB-2000-Compatible.pdf)).
-The needed four-label consequence is still unproved here. The paper's
-theorem is not imported as an axiom.
+The general four-label compatible-circuit consequence is still unproved
+here. The paper's theorem is not imported as an axiom. The new direct
+proof of Lemma 4.15 supplies its desired decomposition without using this
+general result.
 
-## Remaining work for Lemma 4.15
+## Remaining work for the general compatible-circuit route
+
+The following steps describe the older virtual-edge route in the
+manuscript. They remain open as a route to the general compatible-circuit
+theorem. They are no longer prerequisites for the direct proof of
+Lemma 4.15 in `Overfull/FourOdd/Theorem.lean`.
 
 1. Construct the reserved `s` actual forest matchings from the original
    pair supplies and prove the required endpoint-conflict bounds.
@@ -217,8 +238,14 @@ theorem is not imported as an axiom.
 4. Reinsert the reserved circuits, derive the family-size reserve and
    original endpoint loads, and apply the checked pairing and
    forest/circuit-splitting results.
-5. Assemble the exact partition into `h` primary matchings and all surplus
-   circuit matchings from the manuscript's original hypotheses.
+5. Assemble the resulting virtual-edge construction into a complete
+   alternative proof of the exact `h`-primary partition.
+
+The direct construction separately establishes the full original-graph
+conclusion, and proves the stronger surplus bound of two copies. It does
+not establish a converse from arbitrary admissible class-cut inequalities
+to a compatible circuit partition. The distinction matters when these
+preserved results are used in other arguments.
 
 The separate factorization input for Lemma 4.14 and the later terminal
 factorization are also unresolved in this published proof chain.

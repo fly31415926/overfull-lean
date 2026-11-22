@@ -204,6 +204,7 @@ import Overfull.CompatibleCircuits.VirtualPartition
 import Overfull.CircuitPatterns.CircuitRemainders
 import Overfull.CircuitPatterns.IncidenceLoad
 import Overfull.CircuitPatterns.Frequent
+import Overfull.FourOdd.Theorem
 
 /-!
 # Partial formalization of the overfull manuscript

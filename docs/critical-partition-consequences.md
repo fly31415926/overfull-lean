@@ -5,7 +5,8 @@ steps that turn a suitable average-degree estimate into all the
 partition conclusions of Proposition 2.24. **Proposition 2.24 is not
 counted as complete:** its asymptotic average-degree input for critical
 graphs, cited from Cao–Chen in the manuscript, has not been formalized.
-The complete numbered inventory remains **44 of 69**.
+The current complete numbered inventory is **45 of 69**, with 24 remaining,
+after the [complete proof of Lemma 4.15](four-odd-decomposition.md).
 
 ## Actual deletion and uniform choices
 

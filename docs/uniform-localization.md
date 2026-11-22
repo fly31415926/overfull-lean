@@ -4,8 +4,9 @@ This continuation starts from published checkpoint `2eb61f5`, where
 Theorem 2.23 brought complete numbered coverage to **44 of 69**. It proves
 further parts of the Section 6 localization construction. These are
 supporting results for Proposition 6.2 and Theorem 6.1. Neither full
-factorization statement is claimed, and the complete numbered count
-remains **44 of 69**.
+factorization statement is claimed. The current complete numbered count
+is **45 of 69**, with 24 remaining, after the subsequent
+[complete proof of Lemma 4.15](four-odd-decomposition.md).
 
 The principal change is that the graph-specific simultaneous-selection
 theorems now choose their positive error tolerance and integer order

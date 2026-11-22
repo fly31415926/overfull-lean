@@ -8,8 +8,10 @@ actual graph. Their collective assumptions are explicit numerical budgets
 below one, together with the displayed graph and integer-size conditions.
 There are **75 new public theorem proofs in ten modules**.
 
-These are supporting results for Proposition 6.2. The completed numbered
-inventory remains **44 of 69**. Proposition 6.2 asserts a factorization of
+These are supporting results for Proposition 6.2. The current completed
+numbered inventory is **45 of 69**, with 24 remaining, after the
+[complete proof of Lemma 4.15](four-odd-decomposition.md).
+Proposition 6.2 asserts a factorization of
 the whole graph; selecting suitable palettes and blocks completes only part
 of its proof. The regularity construction, special path systems, robust
 absorber, and final factorization remain unformalized. The main theorem

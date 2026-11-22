@@ -24,7 +24,7 @@
       "manuscript_label": "sharp:thm:family",
       "manuscript_number": "7.1",
       "proved": true,
-      "scope": "The full assertion of Proposition 7.1 for every odd Delta >= 3: a connected simple graph on Fin (4*Delta+5), maximum degree Delta, no proper Delta-edge-coloring, a proper (Delta+1)-edge-coloring, no Delta-overfull vertex set, and exactly 2*Delta*(Delta+1) edges. The two coloring statements express the exact class-2 conclusion without invoking Vizing’s theorem.",
+      "scope": "The full assertion of Proposition 7.1 for every odd Delta >= 3: a connected simple graph on Fin (4*Delta+5), maximum degree Delta, no proper Delta-edge-coloring, a proper (Delta+1)-edge-coloring, no Delta-overfull vertex set, and exactly 2*Delta*(Delta+1) edges. The two coloring statements express the exact class-2 conclusion without invoking Vizing\u2019s theorem.",
       "proof_declaration": "Overfull.sharpness_family",
       "proof_file": "Overfull/Sharpness/Theorems.lean"
     }
@@ -32,7 +32,7 @@
   "coverage_file": "coverage.json",
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
-  "fully_verified_numbered_assertions": 44,
+  "fully_verified_numbered_assertions": 45,
   "additional_complete_results": [
     {
       "lean_name": "Overfull.arbitrarily_large_class_two_graphs",
@@ -96,7 +96,20 @@
       "manuscript_label": "three:lem:pattern",
       "manuscript_number": "4.13",
       "proved": true,
-      "scope": "Full Lemma 4.13. From a simple regular non-overfull graph with three or four robust cores and at most t exceptional vertices, construct actual perfect-matching deletions and absorb every exceptional vertex. The exact residual has no overfull set after every prefix, degree h >= k/(3*b4(t)), and disjoint enlarged robust cores covering all vertices. The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Lemmas 4.14-4.15, Proposition 4.16, and the manuscript main theorem remain unverified."
+      "scope": "Full Lemma 4.13. From a simple regular non-overfull graph with three or four robust cores and at most t exceptional vertices, construct actual perfect-matching deletions and absorb every exceptional vertex. The exact residual has no overfull set after every prefix, degree h >= k/(3*b4(t)), and disjoint enlarged robust cores covering all vertices. The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Lemma 4.14, Proposition 4.16, and the manuscript main theorem remain unverified; Lemma 4.15 is now completed by the separate direct FourOdd construction."
+    },
+    {
+      "lean_name": "Overfull.FourOdd.four_odd_parts_decomposition",
+      "file": "Overfull/FourOdd/Theorem.lean",
+      "manuscript_label": "three:lem:four-odd",
+      "manuscript_number": "4.15",
+      "proved": true,
+      "scope": "Full Lemma 4.15 for finite loopless multigraphs, hence also simple graphs. All inputs refer to the original graph: h-regularity, no h-overfull set, four odd label fibers, actual joining degree at most real a, a prescribed perfect matching or three-edge star with at least r0 actual copies on every prescribed pair, and the manuscript forest-cut supply. The explicit sufficient conditions are a/h <= 1/1000 and (h-r0)/h <= 1/1000 for h>0. The output is an exact partition of the actual joining-copy subtype into actual matchings, exactly h with injective perfect-matching/star projection; every surplus projection is a two-edge circuit. The stronger undivided variants need only individual pair supplies and cover h=0. All quotient cuts/parities, finite selections and matching constructions are derived. This is a direct alternative proof; the general compatible-circuit theorem and terminal factorization are not claimed.",
+      "related_proof_declarations": [
+        "Overfull.FourOdd.four_odd_decomposition_real",
+        "Overfull.FourOdd.four_odd_decomposition_nat",
+        "Overfull.FourOdd.Decomposition.surplus_circuit"
+      ]
     }
   ],
   "density_corollary_verified": true,
@@ -143,7 +156,7 @@
       "manuscript_locations": [
         "three:prop:foreign, foreign-edge color classes"
       ],
-      "scope": "Apply the proved multigraph König theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case. This stand-alone helper assumes actual bipartiteness and the incidence-degree bound. The maximizing-assignment theorem derives both hypotheses, and the configured epoch reconstructs the entire current foreign graph and its classes at every restart of the completed process."
+      "scope": "Apply the proved multigraph K\u00f6nig theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case. This stand-alone helper assumes actual bipartiteness and the incidence-degree bound. The maximizing-assignment theorem derives both hypotheses, and the configured epoch reconstructs the entire current foreign graph and its classes at every restart of the completed process."
     },
     {
       "id": "foreign_assignment",
@@ -2315,7 +2328,7 @@
       "manuscript_locations": [
         "three:lem:pattern"
       ],
-      "scope": "Full Lemma 4.13. From a simple regular non-overfull graph with three or four robust cores and at most t exceptional vertices, construct actual perfect-matching deletions and absorb every exceptional vertex. The exact residual has no overfull set after every prefix, degree h >= k/(3*b4(t)), and disjoint enlarged robust cores covering all vertices. The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Lemmas 4.14-4.15, Proposition 4.16, and the manuscript main theorem remain unverified."
+      "scope": "Full Lemma 4.13. From a simple regular non-overfull graph with three or four robust cores and at most t exceptional vertices, construct actual perfect-matching deletions and absorb every exceptional vertex. The exact residual has no overfull set after every prefix, degree h >= k/(3*b4(t)), and disjoint enlarged robust cores covering all vertices. The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Lemma 4.14, Proposition 4.16, and the manuscript main theorem remain unverified; Lemma 4.15 is now completed by the separate direct FourOdd construction."
     }
   ],
   "continuation_source_reviews": [
@@ -2407,6 +2420,22 @@
       "statement_sha256": "be076a6b6c07e78af1793be025ddfde0ac2b3360914be0360ff48fb5866dbf31",
       "matches_pinned_statement_sha256": true,
       "parameter_convention": "Both n0 and gamma0 precede every finite vertex type and graph. The proof permits n0=1 and requires only positivity of f on (0,1), including every manuscript nondecreasing function into (0,1)."
+    },
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "sections": [
+        "three:lem:four-odd"
+      ],
+      "documentation": "four-odd-decomposition.md",
+      "numbered_inventory_rebased": false,
+      "statement_source_lines": [
+        3297,
+        3309
+      ],
+      "statement_sha256": "95942bcc2f458912f740b61cecad49f74bcfe9e8679ec1a30e2819e039591eb0",
+      "matches_pinned_statement_sha256": true,
+      "parameter_convention": "The fixed sufficient constant is 1/1000 for both ratios. The natural floor of a supplies the actual integer joining-degree bound. The ratio theorem assumes h>0; undivided variants cover h=0."
     }
   ],
   "supporting_continuations": [
@@ -2421,6 +2450,21 @@
       "notes": [
         "uniform-localization.md",
         "critical-partition-consequences.md"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "base_commit": "46b6dc2c44c66a7a2c4ed9590690224bb2d10af4",
+      "new_modules": 17,
+      "numbered_assertions_completed": 1,
+      "completed_assertions": [
+        "4.15"
+      ],
+      "complete_numbered_total": 45,
+      "scope": "Full Lemma 4.15 for finite loopless multigraphs, hence also simple graphs. All inputs refer to the original graph: h-regularity, no h-overfull set, four odd label fibers, actual joining degree at most real a, a prescribed perfect matching or three-edge star with at least r0 actual copies on every prescribed pair, and the manuscript forest-cut supply. The explicit sufficient conditions are a/h <= 1/1000 and (h-r0)/h <= 1/1000 for h>0. The output is an exact partition of the actual joining-copy subtype into actual matchings, exactly h with injective perfect-matching/star projection; every surplus projection is a two-edge circuit. The stronger undivided variants need only individual pair supplies and cover h=0. All quotient cuts/parities, finite selections and matching constructions are derived. This is a direct alternative proof; the general compatible-circuit theorem and terminal factorization are not claimed.",
+      "notes": [
+        "four-odd-decomposition.md",
+        "four-odd-semantic-review.md"
       ]
     }
   ],
