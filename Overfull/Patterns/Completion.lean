@@ -28,9 +28,7 @@ theorem fixedTranscript_prefix
     (input : ℕ → Input) (s : ℕ) :
     transcriptPrefix (fixedTranscript rule input) s = run rule input s := by
   induction s with
-  | zero =>
-    funext j
-    exact Fin.elim0 j
+  | zero => exact prefix_zero (fixedTranscript rule input)
   | succ s ih =>
     rw [prefix_succ, ih]
     rfl
@@ -76,14 +74,12 @@ theorem fixed_boundary_allowed (G : SimpleGraph V) (U : Finset V)
       (fun j hj => hno j ((mem_range.mp hj).trans hs)) k a hregular hdegree v
     have heq := history_incidence_eq_footprint U G H F s (transcriptPrefix T s)
       (fun j => hinputs j.val (j.isLt.trans hs)) v
-    have hreal : ((univ.filter (fun j : Fin s =>
-        v ∈ (transcriptPrefix T s j).1)).card : ℝ) ≤ ε * Fintype.card U := by
-      rw [heq]
-      simpa only [Fintype.card_coe] using hcount.trans ha
-    convert hreal using 1
-    congr 2
-    ext j
-    simp only [mem_filter, mem_univ]
+    convert hcount.trans ha using 1
+    · rw [← heq]
+      congr 2
+      ext j
+      simp only [mem_filter, mem_univ]
+    · simp only [Fintype.card_coe]
 
 omit [Fintype V] in
 /-- Exact local restrictions rule out every possible overlap of completed
@@ -143,84 +139,7 @@ structure BoundaryCompletion (G : SimpleGraph V) (U : I → Finset V)
     (k : ℝ)-s-a ≤ (remainingCore (U i) (H i) (core i) (range s)).degree v ∧
       ((remainingCore (U i) (H i) (core i) (range s)).degree v : ℝ) ≤ k-s
 
-/-- The certified local matchings, before their ambient assembly. This
-interface hides the recursive rule execution from the later graph proof. -/
-structure CoreBoundaryCompletion (G : SimpleGraph V) (U : I → Finset V)
-    (H : ∀ i, SimpleGraph (U i)) (F : ℕ → G.Subgraph)
-    (q : ℕ) (θ σ : ℝ) where
-  core : ∀ i, ℕ → (H i).Subgraph
-  matching : ∀ i j, j < q → (core i j).IsMatching
-  vertices : ∀ i j, j < q →
-    (core i j).verts = (coveredCore (U i) G (F j) : Set (U i))ᶜ
-  disjoint : ∀ i j, j < q → ∀ l, l < q → j ≠ l →
-    Disjoint (core i j).spanningCoe (core i l).spanningCoe
-  robust : ∀ s, s ≤ q → ∀ i,
-    IsRobustExpander (remainingCore (U i) (H i) (core i) (range s)) θ σ
-
-set_option maxHeartbeats 200000 in
-/-- Run one fixed certified rule for each core on the actual boundary
-footprints. All admissibility and input incidence bounds are proved. -/
-theorem exists_core_boundary_completion (G : SimpleGraph V)
-    (U : I → Finset V) (H : ∀ i, SimpleGraph (U i))
-    (hH : ∀ i, H i ≤ G.induce (U i : Set V))
-    (F : ℕ → G.Subgraph) (q k : ℕ) (a ε θ σ : ℝ)
-    (rule : ∀ i, (s : ℕ) → (Fin s → Finset (U i) × (H i).Subgraph) →
-      Finset (U i) → (H i).Subgraph)
-    (limit : I → ℕ)
-    (hcertificate : ∀ i, RuleCertificate (H i) (limit i) ε θ σ (rule i))
-    (hlimit : ∀ i, q ≤ limit i)
-    (hF : ∀ j < q, (F j).IsMatching)
-    (hFdisj : ∀ j < q, ∀ l < q, j ≠ l → Disjoint (F j).spanningCoe (F l).spanningCoe)
-    (hno : ∀ j < q, ∀ i u v, u ∈ U i → v ∈ U i → ¬ (F j).Adj u v)
-    (hregular : ∀ v, G.degree v = k)
-    (hdegree : ∀ i v, (k : ℝ)-a ≤ (H i).degree v)
-    (ha : ∀ i, a ≤ ε*(U i).card)
-    (heven : ∀ j < q, ∀ i, Even (((U i : Set V) \ (F j).verts).ncard))
-    (hsize : ∀ j < q, ∀ i, ((coveredCore (U i) G (F j)).card : ℝ) ≤ ε*(U i).card) :
-    Nonempty (CoreBoundaryCompletion G U H F q θ σ) := by
-  let S : ∀ i, ℕ → Finset (U i) := fun i j => coveredCore (U i) G (F j)
-  let T : ∀ i, ℕ → Finset (U i) × (H i).Subgraph :=
-    fun i => fixedTranscript (rule i) (S i)
-  have hinputs (i : I) (j : ℕ) : (T i j).1 = coveredCore (U i) G (F j) := rfl
-  have hconsistent (i : I) (j : ℕ) :
-      (T i j).2 = rule i j (transcriptPrefix (T i) j) (T i j).1 :=
-    fixedTranscript_consistent (rule i) (S i) j
-  have hallowed (i : I) (j : ℕ) (hj : j < q) :
-      OrdinaryPackingStrategy.Allowed (H i) (Fintype.card (U i)) ε j
-        (transcriptPrefix (T i) j) (T i j).1 :=
-    fixed_boundary_allowed G (U i) (H i) (hH i) F q k a ε (T i)
-      (fun j _ => hinputs i j) hF hFdisj (fun j hj => hno j hj i)
-      hregular (hdegree i) (ha i) (fun j hj => heven j hj i) (fun j hj => hsize j hj i) j hj
-  have hcert (i : I) (s : ℕ) (hs : s ≤ q) :
-      IsPackingHistory (H i) s (transcriptPrefix (T i) s) ∧
-      IsRobustExpander (unusedGraph (H i) (T i) s) θ σ := by
-    obtain ⟨hp, hr⟩ := hcertificate i (T i) s (hs.trans (hlimit i))
-      (fun j _ => hconsistent i j) (fun j hj => hallowed i j (hj.trans_le hs))
-    exact ⟨hp, by convert hr using 1⟩
-  let C : ∀ i, ℕ → (H i).Subgraph := fun i j => (T i j).2
-  have hC (i : I) (j : ℕ) (hj : j < q) : (C i j).IsMatching :=
-    (hcert i q le_rfl).1.1 ⟨j,hj⟩
-  have hCverts (i : I) (j : ℕ) (hj : j < q) :
-      (C i j).verts = (coveredCore (U i) G (F j) : Set (U i))ᶜ := by
-    have hc := (hcert i q le_rfl).1.2.1 ⟨j,hj⟩
-    change (C i j).verts = ((T i j).1 : Set (U i))ᶜ at hc
-    rw [hinputs i j] at hc
-    exact hc
-  have hCdisj (i : I) (j : ℕ) (hj : j < q) (l : ℕ) (hl : l < q) (hjl : j ≠ l) :
-      Disjoint (C i j).spanningCoe (C i l).spanningCoe := by
-    have hd : Pairwise (fun x y : Fin q =>
-        Disjoint ((transcriptPrefix (T i) q x).2).spanningCoe
-          ((transcriptPrefix (T i) q y).2).spanningCoe) := (hcert i q le_rfl).1.2.2
-    exact hd (i := (⟨j,hj⟩ : Fin q)) (j := ⟨l,hl⟩)
-      (show (⟨j,hj⟩ : Fin q) ≠ ⟨l,hl⟩ from fun he => hjl (congrArg Fin.val he))
-  refine ⟨⟨C, hC, hCverts, hCdisj, ?_⟩⟩
-  intro s hs i
-  have hr := (hcert i s hs).2
-  unfold unusedGraph at hr
-  rw [ForeignEpoch.prefix_edgeUnion_eq_range] at hr
-  exact hr
-
-set_option maxHeartbeats 200000 in
+set_option maxHeartbeats 300000 in
 /-- Certified core rules complete any fixed admissible boundary family.
 The input hypotheses are actual matchings, edge disjointness, core error,
 footprints and parity; all intermediate admissibility is proved here. -/
@@ -245,12 +164,33 @@ theorem exists_boundary_completion (G : SimpleGraph V)
     (heven : ∀ j < q, ∀ i, Even (((U i : Set V) \ (F j).verts).ncard))
     (hsize : ∀ j < q, ∀ i, ((coveredCore (U i) G (F j)).card : ℝ) ≤ ε*(U i).card) :
     Nonempty (BoundaryCompletion G U H F q k a θ σ) := by
-  obtain ⟨K⟩ := exists_core_boundary_completion G U H hH F q k a ε θ σ
-    rule limit hcertificate hlimit hF hFdisj hno hregular hdegree ha heven hsize
-  let C := K.core
-  have hC := K.matching
-  have hCverts := K.vertices
-  have hCdisj := K.disjoint
+  let S : ∀ i, ℕ → Finset (U i) := fun i j => coveredCore (U i) G (F j)
+  let T : ∀ i, ℕ → Finset (U i) × (H i).Subgraph :=
+    fun i => fixedTranscript (rule i) (S i)
+  have hinputs (i : I) (j : ℕ) : (T i j).1 = coveredCore (U i) G (F j) := rfl
+  have hconsistent (i : I) (j : ℕ) :
+      (T i j).2 = rule i j (transcriptPrefix (T i) j) (T i j).1 :=
+    fixedTranscript_consistent (rule i) (S i) j
+  have hallowed (i : I) (j : ℕ) (hj : j < q) :
+      OrdinaryPackingStrategy.Allowed (H i) (Fintype.card (U i)) ε j
+        (transcriptPrefix (T i) j) (T i j).1 :=
+    fixed_boundary_allowed G (U i) (H i) (hH i) F q k a ε (T i)
+      (fun j _ => hinputs i j) hF hFdisj (fun j hj => hno j hj i)
+      hregular (hdegree i) (ha i) (fun j hj => heven j hj i) (fun j hj => hsize j hj i) j hj
+  have hcert (i : I) (s : ℕ) (hs : s ≤ q) :=
+    hcertificate i (T i) s (hs.trans (hlimit i))
+      (fun j _ => hconsistent i j) (fun j hj => hallowed i j (hj.trans_le hs))
+  let C : ∀ i, ℕ → (H i).Subgraph := fun i j => (T i j).2
+  have hC (i : I) (j : ℕ) (hj : j < q) : (C i j).IsMatching :=
+    (hcert i q le_rfl).1.1 ⟨j,hj⟩
+  have hCverts (i : I) (j : ℕ) (hj : j < q) :
+      (C i j).verts = (coveredCore (U i) G (F j) : Set (U i))ᶜ :=
+    (hcert i q le_rfl).1.2.1 ⟨j,hj⟩
+  have hCdisj (i : I) (j : ℕ) (hj : j < q) (l : ℕ) (hl : l < q) (hjl : j ≠ l) :
+      Disjoint (C i j).spanningCoe (C i l).spanningCoe := by
+    have hp := (hcert i q le_rfl).1.2.2
+    have hh := @hp (⟨j,hj⟩ : Fin q) ⟨l,hl⟩ (fun he => hjl (congrArg Fin.val he))
+    exact hh
   let N : ℕ → G.Subgraph := fun j => assembledMatching G (F j)
     (fun i => embedCoreMatching G (U i) (H i) (hH i) (C i j))
   have hN (j : ℕ) (hj : j < q) : (N j).IsPerfectMatching :=
@@ -278,9 +218,13 @@ theorem exists_boundary_completion (G : SimpleGraph V)
   · intro s hs v
     have hh := (perfect_deletion_regular G N s k hregular
       (fun j hj => hN j (hj.trans_le hs)) (fun j hj => hpresent j (hj.trans_le hs)) v).2
-    simpa only [afterDeletions,← SimpleGraph.card_neighborSet_eq_degree,
+    simpa only [afterDeletions, ← SimpleGraph.card_neighborSet_eq_degree,
       ← Nat.card_eq_fintype_card] using hh
-  · exact K.robust
+  · intro s hs i
+    have hr := (hcert i s hs).2
+    unfold unusedGraph at hr
+    rw [ForeignEpoch.prefix_edgeUnion_eq_range] at hr
+    convert hr using 1
   · intro s hs i
     exact remainingCore_le_residual (U i) G (H i) (hH i) (C i) N (range s)
       (fun j hj => hlocal j ((mem_range.mp hj).trans_le hs) i)

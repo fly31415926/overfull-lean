@@ -1,10 +1,13 @@
 # Frequent boundary patterns and complete absorption
 
-The public declaration is `Overfull.frequent_boundary_pattern` in
-[`Overfull/Patterns/Frequent.lean`](../Overfull/Patterns/Frequent.lean).
+Recovered from published main commit `54db7b826be05fbba9845f4140aaba0a7db5ba04`. The current combined inventory remains **44 of 69**: the recovered circuit results are supporting components, and the alternate frequent-pattern proof establishes the already-counted Lemma 4.13. Recovered pattern declarations use `Overfull.CircuitPatterns` and `Overfull.CircuitPatternRealization`; `Overfull/Patterns/Compression.lean` is shared with the continuation. Current verification evidence is generated from the combined source tree; no old verification hashes or success reports are reused.
+
+
+The public declaration is `Overfull.circuit_frequent_boundary_pattern` in
+[`Overfull/CircuitPatterns/Frequent.lean`](../Overfull/CircuitPatterns/Frequent.lean).
 Its output is the actual graph-level record
-`Overfull.Patterns.FrequentPatternResult` in
-[`Overfull/Patterns/Result.lean`](../Overfull/Patterns/Result.lean).
+`Overfull.CircuitPatterns.FrequentPatternResult` in
+[`Overfull/CircuitPatterns/Result.lean`](../Overfull/CircuitPatterns/Result.lean).
 This document describes that declaration and its construction. The strict
 build, transitive axiom audit, exact source hashes, and counted manuscript
 coverage are recorded by `scripts/verify.py` in `verification/results.json`;
@@ -93,7 +96,8 @@ degree bound. No exceptional vertex remains outside the enlarged parts.
 | Retained edges and absorption | `ReservedEdges`, `AbsorptionParity`, `Forest` | Prove exact surviving pool counts, actual assigned neighbors, parity of enlarged parts, forest classification and actual pair/cut supply |
 | Uniform assembly | `Parameters`, `Result`, `Frequent` | Choose all scalar bounds before the graph, enlarge every assigned core, and produce the complete public result |
 
-All module names in this table are relative to `Overfull/Patterns/`.
+All module names in this table are relative to `Overfull/CircuitPatterns/`, except
+`Compression`, which is shared at `Overfull/Patterns/Compression.lean`.
 Core enlargement reuses the proved actual graph constructions and
 robustness lemmas from `Overfull/Absorption/`.
 

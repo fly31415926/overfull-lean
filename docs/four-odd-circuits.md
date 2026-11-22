@@ -1,5 +1,8 @@
 # Checked components of the four-odd-parts argument
 
+Recovered from published main commit `54db7b826be05fbba9845f4140aaba0a7db5ba04`. The current combined inventory remains **44 of 69**: the recovered circuit results are supporting components, and the alternate frequent-pattern proof establishes the already-counted Lemma 4.13. Recovered pattern declarations use `Overfull.CircuitPatterns` and `Overfull.CircuitPatternRealization`; `Overfull/Patterns/Compression.lean` is shared with the continuation. Current verification evidence is generated from the combined source tree; no old verification hashes or success reports are reused.
+
+
 This checkpoint proves the matching-pairing, parity-forest, and actual
 surplus-circuit construction used at the end of Lemma 4.15. It also
 constructs the virtual-edge multigraph and proves the local classification
@@ -10,7 +13,7 @@ so parallel copies and original endpoints retain their identities.
 compatible-circuit existence step, its application to the reserved
 augmented quotient, and the final assembly from the manuscript's original
 hypotheses remain unfinished. The manuscript coverage therefore remains
-**42 of 69**, and the main theorem remains unverified.
+**44 of 69**, and the main theorem remains unverified.
 
 The strict build and full transitive axiom audit are recorded in
 `verification/results.json`. A component is not counted as a complete
@@ -84,7 +87,7 @@ meets at most `b * a` members of a family in which each vertex occurs at
 most `a` times. For two equally large indexed families, Hall's condition
 follows when their common order exceeds `2 * b * a`.
 
-`Patterns.exists_six_endpoint_pairing` specializes this to the two path
+`CircuitPatterns.exists_six_endpoint_pairing` specializes this to the two path
 families in the manuscript. Under support size at most six, vertex load
 at most `a`, and `12 * a < u`, it constructs a permutation pairing
 disjoint supports. Each paired union is proved to be an actual matching.
@@ -93,26 +96,26 @@ disjoint supports. Each paired union is proved to be an actual matching.
 membership load from the degree in an actual edge pool containing
 pairwise edge-disjoint family members. Together with
 `edgeSupport_card_le`, this proves
-`Patterns.exists_three_edge_pairing_of_degree_bound`: the support and
+`CircuitPatterns.exists_three_edge_pairing_of_degree_bound`: the support and
 load conditions follow from at most three copies per member, edge
 disjointness within each family, and degree at most `a` in their common
 original edge pool. Global edge disjointness between the two input
 families is needed separately when asserting a partition of their union.
 
-`Patterns.exists_odd_matching_forest` takes an actual matching whose four
+`CircuitPatterns.exists_odd_matching_forest` takes an actual matching whose four
 projected degrees are odd and constructs a subset with injective pair
 projection and at most three edges. Its projection is one of the three
 perfect matchings or one of the four three-edge stars. Every projected
 degree of the actual set-difference remainder is even.
 
-`Patterns.exists_odd_matching_forest_circuit_split` completes that local
+`CircuitPatterns.exists_odd_matching_forest_circuit_split` completes that local
 construction: its `ForestCircuitSplit` output contains the retained
 forest and an actual compatible circuit partition of exactly the
 discarded copies. Every circuit lifts to an original matching with at
 most four copies. The retained forest and circuits are disjoint and
 cover the original matching exactly.
 
-`Patterns.exists_paired_forest_circuit_splits` assembles Hall pairing
+`CircuitPatterns.exists_paired_forest_circuit_splits` assembles Hall pairing
 with this construction. Its explicit parity hypothesis requires the
 projected degrees of every potential pair to sum to odd numbers. The
 two virtual-edge path families are intended to supply this property.

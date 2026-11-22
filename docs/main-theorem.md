@@ -329,37 +329,50 @@ error evaluated at the actual remaining exceptional cardinality. No
 monotonicity of that function and no per-round completion oracle are
 assumed. See [`exceptional-absorption.md`](exceptional-absorption.md).
 
-Lemma 4.13 is complete. `Overfull.frequent_boundary_pattern` fixes positive
-output robustness before every requested relative error, and then chooses
-the original tolerance and order threshold before the graph. It constructs
-the actual selected boundary matchings and their perfect completions,
-proves no overfull set after every deletion prefix, and retains degree at
-least `k/(3B)`. Exact surviving edge counts absorb every remaining
-exceptional vertex into the enlarged robust partition and supply every
-retained forest pair and whole cut. When the four enlarged parts are all
-odd, the forest is a perfect matching or a three-edge star. The proof uses
-original distribution weights and actual cut subtraction; it does not
-assume a fractional matching decomposition of the realized residual.
-See [`frequent-pattern.md`](frequent-pattern.md).
+Lemma 4.13 is complete. `Overfull.frequent_boundary_patterns` constructs
+the actual pattern reduction and absorbs every remaining exceptional
+vertex. One fixed encoding of the core labels is shared by the fractional
+matching distribution. A common proposal and simultaneous discard plan
+produce actual boundary matchings, completed using fixed certified core
+rules. Exact actual cut accounting proves safety at every prefix. The
+residual and integer reserve are at least `k/(3*b4(t))`; the final robust
+cores cover all vertices and have arbitrary requested relative error.
+For four odd enlarged parts the fixed joining forest is a perfect matching
+or three-edge star, with actual pair and cut supply. Positive output
+robustness precedes the requested error, while the explicit input range
+depends on `t`. See [`frequent-patterns.md`](frequent-patterns.md).
 
 There are complete proofs of 42 of the 69 numbered assertions. The remaining
 27 include the main theorem and the structural exclusion on which its
 checked reduction depends.
 
+### Boundary extension reduction
+
+`Overfull.boundary_extension_reduction` proves the full constructive reduction underlying Lemma 4.14. It starts with the actual prescribed one-or-three boundary coloring, completes all triple classes through the robust core, and deletes their exact original edge copies. The residual core, degree, and singleton boundary are constructed and counted. Its exterior contraction is proved even, regular, and free of overfull sets. The result reconstructs the exact prescribed extension from an actual coloring of that returned contraction, preserving properness at original exterior endpoints.
+
+No such contracted coloring is assumed in the reduction theorem's hypotheses or asserted to exist in its conclusion. The missing one-apex factorization can be reduced to ordinary-core Lemma 4.2 with two exterior vertices using the proved `Overfull.OneCore.even_core_complement`. This bypasses the general fixed-pattern and compatible-circuit steps for this specialization. The new `Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction` constructs the ordinary-core preprocessing and its exact residual with an actual colored complement. Its specialized forbidden-label step is proved by permutation counting, greedy repair, and Vizing, without assuming the general Kahn theorem. Theorem 6.1's factorization of the whole residual remains unformalized, so the full Lemmas 4.2 and 4.14 remain incomplete. The current full assertion count is 44 of 69. See [`ordinary-factorization.md`](ordinary-factorization.md), [`boundary-extension.md`](boundary-extension.md), and [`next-verification-target.md`](next-verification-target.md).
+
 ## What remains
 
-The structural argument still requires the robust partition for large
-critical graphs and the coloring theorems for its five possible configurations.
+Theorem 2.23 now supplies the [complete robust partition](robust-partition.md)
+for almost-regular finite simple graphs. The structural argument still needs
+the critical-graph degree estimate and its application in Proposition 2.24,
+and the coloring theorems for the five possible configurations.
 These include the ordinary-core coloring argument, the dense bipartite
 extension, and the robust bipartite extension. The checked local absorbers,
 matching results, and deletion lemmas do not supply these full theorems.
 
 Substantial published inputs also remain to be connected to complete checked
-proofs. They include the robust partition theorem of Kühn–Lo–Osthus–Staden,
-the critical-graph degree estimate of Cao–Chen, Kahn's list-edge-coloring
-theorem, Fan–Zhang's compatible circuit theorem, the weighted matching theorem
-of Ehard–Glock–Joos, the matching-packing lemma of Barber–Kühn–Lo–Osthus–Taylor,
-and the robust decomposition theorem used from Granet.
+proofs. They include the critical-graph degree estimate of Cao–Chen,
+Kahn's list-edge-coloring theorem, Fan–Zhang's compatible circuit theorem,
+the weighted matching theorem of Ehard–Glock–Joos, and the robust
+decomposition theorem used from Granet. The robust-partition conclusion
+stated in Theorem 2.23 and the tripartite link-packing instance in Lemma 5.12
+are now proved locally; the broader KLOS and BKLOT theorems are not
+separately claimed.
+The specialized bounded-forbidden-label consequence of Kahn needed in
+the ordinary-core preprocessing is now proved independently; this does
+not claim a formal proof of Kahn's general theorem.
 
 [`coverage.json`](coverage.json) gives the assertion-by-assertion inventory.
 The build and axiom audit certify the included declarations. They do not

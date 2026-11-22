@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "Successful fresh GitHub Actions verification of the recovered exact proof sources",
+  "repository": "fly31415926/overfull-lean",
+  "run": {
+    "id": 45047705487,
+    "run_number": 20,
+    "run_attempt": 1,
+    "name": "Lean proofs and axiom audit",
+    "event": "push",
+    "head_branch": "recovery/verified-75759f81b198",
+    "head_sha": "b26c6b4bc5bd2f71500c11496d4b73f5c18316d4",
+    "path": ".github/workflows/lean.yml",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-22T17:08:03Z",
+    "run_started_at": "2026-11-22T17:08:03Z",
+    "updated_at": "2026-11-22T17:41:38Z",
+    "html_url": "https://github.com/fly31415926/overfull-lean/actions/runs/45047705487",
+    "url": "https://api.github.com/repos/fly31415926/overfull-lean/actions/runs/45047705487"
+  },
+  "job": {
+    "id": 137285817164,
+    "run_id": 45047705487,
+    "name": "verify",
+    "head_sha": "b26c6b4bc5bd2f71500c11496d4b73f5c18316d4",
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-11-22T17:08:05Z",
+    "completed_at": "2026-11-22T17:41:37Z",
+    "html_url": "https://github.com/fly31415926/overfull-lean/actions/runs/45047705487/job/137285817164",
+    "labels": [
+      "ubuntu-latest"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-22T17:08:06Z",
+        "completed_at": "2026-11-22T17:08:07Z"
+      },
+      {
+        "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-22T17:08:07Z",
+        "completed_at": "2026-11-22T17:08:08Z"
+      },
+      {
+        "name": "Run leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-22T17:08:08Z",
+        "completed_at": "2026-11-22T17:08:21Z"
+      },
+      {
+        "name": "Prepare the pinned Vizing proof",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-22T17:08:21Z",
+        "completed_at": "2026-11-22T17:08:21Z"
+      },
+      {
+        "name": "Fetch the pinned mathlib dependencies",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-22T17:08:21Z",
+        "completed_at": "2026-11-22T17:09:25Z"
+      },
+      {
+        "name": "Build the formalized results and audit their axioms",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-22T17:09:25Z",
+        "completed_at": "2026-11-22T17:41:35Z"
+      },
+      {
+        "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 12,
+        "started_at": "2026-11-22T17:41:35Z",
+        "completed_at": "2026-11-22T17:41:35Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 13,
+        "started_at": "2026-11-22T17:41:35Z",
+        "completed_at": "2026-11-22T17:41:35Z"
+      }
+    ]
+  },
+  "sources": {
+    "commit_sha": "b26c6b4bc5bd2f71500c11496d4b73f5c18316d4",
+    "tree_sha": "b27bd30f5a4236f95ea5a82a3a47d8b0e8e0ef01",
+    "parent_commits": [
+      "54db7b826be05fbba9845f4140aaba0a7db5ba04",
+      "2eb61f588a26b3fe41edcf0bcec8610c9c343dd8"
+    ],
+    "verifier": {
+      "path": "scripts/verify.py",
+      "git_blob_sha": "f2a7ac942cb4c5225c12dd96ee25eb1720837559"
+    },
+    "workflow": {
+      "path": ".github/workflows/lean.yml",
+      "git_blob_sha": "c0e60bb58ce8acc00e06ebf2b8bf9a76128b287e"
+    },
+    "audit_program": {
+      "path": "Audit.lean",
+      "git_blob_sha": "972ede079900b7a8045a0ad4e788480f60a100c0"
+    }
+  },
+  "checks": {
+    "run_completed_successfully": true,
+    "job_completed_successfully": true,
+    "verification_step_completed_successfully": true,
+    "strict_build_command": "lake build --wfail",
+    "strict_build_passed": true,
+    "build_jobs": 3593,
+    "axiom_audit_command": "lake env lean Audit.lean",
+    "axiom_audit_passed": true,
+    "complete_unique_declaration_records": true,
+    "verified_declaration_count": 10219,
+    "imported_project_module_count": 422,
+    "audited_external_module_count": 25,
+    "allowed_logical_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "final_verifier_metadata_and_coverage_checks_passed": true,
+    "final_verifier_summary": "Checked 10219 project declarations; full manuscript status: unverified.",
+    "fully_verified_numbered_assertion_count": 44,
+    "numbered_assertion_count": 69,
+    "main_theorem_verified": false
+  },
+  "artifacts": {
+    "raw_job_log": {
+      "path": "verification/github-actions.log",
+      "origin": "Complete decoded GitHub job-log download, preserved without modification, including timestamp prefixes and observed BOMs.",
+      "bytes": 2242783,
+      "characters": 2241811,
+      "git_blob_sha": "b1f179ff9fe3d74a76a20b1ce3ba510b83547ca4",
+      "sha256": "074dc63050b7ae49eb9a66b6fa4cd5a005a0a86917739223ee184d775fc3e85a"
+    },
+    "build_log": {
+      "path": "verification/build.log",
+      "origin": "Fresh regenerated strict-build output from this successful CI run, extracted by removing only the documented GitHub log prefixes.",
+      "regenerated": true,
+      "is_the_lost_original": false,
+      "original_unrecovered_git_blob_sha": "3a84f9d9b83715be66cbd59d79d8dfcb5f947edc",
+      "bytes": 29717,
+      "characters": 28777,
+      "git_blob_sha": "840ff16877cea753b0ddfc8533a17d26ba7bc09f",
+      "sha256": "445470bca17dfa9bd603a13fcb6c756273212a5a63533f71affbeae32a7ab705"
+    },
+    "original_axiom_log": {
+      "path": "verification/axioms.log",
+      "origin": "The historical original is retained; the fresh CI audit segment was compared with it byte-for-byte.",
+      "fresh_audit_byte_identical": true,
+      "bytes": 1860512,
+      "characters": 1860512,
+      "git_blob_sha": "7a211698812eaac1392c380869202f905087196e",
+      "sha256": "15161242e9cb726a53fcc8c8cecb67afb8ef4357c0f625c0f97c01ceac4eafcb"
+    },
+    "verifier_stdout": {
+      "published_separately": false,
+      "origin": "Complete verifier stdout is reproducible from the raw job-log line range; an extracted copy was retained during recovery.",
+      "bytes": 1890472,
+      "characters": 1889532,
+      "git_blob_sha": "507088286cbcb766025822a9f4b48a7ec274043b",
+      "sha256": "3380ea3e1a2c92fbf617842bac10dae2148be7dcbb441e717b9a8e3ee3444889"
+    }
+  },
+  "original_results_report": {
+    "path": "verification/results.json",
+    "git_blob_sha": "e640d9f3713c98e3b9a3a01729dde8cd91aa0772",
+    "sha256": "645d2b3e3b16aa7095994500958d1fce9b9e25eef4ab689dd56a31e75c85b5b3",
+    "bytes": 2490040,
+    "origin": "Restored original hash-verified report. The workflow writes its fresh report but does not upload report artifacts.",
+    "fresh_ci_report_bytes_compared": false
+  },
+  "extraction": {
+    "raw_log_lines": 11484,
+    "verifier_command_group_line": 321,
+    "verifier_stdout_lines": {
+      "first": 328,
+      "last": 11468
+    },
+    "build_output_lines": {
+      "first": 330,
+      "last": 800
+    },
+    "audit_output_lines": {
+      "first": 801,
+      "last": 11467
+    },
+    "timestamp_prefix_removed": "^\\uFEFF?\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z ",
+    "other_content_transformations": [],
+    "lean_version": "Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+    "build_jobs": 3593,
+    "verified_declaration_count": 10219,
+    "imported_project_module_count": 422,
+    "audited_external_module_count": 25,
+    "allowed_logical_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "original_audit_byte_identical": true,
+    "transport_bom_prefix_lines": [
+      1,
+      10833
+    ],
+    "transport_bom_explanation": "The downloaded GitHub job log contains U+FEFF immediately before the timestamp at raw lines 1 and 10833. Each is removed only as part of the anchored logging prefix. No payload text, blank line, ANSI sequence, or other whitespace is normalized."
+  },
+  "observations": [
+    "The complete raw log also contains a GitHub runner notice about an action's Node.js version after the verification step. The job, strict build, axiom audit, and verifier all completed successfully."
+  ],
+  "scope": "These records document successful verification of the recovered sources and explicitly regenerated build evidence. They do not claim recovery of the lost original build-log bytes or completion of the full manuscript."
+}

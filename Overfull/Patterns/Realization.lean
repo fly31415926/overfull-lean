@@ -35,7 +35,7 @@ theorem selectedMatching_isMatching_of_endpoints (G : SimpleGraph V)
 
 section Pools
 
-variable {S P R E W : Type*} [Fintype S]
+variable {S P R E W : Type*} [Fintype S] [DecidableEq P] [DecidableEq E] [DecidableEq W]
 
 /-- Number of slots demanding one edge from a specified pool. -/
 noncomputable def demandCount (kind : S → P) (p : P) : ℕ :=
@@ -77,7 +77,7 @@ theorem exists_pool_selection_of_nonempty [Nonempty E]
     (support : E → Finset W) (arity : P → ℕ) (a D : ℕ)
     (hpools : ∀ p q, p ≠ q → Disjoint (pool p) (pool q))
     (harity : ∀ p, ∀ e ∈ pool p, (support e).card ≤ arity p)
-    (hinc : ∀ p v, ((pool p).filter (fun e => v ∈ support e)).card ≤ a)
+    (hinc : ∀ s v, ((pool (kind s)).filter (fun e => v ∈ support e)).card ≤ a)
     (hround : ∀ r, ∑ s ∈ univ.filter (fun s => round s = r), arity (kind s) ≤ D)
     (hcap : ∀ s, demandCount kind (kind s) + D * a < (pool (kind s)).card) :
     ∃ pick : S → E,
@@ -129,7 +129,7 @@ theorem exists_pool_selection_of_nonempty [Nonempty E]
               exact Finset.mem_filter.mpr ⟨Finset.mem_univ j,(Finset.mem_filter.mp hj).2⟩
         obtain ⟨e,he,hfresh,havoid⟩ := exists_fresh_avoiding
           (pool (kind s)) (T.image pick) support B (demandCount kind (kind s)) a hused
-          (fun v _ => hinc (kind s) v)
+          (fun v _ => hinc s v)
           ((Nat.add_le_add_left (Nat.mul_le_mul_right a hB) _).trans_lt (hcap s))
         have hne (j : S) (hj : j ∈ T) : e ≠ pick j := by
           intro hh
@@ -183,7 +183,7 @@ theorem exists_pool_selection
     (support : E → Finset W) (arity : P → ℕ) (a D : ℕ)
     (hpools : ∀ p q, p ≠ q → Disjoint (pool p) (pool q))
     (harity : ∀ p, ∀ e ∈ pool p, (support e).card ≤ arity p)
-    (hinc : ∀ p v, ((pool p).filter (fun e => v ∈ support e)).card ≤ a)
+    (hinc : ∀ s v, ((pool (kind s)).filter (fun e => v ∈ support e)).card ≤ a)
     (hround : ∀ r, ∑ s ∈ univ.filter (fun s => round s = r), arity (kind s) ≤ D)
     (hcap : ∀ s, demandCount kind (kind s) + D * a < (pool (kind s)).card) :
     ∃ pick : S → E,
@@ -206,7 +206,7 @@ theorem exists_pool_selection
 
 omit [Fintype S] in
 /-- Exact pool use, for every subset of the demand slots. -/
-theorem chosen_pool_card [DecidableEq E] (pool : P → Finset E) (kind : S → P)
+theorem chosen_pool_card (pool : P → Finset E) (kind : S → P)
     (pick : S → E) (hpick : ∀ s, pick s ∈ pool (kind s))
     (hinj : Function.Injective pick)
     (hpools : ∀ p q, p ≠ q → Disjoint (pool p) (pool q))
@@ -228,7 +228,7 @@ theorem chosen_pool_card [DecidableEq E] (pool : P → Finset E) (kind : S → P
       exact ⟨⟨s,hs,rfl⟩,hk ▸ hpick s⟩
   rw [heq,Finset.card_image_of_injective _ hinj]
 
-omit [Fintype S] in
+omit [Fintype S] [DecidableEq E] [DecidableEq P] in
 /-- Endpoint support of any chosen subset is bounded by its arity sum. -/
 theorem chosen_support_card_le (pool : P → Finset E) (kind : S → P)
     (support : E → Finset W) (arity : P → ℕ)
@@ -254,7 +254,7 @@ end Pools
 
 section Graph
 
-variable {S P R V : Type*} [Fintype S] (G : SimpleGraph V)
+variable {S P R V : Type*} [Fintype S] [DecidableEq V] (G : SimpleGraph V)
 
 /-- The unordered endpoint set of an actual host edge. -/
 noncomputable def edgeEnds (e : G.edgeSet) : Finset V :=
@@ -369,12 +369,12 @@ theorem roundMatching_no_internal {I : Type*} (U : I → Finset V)
 /-- Construct actual pairwise edge-disjoint round matchings from the
 numerical pool inequalities.  The support of exceptional vertices is
 prescribed by each pool and occurs at most once within any round. -/
-theorem exists_boundary_matchings (Z : Finset V)
+theorem exists_boundary_matchings [DecidableEq P] (Z : Finset V)
     (pool : P → Finset G.edgeSet) (special : P → Finset V)
     (kind : S → P) (round : S → R) (arity : P → ℕ) (a D : ℕ)
     (hpools : ∀ p q, p ≠ q → Disjoint (pool p) (pool q))
     (harity : ∀ p, ∀ e ∈ pool p, (coreEnds G Z e).card ≤ arity p)
-    (hinc : ∀ p v, ((pool p).filter (fun e => v ∈ coreEnds G Z e)).card ≤ a)
+    (hinc : ∀ s v, ((pool (kind s)).filter (fun e => v ∈ coreEnds G Z e)).card ≤ a)
     (hround : ∀ r, ∑ s ∈ univ.filter (fun s => round s = r), arity (kind s) ≤ D)
     (hcap : ∀ s, demandCount kind (kind s) + D*a < (pool (kind s)).card)
     (hspecial : ∀ p, ∀ e ∈ pool p, edgeEnds G e ∩ Z = special p)

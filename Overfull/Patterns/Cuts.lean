@@ -186,6 +186,57 @@ theorem toggle_safe_of_preserved_cut (G R : SimpleGraph V) (k h : ℕ)
 
 variable {I : Type*} [Fintype I]
 
+omit [Fintype V] in
+/-- Changing one exceptional singleton preserves the family of whole
+core unions. -/
+theorem wholeUnions_toggle_exceptional (U : I → Finset V) (Z X : Finset V)
+    (hZ : ∀ i, Disjoint (U i) Z) (hX : X ∈ wholeUnions U Z)
+    (v : V) (hvZ : v ∈ Z) : toggle X v ∈ wholeUnions U Z := by
+  classical
+  obtain ⟨A, B, hBZ, rfl⟩ := (mem_wholeUnions U Z X).mp hX
+  have hvA : v ∉ A.biUnion U := by
+    intro h
+    obtain ⟨i, _, hi⟩ := mem_biUnion.mp h
+    exact disjoint_left.mp (hZ i) hi hvZ
+  have htB : toggle B v ⊆ Z := by
+    intro w hw
+    by_cases hvB : v ∈ B
+    · simp only [toggle, if_pos hvB] at hw
+      exact hBZ (mem_erase.mp hw).2
+    · simp only [toggle, if_neg hvB, mem_insert] at hw
+      exact hw.elim (fun h => h ▸ hvZ) (fun h => hBZ h)
+  apply (mem_wholeUnions U Z (toggle (A.biUnion U ∪ B) v)).mpr
+  refine ⟨A, toggle B v, htB, ?_⟩
+  ext w
+  by_cases hw : w = v
+  · subst w
+    by_cases hvB : v ∈ B <;> simp [toggle, hvA, hvB]
+  · by_cases hvB : v ∈ B <;> simp [toggle, hvA, hvB, hw]
+
+omit [Fintype I] in
+/-- At a core vertex, every edge crossing a whole-core union leaves
+that vertex's core. -/
+theorem graphCutIncidence_le_exterior (G : SimpleGraph V) [DecidableRel G.Adj]
+    (U : I → Finset V) (X : Finset V)
+    (hwhole : ∀ i, U i ⊆ X ∨ Disjoint (U i) X)
+    (i : I) (v : V) (hv : v ∈ U i) :
+    graphCutIncidence G X v ≤ (G.neighborFinset v \ U i).card := by
+  classical
+  have hsub : (graphCutEdges G X).filter (fun e => v ∈ e) ⊆
+      (G.neighborFinset v \ U i).image (fun w => s(v,w)) := by
+    intro e he
+    obtain ⟨hc, hve⟩ := mem_filter.mp he
+    obtain ⟨hg, hx⟩ := mem_filter.mp hc
+    obtain ⟨w, rfl⟩ := Sym2.mem_iff_exists.mp hve
+    have hadj : G.Adj v w := by simpa only [mem_edgeFinset, mem_edgeSet] using hg
+    have hwU : w ∉ U i := by
+      intro hw
+      have hsame := same_core_membership U X hwhole hv hw
+      rw [crosses_pair] at hx
+      tauto
+    exact mem_image.mpr ⟨w, mem_sdiff.mpr ⟨(G.mem_neighborFinset v w).mpr hadj, hwU⟩, rfl⟩
+  exact (card_le_card hsub).trans card_image_le
+
 /-- The proved small-cut classification closes the no-overfull conclusion
 from actual cut inequalities for the finite whole-union family. -/
 theorem no_overfull_of_whole_cut_bounds (G : SimpleGraph V)
