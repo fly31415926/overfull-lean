@@ -278,28 +278,79 @@ prescribed edges, where `c₀ = 135720`. Completion inside the actual cores
 retains that partial matching and satisfies the manuscript allowance
 `c₁ = 2q₀+4c₀`. The small-cut classification is proved from the group
 condition and actual robust cores; it rules out every overfull set in the
-residual. The iterative refinement of Proposition 4.10 remains unverified.
+residual. Proposition 4.10 now constructs the corresponding iterative process.
 
-Three supporting components for Proposition 4.10 are checked: the preceding
-finite-prefix packing rule, an actual minority-shore deletion of at most one
-core vertex, and actual König color classes with the exact
-`floor(3h₀/4)` bound. The minority deletion uses the supplied minority-sum
-inequality; the coloring uses actual bipartiteness and the degree bound.
-The foreign-core assignment, refinement transitions, and adaptive phase
-assembly remain unproved. These components do not change the number of
-fully verified assertions.
+The proof of Proposition 4.10 includes actual maximizing
+assignments and foreign color classes; an actual small-cut refinement with
+surviving robust cores and encoded cluster labels; recorded-cut and heavy-set
+bounds; exterior-incidence accounting for the precise adaptive input;
+fixed-rule transcript and next-output theorems; safe ambient completion
+from those outputs; and uniform parameters for the restarts. Actual
+completed-phase and final-incidence counting yield the coefficient
+`256*(c₁+6+t₀)`, using the final phase's fresh assignment.
+
+`Overfull.foreign_edge_reduction` constructs the actual sequence. The inner
+induction either completes every current class or returns an actual small
+triggering cut. The outer induction constructs the resulting refinement,
+transports the recorded-cut history, changes the actual core vertex sets,
+and restarts every fixed rule and the fresh foreign classes. Its state
+contains the original-host matching sequence and exact current residual.
+At the final possible epoch the core labels are injective, so no trigger
+exists. The degree reserve is proved at every construction prefix.
+
+`Overfull.foreign_edge_reduction_with_small_error` fixes positive surviving
+robustness before the requested final error tolerance, and then chooses one
+original error and one order threshold before the graph and exceptional
+order. The result contains the actual surviving cores and bounds their
+combined error and exceptional order relative to the final degree.
+See [`foreign-edge-reduction.md`](foreign-edge-reduction.md).
 
 Lemma 4.11 is complete as a one-step result. For each exceptional-centered
 star with more than `11*2^(t+4)` edges, it constructs a perfect matching
 meeting that star, with an actual compressed matching and forest projection
 as intermediate witnesses. Its deletion leaves no overfull set at the
 remaining degree. The range and error tolerance are chosen before `t`;
-only the graph-order threshold may depend on `t`. The repeated forcing
-and absorption needed for Proposition 4.12 remain unverified.
+only the graph-order threshold may depend on `t`. The adaptive preparation
+theorem separates the compressed partial matching from its eventual core
+completion and proves safety for every compatible robust completion.
 
-There are complete proofs of 39 of the 69 numbered assertions. The remaining
-30 include the main theorem and the structural exclusion on which its
+Proposition 4.12 is complete. `Overfull.bounded_exceptional_absorption`
+first fixes positive output robustness, then, for every positive function
+of the final exceptional cardinality, chooses the exceptional bound, error
+tolerance, and order threshold before the graph. The proof selects a light
+threshold band, actually enlarges the cores by the vertices below it, and
+constructs a terminating sequence of perfect-matching deletions using one
+fixed certified packing rule per core. The potential counts every current
+neighbor outside the assigned enlarged core, including exceptional
+neighbors. A second actual enlargement absorbs the selected band.
+The result retains at least three quarters of the original degree, has
+no overfull set, and supplies the enlarged robust cores with the requested
+error evaluated at the actual remaining exceptional cardinality. No
+monotonicity of that function and no per-round completion oracle are
+assumed. See [`exceptional-absorption.md`](exceptional-absorption.md).
+
+Lemma 4.13 is complete. `Overfull.frequent_boundary_patterns` constructs
+the actual pattern reduction and absorbs every remaining exceptional
+vertex. One fixed encoding of the core labels is shared by the fractional
+matching distribution. A common proposal and simultaneous discard plan
+produce actual boundary matchings, completed using fixed certified core
+rules. Exact actual cut accounting proves safety at every prefix. The
+residual and integer reserve are at least `k/(3*b4(t))`; the final robust
+cores cover all vertices and have arbitrary requested relative error.
+For four odd enlarged parts the fixed joining forest is a perfect matching
+or three-edge star, with actual pair and cut supply. Positive output
+robustness precedes the requested error, while the explicit input range
+depends on `t`. See [`frequent-patterns.md`](frequent-patterns.md).
+
+There are complete proofs of 42 of the 69 numbered assertions. The remaining
+27 include the main theorem and the structural exclusion on which its
 checked reduction depends.
+
+### Boundary extension reduction
+
+`Overfull.boundary_extension_reduction` proves the full constructive reduction underlying Lemma 4.14. It starts with the actual prescribed one-or-three boundary coloring, completes all triple classes through the robust core, and deletes their exact original edge copies. The residual core, degree, and singleton boundary are constructed and counted. Its exterior contraction is proved even, regular, and free of overfull sets. The result reconstructs the exact prescribed extension from an actual coloring of that returned contraction, preserving properness at original exterior endpoints.
+
+No such contracted coloring is assumed in the reduction theorem's hypotheses or asserted to exist in its conclusion. The missing one-apex factorization can be reduced to ordinary-core Lemma 4.2 with two exterior vertices using the proved `Overfull.OneCore.even_core_complement`. This bypasses the general fixed-pattern and compatible-circuit steps for this specialization. The new `Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction` constructs the ordinary-core preprocessing and its exact residual with an actual colored complement. Its specialized forbidden-label step is proved by permutation counting, greedy repair, and Vizing, without assuming the general Kahn theorem. Theorem 6.1's factorization of the whole residual remains unformalized, so the full Lemmas 4.2 and 4.14 remain incomplete. The full assertion count remains 42 of 69. See [`ordinary-factorization.md`](ordinary-factorization.md), [`boundary-extension.md`](boundary-extension.md), and [`next-verification-target.md`](next-verification-target.md).
 
 ## What remains
 
@@ -315,6 +366,9 @@ the critical-graph degree estimate of Cao–Chen, Kahn's list-edge-coloring
 theorem, Fan–Zhang's compatible circuit theorem, the weighted matching theorem
 of Ehard–Glock–Joos, the matching-packing lemma of Barber–Kühn–Lo–Osthus–Taylor,
 and the robust decomposition theorem used from Granet.
+The specialized bounded-forbidden-label consequence of Kahn needed in
+the ordinary-core preprocessing is now proved independently; this does
+not claim a formal proof of Kahn's general theorem.
 
 [`coverage.json`](coverage.json) gives the assertion-by-assertion inventory.
 The build and axiom audit certify the included declarations. They do not
