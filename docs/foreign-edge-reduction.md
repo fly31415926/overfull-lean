@@ -4,9 +4,8 @@ This development proves Proposition 4.10, `three:prop:foreign`, of the
 recorded manuscript. Its public declarations are
 `Overfull.foreign_edge_reduction` and
 `Overfull.foreign_edge_reduction_with_small_error`. The inventory contains
-42 of 69 complete numbered assertions, including the subsequent bounded
-absorption proposition and frequent-pattern lemma. The main theorem remains
-unverified.
+44 of 69 complete numbered assertions, including the subsequent bounded
+absorption proposition and frequent-pattern lemma. The main theorem remains unverified.
 
 The proof constructs the assignments, matching classes, refinement cuts,
 changed core vertex sets, marks, fixed packing rules, and both local and
@@ -347,9 +346,9 @@ Proposition 4.10 is a complete numbered result. Proposition 4.12 now also
 constructs the repeated forcing and bounded exceptional-set absorption;
 [`exceptional-absorption.md`](exceptional-absorption.md) records that proof.
 Lemma 4.13 now also constructs the actual boundary patterns, weighted
-rounding, realization, and residual forest supply; see
-[`frequent-pattern.md`](frequent-pattern.md). The next target is Lemma 4.14
-and its bounded-input factorization dependency. The full ordinary-core coloring argument, the other
+rounding, realization, complete absorption, and residual forest supply;
+[`frequent-patterns.md`](frequent-patterns.md) records that proof. The next
+scoped target is Lemma 4.14. The full ordinary-core coloring argument, the other
 coloring cases, and the structural exclusion remain separate outstanding
 assertions. The main theorem is not verified.
 

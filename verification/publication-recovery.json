@@ -1,0 +1,374 @@
+{
+  "status": "incomplete_publication_artifact_recovery",
+  "repository": "fly31415926/overfull-lean",
+  "reviewed_local_commit": "75759f81b1985413f494215f533e23642d5f7101",
+  "original_audited_tree": "5afb50b64f0c361563d3a5d1ed39dc0e9efa1fcb",
+  "original_parents": [
+    "54db7b826be05fbba9845f4140aaba0a7db5ba04",
+    "2eb61f588a26b3fe41edcf0bcec8610c9c343dd8"
+  ],
+  "original_successful_verification": {
+    "status": "partial_formalization",
+    "lean_build_passed": true,
+    "axiom_audit_passed": true,
+    "verified_declaration_count": 10219,
+    "fully_verified_numbered_assertion_count": 44,
+    "main_theorem_verified": false,
+    "allowed_logical_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "lean_version": "Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+    "mathlib_revision": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "project_modules": 422,
+    "external_modules": 25,
+    "source_hashes": 423,
+    "input_hashes": 43,
+    "recovered_proof_mappings": 1214,
+    "report_sha256": "645d2b3e3b16aa7095994500958d1fce9b9e25eef4ab689dd56a31e75c85b5b3",
+    "build_jobs": "3593"
+  },
+  "source_scope": "All mathematical source files, documentation, provenance, verification script, and the complete original axiom audit log are preserved byte-for-byte as uploaded Git objects. The original build log and results JSON disappeared from the temporary workspace before their upload. This recovery branch is not the complete requested checkpoint.",
+  "missing_original_files": [
+    {
+      "path": "verification/build.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a84f9d9b83715be66cbd59d79d8dfcb5f947edc",
+      "characters": 2442,
+      "bytes": 2518
+    },
+    {
+      "path": "verification/results.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e640d9f3713c98e3b9a3a01729dde8cd91aa0772",
+      "characters": 2490040,
+      "bytes": 2490040
+    }
+  ],
+  "preserved_uploads": [
+    {
+      "index": 0,
+      "path": "Overfull.lean",
+      "sha": "25c8e7b7242563d34c29a9c23f9141dd871226e7"
+    },
+    {
+      "index": 1,
+      "path": "Overfull/BipartiteFactorization/BoundaryWeight.lean",
+      "sha": "cfd27e226d41e1de750f0094d309232dbdab1d94"
+    },
+    {
+      "index": 2,
+      "path": "Overfull/BipartiteFactorization/FineCoarseBlocks.lean",
+      "sha": "774250038bb16b1b1c34a5423ad6b756f504272d"
+    },
+    {
+      "index": 3,
+      "path": "Overfull/BipartiteFactorization/FineCoarseSelection.lean",
+      "sha": "895a1b7bfa3d091c88b10f2853b3b5a2462c6804"
+    },
+    {
+      "index": 4,
+      "path": "Overfull/BipartiteFactorization/IntegerSizes.lean",
+      "sha": "32237996ccf608cad9b522ea571cdd9331c04814"
+    },
+    {
+      "index": 5,
+      "path": "Overfull/BipartiteFactorization/LocalizationBounds.lean",
+      "sha": "80e1f9fead2388316a8864c6f5075e23a304b478"
+    },
+    {
+      "index": 6,
+      "path": "Overfull/BipartiteFactorization/PreferredBlocks.lean",
+      "sha": "90241f14539aab95eb8424ecbebdf6d195ee95ae"
+    },
+    {
+      "index": 7,
+      "path": "Overfull/BipartiteFactorization/RoundedPalettes.lean",
+      "sha": "5f535b397de5c46acf5f7183899d29d1aef030b0"
+    },
+    {
+      "index": 8,
+      "path": "Overfull/BipartiteFactorization/SampledSelection.lean",
+      "sha": "1a6ea0448a99e0c9f42ceba31a9159476083f349"
+    },
+    {
+      "index": 9,
+      "path": "Overfull/BipartiteFactorization/UniformBudgets.lean",
+      "sha": "ea02b7e950d875dae249a2c1f5288ad0f4430fdf"
+    },
+    {
+      "index": 10,
+      "path": "Overfull/BipartiteFactorization/UniformSelection.lean",
+      "sha": "368b6fba4ee7b970153066814b99185465076acf"
+    },
+    {
+      "index": 11,
+      "path": "Overfull/CircuitPatterns/AbsorptionParity.lean",
+      "sha": "e8e29509d68ec9fa76262d723763737ba34e7fd0"
+    },
+    {
+      "index": 12,
+      "path": "Overfull/CircuitPatterns/Boundary.lean",
+      "sha": "392246937d3428c920560c4a6ea99d00d99f7e7f"
+    },
+    {
+      "index": 13,
+      "path": "Overfull/CircuitPatterns/BoundaryRealization.lean",
+      "sha": "bd49fa9371585d447363cd063bab835360cd538d"
+    },
+    {
+      "index": 14,
+      "path": "Overfull/CircuitPatterns/CircuitRemainders.lean",
+      "sha": "4cf383ef2c7e6432af43e5c41189993aaf35afa1"
+    },
+    {
+      "index": 15,
+      "path": "Overfull/CircuitPatterns/Completion.lean",
+      "sha": "01940c8dd89fbbf67419d463094a273847bbb901"
+    },
+    {
+      "index": 16,
+      "path": "Overfull/CircuitPatterns/Cuts.lean",
+      "sha": "0c53b4b44d8db44eaa6ed1579cb20b23f3c35e5e"
+    },
+    {
+      "index": 17,
+      "path": "Overfull/CircuitPatterns/Distribution.lean",
+      "sha": "811bbdd2eba48f62e97855f407b9a7e0ec6c2fdd"
+    },
+    {
+      "index": 18,
+      "path": "Overfull/CircuitPatterns/Encoding.lean",
+      "sha": "695bd257226e8b969dfae3740ae41a14ca5cfbf2"
+    },
+    {
+      "index": 19,
+      "path": "Overfull/CircuitPatterns/Forest.lean",
+      "sha": "dd7b66a07b4e83c2876d6f459bbf8f03607d14f5"
+    },
+    {
+      "index": 20,
+      "path": "Overfull/CircuitPatterns/Frequent.lean",
+      "sha": "9cf9a12677b9400e507962cd683ee4b40ad799fa"
+    },
+    {
+      "index": 21,
+      "path": "Overfull/CircuitPatterns/IncidenceLoad.lean",
+      "sha": "357b0c02cf4055a35ccc1d054e9503516da2a8b4"
+    },
+    {
+      "index": 22,
+      "path": "Overfull/CircuitPatterns/Multiplicity.lean",
+      "sha": "e48584d5f66f6ed61eacf2ae96866db648ec3465"
+    },
+    {
+      "index": 23,
+      "path": "Overfull/CircuitPatterns/PairedForests.lean",
+      "sha": "f03f0b1bd1618b772cae4173e03374c34961c9ec"
+    },
+    {
+      "index": 24,
+      "path": "Overfull/CircuitPatterns/Pairing.lean",
+      "sha": "14f3a308405e4d3465e28101674682b7bff9ce46"
+    },
+    {
+      "index": 25,
+      "path": "Overfull/CircuitPatterns/Parameters.lean",
+      "sha": "50e4c304a4923654a2344b6fa738f94e24cccc7e"
+    },
+    {
+      "index": 26,
+      "path": "Overfull/CircuitPatterns/Pools.lean",
+      "sha": "31f4ee480b65d342dbfdc9848dc81980fb4c64bb"
+    },
+    {
+      "index": 27,
+      "path": "Overfull/CircuitPatterns/Realization.lean",
+      "sha": "c157536ddb3b1a0f77314695fd776870250650d4"
+    },
+    {
+      "index": 28,
+      "path": "Overfull/CircuitPatterns/RealizedFamily.lean",
+      "sha": "e0611b9b757275ee91b31b4dedc627c0e7f75d96"
+    },
+    {
+      "index": 29,
+      "path": "Overfull/CircuitPatterns/ReservedEdges.lean",
+      "sha": "c2b90e98ac9bd0d72263bda1daafe64c88902572"
+    },
+    {
+      "index": 30,
+      "path": "Overfull/CircuitPatterns/Result.lean",
+      "sha": "60a1f62f1ba185cb00b0b530cf59c9059783a8fe"
+    },
+    {
+      "index": 31,
+      "path": "Overfull/CircuitPatterns/Rounding.lean",
+      "sha": "5178c0219707949b29e8c67acfd7139c7e7929ca"
+    },
+    {
+      "index": 32,
+      "path": "Overfull/CircuitPatterns/Safety.lean",
+      "sha": "b1a1622abab49ac6fc39612b036c2b3b8c4623b5"
+    },
+    {
+      "index": 33,
+      "path": "Overfull/CircuitPatterns/SelectedCompletion.lean",
+      "sha": "814ba3396f1cfb6b118484a626dcb5c8628f9067"
+    },
+    {
+      "index": 34,
+      "path": "Overfull/CircuitPatterns/SelectedSafety.lean",
+      "sha": "24117e06c5055935eb5c68fe4e93fde286e1f473"
+    },
+    {
+      "index": 35,
+      "path": "Overfull/CircuitPatterns/Selection.lean",
+      "sha": "63b66c55bc954392c2cc85566647290fd554cc7e"
+    },
+    {
+      "index": 36,
+      "path": "Overfull/CircuitPatterns/Weights.lean",
+      "sha": "c1c04c5882b4496e9a66b233dab37bff9b9bcd68"
+    },
+    {
+      "index": 37,
+      "path": "Overfull/CircuitPatterns/WholeUnions.lean",
+      "sha": "651e767dcff60f0180d65dd5cc905ae385709793"
+    },
+    {
+      "index": 38,
+      "path": "Overfull/CompatibleCircuits/Basic.lean",
+      "sha": "f9454be777c003a82422952b79338a96c2b86a7c"
+    },
+    {
+      "index": 39,
+      "path": "Overfull/CompatibleCircuits/Counting.lean",
+      "sha": "ab70de0a58c3a90e75cc01222338157d72c4250a"
+    },
+    {
+      "index": 40,
+      "path": "Overfull/CompatibleCircuits/Deletion.lean",
+      "sha": "f205a513e93506b6c4eefabe28ed307cb6cff737"
+    },
+    {
+      "index": 41,
+      "path": "Overfull/CompatibleCircuits/FourLabel.lean",
+      "sha": "f780ac78573f7702f9060bdaef43cf82b4796ae9"
+    },
+    {
+      "index": 42,
+      "path": "Overfull/CompatibleCircuits/Lifting.lean",
+      "sha": "f6193fe4fb3554fd1faf0be9c10e1e5592055af3"
+    },
+    {
+      "index": 43,
+      "path": "Overfull/CompatibleCircuits/SmallKernel.lean",
+      "sha": "058e419ca38de9e98d40a55734f7277a800215a2"
+    },
+    {
+      "index": 44,
+      "path": "Overfull/CompatibleCircuits/SmallKernelData.lean",
+      "sha": "a5160b9887d643d98f603e55a8fb0e508c51afde"
+    },
+    {
+      "index": 45,
+      "path": "Overfull/CompatibleCircuits/ThreeVertexFlow.lean",
+      "sha": "71f16c98b4d1da630565d316f7c07b0f23742173"
+    },
+    {
+      "index": 46,
+      "path": "Overfull/CompatibleCircuits/Virtual.lean",
+      "sha": "cecd427882f2a7fb7e6d1036684fb48c4f109c4e"
+    },
+    {
+      "index": 47,
+      "path": "Overfull/CompatibleCircuits/VirtualPartition.lean",
+      "sha": "92d7fa9607bad2c42b65d8c49de8316a3742fad1"
+    },
+    {
+      "index": 48,
+      "path": "Overfull/Probability/UniformPositions.lean",
+      "sha": "f178a981175183885dee9c8f576fa050b07755bf"
+    },
+    {
+      "index": 49,
+      "path": "Overfull/RobustPartition/CriticalConsequences.lean",
+      "sha": "de9c3fb206a8248a40a44b090ffbb835e257c8e7"
+    },
+    {
+      "index": 50,
+      "path": "Overfull/RobustPartition/LowDegree.lean",
+      "sha": "16201446c59490e7a601f467fab40341eb579708"
+    },
+    {
+      "index": 51,
+      "path": "README.md",
+      "sha": "59f857243f737880269872d6c786808cd2227719"
+    },
+    {
+      "index": 52,
+      "path": "docs/bipartite-localization.md",
+      "sha": "f3c70f976a885f08d839a6b11c12835f4508ca47"
+    },
+    {
+      "index": 53,
+      "path": "docs/bipartite-palette-assembly.md",
+      "sha": "b9f3659ae7df4a049b6ef8f857f6927976103fed"
+    },
+    {
+      "index": 54,
+      "path": "docs/coverage.json",
+      "sha": "315842b024f7fb328cdc26677c54376c5eafa93b"
+    },
+    {
+      "index": 55,
+      "path": "docs/critical-partition-consequences.md",
+      "sha": "a2b114d5b3bff7b20ef7d7e1829f95b3554a9b3e"
+    },
+    {
+      "index": 56,
+      "path": "docs/four-odd-circuits.md",
+      "sha": "624d9371613b2e2ef4dbb3b1bd9967389932ac12"
+    },
+    {
+      "index": 57,
+      "path": "docs/frequent-pattern.md",
+      "sha": "20569172c52f48033f76c7babe95ed311c0bb697"
+    },
+    {
+      "index": 58,
+      "path": "docs/manuscript-source.json",
+      "sha": "79ff5f98986cb74962a3fe8c980356204206f782"
+    },
+    {
+      "index": 59,
+      "path": "docs/next-verification-target.md",
+      "sha": "9d0257619917f27396777ebdca4ddeacd2f54ed4"
+    },
+    {
+      "index": 60,
+      "path": "docs/source-recovery.json",
+      "sha": "0b467560a12201d2db96c41a4573d3a6183db07a"
+    },
+    {
+      "index": 61,
+      "path": "docs/uniform-localization.md",
+      "sha": "7f5f1f1fc1b9ea54f70db3151dc8bd324f6f7093"
+    },
+    {
+      "index": 62,
+      "path": "scripts/verify.py",
+      "sha": "f2a7ac942cb4c5225c12dd96ee25eb1720837559"
+    },
+    {
+      "index": 63,
+      "path": "verification/axioms.log",
+      "sha": "7a211698812eaac1392c380869202f905087196e"
+    }
+  ],
+  "main_and_continuation_updated": false
+}

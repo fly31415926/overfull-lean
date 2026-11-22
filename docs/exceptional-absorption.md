@@ -175,10 +175,10 @@ The strict project build and transitive axiom audit are recorded in
 `Classical.choice`, and `Quot.sound`. Compilation of a conditional helper
 is not used as evidence that the complete manuscript is proved.
 
-The subsequent Lemma 4.13, the frequent-pattern reduction, is now proved
-with actual pattern selection, rounding, realization, all-prefix safety,
-complete absorption, and retained forest supply; see
-[`frequent-pattern.md`](frequent-pattern.md).
+Lemma 4.13 now proves the frequent-pattern reduction: actual pattern
+selection, rounding, realization, safe matching deletions, complete
+absorption, and residual forest supply. See
+[`frequent-patterns.md`](frequent-patterns.md). The next scoped assertion
+is Lemma 4.14, extending the prescribed boundary colors.
 [`next-verification-target.md`](next-verification-target.md) records the
-boundary-extension target of Lemma 4.14, its unresolved bounded-input
-factorization dependency, and the later terminal-factorization work.
+checked dependencies and missing constructions for the next continuation.

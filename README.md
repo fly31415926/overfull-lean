@@ -6,6 +6,121 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
+## Latest continuation: uniform localization and critical-partition reduction
+
+This continuation adds **109 public theorem proofs across 13 modules** to
+the published `2eb61f5` checkpoint. The complete numbered count remains
+**44 of 69**; the main theorem and the remaining 25 assertions are incomplete.
+
+The [uniform-localization results](docs/uniform-localization.md) construct
+actual positive even allowed palettes and actual compatible fine/coarse
+blocks, with error tolerances and order thresholds fixed before the graph.
+The proofs derive the actual sampling budgets and floor-cap intervals,
+handle the preferred-row-only case, construct light-cluster boundary
+weights, and connect sampled estimates and adaptive copy losses to actual
+selected graphs and their balanced localized colorings.
+
+The [critical-partition reduction](docs/critical-partition-consequences.md)
+constructs the exact low-degree deletion and proves every five-case,
+degree-exception, and shore-size conclusion from the actual average-degree
+estimate. Proposition 2.24 still requires the unformalized Cao–Chen
+criticality-to-average-degree input. Section 6 still requires the full
+spanning setup, absorber-compatible parameters, final boundary assembly,
+special paths, robust absorber, and factorization. The new supporting
+theorems are not counted as full proofs of those numbered statements.
+
+The strict build, transitive-axiom inventory, and exact source and input
+hashes are recorded in [verification/results.json](verification/results.json).
+
+### Reunited published proof histories
+
+This tree combines the continuation at `2eb61f5` with the separate published
+`main` checkpoint `54db7b8`. The latter contained the compatible-circuit
+work and an alternate proof of Lemma 4.13. All ten circuit modules are
+retained unchanged. The alternate pattern construction is preserved in
+27 `CircuitPatterns` modules, alongside the continuation's `Patterns`
+implementation. Its public theorem is
+`Overfull.circuit_frequent_boundary_pattern`.
+
+The [source recovery manifest](docs/source-recovery.json) records both
+parents, every restored source hash, the namespace changes, and 1,214
+historical proof-declaration mappings. The verification script requires
+every mapped proof in the new combined axiom audit. These recovered
+declarations include generated support proofs and are separate from the
+109 new public theorem proofs described above.
+
+The [four-odd circuit components](docs/four-odd-circuits.md) restore the
+recorded partial progress on Lemma 4.15: actual circuit copies, finite
+compatible cases, Hall pairing, matching forests, surplus circuits,
+virtual-family counts, and incidence loads. The general compatible
+decomposition and the full lemma remain unproved. The two proofs of
+Lemma 4.13 count as one numbered assertion, so coverage remains **44 of 69**.
+
+### Previous continuation: complete Theorem 2.23
+
+The [robust-partition theorem](docs/robust-partition.md) completes
+**Theorem 2.23**, increasing verified numbered coverage to **44 of 69**.
+`Overfull.robust_partition` chooses its positive tolerance and order
+threshold before every finite graph. From the actual minimum and maximum
+degree bounds it constructs a partition into induced robust expanders
+and ordered almost bipartite pieces, with every size, balance, edge-error,
+internal-degree, and weighted floor bound stated in the manuscript.
+
+The proof uses actual incidence counts and a finite refinement whose
+shore count strictly increases until all ordinary pieces expand. It
+requires only positivity of the prescribed error function on `(0,1)` and
+permits the order threshold `n₀ = 1`. The implementation adds **71 public
+theorem proofs across nine modules**. These establish one complete
+numbered theorem; the broader published robust-partition conditions
+are not separately claimed.
+
+The main theorem and the remaining **25** numbered assertions are still
+unverified. The exact build, axiom inventory, and source hashes appear in
+[verification/results.json](verification/results.json).
+
+### Previous continuation: complete Lemma 5.12
+
+The [dense link-packing theorem](docs/dense-link-packing.md) completes
+**Lemma 5.12**, which raised that checkpoint to **43 of 69**.
+For every fixed `b ≥ 1` and `0 < λ ≤ 1`, the proof chooses an order
+threshold before the graph and link family. It constructs actual
+pairwise edge-disjoint perfect matchings under the manuscript's original
+degree, intersection, and incidence bounds, retaining the constants
+`81`, `6`, `3`, and `2`.
+
+The public theorem is
+`Overfull.Dense.LinkPacking.exists_tripartite_link_packing` in
+[`Theorem.lean`](Overfull/Dense/LinkPacking/Theorem.lean). The proof derives
+its finite probability estimates and matching candidates from the graph,
+and proves that one complete selection covers every link. No matching
+family, probability estimate, or numerical failure budget is assumed in
+the final statement. The implementation adds **96 public theorem proofs
+across ten modules**; these together establish one complete numbered lemma.
+
+The main theorem remains unverified. The exact strict build, transitive
+axiom audit, and source hashes for this checkpoint are recorded in
+[verification/results.json](verification/results.json).
+
+### Previous continuation: simultaneous actual palettes and blocks
+
+[The simultaneous-selection continuation](docs/bipartite-simultaneous-selection.md)
+adds **75 public theorem proofs in ten modules**. It derives active
+palette-row, correction-pool, ordinary preferred-row, special
+preferred-row, and capped-score failure estimates from the actual graph.
+It constructs all disjoint palettes when their explicit budgets sum to less
+than one. It also constructs actual fine and coarse blocks from compatible
+position sets, retaining every prescribed size, inclusion, disjointness,
+coarse union, and coverage relation. One shared permutation per vertex part
+handles overlapping labels without an independence assumption between them.
+
+These results complete the finite simultaneous-selection stage under the
+stated graph, size, and numerical hypotheses. Uniform realization from the
+original robust-core assumptions, the spanning regularity setup, special
+path systems, the robust absorber, and full factorization remain open.
+That supporting checkpoint left the numbered assertion count at
+**42 of 69**. Lemma 5.12 added the forty-third full statement;
+Theorem 2.23 now adds the forty-fourth.
+
 ## The main theorem
 
 The formal target is `Overfull.MainTheorem` in [`Overfull/Specifications.lean`](Overfull/Specifications.lean). For every fixed real `ε > 0`, it asserts that all sufficiently large finite simple graphs satisfying
@@ -32,7 +147,7 @@ Overfull.mainTheorem_of_criticalExclusion
     Overfull.MainTheorem
 ```
 
-`LargeCriticalExclusion` is the remaining structural assertion: sufficiently large edge-minimal counterexamples above the stated density threshold cannot have no overfull set. Its proof requires the robust partition and the five coloring cases. It is a transparent proposition definition, not an assumed axiom. The implication above does not constitute a verification of the main theorem.
+`LargeCriticalExclusion` is the remaining structural assertion: sufficiently large edge-minimal counterexamples above the stated density threshold cannot have no overfull set. Its proof still requires the critical-graph application of the now-proved robust partition and the five coloring cases. It is a transparent proposition definition, not an assumed axiom. The implication above does not constitute a verification of the main theorem.
 
 [`docs/main-theorem.md`](docs/main-theorem.md) records the formal statement, the checked reduction, and the outstanding work.
 
@@ -61,6 +176,7 @@ Overfull.mainTheorem_of_criticalExclusion
 | Lemma 2.20: adaptive ordinary packing | `Overfull.adaptive_ordinary_packing` | Uniform constants, one rule for every admissible adaptive input sequence, actual edge-disjoint matchings perfect outside the presented sets, and ordinary robust expansion after every prefix |
 | Lemma 2.21: balanced robust realization | `Overfull.balanced_robust_realization` | Exact prescribed labelled degrees, a simple robust expander, and constants chosen before the order and degree sequence |
 | Lemma 2.22: robust auxiliary completion | `Overfull.robust_auxiliary_completion` | The least auxiliary order, even regular completion, original edge copies retained, simple added edges, a robust auxiliary core, and no overfull set |
+| Theorem 2.23: the robust partition | `Overfull.robust_partition` | Uniform constants before the graph; actual induced expanders and ordered almost bipartite parts; all size, edge-error, exceptional-degree, and `q+2ℓ` floor bounds |
 | Lemma 2.25: balanced-core extraction | `Overfull.BalancedCore.balanced_core_of_bipartite_outcome` | From the stated bipartite outcome, actual equal retained sides of size at least `n/3`, at most `6√ρn` deleted vertices, and crossing degrees between `Δ−8√ρn` and `Δ` |
 | Lemma 3.3: replacing a dense core | `Overfull.robust_core_replacement` | An actual robust replacement on the prescribed even vertex set, retaining the exterior and preserving the maximum-degree bound and every overfull-set inequality, with uniform constants |
 | Lemma 4.1: reserve repair | `Overfull.MatchingRepair.reserve_repair` | Uniform constants, actual disjoint repaired matchings perfect outside the prescribed sets, and degree at most `μm` in both the used-reserve and released-original-edge unions |
@@ -70,7 +186,7 @@ Overfull.mainTheorem_of_criticalExclusion
 | Proposition 4.10: reducing foreign exceptional incidence | `Overfull.foreign_edge_reduction` and `Overfull.foreign_edge_reduction_with_small_error` | An actual original-host sequence of perfect matchings, final degree at least `k₀/256`, no overfull set, actual surviving robust cores, and bounded total exceptional incidence outside assigned cores; fixed output robustness precedes any requested final error tolerance |
 | Lemma 4.11: forcing an exceptional star | `Overfull.force_exceptional_star` | For each exceptional-centered star of more than `11*2^(t+4)` edges, an actual perfect matching meeting that star, obtained from a compressed matching with a proved forest projection; its deletion leaves no overfull set |
 | Proposition 4.12: bounded exceptional-set absorption | `Overfull.bounded_exceptional_absorption` | An actual sequence of safe perfect-matching deletions and two actual core enlargements, retaining at least three quarters of the degree, fixed positive robustness, at most a uniform number of exceptional vertices, and core error bounded by an arbitrary positive function of the actual final exceptional cardinality |
-| Lemma 4.13: frequent boundary patterns | `Overfull.frequent_boundary_pattern` | Actual safe perfect-matching deletions, residual degree at least `k/(3B)`, complete absorption into robust cores, arbitrary relative core error, and actual joining-edge and cut supplies for the retained forest; output robustness is fixed before the requested error |
+| Lemma 4.13: frequent boundary patterns | `Overfull.frequent_boundary_patterns` | Actual safe perfect-matching deletions and complete exceptional absorption, degree and integer reserve at least `k/(3*b4(t))`, arbitrarily small relative core error, and actual matching-or-star pair and cut supply in the four-odd-part case; fixed output robustness precedes the error request |
 | Lemma 5.3: encoding a precoloring by triangles | `Overfull.dense_encoding` | Local balance, exact deficit identities, and both directions of the extension/decomposition equivalence |
 | Lemma 5.4: the explicit cycle absorber | `Overfull.Dense.CycleAbsorber.in_host` | Every positive cycle length; both triangle decompositions and the exact counts |
 | Lemma 5.5: the finite absorber | `Overfull.Dense.FiniteAbsorber.finite_absorber_subgraph` | One actual absorber for every allowed balanced remainder, with simultaneous placement and total size at most `4h²2^(h²)` |
@@ -79,13 +195,158 @@ Overfull.mainTheorem_of_criticalExclusion
 | Lemma 5.9: a signed flow with unequal sides | `Overfull.dense_unequal_flow` | The stated bound `3θ/(2c−1)`, with the stronger bound `2θ/(2c−1)` also proved |
 | Lemma 5.10: balancing six directed pairs | `Overfull.dense_reserve` | Positive edge probabilities, exact balance at every vertex, and explicit constants depending only on `c` |
 | Lemma 5.11: integer balance repair | `Overfull.dense_balance_repair` | Actual deleted edges, an exactly locally balanced residual, and deleted degree at most `5√ξn`, with uniform constants |
+| Lemma 5.12: dense link packing | `Overfull.Dense.LinkPacking.exists_tripartite_link_packing` | A uniform order threshold and actual pairwise edge-disjoint perfect matchings on all balanced two-part links, with the original `81`, `6`, `3`, and `2` constants |
 | Lemma 6.4: reducing the bipartite robust range | `Overfull.bipartite_robust_range_reduction` | The smaller range `σ` and the exact new parameter `min(ν,ασ/4)` |
 | Proposition 7.1: the sharpness family | `Overfull.sharpness_family` | Connectivity, order, maximum degree, class 2, edge count, and no overfull set |
 | Corollary 7.2: arbitrarily large examples below one quarter | `Overfull.arbitrarily_large_class_two_graphs` | Every real coefficient below `1/4` and every order threshold |
 
-These are 42 of the manuscript's 69 numbered assertions. The remaining 27, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
+These are 44 of the manuscript's 69 numbered assertions. The remaining 25, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
 
 ## Further checked inputs
+
+### Finite sampling for palettes and correction scores
+
+The sampling continuation proves exact uniform marginals for images
+of disjoint position sets under one random permutation, weighted
+sample moments, capped-mean lower bounds, and the weighted
+swap-variance estimate
+
+\[
+\operatorname{Var}f\le4(s/n)\sum_x\omega(x)^2.
+\]
+
+The swap proof uses finite conditioning on a maximum-weight member
+and an exact add-one coupling. Nonlinear variance tensorization then
+extends it to independent samples in arbitrarily many finite parts.
+The graph adapters derive the exchange bound from actual original
+edge copies and prove the correction-score variance bound
+`8p₀ω₂²a|P|` for the union of samples in disjoint parts. The capped-mean
+argument proves the manuscript's `7/4` numerical margin, and the
+finite lower-tail adapter proves the `2²¹` Chebyshev constant from
+explicit mean and variance bounds.
+
+Actual allowed-color palettes are sampled from the allowed-label
+subtype, with denominator equal to the number of allowed colors.
+Their weighted demand is exactly the count of original copies in
+the selected palette and pool. The permutation construction produces
+simultaneously good disjoint palettes whenever the marginal failure
+bounds sum to less than one; no independence between those palettes
+is required.
+
+The preceding sampling continuation added 128 named theorem proofs
+across seven modules; see [bipartite-sampling.md](docs/bipartite-sampling.md).
+The subsequent [score-mean continuation](docs/bipartite-score-mean.md) adds
+31 public proofs of actual pair-inclusion laws, row moments, the full
+score mean, its graph-specific lower tail, and supported block existence.
+The [simultaneous-selection continuation](docs/bipartite-simultaneous-selection.md)
+now derives the application estimates and explicit failure budgets, compares
+the actual allowed population with the palette fractions, and selects the
+palette and block families under those budgets. The latest
+[uniform-localization continuation](docs/uniform-localization.md) supplies
+uniform sampling choices, rounded integer palettes, compatible positions,
+and boundary-weight and adaptive-loss estimates. The full spanning setup,
+absorber-specific identities, final boundary construction, absorber, and
+factorization remain open.
+These factorization components do not themselves complete a numbered assertion.
+
+### Two selected families and the exact remaining exterior
+
+`Overfull.BipartiteFactorization.exists_colored_two_families` constructs
+the fine and coarse selected graphs from original finite palette and
+block conditions, their balanced localized colorings, and the coloring
+of the exact complementary exterior graph. The coarse supplies reserve
+the fine family's actual row and correction-pool costs before any fine
+copies are chosen. Both correction signs are supported, and disjoint
+palettes together with disjoint blocks within each scale give an actual
+pairwise edge-disjoint family.
+
+The remaining exceptional degree is exactly the original degree minus
+the sum of the selected palette sizes. Its inactive coloring is derived
+from the unused original labels. Across both selected families and the
+remainder, the total footprint incidence at every core vertex equals
+the original exterior degree, hence is at most `a`. Selected footprints
+also avoid any boundary set whose original incident copies are deleted.
+
+That continuation added 46 named theorem proofs across five modules.
+See [bipartite-two-families.md](docs/bipartite-two-families.md) for the
+exact hypotheses and conclusions. The subsequent
+[sampling continuation](docs/bipartite-sampling.md) proves the finite
+laws, moment bounds, and actual nonlinear score variance. The
+[simultaneous-selection results](docs/bipartite-simultaneous-selection.md)
+now establish the application bounds and simultaneous families under explicit
+numerical budgets and prescribed positions. The latest uniform-localization
+results derive those budgets and construct rounded palettes and compatible
+positions. The complete spanning setup, final boundary, composition into
+both colored families, and absorber remain open.
+
+### One-palette construction and localized coloring
+
+`Overfull.BipartiteFactorization.exists_localized_palette` now constructs
+one actual selected palette graph and its balanced localized coloring.
+The input is the actual exterior coloring, a palette, two blocks, a
+deleted set, and explicit finite bounds on the surviving correction score
+and unused preferred copies. The proof derives the actual row demands,
+the signed correction imbalance, exact exceptional degrees, equal core
+side-degree sums, block support, and exact correction-pool usage.
+
+The construction inherits its initial coloring from the exceptional
+palette base. No selected graph or selected-graph coloring is supplied
+as an assumption. Its footprints are even, lie in the selected blocks,
+have size at most `2|Ablock|a/|I|+4`, and have exact per-vertex load equal
+to the selected degree. The deletion estimate charges only copies
+inside the relevant correction pool while avoiding all deleted copies.
+
+See [bipartite-palette-assembly.md](docs/bipartite-palette-assembly.md)
+for the exact hypotheses, orientation, and remaining obligations.
+That continuation added 40 named theorem proofs. The subsequent
+two-family construction composes these results with exact union,
+deletion, and residual-coloring arguments. The subsequent sampling
+results supply the analytic ingredients. The
+[simultaneous-selection results](docs/bipartite-simultaneous-selection.md)
+instantiate the graph estimates and select both kinds of family under explicit
+numerical budgets and prescribed positions. The remaining uniform realization
+from the robust-core hypotheses is recorded in the next-target document.
+
+### Finite localization constructions
+
+The preceding continuation proves preferred representative edge selection,
+threshold separation and actual allowed-color preparation, capped
+correction-edge selection after arbitrary deletions, and a fan criterion
+that colors each selected graph from its inactive residue. The latter
+also gives balanced localized classes with footprint bound
+`2|Ablock|a/k+4`. See [bipartite-localization.md](docs/bipartite-localization.md)
+for the hypotheses and scope of all four constructions.
+
+These results construct actual copy sets and colorings, now composed
+into both selected families and their exact remainder under finite
+supply conditions. The [sampling results](docs/bipartite-sampling.md)
+now provide the weighted moments, capped means, and actual graph-score
+variance. The simultaneous-selection continuation subsequently completed
+the application estimates and actual simultaneous choices under explicit
+finite budgets. The latest uniform-localization results construct the
+sampling parameters, integer palettes, and compatible positions, and prove
+the boundary-weight and loss bounds. The full regularity setup, final
+boundary construction, and absorber remain unformalized.
+
+### Three bipartite factorization prerequisites
+
+The continuation in [bipartite-prerequisites.md](docs/bipartite-prerequisites.md)
+proves reverse-direction bipartite robustness with parameters `(ν²/4,2τ)`,
+constructs the balanced coloring of the actual complement of an embedded
+bipartite core, and preserves the ordinary exceptional-vertex neighborhood
+conditions and complementary coloring under bounded core moves. The
+numerical move budgets are chosen uniformly before the graph.
+
+These are supporting results for Theorem 6.1 and Proposition 6.2. The full
+factorization and dependent Lemmas 4.2 and 4.14 remain incomplete. This
+branch continues the exactly recovered ordinary-core tree `aab43893d9b1`;
+its complete numbered coverage was 42 of 69 before the link-packing result.
+The later terminal
+checkpoint `eafe3efc18bb` was unavailable after the source workspace reset
+and is outside this audit. It is distinct from the published circuit
+checkpoint `54db7b8`, whose source is now included through the recovery
+described above. The linked note records the original recovery and the
+precise scope of the three prerequisite results.
 
 ### Vizing's theorem
 
@@ -253,17 +514,25 @@ The proof selects a light band from the original foreign-neighbor counts and abs
 
 ### Frequent boundary patterns
 
-[`Overfull/Patterns/Frequent.lean`](Overfull/Patterns/Frequent.lean) proves Lemma 4.13. For a bounded exceptional set and three or four robust cores, it fixes positive output robustness before an arbitrary requested relative error, then chooses the initial tolerance and order threshold before the graph. The exact residual is obtained by deleting constructed perfect matchings, has no overfull set after every prefix, and retains degree at least `k/(3B)`, where `B = 2^(t.choose 2) * 4^t * 2^6`.
+[`Overfull/Patterns/Frequent.lean`](Overfull/Patterns/Frequent.lean) proves Lemma 4.13. The positive surviving robust parameter is fixed before an arbitrary requested final error. The proof groups an actual scaled perfect-matching distribution into common fixed-label patterns, rounds one common proposal, realizes the accepted copies as actual edge-disjoint boundary matchings, and completes them with one certified rule per core. Exact cut accounting and the small-cut theorem prove that every deletion prefix has no overfull set.
 
-The proof encodes a proved perfect-matching distribution, chooses and rounds a frequent pattern, realizes the selected copies with actual fresh boundary edges, and completes them through fixed certified core rules. Original weighted capacities and exact subtraction of realized cut counts establish residual safety. No fractional decomposition of the realized residual is assumed. Actual surviving edge pools then absorb every exceptional vertex into its assigned core and provide the retained forest's joining-edge and cut supplies. When all four enlarged parts are odd, the forest is an explicit perfect matching or three-edge star. [`docs/frequent-pattern.md`](docs/frequent-pattern.md) gives the complete construction and parameter order.
+The distinguished pattern retains an integer reserve `r >= k/(3*b4(t))`. Its actual residual edges supply distinct neighbors for absorbing every exceptional vertex. The final enlarged cores partition all vertices, have the requested relative degree error, and retain fixed robustness. Their parity is the parity of the distinguished joining forest; four odd parts force a perfect matching or three-edge star, with at least `r` actual joining edges for each forest pair and the required supply on every union of parts. See [`docs/frequent-patterns.md`](docs/frequent-patterns.md) for the construction and parameter order. The next subsection records the constructive reduction for Lemma 4.14; its final factorization step and the main theorem remain unverified.
 
-The next target is the boundary-extension argument of Lemma 4.14, including its unresolved bounded-input factorization dependency. [`docs/next-verification-target.md`](docs/next-verification-target.md) records that work and the later compatible-circuit and terminal-factorization dependencies. The manuscript main theorem remains unverified.
+### Boundary extension: the exact factorization reduction
 
-### Four-odd-part circuit components
+`Overfull.boundary_extension_reduction` constructs the complete reduction for Lemma 4.14. The proper prescribed boundary coloring determines the actual three-edge classes and their forbidden core vertices. The theorem packs their internal completions, deletes those exact original edge copies, and constructs the residual multigraph and its actual embedded robust core. Its remaining degree is exactly the number of original singleton colors and retains the prescribed linear reserve.
 
-The independent Lemma 4.15 track now has actual edge-copy circuit and incidence-class definitions, necessary half-cut accounting, quotient-to-matching equivalence, and ordinary Eulerian circuit decomposition on four labels. Hall pairing under `12 * a < u` constructs disjoint-support pairs of the two small matching families. Their all-odd projections yield actual matching-or-star forests and genuine circuit partitions of every discarded copy, with exact coverage and disjointness.
+Contracting the exterior preserves parallel copies and gives an actual even regular graph with one exterior vertex. The small-cut proof derives no-overfullness. An actual coloring of this precise contraction is then transported back to the original labels, and all completed classes are restored with properness at every original vertex. The error tolerance, retained robust parameters, and order threshold are chosen before the graph and coloring.
 
-The virtual augmentation retains original and virtual copy identities and classifies circuits with zero, one, or two virtual copies. Finite compatible partitions of five small regular templates are checked by the kernel. These components do not supply the compatible-circuit existence theorem for arbitrary admissible incidence classes; **Lemma 4.15 remains incomplete and the count remains 42 of 69**. [`docs/four-odd-circuits.md`](docs/four-odd-circuits.md) records the checked statements and the remaining reductions.
+This is a checked reduction, not a proof that the contracted graph has a factorization. `Overfull.OneCore.even_core_complement` supplies a shorter route to that missing step: it constructs an even robust core with exactly two exterior vertices and an actual coloring of its exceptional complement. The ordinary-core preprocessing described next now constructs the residual input for Theorem 6.1. That factorization theorem remains unformalized, so Lemma 4.2 with `s=2` is still incomplete. **The completed count is 44 of 69; Lemma 4.14 and the main theorem remain unverified.** See [`docs/boundary-extension.md`](docs/boundary-extension.md).
+
+### Ordinary-core reduction to a bipartite robust core
+
+`Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction` constructs the ordinary-core preprocessing in Lemma 4.2. Its crossing robustness constant precedes an arbitrary requested final error tolerance. All subsequent reserve, repair, coloring, and order parameters precede the graph, embedded core, and initial exterior coloring. It constructs a first family of actual perfect matchings, retaining at least two fifths of the original regular degree in the exact residual graph. The residual has an actual embedded balanced bipartite robust core, arbitrarily small side-normalized degree error, and an actual coloring of the complement of that core. It also provides reconstruction from an explicit coloring of the whole residual graph.
+
+The specialized list constraint is proved by finite permutation counting and greedy repair, using the proved Vizing theorem for the initial simple-graph coloring. For every fixed positive slack `δ`, the uniform theorem produces a proper coloring with `Δ+1+ceil(δn)` colors avoiding a sufficiently small forbidden set on each edge. Constrained alternating-component exchanges balance its classes while retaining the fixed exterior labels, and the proved reserve-repair theorem constructs their completions. This supplies the consequence needed in Lemma 4.2 without assuming Kahn's general list-coloring theorem; that general theorem is not claimed as formalized.
+
+The remaining formalization is the factorization conclusion of Theorem 6.1 for the actual residual host. Having a bipartite core does not make the whole residual multigraph bipartite. The constructed complementary coloring therefore does not itself factor that host. [`docs/ordinary-factorization.md`](docs/ordinary-factorization.md) records the uniform quantifiers, exact bounds, actual-copy accounting, and remaining obligation.
 
 ### The coloring encoding and balanced reserve
 
