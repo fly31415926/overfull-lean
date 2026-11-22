@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "status": "verified_supporting_continuation",
+  "verification_completed_at_utc": "2026-11-22T19:38:38.928364+00:00",
+  "repository": "fly31415926/overfull-lean",
+  "base_commit": "1b12919971be8518b185aa59832c209170ec0656",
+  "verified_source_candidate_commit": "2091256cdedad1b064c5eedb1a7d54602661d468",
+  "all_proof_sources_and_verification_inputs_identical_to_candidate": true,
+  "target_branches": [
+    "main",
+    "verified-bipartite-continuation-2026-11-21"
+  ],
+  "numbered_assertions_completed_in_this_continuation": 0,
+  "fully_verified_numbered_assertion_count": 45,
+  "remaining_numbered_assertion_count": 24,
+  "main_theorem_verified": false,
+  "public_theorem_count_added": 99,
+  "new_proof_modules": 8,
+  "strict_build_jobs": 3618,
+  "verified_declaration_count": 11056,
+  "previous_verified_declarations_preserved": 10764,
+  "new_verified_declaration_count": 292,
+  "recovered_historical_declarations_preserved": 1214,
+  "imported_project_modules": 447,
+  "source_hash_count": 448,
+  "verification_input_hash_count": 49,
+  "allowed_logical_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "all_recorded_source_and_input_hashes_match": true,
+  "all_previous_mathematical_modules_byte_identical_to_base": true,
+  "all_previous_proof_names_modules_and_axiom_sets_preserved": true,
+  "completed_assertion_records_identical_to_base": true,
+  "source_recovery_manifest_byte_identical_to_base": true,
+  "four_odd_source_and_declaration_manifests_identical_to_base": true,
+  "new_declaration_set_exactly_matches_new_module_map": true,
+  "verification_command": "python3 scripts/verify.py",
+  "public_graph_theorem": "Overfull.BipartiteFactorization.exists_uniform_reserved_remainder",
+  "scope": "Coupled numerical absorber parameters and the actual reserved packing-to-oriented-remainder stage. The spanning bi-setup, special paths, robust absorber, construction of the reserved set and compressed exterior coloring, and final whole-host reconstruction remain unproved.",
+  "evidence_sha256": {
+    "verification/results.json": "649820c7bf0e8eb7f46dd649125b827e18c882a7dada405832683bd26fe4ffcb",
+    "verification/build.log": "590584d8017f290e0efbca0f46e8ac74e913b80cf3dca959f65956645cfc228b",
+    "verification/axioms.log": "e590b1c5c07c4c18d9431fd962cd0a2367d8d5b9cf692724a7c0a3e871716a60",
+    "verification/residual-factorization-declarations.json": "60bd07fd5199eddaa9aa4781bc800cf9b8a860a7c923f389e9b13ddedbcbeabd",
+    "verification/lean-version.log": "36c0bbaf090c97bc8217c6ff497ff9144fd83d9003f12cd505162b943aaaee77",
+    "verification/vizing-source.log": "e91712c222adcda35d3eac8804b7f83ffefe0283a4c35be6e0f28dfda0e238e8",
+    "docs/residual-factorization-source.json": "f73fba9d1a9d9957d1d78b2b3386e61e85b51bf750be37f4e342f9bfebc88b55",
+    "docs/residual-factorization.md": "4d1dbd49f322101dee65b1f75cbbf3eb695ad8b78a792edfdf0d57bd0d88cd77",
+    "docs/residual-factorization-semantic-review.md": "e5c4b26a99575f8020797cecde1fbbcf26bdc5df520cec52f1d0a036a10087b4",
+    "docs/source-recovery.json": "a533903bf4ebab7dec8baec4ead1d5f0a9f70a825605f2a180befd97289dfb3b",
+    "docs/four-odd-source.json": "7e08d3ad720032403c45ab2028fb1957fe338b668553b81dc4d45888fc52dee5",
+    "verification/four-odd-declarations.json": "25de2dc7c11e7e439613571e7a4fd05baf5b8a8977b70a6c6630a197679c9725"
+  },
+  "publication": {
+    "status": "blocked_by_automatic_approval_review",
+    "repository": "fly31415926/overfull-lean",
+    "branches": [
+      "main",
+      "verified-bipartite-continuation-2026-11-21"
+    ],
+    "remote_branch_updated": false,
+    "reason": "The approval review did not accept publication authorization retrieved from earlier chats as a trusted user authorization in this transcript. The complete checked checkpoint is committed locally for review."
+  }
+}

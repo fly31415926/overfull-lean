@@ -9,6 +9,13 @@ Theorem 6.1. Lemma 4.14 and the main theorem also remain unverified.
 The current completed numbered-assertion count is **45 of 69**, with 24
 remaining, after the [complete proof of Lemma 4.15](four-odd-decomposition.md).
 
+The subsequent [reserved-remainder continuation](residual-factorization.md)
+constructs the coupled numerical parameters and proves the complete final
+packing stage through an exact oriented regular core. The missing input
+remains the spanning setup, special path systems and robust absorber that
+produce the required reservation and support whole-host reconstruction.
+The new supporting results do not complete Lemma 4.2.
+
 This is a formalization status, not a finding of a defect in the
 manuscript's mathematical proof. The source proof invokes Theorem 6.1;
 the Lean development has not yet established that factorization theorem.

@@ -9,7 +9,7 @@
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
   "fully_verified_numbered_assertion_count": 45,
-  "scope": "45 of the 69 numbered manuscript assertions have complete checked proofs. The remaining 24, including the main theorem, remain incomplete. This continuation completes Lemma 4.15 from the original regular, non-overfull graph and four odd parts. The fixed sufficient error bound is 1/1000 for both ratios. Every actual joining copy belongs to exactly one actual matching; exactly h pieces project injectively to perfect matchings or three-edge stars, and all surplus pieces project to circuits of exact length two. The proof constructs its caps, singleton quotas, minority pairings, endpoint-compatible augmentations and exact cover internally, using Konig coloring, equitable balancing and Hall pairing. It does not assume or prove the general Fan-Zhang compatible-circuit theorem. Integer and real undivided versions also cover zero degree. All earlier source-recovery mappings and verified results are preserved. The alternate proof of Lemma 4.13 is still counted once. Proposition 2.24 still needs criticality-to-average-degree; Lemmas 4.2 and 4.14 still need the unproved residual factorization; the Section 6 spanning setup, absorber and factorization, Proposition 4.16, and the final structural exclusion remain incomplete. Supporting results and conditional reductions are not counted as completed parent assertions.",
+  "scope": "45 of 69 numbered manuscript assertions have complete checked proofs; 24, including the main theorem, remain incomplete. Constructed coupled integer absorber parameters, source palette budgets and divisibilities; exact original-copy reservation, arbitrary-reserve bipartite packing, complete exterior-class completion, exact simple regular remainder, and actual balanced orientation. ReservedRemainder composes these graph steps from an original regular host and explicit reserved copies with a supplied compressed balanced exterior coloring. The geometric spanning setup, special path systems, robust absorber, construction of those stage inputs, and final whole-host factorization remain unproved. No numbered assertion is added. All earlier completed assertions and source-recovery mappings are preserved.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -4775,6 +4775,101 @@
       "manuscript_locations": [
         "three:lem:four-odd"
       ]
+    },
+    {
+      "id": "coupled_absorber_integer_parameters",
+      "kind": "supporting_component",
+      "description": "Construct actual positive even absorber palettes with exact coupled identities, source palette budgets, structural divisibilities and uniform positive fractions before graph orders. The main ratio is fixed before the reduced cluster count.",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_source_parameters",
+        "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_parameter_family",
+        "Overfull.BipartiteFactorization.AbsorberParameters.exists_cluster_order",
+        "Overfull.BipartiteFactorization.AbsorberParameters.spanning_divisibilities",
+        "Overfull.BipartiteFactorization.AbsorberParameters.make_valid"
+      ],
+      "manuscript_locations": [
+        "old:fac:palette-sizes",
+        "old:fac:absorber-counts"
+      ],
+      "scope_limit": "Constructs numerical parameters only; the geometric bi-setup, special factors and robust absorber remain unproved."
+    },
+    {
+      "id": "bipartite_arbitrary_reserve_packing",
+      "kind": "supporting_component",
+      "description": "Uniform actual matching packing for every fixed positive reserve and arbitrary finite balanced footprint family. Exact unused degree, error, bipartiteness and every-subfamily robustness are proved.",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.pack_fixed_bipartite_forbidden_sets",
+        "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_identity",
+        "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_error",
+        "Overfull.BipartiteFactorization.BipartiteCorePacking.subfamily_robust"
+      ],
+      "manuscript_locations": [
+        "old:fac:range"
+      ],
+      "scope_limit": "Requires the explicit actual robust graph and bounded footprints; does not construct the absorber."
+    },
+    {
+      "id": "actual_reserved_copy_core",
+      "kind": "supporting_component",
+      "description": "Construct the surviving embedded core from an explicit set of original reserved copies. Identify surviving exterior copies and derive exact ambient/core degree, retained error and robustness.",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.ReservedCore.mem_coreEdges_iff",
+        "Overfull.BipartiteFactorization.ReservedCore.exteriorOriginal_survives",
+        "Overfull.BipartiteFactorization.ReservedCore.core_exterior_identity",
+        "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_core_eq_palette_add",
+        "Overfull.BipartiteFactorization.ReservedCore.core_degree_bounds",
+        "Overfull.BipartiteFactorization.ReservedCore.bipartite_robust_of_reserved_degrees"
+      ],
+      "manuscript_locations": [
+        "old:degree-accounting"
+      ],
+      "scope_limit": "The reserved set and its degree specifications are explicit inputs; existence of the required absorber reservation is not asserted. Same-palette restriction does not compress the exterior coloring."
+    },
+    {
+      "id": "complete_remaining_exterior_classes",
+      "kind": "supporting_component",
+      "description": "Complete all colors of the actual core complement by actual internal matchings; preserve original labels and prove the exact residual core exhausts every surviving copy.",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.ComplementCompletion.classes_isPerfectMatching",
+        "Overfull.BipartiteFactorization.ComplementCompletion.exterior_mem_class",
+        "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore_exhausts",
+        "Overfull.BipartiteFactorization.ComplementCompletion.remainingGraph_regular",
+        "Overfull.BipartiteFactorization.sideFootprint_load",
+        "Overfull.BipartiteFactorization.BipartiteCorePacking.remaining_comap"
+      ],
+      "manuscript_locations": [
+        "old:degree-accounting"
+      ],
+      "scope_limit": "Deterministic actual-copy completion; matching existence is supplied by the separate uniform packing theorem."
+    },
+    {
+      "id": "regular_bipartite_residual_orientation",
+      "kind": "supporting_component",
+      "description": "Use the checked Konig theorem to construct complementary r-regular graphs and orient every original edge exactly once with actual indegree and outdegree r.",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.exists_regular_bipartite_orientation",
+        "Overfull.BipartiteFactorization.ResidualOrientation.edge_iff_arc",
+        "Overfull.BipartiteFactorization.ResidualOrientation.arc_asymm",
+        "Overfull.BipartiteFactorization.ResidualOrientation.outDegree_eq",
+        "Overfull.BipartiteFactorization.ResidualOrientation.inDegree_eq"
+      ],
+      "manuscript_locations": [
+        "old:degree-accounting"
+      ],
+      "scope_limit": "Covers the actual simple bipartite residual only, including r=0; its factors do not cover isolated exterior vertices."
+    },
+    {
+      "id": "uniform_actual_reserved_remainder",
+      "kind": "supporting_component",
+      "description": "Choose all error and order thresholds before graph/reserved-set data; derive the actual prepared host from original regular degrees and reservation budgets, complete every supplied balanced exterior color and construct an exact simple 2r-regular oriented remainder.",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.exists_uniform_oriented_remainder",
+        "Overfull.BipartiteFactorization.exists_uniform_reserved_remainder"
+      ],
+      "manuscript_locations": [
+        "old:degree-accounting"
+      ],
+      "scope_limit": "The actual reserved set and compressed balanced exterior coloring remain explicit stage inputs. Full spanning setup, special factors, robust absorber and final original-host factorization are not proved."
     }
   ],
   "numbered_assertions": [
@@ -6326,10 +6421,16 @@
         "sampled_actual_palette_selection",
         "uniform_graph_failure_budgets",
         "uniform_actual_palette_block_selection",
-        "constructed_equal_fine_coarse_positions"
+        "constructed_equal_fine_coarse_positions",
+        "coupled_absorber_integer_parameters",
+        "bipartite_arbitrary_reserve_packing",
+        "actual_reserved_copy_core",
+        "complete_remaining_exterior_classes",
+        "regular_bipartite_residual_orientation",
+        "uniform_actual_reserved_remainder"
       ],
       "imported_statement": false,
-      "formalization_scope": "Uniform error tolerances and order thresholds now precede the graph and derive the actual palette and block union budgets from the manuscript linear degree, active-row, large-pool, per-color, and special-count bounds. Actual positive even palette sizes are rounded from fixed target fractions and realized as disjoint allowed palettes. Actual divisible finite populations yield equal fine positions, exact coarse unions, and simultaneous actual fine/coarse blocks with natural floor caps and all preferred-row and large-pool score estimates. The no-correction branch has a separate uniform preferred-row construction and an actual zero-correction palette selection. Actual normalized boundary weights have total at most twice the indexed pool count plus the special count; a light existing cluster and relative original-copy loss bounds are proved. Floor caps, adaptive pool losses, fine-to-coarse costs, preferred-row supplies, and strict selected/residual coloring reserves are proved and connected to actual palette selection and localized coloring. The absorber-specific palette identities and divisibilities, construction of the required spanning regularity partition and final boundary after insertions/equalization, complete uniform composition into both colored families, special path systems, robust absorber, and final host factorization remain unformalized. These supporting results do not complete this numbered assertion."
+      "formalization_scope": "Uniform error tolerances and order thresholds now precede the graph and derive the actual palette and block union budgets from the manuscript linear degree, active-row, large-pool, per-color, and special-count bounds. Actual positive even palette sizes are rounded from fixed target fractions and realized as disjoint allowed palettes. Actual divisible finite populations yield equal fine positions, exact coarse unions, and simultaneous actual fine/coarse blocks with natural floor caps and all preferred-row and large-pool score estimates. The no-correction branch has a separate uniform preferred-row construction and an actual zero-correction palette selection. Actual normalized boundary weights have total at most twice the indexed pool count plus the special count; a light existing cluster and relative original-copy loss bounds are proved. Floor caps, adaptive pool losses, fine-to-coarse costs, preferred-row supplies, and strict selected/residual coloring reserves are proved and connected to actual palette selection and localized coloring. Constructed coupled integer absorber parameters, source palette budgets and divisibilities; exact original-copy reservation, arbitrary-reserve bipartite packing, complete exterior-class completion, exact simple regular remainder, and actual balanced orientation. ReservedRemainder composes these graph steps from an original regular host and explicit reserved copies with a supplied compressed balanced exterior coloring. The geometric spanning setup, special path systems, robust absorber, construction of those stage inputs, and final whole-host factorization remain unproved. No numbered assertion is added."
     },
     {
       "number": "6.2",
@@ -6395,10 +6496,16 @@
         "sampled_actual_palette_selection",
         "uniform_graph_failure_budgets",
         "uniform_actual_palette_block_selection",
-        "constructed_equal_fine_coarse_positions"
+        "constructed_equal_fine_coarse_positions",
+        "coupled_absorber_integer_parameters",
+        "bipartite_arbitrary_reserve_packing",
+        "actual_reserved_copy_core",
+        "complete_remaining_exterior_classes",
+        "regular_bipartite_residual_orientation",
+        "uniform_actual_reserved_remainder"
       ],
       "imported_statement": false,
-      "formalization_scope": "Uniform error tolerances and order thresholds now precede the graph and derive the actual palette and block union budgets from the manuscript linear degree, active-row, large-pool, per-color, and special-count bounds. Actual positive even palette sizes are rounded from fixed target fractions and realized as disjoint allowed palettes. Actual divisible finite populations yield equal fine positions, exact coarse unions, and simultaneous actual fine/coarse blocks with natural floor caps and all preferred-row and large-pool score estimates. The no-correction branch has a separate uniform preferred-row construction and an actual zero-correction palette selection. Actual normalized boundary weights have total at most twice the indexed pool count plus the special count; a light existing cluster and relative original-copy loss bounds are proved. Floor caps, adaptive pool losses, fine-to-coarse costs, preferred-row supplies, and strict selected/residual coloring reserves are proved and connected to actual palette selection and localized coloring. The absorber-specific palette identities and divisibilities, construction of the required spanning regularity partition and final boundary after insertions/equalization, complete uniform composition into both colored families, special path systems, robust absorber, and final host factorization remain unformalized. These supporting results do not complete this numbered assertion."
+      "formalization_scope": "Uniform error tolerances and order thresholds now precede the graph and derive the actual palette and block union budgets from the manuscript linear degree, active-row, large-pool, per-color, and special-count bounds. Actual positive even palette sizes are rounded from fixed target fractions and realized as disjoint allowed palettes. Actual divisible finite populations yield equal fine positions, exact coarse unions, and simultaneous actual fine/coarse blocks with natural floor caps and all preferred-row and large-pool score estimates. The no-correction branch has a separate uniform preferred-row construction and an actual zero-correction palette selection. Actual normalized boundary weights have total at most twice the indexed pool count plus the special count; a light existing cluster and relative original-copy loss bounds are proved. Floor caps, adaptive pool losses, fine-to-coarse costs, preferred-row supplies, and strict selected/residual coloring reserves are proved and connected to actual palette selection and localized coloring. Constructed coupled integer absorber parameters, source palette budgets and divisibilities; exact original-copy reservation, arbitrary-reserve bipartite packing, complete exterior-class completion, exact simple regular remainder, and actual balanced orientation. ReservedRemainder composes these graph steps from an original regular host and explicit reserved copies with a supplied compressed balanced exterior coloring. The geometric spanning setup, special path systems, robust absorber, construction of those stage inputs, and final whole-host factorization remain unproved. No numbered assertion is added."
     },
     {
       "number": "6.3",
@@ -6413,9 +6520,12 @@
       ],
       "statement_sha256": "b55e0cae4e73c328ce8889a2e944e93c7575858be2610ed25e602f9161b8d9c9",
       "full_assertion_verified": false,
-      "status": "not_formalized_here",
-      "checked_components": [],
-      "imported_statement": true
+      "status": "checked_components_only",
+      "checked_components": [
+        "coupled_absorber_integer_parameters"
+      ],
+      "imported_statement": true,
+      "formalization_scope": "The coupled numerical parameter construction, exact counts, positivity, palette fractions and structural divisibilities are proved. No spanning bi-setup, special factors or robust absorber is constructed. The full theorem remains unverified."
     },
     {
       "number": "6.4",
@@ -6706,7 +6816,8 @@
     "Theorem 2.23 is fully proved by Overfull.robust_partition, adding 71 public theorem proofs in nine modules and bringing the current total to 44 of 69. Every scale is chosen before the vertex type and graph; actual finite refinement increases a bounded shore count until every ordinary block expands. All four manuscript clauses are derived from actual incidence and degree counts. The November 21 statement block is byte-identical to the pinned November 20 inventory hash. The main theorem and the remaining 25 assertions remain incomplete.",
     "2026-11-22 continuation from 2eb61f5: 109 new public theorem proofs in 13 modules; actual uniform localization and deterministic critical-partition reduction. Complete numbered coverage remains 44/69. See uniform-localization.md and critical-partition-consequences.md for exact hypotheses and remaining obligations.",
     "The combined development recovers the compatible-circuit and alternate frequent-pattern chain from published main commit 54db7b826be05fbba9845f4140aaba0a7db5ba04 while retaining the subsequent bipartite, dense-link and robust-partition continuation. The alternate frequent-pattern proof is namespaced under CircuitPatterns and proves the same Lemma 4.13, which is counted once. At that recovery checkpoint Lemma 4.15 remained incomplete, and its actual circuit and forest components were retained. The current direct FourOdd construction now completes it; current source and axiom claims refer to the new full audit.",
-    "2026-11-22 full Lemma 4.15 continuation from 46b6dc2c44c66a7a2c4ed9590690224bb2d10af4: the direct actual-pool construction adds the forty-fifth complete numbered assertion. The pinned November20 statement hash is unchanged; the inspected November21 statement is byte-identical. The historical 44/69 checkpoint notes above describe earlier states."
+    "2026-11-22 full Lemma 4.15 continuation from 46b6dc2c44c66a7a2c4ed9590690224bb2d10af4: the direct actual-pool construction adds the forty-fifth complete numbered assertion. The pinned November20 statement hash is unchanged; the inspected November21 statement is byte-identical. The historical 44/69 checkpoint notes above describe earlier states.",
+    "2026-11-22 continuation from 1b12919971be8518b185aa59832c209170ec0656: 99 public theorem proofs in eight modules complete the coupled numerical parameters and exact reserved-remainder packing stage. The complete numbered assertion count remains 45/69. See residual-factorization.md and residual-factorization-source.json."
   ],
   "density_corollary_verified": true
 }

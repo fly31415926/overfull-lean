@@ -6,7 +6,40 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest continuation: complete Lemma 4.15
+## Latest continuation: coupled parameters and the exact reserved remainder
+
+**The completed inventory remains 45 of 69 numbered assertions.** This
+continuation adds **99 public theorem proofs in eight modules** for the
+Section 6 factorization chain. It constructs the coupled absorber integers,
+positive even palettes, source palette bounds and divisibilities, with
+uniform choices in the required order. It also completes the actual
+packing-to-remainder stage on original multigraph edge copies.
+
+The public theorem
+`Overfull.BipartiteFactorization.exists_uniform_reserved_remainder` in
+[`ReservedRemainder.lean`](Overfull/BipartiteFactorization/ReservedRemainder.lean)
+starts with the original regular host and an explicit reserved-copy set.
+It derives the retained core and its robustness and error bounds, completes
+all `k-2*s` colors of the supplied balanced remaining exterior, and proves
+that every surviving copy belongs to an actual simple `2*r`-regular
+bipartite core. It constructs an orientation of that core with indegree and
+outdegree exactly `r` at every vertex. All errors and order thresholds
+precede the graph and reserved set.
+
+The actual reserved set and compressed balanced exterior coloring remain
+explicit stage inputs. The full spanning bi-setup, special path systems,
+robust absorber, and final reconstruction of the whole host factorization
+still require proof. Theorem 6.1 and its dependent Lemmas 4.2 and 4.14 remain
+incomplete; no additional numbered assertion is claimed.
+
+The [construction and proof](docs/residual-factorization.md),
+[source and public declaration mapping](docs/residual-factorization-source.json),
+[semantic review](docs/residual-factorization-semantic-review.md), and
+[complete new declaration mapping](verification/residual-factorization-declarations.json)
+record the scope. Strict build logs, transitive axiom logs and exact hashes
+are in [verification/results.json](verification/results.json).
+
+## Previous continuation: complete Lemma 4.15
 
 **45 of 69 numbered assertions are now complete.** This checkpoint proves
 [Lemma 4.15](docs/four-odd-decomposition.md), the decomposition of all joining

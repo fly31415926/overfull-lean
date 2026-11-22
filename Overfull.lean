@@ -205,6 +205,14 @@ import Overfull.CircuitPatterns.CircuitRemainders
 import Overfull.CircuitPatterns.IncidenceLoad
 import Overfull.CircuitPatterns.Frequent
 import Overfull.FourOdd.Theorem
+import Overfull.BipartiteFactorization.AbsorberParameters
+import Overfull.BipartiteFactorization.ResidualPacking
+import Overfull.BipartiteFactorization.ResidualOrientation
+import Overfull.BipartiteFactorization.ComplementCompletion
+import Overfull.BipartiteFactorization.CompletionTransport
+import Overfull.BipartiteFactorization.ReservedCore
+import Overfull.BipartiteFactorization.UniformRemainder
+import Overfull.BipartiteFactorization.ReservedRemainder
 
 /-!
 # Partial formalization of the overfull manuscript

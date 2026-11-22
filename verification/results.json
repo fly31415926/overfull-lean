@@ -1676,7 +1676,7 @@
     "Classical.choice",
     "Quot.sound"
   ],
-  "verified_declaration_count": 10764,
+  "verified_declaration_count": 11056,
   "declaration_count_includes_generated_support_lemmas": true,
   "verified_declarations": [
     {
@@ -10402,6 +10402,1122 @@
       "name": "Overfull.BipartiteAugmentingPath.weakenForbidden_vertexSet"
     },
     {
+      "axioms": [],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Data.mk.inj"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Data.mk.injEq"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Data.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.PaletteBounds.coarse_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.PaletteBounds.coarse_upper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.PaletteBounds.fine_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.PaletteBounds.fine_upper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.PaletteBounds.mono_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.PaletteBounds.reserve_upper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.PaletteBounds.selected_half"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Rates.budget"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Rates.cluster"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Rates.coarse"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Rates.fine"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Rates.reserved"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Rates.rho_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Rates.rho_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Rates.total"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Rates.xi_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Rates.xi_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Scaled.r1_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Scaled.r1_upper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Scaled.r_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Scaled.r_upper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.SourcePaletteBounds.coarse"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.SourcePaletteBounds.fine"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.SourcePaletteBounds.fine_total"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.SourcePaletteBounds.overlap"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.SourcePaletteBounds.selected"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.cluster_capacity"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.coarse_palette_eq"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.diamond_exact"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.diamond_lower"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.diamond_upper"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.fine_exact"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.fine_palette_eq"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.fine_quotient"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.palettes"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.palettes._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.palettes._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.palettes._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.palettes._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.q_dvd_r"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.r1_pos"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.r2_eq"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.r3_pos"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.r_pos"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.rdiamond_pos"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.required_period"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.reserved_exact"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.reserved_sub"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.selected_exact"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.small_budget"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.systems_eq"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.systems_upper"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.budgetCoefficient.eq_1"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.coarseTarget._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_cluster_count_threshold"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_cluster_count_threshold._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_cluster_count_threshold._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_cluster_count_threshold._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_cluster_count_threshold._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_cluster_count_threshold._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_cluster_order"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rates"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rates._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rates_fixed_rho"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rates_fixed_rho._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rounding_threshold"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rounding_threshold._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rounding_threshold._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rounding_threshold._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rounding_threshold._simp_1_10"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rounding_threshold._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rounding_threshold._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rounding_threshold._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rounding_threshold._simp_1_7"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rounding_threshold._simp_1_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rounding_threshold._simp_1_9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_data"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_parameter_family"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_parameters"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_parameters._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_parameters._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_source_parameters"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_source_parameters._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_source_parameters._proof_1_2"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.fineTarget._proof_1"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.fineTarget._proof_2"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.fineTarget._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.floor_half"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.make.eq_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.make_budget"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.make_valid"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.make_valid._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.make_valid._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.make_valid._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.make_valid._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.make_valid._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.make_valid._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.make_valid._proof_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.make_valid._proof_1_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.make_valid._proof_1_9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.palette_bounds_of_rates"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.palette_fraction_bounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.palette_fraction_bounds._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.palette_fraction_bounds._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.source_palette_bounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.source_targets_pos"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "name": "Overfull.BipartiteFactorization.AbsorberParameters.spanning_divisibilities"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.CompletionTransport",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.completion_robust"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_error"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_identity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_identity._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_identity._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_identity._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_identity._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_identity._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_upper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.isMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.mk.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.mk.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.remaining.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.remaining_bipartite"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.CompletionTransport",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.remaining_comap"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.remaining_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.robust"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.subfamily_robust"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.CompletionTransport",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.toComplementCompletion._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.CompletionTransport",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.toComplementCompletion._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.CompletionTransport",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.toComplementCompletion._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.verts"
+    },
+    {
       "axioms": [
         "propext",
         "Quot.sound",
@@ -11402,6 +12518,359 @@
       ],
       "module": "Overfull.BipartiteFactorization.BoundaryWeight",
       "name": "Overfull.BipartiteFactorization.BoundaryWeight.weight_nonneg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.classes_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.classes_isMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.classes_isPerfectMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.core_copy_survives_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.core_copy_survives_iff._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.core_copy_used_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.exterior_mem_class"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.exterior_used"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.isMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.mem_used"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.mem_used._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.mem_used._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.mem_used._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.mk.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.mk.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore_degree_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore_degree_eq._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore_degree_eq._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore_exhausts"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore_graph"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingGraph_bipartite"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingGraph_regular"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remaining_degree_add"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remaining_degree_core"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remaining_degree_core._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remaining_degree_outside"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.remaining_degree_outside._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.used.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.used_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.used_degree._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.used_degree._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.used_degree._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.used_degree._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.used_degree._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "name": "Overfull.BipartiteFactorization.ComplementCompletion.verts"
     },
     {
       "axioms": [
@@ -13390,6 +14859,391 @@
     },
     {
       "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.bipartite_robust_of_degree_budget"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.bipartite_robust_of_reserved_degrees"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.core._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.core._proof_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.coreCopy_reserved_iff"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.coreCopy_survives_iff"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.core_almost_regular"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.core_degree_bounds"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.core_degree_bounds._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.core_degree_loss"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.core_degree_loss._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.core_degree_partition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.core_degree_partition._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.core_degree_partition._simp_1_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.core_edgeMap_val"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.core_exterior_degree_add"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.core_exterior_identity"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.core_graph"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.exteriorColoring._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.exteriorOriginal._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.exteriorOriginal._proof_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.exteriorOriginal_survives"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.exteriorOriginal_val"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.exterior_degree_le_original"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.exterior_degree_le_original._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.mem_coreEdges_iff"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.mem_exterior_iff"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.remainingGraph.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.remainingGraph_bipartite"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.remainingGraph_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_add"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_core"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_core._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_core_eq_palette_add"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_core_eq_palette_add._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_outside"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_outside._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.reservedGraph._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.reservedGraph._proof_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.reservedGraph_degree_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.reservedGraph_degree_le._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.reservedGraph_degree_le._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "name": "Overfull.BipartiteFactorization.ReservedCore.reservedGraph_le"
+    },
+    {
+      "axioms": [
         "propext",
         "Quot.sound",
         "Classical.choice"
@@ -13432,6 +15286,354 @@
       ],
       "module": "Overfull.BipartiteFactorization.TwoFamilies",
       "name": "Overfull.BipartiteFactorization.ReservedPaletteConditions.toPaletteSelectionConditions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.arc_asymm"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.arc_from_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.arc_from_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.arc_irrefl"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.arc_subgraph"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.arc_to_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.arc_to_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.backward_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.backward_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.bipartite"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.edge_iff_arc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.forward_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.forward_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.inDegree.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.inDegree_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.inNeighbors.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.inNeighbors_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.inNeighbors_left._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.inNeighbors_left._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.inNeighbors_left._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.inNeighbors_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.inNeighbors_right._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.inNeighbors_right._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.inNeighbors_right._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.mk.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.mk.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.outDegree.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.outDegree_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.outNeighbors.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.outNeighbors_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.outNeighbors_left._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.outNeighbors_left._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.outNeighbors_left._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.outNeighbors_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.outNeighbors_right._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.outNeighbors_right._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.outNeighbors_right._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ResidualOrientation.union_eq"
     },
     {
       "axioms": [
@@ -15209,6 +17411,32 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.exists_regular_bipartite_orientation"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.exists_regular_bipartite_orientation._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.exists_regular_bipartite_orientation._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.BipartiteFactorization.Preferred",
       "name": "Overfull.BipartiteFactorization.exists_representative_edges"
     },
@@ -15238,6 +17466,57 @@
       ],
       "module": "Overfull.BipartiteFactorization.TwoFamilies",
       "name": "Overfull.BipartiteFactorization.exists_two_palette_families"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.UniformRemainder",
+      "name": "Overfull.BipartiteFactorization.exists_uniform_oriented_remainder"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.UniformRemainder",
+      "name": "Overfull.BipartiteFactorization.exists_uniform_oriented_remainder._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedRemainder",
+      "name": "Overfull.BipartiteFactorization.exists_uniform_reserved_remainder"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedRemainder",
+      "name": "Overfull.BipartiteFactorization.exists_uniform_reserved_remainder._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedRemainder",
+      "name": "Overfull.BipartiteFactorization.exists_uniform_reserved_remainder._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ReservedRemainder",
+      "name": "Overfull.BipartiteFactorization.exists_uniform_reserved_remainder._proof_1_3"
     },
     {
       "axioms": [
@@ -15398,6 +17677,15 @@
       ],
       "module": "Overfull.BipartiteFactorization.Palettes",
       "name": "Overfull.BipartiteFactorization.low_core_color_excluded"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.CompletionTransport",
+      "name": "Overfull.BipartiteFactorization.mapped_subgraph_adj"
     },
     {
       "axioms": [
@@ -15565,6 +17853,41 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.BipartiteFactorization.CompletionTransport",
+      "name": "Overfull.BipartiteFactorization.mem_sideFootprint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.CompletionTransport",
+      "name": "Overfull.BipartiteFactorization.mem_sideFootprint._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.CompletionTransport",
+      "name": "Overfull.BipartiteFactorization.mem_sideFootprint._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.CompletionTransport",
+      "name": "Overfull.BipartiteFactorization.mem_sideFootprint._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.BipartiteFactorization.Moves",
       "name": "Overfull.BipartiteFactorization.moved_exceptional_card"
     },
@@ -15682,6 +18005,15 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.ofSimpleGraph_bipartite"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.BipartiteFactorization.Moves",
       "name": "Overfull.BipartiteFactorization.ordinaryPorts_after_move"
     },
@@ -15720,6 +18052,39 @@
       ],
       "module": "Overfull.BipartiteFactorization.Moves",
       "name": "Overfull.BipartiteFactorization.outside_parallel_le_complement"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.pack_fixed_bipartite_forbidden_sets"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.pack_fixed_bipartite_forbidden_sets._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.pack_fixed_bipartite_forbidden_sets._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "Overfull.BipartiteFactorization.pack_fixed_bipartite_forbidden_sets._simp_1_3"
     },
     {
       "axioms": [
@@ -15868,6 +18233,78 @@
       ],
       "module": "Overfull.BipartiteFactorization.PaletteRows",
       "name": "Overfull.BipartiteFactorization.paletteEquiv._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.paletteGraph._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.paletteGraph._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.paletteGraph_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.paletteGraph_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.paletteGraph_disjoint._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.paletteGraph_disjoint._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.paletteGraph_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "Overfull.BipartiteFactorization.paletteGraph_union"
     },
     {
       "axioms": [
@@ -16300,6 +18737,33 @@
       ],
       "module": "Overfull.BipartiteFactorization.Imbalance",
       "name": "Overfull.BipartiteFactorization.selected_degree_balance"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.CompletionTransport",
+      "name": "Overfull.BipartiteFactorization.sideFootprint.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.CompletionTransport",
+      "name": "Overfull.BipartiteFactorization.sideFootprint_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.CompletionTransport",
+      "name": "Overfull.BipartiteFactorization.sideFootprint_load"
     },
     {
       "axioms": [
@@ -84754,6 +87218,41 @@
       "name": "_private.Overfull.BipartiteFactorization.PreferredSampling.0.Overfull.BipartiteFactorization.PreferredSampling.special_lower_tail_of_moments._simp_1_7"
     },
     {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "_private.Overfull.BipartiteFactorization.ResidualOrientation.0.Overfull.BipartiteFactorization.ResidualOrientation.no_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "name": "_private.Overfull.BipartiteFactorization.ResidualOrientation.0.Overfull.BipartiteFactorization.ResidualOrientation.no_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "_private.Overfull.BipartiteFactorization.ResidualPacking.0.Overfull.BipartiteFactorization.padded_incidence_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "name": "_private.Overfull.BipartiteFactorization.ResidualPacking.0.Overfull.BipartiteFactorization.padded_incidence_card._simp_1_1"
+    },
+    {
       "axioms": [],
       "module": "Overfull.BipartiteMatching",
       "name": "_private.Overfull.BipartiteMatching.0.Overfull.matchingOfBijection._proof_1"
@@ -93401,6 +95900,7 @@
     "Overfull.Basic",
     "Overfull.BipartiteAugment",
     "Overfull.BipartiteAugmentation",
+    "Overfull.BipartiteFactorization.AbsorberParameters",
     "Overfull.BipartiteFactorization.Assembly",
     "Overfull.BipartiteFactorization.BlockMembership",
     "Overfull.BipartiteFactorization.BlockProductSampling",
@@ -93411,6 +95911,8 @@
     "Overfull.BipartiteFactorization.BoundaryWeight",
     "Overfull.BipartiteFactorization.Capacity",
     "Overfull.BipartiteFactorization.Coloring",
+    "Overfull.BipartiteFactorization.ComplementCompletion",
+    "Overfull.BipartiteFactorization.CompletionTransport",
     "Overfull.BipartiteFactorization.Exterior",
     "Overfull.BipartiteFactorization.Families",
     "Overfull.BipartiteFactorization.FamilyColoring",
@@ -93430,6 +95932,10 @@
     "Overfull.BipartiteFactorization.PreferredBlocks",
     "Overfull.BipartiteFactorization.PreferredSampling",
     "Overfull.BipartiteFactorization.Remaining",
+    "Overfull.BipartiteFactorization.ReservedCore",
+    "Overfull.BipartiteFactorization.ReservedRemainder",
+    "Overfull.BipartiteFactorization.ResidualOrientation",
+    "Overfull.BipartiteFactorization.ResidualPacking",
     "Overfull.BipartiteFactorization.RoundedPalettes",
     "Overfull.BipartiteFactorization.SampledSelection",
     "Overfull.BipartiteFactorization.Selection",
@@ -93437,6 +95943,7 @@
     "Overfull.BipartiteFactorization.SimultaneousPalettes",
     "Overfull.BipartiteFactorization.TwoFamilies",
     "Overfull.BipartiteFactorization.UniformBudgets",
+    "Overfull.BipartiteFactorization.UniformRemainder",
     "Overfull.BipartiteFactorization.UniformSelection",
     "Overfull.BipartiteMatching",
     "Overfull.BipartiteMatchingCompletion",
@@ -93893,8 +96400,16 @@
     "verified_declaration_count": 545,
     "module_count": 17
   },
+  "residual_factorization_declaration_map": {
+    "path": "verification/residual-factorization-declarations.json",
+    "sha256": "60bd07fd5199eddaa9aa4781bc800cf9b8a860a7c923f389e9b13ddedbcbeabd",
+    "verified_declaration_count": 292,
+    "public_theorem_count": 99,
+    "module_count": 8,
+    "numbered_assertions_completed": 0
+  },
   "source_sha256": {
-    "Overfull.lean": "73c62187904a227d1f351ceb3529bdb6cb86cf96c275e471d6d96bdf16087f94",
+    "Overfull.lean": "010d10d0a3b1426aac88cbab1008d184fad665bdc2d8054248a6c9dc69f0c379",
     "Audit.lean": "76886fd9261a3a7b07660f9a434272c0347130a4013cf57da6e1761a34fc6603",
     "Overfull/Absorption/Bounded.lean": "722ca71ecdc9b0f4c17b400c32d51a284d9eac61211e1a52e448fcc8f5bb2f52",
     "Overfull/Absorption/Core.lean": "1f5f39cd8497918341bf336db7f1735b131c9f564077b158b7245fbb474a0946",
@@ -93924,6 +96439,7 @@
     "Overfull/Basic.lean": "f1e2ab08e339ee36f4d0b57db19985f015b08ec8bdca6ac86c1756f6ad4b47a2",
     "Overfull/BipartiteAugment.lean": "402714cb850401060d006f87ead9f56b45c8c18bd1a9e32917b443b85531ea3d",
     "Overfull/BipartiteAugmentation.lean": "8920707630bdea314758c6d314d9530d5adb9befb8b52e910d9036e8147f7ea7",
+    "Overfull/BipartiteFactorization/AbsorberParameters.lean": "a4fec261e7b23975764ec962fc08ed53bdc0ad3ec892df6f8c7dd7e638d8afd1",
     "Overfull/BipartiteFactorization/Assembly.lean": "395e0c1b13000d43df2534a3d0a97a7ce17e9b74423a3da1dc299f679af841eb",
     "Overfull/BipartiteFactorization/BlockMembership.lean": "ea9da9ce64c7abfdbb06ffe402d9d257f30626bf55e0016d1440d5c07c61ee34",
     "Overfull/BipartiteFactorization/BlockProductSampling.lean": "44a99892f1bdb803eb2eea27bd6a9f5bd39fdd4949bed6fbf52813f0a55d2dc8",
@@ -93934,6 +96450,8 @@
     "Overfull/BipartiteFactorization/BoundaryWeight.lean": "05dcddade01f4156e8b9bbe8a6389f63fcb5a94586320aa02e1b8f94a3ad7dec",
     "Overfull/BipartiteFactorization/Capacity.lean": "ac5b5e080a7cafa518022ad8f3ab4ba485b688b2c4bc5c234923a7996cebf6a1",
     "Overfull/BipartiteFactorization/Coloring.lean": "94f75efee13456048adfc2cae0911efb5e997d08804263eb9f1a3b1a10c93304",
+    "Overfull/BipartiteFactorization/ComplementCompletion.lean": "9d44db0cf53f3760b4cc3b9a3bad8a387a3c3b79fba544a5a7b8e1d11e0d0d6f",
+    "Overfull/BipartiteFactorization/CompletionTransport.lean": "751ea8c17f3ea5701eeadb72c00c4db17168d4189758a680c6b325c113d26160",
     "Overfull/BipartiteFactorization/Exterior.lean": "84c3179815a21811eade53974932f9e6c1bf937344d1ca2621a3a619e88c48f6",
     "Overfull/BipartiteFactorization/Families.lean": "327c1c38b55da67fedefc1b7ae1e88fb144fdf40ec01af3aad94cc08d1f7555e",
     "Overfull/BipartiteFactorization/FamilyColoring.lean": "041be5dcd8859f5ea26f9434330f5ef590ff8de454162df5e439fd9e5e30252e",
@@ -93953,6 +96471,10 @@
     "Overfull/BipartiteFactorization/PreferredBlocks.lean": "c135c9c0e0730948da2046fea6ac9b4110b6d9e57048b2528a85059228f046e6",
     "Overfull/BipartiteFactorization/PreferredSampling.lean": "c49c976679419dc86a1420a4f2710f8b572f09ab52f5c82d4b5827014e9eedaf",
     "Overfull/BipartiteFactorization/Remaining.lean": "fb2ba5fcebae5e60ffc02ef1d576bf3ef052c0eea53f69d8b0c5f2547079ff82",
+    "Overfull/BipartiteFactorization/ReservedCore.lean": "357f72f25165c2fcf893882e006f2b0404f1d16085ae037e9d76aa2143d36c37",
+    "Overfull/BipartiteFactorization/ReservedRemainder.lean": "4930a58d8c2eb14e9fab9d03562f721dd3c76e37c1e47dc0453ff5acd9232cf7",
+    "Overfull/BipartiteFactorization/ResidualOrientation.lean": "443764c2683ed26942756252da259286c7bd432bcca8029dd267f09448d2a039",
+    "Overfull/BipartiteFactorization/ResidualPacking.lean": "4c03b609a6f5cb2d7a667a0ebf26d4b1b6c0624bab5eaa78695695a34e84b1af",
     "Overfull/BipartiteFactorization/RoundedPalettes.lean": "2dac9c8b9aafa5578fbf0549abbaae8adf062c4e73fea911fb59f7c7f23ba39f",
     "Overfull/BipartiteFactorization/SampledSelection.lean": "b9b9a0bf44c2aadadaca3733857c9465ffd436f213cc3c8623fbfdeb254d4da0",
     "Overfull/BipartiteFactorization/Selection.lean": "73c4f47e7b7eb4886bc75ee065841b14506564da60723ae2999947ed048db1ee",
@@ -93960,6 +96482,7 @@
     "Overfull/BipartiteFactorization/SimultaneousPalettes.lean": "dec697f24f6e2d15c9479696a48e98b6564335da1973c3704739093744b402b4",
     "Overfull/BipartiteFactorization/TwoFamilies.lean": "9095ed1d2c269b4bb94674fa979a87186655b67c88fa2db938d0626e0289d886",
     "Overfull/BipartiteFactorization/UniformBudgets.lean": "0e5f9a6d20088346ea3c8669136cd2f2801664e90ab67dae23e0d592bcf0d851",
+    "Overfull/BipartiteFactorization/UniformRemainder.lean": "028cb6719fa4a027b315de6f3b78c2ccf69f0c81553c1628648059b333274c01",
     "Overfull/BipartiteFactorization/UniformSelection.lean": "b9505d0f30686c4e2ebeafbf069a9d70997ed6dadc87447e4b30dbf2d22f9c8f",
     "Overfull/BipartiteMatching.lean": "4dca6f9921bef15a972d9d7a45c4c6d3b4c259a7e5b04420564439a01eeb1b84",
     "Overfull/BipartiteMatchingCompletion.lean": "ad3677ca470eb440da4ca5f3e69c2d3c91da0e27a2fe98a25782f3ef9dc9f154",
@@ -94339,7 +96862,7 @@
     ".github/workflows/lean.yml": "bf5cd8ff5d9c54814b5a0a2a98732a90dae5e4d1a7268954fe9deba218753e83",
     "CIRCULATION_NOTICE.txt": "c8913077edf119bdb2ff790f24c3a27188a14b37d3cbc03121c917aee157a419",
     "LICENSE_BMATCHING.txt": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
-    "README.md": "d256879d07c2a1e486d42f681401b4ab02098e3a66749f777c5caefe87de36d1",
+    "README.md": "a93835fe6e37ed78c886eab21f648cbf82a98bea5aa30e553bb60c8d9c5eae7a",
     "THIRD_PARTY_NOTICES.txt": "9002356e653c2943115b2feeba04713b005074a3d7c283bd894a47d8ca63dcd7",
     "docs/adaptive-packing.md": "eed3d11bde80300511bfa046813661c1617bb0ddc4c131efbed9576a33e53c7e",
     "docs/auxiliary-completion.md": "3c4787a8cef05bcca13c19e7293591878c1ba5a069e0ef22c34907f8b1030453",
@@ -94353,7 +96876,7 @@
     "docs/bmatching-source.json": "2cb433874d3b356dd6ff933d504fa6c61886d255c739eec7da1e870c9bf0dcf8",
     "docs/boundary-extension.md": "10d11aeda918a49bde76c177e20d48ed8ec0686a716d9e959c2613a3788013ae",
     "docs/circulation-source.json": "2b3d7bdf1b05c6b8445e2961efe99fe3eb6100a9c08c1eb3af8bbb4fd28350aa",
-    "docs/coverage.json": "30505d23b48721ef3f2ef1dd06c9e091cbcda840e58ae2319215ef151b0a3044",
+    "docs/coverage.json": "babcdfcf73ba3444943b06ad50fe12e3f3d5034e1da771a562f91f3dc5c44229",
     "docs/critical-partition-consequences.md": "e27d3ee74746f3d635e344b3242a0458923dcb825e2bf47c72110f8254d62deb",
     "docs/dense-link-packing.md": "85643f82684632e6d7bb20b741f9f617c8a1572d98c031537df5113cd671ccd6",
     "docs/exceptional-absorption.md": "5fc25d8f075878fd04257ca6370ed6d70bce2991c8ab36b29d4f80cde4784eb7",
@@ -94365,12 +96888,15 @@
     "docs/frequent-pattern.md": "e0f4b947f96d233224832e6fb71b4e57835f9135be23fca846644406614e5d73",
     "docs/frequent-patterns.md": "37eb2de401abc5ba79e8c22729fcf19b3b347ad0bd173dee640d061201b8eee0",
     "docs/main-theorem.md": "56e6e2aae6abea8e6ba267c417ac3885688a15c2064272f250c1b38424cee3ee",
-    "docs/manuscript-source.json": "0de5471de103c61b6a0f209b1398883924e50bda775bc18d8abeaa358584ffa5",
+    "docs/manuscript-source.json": "c52f1984b05d0dd7393c82c4384837ee5d86a6223e716587988ade7cc012879e",
     "docs/matching-repair.md": "29d0c587ba983a568eb98b40484e531a90e0f96fbd4dc98069bfd12214481cca",
-    "docs/next-verification-target.md": "f5b565f0252658eaff70de7b2ee18a831eb2457ea99f92120b76598798cb035c",
-    "docs/ordinary-factorization.md": "c0d125f89ca170b6bc64b928976897578614f43df8da6f067c0d28c42283174b",
+    "docs/next-verification-target.md": "23ee4b88d822c1b94d306bbe1d43c62ef5b8e46871915deda7d47cbc5f69fb7f",
+    "docs/ordinary-factorization.md": "cd9ddebd81117ff305fed56d83aa595d907ec87aa75b936d151a02668d1edbe3",
     "docs/prescribed-matching.md": "9d37e1f0b7df42dd65fb379d51fb7604793440b56c5adac307e95a486dc510f5",
     "docs/replacement.md": "5643ebc060c37602f7e160f76c021e5cc7edfb576b2151f45248bfcf6ca5484e",
+    "docs/residual-factorization-semantic-review.md": "e5c4b26a99575f8020797cecde1fbbcf26bdc5df520cec52f1d0a036a10087b4",
+    "docs/residual-factorization-source.json": "f73fba9d1a9d9957d1d78b2b3386e61e85b51bf750be37f4e342f9bfebc88b55",
+    "docs/residual-factorization.md": "4d1dbd49f322101dee65b1f75cbbf3eb695ad8b78a792edfdf0d57bd0d88cd77",
     "docs/robust-partition.md": "2e9a2c09786f5edc72e991022aa803ddc55f112c332c19bf95d9a4fb6a03414f",
     "docs/sharpness.md": "7c14f8fc7aa03b83a157c047977264fb054d20bde9890db9f76d167945bf9f79",
     "docs/source-recovery.json": "a533903bf4ebab7dec8baec4ead1d5f0a9f70a825605f2a180befd97289dfb3b",
@@ -94381,7 +96907,7 @@
     "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
     "patches/vizing-lean-4.24.patch": "1f50d4aa24ee428032d14bb90c1705df9906ab90581bf0046eedf49bf3d70c76",
     "scripts/setup_vizing.py": "42ab626c3d40e8012aeed8d90b08a32757c3c5ee844b52ee2dc704e89b276094",
-    "scripts/verify.py": "5398f17f8b2f426b9a7a1b10bbbb1d919493b3a8f3824bd1a1dd1cba9797a274"
+    "scripts/verify.py": "875c7b6fe6242a15d5407633e284aa862dd52f5a6ae642be286c338175528bf5"
   },
-  "scope": "45 of the 69 numbered manuscript assertions have complete checked proofs. The remaining 24, including the main theorem, remain incomplete. This continuation completes Lemma 4.15 from the original regular, non-overfull graph and four odd parts. The fixed sufficient error bound is 1/1000 for both ratios. Every actual joining copy belongs to exactly one actual matching; exactly h pieces project injectively to perfect matchings or three-edge stars, and all surplus pieces project to circuits of exact length two. The proof constructs its caps, singleton quotas, minority pairings, endpoint-compatible augmentations and exact cover internally, using Konig coloring, equitable balancing and Hall pairing. It does not assume or prove the general Fan-Zhang compatible-circuit theorem. Integer and real undivided versions also cover zero degree. All earlier source-recovery mappings and verified results are preserved. The alternate proof of Lemma 4.13 is still counted once. Proposition 2.24 still needs criticality-to-average-degree; Lemmas 4.2 and 4.14 still need the unproved residual factorization; the Section 6 spanning setup, absorber and factorization, Proposition 4.16, and the final structural exclusion remain incomplete. Supporting results and conditional reductions are not counted as completed parent assertions."
+  "scope": "45 of 69 numbered manuscript assertions have complete checked proofs; 24, including the main theorem, remain incomplete. Constructed coupled integer absorber parameters, source palette budgets and divisibilities; exact original-copy reservation, arbitrary-reserve bipartite packing, complete exterior-class completion, exact simple regular remainder, and actual balanced orientation. ReservedRemainder composes these graph steps from an original regular host and explicit reserved copies with a supplied compressed balanced exterior coloring. The geometric spanning setup, special path systems, robust absorber, construction of those stage inputs, and final whole-host factorization remain unproved. No numbered assertion is added. All earlier completed assertions and source-recovery mappings are preserved."
 }

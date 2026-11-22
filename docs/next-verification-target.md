@@ -1,5 +1,19 @@
 # Remaining factorization targets after Lemma 4.15
 
+The [reserved-remainder continuation](residual-factorization.md) adds
+99 public theorem proofs in eight modules and keeps the count at **45/69**.
+The coupled absorber integers, exact palette identities, source palette
+budgets and divisibilities are now constructed. The final small-reserve
+packing and actual balanced orientation are also proved, including a
+uniform theorem deriving the prepared graph from the original regular
+host and its explicit reserved edge copies.
+
+The remaining substantive target is to construct the compatible spanning
+bi-setup, special path systems, and robust absorber. They must supply the
+actual reserved set and compressed balanced remaining-exterior coloring,
+and support the final replacement of auxiliary edges. The new stage
+theorem does not assert those inputs exist from the original hypotheses.
+
 This checkpoint completes [Lemma 4.15](four-odd-decomposition.md), bringing
 the numbered inventory to **45 of 69**, with **24** remaining. Its direct
 proof constructs the required actual joining-edge decomposition from the
@@ -36,15 +50,18 @@ The next Section 6 obligation is the **full compatible spanning setup**:
 
 1. Construct and normalize the actual regularity partition and its balanced
    core moves, then connect the proved integer cluster adjustment to it.
-2. Choose the absorber parameters and positive even palette targets with
-   the exact identities `k₁=2r₃`, `k₂=2r◇` and all required divisibilities.
+2. Connect the now-constructed coupled absorber integers and positive even
+   palette targets to the full geometric hierarchy and actual bi-setup.
+   The exact identities `k₁=2r₃`, `k₂=2r◇`, structural divisibilities and
+   source palette budgets are proved in `AbsorberParameters.lean`.
 3. Construct the final forward-copy boundary after insertions and
    equalization, proving both its normalized-weight and cardinality bounds.
 4. Assemble the original robust-core hypotheses, allowed colors, both
    correction orientations, samples, reserves, and exact copy accounting
    into one uniform construction of both colored families.
-5. Construct the special path systems and robust absorber, then prove the
-   factorization of the actual whole residual multigraph.
+5. Construct the special path systems and robust absorber, apply the proved
+   uniform reserved-remainder packing and orientation, and reconstruct
+   the factorization of the actual whole residual multigraph.
 
 The finite sampling theorems do not themselves supply regularity or the
 absorber. A bipartite core does not make the entire residual host bipartite.

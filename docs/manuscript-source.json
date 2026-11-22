@@ -2329,6 +2329,95 @@
         "three:lem:pattern"
       ],
       "scope": "Full Lemma 4.13. From a simple regular non-overfull graph with three or four robust cores and at most t exceptional vertices, construct actual perfect-matching deletions and absorb every exceptional vertex. The exact residual has no overfull set after every prefix, degree h >= k/(3*b4(t)), and disjoint enlarged robust cores covering all vertices. The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Lemma 4.14, Proposition 4.16, and the manuscript main theorem remain unverified; Lemma 4.15 is now completed by the separate direct FourOdd construction."
+    },
+    {
+      "id": "coupled_absorber_integer_parameters",
+      "documentation": "residual-factorization.md",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_source_parameters",
+        "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_parameter_family",
+        "Overfull.BipartiteFactorization.AbsorberParameters.exists_cluster_order",
+        "Overfull.BipartiteFactorization.AbsorberParameters.spanning_divisibilities",
+        "Overfull.BipartiteFactorization.AbsorberParameters.make_valid"
+      ],
+      "manuscript_locations": [
+        "old:fac:palette-sizes",
+        "old:fac:absorber-counts"
+      ],
+      "scope": "Construct actual positive even absorber palettes with exact coupled identities, source palette budgets, structural divisibilities and uniform positive fractions before graph orders. The main ratio is fixed before the reduced cluster count. Constructs numerical parameters only; the geometric bi-setup, special factors and robust absorber remain unproved."
+    },
+    {
+      "id": "bipartite_arbitrary_reserve_packing",
+      "documentation": "residual-factorization.md",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.pack_fixed_bipartite_forbidden_sets",
+        "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_identity",
+        "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_error",
+        "Overfull.BipartiteFactorization.BipartiteCorePacking.subfamily_robust"
+      ],
+      "manuscript_locations": [
+        "old:fac:range"
+      ],
+      "scope": "Uniform actual matching packing for every fixed positive reserve and arbitrary finite balanced footprint family. Exact unused degree, error, bipartiteness and every-subfamily robustness are proved. Requires the explicit actual robust graph and bounded footprints; does not construct the absorber."
+    },
+    {
+      "id": "actual_reserved_copy_core",
+      "documentation": "residual-factorization.md",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.ReservedCore.mem_coreEdges_iff",
+        "Overfull.BipartiteFactorization.ReservedCore.exteriorOriginal_survives",
+        "Overfull.BipartiteFactorization.ReservedCore.core_exterior_identity",
+        "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_core_eq_palette_add",
+        "Overfull.BipartiteFactorization.ReservedCore.core_degree_bounds",
+        "Overfull.BipartiteFactorization.ReservedCore.bipartite_robust_of_reserved_degrees"
+      ],
+      "manuscript_locations": [
+        "old:degree-accounting"
+      ],
+      "scope": "Construct the surviving embedded core from an explicit set of original reserved copies. Identify surviving exterior copies and derive exact ambient/core degree, retained error and robustness. The reserved set and its degree specifications are explicit inputs; existence of the required absorber reservation is not asserted. Same-palette restriction does not compress the exterior coloring."
+    },
+    {
+      "id": "complete_remaining_exterior_classes",
+      "documentation": "residual-factorization.md",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.ComplementCompletion.classes_isPerfectMatching",
+        "Overfull.BipartiteFactorization.ComplementCompletion.exterior_mem_class",
+        "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore_exhausts",
+        "Overfull.BipartiteFactorization.ComplementCompletion.remainingGraph_regular",
+        "Overfull.BipartiteFactorization.sideFootprint_load",
+        "Overfull.BipartiteFactorization.BipartiteCorePacking.remaining_comap"
+      ],
+      "manuscript_locations": [
+        "old:degree-accounting"
+      ],
+      "scope": "Complete all colors of the actual core complement by actual internal matchings; preserve original labels and prove the exact residual core exhausts every surviving copy. Deterministic actual-copy completion; matching existence is supplied by the separate uniform packing theorem."
+    },
+    {
+      "id": "regular_bipartite_residual_orientation",
+      "documentation": "residual-factorization.md",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.exists_regular_bipartite_orientation",
+        "Overfull.BipartiteFactorization.ResidualOrientation.edge_iff_arc",
+        "Overfull.BipartiteFactorization.ResidualOrientation.arc_asymm",
+        "Overfull.BipartiteFactorization.ResidualOrientation.outDegree_eq",
+        "Overfull.BipartiteFactorization.ResidualOrientation.inDegree_eq"
+      ],
+      "manuscript_locations": [
+        "old:degree-accounting"
+      ],
+      "scope": "Use the checked Konig theorem to construct complementary r-regular graphs and orient every original edge exactly once with actual indegree and outdegree r. Covers the actual simple bipartite residual only, including r=0; its factors do not cover isolated exterior vertices."
+    },
+    {
+      "id": "uniform_actual_reserved_remainder",
+      "documentation": "residual-factorization.md",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.exists_uniform_oriented_remainder",
+        "Overfull.BipartiteFactorization.exists_uniform_reserved_remainder"
+      ],
+      "manuscript_locations": [
+        "old:degree-accounting"
+      ],
+      "scope": "Choose all error and order thresholds before graph/reserved-set data; derive the actual prepared host from original regular degrees and reservation budgets, complete every supplied balanced exterior color and construct an exact simple 2r-regular oriented remainder. The actual reserved set and compressed balanced exterior coloring remain explicit stage inputs. Full spanning setup, special factors, robust absorber and final original-host factorization are not proved."
     }
   ],
   "continuation_source_reviews": [
@@ -2436,6 +2525,20 @@
       "statement_sha256": "95942bcc2f458912f740b61cecad49f74bcfe9e8679ec1a30e2819e039591eb0",
       "matches_pinned_statement_sha256": true,
       "parameter_convention": "The fixed sufficient constant is 1/1000 for both ratios. The natural floor of a supplies the actual integer joining-degree bound. The ratio theorem assumes h>0; undivided variants cover h=0."
+    },
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "numbered_inventory_rebased": false,
+      "sections": [
+        "old:fac:palette-sizes",
+        "old:fac:absorber-counts",
+        "old:fac:range",
+        "old:degree-accounting"
+      ],
+      "documentation": "residual-factorization.md",
+      "source_mapping": "residual-factorization-source.json",
+      "parameter_convention": "The main absorber ratio precedes the reduced cluster count. Uniform errors and thresholds precede every finite host and reserved-copy set. The final remaining-color count is k-2s, distinct from the fine-palette count."
     }
   ],
   "supporting_continuations": [
@@ -2465,6 +2568,19 @@
       "notes": [
         "four-odd-decomposition.md",
         "four-odd-semantic-review.md"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "base_commit": "1b12919971be8518b185aa59832c209170ec0656",
+      "public_theorem_proofs": 99,
+      "new_modules": 8,
+      "numbered_assertions_completed": 0,
+      "complete_numbered_total": 45,
+      "scope": "Constructed coupled integer absorber parameters, source palette budgets and divisibilities; exact original-copy reservation, arbitrary-reserve bipartite packing, complete exterior-class completion, exact simple regular remainder, and actual balanced orientation. ReservedRemainder composes these graph steps from an original regular host and explicit reserved copies with a supplied compressed balanced exterior coloring. The geometric spanning setup, special path systems, robust absorber, construction of those stage inputs, and final whole-host factorization remain unproved. No numbered assertion is added.",
+      "notes": [
+        "residual-factorization.md",
+        "residual-factorization-semantic-review.md"
       ]
     }
   ],

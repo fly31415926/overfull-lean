@@ -65,6 +65,25 @@ def main() -> None:
         if hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]:
             raise SystemExit(f"Four-odd proof source differs from its reviewed manifest: {item['path']}")
 
+    # Supporting continuation: exact sources and every public proof are mapped.
+    residual_source = json.loads((ROOT / "docs/residual-factorization-source.json").read_text())
+    residual_modules = {item["module"]: item for item in residual_source["modules"]}
+    if len(residual_modules) != residual_source["module_count"]:
+        raise SystemExit("The residual-factorization module inventory is inconsistent.")
+    if residual_source["numbered_assertions_completed"] != 0:
+        raise SystemExit("The residual-factorization continuation does not complete a numbered assertion.")
+    for item in residual_modules.values():
+        path = ROOT / item["path"]
+        if hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]:
+            raise SystemExit(f"Residual-factorization source differs from its reviewed manifest: {item['path']}")
+    residual_public_names = {
+        entry["name"] for item in residual_modules.values()
+        for entry in item["public_proof_declarations"]
+    }
+    if (len(residual_public_names) != residual_source["public_theorem_count"]
+            or residual_public_names != set(residual_source["required_proof_declarations"])):
+        raise SystemExit("The residual-factorization public proof mapping is inconsistent.")
+
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
     modules.update({
@@ -1415,6 +1434,8 @@ def main() -> None:
         raise SystemExit("Completed results absent from the axiom audit: " + ", ".join(missing))
     if missing := sorted(set(four_odd_source["required_proof_declarations"]) - audited_names):
         raise SystemExit("Four-odd mapped proof declarations absent from the audit: " + ", ".join(missing))
+    if missing := sorted(residual_public_names - audited_names):
+        raise SystemExit("Residual-factorization public proofs absent from the audit: " + ", ".join(missing))
 
     coverage = json.loads((ROOT / "docs/coverage.json").read_text())
     if (coverage["numbered_assertion_count"] != NUMBERED_ASSERTION_COUNT
@@ -1473,6 +1494,25 @@ def main() -> None:
         "includes_private_and_generated_proofs": True,
         "proof_declaration_map": four_odd_declarations,
     }, indent=2) + "\n", encoding="utf-8")
+    residual_declarations = [
+        {**item, "source_path": residual_modules[item["module"]]["path"],
+         "source_sha256": residual_modules[item["module"]]["sha256"]}
+        for item in sorted(declarations, key=lambda item: item["name"])
+        if item["module"] in residual_modules
+    ]
+    if {item["module"] for item in residual_declarations} != set(residual_modules):
+        raise SystemExit("The residual-factorization proof mapping omits a reviewed module.")
+    residual_map_path = OUTPUT / "residual-factorization-declarations.json"
+    residual_map_path.write_text(json.dumps({
+        "schema_version": 1,
+        "kind": "supporting_continuation",
+        "numbered_assertions_completed": 0,
+        "module_count": len(residual_modules),
+        "public_theorem_count": len(residual_public_names),
+        "verified_declaration_count": len(residual_declarations),
+        "includes_private_and_generated_proofs": True,
+        "proof_declaration_map": residual_declarations,
+    }, indent=2) + "\n", encoding="utf-8")
     results = {
         "status": "partial_formalization",
         "main_theorem_verified": False,
@@ -1501,6 +1541,14 @@ def main() -> None:
             "sha256": hashlib.sha256(four_odd_map_path.read_bytes()).hexdigest(),
             "verified_declaration_count": len(four_odd_declarations),
             "module_count": len(four_odd_modules),
+        },
+        "residual_factorization_declaration_map": {
+            "path": str(residual_map_path.relative_to(ROOT)),
+            "sha256": hashlib.sha256(residual_map_path.read_bytes()).hexdigest(),
+            "verified_declaration_count": len(residual_declarations),
+            "public_theorem_count": len(residual_public_names),
+            "module_count": len(residual_modules),
+            "numbered_assertions_completed": 0,
         },
         "source_sha256": {
             str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
