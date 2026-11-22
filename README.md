@@ -6,17 +6,25 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest continuation: actual sampled correction scores
+## Latest continuation: simultaneous actual palettes and blocks
 
-[The score-mean continuation](docs/bipartite-score-mean.md) adds 31 public
-theorem proofs in five modules. Exact vertex-pair sampling laws and
-exceptional-row moments with variance coefficient one give the full
-capped correction-score mean, its explicit lower tail, and an actual
-block with every prescribed part size when the failure bound is below one.
-Every count retains original multigraph edge copies. These are supporting
-results for Section 6; the completed numbered assertion count remains
-**42 of 69**, and the main theorem remains unverified. The definitive
-build, axiom audit, and exact source hashes are in
+[The simultaneous-selection continuation](docs/bipartite-simultaneous-selection.md)
+adds **75 public theorem proofs in ten modules**. It derives active
+palette-row, correction-pool, ordinary preferred-row, special
+preferred-row, and capped-score failure estimates from the actual graph.
+It constructs all disjoint palettes when their explicit budgets sum to less
+than one. It also constructs actual fine and coarse blocks from compatible
+position sets, retaining every prescribed size, inclusion, disjointness,
+coarse union, and coverage relation. One shared permutation per vertex part
+handles overlapping labels without an independence assumption between them.
+
+These results complete the finite simultaneous-selection stage under the
+stated graph, size, and numerical hypotheses. Uniform realization from the
+original robust-core assumptions, the spanning regularity setup, special
+path systems, the robust absorber, and full factorization remain open.
+The completed numbered assertion count remains **42 of 69**; the main
+theorem remains unverified. The definitive strict build, transitive axiom
+audit, and exact source hashes are in
 [verification/results.json](verification/results.json).
 
 ## The main theorem
@@ -134,10 +142,12 @@ across seven modules; see [bipartite-sampling.md](docs/bipartite-sampling.md).
 The subsequent [score-mean continuation](docs/bipartite-score-mean.md) adds
 31 public proofs of actual pair-inclusion laws, row moments, the full
 score mean, its graph-specific lower tail, and supported block existence.
-The full simultaneous application estimates and failure budget,
-conversion from the allowed population to the palette fractions,
-uniform parameters, and boundary budgets remain to be composed.
-The regularity setup, absorber, and full factorization also remain open.
+The [simultaneous-selection continuation](docs/bipartite-simultaneous-selection.md)
+now derives the application estimates and explicit failure budgets, compares
+the actual allowed population with the palette fractions, and selects the
+palette and block families under those budgets. The graph-specific uniform
+parameter choices, integer realization, boundary budgets, regularity setup,
+absorber, and full factorization remain open.
 The completed numbered count remains **42 of 69**.
 
 ### Two selected families and the exact remaining exterior
@@ -162,9 +172,11 @@ That continuation added 46 named theorem proofs across five modules.
 See [bipartite-two-families.md](docs/bipartite-two-families.md) for the
 exact hypotheses and conclusions. The subsequent
 [sampling continuation](docs/bipartite-sampling.md) proves the finite
-laws, moment bounds, and actual nonlinear score variance. The full
-simultaneous application bounds, uniform parameter and boundary
-budgets, regularity setup, and absorber remain open. The complete
+laws, moment bounds, and actual nonlinear score variance. The
+[simultaneous-selection results](docs/bipartite-simultaneous-selection.md)
+now establish the application bounds and simultaneous families under explicit
+numerical budgets and prescribed positions. Uniform parameter and boundary
+choices, integer realization, the regularity setup, and absorber remain open. The complete
 numbered count remains **42 of 69**.
 
 ### One-palette construction and localized coloring
@@ -189,9 +201,11 @@ for the exact hypotheses, orientation, and remaining obligations.
 That continuation added 40 named theorem proofs. The subsequent
 two-family construction composes these results with exact union,
 deletion, and residual-coloring arguments. The subsequent sampling
-results supply the analytic ingredients and conditional disjoint
-sampling theorem; their complete quantitative palette/block
-instantiation remains open. The complete numbered count remains
+results supply the analytic ingredients. The
+[simultaneous-selection results](docs/bipartite-simultaneous-selection.md)
+instantiate the graph estimates and select both kinds of family under explicit
+numerical budgets and prescribed positions. The remaining uniform realization
+from the robust-core hypotheses is recorded in the next-target document. The complete numbered count remains
 **42 of 69**.
 
 ### Finite localization constructions

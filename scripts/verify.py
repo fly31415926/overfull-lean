@@ -989,6 +989,83 @@ def main() -> None:
         "partition_score_mean_7": "Overfull.BipartiteFactorization.BlockScoreMean.cappedScore_product_lower_tail",
         "partition_score_mean_8": "Overfull.BipartiteFactorization.BlockScoreMean.exists_block_large_score"
 })
+    completed_results.update({
+        "palette_pool_budgets_1": "Overfull.FiniteProbability.upper_tail_of_mean_upper",
+        "palette_pool_budgets_2": "Overfull.FiniteProbability.palette_pool_upper_tail",
+        "palette_pool_budgets_3": "Overfull.BipartiteFactorization.PaletteBudgets.allowed_card_pos",
+        "palette_pool_budgets_4": "Overfull.BipartiteFactorization.PaletteBudgets.allowed_fraction_lower",
+        "palette_pool_budgets_5": "Overfull.BipartiteFactorization.PaletteBudgets.allowed_fraction_le",
+        "palette_pool_budgets_6": "Overfull.BipartiteFactorization.PaletteBudgets.allowed_card_bound_of_retention",
+        "palette_pool_budgets_7": "Overfull.BipartiteFactorization.PaletteBudgets.mean_poolDemand_le_scaled",
+        "palette_pool_budgets_8": "Overfull.BipartiteFactorization.PaletteBudgets.variance_poolDemand_le_scaled",
+        "palette_pool_budgets_9": "Overfull.BipartiteFactorization.PaletteBudgets.poolDemand_upper_tail",
+        "palette_pool_budgets_10": "Overfull.BipartiteFactorization.PaletteBudgets.poolDemand_upper_tail_all",
+        "palette_row_tails_1": "Overfull.BipartiteFactorization.PaletteRowTails.lift_rowColors",
+        "palette_row_tails_2": "Overfull.BipartiteFactorization.PaletteRowTails.rowColors_card",
+        "palette_row_tails_3": "Overfull.BipartiteFactorization.PaletteRowTails.rowColors_card_le",
+        "palette_row_tails_4": "Overfull.BipartiteFactorization.PaletteRowTails.colorsOn_palette_inter",
+        "palette_row_tails_5": "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_card_eq_colors",
+        "palette_row_tails_6": "Overfull.BipartiteFactorization.PaletteRowTails.row_poolDemand_eq_count",
+        "palette_row_tails_7": "Overfull.BipartiteFactorization.PaletteRowTails.row_mean_lower",
+        "palette_row_tails_8": "Overfull.BipartiteFactorization.PaletteRowTails.row_mean_upper",
+        "palette_row_tails_9": "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_tail",
+        "palette_row_tails_10": "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_tail_of_exclusions",
+        "simultaneous_palette_selection_1": "Overfull.BipartiteFactorization.SimultaneousPalettes.not_bad_iff_good",
+        "simultaneous_palette_selection_2": "Overfull.BipartiteFactorization.SimultaneousPalettes.probability_bad_le",
+        "simultaneous_palette_selection_3": "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes",
+        "simultaneous_palette_selection_4": "Overfull.BipartiteFactorization.SimultaneousPalettes.failureBudget_le_uniform",
+        "simultaneous_palette_selection_5": "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes_of_uniform_budget",
+        "simultaneous_palette_selection_6": "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes_of_exclusions",
+        "finite_product_pushforward_1": "Overfull.FiniteProbability.mean_map_of_fibers",
+        "finite_product_pushforward_2": "Overfull.FiniteProbability.probability_map_of_fibers",
+        "finite_product_pushforward_3": "Overfull.FiniteProbability.probability_pi_map_eq",
+        "finite_product_pushforward_4": "Overfull.FiniteProbability.mean_pi_map",
+        "finite_product_pushforward_5": "Overfull.FiniteProbability.probability_pi_map",
+        "shared_partition_permutations_1": "Overfull.PartitionPermutation.sample_card",
+        "shared_partition_permutations_2": "Overfull.PartitionPermutation.mem_sample",
+        "shared_partition_permutations_3": "Overfull.PartitionPermutation.sample_mono",
+        "shared_partition_permutations_4": "Overfull.PartitionPermutation.sample_disjoint",
+        "shared_partition_permutations_5": "Overfull.PartitionPermutation.sample_biUnion",
+        "shared_partition_permutations_6": "Overfull.PartitionPermutation.sample_univ",
+        "shared_partition_permutations_7": "Overfull.PartitionPermutation.weight_nonneg",
+        "shared_partition_permutations_8": "Overfull.PartitionPermutation.sum_weight",
+        "shared_partition_permutations_9": "Overfull.PartitionPermutation.probability_sample",
+        "shared_partition_permutations_10": "Overfull.PartitionPermutation.exists_good_images",
+        "shared_partition_permutations_11": "Overfull.PartitionPermutation.exists_positions",
+        "shared_partition_permutations_12": "Overfull.PartitionPermutation.exists_disjoint_samples",
+        "partition_concentration_1": "Overfull.PartitionConcentration.expectedCount_nonneg",
+        "partition_concentration_2": "Overfull.PartitionConcentration.exponential_moment_le",
+        "partition_concentration_3": "Overfull.PartitionConcentration.exponential_tail",
+        "partition_concentration_4": "Overfull.PartitionConcentration.chernoff_lower",
+        "partition_concentration_5": "Overfull.PartitionConcentration.half_mean_lower_tail",
+        "preferred_row_sampling_1": "Overfull.BipartiteFactorization.PreferredSampling.representative_count",
+        "preferred_row_sampling_2": "Overfull.BipartiteFactorization.PreferredSampling.sum_part_representatives",
+        "preferred_row_sampling_3": "Overfull.BipartiteFactorization.PreferredSampling.expected_representatives",
+        "preferred_row_sampling_4": "Overfull.BipartiteFactorization.PreferredSampling.representative_half_mean_lower_tail",
+        "preferred_row_sampling_5": "Overfull.BipartiteFactorization.PreferredSampling.representative_endpoints_lower_tail",
+        "preferred_row_sampling_6": "Overfull.BipartiteFactorization.PreferredSampling.special_preferred_lower_tail",
+        "preferred_row_sampling_7": "Overfull.BipartiteFactorization.PreferredSampling.representative_edges_count",
+        "preferred_row_sampling_8": "Overfull.BipartiteFactorization.PreferredSampling.representative_edges_lower_tail",
+        "block_selection_budgets_1": "Overfull.BipartiteFactorization.BlockSelectionBudget.not_bad_iff_goodBlock",
+        "block_selection_budgets_2": "Overfull.BipartiteFactorization.BlockSelectionBudget.probability_bad_le",
+        "block_selection_budgets_3": "Overfull.BipartiteFactorization.BlockSelectionBudget.exists_good_block",
+        "simultaneous_block_selection_1": "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_inter_part",
+        "simultaneous_block_selection_2": "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_inter_part_card",
+        "simultaneous_block_selection_3": "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_mono",
+        "simultaneous_block_selection_4": "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_disjoint",
+        "simultaneous_block_selection_5": "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_biUnion",
+        "simultaneous_block_selection_6": "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_univ",
+        "simultaneous_block_selection_7": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_subset",
+        "simultaneous_block_selection_8": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_inter_part_card",
+        "simultaneous_block_selection_9": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_mono",
+        "simultaneous_block_selection_10": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_disjoint",
+        "simultaneous_block_selection_11": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_biUnion",
+        "simultaneous_block_selection_12": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_univ",
+        "simultaneous_block_selection_13": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlocks_realize",
+        "simultaneous_block_selection_14": "Overfull.BipartiteFactorization.SimultaneousBlocks.exists_good_permutations",
+        "simultaneous_block_selection_15": "Overfull.BipartiteFactorization.SimultaneousBlocks.exists_good_blocks",
+        "uniform_sampling_failure_budget_1": "Overfull.FiniteProbability.exists_uniform_failure_budget"
+    })
     audited_names = {item["name"] for item in declarations}
     if missing := sorted(set(completed_results.values()) - audited_names):
         raise SystemExit("Completed results absent from the axiom audit: " + ", ".join(missing))
@@ -1107,9 +1184,16 @@ def main() -> None:
             "internal-copy expectations, exceptional-row means and variances with coefficient "
             "one, and the full capped score mean are now proved. Combining these with the "
             "actual product variance gives the graph-specific lower-tail bound and a "
-            "supported block with every prescribed part size. Simultaneous graph failure "
-            "budgets, uniform parameter and boundary choices, "
-            "regularity setup, absorber, and full factorization remain unformalized. "
+            "supported block with every prescribed part size. Actual palette-row, pool, "
+            "ordinary and special preferred-row tails now give explicit union budgets. "
+            "Disjoint palettes and compatible fine/coarse blocks are constructed "
+            "simultaneously when those budgets sum to less than one. Shared part "
+            "permutations preserve all supplied sizes, inclusions, disjointness, "
+            "coarse unions, and coverage. A scalar theorem chooses uniform error "
+            "and order thresholds for exponential and inverse-order budgets. "
+            "Graph-specific uniform realization, integer sizes and cap floors, "
+            "boundary budgets, regularity setup, special paths, absorber, and "
+            "full factorization remain unformalized. "
             "This audit continues the recovered ordinary-core source; it does not "
             "include the unavailable later terminal checkpoint. The final implication "
             "to the main theorem still assumes LargeCriticalExclusion, which is not "

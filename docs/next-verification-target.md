@@ -24,23 +24,38 @@ actual score mean and graph-specific lower tail, and constructs a
 supported block with every prescribed part size when the explicit failure
 budget is below one.
 
-The next finite obligations are the simultaneous numerical budgets:
+The [simultaneous-selection continuation](bipartite-simultaneous-selection.md)
+now derives every palette-row, pool, ordinary preferred-row, special
+preferred-row, and score failure estimate from actual graph data. It compares
+the allowed-color fraction with `s/k`, constructs all disjoint palettes
+under the explicit total budget, and constructs compatible fine/coarse
+blocks from one shared permutation per part. Exact component sizes,
+inclusions, disjointness, coarse unions, and full-side coverage are retained.
+Neither existence theorem assumes its required probability estimates.
+A separate scalar theorem now chooses an error tolerance and order
+threshold for every fixed budget `u*m*exp(-r*m) + v*a/m + w/m`, with
+`u,v,w ≥ 0` and `r > 0`; the graph-specific coefficient comparisons
+remain to be instantiated.
 
-1. Derive all active palette-row, correction-pool, preferred-edge,
-   and score failure estimates in one experiment, and prove that their
-   total is below one. This includes converting the allowed-color
-   fraction `s/|C|` to bounds in terms of `λ=s/k`, using the actual
-   allowed-set cardinality and original per-color copy bounds.
-2. Construct the required labelled fine parts and coarse unions and
-   choose the uniform parameters, integer sizes, and boundary budgets
-   that establish the finite supply and reserve inequalities from the
-   robust-core input. Floor errors, positive caps, fine-to-coarse
-   losses, and residual coloring reserves must all be discharged.
+The next finite obligation is **uniform realization from the original
+robust-core hypotheses**:
 
-The generic disjoint-sampling existence theorem and the actual score
-mean, variance, lower tail, and single-block existence result are proved.
-The simultaneous event budgets and uniform parameter choices remain
-separate obligations.
+1. Choose positive even palette sizes, labelled fine positions, coarse
+   unions, and common fractions satisfying all divisibility, capacity,
+   and at-least-two-selected-vertices requirements.
+2. Derive the numerical total-budget inequalities using the original
+   active-row lower bounds, large-pool threshold, bounded number of special
+   vertices and palettes, and actual per-color copy bound.
+3. Discharge cap floor errors, boundary exclusions, fine-to-coarse losses,
+   and residual coloring reserves, then feed the resulting finite data
+   into `exists_colored_two_families`.
+
+The probability estimates and compatible simultaneous choices are now
+proved. Their hypotheses still include the exact position families, graph
+bounds, cap intervals, a positive correction pool for the block-score
+application, and the explicit numerical total budgets. The current result
+does not assert that arbitrary robust-core input already supplies all
+these data.
 
 The earlier one-palette and finite localization ingredients are recorded
 in [bipartite-palette-assembly.md](bipartite-palette-assembly.md) and
@@ -51,8 +66,8 @@ the actual balanced exterior coloring, and preservation of the ordinary
 neighborhood conditions under a bounded core move. Their statements,
 proofs, uniform numerical budgets, and recovery provenance are recorded in
 [bipartite-prerequisites.md](bipartite-prerequisites.md). The actual
-bipartite regularity setup, simultaneous data for the localized exterior
-families, special path systems, robust absorber, and final factorization
+bipartite regularity setup, uniform realization of the localized exterior
+family data, special path systems, robust absorber, and final factorization
 remain open.
 
 **Lemma 4.14 remains unverified; the completed assertion count remains

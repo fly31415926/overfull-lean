@@ -163,6 +163,16 @@ import Overfull.Probability.VarianceShift
 import Overfull.BipartiteFactorization.BlockMembership
 import Overfull.BipartiteFactorization.BlockRowMoments
 import Overfull.BipartiteFactorization.BlockScoreMean
+import Overfull.BipartiteFactorization.PaletteBudgets
+import Overfull.BipartiteFactorization.PaletteRowTails
+import Overfull.BipartiteFactorization.SimultaneousPalettes
+import Overfull.Probability.ProductMap
+import Overfull.Probability.PartitionPermutation
+import Overfull.Probability.PartitionConcentration
+import Overfull.BipartiteFactorization.PreferredSampling
+import Overfull.BipartiteFactorization.BlockSelectionBudget
+import Overfull.BipartiteFactorization.SimultaneousBlocks
+import Overfull.Probability.UniformFailureBudget
 /-!
 # Partial formalization of the overfull manuscript
 

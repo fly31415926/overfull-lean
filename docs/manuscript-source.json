@@ -1594,6 +1594,251 @@
         "old:fac:swap-variance"
       ],
       "scope": "Full actual capped correction-score mean at least 7/4*lambda*|P|, lower-tail bound 2^21*a/(p0^3*|P|), and a supported good block with every prescribed part size when the bound is less than one. Exact common fractions, the nonempty-part sample-size condition, exterior degree/cap bounds, and a positive pool for the tail are explicit. Actual moments are derived, not assumed. Simultaneous block/palette choices, integer parameter realization, regularity, absorber and final factorization remain separate."
+    },
+    {
+      "id": "palette_pool_budgets",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/BipartiteFactorization/PaletteBudgets.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.FiniteProbability.upper_tail_of_mean_upper",
+        "Overfull.FiniteProbability.palette_pool_upper_tail",
+        "Overfull.BipartiteFactorization.PaletteBudgets.allowed_card_pos",
+        "Overfull.BipartiteFactorization.PaletteBudgets.allowed_fraction_lower",
+        "Overfull.BipartiteFactorization.PaletteBudgets.allowed_fraction_le",
+        "Overfull.BipartiteFactorization.PaletteBudgets.allowed_card_bound_of_retention",
+        "Overfull.BipartiteFactorization.PaletteBudgets.mean_poolDemand_le_scaled",
+        "Overfull.BipartiteFactorization.PaletteBudgets.variance_poolDemand_le_scaled",
+        "Overfull.BipartiteFactorization.PaletteBudgets.poolDemand_upper_tail",
+        "Overfull.BipartiteFactorization.PaletteBudgets.poolDemand_upper_tail_all"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Compare the actual allowed-color fraction with s/k; derive pool mean and variance bounds and the actual upper tail at 5/4 of the nominal mean, including an empty pool. Positive k, positive sample size for the tail, allowed cardinality at least 32k/33, and the actual per-color copy bound are explicit inputs."
+    },
+    {
+      "id": "palette_row_tails",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/BipartiteFactorization/PaletteRowTails.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.PaletteRowTails.lift_rowColors",
+        "Overfull.BipartiteFactorization.PaletteRowTails.rowColors_card",
+        "Overfull.BipartiteFactorization.PaletteRowTails.rowColors_card_le",
+        "Overfull.BipartiteFactorization.PaletteRowTails.colorsOn_palette_inter",
+        "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_card_eq_colors",
+        "Overfull.BipartiteFactorization.PaletteRowTails.row_poolDemand_eq_count",
+        "Overfull.BipartiteFactorization.PaletteRowTails.row_mean_lower",
+        "Overfull.BipartiteFactorization.PaletteRowTails.row_mean_upper",
+        "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_tail",
+        "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_tail_of_exclusions"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Identify actual row demand with the hypergeometric count of retained incident colors and derive failure probability at most 2*exp(-lambda*c/4096) for the 15/16 and 2 row bounds. The proper coloring, allowed population and retained-row bound are explicit; the exclusion wrapper derives them from actual excluded colors. No row mean or probability estimate is assumed."
+    },
+    {
+      "id": "simultaneous_palette_selection",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/BipartiteFactorization/SimultaneousPalettes.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.not_bad_iff_good",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.probability_bad_le",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.failureBudget_le_uniform",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes_of_uniform_budget",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes_of_exclusions"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Derive the complete active-row and correction-pool union bound and construct actual pairwise disjoint palettes of prescribed sizes satisfying every graph inequality. Positive prescribed sizes sum to at most the allowed cardinality. The explicit total numerical failure budget is below one. Empty pools are supported; the uniform lower-pool-bound corollary instead assumes positive pool sizes."
+    },
+    {
+      "id": "finite_product_pushforward",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/Probability/ProductMap.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.FiniteProbability.mean_map_of_fibers",
+        "Overfull.FiniteProbability.probability_map_of_fibers",
+        "Overfull.FiniteProbability.probability_pi_map_eq",
+        "Overfull.FiniteProbability.mean_pi_map",
+        "Overfull.FiniteProbability.probability_pi_map"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Push arbitrary real finite weights through maps, including product maps, and transfer arbitrary joint-event probabilities from exact coordinate fiber masses. The fiber identities are explicit algebraic premises; no independence of the event is assumed, and normalization is supplied separately in probability applications."
+    },
+    {
+      "id": "shared_partition_permutations",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/Probability/PartitionPermutation.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.PartitionPermutation.sample_card",
+        "Overfull.PartitionPermutation.mem_sample",
+        "Overfull.PartitionPermutation.sample_mono",
+        "Overfull.PartitionPermutation.sample_disjoint",
+        "Overfull.PartitionPermutation.sample_biUnion",
+        "Overfull.PartitionPermutation.sample_univ",
+        "Overfull.PartitionPermutation.weight_nonneg",
+        "Overfull.PartitionPermutation.sum_weight",
+        "Overfull.PartitionPermutation.probability_sample",
+        "Overfull.PartitionPermutation.exists_good_images",
+        "Overfull.PartitionPermutation.exists_positions",
+        "Overfull.PartitionPermutation.exists_disjoint_samples"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Prove the exact independent fixed-size marginal law of each position tuple under one shared permutation per part, then select all good images simultaneously and preserve sizes, inclusion, disjointness, and exact finite unions. Labels may overlap. The generic existence theorem assumes marginal failure bounds and their total below one; graph wrappers derive those bounds. Empty coordinate populations are normalized correctly."
+    },
+    {
+      "id": "partition_concentration",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/Probability/PartitionConcentration.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.PartitionConcentration.expectedCount_nonneg",
+        "Overfull.PartitionConcentration.exponential_moment_le",
+        "Overfull.PartitionConcentration.exponential_tail",
+        "Overfull.PartitionConcentration.chernoff_lower",
+        "Overfull.PartitionConcentration.half_mean_lower_tail"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Derive exponential moments and the lower Chernoff tail for counts in independent fixed-size samples across arbitrary finite parts. Sampling sizes fit their actual populations. The expected count is calculated from the finite experiment; empty coordinate populations are allowed."
+    },
+    {
+      "id": "preferred_row_sampling",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/BipartiteFactorization/PreferredSampling.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_count",
+        "Overfull.BipartiteFactorization.PreferredSampling.sum_part_representatives",
+        "Overfull.BipartiteFactorization.PreferredSampling.expected_representatives",
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_half_mean_lower_tail",
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_endpoints_lower_tail",
+        "Overfull.BipartiteFactorization.PreferredSampling.special_preferred_lower_tail",
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_edges_count",
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_edges_lower_tail"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Derive the actual representative-edge lower tail exp(-beta*p*c/48) and special preferred-row lower tail 18*a/(p*c), retaining original multigraph copies. Representatives have distinct other endpoints and meet the stated size bound. The special row has positive c and at least c/2 copies into its preferred side. Common sample fractions and the exterior degree bound are explicit."
+    },
+    {
+      "id": "block_selection_budgets",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/BipartiteFactorization/BlockSelectionBudget.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.BlockSelectionBudget.not_bad_iff_goodBlock",
+        "Overfull.BipartiteFactorization.BlockSelectionBudget.probability_bad_le",
+        "Overfull.BipartiteFactorization.BlockSelectionBudget.exists_good_block"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Combine ordinary and special preferred-row estimates with the actual capped-score tail; construct a supported good block with every prescribed part size when the explicit graph-derived budget is below one. Exact common fractions, at least two selections in each nonempty part, graph degree/representative/row/cap bounds, and a positive correction pool are explicit. Probability and moment estimates are proved internally."
+    },
+    {
+      "id": "simultaneous_block_selection",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/BipartiteFactorization/SimultaneousBlocks.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_inter_part",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_inter_part_card",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_mono",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_disjoint",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_biUnion",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_univ",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_subset",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_inter_part_card",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_mono",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_disjoint",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_biUnion",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_univ",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlocks_realize",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.exists_good_permutations",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.exists_good_blocks"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Construct actual fine/coarse vertex blocks satisfying all graph inequalities and retaining every supplied component size, inclusion, disjointness, coarse union, and full-side coverage relation under shared part permutations. Compatible position sets, exact sample fractions, at least two selections in each nonempty part, all graph/cap hypotheses, a positive correction pool, and an explicit total budget below one remain inputs. Coarse positions may overlap fine positions. No inter-label independence is assumed."
+    },
+    {
+      "id": "uniform_sampling_failure_budget",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/Probability/UniformFailureBudget.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.FiniteProbability.exists_uniform_failure_budget"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "For fixed u,v,w>=0 and r>0, choose epsilon>0 and an integer threshold before m and a so that u*m*exp(-r*m)+v*a/m+w/m<1 for every sufficiently large m and 0<=a<=epsilon*m. This scalar theorem does not itself derive the coefficient domination or integer parameter choices from the manuscript robust-core hypotheses."
     }
   ],
   "continuation_source_reviews": [
@@ -1639,6 +1884,19 @@
         "old:fac:swap-variance"
       ],
       "documentation": "bipartite-sampling.md",
+      "numbered_inventory_rebased": false
+    },
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "sections": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "documentation": "bipartite-simultaneous-selection.md",
       "numbered_inventory_rebased": false
     }
   ]

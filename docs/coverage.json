@@ -9,7 +9,7 @@
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
   "fully_verified_numbered_assertion_count": 42,
-  "scope": "42 of the 69 numbered assertions have complete checked proofs. The remaining 27, including the main theorem, have no complete proof here. Checked components and conditional implications do not count as complete proofs of their parent assertions. Lemma 2.2 is represented by its finite probability laws. Three new supporting results for Section 6 prove reverse robustness, actual balanced exterior data, and bounded-move neighborhood conditions. This branch continues the exactly recovered ordinary-core snapshot; the unavailable later terminal checkpoint is not part of this audit. Further finite localization results prove preferred representatives, allowed-color preparation, capped correction selection after arbitrary deletion, and selected-graph colorability with localized balanced footprints. They do not complete any additional numbered assertion. The deterministic one-palette composition now derives actual palette identities and correction accounting, then constructs one selected graph and its localized coloring from explicit finite row supplies and a surviving correction score. No additional numbered assertion is completed. Both correction orientations, arbitrary finite selected families, and the exact remaining exterior are now constructed and colored from explicit original-data finite supplies. The fine family is selected first; original coarse reserves absorb its exact row and correction-pool use. All selected copies are pairwise disjoint, the residual exceptional degree is k minus the total selected palette size, and the combined footprint load at every core vertex equals its original exterior degree. Simultaneous palette/block estimates, graph-independent parameter and boundary-budget choices, regularity setup, special path systems, robust absorber, and full host factorization remain unformalized; no additional numbered assertion is completed. Finite sampling results now prove exact permutation marginals and actual disjoint good samples from marginal failure bounds, weighted uniform-subset moments, capped-mean and numerical tail estimates, and weighted swap variance for single and arbitrary finite product samples. The actual allowed-color palette counts retain the correct population denominator. Actual capped multigraph scores satisfy the derived influence and variance bounds, including independent sampling inside disjoint parts. The full actual partition-sample score mean, coefficient-one exceptional-row moments, graph-specific lower tail, and supported good-block existence are now proved. Simultaneous graph-specific failure budgets, uniform parameter and boundary choices, regularity setup, special path systems, absorber, and final host factorization remain unformalized. No additional numbered assertion is completed.",
+  "scope": "42 of the 69 numbered assertions have complete checked proofs. The remaining 27, including the main theorem, have no complete proof here. Checked components and conditional implications do not count as complete proofs of their parent assertions. Lemma 2.2 is represented by its finite probability laws. This branch continues the recovered ordinary-core and published bipartite continuation; the unavailable later terminal checkpoint is not part of this audit. Checked supporting results prove reverse bipartite robustness, actual balanced exterior coloring, bounded-core-move neighborhood conditions, preferred representatives, and actual allowed-color preparation. Palette identities, signed correction accounting, selection after pool-specific adaptive deletions, and preferred filling construct both selected families and their exact remaining exterior with actual localized colorings. Finite sampling proofs derive the actual weighted moments, product score mean and variance, row/pool/preferred-edge tails, and explicit graph-specific union budgets. The simultaneous palette theorem constructs disjoint allowed palettes of prescribed positive sizes. The simultaneous block theorem uses shared part permutations to construct actual blocks preserving prescribed component sizes, inclusions, disjointness, coarse unions, and coverage. Both existence theorems require their explicit total numerical budgets to be below one; block sampling also requires prescribed exact fractions, at least two selections in nonempty parts, graph/cap bounds, and a positive correction pool. A separate scalar theorem chooses a uniform error tolerance and order threshold for budgets of the form u*m*exp(-r*m)+v*a/m+w/m. Deriving all these finite hypotheses from the original robust-core input, including integer partitions, positive even palette sizes, cap floors, boundary losses, and residual reserves, remains open. The spanning regularity setup, special path systems, robust absorber, and full host factorization remain unformalized. No additional numbered assertion is completed.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -3658,6 +3658,231 @@
         "old:fac:row-sampling",
         "old:fac:swap-variance"
       ]
+    },
+    {
+      "id": "palette_pool_budgets",
+      "kind": "finite_probability_result",
+      "description": "Compare the actual allowed-color fraction with s/k; derive pool mean and variance bounds and the actual upper tail at 5/4 of the nominal mean, including an empty pool.",
+      "lean_declarations": [
+        "Overfull.FiniteProbability.upper_tail_of_mean_upper",
+        "Overfull.FiniteProbability.palette_pool_upper_tail",
+        "Overfull.BipartiteFactorization.PaletteBudgets.allowed_card_pos",
+        "Overfull.BipartiteFactorization.PaletteBudgets.allowed_fraction_lower",
+        "Overfull.BipartiteFactorization.PaletteBudgets.allowed_fraction_le",
+        "Overfull.BipartiteFactorization.PaletteBudgets.allowed_card_bound_of_retention",
+        "Overfull.BipartiteFactorization.PaletteBudgets.mean_poolDemand_le_scaled",
+        "Overfull.BipartiteFactorization.PaletteBudgets.variance_poolDemand_le_scaled",
+        "Overfull.BipartiteFactorization.PaletteBudgets.poolDemand_upper_tail",
+        "Overfull.BipartiteFactorization.PaletteBudgets.poolDemand_upper_tail_all"
+      ],
+      "scope_limit": "Positive k, positive sample size for the tail, allowed cardinality at least 32k/33, and the actual per-color copy bound are explicit inputs.",
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ]
+    },
+    {
+      "id": "palette_row_tails",
+      "kind": "finite_probability_result",
+      "description": "Identify actual row demand with the hypergeometric count of retained incident colors and derive failure probability at most 2*exp(-lambda*c/4096) for the 15/16 and 2 row bounds.",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.PaletteRowTails.lift_rowColors",
+        "Overfull.BipartiteFactorization.PaletteRowTails.rowColors_card",
+        "Overfull.BipartiteFactorization.PaletteRowTails.rowColors_card_le",
+        "Overfull.BipartiteFactorization.PaletteRowTails.colorsOn_palette_inter",
+        "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_card_eq_colors",
+        "Overfull.BipartiteFactorization.PaletteRowTails.row_poolDemand_eq_count",
+        "Overfull.BipartiteFactorization.PaletteRowTails.row_mean_lower",
+        "Overfull.BipartiteFactorization.PaletteRowTails.row_mean_upper",
+        "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_tail",
+        "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_tail_of_exclusions"
+      ],
+      "scope_limit": "The proper coloring, allowed population and retained-row bound are explicit; the exclusion wrapper derives them from actual excluded colors. No row mean or probability estimate is assumed.",
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ]
+    },
+    {
+      "id": "simultaneous_palette_selection",
+      "kind": "finite_probability_result",
+      "description": "Derive the complete active-row and correction-pool union bound and construct actual pairwise disjoint palettes of prescribed sizes satisfying every graph inequality.",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.not_bad_iff_good",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.probability_bad_le",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.failureBudget_le_uniform",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes_of_uniform_budget",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes_of_exclusions"
+      ],
+      "scope_limit": "Positive prescribed sizes sum to at most the allowed cardinality. The explicit total numerical failure budget is below one. Empty pools are supported; the uniform lower-pool-bound corollary instead assumes positive pool sizes.",
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ]
+    },
+    {
+      "id": "finite_product_pushforward",
+      "kind": "finite_probability_result",
+      "description": "Push arbitrary real finite weights through maps, including product maps, and transfer arbitrary joint-event probabilities from exact coordinate fiber masses.",
+      "lean_declarations": [
+        "Overfull.FiniteProbability.mean_map_of_fibers",
+        "Overfull.FiniteProbability.probability_map_of_fibers",
+        "Overfull.FiniteProbability.probability_pi_map_eq",
+        "Overfull.FiniteProbability.mean_pi_map",
+        "Overfull.FiniteProbability.probability_pi_map"
+      ],
+      "scope_limit": "The fiber identities are explicit algebraic premises; no independence of the event is assumed, and normalization is supplied separately in probability applications.",
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ]
+    },
+    {
+      "id": "shared_partition_permutations",
+      "kind": "finite_probability_result",
+      "description": "Prove the exact independent fixed-size marginal law of each position tuple under one shared permutation per part, then select all good images simultaneously and preserve sizes, inclusion, disjointness, and exact finite unions.",
+      "lean_declarations": [
+        "Overfull.PartitionPermutation.sample_card",
+        "Overfull.PartitionPermutation.mem_sample",
+        "Overfull.PartitionPermutation.sample_mono",
+        "Overfull.PartitionPermutation.sample_disjoint",
+        "Overfull.PartitionPermutation.sample_biUnion",
+        "Overfull.PartitionPermutation.sample_univ",
+        "Overfull.PartitionPermutation.weight_nonneg",
+        "Overfull.PartitionPermutation.sum_weight",
+        "Overfull.PartitionPermutation.probability_sample",
+        "Overfull.PartitionPermutation.exists_good_images",
+        "Overfull.PartitionPermutation.exists_positions",
+        "Overfull.PartitionPermutation.exists_disjoint_samples"
+      ],
+      "scope_limit": "Labels may overlap. The generic existence theorem assumes marginal failure bounds and their total below one; graph wrappers derive those bounds. Empty coordinate populations are normalized correctly.",
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ]
+    },
+    {
+      "id": "partition_concentration",
+      "kind": "finite_probability_result",
+      "description": "Derive exponential moments and the lower Chernoff tail for counts in independent fixed-size samples across arbitrary finite parts.",
+      "lean_declarations": [
+        "Overfull.PartitionConcentration.expectedCount_nonneg",
+        "Overfull.PartitionConcentration.exponential_moment_le",
+        "Overfull.PartitionConcentration.exponential_tail",
+        "Overfull.PartitionConcentration.chernoff_lower",
+        "Overfull.PartitionConcentration.half_mean_lower_tail"
+      ],
+      "scope_limit": "Sampling sizes fit their actual populations. The expected count is calculated from the finite experiment; empty coordinate populations are allowed.",
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ]
+    },
+    {
+      "id": "preferred_row_sampling",
+      "kind": "finite_probability_result",
+      "description": "Derive the actual representative-edge lower tail exp(-beta*p*c/48) and special preferred-row lower tail 18*a/(p*c), retaining original multigraph copies.",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_count",
+        "Overfull.BipartiteFactorization.PreferredSampling.sum_part_representatives",
+        "Overfull.BipartiteFactorization.PreferredSampling.expected_representatives",
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_half_mean_lower_tail",
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_endpoints_lower_tail",
+        "Overfull.BipartiteFactorization.PreferredSampling.special_preferred_lower_tail",
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_edges_count",
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_edges_lower_tail"
+      ],
+      "scope_limit": "Representatives have distinct other endpoints and meet the stated size bound. The special row has positive c and at least c/2 copies into its preferred side. Common sample fractions and the exterior degree bound are explicit.",
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ]
+    },
+    {
+      "id": "block_selection_budgets",
+      "kind": "finite_probability_result",
+      "description": "Combine ordinary and special preferred-row estimates with the actual capped-score tail; construct a supported good block with every prescribed part size when the explicit graph-derived budget is below one.",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.BlockSelectionBudget.not_bad_iff_goodBlock",
+        "Overfull.BipartiteFactorization.BlockSelectionBudget.probability_bad_le",
+        "Overfull.BipartiteFactorization.BlockSelectionBudget.exists_good_block"
+      ],
+      "scope_limit": "Exact common fractions, at least two selections in each nonempty part, graph degree/representative/row/cap bounds, and a positive correction pool are explicit. Probability and moment estimates are proved internally.",
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ]
+    },
+    {
+      "id": "simultaneous_block_selection",
+      "kind": "finite_probability_result",
+      "description": "Construct actual fine/coarse vertex blocks satisfying all graph inequalities and retaining every supplied component size, inclusion, disjointness, coarse union, and full-side coverage relation under shared part permutations.",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_inter_part",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_inter_part_card",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_mono",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_disjoint",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_biUnion",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_univ",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_subset",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_inter_part_card",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_mono",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_disjoint",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_biUnion",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_univ",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlocks_realize",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.exists_good_permutations",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.exists_good_blocks"
+      ],
+      "scope_limit": "Compatible position sets, exact sample fractions, at least two selections in each nonempty part, all graph/cap hypotheses, a positive correction pool, and an explicit total budget below one remain inputs. Coarse positions may overlap fine positions. No inter-label independence is assumed.",
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ]
+    },
+    {
+      "id": "uniform_sampling_failure_budget",
+      "kind": "finite_probability_result",
+      "description": "For fixed u,v,w>=0 and r>0, choose epsilon>0 and an integer threshold before m and a so that u*m*exp(-r*m)+v*a/m+w/m<1 for every sufficiently large m and 0<=a<=epsilon*m.",
+      "lean_declarations": [
+        "Overfull.FiniteProbability.exists_uniform_failure_budget"
+      ],
+      "scope_limit": "This scalar theorem does not itself derive the coefficient domination or integer parameter choices from the manuscript robust-core hypotheses.",
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ]
     }
   ],
   "numbered_assertions": [
@@ -5134,10 +5359,20 @@
         "finite_variance_translation",
         "partition_sample_membership",
         "partition_row_moments",
-        "partition_score_mean"
+        "partition_score_mean",
+        "palette_pool_budgets",
+        "palette_row_tails",
+        "simultaneous_palette_selection",
+        "finite_product_pushforward",
+        "shared_partition_permutations",
+        "partition_concentration",
+        "preferred_row_sampling",
+        "block_selection_budgets",
+        "simultaneous_block_selection",
+        "uniform_sampling_failure_budget"
       ],
       "imported_statement": false,
-      "formalization_scope": "Checked supporting results prove reverse bipartite robustness, actual balanced exterior coloring, bounded-core-move neighborhood conditions, preferred representatives, and threshold/allowed-color preparation. Actual palette rows and inherited compressed colors, the signed correction imbalance, capped correction selection after pool-specific adaptive deletion, and unused preferred filling are proved. Both correction orientations, arbitrary finite selected families, and the exact remaining exterior are now constructed and colored from explicit original-data finite supplies. The fine family is selected first; original coarse reserves absorb its exact row and correction-pool use. All selected copies are pairwise disjoint, the residual exceptional degree is k minus the total selected palette size, and the combined footprint load at every core vertex equals its original exterior degree. Simultaneous palette/block estimates, graph-independent parameter and boundary-budget choices, regularity setup, special path systems, robust absorber, and full host factorization remain unformalized; no additional numbered assertion is completed. Finite sampling results now prove exact permutation marginals and actual disjoint good samples from marginal failure bounds, weighted uniform-subset moments, capped-mean and numerical tail estimates, and weighted swap variance for single and arbitrary finite product samples. The actual allowed-color palette counts retain the correct population denominator. Actual capped multigraph scores satisfy the derived influence and variance bounds, including independent sampling inside disjoint parts. The full actual partition-sample score mean, coefficient-one exceptional-row moments, graph-specific lower tail, and supported good-block existence are now proved. Simultaneous graph-specific failure budgets, uniform parameter and boundary choices, regularity setup, special path systems, absorber, and final host factorization remain unformalized. No additional numbered assertion is completed."
+      "formalization_scope": "Checked supporting results prove reverse bipartite robustness, actual balanced exterior coloring, bounded-core-move neighborhood conditions, preferred representatives, and actual allowed-color preparation. Palette identities, signed correction accounting, selection after pool-specific adaptive deletions, and preferred filling construct both selected families and their exact remaining exterior with actual localized colorings. Finite sampling proofs derive the actual weighted moments, product score mean and variance, row/pool/preferred-edge tails, and explicit graph-specific union budgets. The simultaneous palette theorem constructs disjoint allowed palettes of prescribed positive sizes. The simultaneous block theorem uses shared part permutations to construct actual blocks preserving prescribed component sizes, inclusions, disjointness, coarse unions, and coverage. Both existence theorems require their explicit total numerical budgets to be below one; block sampling also requires prescribed exact fractions, at least two selections in nonempty parts, graph/cap bounds, and a positive correction pool. A separate scalar theorem chooses a uniform error tolerance and order threshold for budgets of the form u*m*exp(-r*m)+v*a/m+w/m. Deriving all these finite hypotheses from the original robust-core input, including integer partitions, positive even palette sizes, cap floors, boundary losses, and residual reserves, remains open. The spanning regularity setup, special path systems, robust absorber, and full host factorization remain unformalized. No additional numbered assertion is completed."
     },
     {
       "number": "6.2",
@@ -5182,10 +5417,20 @@
         "finite_variance_translation",
         "partition_sample_membership",
         "partition_row_moments",
-        "partition_score_mean"
+        "partition_score_mean",
+        "palette_pool_budgets",
+        "palette_row_tails",
+        "simultaneous_palette_selection",
+        "finite_product_pushforward",
+        "shared_partition_permutations",
+        "partition_concentration",
+        "preferred_row_sampling",
+        "block_selection_budgets",
+        "simultaneous_block_selection",
+        "uniform_sampling_failure_budget"
       ],
       "imported_statement": false,
-      "formalization_scope": "Checked supporting results prove reverse bipartite robustness, actual balanced exterior coloring, bounded-core-move neighborhood conditions, preferred representatives, and threshold/allowed-color preparation. Actual palette rows and inherited compressed colors, the signed correction imbalance, capped correction selection after pool-specific adaptive deletion, and unused preferred filling are proved. Both correction orientations, arbitrary finite selected families, and the exact remaining exterior are now constructed and colored from explicit original-data finite supplies. The fine family is selected first; original coarse reserves absorb its exact row and correction-pool use. All selected copies are pairwise disjoint, the residual exceptional degree is k minus the total selected palette size, and the combined footprint load at every core vertex equals its original exterior degree. Simultaneous palette/block estimates, graph-independent parameter and boundary-budget choices, regularity setup, special path systems, robust absorber, and full host factorization remain unformalized; no additional numbered assertion is completed. Finite sampling results now prove exact permutation marginals and actual disjoint good samples from marginal failure bounds, weighted uniform-subset moments, capped-mean and numerical tail estimates, and weighted swap variance for single and arbitrary finite product samples. The actual allowed-color palette counts retain the correct population denominator. Actual capped multigraph scores satisfy the derived influence and variance bounds, including independent sampling inside disjoint parts. The full actual partition-sample score mean, coefficient-one exceptional-row moments, graph-specific lower tail, and supported good-block existence are now proved. Simultaneous graph-specific failure budgets, uniform parameter and boundary choices, regularity setup, special path systems, absorber, and final host factorization remain unformalized. No additional numbered assertion is completed."
+      "formalization_scope": "Checked supporting results prove reverse bipartite robustness, actual balanced exterior coloring, bounded-core-move neighborhood conditions, preferred representatives, and actual allowed-color preparation. Palette identities, signed correction accounting, selection after pool-specific adaptive deletions, and preferred filling construct both selected families and their exact remaining exterior with actual localized colorings. Finite sampling proofs derive the actual weighted moments, product score mean and variance, row/pool/preferred-edge tails, and explicit graph-specific union budgets. The simultaneous palette theorem constructs disjoint allowed palettes of prescribed positive sizes. The simultaneous block theorem uses shared part permutations to construct actual blocks preserving prescribed component sizes, inclusions, disjointness, coarse unions, and coverage. Both existence theorems require their explicit total numerical budgets to be below one; block sampling also requires prescribed exact fractions, at least two selections in nonempty parts, graph/cap bounds, and a positive correction pool. A separate scalar theorem chooses a uniform error tolerance and order threshold for budgets of the form u*m*exp(-r*m)+v*a/m+w/m. Deriving all these finite hypotheses from the original robust-core input, including integer partitions, positive even palette sizes, cap floors, boundary losses, and residual reserves, remains open. The spanning regularity setup, special path systems, robust absorber, and full host factorization remain unformalized. No additional numbered assertion is completed."
     },
     {
       "number": "6.3",
@@ -5469,7 +5714,8 @@
     "Lemma 4.13 is proved by common fixed-label compression of an actual fractional matching distribution, one simultaneous rounding/discard plan, actual edge-disjoint boundary realization, fixed certified core completion, actual cut accounting and no-overfull safety at every prefix, and complete absorption from reserved distinct neighbors. The positive output robust parameter precedes the requested relative error. The final result includes the linear integer reserve, actual enlarged-part parity, and actual pair and cut supply for the matching or three-edge star in the four-odd-part case. The larger explicit discard coefficient 2^(t+4)*(t+10) overcounts the finite test family without changing b4(t) or the retained fraction. The completed inventory is 42 of 69; Lemma 4.14 and the main theorem remain unverified.",
     "The complete constructive boundary-extension reduction is proved by Overfull.boundary_extension_reduction: uniform parameters precede the graph and prescribed coloring; actual completed triple copies give an exact residual robust core, singleton boundary, and even regular no-overfull apex contraction; an actual coloring of that precise contraction reconstructs the exact original boundary labels. The one-apex coloring itself remains unproved, so Lemma 4.14 and the main theorem remain unverified and the completed count stays 42 of 69. The proved even-core complement reduction permits an eventual application of ordinary-core Lemma 4.2 with s=2, bypassing the general fixed-pattern/Fan-Zhang steps only for this specialization.",
     "The ordinary-core supporting development now constructs a quantitative paired cut, one robust reserve with simultaneous side-degree control, a feasible constrained internal coloring, and an actual repaired first group of completed colors with parameters chosen before the graph. Exact residual-copy accounting, palette compression, a robust embedded crossing core, and a coloring of its complement are proved. Reconstructing a full host coloring still takes an actual full-residual coloring as an explicit input. These supporting results do not complete Lemma 4.2, Lemma 4.14, or the main theorem; the completed numbered count remains 42 of 69.",
-    "The specialized forbidden-label step is proved by permutation-fiber counting and sparse-conflict greedy repair, with Vizing providing the initial simple-graph coloring. This is not a proof of the general Kahn list-edge-coloring theorem. The robust decomposition input in Theorem 6.1 remains unformalized. The pinned November 20, 2026 manuscript source and its statement inventory are unchanged."
+    "The specialized forbidden-label step is proved by permutation-fiber counting and sparse-conflict greedy repair, with Vizing providing the initial simple-graph coloring. This is not a proof of the general Kahn list-edge-coloring theorem. The robust decomposition input in Theorem 6.1 remains unformalized. The pinned November 20, 2026 manuscript source and its statement inventory are unchanged.",
+    "The simultaneous-selection continuation adds 75 public theorem proofs in ten modules. It replaces palette and block probability-oracle premises with derived graph-specific failure budgets, and preserves supplied fine/coarse position relations under shared permutations. The budgets themselves and the manuscript integer/uniform realization remain separate hypotheses. The complete numbered count remains 42 of 69; Proposition 6.2, Theorem 6.1, the robust absorber, Lemmas 4.2 and 4.14, and the main theorem remain incomplete."
   ],
   "density_corollary_verified": true
 }
