@@ -1232,7 +1232,14 @@
     "pattern_four_odd_forest": "Overfull.CircuitPatterns.Encodes.forestShape_of_four_odd_enlarged",
     "pattern_odd_forest_classification": "Overfull.CircuitPatterns.odd_leafForest_classification",
     "pattern_uniform_parameters": "Overfull.CircuitPatterns.exists_pattern_parameters",
-    "frequent_boundary_pattern": "Overfull.circuit_frequent_boundary_pattern"
+    "frequent_boundary_pattern": "Overfull.circuit_frequent_boundary_pattern",
+    "four_odd_complete_decomposition": "Overfull.FourOdd.four_odd_parts_decomposition",
+    "four_odd_complete_real_bound": "Overfull.FourOdd.four_odd_decomposition_real",
+    "four_odd_complete_integer_bound": "Overfull.FourOdd.four_odd_decomposition_nat",
+    "four_odd_actual_surplus_circuits": "Overfull.FourOdd.Decomposition.surplus_circuit",
+    "four_odd_complete_matching_case": "Overfull.FourOdd.exists_matching_decomposition",
+    "four_odd_complete_star_case": "Overfull.FourOdd.exists_star_decomposition",
+    "four_odd_arbitrary_label_forest": "Overfull.FourOdd.exists_joining_decomposition"
   },
   "lean_build_passed": true,
   "axiom_audit_passed": true,
@@ -1669,7 +1676,7 @@
     "Classical.choice",
     "Quot.sound"
   ],
-  "verified_declaration_count": 10219,
+  "verified_declaration_count": 10764,
   "declaration_count_includes_generated_support_lemmas": true,
   "verified_declarations": [
     {
@@ -42731,6 +42738,4158 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.cap_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.degree_eq_sum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.degree_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.degree_lower._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.degree_parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.discardedDecomposition._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.discardedDecomposition._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.discardedDecomposition._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.fixed"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.full_or_large"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.incident_fixed_exists"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.incident_fixed_exists._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.kept_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.CappedPools.matchingCross_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.CappedPools.matchingCross_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.CappedPools.matchingCross_disjoint_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.CappedPools.matchingCross_disjoint_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.CappedPools.matchingCross_full_or_large"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.CappedPools.matchingCross_half_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.CappedPools.matchingCross_half_degree._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.CappedPools.matchingCross_parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.CappedPools.matchingCross_subset_cut"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.CappedPools.matching_retained_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.CappedPools.matching_retained_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.CappedPools.matching_retained_eq._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.CappedPools.matching_retained_eq._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.mk.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.mk.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.CappedPools.subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.RelabelGraph",
+      "name": "Overfull.FourOdd.Decomposition.congrLabel._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.cover"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.cross_disjoint"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.empty._proof_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.empty._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.empty._proof_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.empty._proof_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.empty._proof_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.empty._proof_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.empty._proof_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.empty._proof_8"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.exists_biUnion"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.matching"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.mk.inj"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.mk.injEq"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.nonempty"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofPairPartition._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofPairPartition._proof_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofPairPartition._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofParallelFamily._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofParallelFamily._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofParallelFamily._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofPrimaryFamily._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofPrimaryFamily._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofPrimaryFamily._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofPrimaryFamily._proof_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofPrimaryFamily._proof_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofPrimaryFamily._proof_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofPrimaryFamily._proof_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofPrimaryFamily._proof_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.ofPrimaryFamily._proof_9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.part_subset"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.parts_disjoint_of_disjoint"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.primary_card"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.primary_shape"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.primary_subset"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.Decomposition.relabel._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.Decomposition.relabel._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.singlePair._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.singlePair._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.singlePair._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.singlePrimary._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.singlePrimary._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.singlePrimary._proof_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.singlePrimary._proof_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.singlePrimary._proof_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.singlePrimary._proof_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.singlePrimary._proof_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.singlePrimary._proof_8"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Theorem",
+      "name": "Overfull.FourOdd.Decomposition.surplus_circuit"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.surplus_shape"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.union._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.union._proof_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.union._proof_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.union._proof_4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.union._proof_5"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.union._proof_6"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.union._proof_7"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.union._proof_8"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.union._proof_9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.union._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.Decomposition.union._simp_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.RelabelGraph",
+      "name": "Overfull.FourOdd.Decomposition.unrelabel._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.IsParallelPair.isCircuit"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.IsParallelPair.nonempty"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Basic",
+      "name": "Overfull.FourOdd.IsPrimary.nonempty"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.card_two"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.cover"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.disjoint"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.empty._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.empty._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.empty._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.empty._proof_4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.map._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.map._proof_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.map._proof_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.map._proof_4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.matching"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.mk.inj"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.mk.injEq"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.part_subset"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.union._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.union._proof_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.union._proof_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.union._proof_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.union._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.union._simp_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.union._simp_3"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.MatchingPairPartition.union._simp_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.cross_even"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.cross_half"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.cross_room"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.cross_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.left_count"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.left_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.mk.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.mk.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.right_count"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.right_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.toDecomposition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.toDecomposition._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.toDecomposition._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.toDecomposition._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.MatchingPreparation.toDecomposition._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.card_pair"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.class_card_two"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.mem_pair"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.mem_pair._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.minority_partner"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.minority_unique"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.mixed_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.mixed_eq_image"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.mixed_eq_image._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.mixed_eq_image._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.mixed_eq_image._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.mixed_iff_labels_ne"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.mixed_iff_labels_ne._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.mixed_iff_labels_ne._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.mixed_iff_minority_member"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.mk.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.mk.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.oppositePairs.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.opposite_add_sameColumn_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.opposite_add_sameRow_card"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.opposite_add_sameRow_card._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.MinorityPairing.opposite_primary"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.pair.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.pair_cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.pair_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.pair_injective"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.pair_isMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.pair_shapes_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.pair_shapes_card._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.pair_shapes_cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.pair_shapes_cover._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.pair_shapes_cover._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.pair_shapes_cover._simp_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.parallelPairs.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.MinorityPairing.parallel_pair"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.sameColumnPairs.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.MinorityPairing.sameColumn_primary"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.sameRowPairs.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.MinorityPairing.sameRow_primary"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.toMatchingPairPartition._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.toMatchingPairPartition._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.toMatchingPairPartition._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.toMatchingPairPartition._proof_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.toMatchingPairPartition_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.MinorityPairing.unique_pair"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.biUnion_pairPool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.biUnion_pairPool._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.biUnion_pairPool._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.biUnion_pairPool._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.biUnion_pairPool_disjoint"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.canonicalMatching._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.canonicalMatching._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.canonicalMatching._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Theorem",
+      "name": "Overfull.FourOdd.canonicalMatching.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.card_biUnion_selected_pairPool"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.cutOn_eq_probability_cut"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.cut_labelShore_subset_joining"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.degreeOn_eq_probability_incident"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.degreeOn_eq_sum_pairPool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.degreeOn_eq_sum_pairPool._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.degreeOn_eq_sum_pairPool._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.degreeOn_eq_sum_pairPool._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.degreeOn_le_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.degreeOn_pairPool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.degreeOn_pairPool._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.degreeOn_pairPool._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.degreeOn_selected_pairPool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.degree_eq_sum_pairPool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Quantitative",
+      "name": "Overfull.FourOdd.edge_type_empty_of_zero_regular"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Quantitative",
+      "name": "Overfull.FourOdd.edge_type_empty_of_zero_regular._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_one_or_two"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_one_or_two._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_one_or_two._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_one_or_two._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_one_or_two._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_one_or_two._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_one_or_two._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_one_or_two._proof_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_one_or_two._proof_1_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_two"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_two._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_two._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_two._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_two._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_two._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.equitable_colorClass_card_two._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_augmented_cross_decomposition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_augmented_cross_decomposition._proof_1_12"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_augmented_cross_decomposition._simp_1_10"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_augmented_cross_decomposition._simp_1_11"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_augmented_cross_decomposition._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_augmented_cross_decomposition._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_augmented_cross_decomposition._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_augmented_cross_decomposition._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_augmented_cross_decomposition._simp_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_augmented_cross_decomposition._simp_1_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_augmented_cross_decomposition._simp_1_9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.exists_canonical_relabeling"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Capping",
+      "name": "Overfull.FourOdd.exists_cappedPools"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_capped_singletons_and_pairs"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_capped_singletons_and_pairs._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_capped_singletons_and_pairs._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_capped_singletons_and_pairs._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_capped_singletons_and_pairs._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_capped_singletons_and_pairs._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_capped_singletons_and_pairs._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_capped_singletons_and_pairs._proof_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_capped_singletons_and_pairs._proof_1_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_capped_singletons_and_pairs._proof_1_9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_capped_singletons_and_pairs_on"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_capped_singletons_and_pairs_on._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_capped_singletons_and_pairs_on._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_capped_singletons_and_pairs_on._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_capped_star_decomposition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_capped_star_decomposition._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_capped_star_decomposition._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_capped_star_decomposition._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_capped_star_decomposition._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_capped_star_decomposition._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_capped_star_decomposition._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_capped_star_decomposition._proof_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.exists_equal_star_pool_decomposition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Allocation",
+      "name": "Overfull.FourOdd.exists_injective_disjoint_support"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Allocation",
+      "name": "Overfull.FourOdd.exists_injective_disjoint_support._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Allocation",
+      "name": "Overfull.FourOdd.exists_injective_of_few_conflicts"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Allocation",
+      "name": "Overfull.FourOdd.exists_injective_of_few_conflicts._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Theorem",
+      "name": "Overfull.FourOdd.exists_joining_decomposition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Theorem",
+      "name": "Overfull.FourOdd.exists_joining_decomposition._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.exists_matchingPreparation"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.exists_matchingPreparation._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.exists_matchingPreparation._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.exists_matchingPreparation._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.exists_matchingPreparation._proof_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.exists_matchingPreparation._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.exists_matchingPreparation._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_matching_assembly"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_matching_assembly._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_matching_assembly._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_matching_assembly._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_matching_assembly._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_matching_assembly._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_matching_assembly._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_matching_assembly._simp_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "Overfull.FourOdd.exists_matching_assembly._simp_1_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.exists_matching_decomposition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Allocation",
+      "name": "Overfull.FourOdd.exists_matching_singleton_injection"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Allocation",
+      "name": "Overfull.FourOdd.exists_matching_singleton_injection._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.exists_minorityPairing"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.exists_opposite_pool_decomposition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.exists_opposite_pool_decomposition._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.exists_opposite_pool_decomposition._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.exists_opposite_pool_decomposition._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_singletons_and_pairs"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_singletons_and_pairs._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_singletons_and_pairs._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_singletons_and_pairs._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_singletons_and_pairs._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_singletons_and_pairs._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "Overfull.FourOdd.exists_singletons_and_pairs_on"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_star_decomposition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_star_decomposition._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_star_decomposition._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_star_decomposition._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_star_decomposition._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_star_decomposition._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "Overfull.FourOdd.exists_star_decomposition._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Quantitative",
+      "name": "Overfull.FourOdd.floor_boundary_small"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Theorem",
+      "name": "Overfull.FourOdd.four_odd_decomposition_nat"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Theorem",
+      "name": "Overfull.FourOdd.four_odd_decomposition_real"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.four_odd_joining_degree_bound_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Theorem",
+      "name": "Overfull.FourOdd.four_odd_parts_decomposition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.image_eq_singleton_of_subset_pairPool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.image_subset_pairPool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.inter_biUnion_selected_pairPool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.inter_pairPool_eq_filter"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningCopies.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningCut.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningCut_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningCut_degreeOn"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningCut_even_degree_le_half"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningCut_even_parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningCut_image"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningCut_pair_degree_le_half"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningCut_pair_parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningGraph_degreeOn_image"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningGraph_degreeOn_image._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningGraph_degreeOn_image._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningGraph_degree_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningGraph_degree_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningGraph_edge"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningGraph_firstEnd"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningGraph_join"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningGraph_secondEnd"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningQuotient.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningQuotient_degree_eq_cut"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningQuotient_degree_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningQuotient_degree_parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningQuotient_incidence_image"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningQuotient_incidence_image._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningQuotient_incidence_image._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.joiningQuotient_incidence_image._simp_1_4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.joining_degree_bound_pos_of_odd_fiber"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Quantitative",
+      "name": "Overfull.FourOdd.joining_degree_le_floor"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.joining_nonempty_of_odd_fiber"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.labelQuotient_edgeLabelPair_relabel"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.labelQuotient_edgeLabelPair_relabel._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.labelQuotient_edgeLabelPair_relabel._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.labelQuotient_edgeLabelPair_val"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.labelQuotient_mem_cutOn_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.labelShore.congr_simp"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.labelShore.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.labelShore_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.labelShore_card_parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.labelShore_pair_even"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matchingCrossPair._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matchingCrossPair_injective"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matchingForest.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matchingForest_shape"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matchingLabel._proof_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matchingLabel_coordinates"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matchingLeftPair._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matchingLeftPair.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matchingOffPairs_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matchingOffPairs_crosses"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matchingOffPairs_ne_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matchingOffPairs_ne_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matchingOffPools_eq_cut"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matchingOffPools_eq_cut._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matchingOffPools_eq_cut._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matchingOffPools_eq_cut._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matchingRefinement_matchingLabel"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matchingRightPair._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matchingRightPair.eq_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matchingSide_matchingLabel"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matching_cross_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matching_cross_ne_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matching_cross_ne_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matching_cross_opposite_shape"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matching_cross_projection"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matching_left_ne_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matching_left_right_shape"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matching_parameter_bounds"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matching_parameter_bounds._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matching_sameColumn_shape"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matching_sameRow_shape"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matching_sideEdges_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matching_sideEdges_card._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.matching_sideLabel_iff_incident"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matching_singleton_count_bounds"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matching_singleton_count_bounds._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matching_singleton_count_bounds._proof_1_2"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "Overfull.FourOdd.matching_singleton_count_bounds._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.mem_joiningCopies"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.mem_joiningCopies._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.mem_joiningCut"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.mem_joiningCut._simp_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.mem_joiningCut._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.mem_joiningCut._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.mem_labelShore"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "name": "Overfull.FourOdd.mem_labelShore._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.mem_pairPool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.mem_pairPool._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.mem_relabelPair"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.mem_relabelPair._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.mem_sideEdges"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.mem_sideEdges._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.minorityLabel_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.minorityLabel_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.minorityLabel_card_le._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.oppositePair._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.oppositePair._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.oppositePair._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.oppositePair_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.oppositePair_injective"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.oppositePair_primary"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.pairPool.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.pairPool_bipartite"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.pairPool_bipartite._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.pairPool_bipartite._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.pairPool_bipartite._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.pairPool_cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.pairPool_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.pairPool_sdiff_selected_cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "Overfull.FourOdd.primary_left_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Quantitative",
+      "name": "Overfull.FourOdd.ratio_boundary_small"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Quantitative",
+      "name": "Overfull.FourOdd.ratio_supply_nearly"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.regular_cut_parity"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.regular_cut_parity._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.regular_even_cut_degree_le_half"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.regular_even_cut_degree_le_half._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.regular_even_cut_parity"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.regular_even_cut_twice_degree_le"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.regular_even_cut_twice_degree_le._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.regular_odd_cut_eq_add_twice"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.regular_odd_cut_eq_add_twice._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.regular_odd_cut_lower"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.regular_odd_cut_lower._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.CutBounds",
+      "name": "Overfull.FourOdd.regular_odd_cut_parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.relabelPair._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.relabelPair._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.relabelPair._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.relabelPair._proof_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.relabelPair._proof_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.relabelPair._proof_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.relabelPair_forestShape"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Relabeling",
+      "name": "Overfull.FourOdd.relabelPair_symm"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.RelabelGraph",
+      "name": "Overfull.FourOdd.relabel_join"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.RelabelGraph",
+      "name": "Overfull.FourOdd.relabel_quotient_cut_pair"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.RelabelGraph",
+      "name": "Overfull.FourOdd.relabel_quotient_cut_pair._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.RelabelGraph",
+      "name": "Overfull.FourOdd.relabel_quotient_cut_pair._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.RelabelGraph",
+      "name": "Overfull.FourOdd.relabel_quotient_cut_pair._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.RelabelGraph",
+      "name": "Overfull.FourOdd.relabel_quotient_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.RelabelGraph",
+      "name": "Overfull.FourOdd.relabel_quotient_degree._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.RelabelGraph",
+      "name": "Overfull.FourOdd.relabel_quotient_degree._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.RelabelGraph",
+      "name": "Overfull.FourOdd.relabel_quotient_degree._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.RelabelGraph",
+      "name": "Overfull.FourOdd.relabel_quotient_pairPool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.RelabelGraph",
+      "name": "Overfull.FourOdd.relabel_quotient_pairPool._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.restrictEdges_degree_eq_degreeOn"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.restrictEdges_degree_le_original"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.selected_pairPool_degree_parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.FourOdd.selected_pairPool_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.sideEdges.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.sideEdges_card_add"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.sideEndpoint.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.sideEndpoint_eq_of_incident"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.sideEndpoint_mem"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.sideEndpoint_side"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "Overfull.FourOdd.sideLabel.eq_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.starPair._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.starPair._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.starPair._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.starPair._proof_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.starPair_injective"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.starPair_ne_oppositePair"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.starPair_oppositePair_cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "Overfull.FourOdd.starPair_shape"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.FractionalMatching",
       "name": "Overfull.FractionalMatching.edge_eq"
     },
@@ -50277,6 +54436,15 @@
         "propext",
         "Classical.choice"
       ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.Multigraph.edgeLabelPair.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
       "module": "Overfull.CompatibleCircuits.FourLabel",
       "name": "Overfull.Multigraph.edgeLabelPair_crosses"
     },
@@ -50886,6 +55054,15 @@
       ],
       "module": "Overfull.CompatibleCircuits.Lifting",
       "name": "Overfull.Multigraph.labelQuotient._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Pools",
+      "name": "Overfull.Multigraph.labelQuotient.congr_simp"
     },
     {
       "axioms": [
@@ -85792,6 +89969,579 @@
       "name": "_private.Overfull.ForeignEdges.Minority.0.Overfull.ForeignRefinement.minority_piece_card"
     },
     {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "_private.Overfull.FourOdd.Matching.0.Overfull.FourOdd.exists_left_right_decomposition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "_private.Overfull.FourOdd.Matching.0.Overfull.FourOdd.exists_left_right_decomposition._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "_private.Overfull.FourOdd.Matching.0.Overfull.FourOdd.exists_left_right_decomposition._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "_private.Overfull.FourOdd.Matching.0.Overfull.FourOdd.exists_left_right_decomposition._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "_private.Overfull.FourOdd.Matching.0.Overfull.FourOdd.exists_left_right_decomposition._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "_private.Overfull.FourOdd.Matching.0.Overfull.FourOdd.exists_left_right_decomposition._simp_1_5"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "_private.Overfull.FourOdd.Matching.0.Overfull.FourOdd.pair_matching_of_label_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "_private.Overfull.FourOdd.Matching.0.Overfull.FourOdd.pair_matching_of_label_disjoint._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Matching",
+      "name": "_private.Overfull.FourOdd.Matching.0.Overfull.FourOdd.pair_matching_of_label_disjoint._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "_private.Overfull.FourOdd.MatchingPreprocessing.0.Overfull.FourOdd.degreeOn_card_le"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "_private.Overfull.FourOdd.MatchingPreprocessing.0.Overfull.FourOdd.degreeOn_union_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "_private.Overfull.FourOdd.MatchingPreprocessing.0.Overfull.FourOdd.matchingSide_ne_iff_cut"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "_private.Overfull.FourOdd.MatchingPreprocessing.0.Overfull.FourOdd.matching_surplus_cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "_private.Overfull.FourOdd.MatchingPreprocessing.0.Overfull.FourOdd.matching_surplus_cover._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "_private.Overfull.FourOdd.MatchingPreprocessing.0.Overfull.FourOdd.matching_surplus_cover._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "name": "_private.Overfull.FourOdd.MatchingPreprocessing.0.Overfull.FourOdd.matching_surplus_cover._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "_private.Overfull.FourOdd.MatchingShapes.0.Overfull.FourOdd.isPrimary_pair"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "_private.Overfull.FourOdd.MatchingShapes.0.Overfull.FourOdd.isPrimary_pair._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "_private.Overfull.FourOdd.MatchingShapes.0.Overfull.FourOdd.isPrimary_pair._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "_private.Overfull.FourOdd.MatchingShapes.0.Overfull.FourOdd.isPrimary_pair._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "_private.Overfull.FourOdd.MatchingShapes.0.Overfull.FourOdd.isPrimary_triple"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "_private.Overfull.FourOdd.MatchingShapes.0.Overfull.FourOdd.isPrimary_triple._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "_private.Overfull.FourOdd.MatchingShapes.0.Overfull.FourOdd.isPrimary_triple._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "_private.Overfull.FourOdd.MatchingShapes.0.Overfull.FourOdd.isPrimary_triple._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "_private.Overfull.FourOdd.MatchingShapes.0.Overfull.FourOdd.primary_cross_opposite"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "_private.Overfull.FourOdd.MatchingShapes.0.Overfull.FourOdd.primary_sameColumn"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "name": "_private.Overfull.FourOdd.MatchingShapes.0.Overfull.FourOdd.primary_sameRow"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "_private.Overfull.FourOdd.MinorityPairing.0.Overfull.FourOdd.contractedEnd.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "_private.Overfull.FourOdd.MinorityPairing.0.Overfull.FourOdd.contractedGraph._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "_private.Overfull.FourOdd.MinorityPairing.0.Overfull.FourOdd.contractedGraph.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "_private.Overfull.FourOdd.MinorityPairing.0.Overfull.FourOdd.contractedGraph_bipartite"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "_private.Overfull.FourOdd.MinorityPairing.0.Overfull.FourOdd.contractedGraph_none_degree"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "_private.Overfull.FourOdd.MinorityPairing.0.Overfull.FourOdd.contractedGraph_none_degree._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "_private.Overfull.FourOdd.MinorityPairing.0.Overfull.FourOdd.contractedGraph_none_incident"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "_private.Overfull.FourOdd.MinorityPairing.0.Overfull.FourOdd.contractedGraph_none_incident._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "_private.Overfull.FourOdd.MinorityPairing.0.Overfull.FourOdd.contractedGraph_some_degree_le"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "_private.Overfull.FourOdd.MinorityPairing.0.Overfull.FourOdd.contractedGraph_some_incident"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "_private.Overfull.FourOdd.MinorityPairing.0.Overfull.FourOdd.contractedGraph_some_incident._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "_private.Overfull.FourOdd.MinorityPairing.0.Overfull.FourOdd.contractedGraph_some_incident._simp_1_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "name": "_private.Overfull.FourOdd.MinorityPairing.0.Overfull.FourOdd.contraction_incident"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "_private.Overfull.FourOdd.PairPools.0.Overfull.FourOdd.colorClass_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "_private.Overfull.FourOdd.PairPools.0.Overfull.FourOdd.image_subtype_compl"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.PairPools",
+      "name": "_private.Overfull.FourOdd.PairPools.0.Overfull.FourOdd.sum_colorClass_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "_private.Overfull.FourOdd.Star.0.Overfull.FourOdd.biUnion_fin_three"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "_private.Overfull.FourOdd.Star.0.Overfull.FourOdd.biUnion_fin_three._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "_private.Overfull.FourOdd.Star.0.Overfull.FourOdd.biUnion_fin_three._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "_private.Overfull.FourOdd.Star.0.Overfull.FourOdd.biUnion_fin_three._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "_private.Overfull.FourOdd.Star.0.Overfull.FourOdd.oppositePair_not_mem"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "_private.Overfull.FourOdd.Star.0.Overfull.FourOdd.starPair_mem"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "_private.Overfull.FourOdd.Star.0.Overfull.FourOdd.star_leaf_sum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "_private.Overfull.FourOdd.Star.0.Overfull.FourOdd.star_leaf_sum._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "_private.Overfull.FourOdd.Star.0.Overfull.FourOdd.star_leaf_sum._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.Star",
+      "name": "_private.Overfull.FourOdd.Star.0.Overfull.FourOdd.star_leaf_sum._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "_private.Overfull.FourOdd.StarAssembly.0.Overfull.FourOdd.distinct_label_pools"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "_private.Overfull.FourOdd.StarAssembly.0.Overfull.FourOdd.primary_three"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "_private.Overfull.FourOdd.StarAssembly.0.Overfull.FourOdd.primary_three._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "_private.Overfull.FourOdd.StarAssembly.0.Overfull.FourOdd.primary_three._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "_private.Overfull.FourOdd.StarAssembly.0.Overfull.FourOdd.primary_three._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "_private.Overfull.FourOdd.StarAssembly.0.Overfull.FourOdd.primary_three._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "_private.Overfull.FourOdd.StarAssembly.0.Overfull.FourOdd.primary_three._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "_private.Overfull.FourOdd.StarAssembly.0.Overfull.FourOdd.singleton_family_cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "_private.Overfull.FourOdd.StarAssembly.0.Overfull.FourOdd.singleton_family_cover._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "_private.Overfull.FourOdd.StarAssembly.0.Overfull.FourOdd.singleton_family_cover._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "_private.Overfull.FourOdd.StarAssembly.0.Overfull.FourOdd.singleton_family_cover._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "_private.Overfull.FourOdd.StarAssembly.0.Overfull.FourOdd.singleton_family_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "_private.Overfull.FourOdd.StarAssembly.0.Overfull.FourOdd.singleton_family_disjoint._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.FourOdd.StarAssembly",
+      "name": "_private.Overfull.FourOdd.StarAssembly.0.Overfull.FourOdd.singleton_matching"
+    },
+    {
       "axioms": [],
       "module": "Overfull.HallDefect",
       "name": "_private.Overfull.HallDefect.0.Overfull.matchingFromPartialMap._proof_1"
@@ -88868,6 +93618,23 @@
     "Overfull.ForeignEdges.RuleStep",
     "Overfull.ForeignEdges.SmallCutRefinement",
     "Overfull.ForeignEdges.Transcript",
+    "Overfull.FourOdd.Allocation",
+    "Overfull.FourOdd.Basic",
+    "Overfull.FourOdd.Capping",
+    "Overfull.FourOdd.CutBounds",
+    "Overfull.FourOdd.Matching",
+    "Overfull.FourOdd.MatchingPreprocessing",
+    "Overfull.FourOdd.MatchingShapes",
+    "Overfull.FourOdd.MinorityPairing",
+    "Overfull.FourOdd.OriginalGraph",
+    "Overfull.FourOdd.PairPools",
+    "Overfull.FourOdd.Pools",
+    "Overfull.FourOdd.Quantitative",
+    "Overfull.FourOdd.RelabelGraph",
+    "Overfull.FourOdd.Relabeling",
+    "Overfull.FourOdd.Star",
+    "Overfull.FourOdd.StarAssembly",
+    "Overfull.FourOdd.Theorem",
     "Overfull.FractionalMatching",
     "Overfull.HallDefect",
     "Overfull.Konig",
@@ -89072,7 +93839,7 @@
     "Vizing.Path.Invert",
     "Vizing.Path.PathEdges"
   ],
-  "fully_verified_numbered_assertion_count": 44,
+  "fully_verified_numbered_assertion_count": 45,
   "fully_verified_numbered_assertions": [
     "2.2",
     "2.3",
@@ -89106,6 +93873,7 @@
     "4.11",
     "4.12",
     "4.13",
+    "4.15",
     "5.3",
     "5.4",
     "5.5",
@@ -89119,8 +93887,14 @@
     "7.1",
     "7.2"
   ],
+  "four_odd_declaration_map": {
+    "path": "verification/four-odd-declarations.json",
+    "sha256": "25de2dc7c11e7e439613571e7a4fd05baf5b8a8977b70a6c6630a197679c9725",
+    "verified_declaration_count": 545,
+    "module_count": 17
+  },
   "source_sha256": {
-    "Overfull.lean": "eca26f671e27835e8861274281b168101e38a46194197a9e4495432917623c2d",
+    "Overfull.lean": "73c62187904a227d1f351ceb3529bdb6cb86cf96c275e471d6d96bdf16087f94",
     "Audit.lean": "76886fd9261a3a7b07660f9a434272c0347130a4013cf57da6e1761a34fc6603",
     "Overfull/Absorption/Bounded.lean": "722ca71ecdc9b0f4c17b400c32d51a284d9eac61211e1a52e448fcc8f5bb2f52",
     "Overfull/Absorption/Core.lean": "1f5f39cd8497918341bf336db7f1735b131c9f564077b158b7245fbb474a0946",
@@ -89367,6 +94141,23 @@
     "Overfull/ForeignEdges/RuleStep.lean": "06988f01f483a2746d105933372dc58dca5c0650aa2150ccb8fff46a3c0550f4",
     "Overfull/ForeignEdges/SmallCutRefinement.lean": "3c686fa6c5cdd98cb282b018b88f92a1def15f683ec4dcca55a91d6c22014eac",
     "Overfull/ForeignEdges/Transcript.lean": "a493a499a878af3422c47c6762ab08b52b5debbd0522273d7d5ea05c1031c9ab",
+    "Overfull/FourOdd/Allocation.lean": "a78fa2675f88dcbe285184b549aa29c59d4603c6e07a7196f09155471b530cac",
+    "Overfull/FourOdd/Basic.lean": "55eaf4848022647937c1992aa8928b706c697330df8200c1c7ee3e5d0365dbf7",
+    "Overfull/FourOdd/Capping.lean": "b9eb2308af3876f2d8bae07f546c968b0a0ffe23705989208f3ee2e1c704928a",
+    "Overfull/FourOdd/CutBounds.lean": "3fb61155c933e445efb9f70356674ac90eacfee6879ea586a29556485d1dfbdc",
+    "Overfull/FourOdd/Matching.lean": "c3bbb7c46a6723ec5cee409a64135248522a900cfba0688548b2d2c0dc6d3a99",
+    "Overfull/FourOdd/MatchingPreprocessing.lean": "167ebd0fa3777203bc5dd9d677266d9a7ecf651be49daf0e4de322756e4cb05b",
+    "Overfull/FourOdd/MatchingShapes.lean": "5642d45140cfbbd3494113d27394c17f03982dd57dd024a779449b75137ca74d",
+    "Overfull/FourOdd/MinorityPairing.lean": "bdefd51095146627049bc71296ad3902df9212700ec7f5c286868da13f0310de",
+    "Overfull/FourOdd/OriginalGraph.lean": "3a2dccbe791169d4556be7e58e497db5a20a627d24acaf545fa071905cb03806",
+    "Overfull/FourOdd/PairPools.lean": "bbad4c4720b3ce9fc3f983541a5b5cf6472ebf72230152dcb4e0352a0967ed09",
+    "Overfull/FourOdd/Pools.lean": "8823be42046d2a554dd5272a4fe33eb248469169d48e8e30856f692a263ba3a8",
+    "Overfull/FourOdd/Quantitative.lean": "e2d91eea39e0df75d84c7ac07bdcd45689df7b672a0d748c47832c20ce7ab5b5",
+    "Overfull/FourOdd/RelabelGraph.lean": "02cb85970c13f79f4261c4accb0ddb3cc4e5be2002260abe936b5dc8ab054d31",
+    "Overfull/FourOdd/Relabeling.lean": "1671dbe66c2962e2e430f1e30d741c4a9c7dc2be6630617201de3f8265c67b9a",
+    "Overfull/FourOdd/Star.lean": "65f76163566cacc7e7c9bd37177ef596943b153a33d80b22a7221ad8e998ae6c",
+    "Overfull/FourOdd/StarAssembly.lean": "fb0d33868475a0320ff8bf35a91b40af484084b545e9d6b5279938a1d425d0cf",
+    "Overfull/FourOdd/Theorem.lean": "1945191892225b9e2ed5c96efc01f838d093759871ac7b63997ee1fe2213e08a",
     "Overfull/FractionalMatching.lean": "710adc515247ea081044942157a5bcd90901d19ac0546f411cf0a19c81b9af82",
     "Overfull/HallDefect.lean": "f677dc42ecf8502855e723745168d3e4d3b99f297d2dfc4e4b08926920caa3af",
     "Overfull/Konig.lean": "aaa6eea1f4507d6d6659da11e7fbf37ab8eccda81c70251855bd821444acf98a",
@@ -89548,46 +94339,49 @@
     ".github/workflows/lean.yml": "bf5cd8ff5d9c54814b5a0a2a98732a90dae5e4d1a7268954fe9deba218753e83",
     "CIRCULATION_NOTICE.txt": "c8913077edf119bdb2ff790f24c3a27188a14b37d3cbc03121c917aee157a419",
     "LICENSE_BMATCHING.txt": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
-    "README.md": "1a1965d2ebb060860aba33331b96dee419c1d50c5f6993d701f6ee3c68856bf8",
+    "README.md": "d256879d07c2a1e486d42f681401b4ab02098e3a66749f777c5caefe87de36d1",
     "THIRD_PARTY_NOTICES.txt": "9002356e653c2943115b2feeba04713b005074a3d7c283bd894a47d8ca63dcd7",
     "docs/adaptive-packing.md": "eed3d11bde80300511bfa046813661c1617bb0ddc4c131efbed9576a33e53c7e",
     "docs/auxiliary-completion.md": "3c4787a8cef05bcca13c19e7293591878c1ba5a069e0ef22c34907f8b1030453",
-    "docs/bipartite-localization.md": "0329222477524e86d835e319de17451e75d9a0d8c9538e060c5f1aaa00def20d",
-    "docs/bipartite-palette-assembly.md": "8119460eb81134922caf5d8686fdae7bae692dee224e72712aff1775e5715ec3",
-    "docs/bipartite-prerequisites.md": "4f66f8e29357c1af365f42753ef65df5f37417e5710f072b46b3bcad24ba1280",
-    "docs/bipartite-sampling.md": "f0c8a8741250566d2432e543f8524dc3298c622a2be761ed5a0748a1826d5844",
-    "docs/bipartite-score-mean.md": "8e0fb98e3810bb7e335f50e73f95725fe59661385cf14d8a26277a0da1751d7a",
-    "docs/bipartite-simultaneous-selection.md": "3ad781773134d4f3f35415af81be9899a576233893ec71fef2f87e89f9d70724",
-    "docs/bipartite-two-families.md": "457897834564a7f349481765d04c497bf1bef47604203ee9bd30bf510fb617d2",
+    "docs/bipartite-localization.md": "25be090ace859fae7ea1fa92b1180d89c12c1c403700d02f166573f37b353c09",
+    "docs/bipartite-palette-assembly.md": "5a58467aea7a6418bcd6e669c00eadcd5e960f514a3e9aa59e5fc9b7ae5b2910",
+    "docs/bipartite-prerequisites.md": "f4546853a34e67f9531d21c0d14d161ac148e59ecb38a0894ad86fc11a6e0ed0",
+    "docs/bipartite-sampling.md": "61d1323ccc7262bfd7c9ec2e245cf9822e23789ab0abd91ee7c4222db84b9551",
+    "docs/bipartite-score-mean.md": "17cc245c5deae5aa4a6c05855d0fc2428637078eaa0a601aff9602c6f107dc05",
+    "docs/bipartite-simultaneous-selection.md": "91163e8891b6ea25105d8dd53102c663941212c06f644b7fb8f5b50bcfefdd83",
+    "docs/bipartite-two-families.md": "c09e6b7da1b39489713d0dab147b2244888bef9fc60a7f087f9bb3948bd7ace4",
     "docs/bmatching-source.json": "2cb433874d3b356dd6ff933d504fa6c61886d255c739eec7da1e870c9bf0dcf8",
-    "docs/boundary-extension.md": "4cc10bf28b83c03b78329851ee5bfed118bfeef1325ee1f264cdbe497211d1fe",
+    "docs/boundary-extension.md": "10d11aeda918a49bde76c177e20d48ed8ec0686a716d9e959c2613a3788013ae",
     "docs/circulation-source.json": "2b3d7bdf1b05c6b8445e2961efe99fe3eb6100a9c08c1eb3af8bbb4fd28350aa",
-    "docs/coverage.json": "e69b6c6c4c50543998692166ca42fd1cde02671fe55778f90a4d883bcac62bec",
-    "docs/critical-partition-consequences.md": "5e2d93fc20555962a6007c6b9c9ab419d61ce2596b55ffef6113860500e74f2b",
-    "docs/dense-link-packing.md": "2d4d19a64e9d12cbef2eb1ab899e4d02bda8cd0cab0d75661e0ef5473805b4c4",
+    "docs/coverage.json": "30505d23b48721ef3f2ef1dd06c9e091cbcda840e58ae2319215ef151b0a3044",
+    "docs/critical-partition-consequences.md": "e27d3ee74746f3d635e344b3242a0458923dcb825e2bf47c72110f8254d62deb",
+    "docs/dense-link-packing.md": "85643f82684632e6d7bb20b741f9f617c8a1572d98c031537df5113cd671ccd6",
     "docs/exceptional-absorption.md": "5fc25d8f075878fd04257ca6370ed6d70bce2991c8ab36b29d4f80cde4784eb7",
-    "docs/foreign-edge-reduction.md": "db66d60ff6e04c9a1bceb308af42701ac6c90ef27d4c4bfc0675f2c351f4bc5b",
-    "docs/four-odd-circuits.md": "1c64dd391b611c06eba6cff1d8622cf1605efd0703be8fbf8265de79af265288",
-    "docs/frequent-pattern.md": "8c3cf3b918c9e638b8b0c685448ec3db5d89888ccdc5a292cf56f490e5245d75",
+    "docs/foreign-edge-reduction.md": "15e2583233ccd19d63a0cdbe834e3193b0e2ef9188e1574ecc712c74e6fbf441",
+    "docs/four-odd-circuits.md": "ea3f1cb24a1fe8843442989fb7b34f722ae301c3d26ac34e94d70d56ea95e8d2",
+    "docs/four-odd-decomposition.md": "8fb291df7489c4aca92c241969aebf2a1c2ef7441d6742e75fb28d6fce8c9d95",
+    "docs/four-odd-semantic-review.md": "d1c3161711f412b9dde063fcb7f56af4bd53432443d467162d5f30d445faade3",
+    "docs/four-odd-source.json": "7e08d3ad720032403c45ab2028fb1957fe338b668553b81dc4d45888fc52dee5",
+    "docs/frequent-pattern.md": "e0f4b947f96d233224832e6fb71b4e57835f9135be23fca846644406614e5d73",
     "docs/frequent-patterns.md": "37eb2de401abc5ba79e8c22729fcf19b3b347ad0bd173dee640d061201b8eee0",
-    "docs/main-theorem.md": "f48521f96c82b4ac4dca52c19fa2fc42e16f2e704acd3c93d0f6c182a1cd26ca",
-    "docs/manuscript-source.json": "06d4b3f93c606b6138ae8fc8306be2fe0cf64adf0d602696ea7ea68fe7c15b4d",
+    "docs/main-theorem.md": "56e6e2aae6abea8e6ba267c417ac3885688a15c2064272f250c1b38424cee3ee",
+    "docs/manuscript-source.json": "0de5471de103c61b6a0f209b1398883924e50bda775bc18d8abeaa358584ffa5",
     "docs/matching-repair.md": "29d0c587ba983a568eb98b40484e531a90e0f96fbd4dc98069bfd12214481cca",
-    "docs/next-verification-target.md": "0dbe9ccb56dee6b7d92fa97e830a24b3dd2eb39c21a8f473ec5b73ee1fa308a2",
-    "docs/ordinary-factorization.md": "511bd9d3dab371d76118de1e45705a8e08855475efc53a7c4bbba50f28974e77",
+    "docs/next-verification-target.md": "f5b565f0252658eaff70de7b2ee18a831eb2457ea99f92120b76598798cb035c",
+    "docs/ordinary-factorization.md": "c0d125f89ca170b6bc64b928976897578614f43df8da6f067c0d28c42283174b",
     "docs/prescribed-matching.md": "9d37e1f0b7df42dd65fb379d51fb7604793440b56c5adac307e95a486dc510f5",
     "docs/replacement.md": "5643ebc060c37602f7e160f76c021e5cc7edfb576b2151f45248bfcf6ca5484e",
-    "docs/robust-partition.md": "684c2cafd8e55a1d42d98070016c382052ce782739975d6a3868cba9f74b2430",
+    "docs/robust-partition.md": "2e9a2c09786f5edc72e991022aa803ddc55f112c332c19bf95d9a4fb6a03414f",
     "docs/sharpness.md": "7c14f8fc7aa03b83a157c047977264fb054d20bde9890db9f76d167945bf9f79",
     "docs/source-recovery.json": "a533903bf4ebab7dec8baec4ead1d5f0a9f70a825605f2a180befd97289dfb3b",
-    "docs/uniform-localization.md": "a700da7cef5eee155c21c68ebe95a7c0148efa8ae30b7aa89cfb42cbd8236029",
+    "docs/uniform-localization.md": "8cfc29cf5b0d9e5f8bab81c0ffeb90f14b93f450cf7af9f6e56bda2b42beb1a2",
     "docs/vizing-source.json": "2e3d01885c5de03c5e071c4d27c80ff64960cd006de36424d26ba28bfb6742c4",
     "lake-manifest.json": "6170a0f6ef63640502c8d121fabb4f3a555b04b8f00dca862521a59bf2ea80f0",
     "lakefile.toml": "f34bb9e1ca0d83adfe9afd7b17d079ab15cc5b003b8a583605f42f213548c0a7",
     "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
     "patches/vizing-lean-4.24.patch": "1f50d4aa24ee428032d14bb90c1705df9906ab90581bf0046eedf49bf3d70c76",
     "scripts/setup_vizing.py": "42ab626c3d40e8012aeed8d90b08a32757c3c5ee844b52ee2dc704e89b276094",
-    "scripts/verify.py": "21df371fb06ada84aa2151abdef8c864b65c6677224dcdb8e0434ef193949d74"
+    "scripts/verify.py": "5398f17f8b2f426b9a7a1b10bbbb1d919493b3a8f3824bd1a1dd1cba9797a274"
   },
-  "scope": "44 of the 69 numbered manuscript assertions have complete checked proofs. The remaining 25, including the main theorem, remain incomplete. Supporting results and conditional reductions are not counted as completed parent assertions. This continuation starts at published commit 2eb61f588a26b3fe41edcf0bcec8610c9c343dd8 and adds 109 public theorem proofs in 13 modules. The full deterministic argument is proved from the actual average-degree estimate (1-zeta^3/2)*Delta <= sum degrees/n. Uniform zeta and gamma precede the graph, and zeta may be below any prescribed positive bound. The actual low-degree set and induced complement are constructed, with strict deleted-set bound, surviving order, actual minimum/maximum degree transfer, full robust partition, rho <= (theta/100)^3, all five component alternatives, and every original-order degree-exception and shore-size bound. The criticality-to-average-degree implication from Cao\u2013Chen is not formalized. Proposition 2.24 remains incomplete. Uniform error tolerances and order thresholds now precede the graph and derive the actual palette and block union budgets from the manuscript linear degree, active-row, large-pool, per-color, and special-count bounds. Actual positive even palette sizes are rounded from fixed target fractions and realized as disjoint allowed palettes. Actual divisible finite populations yield equal fine positions, exact coarse unions, and simultaneous actual fine/coarse blocks with natural floor caps and all preferred-row and large-pool score estimates. The no-correction branch has a separate uniform preferred-row construction and an actual zero-correction palette selection. Actual normalized boundary weights have total at most twice the indexed pool count plus the special count; a light existing cluster and relative original-copy loss bounds are proved. Floor caps, adaptive pool losses, fine-to-coarse costs, preferred-row supplies, and strict selected/residual coloring reserves are proved and connected to actual palette selection and localized coloring. The absorber-specific palette identities and divisibilities, construction of the required spanning regularity partition and final boundary after insertions/equalization, complete uniform composition into both colored families, special path systems, robust absorber, and final host factorization remain unformalized. These supporting results do not complete this numbered assertion. The combined tree also preserves published main checkpoint 54db7b826be05fbba9845f4140aaba0a7db5ba04: ten compatible-circuit modules unchanged and 27 alternate pattern modules under distinct namespaces. Every one of the 1214 mapped historical proof declarations is required in the fresh axiom audit. The alternate proof of Lemma 4.13 counts once, and the recovered circuit, Hall-pairing, forest, virtual-family and incidence components do not complete Lemma 4.15. The previously completed robust-partition Theorem 2.23 and link-packing Lemma 5.12 remain part of the audit, as do the full sharpness family, density corollary, and other registered completed results. Lemma 4.2 and Lemma 4.14 still depend on the unproved residual factorization. LargeCriticalExclusion, required by the final main-theorem implication, remains unproved. A successful build does not verify the complete manuscript."
+  "scope": "45 of the 69 numbered manuscript assertions have complete checked proofs. The remaining 24, including the main theorem, remain incomplete. This continuation completes Lemma 4.15 from the original regular, non-overfull graph and four odd parts. The fixed sufficient error bound is 1/1000 for both ratios. Every actual joining copy belongs to exactly one actual matching; exactly h pieces project injectively to perfect matchings or three-edge stars, and all surplus pieces project to circuits of exact length two. The proof constructs its caps, singleton quotas, minority pairings, endpoint-compatible augmentations and exact cover internally, using Konig coloring, equitable balancing and Hall pairing. It does not assume or prove the general Fan-Zhang compatible-circuit theorem. Integer and real undivided versions also cover zero degree. All earlier source-recovery mappings and verified results are preserved. The alternate proof of Lemma 4.13 is still counted once. Proposition 2.24 still needs criticality-to-average-degree; Lemmas 4.2 and 4.14 still need the unproved residual factorization; the Section 6 spanning setup, absorber and factorization, Proposition 4.16, and the final structural exclusion remain incomplete. Supporting results and conditional reductions are not counted as completed parent assertions."
 }

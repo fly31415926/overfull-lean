@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "verified",
+  "verification_completed_at_utc": "2026-11-22T18:58:20.636070+00:00",
+  "repository": "fly31415926/overfull-lean",
+  "base_commit": "46b6dc2c44c66a7a2c4ed9590690224bb2d10af4",
+  "verified_source_candidate_commit": "39e171b53023dc7fbefa6aa2e94923c86112070e",
+  "all_proof_sources_identical_to_candidate": true,
+  "target_branches": [
+    "main",
+    "verified-bipartite-continuation-2026-11-21"
+  ],
+  "completed_assertion": {
+    "number": "4.15",
+    "label": "three:lem:four-odd",
+    "theorem": "Overfull.FourOdd.four_odd_parts_decomposition"
+  },
+  "fully_verified_numbered_assertion_count": 45,
+  "remaining_numbered_assertion_count": 24,
+  "main_theorem_verified": false,
+  "strict_build_jobs": 3610,
+  "verified_declaration_count": 10764,
+  "previous_verified_declarations_preserved": 10219,
+  "new_verified_declaration_count": 545,
+  "recovered_historical_declarations_preserved": 1214,
+  "imported_project_modules": 439,
+  "new_proof_modules": 17,
+  "source_hash_count": 440,
+  "verification_input_hash_count": 46,
+  "allowed_logical_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "all_recorded_source_and_input_hashes_match": true,
+  "source_recovery_manifest_byte_identical_to_base": true,
+  "verification_command": "python3 scripts/verify.py",
+  "independent_ci": {
+    "id": 45055087218,
+    "head_sha": "39e171b53023dc7fbefa6aa2e94923c86112070e",
+    "status": "in_progress",
+    "conclusion": null,
+    "html_url": "https://github.com/fly31415926/overfull-lean/actions/runs/45055087218"
+  },
+  "evidence_sha256": {
+    "verification/results.json": "ddd8149e89455ffd3b1bd2fa86bb09c6f01d84c8a6e85919ea348435ffd4e5a9",
+    "verification/build.log": "0a6e36ceec0895dbfbd6f12a15d34d350b9d43146d23e7fa155dd4cacaefa5cb",
+    "verification/axioms.log": "4b56f963f733486029663e5e8830e264a2fa23c5ef9810aef5f8e1e38cc7a49f",
+    "verification/four-odd-declarations.json": "25de2dc7c11e7e439613571e7a4fd05baf5b8a8977b70a6c6630a197679c9725",
+    "verification/restored-project-build.log": "2ab83e423d34fa60e1ade76ef7de955db7d9957c57e1e2e98f87837daa05e5df",
+    "verification/lean-version.log": "36c0bbaf090c97bc8217c6ff497ff9144fd83d9003f12cd505162b943aaaee77",
+    "verification/vizing-source.log": "e91712c222adcda35d3eac8804b7f83ffefe0283a4c35be6e0f28dfda0e238e8",
+    "docs/source-recovery.json": "a533903bf4ebab7dec8baec4ead1d5f0a9f70a825605f2a180befd97289dfb3b",
+    "docs/four-odd-source.json": "7e08d3ad720032403c45ab2028fb1957fe338b668553b81dc4d45888fc52dee5",
+    "docs/four-odd-decomposition.md": "8fb291df7489c4aca92c241969aebf2a1c2ef7441d6742e75fb28d6fce8c9d95",
+    "docs/four-odd-semantic-review.md": "d1c3161711f412b9dde063fcb7f56af4bd53432443d467162d5f30d445faade3"
+  }
+}

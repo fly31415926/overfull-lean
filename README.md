@@ -220,6 +220,7 @@ Overfull.mainTheorem_of_criticalExclusion
 | Lemma 4.11: forcing an exceptional star | `Overfull.force_exceptional_star` | For each exceptional-centered star of more than `11*2^(t+4)` edges, an actual perfect matching meeting that star, obtained from a compressed matching with a proved forest projection; its deletion leaves no overfull set |
 | Proposition 4.12: bounded exceptional-set absorption | `Overfull.bounded_exceptional_absorption` | An actual sequence of safe perfect-matching deletions and two actual core enlargements, retaining at least three quarters of the degree, fixed positive robustness, at most a uniform number of exceptional vertices, and core error bounded by an arbitrary positive function of the actual final exceptional cardinality |
 | Lemma 4.13: frequent boundary patterns | `Overfull.frequent_boundary_patterns` | Actual safe perfect-matching deletions and complete exceptional absorption, degree and integer reserve at least `k/(3*b4(t))`, arbitrarily small relative core error, and actual matching-or-star pair and cut supply in the four-odd-part case; fixed output robustness precedes the error request |
+| Lemma 4.15: four odd parts | `Overfull.FourOdd.four_odd_parts_decomposition` | An exact partition of every original joining-edge copy into exactly `h` actual matchings projecting to perfect matchings or three-edge stars, with all remaining pieces actual matchings projecting to circuits of length two; the explicit error constant is `1/1000` |
 | Lemma 5.3: encoding a precoloring by triangles | `Overfull.dense_encoding` | Local balance, exact deficit identities, and both directions of the extension/decomposition equivalence |
 | Lemma 5.4: the explicit cycle absorber | `Overfull.Dense.CycleAbsorber.in_host` | Every positive cycle length; both triangle decompositions and the exact counts |
 | Lemma 5.5: the finite absorber | `Overfull.Dense.FiniteAbsorber.finite_absorber_subgraph` | One actual absorber for every allowed balanced remainder, with simultaneous placement and total size at most `4h²2^(h²)` |
@@ -233,7 +234,7 @@ Overfull.mainTheorem_of_criticalExclusion
 | Proposition 7.1: the sharpness family | `Overfull.sharpness_family` | Connectivity, order, maximum degree, class 2, edge count, and no overfull set |
 | Corollary 7.2: arbitrarily large examples below one quarter | `Overfull.arbitrarily_large_class_two_graphs` | Every real coefficient below `1/4` and every order threshold |
 
-These are 44 of the manuscript's 69 numbered assertions. The remaining 25, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
+These are 45 of the manuscript's 69 numbered assertions. The remaining 24, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
 
 ## Further checked inputs
 
@@ -557,7 +558,7 @@ The distinguished pattern retains an integer reserve `r >= k/(3*b4(t))`. Its act
 
 Contracting the exterior preserves parallel copies and gives an actual even regular graph with one exterior vertex. The small-cut proof derives no-overfullness. An actual coloring of this precise contraction is then transported back to the original labels, and all completed classes are restored with properness at every original vertex. The error tolerance, retained robust parameters, and order threshold are chosen before the graph and coloring.
 
-This is a checked reduction, not a proof that the contracted graph has a factorization. `Overfull.OneCore.even_core_complement` supplies a shorter route to that missing step: it constructs an even robust core with exactly two exterior vertices and an actual coloring of its exceptional complement. The ordinary-core preprocessing described next now constructs the residual input for Theorem 6.1. That factorization theorem remains unformalized, so Lemma 4.2 with `s=2` is still incomplete. **The completed count is 44 of 69; Lemma 4.14 and the main theorem remain unverified.** See [`docs/boundary-extension.md`](docs/boundary-extension.md).
+This is a checked reduction, not a proof that the contracted graph has a factorization. `Overfull.OneCore.even_core_complement` supplies a shorter route to that missing step: it constructs an even robust core with exactly two exterior vertices and an actual coloring of its exceptional complement. The ordinary-core preprocessing described next now constructs the residual input for Theorem 6.1. That factorization theorem remains unformalized, so Lemma 4.2 with `s=2` is still incomplete. **The completed count is 45 of 69; Lemma 4.14 and the main theorem remain unverified.** See [`docs/boundary-extension.md`](docs/boundary-extension.md).
 
 ### Ordinary-core reduction to a bipartite robust core
 

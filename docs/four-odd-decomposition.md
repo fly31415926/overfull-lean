@@ -4,10 +4,12 @@
 
 **The complete public theorem has passed its strict Lean check and independent
 semantic review.** The new source checkpoint records **45 of 69** complete
-numbered assertions, with **24 remaining**. The full project build and transitive
-axiom audit for this continuation are still pending. Until that run finishes,
-the preceding verification report must not be read as evidence for the new
-source.
+numbered assertions, with **24 remaining**. Complete repository verification is
+recorded in [results.json](../verification/results.json), including the strict
+build, transitive axiom inventory, source hashes and documentation hashes.
+The [declaration map](../verification/four-odd-declarations.json) records every
+audited proof in the 17 new modules. Publication requires these checks to
+pass for the exact source snapshot.
 
 The complete statement is
 `Overfull.FourOdd.four_odd_parts_decomposition` in

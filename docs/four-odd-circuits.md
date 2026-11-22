@@ -17,7 +17,7 @@ so parallel copies and original endpoints retain their identities.
 **Lemma 4.15 now has a complete direct construction in the new
 `Overfull/FourOdd` modules. The full public theorem has passed strict Lean
 checking and independent semantic review; the full project build and axiom
-audit are pending.** Its
+audit are recorded in [verification/results.json](../verification/results.json).** Its
 proof uses actual bipartite edge coloring, equitable balancing, and Hall
 pairing, and does not require the general compatible-circuit existence
 step discussed on this page. See
@@ -28,8 +28,7 @@ complete numbered assertions, with **24 remaining**; the manuscript's main
 theorem remains unverified.
 
 The authoritative strict build and full transitive axiom audit are recorded
-in `verification/results.json`. Until the new verification run finishes,
-the existing report covers the preceding source checkpoint. A component is
+in `verification/results.json`, with exact source and input hashes. A component is
 not counted as a complete numbered assertion merely because its source
 compiles.
 
