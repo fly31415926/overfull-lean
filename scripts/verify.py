@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "verification"
 MATHLIB_REVISION = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
 NUMBERED_ASSERTION_COUNT = 69
-COMPLETED_NUMBERED_ASSERTION_COUNT = 46
+COMPLETED_NUMBERED_ASSERTION_COUNT = 47
 
 
 def run(arguments: list[str], log_name: str) -> str:
@@ -96,6 +96,50 @@ def main() -> None:
     probability_source = boundary_source["additional_supporting_probability_module"]
     if hashlib.sha256((ROOT / probability_source["path"]).read_bytes()).hexdigest() != probability_source["sha256"]:
         raise SystemExit("The supporting Bernoulli-differences source differs from its manifest.")
+
+    # Reconstructed closure of ordinary-core Lemma 4.2, plus the recovered
+    # supporting continuation.  Source identity, public names, and actual
+    # audited modules are checked separately; no historical log is replayed.
+    reconstruction = json.loads((ROOT / "docs/checkpoint-reconstruction-source.json").read_text())
+    if hashlib.sha256((ROOT / "Audit.lean").read_bytes()).hexdigest() != reconstruction["stock_audit_sha256"]:
+        raise SystemExit("The stock transitive axiom audit has changed.")
+    for item in reconstruction["recovered_original_sources"]:
+        if hashlib.sha256((ROOT / item["path"]).read_bytes()).hexdigest() != item["sha256"]:
+            raise SystemExit(f"Recovered original source was modified: {item['path']}")
+    extension_maps = {}
+    for key, filename in (("ordinary", "ordinary-factorization-full-source.json"),
+                          ("few", "few-exception-source.json")):
+        source = json.loads((ROOT / "docs" / filename).read_text())
+        source_modules = {item["module"]: item for item in source["modules"]}
+        if (len(source_modules) != source["module_count"]
+                or len(source_modules) != len(source["modules"])):
+            raise SystemExit(f"Inconsistent {key} module inventory.")
+        public_modules = {}
+        for item in source_modules.values():
+            path = ROOT / item["path"]
+            if (".".join(path.relative_to(ROOT).with_suffix("").parts) != item["module"]
+                    or hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]):
+                raise SystemExit(f"Reviewed {key} source differs: {item['path']}")
+            names = [entry["name"] for entry in item["public_proof_declarations"]]
+            if len(names) != item["public_theorem_count"] or len(names) != len(set(names)):
+                raise SystemExit(f"Inconsistent public proof inventory: {item['module']}")
+            for name in names:
+                if name in public_modules:
+                    raise SystemExit(f"Duplicate mapped public proof: {name}")
+                public_modules[name] = item["module"]
+        if (len(public_modules) != source["public_theorem_count"]
+                or set(public_modules) != set(source["required_proof_declarations"])
+                or len(public_modules) != len(source["required_proof_declarations"])):
+            raise SystemExit(f"Inconsistent {key} public proof mapping.")
+        extension_maps[key] = (source, source_modules, public_modules)
+    ordinary_source, ordinary_modules, ordinary_public_modules = extension_maps["ordinary"]
+    few_source, few_modules, few_public_modules = extension_maps["few"]
+    if (ordinary_source["manuscript_number"] != "4.2"
+            or ordinary_source["statement_sha256"] != "480b2fb39565bc86acf278addac00ca843da67be5638db6b4328af1ddf08ea97"
+            or ordinary_source["numbered_assertions_completed"] != 1):
+        raise SystemExit("The ordinary closure does not identify the pinned complete Lemma 4.2.")
+    if few_source["numbered_assertions_completed"] != 0:
+        raise SystemExit("The few-exception continuation completes no additional numbered assertion.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1462,6 +1506,16 @@ def main() -> None:
     if missing := sorted(set(boundary_source["required_proof_declarations"]) - audited_names):
         raise SystemExit("Full boundary-extension mapped proofs absent from the audit: " + ", ".join(missing))
 
+    audited_modules = {item["name"]: item["module"] for item in declarations}
+    for key, (_source, _modules, public_modules) in extension_maps.items():
+        if missing := sorted(set(public_modules) - audited_names):
+            raise SystemExit(f"Mapped {key} public proofs absent from audit: " + ", ".join(missing))
+        if mismatched := sorted(name for name, module in public_modules.items()
+                                if audited_modules[name] != module):
+            raise SystemExit(f"Mapped {key} public proofs audited in unexpected modules: " + ", ".join(mismatched))
+        completed_results.update({f"{key}_closure_{i}": name
+                                  for i, name in enumerate(sorted(public_modules), 1)})
+
     coverage = json.loads((ROOT / "docs/coverage.json").read_text())
     if (coverage["numbered_assertion_count"] != NUMBERED_ASSERTION_COUNT
             or len(coverage["numbered_assertions"]) != NUMBERED_ASSERTION_COUNT):
@@ -1492,10 +1546,21 @@ def main() -> None:
         names = assertion.get("lean_theorems", [])
         if not names or not set(names) <= audited_names:
             raise SystemExit(f"A completed assertion lacks audited proof declarations: {assertion['number']}")
-    for number in ("2.24", "4.2", "6.1", "6.2", "6.3"):
+    for number in ("2.24", "4.4", "4.5", "4.6", "4.16", "6.1", "6.2", "6.3"):
         assertion = next(a for a in coverage["numbered_assertions"] if a["number"] == number)
         if assertion["full_assertion_verified"]:
             raise SystemExit(f"Assertion {number} is not completed by the registered supporting results.")
+    for source_assertion in few_source["source_assertions"]:
+        assertion = next(a for a in coverage["numbered_assertions"]
+                         if a["number"] == source_assertion["number"])
+        if assertion["statement_sha256"] != source_assertion["statement_sha256"]:
+            raise SystemExit("The few-exception continuation differs from the pinned source statement.")
+    ordinary_assertion = next(a for a in coverage["numbered_assertions"] if a["number"] == "4.2")
+    if (not ordinary_assertion["full_assertion_verified"]
+            or not {"Overfull.ordinary_core_factorization", "Overfull.ordinary_core_one_factorization"}
+                <= set(ordinary_assertion.get("lean_theorems", []))
+            or ordinary_assertion["statement_sha256"] != ordinary_source["statement_sha256"]):
+        raise SystemExit("Full ordinary factorization is not mapped to the complete pinned Lemma 4.2.")
     boundary_assertion = next(a for a in coverage["numbered_assertions"] if a["number"] == "4.14")
     if (not boundary_assertion["full_assertion_verified"]
             or "Overfull.boundary_extension" not in boundary_assertion.get("lean_theorems", [])
@@ -1561,6 +1626,38 @@ def main() -> None:
         "includes_private_and_generated_proofs": True,
         "proof_declaration_map": boundary_declarations,
     }, indent=2) + "\n", encoding="utf-8")
+    extension_evidence = {}
+    for key, (source, source_modules, public_modules) in extension_maps.items():
+        mapped = [
+            {**item, "source_path": source_modules[item["module"]]["path"],
+             "source_sha256": source_modules[item["module"]]["sha256"]}
+            for item in sorted(declarations, key=lambda item: item["name"])
+            if item["module"] in source_modules
+        ]
+        if {item["module"] for item in mapped} != set(source_modules):
+            raise SystemExit(f"The {key} declaration mapping omits a reviewed module.")
+        basename = "ordinary-factorization-full" if key == "ordinary" else "few-exception"
+        map_path = OUTPUT / f"{basename}-declarations.json"
+        map_path.write_text(json.dumps({
+            "schema_version": 1,
+            "kind": source["kind"],
+            "numbered_assertions_completed": source["numbered_assertions_completed"],
+            "manuscript_number": source.get("manuscript_number"),
+            "statement_sha256": source.get("statement_sha256"),
+            "module_count": len(source_modules),
+            "public_theorem_count": len(public_modules),
+            "verified_declaration_count": len(mapped),
+            "includes_private_and_generated_proofs": True,
+            "proof_declaration_map": mapped,
+        }, indent=2) + "\n", encoding="utf-8")
+        extension_evidence[key] = {
+            "path": str(map_path.relative_to(ROOT)),
+            "sha256": hashlib.sha256(map_path.read_bytes()).hexdigest(),
+            "module_count": len(source_modules),
+            "public_theorem_count": len(public_modules),
+            "verified_declaration_count": len(mapped),
+            "numbered_assertions_completed": source["numbered_assertions_completed"],
+        }
     results = {
         "status": "partial_formalization",
         "main_theorem_verified": False,
@@ -1604,6 +1701,15 @@ def main() -> None:
             "verified_declaration_count": len(boundary_declarations),
             "module_count": len(boundary_modules),
             "manuscript_number": "4.14",
+        },
+        "ordinary_factorization_declaration_map": extension_evidence["ordinary"],
+        "few_exception_declaration_map": extension_evidence["few"],
+        "checkpoint_reconstruction": {
+            "original_checkpoint": reconstruction["original_checkpoint"],
+            "original_tree_reproduced": False,
+            "recovered_original_source_count": len(reconstruction["recovered_original_sources"]),
+            "recreated_source_count": len(reconstruction["recreated_sources"]),
+            "fresh_build_and_audit": True,
         },
         "source_sha256": {
             str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()

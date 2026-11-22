@@ -8,8 +8,8 @@
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
-  "fully_verified_numbered_assertion_count": 46,
-  "scope": "46 of 69 numbered manuscript assertions have complete checked proofs; 23, including the main theorem, remain incomplete. Full Lemma 4.14 is proved by Overfull.boundary_extension: for every original proper singleton/triple boundary coloring of a sufficiently large odd robust core, construct an actual coloring of every original incident edge copy preserving every prescribed boundary label. A direct uniform one-apex reduction and constructed two-apex factorization supply the former missing coloring, using proved fan recoloring, balanced footprints, robust matching packing, and bipartite edge coloring. All constants precede the graph. The general ordinary/bipartite factorization, compatible spanning setup, special path systems, robust absorber, and critical average-degree input remain separate open obligations. All earlier completed assertions and historical source-recovery mappings are preserved.",
+  "fully_verified_numbered_assertion_count": 47,
+  "scope": "47 of 69 numbered manuscript assertions have complete checked proofs; 22, including the main theorem, remain incomplete. Full ordinary-core Lemma 4.2 is proved under its original hypotheses and yields an exact partition of all original multigraph copies into perfect matchings. The supporting continuation proves the one-core branch of Corollary 4.6 with at most three exceptional vertices, terminal one-core factorization under the recorded incidence hypotheses, and the exact three-label safe-deletion criterion. It completes no additional numbered assertion. The two-core branch of 4.6, full fixed-pattern Lemma 4.4, general compatible-circuit selection, terminal Proposition 4.16, general Section 6 factorization, critical average-degree input, and the main theorem remain incomplete. Eleven unavailable source modules were recreated under explicit user authorization; all nine recovered original source modules and the stock audit were preserved. This is a newly verified checkpoint, not the original cb05ef5 tree.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -313,7 +313,7 @@
         "Overfull.Sharpness.Family.rawColor_injective_of_adj",
         "Overfull.Sharpness.Family.has_upper_coloring"
       ],
-      "scope_limit": "This is a construction for this family; it is not a formalization of Vizing’s theorem for all simple graphs.",
+      "scope_limit": "This is a construction for this family; it is not a formalization of Vizing\u2019s theorem for all simple graphs.",
       "manuscript_locations": [
         "sharp:thm:family, upper bound on the chromatic index"
       ]
@@ -536,7 +536,7 @@
     {
       "id": "hall_and_deficiency",
       "kind": "graph_theoretic_result",
-      "description": "Hall’s equivalence and its deficiency form are proved for actual matching subgraphs, with arbitrary finite side sizes. The deficiency construction uses h dummy vertices and counts the unmatched original vertices.",
+      "description": "Hall\u2019s equivalence and its deficiency form are proved for actual matching subgraphs, with arbitrary finite side sizes. The deficiency construction uses h dummy vertices and counts the unmatched original vertices.",
       "lean_declarations": [
         "Overfull.bipartite_hall_iff",
         "Overfull.bipartite_hall_defect"
@@ -666,9 +666,9 @@
         "Overfull.Multigraph.EdgeColoring.degree_le",
         "Overfull.Multigraph.konig_edgeColoring_iff"
       ],
-      "scope_limit": "Complete König edge-coloring input in Section 2.3; no multigraph fan elementarity theorem is supplied.",
+      "scope_limit": "Complete K\u00f6nig edge-coloring input in Section 2.3; no multigraph fan elementarity theorem is supplied.",
       "manuscript_locations": [
-        "Section 2.3, König edge-coloring theorem"
+        "Section 2.3, K\u00f6nig edge-coloring theorem"
       ]
     },
     {
@@ -694,7 +694,7 @@
         "Overfull.Multigraph.EdgeColoring.not_overfull",
         "Overfull.Multigraph.overfull_not_edgeColorable"
       ],
-      "scope_limit": "The necessary no-overfull condition for all finite loopless multigraphs. Sufficiency in the bipartite case is proved separately by König’s theorem.",
+      "scope_limit": "The necessary no-overfull condition for all finite loopless multigraphs. Sufficiency in the bipartite case is proved separately by K\u00f6nig\u2019s theorem.",
       "manuscript_locations": [
         "Section 2.3, multigraph edge colorings",
         "old:pre:matching"
@@ -2177,7 +2177,7 @@
     {
       "id": "foreign_color_classes",
       "kind": "graph_theoretic_result",
-      "description": "Apply the proved multigraph König theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case.",
+      "description": "Apply the proved multigraph K\u00f6nig theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case.",
       "lean_declarations": [
         "Overfull.ForeignColoring.selectedMatching_isMatching_of_edge_copies",
         "Overfull.ForeignColoring.selectedMatching_spanning_disjoint",
@@ -4442,7 +4442,7 @@
         "Overfull.RobustPartition.total_deficiency_lt_of_average_degree",
         "Overfull.RobustPartition.exists_uniform_partition_of_average_degree"
       ],
-      "scope_limit": "The average-degree estimate is an explicit numerical hypothesis. Cao–Chen criticality-to-average-degree remains unformalized, so Proposition 2.24 stays incomplete.",
+      "scope_limit": "The average-degree estimate is an explicit numerical hypothesis. Cao\u2013Chen criticality-to-average-degree remains unformalized, so Proposition 2.24 stays incomplete.",
       "manuscript_locations": [
         "bip:part:five-cases"
       ]
@@ -4950,6 +4950,58 @@
       "scope_limit": "Additional reusable probability support. It is not needed by the direct boundary-extension proof and does not complete the approximate triangle-packing or any additional numbered assertion.",
       "manuscript_locations": [
         "dense:approximate, supporting finite concentration tool"
+      ]
+    },
+    {
+      "id": "ordinary_core_full",
+      "kind": "complete_numbered_assertion",
+      "description": "Full uniform ordinary-core factorization with bounded exterior and a colorable actual core complement; exact partition of original copies into perfect matchings.",
+      "lean_declarations": [
+        "Overfull.ordinary_core_factorization",
+        "Overfull.ordinary_core_one_factorization"
+      ],
+      "scope_limit": "Full Lemma 4.2; no general bipartite factorization or main theorem is claimed.",
+      "manuscript_locations": [
+        "two:lem:ordinary-special"
+      ]
+    },
+    {
+      "id": "one_core_three_exceptions",
+      "kind": "complete_branch",
+      "description": "Construct complement coloring, normalize core parity, and factor the original regular non-overfull host with one robust core and at most three exterior vertices.",
+      "lean_declarations": [
+        "Overfull.one_core_three_exception_factorization",
+        "Overfull.one_core_three_exception_one_factorization"
+      ],
+      "scope_limit": "The one-core branch of Corollary 4.6 only; the two-core branch remains incomplete.",
+      "manuscript_locations": [
+        "three:lem:bounded-input"
+      ]
+    },
+    {
+      "id": "terminal_one_core_factorization",
+      "kind": "supporting_factorization",
+      "description": "Factor terminal one-core pieces under the recorded actual exterior incidence bounds, allowing one unrestricted apex.",
+      "lean_declarations": [
+        "Overfull.TerminalComplement.exists_uniform_terminal_factorization",
+        "Overfull.TerminalComplement.exists_uniform_terminal_one_factorization"
+      ],
+      "scope_limit": "The preceding construction of the terminal inputs in full Lemma 4.4 remains incomplete.",
+      "manuscript_locations": [
+        "two:short:fixed-pattern"
+      ]
+    },
+    {
+      "id": "three_label_safe_deletion",
+      "kind": "supporting_equivalence",
+      "description": "Exact equivalence between safe circuit deletion and meeting tight incidence classes on at most three labels.",
+      "lean_declarations": [
+        "Overfull.Multigraph.threeLabel_admissibleOn_sdiff_iff_tight_classes"
+      ],
+      "scope_limit": "A deletion criterion; no full compatible-circuit existence or decomposition theorem.",
+      "manuscript_locations": [
+        "three:lem:bounded-input",
+        "three:prop:terminal"
       ]
     }
   ],
@@ -5573,7 +5625,7 @@
         "uniform_average_degree_partition_reduction"
       ],
       "imported_statement": false,
-      "formalization_scope": "The full deterministic argument is proved from the actual average-degree estimate (1-zeta^3/2)*Delta <= sum degrees/n. Uniform zeta and gamma precede the graph, and zeta may be below any prescribed positive bound. The actual low-degree set and induced complement are constructed, with strict deleted-set bound, surviving order, actual minimum/maximum degree transfer, full robust partition, rho <= (theta/100)^3, all five component alternatives, and every original-order degree-exception and shore-size bound. The criticality-to-average-degree implication from Cao–Chen is not formalized. Proposition 2.24 remains incomplete."
+      "formalization_scope": "The full deterministic argument is proved from the actual average-degree estimate (1-zeta^3/2)*Delta <= sum degrees/n. Uniform zeta and gamma precede the graph, and zeta may be below any prescribed positive bound. The actual low-degree set and induced complement are constructed, with strict deleted-set bound, surviving order, actual minimum/maximum degree transfer, full robust partition, rho <= (theta/100)^3, all five component alternatives, and every original-order degree-exception and shore-size bound. The criticality-to-average-degree implication from Cao\u2013Chen is not formalized. Proposition 2.24 remains incomplete."
     },
     {
       "number": "2.25",
@@ -5766,18 +5818,23 @@
         2220
       ],
       "statement_sha256": "480b2fb39565bc86acf278addac00ca843da67be5638db6b4328af1ddf08ea97",
-      "full_assertion_verified": false,
-      "status": "checked_components_only",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
       "checked_components": [
         "matching_repair",
         "bounded_forbidden_coloring",
         "constrained_color_balance_and_deficits",
         "quantitative_cut_and_reserve",
         "ordinary_first_group_construction",
-        "ordinary_exact_residual_reconstruction"
+        "ordinary_exact_residual_reconstruction",
+        "ordinary_core_full"
       ],
       "imported_statement": false,
-      "formalization_scope": "The specialized forbidden-color step, quantitative cut and reserve, constrained color balancing and deficits, and uniform first group of actual completed colors are proved. The actual residual crossing core, its complementary coloring, and conditional reconstruction are also proved. Factorization of the whole residual remains open, so this is not a complete proof of Lemma 4.2."
+      "formalization_scope": "Full ordinary-core factorization from the original even regular host, sufficiently large even robust core, bounded exterior, small core deficit and actual complementary coloring. Uniform parameters precede the host. The output partitions all original edge copies into k actual perfect matchings.",
+      "lean_theorems": [
+        "Overfull.ordinary_core_factorization",
+        "Overfull.ordinary_core_one_factorization"
+      ]
     },
     {
       "number": "4.4",
@@ -5792,9 +5849,12 @@
       ],
       "statement_sha256": "653e8b0aa8fa12f4368816ce9d9ce8b9d84a49015bce07638fd9c49e94523c2b",
       "full_assertion_verified": false,
-      "status": "not_formalized_here",
-      "checked_components": [],
-      "imported_statement": false
+      "status": "checked_components_only",
+      "checked_components": [
+        "terminal_one_core_factorization"
+      ],
+      "imported_statement": false,
+      "formalization_scope": "Terminal one-core pieces are factored under their constructed incidence hypotheses. The preceding construction and full fixed-pattern assertion remain incomplete."
     },
     {
       "number": "4.5",
@@ -5826,9 +5886,13 @@
       ],
       "statement_sha256": "86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26",
       "full_assertion_verified": false,
-      "status": "not_formalized_here",
-      "checked_components": [],
-      "imported_statement": false
+      "status": "checked_components_only",
+      "checked_components": [
+        "one_core_three_exceptions",
+        "three_label_safe_deletion"
+      ],
+      "imported_statement": false,
+      "formalization_scope": "Complete one-core branch from the original regular non-overfull host hypotheses with at most three exterior vertices. The distinct two-core branch remains incomplete; the safe-deletion criterion does not supply full circuit selection."
     },
     {
       "number": "4.7",
@@ -6725,7 +6789,7 @@
     },
     {
       "bibliography_key": "Berge1958",
-      "required_result": "Tutte–Berge maximum-matching deficiency formula",
+      "required_result": "Tutte\u2013Berge maximum-matching deficiency formula",
       "pinpoints": [],
       "coverage_status": "fully_proved_for_actual_finite_simple_graph_matchings_with_attained_integer_maximum",
       "lean_declarations": [
@@ -6746,7 +6810,7 @@
     },
     {
       "bibliography_key": "Konig",
-      "required_result": "Kőnig edge-coloring theorem for bipartite multigraphs",
+      "required_result": "K\u0151nig edge-coloring theorem for bipartite multigraphs",
       "pinpoints": [],
       "coverage_status": "fully_proved_for_actual_finite_loopless_bipartite_multigraphs",
       "lean_declarations": [
@@ -6800,7 +6864,7 @@
       "required_result": "Robust partition theorem for almost-regular graphs",
       "pinpoints": [
         "Theorem 5.1",
-        "conditions C1–C3 and D1–D7"
+        "conditions C1\u2013C3 and D1\u2013D7"
       ],
       "coverage_status": "manuscript_theorem_2_23_fully_proved_by_actual_finite_refinement",
       "lean_declarations": [
@@ -6868,8 +6932,8 @@
       "required_result": "Bipartite robust setup, refinements, universal walk and robust decomposition",
       "pinpoints": [
         "Corollary 5.5",
-        "Lemmas 5.7, 5.14–5.15, 6.8–6.10, 6.24 and 7.2",
-        "Definitions 6.7, 6.14, 6.16 and 6.21–6.23"
+        "Lemmas 5.7, 5.14\u20135.15, 6.8\u20136.10, 6.24 and 7.2",
+        "Definitions 6.7, 6.14, 6.16 and 6.21\u20136.23"
       ],
       "coverage_status": "not_formalized_or_matched_to_a_checked_declaration_here"
     }

@@ -1,6 +1,6 @@
 # Complete prescribed boundary extension: Lemma 4.14
 
-**Lemma 4.14 is complete. The numbered inventory is 46 of 69, with 23
+**Lemma 4.14 is complete. The numbered inventory is 47 of 69, with 22
 assertions remaining.** The public theorem
 [`Overfull.boundary_extension`](../Overfull/BoundaryExtension/Full.lean)
 constructs a proper coloring of every original edge copy incident with the
@@ -10,8 +10,9 @@ The main theorem remains unverified.
 The new proof supplies the actual one-apex factorization that was the
 explicit missing input to `boundary_extension_reduction`. Its direct
 one-apex and two-apex construction uses the proved cut, coloring, repair,
-and packing results. The full general Lemma 4.2, Corollary 4.6, and Theorem
-6.1 remain open; none is assumed in this proof.
+and packing results. Full Lemma 4.2 is now proved separately by the
+[bounded-exterior route](ordinary-factorization-full.md). Full Corollary 4.6
+and general Theorem 6.1 remain open; none is assumed in this proof.
 
 ## Source identity
 
@@ -270,8 +271,8 @@ its precise contraction, discharging its previously explicit argument.
 ## Scope of the completion
 
 This proves the full boundary extension asserted in Lemma 4.14. The
-broader ordinary-core Lemma 4.2, bounded-input Corollary 4.6, Theorem 6.1,
-and its spanning-setup and absorber infrastructure remain separate
+ordinary-core Lemma 4.2 is proved separately. Full bounded-input Corollary
+4.6, Theorem 6.1, and its spanning-setup and absorber infrastructure remain separate
 obligations. The two-apex theorem requires the derived two-shore incidence
 supply at one apex; it does not assert factorization for every arbitrary
 bounded exceptional configuration.

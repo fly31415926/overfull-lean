@@ -1245,7 +1245,91 @@
     "two_apex_complete_factorization": "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization",
     "one_apex_uniform_supplied_reduction": "Overfull.OneCore.exists_uniform_two_apex_reduction",
     "bernoulli_variance_sensitive_bounded_differences": "Overfull.BernoulliDifferences.exponential_moment_le",
-    "bernoulli_two_sided_tail": "Overfull.BernoulliDifferences.two_sided_tail"
+    "bernoulli_two_sided_tail": "Overfull.BernoulliDifferences.two_sided_tail",
+    "ordinary_closure_1": "Overfull.BoundedExterior.augmented_shores_compl",
+    "ordinary_closure_2": "Overfull.BoundedExterior.colorClass_isPerfectMatching",
+    "ordinary_closure_3": "Overfull.BoundedExterior.colorClasses_pairwise_disjoint",
+    "ordinary_closure_4": "Overfull.BoundedExterior.colorClasses_union",
+    "ordinary_closure_5": "Overfull.BoundedExterior.coreComplement_exteriorClass_covers",
+    "ordinary_closure_6": "Overfull.BoundedExterior.coreComplement_exteriorClass_footprint_bounds",
+    "ordinary_closure_7": "Overfull.BoundedExterior.coreComplement_exteriorClass_split",
+    "ordinary_closure_8": "Overfull.BoundedExterior.coreFootprintSubtype_card",
+    "ordinary_closure_9": "Overfull.BoundedExterior.coreFootprintSubtype_inter_card",
+    "ordinary_closure_10": "Overfull.BoundedExterior.coreFootprintSubtype_map",
+    "ordinary_closure_11": "Overfull.BoundedExterior.coreFootprint_subset",
+    "ordinary_closure_12": "Overfull.BoundedExterior.core_copies_cross_augmented",
+    "ordinary_closure_13": "Overfull.BoundedExterior.exists_balanced_exterior_split",
+    "ordinary_closure_14": "Overfull.BoundedExterior.exists_balanced_exterior_split_subtype",
+    "ordinary_closure_15": "Overfull.BoundedExterior.exists_balanced_selected_coloring",
+    "ordinary_closure_16": "Overfull.BoundedExterior.exists_labels_avoiding",
+    "ordinary_closure_17": "Overfull.BoundedExterior.exists_labels_avoiding_reserve",
+    "ordinary_closure_18": "Overfull.BoundedExterior.exists_oneFactorization_of_coloring",
+    "ordinary_closure_19": "Overfull.BoundedExterior.exists_originalReserve",
+    "ordinary_closure_20": "Overfull.BoundedExterior.exists_selected_coloring",
+    "ordinary_closure_21": "Overfull.BoundedExterior.exists_uniform_factorization_of_reserved_colors",
+    "ordinary_closure_22": "Overfull.BoundedExterior.exteriorClass_covers_outside",
+    "ordinary_closure_23": "Overfull.BoundedExterior.exteriorClass_isMatching",
+    "ordinary_closure_24": "Overfull.BoundedExterior.exteriorClass_subset_outside",
+    "ordinary_closure_25": "Overfull.BoundedExterior.exterior_partition_even",
+    "ordinary_closure_26": "Overfull.BoundedExterior.matching_footprintSubtype_bounds",
+    "ordinary_closure_27": "Overfull.BoundedExterior.matching_footprint_bounds",
+    "ordinary_closure_28": "Overfull.BoundedExterior.mem_coreFootprint",
+    "ordinary_closure_29": "Overfull.BoundedExterior.mem_coreFootprintSubtype",
+    "ordinary_closure_30": "Overfull.BoundedExterior.mem_exteriorClass",
+    "ordinary_closure_31": "Overfull.BoundedExterior.mem_residualReservedLabels",
+    "ordinary_closure_32": "Overfull.BoundedExterior.reserveCount_le_eighth",
+    "ordinary_closure_33": "Overfull.BoundedExterior.reserveCount_lower_of_large",
+    "ordinary_closure_34": "Overfull.BoundedExterior.reserveCount_mul_le",
+    "ordinary_closure_35": "Overfull.BoundedExterior.reserveCount_pos_of_large",
+    "ordinary_closure_36": "Overfull.BoundedExterior.reserveDenominator_factor",
+    "ordinary_closure_37": "Overfull.BoundedExterior.reserveDenominator_ge_eight",
+    "ordinary_closure_38": "Overfull.BoundedExterior.reserveDenominator_pos",
+    "ordinary_closure_39": "Overfull.BoundedExterior.residualReservedLabels_card",
+    "ordinary_closure_40": "Overfull.BoundedExterior.residualReservedLabels_crossing",
+    "ordinary_closure_41": "Overfull.BoundedExterior.residualReservedLabels_map",
+    "ordinary_closure_42": "Overfull.BoundedExterior.selected_core_degree_sums",
+    "ordinary_closure_43": "Overfull.OrdinaryFactorization.exists_cut_reserve_of_two_robust_parameters_with_bounded_footprints",
+    "ordinary_closure_44": "Overfull.OrdinaryFactorization.exists_cut_reserve_with_bounded_footprints",
+    "ordinary_closure_45": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_bounded_footprints",
+    "ordinary_closure_46": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints",
+    "ordinary_closure_47": "Overfull.OrdinaryFactorization.exists_uniform_ordinary_core_factorization",
+    "ordinary_closure_48": "Overfull.PairedCut.balanced_footprint_probability",
+    "ordinary_closure_49": "Overfull.PairedCut.exists_balanced_footprints_outside",
+    "ordinary_closure_50": "Overfull.PairedCut.exists_orientation_balanced_footprints",
+    "ordinary_closure_51": "Overfull.PairedCut.exists_orientation_balanced_footprints_of_error_bound",
+    "ordinary_closure_52": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints",
+    "ordinary_closure_53": "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters_balanced_footprints",
+    "ordinary_closure_54": "Overfull.PairedCut.orientation_error_lt_positive",
+    "ordinary_closure_55": "Overfull.PairedCut.paired_cut_quantitative_balanced_footprints",
+    "ordinary_closure_56": "Overfull.ordinary_core_factorization",
+    "ordinary_closure_57": "Overfull.ordinary_core_one_factorization",
+    "few_closure_1": "Overfull.FewExceptions.complement_colorable",
+    "few_closure_2": "Overfull.FewExceptions.complement_colorable_of_exterior_edge_bound",
+    "few_closure_3": "Overfull.FewExceptions.complement_colorable_real",
+    "few_closure_4": "Overfull.FewExceptions.core_complement_colorable",
+    "few_closure_5": "Overfull.FewExceptions.degreeAway_le_degree",
+    "few_closure_6": "Overfull.FewExceptions.degreeAway_le_internal_away_add",
+    "few_closure_7": "Overfull.FewExceptions.exists_uniform_one_core_factorization",
+    "few_closure_8": "Overfull.FewExceptions.internalAway_eq",
+    "few_closure_9": "Overfull.FewExceptions.internal_compl_eq_univ",
+    "few_closure_10": "Overfull.FewExceptions.internal_incidence_eq_edgesTo",
+    "few_closure_11": "Overfull.FewExceptions.restriction_internal_away_card_le",
+    "few_closure_12": "Overfull.FewExceptions.restriction_internal_card_le",
+    "few_closure_13": "Overfull.Multigraph.IsCircuit.cutOn_card_le_two_of_card_le_three",
+    "few_closure_14": "Overfull.Multigraph.IsCircuit.cutOn_card_zero_or_two_of_card_le_three",
+    "few_closure_15": "Overfull.Multigraph.admissibleOn_sdiff_iff_meets_tight_classes_of_card_le_three",
+    "few_closure_16": "Overfull.Multigraph.admissibleOn_sdiff_iff_tight_cuts_of_card_le_three",
+    "few_closure_17": "Overfull.Multigraph.threeLabel_admissibleOn_sdiff_iff_tight_classes",
+    "few_closure_18": "Overfull.OrdinaryFactorization.exists_even_core_move",
+    "few_closure_19": "Overfull.OrdinaryFactorization.exists_uniform_factorization_any_core_parity",
+    "few_closure_20": "Overfull.TerminalComplement.colorable_one_apex",
+    "few_closure_21": "Overfull.TerminalComplement.core_colorable",
+    "few_closure_22": "Overfull.TerminalComplement.core_colorable_one_apex",
+    "few_closure_23": "Overfull.TerminalComplement.exists_uniform_terminal_factorization",
+    "few_closure_24": "Overfull.TerminalComplement.exists_uniform_terminal_one_factorization",
+    "few_closure_25": "Overfull.TerminalComplement.moved_core_colorable_one_apex",
+    "few_closure_26": "Overfull.one_core_three_exception_factorization",
+    "few_closure_27": "Overfull.one_core_three_exception_one_factorization"
   },
   "lean_build_passed": true,
   "axiom_audit_passed": true,
@@ -1682,7 +1766,7 @@
     "Classical.choice",
     "Quot.sound"
   ],
-  "verified_declaration_count": 11318,
+  "verified_declaration_count": 11514,
   "declaration_count_includes_generated_support_lemmas": true,
   "verified_declarations": [
     {
@@ -23448,6 +23532,823 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.avoid"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.balance"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.crossing"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.mk.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.mk.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.reserved_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.augmented_shores_compl"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.augmented_shores_compl._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.augmented_shores_compl._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "name": "Overfull.BoundedExterior.colorClass_isPerfectMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "name": "Overfull.BoundedExterior.colorClasses_pairwise_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "name": "Overfull.BoundedExterior.colorClasses_union"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "name": "Overfull.BoundedExterior.colorClasses_union._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "name": "Overfull.BoundedExterior.colorClasses_union._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "name": "Overfull.BoundedExterior.colorClasses_union._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.coreComplement_exteriorClass_covers"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.coreComplement_exteriorClass_footprint_bounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.coreComplement_exteriorClass_split"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.coreFootprint.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.coreFootprintSubtype.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.coreFootprintSubtype_card"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.coreFootprintSubtype_inter_card"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.coreFootprintSubtype_map"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.coreFootprintSubtype_map._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.coreFootprint_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.core_copies_cross_augmented"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.core_copies_cross_augmented._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.exists_balanced_exterior_split"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.exists_balanced_exterior_split._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.exists_balanced_exterior_split._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.exists_balanced_exterior_split_subtype"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.exists_balanced_exterior_split_subtype._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.exists_balanced_exterior_split_subtype._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.exists_balanced_selected_coloring"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.exists_labels_avoiding"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.exists_labels_avoiding._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.exists_labels_avoiding_reserve"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "name": "Overfull.BoundedExterior.exists_oneFactorization_of_coloring"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.exists_originalReserve"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.exists_originalReserve._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.SelectedColoring",
+      "name": "Overfull.BoundedExterior.exists_selected_coloring"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReservedColors",
+      "name": "Overfull.BoundedExterior.exists_uniform_factorization_of_reserved_colors"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BoundedExterior.ReservedColors",
+      "name": "Overfull.BoundedExterior.exists_uniform_factorization_of_reserved_colors._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BoundedExterior.ReservedColors",
+      "name": "Overfull.BoundedExterior.exists_uniform_factorization_of_reserved_colors._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.exteriorClass.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.exteriorClass_covers_outside"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.exteriorClass_isMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.exteriorClass_subset_outside"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.exterior_partition_even"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprintSubtype_bounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprint_bounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprint_bounds._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprint_bounds._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprint_bounds._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprint_bounds._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprint_bounds._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprint_bounds._simp_1_4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.mem_coreFootprint"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.mem_coreFootprint._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.mem_coreFootprint._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.mem_coreFootprintSubtype"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.mem_coreFootprintSubtype._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.mem_coreFootprintSubtype._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.mem_coreFootprintSubtype._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.mem_exteriorClass"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.mem_exteriorClass._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.mem_exteriorClass._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.mem_exteriorClass._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.mem_exteriorClass._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.mem_residualReservedLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.mem_residualReservedLabels._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.mem_residualReservedLabels._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.mem_residualReservedLabels._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveCount_le_eighth"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveCount_lower_of_large"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveCount_lower_of_large._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveCount_mul_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveCount_pos_of_large"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveCount_pos_of_large._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveDenominator.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveDenominator_factor"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveDenominator_factor._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveDenominator_ge_eight"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveDenominator_ge_eight._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveDenominator_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.residualReservedLabels.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.residualReservedLabels_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.residualReservedLabels_crossing"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.residualReservedLabels_map"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.selected_core_degree_sums"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.selected_core_degree_sums._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.Dense.SignedFlow",
       "name": "Overfull.BoundedFlow.exists_of_cut"
     },
@@ -37463,6 +38364,229 @@
       ],
       "module": "Overfull.CliqueColors",
       "name": "Overfull.EdgeColoring.uncoveredVertices_card_eq_one._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.complement_colorable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.complement_colorable._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.complement_colorable_of_exterior_edge_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.complement_colorable_of_exterior_edge_bound._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.complement_colorable_of_exterior_edge_bound._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.complement_colorable_of_exterior_edge_bound._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.complement_colorable_of_exterior_edge_bound._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.complement_colorable_of_exterior_edge_bound._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.complement_colorable_of_exterior_edge_bound._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.complement_colorable_of_exterior_edge_bound._proof_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.complement_colorable_real"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.core_complement_colorable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.degreeAway_le_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.degreeAway_le_internal_away_add"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FewExceptions.Factorization",
+      "name": "Overfull.FewExceptions.exists_uniform_one_core_factorization"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Factorization",
+      "name": "Overfull.FewExceptions.exists_uniform_one_core_factorization._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.internalAway.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.internalAway_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.internalAway_eq._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.internalAway_eq._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.internal_compl_eq_univ"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.internal_incidence_eq_edgesTo"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.internal_incidence_eq_edgesTo._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.restriction_internal_away_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.FewExceptions.Complement",
+      "name": "Overfull.FewExceptions.restriction_internal_card_le"
     },
     {
       "axioms": [
@@ -55382,6 +56506,42 @@
     },
     {
       "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeVertexDeletion",
+      "name": "Overfull.Multigraph.IsCircuit.cutOn_card_le_two_of_card_le_three"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeVertexDeletion",
+      "name": "Overfull.Multigraph.IsCircuit.cutOn_card_le_two_of_card_le_three._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeVertexDeletion",
+      "name": "Overfull.Multigraph.IsCircuit.cutOn_card_zero_or_two_of_card_le_three"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeVertexDeletion",
+      "name": "Overfull.Multigraph.IsCircuit.cutOn_card_zero_or_two_of_card_le_three._proof_1_1"
+    },
+    {
+      "axioms": [
         "Quot.sound",
         "propext",
         "Classical.choice"
@@ -56416,6 +57576,69 @@
       ],
       "module": "Overfull.CompatibleCircuits.Deletion",
       "name": "Overfull.Multigraph.admissibleOn_sdiff_iff._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeVertexDeletion",
+      "name": "Overfull.Multigraph.admissibleOn_sdiff_iff_meets_tight_classes_of_card_le_three"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeVertexDeletion",
+      "name": "Overfull.Multigraph.admissibleOn_sdiff_iff_meets_tight_classes_of_card_le_three._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeVertexDeletion",
+      "name": "Overfull.Multigraph.admissibleOn_sdiff_iff_meets_tight_classes_of_card_le_three._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeVertexDeletion",
+      "name": "Overfull.Multigraph.admissibleOn_sdiff_iff_tight_cuts_of_card_le_three"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeVertexDeletion",
+      "name": "Overfull.Multigraph.admissibleOn_sdiff_iff_tight_cuts_of_card_le_three._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeVertexDeletion",
+      "name": "Overfull.Multigraph.admissibleOn_sdiff_iff_tight_cuts_of_card_le_three._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeVertexDeletion",
+      "name": "Overfull.Multigraph.admissibleOn_sdiff_iff_tight_cuts_of_card_le_three._proof_1_3"
     },
     {
       "axioms": [
@@ -58398,6 +59621,15 @@
       ],
       "module": "Overfull.MultigraphFanApplications",
       "name": "Overfull.Multigraph.simple_core_edgesTo_card_le"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeVertexDeletion",
+      "name": "Overfull.Multigraph.threeLabel_admissibleOn_sdiff_iff_tight_classes"
     },
     {
       "axioms": [
@@ -61431,11 +62663,47 @@
     {
       "axioms": [
         "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.BoundedCutReserve",
+      "name": "Overfull.OrdinaryFactorization.exists_cut_reserve_of_two_robust_parameters_with_bounded_footprints"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.BoundedCutReserve",
+      "name": "Overfull.OrdinaryFactorization.exists_cut_reserve_with_bounded_footprints"
+    },
+    {
+      "axioms": [
+        "propext",
         "Quot.sound",
         "Classical.choice"
       ],
       "module": "Overfull.OrdinaryFactorization.ExteriorSelection",
       "name": "Overfull.OrdinaryFactorization.exists_equitable_selected_exterior"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Parity",
+      "name": "Overfull.OrdinaryFactorization.exists_even_core_move"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Parity",
+      "name": "Overfull.OrdinaryFactorization.exists_even_core_move._proof_1_1"
     },
     {
       "axioms": [
@@ -61573,6 +62841,33 @@
         "Classical.choice",
         "Quot.sound"
       ],
+      "module": "Overfull.OrdinaryFactorization.ReductionBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_bounded_footprints"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ReductionBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_bounded_footprints._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ReductionBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_bounded_footprints._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "module": "Overfull.OrdinaryFactorization.Reduction",
       "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_choices"
     },
@@ -61593,6 +62888,60 @@
       ],
       "module": "Overfull.OrdinaryFactorization.Reduction",
       "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_choices._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Parity",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_factorization_any_core_parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Parity",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_factorization_any_core_parity._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Parity",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_factorization_any_core_parity._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Parity",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_factorization_any_core_parity._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Parity",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_factorization_any_core_parity._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Parity",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_factorization_any_core_parity._simp_1_4"
     },
     {
       "axioms": [
@@ -61678,6 +63027,74 @@
         "Classical.choice",
         "Quot.sound"
       ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints._proof_1_10"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints._simp_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints._simp_1_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints._simp_1_9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "module": "Overfull.OrdinaryFactorization.FirstHalf",
       "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices"
     },
@@ -61740,6 +63157,42 @@
       ],
       "module": "Overfull.OrdinaryFactorization.FirstHalf",
       "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._simp_1_9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_ordinary_core_factorization"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_ordinary_core_factorization._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_ordinary_core_factorization._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_ordinary_core_factorization._simp_1_3"
     },
     {
       "axioms": [
@@ -65057,6 +66510,48 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.balanced_footprint_probability"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.balanced_footprint_probability._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.balanced_footprint_probability._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.balanced_footprint_probability._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.balanced_footprint_probability._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.PairedCut.Sampling",
       "name": "Overfull.PairedCut.bothPairs.eq_1"
     },
@@ -65352,6 +66847,15 @@
     {
       "axioms": [
         "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_balanced_footprints_outside"
+    },
+    {
+      "axioms": [
+        "propext",
         "Classical.choice",
         "Quot.sound"
       ],
@@ -65366,6 +66870,24 @@
       ],
       "module": "Overfull.PairedCut.Uniform",
       "name": "Overfull.PairedCut.exists_orientation"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_orientation_balanced_footprints"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_orientation_balanced_footprints_of_error_bound"
     },
     {
       "axioms": [
@@ -65444,6 +66966,73 @@
         "Classical.choice",
         "Quot.sound"
       ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints._simp_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "module": "Overfull.PairedCut.FromClusters",
       "name": "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters"
     },
@@ -65471,6 +67060,40 @@
       ],
       "module": "Overfull.PairedCut.FromClusters",
       "name": "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters_balanced_footprints"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters_balanced_footprints._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters_balanced_footprints._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters_balanced_footprints._simp_1_3"
     },
     {
       "axioms": [
@@ -65802,6 +67425,15 @@
     {
       "axioms": [
         "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.orientation_error_lt_positive"
+    },
+    {
+      "axioms": [
+        "propext",
         "Quot.sound",
         "Classical.choice"
       ],
@@ -65842,6 +67474,15 @@
       ],
       "module": "Overfull.PairedCut.Quantitative",
       "name": "Overfull.PairedCut.paired_cut_quantitative"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.paired_cut_quantitative_balanced_footprints"
     },
     {
       "axioms": [
@@ -82061,6 +83702,69 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.TerminalComplement.Coloring",
+      "name": "Overfull.TerminalComplement.colorable_one_apex"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TerminalComplement.Coloring",
+      "name": "Overfull.TerminalComplement.core_colorable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TerminalComplement.Coloring",
+      "name": "Overfull.TerminalComplement.core_colorable_one_apex"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TerminalComplement.Factorization",
+      "name": "Overfull.TerminalComplement.exists_uniform_terminal_factorization"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TerminalComplement.Factorization",
+      "name": "Overfull.TerminalComplement.exists_uniform_terminal_factorization._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TerminalComplement.Factorization",
+      "name": "Overfull.TerminalComplement.exists_uniform_terminal_one_factorization"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TerminalComplement.Coloring",
+      "name": "Overfull.TerminalComplement.moved_core_colorable_one_apex"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.Dense.TripartiteGraph",
       "name": "Overfull.TripartiteGraph.BalancedWeight.eq_1"
     },
@@ -86751,6 +88455,42 @@
     {
       "axioms": [
         "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FewExceptions.Factorization",
+      "name": "Overfull.one_core_three_exception_factorization"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.FewExceptions.Factorization",
+      "name": "Overfull.one_core_three_exception_one_factorization"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "name": "Overfull.ordinary_core_factorization"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "name": "Overfull.ordinary_core_one_factorization"
+    },
+    {
+      "axioms": [
+        "propext",
         "Quot.sound",
         "Classical.choice"
       ],
@@ -89549,6 +91289,51 @@
       ],
       "module": "Overfull.BoundaryExtension.Contraction",
       "name": "_private.Overfull.BoundaryExtension.Contraction.0.Overfull.BoundaryExtension.mapped_endpoints_distinct"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "_private.Overfull.BoundedExterior.MatchingSplit.0.Overfull.BoundedExterior.ends_avoid"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "_private.Overfull.BoundedExterior.MatchingSplit.0.Overfull.BoundedExterior.ends_edge"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "_private.Overfull.BoundedExterior.MatchingSplit.0.Overfull.BoundedExterior.ends_ne"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "_private.Overfull.BoundedExterior.MatchingSplit.0.Overfull.BoundedExterior.left_incident"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "_private.Overfull.BoundedExterior.MatchingSplit.0.Overfull.BoundedExterior.right_incident"
     },
     {
       "axioms": [
@@ -95458,6 +97243,24 @@
       "name": "_private.Overfull.OrdinaryFactorization.FirstHalf.0.Overfull.OrdinaryFactorization.robust_expander_change_instance"
     },
     {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "_private.Overfull.OrdinaryFactorization.FirstHalfBounded.0.Overfull.OrdinaryFactorization.bounded_robust_expander_change_instance"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "name": "_private.Overfull.OrdinaryFactorization.Full.0.Overfull.OrdinaryFactorization.bipartite_robust_change_bounded_instances"
+    },
+    {
       "axioms": [],
       "module": "Overfull.OrdinaryPackingDeficiency",
       "name": "_private.Overfull.OrdinaryPackingDeficiency.0.Overfull.OrdinaryPackingDeficiency.remaining_adj"
@@ -98269,6 +100072,15 @@
     "Overfull.BoundaryExtension.Result",
     "Overfull.BoundaryExtension.SurvivingLabels",
     "Overfull.BoundaryExtension.Triples",
+    "Overfull.BoundedExterior.ColorFactorization",
+    "Overfull.BoundedExterior.ExteriorClasses",
+    "Overfull.BoundedExterior.Factorization",
+    "Overfull.BoundedExterior.MatchingSplit",
+    "Overfull.BoundedExterior.ReserveChoice",
+    "Overfull.BoundedExterior.ReserveLabels",
+    "Overfull.BoundedExterior.ReservedColors",
+    "Overfull.BoundedExterior.ResidualReserve",
+    "Overfull.BoundedExterior.SelectedColoring",
     "Overfull.CircuitPatterns.AbsorptionParity",
     "Overfull.CircuitPatterns.Boundary",
     "Overfull.CircuitPatterns.BoundaryRealization",
@@ -98320,6 +100132,7 @@
     "Overfull.CompatibleCircuits.Lifting",
     "Overfull.CompatibleCircuits.SmallKernel",
     "Overfull.CompatibleCircuits.SmallKernelData",
+    "Overfull.CompatibleCircuits.ThreeVertexDeletion",
     "Overfull.CompatibleCircuits.ThreeVertexFlow",
     "Overfull.CompatibleCircuits.Virtual",
     "Overfull.CompatibleCircuits.VirtualPartition",
@@ -98372,6 +100185,8 @@
     "Overfull.Dense.UnequalFlow",
     "Overfull.External.FiniteCirculation",
     "Overfull.External.PerfectBMatching",
+    "Overfull.FewExceptions.Complement",
+    "Overfull.FewExceptions.Factorization",
     "Overfull.ForbiddenSetWitness",
     "Overfull.ForceMatching",
     "Overfull.ForceMatching.Adaptive",
@@ -98462,16 +100277,21 @@
     "Overfull.OneCore.ResidualShores",
     "Overfull.OrdinaryFactorization.ApexPalette",
     "Overfull.OrdinaryFactorization.Assembly",
+    "Overfull.OrdinaryFactorization.BoundedCutReserve",
     "Overfull.OrdinaryFactorization.ColorRepair",
     "Overfull.OrdinaryFactorization.CutReserve",
     "Overfull.OrdinaryFactorization.CutReserveBounds",
     "Overfull.OrdinaryFactorization.ExteriorSelection",
     "Overfull.OrdinaryFactorization.FirstHalf",
+    "Overfull.OrdinaryFactorization.FirstHalfBounded",
     "Overfull.OrdinaryFactorization.FirstHalfData",
+    "Overfull.OrdinaryFactorization.Full",
     "Overfull.OrdinaryFactorization.Geometry",
     "Overfull.OrdinaryFactorization.MatchingBridge",
     "Overfull.OrdinaryFactorization.Palette",
+    "Overfull.OrdinaryFactorization.Parity",
     "Overfull.OrdinaryFactorization.Reduction",
+    "Overfull.OrdinaryFactorization.ReductionBounded",
     "Overfull.OrdinaryFactorization.Residual",
     "Overfull.OrdinaryFactorization.ResidualColoring",
     "Overfull.OrdinaryFactorization.ResidualComplement",
@@ -98495,6 +100315,7 @@
     "Overfull.OrdinaryRandomReserveSides",
     "Overfull.OrdinaryRobustStability",
     "Overfull.OverfullSubgraphs",
+    "Overfull.PairedCut.BalancedFootprints",
     "Overfull.PairedCut.FromClusters",
     "Overfull.PairedCut.Full",
     "Overfull.PairedCut.Labels",
@@ -98608,6 +100429,8 @@
     "Overfull.SmallCuts",
     "Overfull.SparseColoring",
     "Overfull.Specifications",
+    "Overfull.TerminalComplement.Coloring",
+    "Overfull.TerminalComplement.Factorization",
     "Overfull.TutteBerge",
     "Overfull.TutteBerge.Graph",
     "Overfull.TutteBerge.Matching",
@@ -98650,7 +100473,7 @@
     "Vizing.Path.Invert",
     "Vizing.Path.PathEdges"
   ],
-  "fully_verified_numbered_assertion_count": 46,
+  "fully_verified_numbered_assertion_count": 47,
   "fully_verified_numbered_assertions": [
     "2.2",
     "2.3",
@@ -98677,6 +100500,7 @@
     "2.25",
     "3.3",
     "4.1",
+    "4.2",
     "4.7",
     "4.8",
     "4.9",
@@ -98720,8 +100544,31 @@
     "module_count": 17,
     "manuscript_number": "4.14"
   },
+  "ordinary_factorization_declaration_map": {
+    "path": "verification/ordinary-factorization-full-declarations.json",
+    "sha256": "5873d8011ba12ad1989fb82d94bfc4aa01ee27df3f2ae02bc5076a13b3abf650",
+    "module_count": 14,
+    "public_theorem_count": 57,
+    "verified_declaration_count": 142,
+    "numbered_assertions_completed": 1
+  },
+  "few_exception_declaration_map": {
+    "path": "verification/few-exception-declarations.json",
+    "sha256": "d0a030c6f6b40b9b9d93b03b8f4656cea54cf95a3cff38073b48e67c53c5bef3",
+    "module_count": 6,
+    "public_theorem_count": 27,
+    "verified_declaration_count": 54,
+    "numbered_assertions_completed": 0
+  },
+  "checkpoint_reconstruction": {
+    "original_checkpoint": "cb05ef5f5b7ef5ada4e535e9dcc652eecaddc43e",
+    "original_tree_reproduced": false,
+    "recovered_original_source_count": 9,
+    "recreated_source_count": 11,
+    "fresh_build_and_audit": true
+  },
   "source_sha256": {
-    "Overfull.lean": "d14622b549fd29ee0cb9b2af3cd3c5b67f5c4c33e39dcecfedac62011f04b484",
+    "Overfull.lean": "7c351081ddac8d3f528f2c94f728d6ee0c539e8729e8f3683e5f43664e7fb3e1",
     "Audit.lean": "76886fd9261a3a7b07660f9a434272c0347130a4013cf57da6e1761a34fc6603",
     "Overfull/Absorption/Bounded.lean": "722ca71ecdc9b0f4c17b400c32d51a284d9eac61211e1a52e448fcc8f5bb2f52",
     "Overfull/Absorption/Core.lean": "1f5f39cd8497918341bf336db7f1735b131c9f564077b158b7245fbb474a0946",
@@ -98831,6 +100678,15 @@
     "Overfull/BoundaryExtension/Result.lean": "5aa3ad6b186a1957f35404f7e77dd47be40d5e82d669ae79b18e8916fe8338fe",
     "Overfull/BoundaryExtension/SurvivingLabels.lean": "6b9c4cf0d547f2d1dd00ec05d093cbe270c55081daed02691cdc4e5a2b07f3cb",
     "Overfull/BoundaryExtension/Triples.lean": "d706351768db2c8c5bc7f673d5f76e756e2131e2c043b2575b9225b8437d58b3",
+    "Overfull/BoundedExterior/ColorFactorization.lean": "060b8935359d89ce7b65ff0e9a0235f979a8f36914e582a0087a5c455c6e6eef",
+    "Overfull/BoundedExterior/ExteriorClasses.lean": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c",
+    "Overfull/BoundedExterior/Factorization.lean": "8754cbdd72f0de3ae547260bb13b835dfdbc16766b0af9eac2b53322aa16401f",
+    "Overfull/BoundedExterior/MatchingSplit.lean": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404",
+    "Overfull/BoundedExterior/ReserveChoice.lean": "c984f58611b26534a0f795c2f14d81f8bae3d732966dc7f603dad97964216ad4",
+    "Overfull/BoundedExterior/ReserveLabels.lean": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963",
+    "Overfull/BoundedExterior/ReservedColors.lean": "00f622c56d40bc46337155b0749b47e12016ac85d31541efe8b778194b6ec481",
+    "Overfull/BoundedExterior/ResidualReserve.lean": "a9a9a8d742588e51537b9f8a3c59243864a28c3c7481ad24a37d88394bb3523b",
+    "Overfull/BoundedExterior/SelectedColoring.lean": "b135b6380e736adcc86b8a7bb948dd45d32f1f672bec41791dc56af530576451",
     "Overfull/CircuitPatterns/AbsorptionParity.lean": "8f53f5e921ecfdc957cff5b7882d61a804d600e1d9d90c271bc205415ac72f31",
     "Overfull/CircuitPatterns/Boundary.lean": "e5c9d6b62c70e4a3ead4694f93f5e841ccff18f2ad89886caa82b772c3c82dc1",
     "Overfull/CircuitPatterns/BoundaryRealization.lean": "4a42bf206fc38f5d844fd82c3a83ebd572f7613c71b7c4fa33f759f3cd8626c7",
@@ -98882,6 +100738,7 @@
     "Overfull/CompatibleCircuits/Lifting.lean": "068370eefb34ba654d926e58a207b86008ff2030bd004e965ae0fa4c2df25ba4",
     "Overfull/CompatibleCircuits/SmallKernel.lean": "5d6519273a62adcd6e29a528b3ea97f35a95ef81bc7680c46f655eed5fde381c",
     "Overfull/CompatibleCircuits/SmallKernelData.lean": "31d16fa0fba3fe6fc2b40bac1933f7cdf84f5a22c2c32c234347dbec1b5fd28b",
+    "Overfull/CompatibleCircuits/ThreeVertexDeletion.lean": "30feba2bb5342db61e6d9e0bb851a4df627902fb72814878c3fec40caf668774",
     "Overfull/CompatibleCircuits/ThreeVertexFlow.lean": "5b0a7e9f349006b390f05a6c5e75b69c574e37f385266753101743a36dfd61a5",
     "Overfull/CompatibleCircuits/Virtual.lean": "66360afadfc97e0f3bd9603e9a44807ddff9084c1d2c13b69df4c5ea9ab1ae81",
     "Overfull/CompatibleCircuits/VirtualPartition.lean": "07a4859b26cb47ca0e527b7f5dc1e2a7ba4d8393f2456615689143486ddea829",
@@ -98934,6 +100791,8 @@
     "Overfull/Dense/UnequalFlow.lean": "792ffcef84d8b17007155b85b48d83d7bd6bae8d7e25914b0dc34ebe9f35bd66",
     "Overfull/External/FiniteCirculation.lean": "6b0a28be60527d79e4769496d829d3ed227455de3fb4e76dbc20a1b3a512b368",
     "Overfull/External/PerfectBMatching.lean": "8a3f5cb9fbf2f44c8a8c22b86db196437666749527d6dcdc3133f0819253c81f",
+    "Overfull/FewExceptions/Complement.lean": "71683b81de811824352b8b631a6aaba748ca69ebf8340b603e97b99f0da6f976",
+    "Overfull/FewExceptions/Factorization.lean": "4b0ac7e5f115f8acc442411873e688a20cc22b5de0b57a2205ecae193021f805",
     "Overfull/ForbiddenSetWitness.lean": "fc3260ea15a6abc514c800d5d6956725501053e01bd4f95628a4900b66b0c17d",
     "Overfull/ForceMatching/Adaptive.lean": "d3741f0984c4198d2ea026a0ebaa8406f8071ab8f4ff7c1d4af3ee6b4d18ccd0",
     "Overfull/ForceMatching/Assembly.lean": "c405649470c581d1e1edb4d978182b807855cac0e65a018386d8c0aa31698805",
@@ -99024,16 +100883,21 @@
     "Overfull/OneCore/ResidualShores.lean": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c",
     "Overfull/OrdinaryFactorization/ApexPalette.lean": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206",
     "Overfull/OrdinaryFactorization/Assembly.lean": "d307a695db2b35642bdc660c0bc5942f2a78f927d3fd3ec069a9c21da4d24919",
+    "Overfull/OrdinaryFactorization/BoundedCutReserve.lean": "a65dfcbdbe8199233603c8027740ca67dfdaa3d869bb709e9eface84a090e0d1",
     "Overfull/OrdinaryFactorization/ColorRepair.lean": "0a2e508cd99b9b46698097fc3f318a8d186eb96c18ed0da36d9be59c62946b34",
     "Overfull/OrdinaryFactorization/CutReserve.lean": "a8ac33a5853400ccc9518699095f34abb172dbcc1a9b3ae0bbff29d03317ae92",
     "Overfull/OrdinaryFactorization/CutReserveBounds.lean": "ee62ec3688e68e424a54788415cbe6becd19d732707ab1315f357051e1b7d9f5",
     "Overfull/OrdinaryFactorization/ExteriorSelection.lean": "22dd0bc17962eed368b2e315aa2297b9c68e46de90a7c56bac16bb2e76cac2b5",
     "Overfull/OrdinaryFactorization/FirstHalf.lean": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468",
+    "Overfull/OrdinaryFactorization/FirstHalfBounded.lean": "36f8b20072f72d0f7d7ca2737d53e7e56ebaf334e046c52301808bed2486b6be",
     "Overfull/OrdinaryFactorization/FirstHalfData.lean": "ded66042cafdaea4f3137692cb14f9265ab922d4f6bc9327d0360617e20fdb1d",
+    "Overfull/OrdinaryFactorization/Full.lean": "898e84fee1c8301a2de7c2b03b10ee39d5f7b7f96f2f3cac2fc7ea788582604e",
     "Overfull/OrdinaryFactorization/Geometry.lean": "53340a909c866bb9d979ec175c5b5de29a8375833eec72812e354101c720d76a",
     "Overfull/OrdinaryFactorization/MatchingBridge.lean": "8fe744fd8839eb010ba38736843ddc98f9e62d3ae6185b2a11061db4bdd2bb57",
     "Overfull/OrdinaryFactorization/Palette.lean": "b5a03d68600c41ff72991ee02cc6901ce8561bb42bf2a9a80df503dc2bf131a8",
+    "Overfull/OrdinaryFactorization/Parity.lean": "f231312af9aa6e9f08f4bd8faeeba81253bfec18ef37df83861898f136dde497",
     "Overfull/OrdinaryFactorization/Reduction.lean": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a",
+    "Overfull/OrdinaryFactorization/ReductionBounded.lean": "94d0afe7c2aa997749aa603ced7b5b10f696e0c6832d4509122903dfa0cb975b",
     "Overfull/OrdinaryFactorization/Residual.lean": "3cee5cca2089ec5b5d899daa48afb94e43942ee44a432392db3b1f274fbbbd00",
     "Overfull/OrdinaryFactorization/ResidualColoring.lean": "53369e65add4ab5ddc8d4d7eb7c7932bbe1a799bfd5b636a579cde813280875e",
     "Overfull/OrdinaryFactorization/ResidualComplement.lean": "4871a3535e524e9e1e5d4607adfc11ac746fc2561d9e5d3a3b1b6cdac74aebde",
@@ -99057,6 +100921,7 @@
     "Overfull/OrdinaryRandomReserveSides.lean": "d18f2111de0c9194e28a2c01e9cafa0b1c025a179e3ec88d20df6b1e15d9abc5",
     "Overfull/OrdinaryRobustStability.lean": "d43b5cc2c1afecee9bf32794f42515c0d2044dcf30c64431f05736e8835902d1",
     "Overfull/OverfullSubgraphs.lean": "afddae1e315a24de00ee2ffc99724206d8a52ac1897cba207e2fa473b5aab3ae",
+    "Overfull/PairedCut/BalancedFootprints.lean": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636",
     "Overfull/PairedCut/FromClusters.lean": "87c490da319762424ad88813842b3b3353e2d52a2b6de3e702951e18433d42d3",
     "Overfull/PairedCut/Full.lean": "3a587df4cc89b4499311d4762073a3f9d017618bcd5c81948a396b8a31db155e",
     "Overfull/PairedCut/Labels.lean": "317b02dcee76456cee1c8ef25ed53f9cc51c15f13d74afda56b586e6a570bed8",
@@ -99170,6 +101035,8 @@
     "Overfull/SmallCuts.lean": "8d0a1656c740d7b502ea51c8d2746874d7b9499567af69ce54519f65926b3034",
     "Overfull/SparseColoring.lean": "28cd3256566f8033bbe8b5828eeaf40e8a476a958d702367fe063c3a33ea36f3",
     "Overfull/Specifications.lean": "2b56e12992bd875596faabc3edeb58eb39d38790b18731996ee60ce5b30584e5",
+    "Overfull/TerminalComplement/Coloring.lean": "3bc27990ca1eca84e7e762b4ab50ad214a73b0677947409623f3eb3b360b921e",
+    "Overfull/TerminalComplement/Factorization.lean": "34975875d91cb0280ee10297d7b5eb0b86e352b4986c2cb0eb1803ef7c29d48f",
     "Overfull/TutteBerge/Graph.lean": "6a5e4705f16a80197af063cd4e3db324f5719ad2cc392893af48425ac98469fc",
     "Overfull/TutteBerge/Matching.lean": "02b22c864d3ab335507fe4f4273cacd2f33e54523a0d11dbaae0eab77d3390d9",
     "Overfull/TutteBerge.lean": "867681a9c54742a8cd8cbac41ac3fa63da2506e20670a69b7c21413a5b9e47b4",
@@ -99189,54 +101056,65 @@
     ".github/workflows/lean.yml": "bf5cd8ff5d9c54814b5a0a2a98732a90dae5e4d1a7268954fe9deba218753e83",
     "CIRCULATION_NOTICE.txt": "c8913077edf119bdb2ff790f24c3a27188a14b37d3cbc03121c917aee157a419",
     "LICENSE_BMATCHING.txt": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
-    "README.md": "2e7f27060ad64074c3894dd65c373733da4524c630e9e60031cb9ba592c0569e",
+    "README.md": "4633c0c57eab635b6fbb8268e55ed6bc72b7ee570ddf643b0ddbffd7e9e4e7b8",
     "THIRD_PARTY_NOTICES.txt": "9002356e653c2943115b2feeba04713b005074a3d7c283bd894a47d8ca63dcd7",
     "docs/adaptive-packing.md": "eed3d11bde80300511bfa046813661c1617bb0ddc4c131efbed9576a33e53c7e",
     "docs/auxiliary-completion.md": "3c4787a8cef05bcca13c19e7293591878c1ba5a069e0ef22c34907f8b1030453",
-    "docs/bipartite-localization.md": "25be090ace859fae7ea1fa92b1180d89c12c1c403700d02f166573f37b353c09",
-    "docs/bipartite-palette-assembly.md": "5a58467aea7a6418bcd6e669c00eadcd5e960f514a3e9aa59e5fc9b7ae5b2910",
-    "docs/bipartite-prerequisites.md": "f4546853a34e67f9531d21c0d14d161ac148e59ecb38a0894ad86fc11a6e0ed0",
-    "docs/bipartite-sampling.md": "61d1323ccc7262bfd7c9ec2e245cf9822e23789ab0abd91ee7c4222db84b9551",
-    "docs/bipartite-score-mean.md": "17cc245c5deae5aa4a6c05855d0fc2428637078eaa0a601aff9602c6f107dc05",
-    "docs/bipartite-simultaneous-selection.md": "91163e8891b6ea25105d8dd53102c663941212c06f644b7fb8f5b50bcfefdd83",
-    "docs/bipartite-two-families.md": "c09e6b7da1b39489713d0dab147b2244888bef9fc60a7f087f9bb3948bd7ace4",
+    "docs/bipartite-localization.md": "a9362c1033cf3e6ccd3bc8e393c12604d9f04d2477683f3382aee06910c1d194",
+    "docs/bipartite-palette-assembly.md": "c1b5585f9709c1f04a2856e6691b61c31fbc10323338fe7a51a691444cc39cad",
+    "docs/bipartite-prerequisites.md": "81d6e93f5b20695dd216dc9fdd621f572dda3e4ec5f4faf7ecdfd8f07b4c6032",
+    "docs/bipartite-sampling.md": "1dc0f1c5bb50237051463cb33058d545d413d1263593c723b37beb4e735ae016",
+    "docs/bipartite-score-mean.md": "61a8344bc8642eefdab367ed86f7c55a7f3342de3305c9606debd7edf14fcbda",
+    "docs/bipartite-simultaneous-selection.md": "64bcfebc8b362b7730fb7c0742f6e26883fda7ff913584bc575642f2a1969daf",
+    "docs/bipartite-two-families.md": "dc8ea7906a58d1d12fec835cc999b72c85521651c6dfaf7d23a6340a86ccaa9c",
     "docs/bmatching-source.json": "2cb433874d3b356dd6ff933d504fa6c61886d255c739eec7da1e870c9bf0dcf8",
     "docs/boundary-extension-full-semantic-review.md": "14eb9c9e046e39c9d5fa817e8a63cc4beefb0d7a1fafdaaad04be53e8fe04a55",
     "docs/boundary-extension-full-source.json": "b9ecf5128ee336b8bcec11476fd7c1ecbf0fb6567f0260360a4f56610fd2b641",
-    "docs/boundary-extension.md": "b509151397ae43b2a6d57eac75d3e5586216e8b814ad18ea39d3ddb72ce7e968",
+    "docs/boundary-extension.md": "ed441a79c545c6744ecda9f1f58a3e701bb1058d6104e97ab31902c0443616ac",
+    "docs/checkpoint-reconstruction-source.json": "15b678ca340bc3e5f6120c242e5e87255ddea8de45cfa82267fbf83b44784322",
+    "docs/checkpoint-reconstruction.md": "bd16f43cfdde469efcdd847ed0dbcb750c95ed17779d9b79bb5e5285a1ac5cf2",
     "docs/circulation-source.json": "2b3d7bdf1b05c6b8445e2961efe99fe3eb6100a9c08c1eb3af8bbb4fd28350aa",
-    "docs/coverage.json": "4412b25b38889068604ebad656c0c6574450ce0d01a93c3241395285c5df09b8",
-    "docs/critical-partition-consequences.md": "e27d3ee74746f3d635e344b3242a0458923dcb825e2bf47c72110f8254d62deb",
-    "docs/dense-link-packing.md": "85643f82684632e6d7bb20b741f9f617c8a1572d98c031537df5113cd671ccd6",
+    "docs/coverage.json": "b14f41fb824befa86a970f3add3cc0f1b6be3252d6dbedb318a41dd94d662a1e",
+    "docs/critical-partition-consequences.md": "b0b0db1f855f47e3a3c6c63046bf7375c65b452640b73615baf9ca6a34d8dc91",
+    "docs/dense-link-packing.md": "e34a37bb7b482fcd950977d2ff4835f573038c78a873c0f30823a5a1bcc181cf",
     "docs/exceptional-absorption.md": "5fc25d8f075878fd04257ca6370ed6d70bce2991c8ab36b29d4f80cde4784eb7",
+    "docs/few-exception-continuation.md": "6876c2107591b34791c1e24b42852be4744da3ec853dfc266bdf26c9f229b734",
+    "docs/few-exception-semantic-review.md": "194b2bbe7a4f55cf7944180934c5aba2af4358d42cc250b75ab6c5892efec803",
+    "docs/few-exception-source.json": "f5facc94fd90dc729fb59d5af62c1b81763e30f84cb2758a66a5415f3e434ae6",
     "docs/foreign-edge-reduction.md": "15e2583233ccd19d63a0cdbe834e3193b0e2ef9188e1574ecc712c74e6fbf441",
     "docs/four-odd-circuits.md": "ea3f1cb24a1fe8843442989fb7b34f722ae301c3d26ac34e94d70d56ea95e8d2",
     "docs/four-odd-decomposition.md": "8fb291df7489c4aca92c241969aebf2a1c2ef7441d6742e75fb28d6fce8c9d95",
     "docs/four-odd-semantic-review.md": "d1c3161711f412b9dde063fcb7f56af4bd53432443d467162d5f30d445faade3",
     "docs/four-odd-source.json": "7e08d3ad720032403c45ab2028fb1957fe338b668553b81dc4d45888fc52dee5",
-    "docs/frequent-pattern.md": "e0f4b947f96d233224832e6fb71b4e57835f9135be23fca846644406614e5d73",
+    "docs/frequent-pattern.md": "c441d3ac5e31d6e9baf738821816d610bdfb86296a09c5ae335d95787a205ce5",
     "docs/frequent-patterns.md": "37eb2de401abc5ba79e8c22729fcf19b3b347ad0bd173dee640d061201b8eee0",
-    "docs/main-theorem.md": "56e6e2aae6abea8e6ba267c417ac3885688a15c2064272f250c1b38424cee3ee",
-    "docs/manuscript-source.json": "41549563236d1c73c4437aa0221cebf74c7f77f55787335d8ffeba5d9f52f23d",
+    "docs/main-theorem.md": "fa89660ac417eac3f93068971c5851a5b98dc50c1de7f2652c29c057bd7926d9",
+    "docs/manuscript-source.json": "73e264ad7b701ee9f6c001947f94e947b246370dcb3e31080301872d1cc1c763",
     "docs/matching-repair.md": "29d0c587ba983a568eb98b40484e531a90e0f96fbd4dc98069bfd12214481cca",
-    "docs/next-verification-target.md": "13e1170af0b3f5091f7d159d16d14609756340861f6869d6589729ec7b338a12",
-    "docs/ordinary-factorization.md": "4a9985610708882f83982d0643246db994b1b59acadc6a791f8a75a5bd56717e",
+    "docs/next-verification-target.md": "10f19b53caba21beb2809ea46379ccd2e55dbc0fb983d60fff37b7062e3dcd90",
+    "docs/ordinary-factorization-full-semantic-review.md": "8ccd470ebbd237c0191e0907770a827f9d785ab273de733a3e831bc4acfe38a0",
+    "docs/ordinary-factorization-full-source.json": "814c007ffd25a7c4aad82ffbcdd171ee26efe1544bdc4b326ef71577d995d103",
+    "docs/ordinary-factorization-full.md": "661d6214b893cc0be8ffddce224f7e8ee7799ecab2704347c0772dd8326b878d",
+    "docs/ordinary-factorization.md": "c41eca47ebc404b745a2ee7d5634c6e8691f621ec1ecd5e917dcc04c655a0637",
     "docs/prescribed-matching.md": "9d37e1f0b7df42dd65fb379d51fb7604793440b56c5adac307e95a486dc510f5",
     "docs/replacement.md": "5643ebc060c37602f7e160f76c021e5cc7edfb576b2151f45248bfcf6ca5484e",
-    "docs/residual-factorization-semantic-review.md": "e5c4b26a99575f8020797cecde1fbbcf26bdc5df520cec52f1d0a036a10087b4",
+    "docs/residual-factorization-semantic-review.md": "572270d04cdd33d77ba7f1dd4b50a042bc8aa5f5d55d4774fdcdfc1fdb261362",
     "docs/residual-factorization-source.json": "f73fba9d1a9d9957d1d78b2b3386e61e85b51bf750be37f4e342f9bfebc88b55",
-    "docs/residual-factorization.md": "4d1dbd49f322101dee65b1f75cbbf3eb695ad8b78a792edfdf0d57bd0d88cd77",
+    "docs/residual-factorization.md": "dbe60b21ce542109c3a45ccd1fe6b9c3e50fd9e610a1fd710ebfcfe06c48fde7",
     "docs/robust-partition.md": "2e9a2c09786f5edc72e991022aa803ddc55f112c332c19bf95d9a4fb6a03414f",
     "docs/sharpness.md": "7c14f8fc7aa03b83a157c047977264fb054d20bde9890db9f76d167945bf9f79",
     "docs/source-recovery.json": "a533903bf4ebab7dec8baec4ead1d5f0a9f70a825605f2a180befd97289dfb3b",
-    "docs/uniform-localization.md": "8cfc29cf5b0d9e5f8bab81c0ffeb90f14b93f450cf7af9f6e56bda2b42beb1a2",
+    "docs/three-label-circuit-construction.md": "cac00eb28f00895cd2be20c41eeda93e955190c0c0f8456ab5d7b462f83cdb5c",
+    "docs/uniform-localization.md": "dc67eaace78072fc2bae4693ea437fa82bb6d90d1868c91feb78ea4862765943",
     "docs/vizing-source.json": "2e3d01885c5de03c5e071c4d27c80ff64960cd006de36424d26ba28bfb6742c4",
     "lake-manifest.json": "6170a0f6ef63640502c8d121fabb4f3a555b04b8f00dca862521a59bf2ea80f0",
     "lakefile.toml": "f34bb9e1ca0d83adfe9afd7b17d079ab15cc5b003b8a583605f42f213548c0a7",
     "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
     "patches/vizing-lean-4.24.patch": "1f50d4aa24ee428032d14bb90c1705df9906ab90581bf0046eedf49bf3d70c76",
     "scripts/setup_vizing.py": "42ab626c3d40e8012aeed8d90b08a32757c3c5ee844b52ee2dc704e89b276094",
-    "scripts/verify.py": "aff58f38f539df4466ce964c453c0a492d6d90ba3e2bab0876077d80095522a1"
+    "scripts/three_label_selector_check.py": "0f678a759ef4b8a48675f45739af49a176d506accf869899cd493ccfd6ebc7bf",
+    "scripts/update_reconstruction_manifest.py": "d3fb79aff0e1ebe718ecf77f0a554d292ee494821f9018115c3ae46f82681935",
+    "scripts/verify.py": "0582b3d48afd2e24553f519719642dd0264b1aeca7267449f98328450cf432a1"
   },
-  "scope": "46 of 69 numbered manuscript assertions have complete checked proofs; 23, including the main theorem, remain incomplete. Full Lemma 4.14 is proved by Overfull.boundary_extension: for every original proper singleton/triple boundary coloring of a sufficiently large odd robust core, construct an actual coloring of every original incident edge copy preserving every prescribed boundary label. A direct uniform one-apex reduction and constructed two-apex factorization supply the former missing coloring, using proved fan recoloring, balanced footprints, robust matching packing, and bipartite edge coloring. All constants precede the graph. The general ordinary/bipartite factorization, compatible spanning setup, special path systems, robust absorber, and critical average-degree input remain separate open obligations. All earlier completed assertions and historical source-recovery mappings are preserved."
+  "scope": "47 of 69 numbered manuscript assertions have complete checked proofs; 22, including the main theorem, remain incomplete. Full ordinary-core Lemma 4.2 is proved under its original hypotheses and yields an exact partition of all original multigraph copies into perfect matchings. The supporting continuation proves the one-core branch of Corollary 4.6 with at most three exceptional vertices, terminal one-core factorization under the recorded incidence hypotheses, and the exact three-label safe-deletion criterion. It completes no additional numbered assertion. The two-core branch of 4.6, full fixed-pattern Lemma 4.4, general compatible-circuit selection, terminal Proposition 4.16, general Section 6 factorization, critical average-degree input, and the main theorem remain incomplete. Eleven unavailable source modules were recreated under explicit user authorization; all nine recovered original source modules and the stock audit were preserved. This is a newly verified checkpoint, not the original cb05ef5 tree."
 }

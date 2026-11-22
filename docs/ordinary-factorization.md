@@ -1,31 +1,16 @@
-# Ordinary-core factorization: general reduction and complete one-apex case
+# Ordinary-core factorization: preprocessing and full closure
 
-**The general Lemma 4.2 remains incomplete. The one-apex specialization
-needed for Lemma 4.14 is now fully proved.**
-`Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction`
-constructs the general ordinary-core preprocessing. The new
-[`Overfull.OneCore.exists_uniform_one_apex_factorization`](../Overfull/OneCore/Factorization.lean)
-adds actual neighbor-pairing and palette choices, retains a two-shore
-incidence supply at the moved ordinary vertex, and applies the new
-constructed two-apex cleanup.
+**Full Lemma 4.2 is now proved.** The recovered public wrappers and the
+recreated bounded-exterior cleanup are described in
+[the full proof notes](ordinary-factorization-full.md). The current numbered
+inventory is **47 of 69**, with **22** remaining, including the main theorem.
 
-This specialization completes the prescribed boundary extension in
-[Lemma 4.14](boundary-extension.md), bringing the numbered inventory to
-**46 of 69**, with **23** remaining. The full Lemma 4.2, Corollary 4.6,
-Theorem 6.1, and the main theorem remain unverified.
-
-The earlier [reserved-remainder continuation](residual-factorization.md)
-constructs the coupled numerical parameters and proves the complete final
-packing stage through an exact oriented regular core. The missing input
-remains the spanning setup, special path systems and robust absorber that
-produce the required reservation and support whole-host reconstruction.
-Those supporting results do not complete Lemma 4.2. The latest one-apex
-proof instead supplies the particular factorization needed by the boundary
-extension without the general Section 6 absorber.
-
-This is a formalization status, not a finding of a defect in the
-manuscript's mathematical proof. The source proof invokes Theorem 6.1;
-the Lean development has not yet established that factorization theorem.
+The sections below describe the established generic preprocessing and the
+specialized one-apex route used for Lemma 4.14. The generic reduction constructs
+an exact robust bipartite residual and its complementary coloring. The new
+bounded-footprint reduction preserves a linear palette with one common exterior
+split; the new reserved-color theorem supplies the previously missing actual
+coloring of the residual. General Section 6 factorization remains separate.
 
 ## Public construction and quantifier order
 
@@ -300,27 +285,16 @@ statement and proof map.
 | Actual residual core, degrees, palettes, and coloring | `OrdinaryFactorization/{Residual,Palette,ResidualColoring,ResidualGeometry,ResidualInternal,ResidualCore,ResidualComplement}` |
 | Uniform public reduction | `OrdinaryFactorization/Reduction` |
 
-For the full Lemma 4.2, the remaining factorization obligation is Theorem
-6.1 (`ext:thm:robust`), or another proved result covering every residual
-configuration permitted by that lemma. The general residual can have
-same-side edges and an arbitrary bounded set of exceptional vertices.
-The two-apex cleanup above does not cover all those inputs: it uses exactly
-two exterior vertices and a proved two-shore incidence supply at one of
-them. The generic preprocessing theorem does not automatically produce
-that additional structure for an arbitrary bounded exceptional set.
+The general reduction above is now completed for every bounded exterior in
+Lemma 4.2 by the [bounded-exterior closure](ordinary-factorization-full.md).
+It retains the original hypotheses and constructs the actual residual
+factorization through balanced exterior footprints, a common split and a linear
+reserved palette. The specialized one-apex proof remains an independent input
+for the already completed Lemma 4.14.
 
-The source's spanning bi-setup, special path systems, robust absorber,
-and final reconstruction for Theorem 6.1 remain separate formalization
-work. The checked reserved-remainder stage is still available once its
-actual reservation and colored exterior inputs are constructed. Its
-existence theorem does not by itself construct those inputs.
-
-The full fixed-pattern and bounded-input results, including Corollary
-4.6, therefore remain open. Proposition 4.16 still needs its all-even and
-mixed-parity terminal factorizations and the complete joining-edge
-assembly. The new one-apex theorem and full Lemma 4.14 resolve one
-specific application; they do not establish every terminal case.
-
-Supporting constructions are registered separately from complete numbered
-assertions. This checkpoint adds the full Lemma 4.14, producing the current
-**46/69** count; the general ordinary-core Lemma 4.2 is not counted.
+The source's spanning setup, special path systems, robust absorber and final
+reconstruction for general Theorem 6.1 remain separate work. The two-core branch
+of full Corollary 4.6, full fixed-pattern Lemma 4.4, and terminal Proposition
+4.16 also remain incomplete. The one-core branch of 4.6 and the exact safe
+three-label deletion criterion are recorded in the
+[recovered continuation](few-exception-continuation.md).

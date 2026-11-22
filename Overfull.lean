@@ -215,6 +215,14 @@ import Overfull.BipartiteFactorization.UniformRemainder
 import Overfull.BipartiteFactorization.ReservedRemainder
 import Overfull.BoundaryExtension.Full
 import Overfull.Probability.BernoulliDifferences
+import Overfull.OrdinaryFactorization.Full
+
+import Overfull.OrdinaryFactorization.Parity
+import Overfull.TerminalComplement.Coloring
+import Overfull.TerminalComplement.Factorization
+import Overfull.FewExceptions.Complement
+import Overfull.FewExceptions.Factorization
+import Overfull.CompatibleCircuits.ThreeVertexDeletion
 
 /-!
 # Partial formalization of the overfull manuscript

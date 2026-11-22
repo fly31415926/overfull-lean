@@ -1,3 +1,5 @@
+> **Historical publication record.** This note describes the earlier checkpoint named below. For the current recreated `cb05ef5` replacement, see [reconstruction provenance](../docs/checkpoint-reconstruction.md), [current verification results](results.json), and [the reconstruction checkpoint record](reconstruction-checkpoint.json).
+
 # Publication of verified checkpoint 75759f81b198
 
 This publication preserves the mathematical sources, documentation, source and declaration mappings, and original axiom audit of local checkpoint `75759f81b1985413f494215f533e23642d5f7101`. Its original audited Git tree was `5afb50b64f0c361563d3a5d1ed39dc0e9efa1fcb`.

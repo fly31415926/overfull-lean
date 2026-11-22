@@ -1,3 +1,5 @@
+> **Historical continuation notes.** Coverage and status statements below describe the earlier checkpoint documented here. The current inventory is **47 of 69**, including complete Lemmas **4.2**, **4.14**, and **4.15**. The one-core branch of 4.6 is complete; its two-core branch and the main theorem remain incomplete. See [the current scope](next-verification-target.md) and [reconstruction record](checkpoint-reconstruction.md).
+
 # Lemma 5.12: complete dense link packing
 
 `Overfull.Dense.LinkPacking.exists_tripartite_link_packing` proves the

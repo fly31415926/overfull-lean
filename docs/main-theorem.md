@@ -342,16 +342,28 @@ or three-edge star, with actual pair and cut supply. Positive output
 robustness precedes the requested error, while the explicit input range
 depends on `t`. See [`frequent-patterns.md`](frequent-patterns.md).
 
-There are complete proofs of **45 of the 69** numbered assertions after the
-[complete proof of Lemma 4.15](four-odd-decomposition.md). The remaining
-24 include the main theorem and the structural exclusion on which its
+There are complete proofs of **47 of the 69** numbered assertions, including
+[ordinary-core Lemma 4.2](ordinary-factorization-full.md),
+[boundary extension Lemma 4.14](boundary-extension.md), and
+[four-odd Lemma 4.15](four-odd-decomposition.md). The remaining
+22 include the main theorem and the structural exclusion on which its
 checked reduction depends.
 
 ### Boundary extension reduction
 
 `Overfull.boundary_extension_reduction` proves the full constructive reduction underlying Lemma 4.14. It starts with the actual prescribed one-or-three boundary coloring, completes all triple classes through the robust core, and deletes their exact original edge copies. The residual core, degree, and singleton boundary are constructed and counted. Its exterior contraction is proved even, regular, and free of overfull sets. The result reconstructs the exact prescribed extension from an actual coloring of that returned contraction, preserving properness at original exterior endpoints.
 
-No such contracted coloring is assumed in the reduction theorem's hypotheses or asserted to exist in its conclusion. The missing one-apex factorization can be reduced to ordinary-core Lemma 4.2 with two exterior vertices using the proved `Overfull.OneCore.even_core_complement`. This bypasses the general fixed-pattern and compatible-circuit steps for this specialization. The new `Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction` constructs the ordinary-core preprocessing and its exact residual with an actual colored complement. Its specialized forbidden-label step is proved by permutation counting, greedy repair, and Vizing, without assuming the general Kahn theorem. Theorem 6.1's factorization of the whole residual remains unformalized, so the full Lemmas 4.2 and 4.14 remain incomplete. The current full assertion count is **45 of 69**, with 24 remaining, after [Lemma 4.15](four-odd-decomposition.md). See [`ordinary-factorization.md`](ordinary-factorization.md), [`boundary-extension.md`](boundary-extension.md), and [`next-verification-target.md`](next-verification-target.md).
+The reduction does not itself assert existence of that contracted coloring.
+The completed direct one-apex and two-apex factorization now supplies it, so
+full Lemma 4.14 is proved. Separately, the bounded-exterior closure completes
+full ordinary-core Lemma 4.2 by preserving a linear original-color reserve
+through the first matching group and factoring the exact residual. Its
+specialized forbidden-label step uses permutation counting, greedy repair
+and Vizing, without assuming the general Kahn theorem. General Theorem 6.1
+remains incomplete. The current complete count is **47 of 69**, with **22**
+remaining. See [the ordinary closure](ordinary-factorization-full.md),
+[boundary extension](boundary-extension.md), and
+[remaining targets](next-verification-target.md).
 
 ## What remains
 
@@ -359,9 +371,10 @@ Theorem 2.23 now supplies the [complete robust partition](robust-partition.md)
 for almost-regular finite simple graphs. The structural argument still needs
 the critical-graph degree estimate and its application in Proposition 2.24,
 and the coloring theorems for the five possible configurations.
-These include the ordinary-core coloring argument, the dense bipartite
-extension, and the robust bipartite extension. The checked local absorbers,
-matching results, and deletion lemmas do not supply these full theorems.
+The remaining extensions include the dense bipartite and general robust
+bipartite cases and their compositions with the structural reduction. Full
+ordinary-core factorization is now available. The checked local absorbers,
+matching results and deletion lemmas do not supply all remaining cases.
 
 Substantial published inputs also remain to be connected to complete checked
 proofs. They include the critical-graph degree estimate of Cao–Chen,

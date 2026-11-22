@@ -24,7 +24,7 @@
       "manuscript_label": "sharp:thm:family",
       "manuscript_number": "7.1",
       "proved": true,
-      "scope": "The full assertion of Proposition 7.1 for every odd Delta >= 3: a connected simple graph on Fin (4*Delta+5), maximum degree Delta, no proper Delta-edge-coloring, a proper (Delta+1)-edge-coloring, no Delta-overfull vertex set, and exactly 2*Delta*(Delta+1) edges. The two coloring statements express the exact class-2 conclusion without invoking Vizing’s theorem.",
+      "scope": "The full assertion of Proposition 7.1 for every odd Delta >= 3: a connected simple graph on Fin (4*Delta+5), maximum degree Delta, no proper Delta-edge-coloring, a proper (Delta+1)-edge-coloring, no Delta-overfull vertex set, and exactly 2*Delta*(Delta+1) edges. The two coloring statements express the exact class-2 conclusion without invoking Vizing\u2019s theorem.",
       "proof_declaration": "Overfull.sharpness_family",
       "proof_file": "Overfull/Sharpness/Theorems.lean"
     }
@@ -32,7 +32,7 @@
   "coverage_file": "coverage.json",
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
-  "fully_verified_numbered_assertions": 46,
+  "fully_verified_numbered_assertions": 47,
   "additional_complete_results": [
     {
       "lean_name": "Overfull.arbitrarily_large_class_two_graphs",
@@ -170,7 +170,7 @@
       "manuscript_locations": [
         "three:prop:foreign, foreign-edge color classes"
       ],
-      "scope": "Apply the proved multigraph König theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case. This stand-alone helper assumes actual bipartiteness and the incidence-degree bound. The maximizing-assignment theorem derives both hypotheses, and the configured epoch reconstructs the entire current foreign graph and its classes at every restart of the completed process."
+      "scope": "Apply the proved multigraph K\u00f6nig theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case. This stand-alone helper assumes actual bipartiteness and the incidence-degree bound. The maximizing-assignment theorem derives both hypotheses, and the configured epoch reconstructs the entire current foreign graph and its classes at every restart of the completed process."
     },
     {
       "id": "foreign_assignment",
@@ -2595,6 +2595,26 @@
       "notes": [
         "residual-factorization.md",
         "residual-factorization-semantic-review.md"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "base_commit": "a825b24b0dd0ad6edd336388c740530bcfb38d99",
+      "reconstruction_of": "cb05ef5f5b7ef5ada4e535e9dcc652eecaddc43e",
+      "original_tree_reproduced": false,
+      "new_modules": 20,
+      "numbered_assertions_completed": 1,
+      "completed_assertions": [
+        "4.2"
+      ],
+      "complete_numbered_total": 47,
+      "scope": "47 of 69 numbered manuscript assertions have complete checked proofs; 22, including the main theorem, remain incomplete. Full ordinary-core Lemma 4.2 is proved under its original hypotheses and yields an exact partition of all original multigraph copies into perfect matchings. The supporting continuation proves the one-core branch of Corollary 4.6 with at most three exceptional vertices, terminal one-core factorization under the recorded incidence hypotheses, and the exact three-label safe-deletion criterion. It completes no additional numbered assertion. The two-core branch of 4.6, full fixed-pattern Lemma 4.4, general compatible-circuit selection, terminal Proposition 4.16, general Section 6 factorization, critical average-degree input, and the main theorem remain incomplete. Eleven unavailable source modules were recreated under explicit user authorization; all nine recovered original source modules and the stock audit were preserved. This is a newly verified checkpoint, not the original cb05ef5 tree.",
+      "notes": [
+        "ordinary-factorization-full.md",
+        "ordinary-factorization-full-semantic-review.md",
+        "few-exception-continuation.md",
+        "few-exception-semantic-review.md",
+        "checkpoint-reconstruction.md"
       ]
     }
   ],

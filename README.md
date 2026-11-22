@@ -2,11 +2,40 @@
 
 [Repository](https://github.com/fly31415926/overfull-lean) · [Verification workflow](https://github.com/fly31415926/overfull-lean/actions)
 
-**46 of the manuscript's 69 numbered assertions are complete.** The latest checkpoint proves the full prescribed boundary extension, Lemma 4.14, in `Overfull.boundary_extension`. **23 assertions, including the main theorem, remain unverified.** The structural exclusion needed to finish the main theorem is still open.
+**47 of the manuscript's 69 numbered assertions are complete.** Full ordinary-core Lemma 4.2 is proved by `Overfull.ordinary_core_factorization` and `Overfull.ordinary_core_one_factorization`. **22 assertions, including the main theorem, remain incomplete.** The continuation also proves the one-core branch of Corollary 4.6; the distinct two-core branch remains open.
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest checkpoint: complete Lemma 4.14
+## Latest checkpoint: recreated ordinary-core closure and recovered continuation
+
+The original local checkpoint `cb05ef5` was not available as a complete checkout
+or archive. At the user's request, eleven missing Lean modules were recreated
+and checked with a fresh strict build and the unchanged full axiom audit. Nine
+recovered original modules, including the public ordinary-factorization wrapper
+and all six continuation modules, retain their original bytes. This is a new
+checkpoint; it does not claim the original commit or tree hash.
+
+The full ordinary-core theorem constructs a coloring and an exact partition of
+all original multigraph copies into perfect matchings. Its inputs are the
+original even regular host, sufficiently large even robust core, bounded exterior,
+small core deficit, and a coloring of the actual core complement. Every uniform
+parameter precedes the host. A direct bounded-exterior cleanup closes the
+previously missing factorization of the actual residual graph.
+
+The recovered continuation constructs the complete one-core branch with at most
+three exceptional vertices, terminal one-core factorizations under the recorded
+incidence hypotheses, and the exact safe circuit-deletion criterion on at most
+three labels. These supporting results add no further complete numbered item.
+
+The [reconstruction provenance](docs/checkpoint-reconstruction.md),
+[ordinary proof map](docs/ordinary-factorization-full.md),
+[ordinary source manifest](docs/ordinary-factorization-full-source.json),
+[continuation notes](docs/few-exception-continuation.md), and
+[fresh verification report](verification/results.json) record the scope and
+current source hashes. Recovered historical evidence is preserved separately in
+[recovery/cb05ef5](recovery/cb05ef5).
+
+## Historical checkpoint: complete Lemma 4.14
 
 [`Overfull.boundary_extension`](Overfull/BoundaryExtension/Full.lean)
 extends the prescribed singleton/triple coloring of the boundary of an odd
@@ -26,7 +55,8 @@ packing, and joined to a genuinely bipartite remainder colored by König.
 The final reconstruction restores the original singleton and triple labels.
 
 This completes **one additional numbered assertion**, raising the inventory
-from **45/69 to 46/69**. The general ordinary-core Lemma 4.2, bounded-input
+from **45/69 to 46/69** at that historical checkpoint. General ordinary-core
+Lemma 4.2 was subsequently completed by the bounded-exterior route above. Full
 Corollary 4.6, bipartite-core Theorem 6.1, and terminal Proposition 4.16
 remain incomplete. The direct one-apex proof supplies the particular
 factorization needed for Lemma 4.14; it does not assume those broader
@@ -110,7 +140,7 @@ source hashes and verification-input hashes are recorded in
 That continuation added **109 public theorem proofs across 13 modules** to
 the published `2eb61f5` checkpoint and preserved its **44 of 69** count.
 The subsequent Lemma 4.15 proof added the forty-fifth complete assertion;
-the latest Lemma 4.14 proof adds the forty-sixth.
+the subsequent Lemma 4.14 proof adds the forty-sixth.
 
 The [uniform-localization results](docs/uniform-localization.md) construct
 actual positive even allowed palettes and actual compatible fine/coarse
@@ -176,7 +206,7 @@ numbered theorem; the broader published robust-partition conditions
 are not separately claimed.
 
 At that checkpoint the main theorem and **25** numbered assertions remained
-unverified. The current total is **46 of 69**, with **23** remaining. The
+unverified. The current total is **47 of 69**, with **22** remaining. The
 exact build, axiom inventory, and source hashes appear in
 [verification/results.json](verification/results.json).
 
@@ -221,8 +251,8 @@ original robust-core assumptions, the spanning regularity setup, special
 path systems, the robust absorber, and full factorization remain open.
 That supporting checkpoint left the numbered assertion count at
 **42 of 69**. Lemma 5.12 added the forty-third full statement;
-Theorem 2.23 added the forty-fourth, Lemma 4.15 the forty-fifth, and the
-latest Lemma 4.14 proof the forty-sixth.
+Theorem 2.23 added the forty-fourth, Lemma 4.15 the forty-fifth,
+Lemma 4.14 the forty-sixth, and full Lemma 4.2 the forty-seventh.
 
 ## The main theorem
 
@@ -283,6 +313,7 @@ Overfull.mainTheorem_of_criticalExclusion
 | Lemma 2.25: balanced-core extraction | `Overfull.BalancedCore.balanced_core_of_bipartite_outcome` | From the stated bipartite outcome, actual equal retained sides of size at least `n/3`, at most `6√ρn` deleted vertices, and crossing degrees between `Δ−8√ρn` and `Δ` |
 | Lemma 3.3: replacing a dense core | `Overfull.robust_core_replacement` | An actual robust replacement on the prescribed even vertex set, retaining the exterior and preserving the maximum-degree bound and every overfull-set inequality, with uniform constants |
 | Lemma 4.1: reserve repair | `Overfull.MatchingRepair.reserve_repair` | Uniform constants, actual disjoint repaired matchings perfect outside the prescribed sets, and degree at most `μm` in both the used-reserve and released-original-edge unions |
+| Lemma 4.2: ordinary-core factorization | `Overfull.ordinary_core_factorization`, `Overfull.ordinary_core_one_factorization` | Uniform constants before the host; bounded exterior and actual complementary coloring; exact partition of all original multigraph copies into perfect matchings |
 | Lemma 4.7: matching-deletion probabilities | `Overfull.MatchingProbability.Distribution.odd_failure_probability`, `even_toggles_failure_probability`, and `family_failure_probability` | All three probability bounds, with the actual residual graph identified; also generalized to loopless multigraphs |
 | Lemma 4.8: retaining prescribed exceptional edges | `Overfull.prescribed_exceptional_core_matching` | An actual perfect matching omitting at most `135720` prescribed matching edges, with all path, connectivity, parity, and Tutte conditions proved from the graph |
 | Lemma 4.9: preserving prescribed exceptional edges | `Overfull.safe_prescription` | An actual perfect matching retaining all but `c₁ = 2q₀ + 4c₀` prescribed edges, fixing the sampled boundary and leaving no overfull set, with uniform constants |
@@ -305,7 +336,7 @@ Overfull.mainTheorem_of_criticalExclusion
 | Proposition 7.1: the sharpness family | `Overfull.sharpness_family` | Connectivity, order, maximum degree, class 2, edge count, and no overfull set |
 | Corollary 7.2: arbitrarily large examples below one quarter | `Overfull.arbitrarily_large_class_two_graphs` | Every real coefficient below `1/4` and every order threshold |
 
-These are 46 of the manuscript's 69 numbered assertions. The remaining 23, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
+These are 47 of the manuscript's 69 numbered assertions. The remaining 22, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
 
 ## Further checked inputs
 
@@ -443,8 +474,8 @@ conditions and complementary coloring under bounded core moves. The
 numerical move budgets are chosen uniformly before the graph.
 
 These remain supporting results for the incomplete Theorem 6.1 and
-Proposition 6.2. General Lemma 4.2 also remains incomplete; Lemma 4.14 is
-now proved by the direct one-apex route above. Historically, this
+Proposition 6.2. Full Lemma 4.2 is now proved by the bounded-exterior route;
+Lemma 4.14 is proved by the direct one-apex route above. Historically, this
 branch continued the exactly recovered ordinary-core tree `aab43893d9b1`;
 its complete numbered coverage was 42 of 69 before the link-packing result.
 The later terminal
@@ -630,7 +661,7 @@ The distinguished pattern retains an integer reserve `r >= k/(3*b4(t))`. Its act
 
 The earlier `Overfull.boundary_extension_reduction` constructs actual completed triple classes, their exact deletion, the surviving singleton labels, and an even regular contraction with one exterior apex. The new `Overfull.OneCore.exists_uniform_one_apex_factorization` supplies an actual coloring of that contraction. A prescribed neighbor pairing and an actual two-row label choice preserve the moved core vertex's supply into both shores after the first completed matchings. `Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization` then constructs selected exceptional colors, completes them by robust bipartite packing, and colors the actual bipartite remainder with König. Palette restoration and reassembly retain every original prescribed singleton and triple label, with properness at the original exterior vertices.
 
-All errors and order thresholds precede the input graph and coloring. The proof uses no general Lemma 4.2, Corollary 4.6, Theorem 6.1, spanning bi-setup, or robust absorber. Those broader factorization assertions remain open. The current count is **46 of 69**, with **23** remaining, including the main theorem. See [the full statement and proof map](docs/boundary-extension.md).
+All errors and order thresholds precede the input graph and coloring. The proof uses no general Lemma 4.2, Corollary 4.6, Theorem 6.1, spanning bi-setup, or robust absorber. Full Lemma 4.2 is now proved separately; the broader bipartite and two-core factorization assertions remain open. The current count is **47 of 69**, with **22** remaining, including the main theorem. See [the full statement and proof map](docs/boundary-extension.md).
 
 ### Ordinary-core reduction to a bipartite robust core
 
@@ -638,7 +669,7 @@ All errors and order thresholds precede the input graph and coloring. The proof 
 
 The specialized list constraint is proved by finite permutation counting and greedy repair, using the proved Vizing theorem for the initial simple-graph coloring. For every fixed positive slack `δ`, the uniform theorem produces a proper coloring with `Δ+1+ceil(δn)` colors avoiding a sufficiently small forbidden set on each edge. Constrained alternating-component exchanges balance its classes while retaining the fixed exterior labels, and the proved reserve-repair theorem constructs their completions. This supplies the consequence needed in Lemma 4.2 without assuming Kahn's general list-coloring theorem; that general theorem is not claimed as formalized.
 
-For arbitrary bounded exceptional sets, the remaining formalization is the factorization conclusion of Theorem 6.1 for the actual residual host. Having a bipartite core does not make the whole residual multigraph bipartite. The new one-apex specialization constructs additional neighbor and palette choices and proves the actual two-apex cleanup required for Lemma 4.14; the generic preprocessing theorem alone does not supply these extra conclusions. [The ordinary-factorization notes](docs/ordinary-factorization.md) distinguish this completed specialization from the remaining general obligation.
+The new bounded-footprint reduction and reserved-color cleanup factor the actual residual for every bounded exterior permitted by Lemma 4.2. They construct a common exterior split, preserve a linear original-color reserve, complete the selected colors, and leave a genuinely bipartite whole remainder. [The full ordinary-factorization notes](docs/ordinary-factorization-full.md) explain that completed construction. General Theorem 6.1 remains a separate obligation.
 
 ### The coloring encoding and balanced reserve
 
