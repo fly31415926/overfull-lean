@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "verification"
 MATHLIB_REVISION = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
 NUMBERED_ASSERTION_COUNT = 69
-COMPLETED_NUMBERED_ASSERTION_COUNT = 43
+COMPLETED_NUMBERED_ASSERTION_COUNT = 44
 
 
 def run(arguments: list[str], log_name: str) -> str:
@@ -1165,6 +1165,79 @@ def main() -> None:
         "dense_link_packing_tripartite_geometry_23": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_right",
         "dense_link_packing_1": "Overfull.Dense.LinkPacking.exists_tripartite_link_packing",
     })
+    completed_results.update({
+        "robust_partition_conclusion_1": "Overfull.RobustPartition.rank_eq_weighted_count",
+        "robust_partition_conclusion_2": "Overfull.RobustPartition.valid_shore_degree_lower",
+        "robust_partition_conclusion_3": "Overfull.RobustPartition.valid_piece_cut_le",
+        "robust_partition_conclusion_4": "Overfull.RobustPartition.partition_conclusion_of_terminal",
+        "robust_partition_counting_1": "Overfull.RobustPartition.ecount_nonneg",
+        "robust_partition_counting_2": "Overfull.RobustPartition.cut_nonneg",
+        "robust_partition_counting_3": "Overfull.RobustPartition.bad_nonneg",
+        "robust_partition_counting_4": "Overfull.RobustPartition.ecount_symm",
+        "robust_partition_counting_5": "Overfull.RobustPartition.bad_symm",
+        "robust_partition_counting_6": "Overfull.RobustPartition.ecount_mono",
+        "robust_partition_counting_7": "Overfull.RobustPartition.ecount_le_mul_card",
+        "robust_partition_counting_8": "Overfull.RobustPartition.ecount_union_left_le",
+        "robust_partition_counting_9": "Overfull.RobustPartition.ecount_union_right_le",
+        "robust_partition_counting_10": "Overfull.RobustPartition.ecount_union_left",
+        "robust_partition_counting_11": "Overfull.RobustPartition.ecount_union_right",
+        "robust_partition_counting_12": "Overfull.RobustPartition.ecount_eq_sum",
+        "robust_partition_counting_13": "Overfull.RobustPartition.ecount_univ",
+        "robust_partition_counting_14": "Overfull.RobustPartition.ecount_add_compl",
+        "robust_partition_counting_15": "Overfull.RobustPartition.ecount_self",
+        "robust_partition_counting_16": "Overfull.RobustPartition.cut_eq_sum",
+        "robust_partition_counting_17": "Overfull.RobustPartition.cut_compl",
+        "robust_partition_counting_18": "Overfull.RobustPartition.cut_sdiff_le",
+        "robust_partition_counting_19": "Overfull.RobustPartition.cut_union_le_bad",
+        "robust_partition_counting_20": "Overfull.RobustPartition.ecount_off_left_le_bad",
+        "robust_partition_counting_21": "Overfull.RobustPartition.ecount_off_right_le_bad",
+        "robust_partition_counting_22": "Overfull.RobustPartition.bad_eq_internal_add_cut",
+        "robust_partition_counting_23": "Overfull.RobustPartition.internal_edges_add_cut_le_bad",
+        "robust_partition_counting_24": "Overfull.RobustPartition.min_degree_mul_card_le",
+        "robust_partition_counting_25": "Overfull.RobustPartition.ecount_le_max_degree_mul_card",
+        "robust_partition_counting_26": "Overfull.RobustPartition.card_lower_of_small_off",
+        "robust_partition_counting_27": "Overfull.RobustPartition.block_size_lower",
+        "robust_partition_counting_28": "Overfull.RobustPartition.bipartite_sizes_lower",
+        "robust_partition_counting_29": "Overfull.RobustPartition.internal_good_of_not_bad",
+        "robust_partition_counting_30": "Overfull.RobustPartition.bad_internal_degree_count",
+        "robust_partition_counting_31": "Overfull.RobustPartition.degree_gap_le_off",
+        "robust_partition_counting_32": "Overfull.RobustPartition.bipartite_imbalance",
+        "robust_partition_counting_33": "Overfull.RobustPartition.coarse_count_bound",
+        "robust_partition_counting_34": "Overfull.RobustPartition.sharp_count_estimate",
+        "robust_partition_finite_refinement_1": "Overfull.RobustPartition.exists_terminal_of_bounded_rank",
+        "robust_partition_induced_1": "Overfull.RobustPartition.mem_localRN",
+        "robust_partition_induced_2": "Overfull.RobustPartition.localRN_subset",
+        "robust_partition_induced_3": "Overfull.RobustPartition.induced_set_card",
+        "robust_partition_induced_4": "Overfull.RobustPartition.induced_degree_eq_local_count",
+        "robust_partition_induced_5": "Overfull.RobustPartition.induced_robustNeighbors_image",
+        "robust_partition_induced_6": "Overfull.RobustPartition.induced_robustNeighbors_card",
+        "robust_partition_induced_7": "Overfull.RobustPartition.induced_robust_iff",
+        "robust_partition_induced_8": "Overfull.RobustPartition.exists_bad_set_of_not_induced_robust",
+        "robust_partition_pieces_1": "Overfull.RobustPartition.unionList_nil",
+        "robust_partition_pieces_2": "Overfull.RobustPartition.unionList_cons",
+        "robust_partition_pieces_3": "Overfull.RobustPartition.unionList_append",
+        "robust_partition_pieces_4": "Overfull.RobustPartition.disjoint_unionList_right",
+        "robust_partition_pieces_5": "Overfull.RobustPartition.lower_mul_length_le_union_card",
+        "robust_partition_pieces_6": "Overfull.RobustPartition.pairwise_replace_shore",
+        "robust_partition_pieces_7": "Overfull.RobustPartition.unionList_replace_shore",
+        "robust_partition_pieces_8": "Overfull.RobustPartition.shoreList_append",
+        "robust_partition_pieces_9": "Overfull.RobustPartition.shoreList_cons",
+        "robust_partition_pieces_10": "Overfull.RobustPartition.shoreList_nil",
+        "robust_partition_pieces_11": "Overfull.RobustPartition.rank_append",
+        "robust_partition_pieces_12": "Overfull.RobustPartition.rank_ordinary_cons",
+        "robust_partition_pieces_13": "Overfull.RobustPartition.rank_bipartite_cons",
+        "robust_partition_pieces_14": "Overfull.RobustPartition.partition_replace_ordinary",
+        "robust_partition_pieces_15": "Overfull.RobustPartition.Piece.valid_mono",
+        "robust_partition_pieces_16": "Overfull.RobustPartition.valid_shore_lower",
+        "robust_partition_pieces_17": "Overfull.RobustPartition.valid_rank_bound",
+        "robust_partition_pieces_18": "Overfull.RobustPartition.valid_initial",
+        "robust_partition_refinement_1": "Overfull.RobustPartition.exists_terminal_partition",
+        "robust_partition_scales_1": "Overfull.RobustPartition.exists_scale_ladder",
+        "robust_partition_split_1": "Overfull.RobustPartition.split_of_nonexpanding_witness",
+        "robust_partition_split_2": "Overfull.RobustPartition.nonexpanding_block_split",
+        "robust_partition_theorem_1": "Overfull.RobustPartition.exists_uniform_partition",
+        "robust_partition_theorem_2": "Overfull.robust_partition",
+    })
     audited_names = {item["name"] for item in declarations}
     if missing := sorted(set(completed_results.values()) - audited_names):
         raise SystemExit("Completed results absent from the axiom audit: " + ", ".join(missing))
@@ -1250,7 +1323,8 @@ def main() -> None:
             "The named supporting results, full sharpness results, actual "
             "foreign-edge reduction of Proposition 4.10, and bounded exceptional "
             "absorption of Proposition 4.12, frequent boundary patterns of Lemma 4.13, "
-            "and full tripartite link packing of Lemma 5.12 are proved by audited "
+            "full tripartite link packing of Lemma 5.12, and the complete robust "
+            "partition of Theorem 2.23 are proved by audited "
             "declarations. The complete constructive boundary-extension reduction is also "
             "proved, but the one-apex factorization and full Lemma 4.14 remain unverified. "
             "The specialized bounded-forbidden-label coloring step is proved by finite "
@@ -1298,6 +1372,10 @@ def main() -> None:
             "graph and link family for real b>=1 and 0<lambda<=1. Its actual Hall "
             "candidates, adaptive-history load tails, exact graph accounting, and "
             "finite union budget are all proved internally with the original constants. "
+            "The full Theorem 2.23 constructs the actual robust partition by finite "
+            "refinement, with uniform positive scales, all four quantitative "
+            "conclusions, actual minimum and maximum degrees, and n0=1. "
+            "Only positivity of the error function on (0,1) is needed. "
             "This audit continues the recovered ordinary-core source; it does not "
             "include the unavailable later terminal checkpoint. The final implication "
             "to the main theorem still assumes LargeCriticalExclusion, which is not "

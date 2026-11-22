@@ -183,6 +183,7 @@ import Overfull.Dense.LinkPacking.Load
 import Overfull.Dense.LinkPacking.Packing
 import Overfull.Dense.LinkPacking.Tripartite
 import Overfull.Dense.LinkPacking.Theorem
+import Overfull.RobustPartition.Theorem
 /-!
 # Partial formalization of the overfull manuscript
 

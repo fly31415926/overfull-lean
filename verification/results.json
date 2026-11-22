@@ -1026,7 +1026,78 @@
     "dense_link_packing_tripartite_geometry_21": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.degree_right",
     "dense_link_packing_tripartite_geometry_22": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_left",
     "dense_link_packing_tripartite_geometry_23": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_right",
-    "dense_link_packing_1": "Overfull.Dense.LinkPacking.exists_tripartite_link_packing"
+    "dense_link_packing_1": "Overfull.Dense.LinkPacking.exists_tripartite_link_packing",
+    "robust_partition_conclusion_1": "Overfull.RobustPartition.rank_eq_weighted_count",
+    "robust_partition_conclusion_2": "Overfull.RobustPartition.valid_shore_degree_lower",
+    "robust_partition_conclusion_3": "Overfull.RobustPartition.valid_piece_cut_le",
+    "robust_partition_conclusion_4": "Overfull.RobustPartition.partition_conclusion_of_terminal",
+    "robust_partition_counting_1": "Overfull.RobustPartition.ecount_nonneg",
+    "robust_partition_counting_2": "Overfull.RobustPartition.cut_nonneg",
+    "robust_partition_counting_3": "Overfull.RobustPartition.bad_nonneg",
+    "robust_partition_counting_4": "Overfull.RobustPartition.ecount_symm",
+    "robust_partition_counting_5": "Overfull.RobustPartition.bad_symm",
+    "robust_partition_counting_6": "Overfull.RobustPartition.ecount_mono",
+    "robust_partition_counting_7": "Overfull.RobustPartition.ecount_le_mul_card",
+    "robust_partition_counting_8": "Overfull.RobustPartition.ecount_union_left_le",
+    "robust_partition_counting_9": "Overfull.RobustPartition.ecount_union_right_le",
+    "robust_partition_counting_10": "Overfull.RobustPartition.ecount_union_left",
+    "robust_partition_counting_11": "Overfull.RobustPartition.ecount_union_right",
+    "robust_partition_counting_12": "Overfull.RobustPartition.ecount_eq_sum",
+    "robust_partition_counting_13": "Overfull.RobustPartition.ecount_univ",
+    "robust_partition_counting_14": "Overfull.RobustPartition.ecount_add_compl",
+    "robust_partition_counting_15": "Overfull.RobustPartition.ecount_self",
+    "robust_partition_counting_16": "Overfull.RobustPartition.cut_eq_sum",
+    "robust_partition_counting_17": "Overfull.RobustPartition.cut_compl",
+    "robust_partition_counting_18": "Overfull.RobustPartition.cut_sdiff_le",
+    "robust_partition_counting_19": "Overfull.RobustPartition.cut_union_le_bad",
+    "robust_partition_counting_20": "Overfull.RobustPartition.ecount_off_left_le_bad",
+    "robust_partition_counting_21": "Overfull.RobustPartition.ecount_off_right_le_bad",
+    "robust_partition_counting_22": "Overfull.RobustPartition.bad_eq_internal_add_cut",
+    "robust_partition_counting_23": "Overfull.RobustPartition.internal_edges_add_cut_le_bad",
+    "robust_partition_counting_24": "Overfull.RobustPartition.min_degree_mul_card_le",
+    "robust_partition_counting_25": "Overfull.RobustPartition.ecount_le_max_degree_mul_card",
+    "robust_partition_counting_26": "Overfull.RobustPartition.card_lower_of_small_off",
+    "robust_partition_counting_27": "Overfull.RobustPartition.block_size_lower",
+    "robust_partition_counting_28": "Overfull.RobustPartition.bipartite_sizes_lower",
+    "robust_partition_counting_29": "Overfull.RobustPartition.internal_good_of_not_bad",
+    "robust_partition_counting_30": "Overfull.RobustPartition.bad_internal_degree_count",
+    "robust_partition_counting_31": "Overfull.RobustPartition.degree_gap_le_off",
+    "robust_partition_counting_32": "Overfull.RobustPartition.bipartite_imbalance",
+    "robust_partition_counting_33": "Overfull.RobustPartition.coarse_count_bound",
+    "robust_partition_counting_34": "Overfull.RobustPartition.sharp_count_estimate",
+    "robust_partition_finite_refinement_1": "Overfull.RobustPartition.exists_terminal_of_bounded_rank",
+    "robust_partition_induced_1": "Overfull.RobustPartition.mem_localRN",
+    "robust_partition_induced_2": "Overfull.RobustPartition.localRN_subset",
+    "robust_partition_induced_3": "Overfull.RobustPartition.induced_set_card",
+    "robust_partition_induced_4": "Overfull.RobustPartition.induced_degree_eq_local_count",
+    "robust_partition_induced_5": "Overfull.RobustPartition.induced_robustNeighbors_image",
+    "robust_partition_induced_6": "Overfull.RobustPartition.induced_robustNeighbors_card",
+    "robust_partition_induced_7": "Overfull.RobustPartition.induced_robust_iff",
+    "robust_partition_induced_8": "Overfull.RobustPartition.exists_bad_set_of_not_induced_robust",
+    "robust_partition_pieces_1": "Overfull.RobustPartition.unionList_nil",
+    "robust_partition_pieces_2": "Overfull.RobustPartition.unionList_cons",
+    "robust_partition_pieces_3": "Overfull.RobustPartition.unionList_append",
+    "robust_partition_pieces_4": "Overfull.RobustPartition.disjoint_unionList_right",
+    "robust_partition_pieces_5": "Overfull.RobustPartition.lower_mul_length_le_union_card",
+    "robust_partition_pieces_6": "Overfull.RobustPartition.pairwise_replace_shore",
+    "robust_partition_pieces_7": "Overfull.RobustPartition.unionList_replace_shore",
+    "robust_partition_pieces_8": "Overfull.RobustPartition.shoreList_append",
+    "robust_partition_pieces_9": "Overfull.RobustPartition.shoreList_cons",
+    "robust_partition_pieces_10": "Overfull.RobustPartition.shoreList_nil",
+    "robust_partition_pieces_11": "Overfull.RobustPartition.rank_append",
+    "robust_partition_pieces_12": "Overfull.RobustPartition.rank_ordinary_cons",
+    "robust_partition_pieces_13": "Overfull.RobustPartition.rank_bipartite_cons",
+    "robust_partition_pieces_14": "Overfull.RobustPartition.partition_replace_ordinary",
+    "robust_partition_pieces_15": "Overfull.RobustPartition.Piece.valid_mono",
+    "robust_partition_pieces_16": "Overfull.RobustPartition.valid_shore_lower",
+    "robust_partition_pieces_17": "Overfull.RobustPartition.valid_rank_bound",
+    "robust_partition_pieces_18": "Overfull.RobustPartition.valid_initial",
+    "robust_partition_refinement_1": "Overfull.RobustPartition.exists_terminal_partition",
+    "robust_partition_scales_1": "Overfull.RobustPartition.exists_scale_ladder",
+    "robust_partition_split_1": "Overfull.RobustPartition.split_of_nonexpanding_witness",
+    "robust_partition_split_2": "Overfull.RobustPartition.nonexpanding_block_split",
+    "robust_partition_theorem_1": "Overfull.RobustPartition.exists_uniform_partition",
+    "robust_partition_theorem_2": "Overfull.robust_partition"
   },
   "lean_build_passed": true,
   "axiom_audit_passed": true,
@@ -1463,7 +1534,7 @@
     "Classical.choice",
     "Quot.sound"
   ],
-  "verified_declaration_count": 8614,
+  "verified_declaration_count": 8778,
   "declaration_count_includes_generated_support_lemmas": true,
   "verified_declarations": [
     {
@@ -57245,6 +57316,1284 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.IsPartition.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.PartitionConclusion.bipartite"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.PartitionConclusion.internal_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.PartitionConclusion.ordinary"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.PartitionConclusion.partition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.PartitionConclusion.weighted_count"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.Piece.Valid._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.Piece.bipartite.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.Piece.bipartite.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.Piece.bipartite.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.Piece.ordinary.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.Piece.ordinary.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.Piece.ordinary.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.Piece.shoreList.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.Piece.shoreList.eq_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.Piece.valid_mono"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.error_le_nu"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.error_mono"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.gamma_le_nu"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.gamma_le_rho"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.gamma_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.mk.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.mk.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.nu_le_range"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.nu_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.rho_le_function"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.rho_le_nu"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.rho_le_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.rho_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.rho_small"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.split_expansion"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.ScaleLadder.split_range"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Split",
+      "name": "Overfull.RobustPartition.SplitOutcome._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bad_eq_internal_add_cut"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bad_eq_internal_add_cut._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bad_eq_internal_add_cut._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bad_internal_degree_count"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bad_nonneg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bad_symm"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.bipartiteCount.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.bipartiteCount.eq_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.bipartiteCount.eq_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bipartite_imbalance"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bipartite_imbalance._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bipartite_imbalance._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bipartite_imbalance._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bipartite_imbalance._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bipartite_imbalance._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bipartite_imbalance._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bipartite_imbalance._simp_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.bipartite_sizes_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.block_size_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.card_lower_of_small_off"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.card_lower_of_small_off._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.card_lower_of_small_off._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.card_lower_of_small_off._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.card_lower_of_small_off._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.card_lower_of_small_off._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.card_lower_of_small_off._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.card_lower_of_small_off._simp_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.coarse_count_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.cut.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.cut_compl"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.cut_eq_sum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.cut_nonneg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.cut_sdiff_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.cut_sdiff_le._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.cut_sdiff_le._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.cut_sdiff_le._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.cut_union_le_bad"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.cut_union_le_bad._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.cut_union_le_bad._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.degree_gap_le_off"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.disjoint_unionList_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.ecount.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_add_compl"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_eq_sum"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_eq_sum._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_le_max_degree_mul_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_le_mul_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_mono"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_nonneg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_off_left_le_bad"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_off_right_le_bad"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_self"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_symm"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_union_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_union_left_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_union_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_union_right_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.ecount_univ"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Induced",
+      "name": "Overfull.RobustPartition.exists_bad_set_of_not_induced_robust"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Scales",
+      "name": "Overfull.RobustPartition.exists_scale_ladder"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.FiniteRefinement",
+      "name": "Overfull.RobustPartition.exists_terminal_of_bounded_rank"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Refinement",
+      "name": "Overfull.RobustPartition.exists_terminal_partition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Theorem",
+      "name": "Overfull.RobustPartition.exists_uniform_partition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Induced",
+      "name": "Overfull.RobustPartition.induced_degree_eq_local_count"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Induced",
+      "name": "Overfull.RobustPartition.induced_robustNeighbors_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Induced",
+      "name": "Overfull.RobustPartition.induced_robustNeighbors_image"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Induced",
+      "name": "Overfull.RobustPartition.induced_robustNeighbors_image._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Induced",
+      "name": "Overfull.RobustPartition.induced_robust_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Induced",
+      "name": "Overfull.RobustPartition.induced_robust_iff._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Induced",
+      "name": "Overfull.RobustPartition.induced_set_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.internalBad.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.internal_edges_add_cut_le_bad"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.internal_good_of_not_bad"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.internal_good_of_not_bad._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.internal_good_of_not_bad._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Induced",
+      "name": "Overfull.RobustPartition.localRN.congr_simp"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Induced",
+      "name": "Overfull.RobustPartition.localRN.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Induced",
+      "name": "Overfull.RobustPartition.localRN_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.lower_mul_length_le_union_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Induced",
+      "name": "Overfull.RobustPartition.mem_localRN"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.min_degree_mul_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Split",
+      "name": "Overfull.RobustPartition.nonexpanding_block_split"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.ordinaryCount.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.ordinaryCount.eq_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.ordinaryCount.eq_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.pairwise_replace_shore"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.partition_conclusion_of_terminal"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.partition_replace_ordinary"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.rank.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.rank_append"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.rank_bipartite_cons"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.rank_bipartite_cons._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.rank_eq_weighted_count"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.rank_eq_weighted_count._proof_1_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.rank_eq_weighted_count._proof_1_9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.rank_ordinary_cons"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "Overfull.RobustPartition.sharp_count_estimate"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.shoreList.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.shoreList_append"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.shoreList_cons"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.shoreList_nil"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Split",
+      "name": "Overfull.RobustPartition.split_of_nonexpanding_witness"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Split",
+      "name": "Overfull.RobustPartition.split_of_nonexpanding_witness._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Split",
+      "name": "Overfull.RobustPartition.split_of_nonexpanding_witness._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Split",
+      "name": "Overfull.RobustPartition.split_of_nonexpanding_witness._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.unionList_append"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.unionList_cons"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.unionList_nil"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.unionList_replace_shore"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.valid_initial"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.valid_piece_cut_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.valid_rank_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "Overfull.RobustPartition.valid_shore_degree_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "Overfull.RobustPartition.valid_shore_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.RobustRealization.Blocks",
       "name": "Overfull.RobustRealization.block.eq_1"
     },
@@ -67869,6 +69218,15 @@
     {
       "axioms": [
         "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Theorem",
+      "name": "Overfull.robust_partition"
+    },
+    {
+      "axioms": [
+        "propext",
         "Quot.sound",
         "Classical.choice"
       ],
@@ -72093,6 +73451,130 @@
     {
       "axioms": [
         "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "_private.Overfull.RobustPartition.Conclusion.0.Overfull.RobustPartition.ordinaryCount.match_1.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "_private.Overfull.RobustPartition.Conclusion.0.Overfull.RobustPartition.ordinaryCount.match_1.eq_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Conclusion",
+      "name": "_private.Overfull.RobustPartition.Conclusion.0.Overfull.RobustPartition.ordinaryCount.match_1.eq_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "_private.Overfull.RobustPartition.Counting.0.Overfull.RobustPartition.interedges_union_left"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "_private.Overfull.RobustPartition.Counting.0.Overfull.RobustPartition.interedges_union_left._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Counting",
+      "name": "_private.Overfull.RobustPartition.Counting.0.Overfull.RobustPartition.interedges_union_left._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "_private.Overfull.RobustPartition.Pieces.0.Overfull.RobustPartition.Piece.shoreList.match_1.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Pieces",
+      "name": "_private.Overfull.RobustPartition.Pieces.0.Overfull.RobustPartition.Piece.shoreList.match_1.eq_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Refinement",
+      "name": "_private.Overfull.RobustPartition.Refinement.0.Overfull.RobustPartition.replace_ordinary_of_split"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Refinement",
+      "name": "_private.Overfull.RobustPartition.Refinement.0.Overfull.RobustPartition.replace_ordinary_of_split._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.RobustPartition.Refinement",
+      "name": "_private.Overfull.RobustPartition.Refinement.0.Overfull.RobustPartition.replace_ordinary_of_split._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Refinement",
+      "name": "_private.Overfull.RobustPartition.Refinement.0.Overfull.RobustPartition.replace_ordinary_of_split._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.RobustPartition.Refinement",
+      "name": "_private.Overfull.RobustPartition.Refinement.0.Overfull.RobustPartition.replace_ordinary_of_split._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Split",
+      "name": "_private.Overfull.RobustPartition.Split.0.Overfull.RobustPartition.outside_localRN_incidence"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.RobustPartition.Split",
+      "name": "_private.Overfull.RobustPartition.Split.0.Overfull.RobustPartition.target_size_of_off_incidence"
+    },
+    {
+      "axioms": [
+        "propext",
         "Quot.sound",
         "Classical.choice"
       ],
@@ -74630,6 +76112,15 @@
     "Overfull.Replacement.Parameters",
     "Overfull.Replacement.SmallShores",
     "Overfull.RobustExpansion",
+    "Overfull.RobustPartition.Conclusion",
+    "Overfull.RobustPartition.Counting",
+    "Overfull.RobustPartition.FiniteRefinement",
+    "Overfull.RobustPartition.Induced",
+    "Overfull.RobustPartition.Pieces",
+    "Overfull.RobustPartition.Refinement",
+    "Overfull.RobustPartition.Scales",
+    "Overfull.RobustPartition.Split",
+    "Overfull.RobustPartition.Theorem",
     "Overfull.RobustRealization",
     "Overfull.RobustRealization.Blocks",
     "Overfull.RobustRealization.Construction",
@@ -74698,7 +76189,7 @@
     "Vizing.Path.Invert",
     "Vizing.Path.PathEdges"
   ],
-  "fully_verified_numbered_assertion_count": 43,
+  "fully_verified_numbered_assertion_count": 44,
   "fully_verified_numbered_assertions": [
     "2.2",
     "2.3",
@@ -74721,6 +76212,7 @@
     "2.20",
     "2.21",
     "2.22",
+    "2.23",
     "2.25",
     "3.3",
     "4.1",
@@ -74745,7 +76237,7 @@
     "7.2"
   ],
   "source_sha256": {
-    "Overfull.lean": "040b6a6f223c24e13cceea8342a74776cd4c6fd98b44b4baac56370dbc59e84e",
+    "Overfull.lean": "15c9f5d24b8cf369c934385062820d561cbb3b484a3c565bfc630d8e8a42e1ec",
     "Audit.lean": "76886fd9261a3a7b07660f9a434272c0347130a4013cf57da6e1761a34fc6603",
     "Overfull/Absorption/Bounded.lean": "722ca71ecdc9b0f4c17b400c32d51a284d9eac61211e1a52e448fcc8f5bb2f52",
     "Overfull/Absorption/Core.lean": "1f5f39cd8497918341bf336db7f1735b131c9f564077b158b7245fbb474a0946",
@@ -75069,6 +76561,15 @@
     "Overfull/Replacement/SmallShores.lean": "3a5aaed22e7b751494fb10e13fbcd03e6e5afbeebf836192fc08a1cb6c543853",
     "Overfull/Replacement.lean": "d4f2673a31ef44ef4f17fb5d56a1677fe90f5ee8122087752352e67eb315284c",
     "Overfull/RobustExpansion.lean": "6e47f5a407838cf24beb0fc398c7a68a7b0f43251d4e62534c68febce08c3483",
+    "Overfull/RobustPartition/Conclusion.lean": "7ddc42a242f65b0a5ccfacb528d670c7f0a538b8635974ef6be47c40413ccc97",
+    "Overfull/RobustPartition/Counting.lean": "ae8b81bd37274b491941cbf4de3ac1d8d7e9d33a8f2da9d593381728af76869d",
+    "Overfull/RobustPartition/FiniteRefinement.lean": "853fa8b95228a3f3d99f06946e583b2e81cd01fc8967f522a62f70adf43e58da",
+    "Overfull/RobustPartition/Induced.lean": "106f9a1e090f87ee0bbd266665a87ca332d1fc8f9ec0633b2d56bd057d6db47b",
+    "Overfull/RobustPartition/Pieces.lean": "c292dd96b07a34c6aae324fcfc12d15a0e7975778871ec4ccf394d95dab5a6b4",
+    "Overfull/RobustPartition/Refinement.lean": "33697ea10d03e26a5d241d4832347326071c612c8f23d881d7837a1907ffdc16",
+    "Overfull/RobustPartition/Scales.lean": "782af8ee09ce3ecfa7bdf9b2666c0f95db09a9e0a019a737442ba2d91cda1690",
+    "Overfull/RobustPartition/Split.lean": "c7da440ba4c00020dd43194e3fefa73f9b3a5868d457658c1072b5892ba88230",
+    "Overfull/RobustPartition/Theorem.lean": "76ef57f522d38e51fadbc1c8b0785c1709a57e03c43467ca61ce7dbf6db0b1a8",
     "Overfull/RobustRealization/Blocks.lean": "894a0a13a28afcc6f5488c503600c02a610f95a6b7c99e85089bc9817dcc6230",
     "Overfull/RobustRealization/Construction.lean": "543a8613e60bc186bf8923bee278c70cc235a597a7ac52ea440564db03c2e7a2",
     "Overfull/RobustRealization/CyclePower.lean": "15fdf29cf1028ac12ba55f9090974ff27ccb3e4a7638e165304cc581479eda9b",
@@ -75114,32 +76615,33 @@
     ".github/workflows/lean.yml": "bf5cd8ff5d9c54814b5a0a2a98732a90dae5e4d1a7268954fe9deba218753e83",
     "CIRCULATION_NOTICE.txt": "c8913077edf119bdb2ff790f24c3a27188a14b37d3cbc03121c917aee157a419",
     "LICENSE_BMATCHING.txt": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
-    "README.md": "2ac3936e7a3cd06e669031e6501ed4168d47cf13a986a71c54e0960d972170d6",
+    "README.md": "88d1a0b195ed3a141ecb3720adc2d8de15f3baaa83b2e72d263b9f53aa159d98",
     "THIRD_PARTY_NOTICES.txt": "9002356e653c2943115b2feeba04713b005074a3d7c283bd894a47d8ca63dcd7",
     "docs/adaptive-packing.md": "eed3d11bde80300511bfa046813661c1617bb0ddc4c131efbed9576a33e53c7e",
     "docs/auxiliary-completion.md": "3c4787a8cef05bcca13c19e7293591878c1ba5a069e0ef22c34907f8b1030453",
     "docs/bipartite-localization.md": "8ed33fea06bb9f1b38f51874acbb8e53bfc288c41fd6d1c4a96b3b3427b868ab",
-    "docs/bipartite-palette-assembly.md": "382d9213cd409cedee1fe1124c438c6f94adcc737d6e1232e41884d2442cb3ad",
-    "docs/bipartite-prerequisites.md": "8014f58eea3e1775521eb7f93240f7a70078a0521018087572d90e6aa989c9ba",
-    "docs/bipartite-sampling.md": "4386aa0c8bb4161195a10c4aa67fd51289995905303c4c0b6645270169d3e767",
-    "docs/bipartite-score-mean.md": "8a2bf65b150da55287534e6150f380a001071071fcc7e3299b96a8d752dcd66d",
-    "docs/bipartite-simultaneous-selection.md": "248586b4f493bb1a25d3de83f16ae3c4497eed589367474795a3c992046aa613",
-    "docs/bipartite-two-families.md": "cb66995f9674162286faece6d2e736421e7c448fd55028edfdc9d5ac57c6faeb",
+    "docs/bipartite-palette-assembly.md": "aa836d4d2e304ea46e20d5665457ace7edeb7182e7976199af0343c6962f89f1",
+    "docs/bipartite-prerequisites.md": "4f66f8e29357c1af365f42753ef65df5f37417e5710f072b46b3bcad24ba1280",
+    "docs/bipartite-sampling.md": "f0c8a8741250566d2432e543f8524dc3298c622a2be761ed5a0748a1826d5844",
+    "docs/bipartite-score-mean.md": "8e0fb98e3810bb7e335f50e73f95725fe59661385cf14d8a26277a0da1751d7a",
+    "docs/bipartite-simultaneous-selection.md": "3ad781773134d4f3f35415af81be9899a576233893ec71fef2f87e89f9d70724",
+    "docs/bipartite-two-families.md": "457897834564a7f349481765d04c497bf1bef47604203ee9bd30bf510fb617d2",
     "docs/bmatching-source.json": "2cb433874d3b356dd6ff933d504fa6c61886d255c739eec7da1e870c9bf0dcf8",
-    "docs/boundary-extension.md": "8c3688ca9181f140a0287179e89061392f32588280702f6c9fbb32b2ce4b4174",
+    "docs/boundary-extension.md": "4cc10bf28b83c03b78329851ee5bfed118bfeef1325ee1f264cdbe497211d1fe",
     "docs/circulation-source.json": "2b3d7bdf1b05c6b8445e2961efe99fe3eb6100a9c08c1eb3af8bbb4fd28350aa",
-    "docs/coverage.json": "864f7c0a5a3b455fb946bb1a8ea6bc765081c7b4a49c77f5daf22cedf294f2e6",
-    "docs/dense-link-packing.md": "f161d806e5d46f9b9014af0ba1041ec032ff040a5d3e5557a544419cb00428b7",
+    "docs/coverage.json": "c81cd3eb8c250d55569033e4da1a98a4f7d8da632af98cd1d4afb3f3fb5e2b15",
+    "docs/dense-link-packing.md": "2d4d19a64e9d12cbef2eb1ab899e4d02bda8cd0cab0d75661e0ef5473805b4c4",
     "docs/exceptional-absorption.md": "5fc25d8f075878fd04257ca6370ed6d70bce2991c8ab36b29d4f80cde4784eb7",
-    "docs/foreign-edge-reduction.md": "e6e4c1a0372930a4aed74ea5d1f3bb2d5d0b95fea5b2fa07a9e35dc3260916b5",
+    "docs/foreign-edge-reduction.md": "db66d60ff6e04c9a1bceb308af42701ac6c90ef27d4c4bfc0675f2c351f4bc5b",
     "docs/frequent-patterns.md": "37eb2de401abc5ba79e8c22729fcf19b3b347ad0bd173dee640d061201b8eee0",
-    "docs/main-theorem.md": "7cce76c4e196a4a3bd7ab1c88d7f56ffbf00120f9b0e8cadaebd2b9147ae68d8",
-    "docs/manuscript-source.json": "c2563759cf0dbb4c1c939f3a89f185ba97f99043976682d69429d14bf9aabccd",
+    "docs/main-theorem.md": "f48521f96c82b4ac4dca52c19fa2fc42e16f2e704acd3c93d0f6c182a1cd26ca",
+    "docs/manuscript-source.json": "dad0e8806a501af2d13b53899909634ddcb7c0f46bf6a1989b4234a785f850b8",
     "docs/matching-repair.md": "29d0c587ba983a568eb98b40484e531a90e0f96fbd4dc98069bfd12214481cca",
-    "docs/next-verification-target.md": "909545ee48d0663cb906422ad0eae73618d5de99ba6cbead65caec17dae87029",
-    "docs/ordinary-factorization.md": "27e26b80175ef00e92a2b0db2dc4fab2d1fe4f892da41379692a01d9b6d342d6",
+    "docs/next-verification-target.md": "efdcb7029dcdef5b516d656e585991831a8f5c4bcd4a23b6ccc65acb2165b3dc",
+    "docs/ordinary-factorization.md": "511bd9d3dab371d76118de1e45705a8e08855475efc53a7c4bbba50f28974e77",
     "docs/prescribed-matching.md": "9d37e1f0b7df42dd65fb379d51fb7604793440b56c5adac307e95a486dc510f5",
     "docs/replacement.md": "5643ebc060c37602f7e160f76c021e5cc7edfb576b2151f45248bfcf6ca5484e",
+    "docs/robust-partition.md": "684c2cafd8e55a1d42d98070016c382052ce782739975d6a3868cba9f74b2430",
     "docs/sharpness.md": "7c14f8fc7aa03b83a157c047977264fb054d20bde9890db9f76d167945bf9f79",
     "docs/vizing-source.json": "2e3d01885c5de03c5e071c4d27c80ff64960cd006de36424d26ba28bfb6742c4",
     "lake-manifest.json": "6170a0f6ef63640502c8d121fabb4f3a555b04b8f00dca862521a59bf2ea80f0",
@@ -75147,7 +76649,7 @@
     "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
     "patches/vizing-lean-4.24.patch": "1f50d4aa24ee428032d14bb90c1705df9906ab90581bf0046eedf49bf3d70c76",
     "scripts/setup_vizing.py": "42ab626c3d40e8012aeed8d90b08a32757c3c5ee844b52ee2dc704e89b276094",
-    "scripts/verify.py": "f611ce1880cc006f46022639a0dfaaf1a2998259d1435eb3ae57abcdf5a65634"
+    "scripts/verify.py": "36cf9716a6a19237b17a0482a0b0541a7424ef0798cb834ab3fbba37b14cdf25"
   },
-  "scope": "The named supporting results, full sharpness results, actual foreign-edge reduction of Proposition 4.10, and bounded exceptional absorption of Proposition 4.12, frequent boundary patterns of Lemma 4.13, and full tripartite link packing of Lemma 5.12 are proved by audited declarations. The complete constructive boundary-extension reduction is also proved, but the one-apex factorization and full Lemma 4.14 remain unverified. The specialized bounded-forbidden-label coloring step is proved by finite permutation counting, greedy repair, and Vizing, without the general Kahn theorem. Quantitative cut/reserve control, constrained balancing and deficits, the uniform first completed color group, and exact residual core/complement coloring and conditional reconstruction are supporting results for Lemma 4.2; full residual factorization and Theorem 6.1 remain unproved. Reverse bipartite robustness, actual balanced exterior coloring, and preservation of ordinary neighborhood conditions under bounded core moves are now proved as three supporting results for Section 6. The regularity setup, special path systems, robust absorber, and full factorization remain unformalized. Further finite constructions now supply preferred representatives, actual allowed colors, capped correction selections after arbitrary deletions, and selected-graph colorability with balanced localized footprints. Actual palette rows, the correction imbalance identity, preferred filling, and the deterministic construction of one selected palette graph with its localized balanced coloring are proved. Only deleted copies in the relevant correction pool are charged to its capacity loss. Both correction orientations, two finite selected families with pairwise disjoint original copies, and their exact remaining graph are now constructed and colored from original finite supply bounds. Coarse reserves charge the initial deletion and exact fine-family pool use once. Residual exceptional degrees equal k minus the total selected palette size; the combined footprint load equals the original exterior core degree. Finite permutation marginals and disjoint good samples, weighted sampling moments, capped means, exact numerical tail constants, and weighted swap variance for arbitrary finite independent parts are now proved. Actual allowed-palette counts use their true population size. Actual capped graph scores satisfy the derived product-sampling variance bound from original copy influences and degree/pool accounting. Exact actual vertex-pair laws, internal-copy expectations, exceptional-row means and variances with coefficient one, and the full capped score mean are now proved. Combining these with the actual product variance gives the graph-specific lower-tail bound and a supported block with every prescribed part size. Actual palette-row, pool, ordinary and special preferred-row tails now give explicit union budgets. Disjoint palettes and compatible fine/coarse blocks are constructed simultaneously when those budgets sum to less than one. Shared part permutations preserve all supplied sizes, inclusions, disjointness, coarse unions, and coverage. A scalar theorem chooses uniform error and order thresholds for exponential and inverse-order budgets. Graph-specific uniform realization, integer sizes and cap floors, boundary budgets, regularity setup, special paths, absorber, and full factorization remain unformalized. The full Lemma 5.12 theorem chooses its order threshold before every graph and link family for real b>=1 and 0<lambda<=1. Its actual Hall candidates, adaptive-history load tails, exact graph accounting, and finite union budget are all proved internally with the original constants. This audit continues the recovered ordinary-core source; it does not include the unavailable later terminal checkpoint. The final implication to the main theorem still assumes LargeCriticalExclusion, which is not proved. A successful build is not a verification of the main theorem or the full manuscript."
+  "scope": "The named supporting results, full sharpness results, actual foreign-edge reduction of Proposition 4.10, and bounded exceptional absorption of Proposition 4.12, frequent boundary patterns of Lemma 4.13, full tripartite link packing of Lemma 5.12, and the complete robust partition of Theorem 2.23 are proved by audited declarations. The complete constructive boundary-extension reduction is also proved, but the one-apex factorization and full Lemma 4.14 remain unverified. The specialized bounded-forbidden-label coloring step is proved by finite permutation counting, greedy repair, and Vizing, without the general Kahn theorem. Quantitative cut/reserve control, constrained balancing and deficits, the uniform first completed color group, and exact residual core/complement coloring and conditional reconstruction are supporting results for Lemma 4.2; full residual factorization and Theorem 6.1 remain unproved. Reverse bipartite robustness, actual balanced exterior coloring, and preservation of ordinary neighborhood conditions under bounded core moves are now proved as three supporting results for Section 6. The regularity setup, special path systems, robust absorber, and full factorization remain unformalized. Further finite constructions now supply preferred representatives, actual allowed colors, capped correction selections after arbitrary deletions, and selected-graph colorability with balanced localized footprints. Actual palette rows, the correction imbalance identity, preferred filling, and the deterministic construction of one selected palette graph with its localized balanced coloring are proved. Only deleted copies in the relevant correction pool are charged to its capacity loss. Both correction orientations, two finite selected families with pairwise disjoint original copies, and their exact remaining graph are now constructed and colored from original finite supply bounds. Coarse reserves charge the initial deletion and exact fine-family pool use once. Residual exceptional degrees equal k minus the total selected palette size; the combined footprint load equals the original exterior core degree. Finite permutation marginals and disjoint good samples, weighted sampling moments, capped means, exact numerical tail constants, and weighted swap variance for arbitrary finite independent parts are now proved. Actual allowed-palette counts use their true population size. Actual capped graph scores satisfy the derived product-sampling variance bound from original copy influences and degree/pool accounting. Exact actual vertex-pair laws, internal-copy expectations, exceptional-row means and variances with coefficient one, and the full capped score mean are now proved. Combining these with the actual product variance gives the graph-specific lower-tail bound and a supported block with every prescribed part size. Actual palette-row, pool, ordinary and special preferred-row tails now give explicit union budgets. Disjoint palettes and compatible fine/coarse blocks are constructed simultaneously when those budgets sum to less than one. Shared part permutations preserve all supplied sizes, inclusions, disjointness, coarse unions, and coverage. A scalar theorem chooses uniform error and order thresholds for exponential and inverse-order budgets. Graph-specific uniform realization, integer sizes and cap floors, boundary budgets, regularity setup, special paths, absorber, and full factorization remain unformalized. The full Lemma 5.12 theorem chooses its order threshold before every graph and link family for real b>=1 and 0<lambda<=1. Its actual Hall candidates, adaptive-history load tails, exact graph accounting, and finite union budget are all proved internally with the original constants. The full Theorem 2.23 constructs the actual robust partition by finite refinement, with uniform positive scales, all four quantitative conclusions, actual minimum and maximum degrees, and n0=1. Only positivity of the error function on (0,1) is needed. This audit continues the recovered ordinary-core source; it does not include the unavailable later terminal checkpoint. The final implication to the main theorem still assumes LargeCriticalExclusion, which is not proved. A successful build is not a verification of the main theorem or the full manuscript."
 }

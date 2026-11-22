@@ -4,7 +4,7 @@ This development proves Proposition 4.10, `three:prop:foreign`, of the
 recorded manuscript. Its public declarations are
 `Overfull.foreign_edge_reduction` and
 `Overfull.foreign_edge_reduction_with_small_error`. The inventory contains
-42 of 69 complete numbered assertions, including the subsequent bounded
+44 of 69 complete numbered assertions, including the subsequent bounded
 absorption proposition and frequent-pattern lemma. The main theorem remains unverified.
 
 The proof constructs the assignments, matching classes, refinement cuts,

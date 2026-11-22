@@ -14,7 +14,7 @@ existence of data satisfying all those quantitative conditions remains
 to be proved. The subsequent [sampling continuation](bipartite-sampling.md)
 supplies weighted moments, capped means, actual graph-score variance,
 and a disjoint-palette constructor from marginal failure budgets.
-The completed numbered assertion count remains **42 of 69**; the full
+The current completed numbered assertion count is **44 of 69**; the full
 factorization theorem is still unverified.
 
 The manuscript reference is the selection of the fine and coarse

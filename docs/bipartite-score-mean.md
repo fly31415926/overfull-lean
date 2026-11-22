@@ -8,7 +8,7 @@ explicit failure bound is below one.
 
 There are **31 new public theorem proofs in five modules**. They are
 supporting results for Section 6. The completed numbered inventory remains
-**42 of 69**; Theorem 6.1, Proposition 6.2, the absorber theorem, and the main
+**44 of 69**; Theorem 6.1, Proposition 6.2, the absorber theorem, and the main
 theorem remain unverified. The definitive strict build, transitive axiom
 audit, and exact source hashes are recorded in `verification/results.json`.
 

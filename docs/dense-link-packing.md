@@ -7,8 +7,9 @@ vertex types, tripartite graph, and link family. The conclusion supplies
 actual pairwise edge-disjoint matchings covering exactly the prescribed
 links. Its implementation adds 96 public theorem proofs in ten modules.
 
-This completes one additional numbered result, bringing coverage to
-**43 of 69**. The main overfull theorem remains unverified. The earlier
+This completed one additional numbered result, bringing that checkpoint to
+**43 of 69**. The subsequent [robust-partition proof](robust-partition.md)
+completes Theorem 2.23 and brings the current total to **44 of 69**. The main overfull theorem remains unverified. The earlier
 palette and block work consists of supporting results inside unfinished
 factorization statements; those supporting results did not increase the
 numbered total.

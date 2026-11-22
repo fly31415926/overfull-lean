@@ -8,8 +8,8 @@
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
-  "fully_verified_numbered_assertion_count": 43,
-  "scope": "43 of the 69 numbered assertions have complete checked proofs. The remaining 26, including the main theorem, have no complete proof here. Checked components and conditional implications do not count as complete proofs of their parent assertions. Lemma 2.2 is represented by its finite probability laws. This branch continues the recovered ordinary-core and published bipartite continuation; the unavailable later terminal checkpoint is not part of this audit. Checked supporting results prove reverse bipartite robustness, actual balanced exterior coloring, bounded-core-move neighborhood conditions, preferred representatives, and actual allowed-color preparation. Palette identities, signed correction accounting, selection after pool-specific adaptive deletions, and preferred filling construct both selected families and their exact remaining exterior with actual localized colorings. Finite sampling proofs derive the actual weighted moments, product score mean and variance, row/pool/preferred-edge tails, and explicit graph-specific union budgets. The simultaneous palette theorem constructs disjoint allowed palettes of prescribed positive sizes. The simultaneous block theorem uses shared part permutations to construct actual blocks preserving prescribed component sizes, inclusions, disjointness, coarse unions, and coverage. Both existence theorems require their explicit total numerical budgets to be below one; block sampling also requires prescribed exact fractions, at least two selections in nonempty parts, graph/cap bounds, and a positive correction pool. A separate scalar theorem chooses a uniform error tolerance and order threshold for budgets of the form u*m*exp(-r*m)+v*a/m+w/m. Deriving all these finite hypotheses from the original robust-core input, including integer partitions, positive even palette sizes, cap floors, boundary losses, and residual reserves, remains open. The spanning regularity setup, special path systems, robust absorber, and full host factorization remain unformalized. Full Lemma 5.12 is now proved by a uniform tripartite link-packing theorem: for fixed real b>=1 and 0<lambda<=1, its order threshold precedes the graph and link family; actual pairwise edge-disjoint perfect matchings satisfy the original degree, overlap, incidence, and family-size hypotheses, with all candidate, local-load, and probability budgets derived internally.",
+  "fully_verified_numbered_assertion_count": 44,
+  "scope": "44 of the 69 numbered assertions have complete checked proofs. The remaining 25, including the main theorem, have no complete proof here. Checked components and conditional implications do not count as complete proofs of their parent assertions. Lemma 2.2 is represented by its finite probability laws. This branch continues the recovered ordinary-core and published bipartite continuation; the unavailable later terminal checkpoint is not part of this audit. Checked supporting results prove reverse bipartite robustness, actual balanced exterior coloring, bounded-core-move neighborhood conditions, preferred representatives, and actual allowed-color preparation. Palette identities, signed correction accounting, selection after pool-specific adaptive deletions, and preferred filling construct both selected families and their exact remaining exterior with actual localized colorings. Finite sampling proofs derive the actual weighted moments, product score mean and variance, row/pool/preferred-edge tails, and explicit graph-specific union budgets. The simultaneous palette theorem constructs disjoint allowed palettes of prescribed positive sizes. The simultaneous block theorem uses shared part permutations to construct actual blocks preserving prescribed component sizes, inclusions, disjointness, coarse unions, and coverage. Both existence theorems require their explicit total numerical budgets to be below one; block sampling also requires prescribed exact fractions, at least two selections in nonempty parts, graph/cap bounds, and a positive correction pool. A separate scalar theorem chooses a uniform error tolerance and order threshold for budgets of the form u*m*exp(-r*m)+v*a/m+w/m. Deriving all these finite hypotheses from the original robust-core input, including integer partitions, positive even palette sizes, cap floors, boundary losses, and residual reserves, remains open. The spanning regularity setup, special path systems, robust absorber, and full host factorization remain unformalized. Full Lemma 5.12 is now proved by a uniform tripartite link-packing theorem: for fixed real b>=1 and 0<lambda<=1, its order threshold precedes the graph and link family; actual pairwise edge-disjoint perfect matchings satisfy the original degree, overlap, incidence, and family-size hypotheses, with all candidate, local-load, and probability budgets derived internally. Full Theorem 2.23: a positive almost-regularity tolerance and an order threshold precede every finite vertex type and graph. Actual minimum and maximum degree bounds produce an actual disjoint partition into induced robust expanders and ordered almost bipartite pieces, with all square-root size, imbalance, edge-error, whole-part exceptional-degree, and weighted floor bounds. A finite scale ladder and strictly increasing bounded shore rank construct the partition internally. The proof permits n0=1 and needs only positivity of f on (0,1); the manuscript nondecreasing interval-valued functions are included. The additional conditions of the broader published KLOS robust-partition theorem and the main theorem are not claimed.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -4089,6 +4089,89 @@
       "manuscript_locations": [
         "dense:link-packing"
       ]
+    },
+    {
+      "id": "robust_partition",
+      "kind": "graph_theoretic_result",
+      "description": "Full Theorem 2.23: a positive almost-regularity tolerance and an order threshold precede every finite vertex type and graph. Actual minimum and maximum degree bounds produce an actual disjoint partition into induced robust expanders and ordered almost bipartite pieces, with all square-root size, imbalance, edge-error, whole-part exceptional-degree, and weighted floor bounds. A finite scale ladder and strictly increasing bounded shore rank construct the partition internally. The proof permits n0=1 and needs only positivity of f on (0,1); the manuscript nondecreasing interval-valued functions are included. The additional conditions of the broader published KLOS robust-partition theorem and the main theorem are not claimed.",
+      "lean_declarations": [
+        "Overfull.RobustPartition.rank_eq_weighted_count",
+        "Overfull.RobustPartition.valid_shore_degree_lower",
+        "Overfull.RobustPartition.valid_piece_cut_le",
+        "Overfull.RobustPartition.partition_conclusion_of_terminal",
+        "Overfull.RobustPartition.ecount_nonneg",
+        "Overfull.RobustPartition.cut_nonneg",
+        "Overfull.RobustPartition.bad_nonneg",
+        "Overfull.RobustPartition.ecount_symm",
+        "Overfull.RobustPartition.bad_symm",
+        "Overfull.RobustPartition.ecount_mono",
+        "Overfull.RobustPartition.ecount_le_mul_card",
+        "Overfull.RobustPartition.ecount_union_left_le",
+        "Overfull.RobustPartition.ecount_union_right_le",
+        "Overfull.RobustPartition.ecount_union_left",
+        "Overfull.RobustPartition.ecount_union_right",
+        "Overfull.RobustPartition.ecount_eq_sum",
+        "Overfull.RobustPartition.ecount_univ",
+        "Overfull.RobustPartition.ecount_add_compl",
+        "Overfull.RobustPartition.ecount_self",
+        "Overfull.RobustPartition.cut_eq_sum",
+        "Overfull.RobustPartition.cut_compl",
+        "Overfull.RobustPartition.cut_sdiff_le",
+        "Overfull.RobustPartition.cut_union_le_bad",
+        "Overfull.RobustPartition.ecount_off_left_le_bad",
+        "Overfull.RobustPartition.ecount_off_right_le_bad",
+        "Overfull.RobustPartition.bad_eq_internal_add_cut",
+        "Overfull.RobustPartition.internal_edges_add_cut_le_bad",
+        "Overfull.RobustPartition.min_degree_mul_card_le",
+        "Overfull.RobustPartition.ecount_le_max_degree_mul_card",
+        "Overfull.RobustPartition.card_lower_of_small_off",
+        "Overfull.RobustPartition.block_size_lower",
+        "Overfull.RobustPartition.bipartite_sizes_lower",
+        "Overfull.RobustPartition.internal_good_of_not_bad",
+        "Overfull.RobustPartition.bad_internal_degree_count",
+        "Overfull.RobustPartition.degree_gap_le_off",
+        "Overfull.RobustPartition.bipartite_imbalance",
+        "Overfull.RobustPartition.coarse_count_bound",
+        "Overfull.RobustPartition.sharp_count_estimate",
+        "Overfull.RobustPartition.exists_terminal_of_bounded_rank",
+        "Overfull.RobustPartition.mem_localRN",
+        "Overfull.RobustPartition.localRN_subset",
+        "Overfull.RobustPartition.induced_set_card",
+        "Overfull.RobustPartition.induced_degree_eq_local_count",
+        "Overfull.RobustPartition.induced_robustNeighbors_image",
+        "Overfull.RobustPartition.induced_robustNeighbors_card",
+        "Overfull.RobustPartition.induced_robust_iff",
+        "Overfull.RobustPartition.exists_bad_set_of_not_induced_robust",
+        "Overfull.RobustPartition.unionList_nil",
+        "Overfull.RobustPartition.unionList_cons",
+        "Overfull.RobustPartition.unionList_append",
+        "Overfull.RobustPartition.disjoint_unionList_right",
+        "Overfull.RobustPartition.lower_mul_length_le_union_card",
+        "Overfull.RobustPartition.pairwise_replace_shore",
+        "Overfull.RobustPartition.unionList_replace_shore",
+        "Overfull.RobustPartition.shoreList_append",
+        "Overfull.RobustPartition.shoreList_cons",
+        "Overfull.RobustPartition.shoreList_nil",
+        "Overfull.RobustPartition.rank_append",
+        "Overfull.RobustPartition.rank_ordinary_cons",
+        "Overfull.RobustPartition.rank_bipartite_cons",
+        "Overfull.RobustPartition.partition_replace_ordinary",
+        "Overfull.RobustPartition.Piece.valid_mono",
+        "Overfull.RobustPartition.valid_shore_lower",
+        "Overfull.RobustPartition.valid_rank_bound",
+        "Overfull.RobustPartition.valid_initial",
+        "Overfull.RobustPartition.exists_terminal_partition",
+        "Overfull.RobustPartition.exists_scale_ladder",
+        "Overfull.RobustPartition.split_of_nonexpanding_witness",
+        "Overfull.RobustPartition.nonexpanding_block_split",
+        "Overfull.RobustPartition.exists_uniform_partition",
+        "Overfull.robust_partition"
+      ],
+      "scope_limit": "Complete manuscript Theorem 2.23. The stronger bipartite robust-expansion and cleanup conditions of the general published KLOS theorem are not separately formalized. Proposition 2.24 and the main theorem remain incomplete.",
+      "manuscript_locations": [
+        "bip:part:imported"
+      ],
+      "documentation": "robust-partition.md"
     }
   ],
   "numbered_assertions": [
@@ -4679,10 +4762,17 @@
         1480
       ],
       "statement_sha256": "be076a6b6c07e78af1793be025ddfde0ac2b3360914be0360ff48fb5866dbf31",
-      "full_assertion_verified": false,
-      "status": "not_formalized_here",
-      "checked_components": [],
-      "imported_statement": true
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "robust_partition"
+      ],
+      "imported_statement": true,
+      "lean_theorems": [
+        "Overfull.robust_partition",
+        "Overfull.RobustPartition.exists_uniform_partition"
+      ],
+      "scope": "Full Theorem 2.23: a positive almost-regularity tolerance and an order threshold precede every finite vertex type and graph. Actual minimum and maximum degree bounds produce an actual disjoint partition into induced robust expanders and ordered almost bipartite pieces, with all square-root size, imbalance, edge-error, whole-part exceptional-degree, and weighted floor bounds. A finite scale ladder and strictly increasing bounded shore rank construct the partition internally. The proof permits n0=1 and needs only positivity of f on (0,1); the manuscript nondecreasing interval-valued functions are included. The additional conditions of the broader published KLOS robust-partition theorem and the main theorem are not claimed."
     },
     {
       "number": "2.24",
@@ -5857,7 +5947,13 @@
         "Theorem 5.1",
         "conditions C1\u2013C3 and D1\u2013D7"
       ],
-      "coverage_status": "not_formalized_or_matched_to_a_checked_declaration_here"
+      "coverage_status": "manuscript_theorem_2_23_fully_proved_by_actual_finite_refinement",
+      "lean_declarations": [
+        "Overfull.robust_partition",
+        "Overfull.RobustPartition.exists_uniform_partition"
+      ],
+      "source_url": "https://web.mat.bham.ac.uk/D.Osthus/ham3conn_37.pdf",
+      "scope_limit": "The exact conclusion stated in manuscript Theorem 2.23 is proved locally. This does not claim all bipartite robust-expansion or cleanup conditions of the broader published theorem."
     },
     {
       "bibliography_key": "CaoChen2020",
@@ -5923,7 +6019,7 @@
     "The explicit upper coloring of the sharpness family is independent of Vizing. The general Vizing bound is now also proved through a checked source adapter.",
     "The degree ratios Delta/(4*Delta+5) approach one quarter from below. The family leaves the boundary Delta >= n/4 open.",
     "The full manuscript text is not included.",
-    "The cycle absorber and robust deletion/range lemmas are fully checked. Their verification does not establish the robust partition, the dense decomposition, or the robust decomposition used in the main theorem.",
+    "The cycle absorber and robust deletion/range lemmas are fully checked. These local results do not supply the dense or robust decomposition used in the main theorem. The robust partition stated in Theorem 2.23 is proved separately.",
     "Lemma 2.2 is formalized at the finite joint-law level, including unequal Bernoulli probabilities and actual sampling without replacement. A Mathlib measure-space transport interface for infinite underlying outcome spaces is not included.",
     "Theorem 2.16 is proved by one rule chosen before the adaptive forbidden-set policy. Its local incidence condition concerns previous sets only, which is implied by the manuscript total-incidence condition. The positive error and order threshold are chosen before the graph.",
     "Lemma 2.21 chooses the positive robust parameter and order threshold before the labelled degree sequence. Lemmas 2.6-2.8 use actual edge-copy colorings and proved fan recolorings; the full Lemma 2.8 wrapper includes the empty-core case without an extra nonnegativity assumption.",
@@ -5942,7 +6038,8 @@
     "The ordinary-core supporting development now constructs a quantitative paired cut, one robust reserve with simultaneous side-degree control, a feasible constrained internal coloring, and an actual repaired first group of completed colors with parameters chosen before the graph. Exact residual-copy accounting, palette compression, a robust embedded crossing core, and a coloring of its complement are proved. Reconstructing a full host coloring still takes an actual full-residual coloring as an explicit input. These supporting results do not complete Lemma 4.2, Lemma 4.14, or the main theorem; these supporting results do not change their numbered status.",
     "The specialized forbidden-label step is proved by permutation-fiber counting and sparse-conflict greedy repair, with Vizing providing the initial simple-graph coloring. This is not a proof of the general Kahn list-edge-coloring theorem. The robust decomposition input in Theorem 6.1 remains unformalized. The pinned November 20, 2026 manuscript source and its statement inventory are unchanged.",
     "The simultaneous-selection continuation adds 75 public theorem proofs in ten modules. It replaces palette and block probability-oracle premises with derived graph-specific failure budgets, and preserves supplied fine/coarse position relations under shared permutations. The budgets themselves and the manuscript integer/uniform realization remain separate hypotheses. That supporting checkpoint left the numbered count at 42 of 69; Proposition 6.2, Theorem 6.1, the robust absorber, Lemmas 4.2 and 4.14, and the main theorem remain incomplete.",
-    "Lemma 5.12 is fully proved by an actual uniform tripartite link-packing construction. The proof uses finite Hall candidates, a total adaptive history, conditional Bernoulli exponential moments, exact local used-edge accounting, and one uniform order threshold. It retains the original constants and explicitly interprets the joint hierarchy as real b>=1 and 0<lambda<=1. Its November 21 statement block is byte-identical to the pinned November 20 statement hash. This completes one additional numbered assertion, bringing the current count to 43 of 69; the main theorem and the Section 6 factorization assertions remain unverified."
+    "Lemma 5.12 is fully proved by an actual uniform tripartite link-packing construction. The proof uses finite Hall candidates, a total adaptive history, conditional Bernoulli exponential moments, exact local used-edge accounting, and one uniform order threshold. It retains the original constants and explicitly interprets the joint hierarchy as real b>=1 and 0<lambda<=1. Its November 21 statement block is byte-identical to the pinned November 20 statement hash. This completes one additional numbered assertion, bringing that checkpoint to 43 of 69; the main theorem and the Section 6 factorization assertions remain unverified.",
+    "Theorem 2.23 is fully proved by Overfull.robust_partition, adding 71 public theorem proofs in nine modules and bringing the current total to 44 of 69. Every scale is chosen before the vertex type and graph; actual finite refinement increases a bounded shore count until every ordinary block expands. All four manuscript clauses are derived from actual incidence and degree counts. The November 21 statement block is byte-identical to the pinned November 20 inventory hash. The main theorem and the remaining 25 assertions remain incomplete."
   ],
   "density_corollary_verified": true
 }

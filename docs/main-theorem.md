@@ -350,22 +350,26 @@ checked reduction depends.
 
 `Overfull.boundary_extension_reduction` proves the full constructive reduction underlying Lemma 4.14. It starts with the actual prescribed one-or-three boundary coloring, completes all triple classes through the robust core, and deletes their exact original edge copies. The residual core, degree, and singleton boundary are constructed and counted. Its exterior contraction is proved even, regular, and free of overfull sets. The result reconstructs the exact prescribed extension from an actual coloring of that returned contraction, preserving properness at original exterior endpoints.
 
-No such contracted coloring is assumed in the reduction theorem's hypotheses or asserted to exist in its conclusion. The missing one-apex factorization can be reduced to ordinary-core Lemma 4.2 with two exterior vertices using the proved `Overfull.OneCore.even_core_complement`. This bypasses the general fixed-pattern and compatible-circuit steps for this specialization. The new `Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction` constructs the ordinary-core preprocessing and its exact residual with an actual colored complement. Its specialized forbidden-label step is proved by permutation counting, greedy repair, and Vizing, without assuming the general Kahn theorem. Theorem 6.1's factorization of the whole residual remains unformalized, so the full Lemmas 4.2 and 4.14 remain incomplete. The full assertion count remains 42 of 69. See [`ordinary-factorization.md`](ordinary-factorization.md), [`boundary-extension.md`](boundary-extension.md), and [`next-verification-target.md`](next-verification-target.md).
+No such contracted coloring is assumed in the reduction theorem's hypotheses or asserted to exist in its conclusion. The missing one-apex factorization can be reduced to ordinary-core Lemma 4.2 with two exterior vertices using the proved `Overfull.OneCore.even_core_complement`. This bypasses the general fixed-pattern and compatible-circuit steps for this specialization. The new `Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction` constructs the ordinary-core preprocessing and its exact residual with an actual colored complement. Its specialized forbidden-label step is proved by permutation counting, greedy repair, and Vizing, without assuming the general Kahn theorem. Theorem 6.1's factorization of the whole residual remains unformalized, so the full Lemmas 4.2 and 4.14 remain incomplete. The current full assertion count is 44 of 69. See [`ordinary-factorization.md`](ordinary-factorization.md), [`boundary-extension.md`](boundary-extension.md), and [`next-verification-target.md`](next-verification-target.md).
 
 ## What remains
 
-The structural argument still requires the robust partition for large
-critical graphs and the coloring theorems for its five possible configurations.
+Theorem 2.23 now supplies the [complete robust partition](robust-partition.md)
+for almost-regular finite simple graphs. The structural argument still needs
+the critical-graph degree estimate and its application in Proposition 2.24,
+and the coloring theorems for the five possible configurations.
 These include the ordinary-core coloring argument, the dense bipartite
 extension, and the robust bipartite extension. The checked local absorbers,
 matching results, and deletion lemmas do not supply these full theorems.
 
 Substantial published inputs also remain to be connected to complete checked
-proofs. They include the robust partition theorem of Kühn–Lo–Osthus–Staden,
-the critical-graph degree estimate of Cao–Chen, Kahn's list-edge-coloring
-theorem, Fan–Zhang's compatible circuit theorem, the weighted matching theorem
-of Ehard–Glock–Joos, the matching-packing lemma of Barber–Kühn–Lo–Osthus–Taylor,
-and the robust decomposition theorem used from Granet.
+proofs. They include the critical-graph degree estimate of Cao–Chen,
+Kahn's list-edge-coloring theorem, Fan–Zhang's compatible circuit theorem,
+the weighted matching theorem of Ehard–Glock–Joos, and the robust
+decomposition theorem used from Granet. The robust-partition conclusion
+stated in Theorem 2.23 and the tripartite link-packing instance in Lemma 5.12
+are now proved locally; the broader KLOS and BKLOT theorems are not
+separately claimed.
 The specialized bounded-forbidden-label consequence of Kahn needed in
 the ordinary-core preprocessing is now proved independently; this does
 not claim a formal proof of Kahn's general theorem.

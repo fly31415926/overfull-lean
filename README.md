@@ -6,10 +6,32 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest continuation: complete Lemma 5.12
+## Latest continuation: complete Theorem 2.23
+
+The [robust-partition theorem](docs/robust-partition.md) completes
+**Theorem 2.23**, increasing verified numbered coverage to **44 of 69**.
+`Overfull.robust_partition` chooses its positive tolerance and order
+threshold before every finite graph. From the actual minimum and maximum
+degree bounds it constructs a partition into induced robust expanders
+and ordered almost bipartite pieces, with every size, balance, edge-error,
+internal-degree, and weighted floor bound stated in the manuscript.
+
+The proof uses actual incidence counts and a finite refinement whose
+shore count strictly increases until all ordinary pieces expand. It
+requires only positivity of the prescribed error function on `(0,1)` and
+permits the order threshold `n₀ = 1`. The implementation adds **71 public
+theorem proofs across nine modules**. These establish one complete
+numbered theorem; the broader published robust-partition conditions
+are not separately claimed.
+
+The main theorem and the remaining **25** numbered assertions are still
+unverified. The exact build, axiom inventory, and source hashes appear in
+[verification/results.json](verification/results.json).
+
+### Previous continuation: complete Lemma 5.12
 
 The [dense link-packing theorem](docs/dense-link-packing.md) completes
-**Lemma 5.12**, increasing the verified numbered total to **43 of 69**.
+**Lemma 5.12**, which raised that checkpoint to **43 of 69**.
 For every fixed `b ≥ 1` and `0 < λ ≤ 1`, the proof chooses an order
 threshold before the graph and link family. It constructs actual
 pairwise edge-disjoint perfect matchings under the manuscript's original
@@ -46,7 +68,8 @@ stated graph, size, and numerical hypotheses. Uniform realization from the
 original robust-core assumptions, the spanning regularity setup, special
 path systems, the robust absorber, and full factorization remain open.
 That supporting checkpoint left the numbered assertion count at
-**42 of 69**. Completing Lemma 5.12 now adds the forty-third full statement.
+**42 of 69**. Lemma 5.12 added the forty-third full statement;
+Theorem 2.23 now adds the forty-fourth.
 
 ## The main theorem
 
@@ -74,7 +97,7 @@ Overfull.mainTheorem_of_criticalExclusion
     Overfull.MainTheorem
 ```
 
-`LargeCriticalExclusion` is the remaining structural assertion: sufficiently large edge-minimal counterexamples above the stated density threshold cannot have no overfull set. Its proof requires the robust partition and the five coloring cases. It is a transparent proposition definition, not an assumed axiom. The implication above does not constitute a verification of the main theorem.
+`LargeCriticalExclusion` is the remaining structural assertion: sufficiently large edge-minimal counterexamples above the stated density threshold cannot have no overfull set. Its proof still requires the critical-graph application of the now-proved robust partition and the five coloring cases. It is a transparent proposition definition, not an assumed axiom. The implication above does not constitute a verification of the main theorem.
 
 [`docs/main-theorem.md`](docs/main-theorem.md) records the formal statement, the checked reduction, and the outstanding work.
 
@@ -103,6 +126,7 @@ Overfull.mainTheorem_of_criticalExclusion
 | Lemma 2.20: adaptive ordinary packing | `Overfull.adaptive_ordinary_packing` | Uniform constants, one rule for every admissible adaptive input sequence, actual edge-disjoint matchings perfect outside the presented sets, and ordinary robust expansion after every prefix |
 | Lemma 2.21: balanced robust realization | `Overfull.balanced_robust_realization` | Exact prescribed labelled degrees, a simple robust expander, and constants chosen before the order and degree sequence |
 | Lemma 2.22: robust auxiliary completion | `Overfull.robust_auxiliary_completion` | The least auxiliary order, even regular completion, original edge copies retained, simple added edges, a robust auxiliary core, and no overfull set |
+| Theorem 2.23: the robust partition | `Overfull.robust_partition` | Uniform constants before the graph; actual induced expanders and ordered almost bipartite parts; all size, edge-error, exceptional-degree, and `q+2ℓ` floor bounds |
 | Lemma 2.25: balanced-core extraction | `Overfull.BalancedCore.balanced_core_of_bipartite_outcome` | From the stated bipartite outcome, actual equal retained sides of size at least `n/3`, at most `6√ρn` deleted vertices, and crossing degrees between `Δ−8√ρn` and `Δ` |
 | Lemma 3.3: replacing a dense core | `Overfull.robust_core_replacement` | An actual robust replacement on the prescribed even vertex set, retaining the exterior and preserving the maximum-degree bound and every overfull-set inequality, with uniform constants |
 | Lemma 4.1: reserve repair | `Overfull.MatchingRepair.reserve_repair` | Uniform constants, actual disjoint repaired matchings perfect outside the prescribed sets, and degree at most `μm` in both the used-reserve and released-original-edge unions |
@@ -126,7 +150,7 @@ Overfull.mainTheorem_of_criticalExclusion
 | Proposition 7.1: the sharpness family | `Overfull.sharpness_family` | Connectivity, order, maximum degree, class 2, edge count, and no overfull set |
 | Corollary 7.2: arbitrarily large examples below one quarter | `Overfull.arbitrarily_large_class_two_graphs` | Every real coefficient below `1/4` and every order threshold |
 
-These are 43 of the manuscript's 69 numbered assertions. The remaining 26, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
+These are 44 of the manuscript's 69 numbered assertions. The remaining 25, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
 
 ## Further checked inputs
 
@@ -441,7 +465,7 @@ The distinguished pattern retains an integer reserve `r >= k/(3*b4(t))`. Its act
 
 Contracting the exterior preserves parallel copies and gives an actual even regular graph with one exterior vertex. The small-cut proof derives no-overfullness. An actual coloring of this precise contraction is then transported back to the original labels, and all completed classes are restored with properness at every original vertex. The error tolerance, retained robust parameters, and order threshold are chosen before the graph and coloring.
 
-This is a checked reduction, not a proof that the contracted graph has a factorization. `Overfull.OneCore.even_core_complement` supplies a shorter route to that missing step: it constructs an even robust core with exactly two exterior vertices and an actual coloring of its exceptional complement. The ordinary-core preprocessing described next now constructs the residual input for Theorem 6.1. That factorization theorem remains unformalized, so Lemma 4.2 with `s=2` is still incomplete. **The completed count is 43 of 69; Lemma 4.14 and the main theorem remain unverified.** See [`docs/boundary-extension.md`](docs/boundary-extension.md).
+This is a checked reduction, not a proof that the contracted graph has a factorization. `Overfull.OneCore.even_core_complement` supplies a shorter route to that missing step: it constructs an even robust core with exactly two exterior vertices and an actual coloring of its exceptional complement. The ordinary-core preprocessing described next now constructs the residual input for Theorem 6.1. That factorization theorem remains unformalized, so Lemma 4.2 with `s=2` is still incomplete. **The completed count is 44 of 69; Lemma 4.14 and the main theorem remain unverified.** See [`docs/boundary-extension.md`](docs/boundary-extension.md).
 
 ### Ordinary-core reduction to a bipartite robust core
 

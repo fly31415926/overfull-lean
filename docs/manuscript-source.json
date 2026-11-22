@@ -32,7 +32,7 @@
   "coverage_file": "coverage.json",
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
-  "fully_verified_numbered_assertions": 43,
+  "fully_verified_numbered_assertions": 44,
   "additional_complete_results": [
     {
       "lean_name": "Overfull.arbitrarily_large_class_two_graphs",
@@ -81,6 +81,14 @@
       "manuscript_number": "5.12",
       "proved": true,
       "scope": "For fixed real b>=1 and 0<lambda<=1, the order threshold precedes n, all three host vertex types, the tripartite graph, and the entire link family. The constants 81,6,2,3 and the actual induced minimum-degree premise are retained. Candidate existence, local-load bounds, and the total failure budget are proved internally. The explicit b>=1 domain records the joint hierarchy convention in 1/n << 1/b,lambda <= 1. The general r-partite BKLOT lemma and the main theorem are not claimed."
+    },
+    {
+      "lean_name": "Overfull.robust_partition",
+      "file": "Overfull/RobustPartition/Theorem.lean",
+      "manuscript_label": "bip:part:imported",
+      "manuscript_number": "2.23",
+      "proved": true,
+      "scope": "Full Theorem 2.23: a positive almost-regularity tolerance and an order threshold precede every finite vertex type and graph. Actual minimum and maximum degree bounds produce an actual disjoint partition into induced robust expanders and ordered almost bipartite pieces, with all square-root size, imbalance, edge-error, whole-part exceptional-degree, and weighted floor bounds. A finite scale ladder and strictly increasing bounded shore rank construct the partition internally. The proof permits n0=1 and needs only positivity of f on (0,1); the manuscript nondecreasing interval-valued functions are included. The additional conditions of the broader published KLOS robust-partition theorem and the main theorem are not claimed."
     }
   ],
   "density_corollary_verified": true,
@@ -2073,6 +2081,98 @@
         "dense:link-packing"
       ],
       "scope": "Prove full Lemma 5.12: choose a uniform order threshold and construct actual pairwise edge-disjoint perfect matchings for all balanced omitted-part links under the exact degree, overlap, incidence, and family-size bounds. For fixed real b>=1 and 0<lambda<=1, the order threshold precedes n, all three host vertex types, the tripartite graph, and the entire link family. The constants 81,6,2,3 and the actual induced minimum-degree premise are retained. Candidate existence, local-load bounds, and the total failure budget are proved internally. The explicit b>=1 domain records the joint hierarchy convention in 1/n << 1/b,lambda <= 1. The general r-partite BKLOT lemma and the main theorem are not claimed."
+    },
+    {
+      "id": "robust_partition",
+      "documentation": "robust-partition.md",
+      "files": [
+        "Overfull/RobustPartition/Conclusion.lean",
+        "Overfull/RobustPartition/Counting.lean",
+        "Overfull/RobustPartition/FiniteRefinement.lean",
+        "Overfull/RobustPartition/Induced.lean",
+        "Overfull/RobustPartition/Pieces.lean",
+        "Overfull/RobustPartition/Refinement.lean",
+        "Overfull/RobustPartition/Scales.lean",
+        "Overfull/RobustPartition/Split.lean",
+        "Overfull/RobustPartition/Theorem.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.RobustPartition.rank_eq_weighted_count",
+        "Overfull.RobustPartition.valid_shore_degree_lower",
+        "Overfull.RobustPartition.valid_piece_cut_le",
+        "Overfull.RobustPartition.partition_conclusion_of_terminal",
+        "Overfull.RobustPartition.ecount_nonneg",
+        "Overfull.RobustPartition.cut_nonneg",
+        "Overfull.RobustPartition.bad_nonneg",
+        "Overfull.RobustPartition.ecount_symm",
+        "Overfull.RobustPartition.bad_symm",
+        "Overfull.RobustPartition.ecount_mono",
+        "Overfull.RobustPartition.ecount_le_mul_card",
+        "Overfull.RobustPartition.ecount_union_left_le",
+        "Overfull.RobustPartition.ecount_union_right_le",
+        "Overfull.RobustPartition.ecount_union_left",
+        "Overfull.RobustPartition.ecount_union_right",
+        "Overfull.RobustPartition.ecount_eq_sum",
+        "Overfull.RobustPartition.ecount_univ",
+        "Overfull.RobustPartition.ecount_add_compl",
+        "Overfull.RobustPartition.ecount_self",
+        "Overfull.RobustPartition.cut_eq_sum",
+        "Overfull.RobustPartition.cut_compl",
+        "Overfull.RobustPartition.cut_sdiff_le",
+        "Overfull.RobustPartition.cut_union_le_bad",
+        "Overfull.RobustPartition.ecount_off_left_le_bad",
+        "Overfull.RobustPartition.ecount_off_right_le_bad",
+        "Overfull.RobustPartition.bad_eq_internal_add_cut",
+        "Overfull.RobustPartition.internal_edges_add_cut_le_bad",
+        "Overfull.RobustPartition.min_degree_mul_card_le",
+        "Overfull.RobustPartition.ecount_le_max_degree_mul_card",
+        "Overfull.RobustPartition.card_lower_of_small_off",
+        "Overfull.RobustPartition.block_size_lower",
+        "Overfull.RobustPartition.bipartite_sizes_lower",
+        "Overfull.RobustPartition.internal_good_of_not_bad",
+        "Overfull.RobustPartition.bad_internal_degree_count",
+        "Overfull.RobustPartition.degree_gap_le_off",
+        "Overfull.RobustPartition.bipartite_imbalance",
+        "Overfull.RobustPartition.coarse_count_bound",
+        "Overfull.RobustPartition.sharp_count_estimate",
+        "Overfull.RobustPartition.exists_terminal_of_bounded_rank",
+        "Overfull.RobustPartition.mem_localRN",
+        "Overfull.RobustPartition.localRN_subset",
+        "Overfull.RobustPartition.induced_set_card",
+        "Overfull.RobustPartition.induced_degree_eq_local_count",
+        "Overfull.RobustPartition.induced_robustNeighbors_image",
+        "Overfull.RobustPartition.induced_robustNeighbors_card",
+        "Overfull.RobustPartition.induced_robust_iff",
+        "Overfull.RobustPartition.exists_bad_set_of_not_induced_robust",
+        "Overfull.RobustPartition.unionList_nil",
+        "Overfull.RobustPartition.unionList_cons",
+        "Overfull.RobustPartition.unionList_append",
+        "Overfull.RobustPartition.disjoint_unionList_right",
+        "Overfull.RobustPartition.lower_mul_length_le_union_card",
+        "Overfull.RobustPartition.pairwise_replace_shore",
+        "Overfull.RobustPartition.unionList_replace_shore",
+        "Overfull.RobustPartition.shoreList_append",
+        "Overfull.RobustPartition.shoreList_cons",
+        "Overfull.RobustPartition.shoreList_nil",
+        "Overfull.RobustPartition.rank_append",
+        "Overfull.RobustPartition.rank_ordinary_cons",
+        "Overfull.RobustPartition.rank_bipartite_cons",
+        "Overfull.RobustPartition.partition_replace_ordinary",
+        "Overfull.RobustPartition.Piece.valid_mono",
+        "Overfull.RobustPartition.valid_shore_lower",
+        "Overfull.RobustPartition.valid_rank_bound",
+        "Overfull.RobustPartition.valid_initial",
+        "Overfull.RobustPartition.exists_terminal_partition",
+        "Overfull.RobustPartition.exists_scale_ladder",
+        "Overfull.RobustPartition.split_of_nonexpanding_witness",
+        "Overfull.RobustPartition.nonexpanding_block_split",
+        "Overfull.RobustPartition.exists_uniform_partition",
+        "Overfull.robust_partition"
+      ],
+      "manuscript_locations": [
+        "bip:part:imported"
+      ],
+      "scope": "Full Theorem 2.23: a positive almost-regularity tolerance and an order threshold precede every finite vertex type and graph. Actual minimum and maximum degree bounds produce an actual disjoint partition into induced robust expanders and ordered almost bipartite pieces, with all square-root size, imbalance, edge-error, whole-part exceptional-degree, and weighted floor bounds. A finite scale ladder and strictly increasing bounded shore rank construct the partition internally. The proof permits n0=1 and needs only positivity of f on (0,1); the manuscript nondecreasing interval-valued functions are included. The additional conditions of the broader published KLOS robust-partition theorem and the main theorem are not claimed."
     }
   ],
   "continuation_source_reviews": [
@@ -2148,6 +2248,22 @@
       "statement_sha256": "1d5d07d6cfa237c907e332ee99db407b81dd14a39c99ad0904939c710c8fe2f1",
       "matches_pinned_statement_sha256": true,
       "parameter_convention": "The joint hierarchy 1/n << 1/b,lambda <= 1 is represented by fixed real b>=1 and 0<lambda<=1, with a uniform order threshold before all graph data."
+    },
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "sections": [
+        "bip:part:imported"
+      ],
+      "documentation": "robust-partition.md",
+      "numbered_inventory_rebased": false,
+      "statement_source_lines": [
+        1600,
+        1628
+      ],
+      "statement_sha256": "be076a6b6c07e78af1793be025ddfde0ac2b3360914be0360ff48fb5866dbf31",
+      "matches_pinned_statement_sha256": true,
+      "parameter_convention": "Both n0 and gamma0 precede every finite vertex type and graph. The proof permits n0=1 and requires only positivity of f on (0,1), including every manuscript nondecreasing function into (0,1)."
     }
   ]
 }

@@ -23,8 +23,10 @@ Applying that patch to its recorded published base
 `aab43893d9b1d1e59a87171a33bceaf8a9c601da`. All 316 source hashes and 29
 verification-input hashes matched the saved record.
 
-This branch continues that recovered ordinary-core source. Its complete
-numbered inventory is **42 of 69**. The later, previously reported
+This branch continues that recovered ordinary-core source, whose complete
+numbered inventory was **42 of 69**. The later complete proofs of Lemma 5.12
+and [Theorem 2.23](robust-partition.md) bring the current total to **44 of 69**.
+The later, previously reported
 43-assertion terminal checkpoint `eafe3efc18bb66f6ad87f715e79f09e5abfe7798`
 was unavailable and is not included in this branch's audit. Its source must
 be recovered before the two continuations can be combined and audited

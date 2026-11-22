@@ -15,7 +15,7 @@ concentration or variance bound is not an assumption of that theorem.
 These results supply probability tools and graph adapters for the
 previous [two-family constructor](bipartite-two-families.md). The full
 simultaneous quantitative input to that constructor remains to be
-assembled. The completed numbered inventory remains **42 of 69**;
+assembled. The current completed numbered inventory is **44 of 69**;
 Theorem 6.1, Proposition 6.2, Theorem 6.3, and their dependent
 factorization assertions remain incomplete.
 
