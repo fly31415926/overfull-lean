@@ -1,0 +1,46 @@
+{
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "verification/runs/20261123T010829Z/public-name-check.lean"
+  ],
+  "cwd": "/workspace/scratch/4ffd54dab476/overfull-lean-round2",
+  "runtime_bin": "/workspace/scratch/4ffd54dab476/lean-runtime/lean-4.24.0-linux/bin",
+  "started_at_utc": "2026-11-23T01:24:35.484180+00:00",
+  "finished_at_utc": "2026-11-23T01:24:44.321222+00:00",
+  "elapsed_seconds": 8.838,
+  "exit_code": 0,
+  "imported_module": "Overfull.CompatibleCircuits.TwoOddDecomposition",
+  "mapped_public_declaration_checks": 75,
+  "coverage_catalog_checks": 6,
+  "check_directive_count": 81,
+  "check_file": "verification/runs/20261123T010829Z/public-name-check.lean",
+  "check_file_sha256": "cf9a9e8cf5e870750187017bc1c6e6a3283586b1464e6ac62b1b7c95d08bf40d",
+  "source_manifest": "docs/joining-circuit-source.json",
+  "source_manifest_sha256": "f54ae88562c658c9093b7669dcdb368d3ca5f2dabb1e2c0dce6e3035916b1d69",
+  "coverage_catalog_id": "original_host_joining_decomposition",
+  "coverage_catalog_declarations": [
+    "Overfull.FourOdd.joiningQuotient_classCutOn_card",
+    "Overfull.FourOdd.exists_joining_matching_partition_of_even_fibers",
+    "Overfull.FourOdd.twoOddJoiningQuotient_admissible",
+    "Overfull.FourOdd.exists_twoOddJoining_decomposition",
+    "Overfull.FourOdd.joiningQuotient_degree_zero_of_singleton_fiber",
+    "Overfull.Multigraph.CompatibleCircuitPartition.pairVirtualParts_card"
+  ],
+  "coverage_sha256": "86ed1f49e9f5277186959264f56e6b844dd33e692af55f3a4198bd50626e4ef3",
+  "module_source_sha256": {
+    "Overfull/CompatibleCircuits/QuotientCuts.lean": "a0a20553e5501b080ce6810360d2df9a58b8635bd3ba84a6d6272018b0658320",
+    "Overfull/CompatibleCircuits/PairAugmentation.lean": "cd76627b9b1cf3f5a3e6cbc7ec7a9935b7d800d3548853403af4b9a45808727d",
+    "Overfull/CompatibleCircuits/JoiningPartitions.lean": "889f9385e3f2147cf2bffb9aa05e40099a773b105840e9bb1f225f5a6ebf2116",
+    "Overfull/CompatibleCircuits/TwoOddQuotient.lean": "0c6f3407a5fa7c86d68fc6bede7fb45d08ca32e083003a481cb9ffaaad48ed91",
+    "Overfull/CompatibleCircuits/TwoOddDecomposition.lean": "72e7f97588e6d4ab5d307efbcad8ca4fe2ca2d9bbbb0a0d443a406d04ac49c73"
+  },
+  "stdout": "public-name-check.stdout.log",
+  "stdout_sha256": "f5a59a1f5fa7de052d7f31c3773b858831bbdcfd91b76b59e23cd79a30619772",
+  "stdout_bytes": 37241,
+  "stderr": "public-name-check.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "combined_log": "public-name-check.log"
+}

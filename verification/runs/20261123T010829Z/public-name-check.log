@@ -1,0 +1,469 @@
+Overfull.Multigraph.label_endpointClass_of_incident.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  (G : Overfull.Multigraph V E) (label : V → I) (hjoin : ∀ (e : E), label (G.firstEnd e) ≠ label (G.secondEnd e))
+  {e : E} {i : I} (hi : i ∈ (G.labelQuotient label hjoin).edge e) : label (G.endpointClass label i e) = i
+Overfull.Multigraph.labelQuotient_endpointClass_incident_iff.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {I : Type u_3} (G : Overfull.Multigraph V E) (label : V → I)
+  (hjoin : ∀ (e : E), label (G.firstEnd e) ≠ label (G.secondEnd e)) (e : E) (i : I) (v : V) :
+  i ∈ (G.labelQuotient label hjoin).edge e ∧ G.endpointClass label i e = v ↔ label v = i ∧ v ∈ G.edge e
+Overfull.Multigraph.labelQuotient_classCutOn_endpointClass.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  (G : Overfull.Multigraph V E) (label : V → I) (hjoin : ∀ (e : E), label (G.firstEnd e) ≠ label (G.secondEnd e))
+  (C : Finset E) (i : I) (v : V) (A : Finset I) :
+  (G.labelQuotient label hjoin).classCutOn (G.endpointClass label) C i v A =
+    if label v = i then {e ∈ (G.labelQuotient label hjoin).cutOn C A | v ∈ G.edge e} else ∅
+Overfull.FourOdd.joiningQuotient_cutOn_image.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype V]
+  [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I)
+  (D : Finset { x // x ∈ Overfull.FourOdd.joiningCopies G label }) (A : Finset I) :
+  Finset.image Subtype.val ((Overfull.FourOdd.joiningQuotient G label).cutOn D A) =
+    G.cutOn (Finset.image Subtype.val D) (Overfull.FourOdd.labelShore label A)
+Overfull.FourOdd.joiningQuotient_cutOn_card.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype V]
+  [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I)
+  (D : Finset { x // x ∈ Overfull.FourOdd.joiningCopies G label }) (A : Finset I) :
+  ((Overfull.FourOdd.joiningQuotient G label).cutOn D A).card =
+    (G.cutOn (Finset.image Subtype.val D) (Overfull.FourOdd.labelShore label A)).card
+Overfull.FourOdd.joiningQuotient_degreeOn_eq_cut.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  [Fintype V] [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I)
+  (D : Finset { x // x ∈ Overfull.FourOdd.joiningCopies G label }) (i : I) :
+  (Overfull.FourOdd.joiningQuotient G label).degreeOn D i =
+    (G.cutOn (Finset.image Subtype.val D) (Overfull.FourOdd.labelShore label {i})).card
+Overfull.FourOdd.joiningQuotient_classCutOn_image.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  [Fintype V] [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (i : I) (v : V) (A : Finset I) :
+  Finset.image Subtype.val
+      ((Overfull.FourOdd.joiningQuotient G label).classCutOn
+        ((Overfull.FourOdd.joiningGraph G label).endpointClass label) Finset.univ i v A) =
+    if label v = i then {e ∈ G.cutOn Finset.univ (Overfull.FourOdd.labelShore label A) | v ∈ G.edge e} else ∅
+Overfull.FourOdd.joiningQuotient_classCutOn_card.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  [Fintype V] [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (i : I) (v : V) (A : Finset I) :
+  ((Overfull.FourOdd.joiningQuotient G label).classCutOn ((Overfull.FourOdd.joiningGraph G label).endpointClass label)
+        Finset.univ i v A).card =
+    if label v = i then G.degreeOn (G.cutOn Finset.univ (Overfull.FourOdd.labelShore label A)) v else 0
+Overfull.FourOdd.joiningQuotient_classCutOn_card_le_degree.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  [Fintype V] [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (i : I) (v : V) (A : Finset I) :
+  ((Overfull.FourOdd.joiningQuotient G label).classCutOn ((Overfull.FourOdd.joiningGraph G label).endpointClass label)
+        Finset.univ i v A).card ≤
+    G.degree v
+Overfull.FourOdd.labelShore_card_even_of_even_fibers.{u_1, u_3} {V : Type u_1} {I : Type u_3} [Fintype V]
+  [DecidableEq I] (label : V → I) (heven : ∀ (i : I), {v | label v = i}.card % 2 = 0) (A : Finset I) :
+  (Overfull.FourOdd.labelShore label A).card % 2 = 0
+Overfull.FourOdd.labelShore_card_parity_of_two_odd_fibers.{u_1, u_3} {V : Type u_1} {I : Type u_3} [Fintype V]
+  [DecidableEq I] (label : V → I) (a b : I) (hab : a ≠ b)
+  (hfibers : ∀ (i : I), {v | label v = i}.card % 2 = if i = a ∨ i = b then 1 else 0) (A : Finset I) :
+  (Overfull.FourOdd.labelShore label A).card % 2 = if (a ∈ A) ≠ (b ∈ A) then 1 else 0
+Overfull.FourOdd.joiningQuotient_degree_parity_of_two_odd_fibers.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {I : Type u_3} [Fintype V] [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) {h : ℕ}
+  (hregular : ∀ (v : V), G.degree v = h) (a b : I)
+  (hfibers : ∀ (i : I), {v | label v = i}.card % 2 = if i = a ∨ i = b then 1 else 0) (i : I) :
+  (Overfull.FourOdd.joiningQuotient G label).degree i % 2 = if i = a ∨ i = b then h % 2 else 0
+Overfull.FourOdd.joiningQuotient_admissible_of_even_fibers.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  [Fintype V] [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) {h : ℕ}
+  (hregular : ∀ (v : V), G.degree v = h) (hno : ∀ (X : Finset V), ¬G.IsOverfull h X)
+  (heven : ∀ (i : I), {v | label v = i}.card % 2 = 0) :
+  (Overfull.FourOdd.joiningQuotient G label).AdmissibleOn ((Overfull.FourOdd.joiningGraph G label).endpointClass label)
+    Finset.univ
+Overfull.FourOdd.joiningQuotient_degree_even_of_even_fibers.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  [Fintype V] [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) {h : ℕ}
+  (hregular : ∀ (v : V), G.degree v = h) (heven : ∀ (i : I), {v | label v = i}.card % 2 = 0) (i : I) :
+  Even ((Overfull.FourOdd.joiningQuotient G label).degree i)
+Overfull.FourOdd.joiningQuotient_degree_even_of_even_regular.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {I : Type u_3} [Fintype V] [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) {h : ℕ}
+  (hregular : ∀ (v : V), G.degree v = h) (heven : Even h) (i : I) :
+  Even ((Overfull.FourOdd.joiningQuotient G label).degree i)
+Overfull.FourOdd.joiningQuotient_admissible_of_degree_bound.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  [Fintype V] [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) {h D : ℕ}
+  (hregular : ∀ (v : V), G.degree v = h) (hno : ∀ (X : Finset V), ¬G.IsOverfull h X)
+  (hD : ∀ (v : V), G.degreeOn (Overfull.FourOdd.joiningCopies G label) v ≤ D) (hhalf : 2 * D ≤ h) :
+  (Overfull.FourOdd.joiningQuotient G label).AdmissibleOn ((Overfull.FourOdd.joiningGraph G label).endpointClass label)
+    Finset.univ
+Overfull.FourOdd.joiningQuotient_degree_zero_of_singleton_fiber.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {I : Type u_3} [Fintype V] [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (i : I) (v : V)
+  (hfiber : Overfull.FourOdd.labelShore label {i} = {v})
+  (hadmissible :
+    (Overfull.FourOdd.joiningQuotient G label).AdmissibleOn
+      ((Overfull.FourOdd.joiningGraph G label).endpointClass label) Finset.univ) :
+  G.degree v = 0
+Overfull.Multigraph.pairAugmentation_edge_inl.{u_1, u_2} {V : Type u_1} {E : Type u_2} (Q : Overfull.Multigraph V E)
+  (a b : V) (hab : a ≠ b) (h : ℕ) (e : E) : (Q.pairAugmentation a b hab h).edge (Sum.inl e) = Q.edge e
+Overfull.Multigraph.pairAugmentation_edge_inr.{u_1, u_2} {V : Type u_1} {E : Type u_2} (Q : Overfull.Multigraph V E)
+  (a b : V) (hab : a ≠ b) (h : ℕ) (j : Fin h) : (Q.pairAugmentation a b hab h).edge (Sum.inr j) = s(a, b)
+Overfull.Multigraph.pairAugmentation_incident_inr.{u_1, u_2} {V : Type u_1} {E : Type u_2} (Q : Overfull.Multigraph V E)
+  (a b : V) (hab : a ≠ b) (h : ℕ) (j : Fin h) (v : V) :
+  v ∈ (Q.pairAugmentation a b hab h).edge (Sum.inr j) ↔ v = a ∨ v = b
+Overfull.Multigraph.pairAugmentation_firstEnd_inl.{u_1, u_2} {V : Type u_1} {E : Type u_2} (Q : Overfull.Multigraph V E)
+  (a b : V) (hab : a ≠ b) (h : ℕ) (e : E) : (Q.pairAugmentation a b hab h).firstEnd (Sum.inl e) = Q.firstEnd e
+Overfull.Multigraph.pairAugmentation_secondEnd_inl.{u_1, u_2} {V : Type u_1} {E : Type u_2}
+  (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) (e : E) :
+  (Q.pairAugmentation a b hab h).secondEnd (Sum.inl e) = Q.secondEnd e
+Overfull.Multigraph.pairAugmentation_virtual_crosses.{u_1, u_2} {V : Type u_1} {E : Type u_2}
+  (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) (j : Fin h) (X : Finset V) :
+  ((Q.pairAugmentation a b hab h).firstEnd (Sum.inr j) ∈ X) ≠
+      ((Q.pairAugmentation a b hab h).secondEnd (Sum.inr j) ∈ X) ↔
+    (a ∈ X) ≠ (b ∈ X)
+Overfull.Multigraph.pairAugmentation_cutOn_toLeft.{u_1, u_2} {V : Type u_1} {E : Type u_2} (Q : Overfull.Multigraph V E)
+  (a b : V) (hab : a ≠ b) (h : ℕ) (C : Finset (E ⊕ Fin h)) (X : Finset V) :
+  ((Q.pairAugmentation a b hab h).cutOn C X).toLeft = Q.cutOn C.toLeft X
+Overfull.Multigraph.pairAugmentation_cutOn_toRight.{u_1, u_2} {V : Type u_1} {E : Type u_2}
+  (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) (C : Finset (E ⊕ Fin h)) (X : Finset V) :
+  ((Q.pairAugmentation a b hab h).cutOn C X).toRight = if (a ∈ X) ≠ (b ∈ X) then C.toRight else ∅
+Overfull.Multigraph.pairAugmentation_cutOn_card.{u_1, u_2} {V : Type u_1} {E : Type u_2} (Q : Overfull.Multigraph V E)
+  (a b : V) (hab : a ≠ b) (h : ℕ) (C : Finset (E ⊕ Fin h)) (X : Finset V) :
+  ((Q.pairAugmentation a b hab h).cutOn C X).card =
+    (Q.cutOn C.toLeft X).card + if (a ∈ X) ≠ (b ∈ X) then C.toRight.card else 0
+Overfull.Multigraph.pairAugmentation_degreeOn_split.{u_1, u_2} {V : Type u_1} {E : Type u_2}
+  (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) (C : Finset (E ⊕ Fin h)) (v : V) :
+  (Q.pairAugmentation a b hab h).degreeOn C v = Q.degreeOn C.toLeft v + if v = a ∨ v = b then C.toRight.card else 0
+Overfull.Multigraph.pairAugmentation_classCutOn_original_card.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {K : Type u_3} (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) (classOf : V → E → K)
+  (C : Finset (E ⊕ Fin h)) (v : V) (k : K) (X : Finset V) :
+  ((Q.pairAugmentation a b hab h).classCutOn (Overfull.Multigraph.pairAugmentationClass h classOf) C v (Sum.inl k)
+        X).card =
+    (Q.classCutOn classOf C.toLeft v k X).card
+Overfull.Multigraph.pairAugmentation_classCutOn_virtual_card.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {K : Type u_3} (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) (classOf : V → E → K)
+  (C : Finset (E ⊕ Fin h)) (v : V) (X : Finset V) :
+  ((Q.pairAugmentation a b hab h).classCutOn (Overfull.Multigraph.pairAugmentationClass h classOf) C v (Sum.inr ())
+        X).card =
+    if (a ∈ X) ≠ (b ∈ X) ∧ (v = a ∨ v = b) then C.toRight.card else 0
+Overfull.Multigraph.pairAugmentation_admissibleOn.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {K : Type u_3}
+  (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) (classOf : V → E → K) (C : Finset (E ⊕ Fin h))
+  (hclosed :
+    ∀ (X : Finset V),
+      (a ∈ X) = (b ∈ X) → ∀ (v : V) (k : K), 2 * (Q.classCutOn classOf C.toLeft v k X).card ≤ (Q.cutOn C.toLeft X).card)
+  (hseparating :
+    ∀ (X : Finset V),
+      (a ∈ X) ≠ (b ∈ X) →
+        C.toRight.card ≤ (Q.cutOn C.toLeft X).card ∧
+          ∀ (v : V) (k : K), (Q.classCutOn classOf C.toLeft v k X).card ≤ C.toRight.card) :
+  (Q.pairAugmentation a b hab h).AdmissibleOn (Overfull.Multigraph.pairAugmentationClass h classOf) C
+Overfull.Multigraph.Compatible.original_of_pairAugmentation.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {K : Type u_3}
+  (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) {classOf : V → E → K} {C : Finset (E ⊕ Fin h)}
+  (hC : (Q.pairAugmentation a b hab h).Compatible (Overfull.Multigraph.pairAugmentationClass h classOf) C) :
+  Q.Compatible classOf C.toLeft
+Overfull.Multigraph.Compatible.pairVirtual_card_le_one.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {K : Type u_3}
+  (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) {classOf : V → E → K} {C : Finset (E ⊕ Fin h)}
+  (hC : (Q.pairAugmentation a b hab h).Compatible (Overfull.Multigraph.pairAugmentationClass h classOf) C) :
+  C.toRight.card ≤ 1
+Overfull.Multigraph.IsCircuit.pairOriginal_nonempty.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {K : Type u_3}
+  (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) {classOf : V → E → K} {C : Finset (E ⊕ Fin h)}
+  (hC : (Q.pairAugmentation a b hab h).IsCircuit C)
+  (hcompatible : (Q.pairAugmentation a b hab h).Compatible (Overfull.Multigraph.pairAugmentationClass h classOf) C) :
+  C.toLeft.Nonempty
+Overfull.Multigraph.pairAugmentation_even_degreeOn_of_parity.{u_1, u_2} {V : Type u_1} {E : Type u_2}
+  (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) (C : Finset (E ⊕ Fin h))
+  (hparity : ∀ (v : V), Q.degreeOn C.toLeft v % 2 = if v = a ∨ v = b then C.toRight.card % 2 else 0) (v : V) :
+  Even ((Q.pairAugmentation a b hab h).degreeOn C v)
+Overfull.Multigraph.IsCircuit.one_pairVirtual_original.{u_1, u_2} {V : Type u_1} {E : Type u_2}
+  (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) [Fintype V] {C : Finset (E ⊕ Fin h)}
+  (hC : (Q.pairAugmentation a b hab h).IsCircuit C) (hvirtual : C.toRight.card = 1) :
+  C.toLeft.card + 1 ≤ Fintype.card V ∧
+    (∀ (v : V), v = a ∨ v = b → Q.degreeOn C.toLeft v = 1) ∧ ∀ (v : V), Odd (Q.degreeOn C.toLeft v) ↔ v = a ∨ v = b
+Overfull.Multigraph.pairAugmentation_edgeSupport_of_no_virtual.{u_1, u_2} {V : Type u_1} {E : Type u_2}
+  (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) {C : Finset (E ⊕ Fin h)} (hvirtual : C.toRight = ∅) :
+  (Q.pairAugmentation a b hab h).edgeSupport C = Q.edgeSupport C.toLeft
+Overfull.Multigraph.IsCircuit.no_pairVirtual_original.{u_1, u_2} {V : Type u_1} {E : Type u_2}
+  (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) {C : Finset (E ⊕ Fin h)}
+  (hC : (Q.pairAugmentation a b hab h).IsCircuit C) (hvirtual : C.toRight = ∅) : Q.IsCircuit C.toLeft
+Overfull.Multigraph.pairAugmentation_cutOn_univ_card.{u_1, u_2} {V : Type u_1} {E : Type u_2}
+  (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) [Fintype E] (X : Finset V) :
+  ((Q.pairAugmentation a b hab h).cutOn Finset.univ X).card =
+    (Q.cutOn Finset.univ X).card + if (a ∈ X) ≠ (b ∈ X) then h else 0
+Overfull.Multigraph.pairAugmentation_degree.{u_1, u_2} {V : Type u_1} {E : Type u_2} (Q : Overfull.Multigraph V E)
+  (a b : V) (hab : a ≠ b) (h : ℕ) [Fintype E] (v : V) :
+  (Q.pairAugmentation a b hab h).degree v = Q.degree v + if v = a ∨ v = b then h else 0
+Overfull.Multigraph.pairAugmentation_admissibleOn_univ.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {K : Type u_3}
+  (Q : Overfull.Multigraph V E) (a b : V) (hab : a ≠ b) (h : ℕ) [Fintype E] (classOf : V → E → K)
+  (hclosed :
+    ∀ (X : Finset V),
+      (a ∈ X) = (b ∈ X) →
+        ∀ (v : V) (k : K), 2 * (Q.classCutOn classOf Finset.univ v k X).card ≤ (Q.cutOn Finset.univ X).card)
+  (hseparating :
+    ∀ (X : Finset V),
+      (a ∈ X) ≠ (b ∈ X) →
+        h ≤ (Q.cutOn Finset.univ X).card ∧ ∀ (v : V) (k : K), (Q.classCutOn classOf Finset.univ v k X).card ≤ h) :
+  (Q.pairAugmentation a b hab h).AdmissibleOn (Overfull.Multigraph.pairAugmentationClass h classOf) Finset.univ
+Overfull.Multigraph.CompatibleCircuitPartition.mem_pairVirtualParts.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {K : Type u_3} {Q : Overfull.Multigraph V E} {a b : V} {hab : a ≠ b} {h : ℕ} [Fintype E] {classOf : V → E → K}
+  (P :
+    (Q.pairAugmentation a b hab h).CompatibleCircuitPartition (Overfull.Multigraph.pairAugmentationClass h classOf)
+      Finset.univ)
+  (D : Finset (E ⊕ Fin h)) : D ∈ P.pairVirtualParts ↔ D ∈ P.parts ∧ D.toRight.card = 1
+Overfull.Multigraph.CompatibleCircuitPartition.pairOriginal_parts_disjoint.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {K : Type u_3} {Q : Overfull.Multigraph V E} {a b : V} {hab : a ≠ b} {h : ℕ} [Fintype E] {classOf : V → E → K}
+  (P :
+    (Q.pairAugmentation a b hab h).CompatibleCircuitPartition (Overfull.Multigraph.pairAugmentationClass h classOf)
+      Finset.univ)
+  {D D' : Finset (E ⊕ Fin h)} (hD : D ∈ P.parts) (hD' : D' ∈ P.parts) (hne : D ≠ D') : Disjoint D.toLeft D'.toLeft
+Overfull.Multigraph.CompatibleCircuitPartition.pairOriginal_parts_cover.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {K : Type u_3} {Q : Overfull.Multigraph V E} {a b : V} {hab : a ≠ b} {h : ℕ} [Fintype E] {classOf : V → E → K}
+  (P :
+    (Q.pairAugmentation a b hab h).CompatibleCircuitPartition (Overfull.Multigraph.pairAugmentationClass h classOf)
+      Finset.univ) :
+  P.parts.biUnion Finset.toLeft = Finset.univ
+Overfull.Multigraph.CompatibleCircuitPartition.pairOriginal_restriction_injective.{u_1, u_2, u_3} {V : Type u_1}
+  {E : Type u_2} {K : Type u_3} {Q : Overfull.Multigraph V E} {a b : V} {hab : a ≠ b} {h : ℕ} [Fintype E]
+  {classOf : V → E → K}
+  (P :
+    (Q.pairAugmentation a b hab h).CompatibleCircuitPartition (Overfull.Multigraph.pairAugmentationClass h classOf)
+      Finset.univ) :
+  Set.InjOn (fun D => D.toLeft) ↑P.parts
+Overfull.Multigraph.CompatibleCircuitPartition.pairVirtual_card_sum.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {K : Type u_3} {Q : Overfull.Multigraph V E} {a b : V} {hab : a ≠ b} {h : ℕ} [Fintype E] {classOf : V → E → K}
+  (P :
+    (Q.pairAugmentation a b hab h).CompatibleCircuitPartition (Overfull.Multigraph.pairAugmentationClass h classOf)
+      Finset.univ) :
+  ∑ D ∈ P.parts, D.toRight.card = h
+Overfull.Multigraph.CompatibleCircuitPartition.pairVirtualParts_card.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {K : Type u_3} {Q : Overfull.Multigraph V E} {a b : V} {hab : a ≠ b} {h : ℕ} [Fintype E] {classOf : V → E → K}
+  (P :
+    (Q.pairAugmentation a b hab h).CompatibleCircuitPartition (Overfull.Multigraph.pairAugmentationClass h classOf)
+      Finset.univ) :
+  P.pairVirtualParts.card = h
+Overfull.FourOdd.joiningGraph_isMatching_image.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I)
+  {D : Finset { x // x ∈ Overfull.FourOdd.joiningCopies G label }}
+  (hD : (Overfull.FourOdd.joiningGraph G label).IsMatching D) : G.IsMatching (Finset.image Subtype.val D)
+Overfull.FourOdd.liftJoiningParts_nonempty.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I)
+  {C : Finset { x // x ∈ Overfull.FourOdd.joiningCopies G label }}
+  (P :
+    (Overfull.FourOdd.joiningQuotient G label).CompatibleCircuitPartition
+      ((Overfull.FourOdd.joiningGraph G label).endpointClass label) C)
+  {M : Finset E} (hM : M ∈ Overfull.FourOdd.liftJoiningParts G label P) : M.Nonempty
+Overfull.FourOdd.liftJoiningParts_isMatching.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I)
+  {C : Finset { x // x ∈ Overfull.FourOdd.joiningCopies G label }}
+  (P :
+    (Overfull.FourOdd.joiningQuotient G label).CompatibleCircuitPartition
+      ((Overfull.FourOdd.joiningGraph G label).endpointClass label) C)
+  {M : Finset E} (hM : M ∈ Overfull.FourOdd.liftJoiningParts G label P) : G.IsMatching M
+Overfull.FourOdd.liftJoiningParts_card_le.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I)
+  {C : Finset { x // x ∈ Overfull.FourOdd.joiningCopies G label }}
+  (P :
+    (Overfull.FourOdd.joiningQuotient G label).CompatibleCircuitPartition
+      ((Overfull.FourOdd.joiningGraph G label).endpointClass label) C)
+  [Fintype I] {M : Finset E} (hM : M ∈ Overfull.FourOdd.liftJoiningParts G label P) : M.card ≤ Fintype.card I
+Overfull.FourOdd.liftJoiningParts_disjoint.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I)
+  {C : Finset { x // x ∈ Overfull.FourOdd.joiningCopies G label }}
+  (P :
+    (Overfull.FourOdd.joiningQuotient G label).CompatibleCircuitPartition
+      ((Overfull.FourOdd.joiningGraph G label).endpointClass label) C)
+  {M N : Finset E} (hM : M ∈ Overfull.FourOdd.liftJoiningParts G label P)
+  (hN : N ∈ Overfull.FourOdd.liftJoiningParts G label P) (hne : M ≠ N) : Disjoint M N
+Overfull.FourOdd.liftJoiningParts_cover.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I)
+  {C : Finset { x // x ∈ Overfull.FourOdd.joiningCopies G label }}
+  (P :
+    (Overfull.FourOdd.joiningQuotient G label).CompatibleCircuitPartition
+      ((Overfull.FourOdd.joiningGraph G label).endpointClass label) C) :
+  (Overfull.FourOdd.liftJoiningParts G label P).biUnion id = Finset.image Subtype.val C
+Overfull.FourOdd.liftJoiningParts_card.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I)
+  {C : Finset { x // x ∈ Overfull.FourOdd.joiningCopies G label }}
+  (P :
+    (Overfull.FourOdd.joiningQuotient G label).CompatibleCircuitPartition
+      ((Overfull.FourOdd.joiningGraph G label).endpointClass label) C) :
+  (Overfull.FourOdd.liftJoiningParts G label P).card = P.parts.card
+Overfull.FourOdd.liftJoiningParts_cover_univ.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I)
+  (P :
+    (Overfull.FourOdd.joiningQuotient G label).CompatibleCircuitPartition
+      ((Overfull.FourOdd.joiningGraph G label).endpointClass label) Finset.univ) :
+  (Overfull.FourOdd.liftJoiningParts G label P).biUnion id = Overfull.FourOdd.joiningCopies G label
+Overfull.FourOdd.exists_joining_matching_partition_of_card_le_three.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {I : Type u_3} [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) [Fintype I]
+  (hI : Fintype.card I ≤ 3)
+  (hadmissible :
+    (Overfull.FourOdd.joiningQuotient G label).AdmissibleOn
+      ((Overfull.FourOdd.joiningGraph G label).endpointClass label) Finset.univ)
+  (heven : ∀ (i : I), Even ((Overfull.FourOdd.joiningQuotient G label).degree i)) :
+  ∃ parts,
+    (∀ M ∈ parts, M.Nonempty ∧ G.IsMatching M ∧ M.card ≤ 3) ∧
+      (∀ M ∈ parts, ∀ N ∈ parts, M ≠ N → Disjoint M N) ∧ parts.biUnion id = Overfull.FourOdd.joiningCopies G label
+Overfull.FourOdd.exists_joining_matching_partition_of_even_fibers.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {I : Type u_3} [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) [Fintype V] [Fintype I]
+  (hI : Fintype.card I ≤ 3) {h : ℕ} (hregular : ∀ (v : V), G.degree v = h) (hno : ∀ (X : Finset V), ¬G.IsOverfull h X)
+  (hfibers : ∀ (i : I), {v | label v = i}.card % 2 = 0) :
+  ∃ parts,
+    (∀ M ∈ parts, M.Nonempty ∧ G.IsMatching M ∧ M.card ≤ 3) ∧
+      (∀ M ∈ parts, ∀ N ∈ parts, M ≠ N → Disjoint M N) ∧ parts.biUnion id = Overfull.FourOdd.joiningCopies G label
+Overfull.FourOdd.exists_joining_matching_partition_of_even_degree_bound.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {I : Type u_3} [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) [Fintype V] [Fintype I]
+  (hI : Fintype.card I ≤ 3) {h D : ℕ} (hregular : ∀ (v : V), G.degree v = h) (hno : ∀ (X : Finset V), ¬G.IsOverfull h X)
+  (heven : Even h) (hD : ∀ (v : V), G.degreeOn (Overfull.FourOdd.joiningCopies G label) v ≤ D) (hhalf : 2 * D ≤ h) :
+  ∃ parts,
+    (∀ M ∈ parts, M.Nonempty ∧ G.IsMatching M ∧ M.card ≤ 3) ∧
+      (∀ M ∈ parts, ∀ N ∈ parts, M ≠ N → Disjoint M N) ∧ parts.biUnion id = Overfull.FourOdd.joiningCopies G label
+Overfull.FourOdd.twoOddJoiningQuotient_admissible.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ) [Fintype V]
+  (hregular : ∀ (v : V), G.degree v = h) (hno : ∀ (X : Finset V), ¬G.IsOverfull h X)
+  (hfibers : ∀ (i : I), {v | label v = i}.card % 2 = if i = a ∨ i = b then 1 else 0) :
+  (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).AdmissibleOn
+    (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ
+Overfull.FourOdd.twoOddJoiningQuotient_even_degrees.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ) [Fintype V]
+  (hregular : ∀ (v : V), G.degree v = h)
+  (hfibers : ∀ (i : I), {v | label v = i}.card % 2 = if i = a ∨ i = b then 1 else 0) (i : I) :
+  Even ((Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).degree i)
+Overfull.FourOdd.exists_twoOddJoining_circuitPartition.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ) [Fintype V]
+  [Fintype I] (hI : Fintype.card I ≤ 3) (hregular : ∀ (v : V), G.degree v = h)
+  (hno : ∀ (X : Finset V), ¬G.IsOverfull h X)
+  (hfibers : ∀ (i : I), {v | label v = i}.card % 2 = if i = a ∨ i = b then 1 else 0) :
+  Nonempty
+    ((Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ)
+Overfull.FourOdd.twoOddParts_union.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+  (P :
+    (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ) :
+  Overfull.FourOdd.twoOddPrimaryParts G label a b hab h P ∪ Overfull.FourOdd.twoOddSurplusParts G label a b hab h P =
+    Finset.image (Overfull.FourOdd.twoOddOriginalPart G label h) P.parts
+Overfull.FourOdd.twoOddOriginalPart_injective.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+  (P :
+    (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ) :
+  Set.InjOn (Overfull.FourOdd.twoOddOriginalPart G label h) ↑P.parts
+Overfull.FourOdd.twoOddPrimaryParts_card.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+  (P :
+    (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ) :
+  (Overfull.FourOdd.twoOddPrimaryParts G label a b hab h P).card = h
+Overfull.FourOdd.twoOddParts_families_disjoint.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+  (P :
+    (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ) :
+  Disjoint (Overfull.FourOdd.twoOddPrimaryParts G label a b hab h P)
+    (Overfull.FourOdd.twoOddSurplusParts G label a b hab h P)
+Overfull.FourOdd.twoOddParts_nonempty.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+  (P :
+    (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ)
+  {M : Finset E}
+  (hM :
+    M ∈
+      Overfull.FourOdd.twoOddPrimaryParts G label a b hab h P ∪
+        Overfull.FourOdd.twoOddSurplusParts G label a b hab h P) :
+  M.Nonempty
+Overfull.FourOdd.twoOddParts_isMatching.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+  (P :
+    (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ)
+  {M : Finset E}
+  (hM :
+    M ∈
+      Overfull.FourOdd.twoOddPrimaryParts G label a b hab h P ∪
+        Overfull.FourOdd.twoOddSurplusParts G label a b hab h P) :
+  G.IsMatching M
+Overfull.FourOdd.twoOddParts_disjoint.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+  (P :
+    (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ)
+  {M N : Finset E}
+  (hM :
+    M ∈
+      Overfull.FourOdd.twoOddPrimaryParts G label a b hab h P ∪ Overfull.FourOdd.twoOddSurplusParts G label a b hab h P)
+  (hN :
+    N ∈
+      Overfull.FourOdd.twoOddPrimaryParts G label a b hab h P ∪ Overfull.FourOdd.twoOddSurplusParts G label a b hab h P)
+  (hne : M ≠ N) : Disjoint M N
+Overfull.FourOdd.twoOddParts_cover.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+  (P :
+    (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ) :
+  (Overfull.FourOdd.twoOddPrimaryParts G label a b hab h P ∪
+          Overfull.FourOdd.twoOddSurplusParts G label a b hab h P).biUnion
+      id =
+    Overfull.FourOdd.joiningCopies G label
+Overfull.FourOdd.twoOddSurplus_no_virtual.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+  (P :
+    (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ)
+  {D : Finset ({ x // x ∈ Overfull.FourOdd.joiningCopies G label } ⊕ Fin h)} (hD : D ∈ P.parts \ P.pairVirtualParts) :
+  D.toRight = ∅
+Overfull.FourOdd.twoOddPrimaryParts_card_le.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+  (P :
+    (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ)
+  [Fintype I] (hI : Fintype.card I ≤ 3) {M : Finset E}
+  (hM : M ∈ Overfull.FourOdd.twoOddPrimaryParts G label a b hab h P) : M.card ≤ 2
+Overfull.FourOdd.twoOddSurplusParts_card_le.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+  (P :
+    (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ)
+  [Fintype I] (hI : Fintype.card I ≤ 3) {M : Finset E}
+  (hM : M ∈ Overfull.FourOdd.twoOddSurplusParts G label a b hab h P) : M.card ≤ 3
+Overfull.FourOdd.twoOddPrimaryParts_cut_eq_one.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+  (P :
+    (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ)
+  [Fintype I] [Fintype V] {M : Finset E} (hM : M ∈ Overfull.FourOdd.twoOddPrimaryParts G label a b hab h P) (i : I)
+  (hi : i = a ∨ i = b) : (G.cutOn M (Overfull.FourOdd.labelShore label {i})).card = 1
+Overfull.FourOdd.twoOddPrimaryParts_odd_cut_iff.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+  (P :
+    (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ)
+  [Fintype I] [Fintype V] {M : Finset E} (hM : M ∈ Overfull.FourOdd.twoOddPrimaryParts G label a b hab h P) (i : I) :
+  Odd (G.cutOn M (Overfull.FourOdd.labelShore label {i})).card ↔ i = a ∨ i = b
+Overfull.FourOdd.twoOddSurplusParts_even_cut.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3} [Fintype E]
+  [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+  (P :
+    (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+      (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ)
+  [Fintype V] {M : Finset E} (hM : M ∈ Overfull.FourOdd.twoOddSurplusParts G label a b hab h P) (i : I) :
+  Even (G.cutOn M (Overfull.FourOdd.labelShore label {i})).card
+Overfull.FourOdd.exists_twoOddJoining_decomposition.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ) [Fintype I]
+  [Fintype V] (hI : Fintype.card I ≤ 3) (hregular : ∀ (v : V), G.degree v = h)
+  (hno : ∀ (X : Finset V), ¬G.IsOverfull h X)
+  (hfibers : ∀ (i : I), {v | label v = i}.card % 2 = if i = a ∨ i = b then 1 else 0) :
+  Nonempty (Overfull.FourOdd.TwoOddJoiningDecomposition G label a b h)
+Overfull.FourOdd.joiningQuotient_classCutOn_card.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  [Fintype V] [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (i : I) (v : V) (A : Finset I) :
+  ((Overfull.FourOdd.joiningQuotient G label).classCutOn ((Overfull.FourOdd.joiningGraph G label).endpointClass label)
+        Finset.univ i v A).card =
+    if label v = i then G.degreeOn (G.cutOn Finset.univ (Overfull.FourOdd.labelShore label A)) v else 0
+Overfull.FourOdd.exists_joining_matching_partition_of_even_fibers.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {I : Type u_3} [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) [Fintype V] [Fintype I]
+  (hI : Fintype.card I ≤ 3) {h : ℕ} (hregular : ∀ (v : V), G.degree v = h) (hno : ∀ (X : Finset V), ¬G.IsOverfull h X)
+  (hfibers : ∀ (i : I), {v | label v = i}.card % 2 = 0) :
+  ∃ parts,
+    (∀ M ∈ parts, M.Nonempty ∧ G.IsMatching M ∧ M.card ≤ 3) ∧
+      (∀ M ∈ parts, ∀ N ∈ parts, M ≠ N → Disjoint M N) ∧ parts.biUnion id = Overfull.FourOdd.joiningCopies G label
+Overfull.FourOdd.twoOddJoiningQuotient_admissible.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ) [Fintype V]
+  (hregular : ∀ (v : V), G.degree v = h) (hno : ∀ (X : Finset V), ¬G.IsOverfull h X)
+  (hfibers : ∀ (i : I), {v | label v = i}.card % 2 = if i = a ∨ i = b then 1 else 0) :
+  (Overfull.FourOdd.twoOddJoiningQuotient G label a b hab h).AdmissibleOn
+    (Overfull.FourOdd.twoOddJoiningClasses G label h) Finset.univ
+Overfull.FourOdd.exists_twoOddJoining_decomposition.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {I : Type u_3}
+  [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ) [Fintype I]
+  [Fintype V] (hI : Fintype.card I ≤ 3) (hregular : ∀ (v : V), G.degree v = h)
+  (hno : ∀ (X : Finset V), ¬G.IsOverfull h X)
+  (hfibers : ∀ (i : I), {v | label v = i}.card % 2 = if i = a ∨ i = b then 1 else 0) :
+  Nonempty (Overfull.FourOdd.TwoOddJoiningDecomposition G label a b h)
+Overfull.FourOdd.joiningQuotient_degree_zero_of_singleton_fiber.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {I : Type u_3} [Fintype V] [Fintype E] [DecidableEq I] (G : Overfull.Multigraph V E) (label : V → I) (i : I) (v : V)
+  (hfiber : Overfull.FourOdd.labelShore label {i} = {v})
+  (hadmissible :
+    (Overfull.FourOdd.joiningQuotient G label).AdmissibleOn
+      ((Overfull.FourOdd.joiningGraph G label).endpointClass label) Finset.univ) :
+  G.degree v = 0
+Overfull.Multigraph.CompatibleCircuitPartition.pairVirtualParts_card.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {K : Type u_3} {Q : Overfull.Multigraph V E} {a b : V} {hab : a ≠ b} {h : ℕ} [Fintype E] {classOf : V → E → K}
+  (P :
+    (Q.pairAugmentation a b hab h).CompatibleCircuitPartition (Overfull.Multigraph.pairAugmentationClass h classOf)
+      Finset.univ) :
+  P.pairVirtualParts.card = h

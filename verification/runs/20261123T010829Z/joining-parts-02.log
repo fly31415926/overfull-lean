@@ -1,0 +1,21 @@
+✖ [3156/3156] Building Overfull.CompatibleCircuits.JoiningPartitions (6.3s)
+trace: .> LEAN_PATH=/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/build/lib/lean /workspace/scratch/4ffd54dab476/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/4ffd54dab476/overfull-lean-round2/Overfull/CompatibleCircuits/JoiningPartitions.lean -o /workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/build/lib/lean/Overfull/CompatibleCircuits/JoiningPartitions.olean -i /workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/build/lib/lean/Overfull/CompatibleCircuits/JoiningPartitions.ilean -c /workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/build/ir/Overfull/CompatibleCircuits/JoiningPartitions.c --setup /workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/build/ir/Overfull/CompatibleCircuits/JoiningPartitions.setup.json --json
+error: Overfull/CompatibleCircuits/JoiningPartitions.lean:83:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  P.parts.biUnion id
+in the target expression
+  image Subtype.val (P.parts.biUnion id) = image Subtype.val C
+
+V : Type u_1
+E : Type u_2
+I : Type u_3
+inst✝¹ : Fintype E
+inst✝ : DecidableEq I
+G : Multigraph V E
+label : V → I
+C : Finset { x // x ∈ joiningCopies G label }
+P : (joiningQuotient G label).CompatibleCircuitPartition ((joiningGraph G label).endpointClass label) C
+⊢ image Subtype.val (P.parts.biUnion id) = image Subtype.val C
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.JoiningPartitions
+error: build failed

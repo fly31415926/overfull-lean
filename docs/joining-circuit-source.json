@@ -1,0 +1,432 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "5f46a36d87f9ca1cee382f46687d9d155b9b5bc2",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "scope": "Exact original-host joining decompositions for regular loopless multigraphs with no overfull set and at most three labels. Even fibers yield a partition into original matchings of size at most three. Exactly two odd fibers yield one constructed virtual family, derived augmented admissibility and parity, exactly h nonempty primary original matchings of size at most two, and surplus original matchings of size at most three, with exact disjoint coverage and actual host fiber-cut footprints. The assigned label map and its fiber parities are inputs. This does not construct manuscript reserves, assigned parts, palettes, perfect-matching completions, or full Corollary 4.6.",
+  "review": "docs/joining-circuit-semantic-review.md",
+  "proof_map": "docs/joining-circuit-verification.md",
+  "authorized_manuscript_excerpts": "verification/runs/20261122T235931Z/authorized-manuscript-recovery.md",
+  "module_count": 5,
+  "public_theorem_count": 75,
+  "modules": [
+    {
+      "module": "Overfull.CompatibleCircuits.QuotientCuts",
+      "path": "Overfull/CompatibleCircuits/QuotientCuts.lean",
+      "sha256": "a0a20553e5501b080ce6810360d2df9a58b8635bd3ba84a6d6272018b0658320",
+      "public_theorem_count": 17,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.label_endpointClass_of_incident",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.Multigraph.labelQuotient_endpointClass_incident_iff",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.Multigraph.labelQuotient_classCutOn_endpointClass",
+          "source_line": 49
+        },
+        {
+          "name": "Overfull.FourOdd.joiningQuotient_cutOn_image",
+          "source_line": 79
+        },
+        {
+          "name": "Overfull.FourOdd.joiningQuotient_cutOn_card",
+          "source_line": 103
+        },
+        {
+          "name": "Overfull.FourOdd.joiningQuotient_degreeOn_eq_cut",
+          "source_line": 110
+        },
+        {
+          "name": "Overfull.FourOdd.joiningQuotient_classCutOn_image",
+          "source_line": 116
+        },
+        {
+          "name": "Overfull.FourOdd.joiningQuotient_classCutOn_card",
+          "source_line": 144
+        },
+        {
+          "name": "Overfull.FourOdd.joiningQuotient_classCutOn_card_le_degree",
+          "source_line": 154
+        },
+        {
+          "name": "Overfull.FourOdd.labelShore_card_even_of_even_fibers",
+          "source_line": 164
+        },
+        {
+          "name": "Overfull.FourOdd.labelShore_card_parity_of_two_odd_fibers",
+          "source_line": 172
+        },
+        {
+          "name": "Overfull.FourOdd.joiningQuotient_degree_parity_of_two_odd_fibers",
+          "source_line": 187
+        },
+        {
+          "name": "Overfull.FourOdd.joiningQuotient_admissible_of_even_fibers",
+          "source_line": 202
+        },
+        {
+          "name": "Overfull.FourOdd.joiningQuotient_degree_even_of_even_fibers",
+          "source_line": 220
+        },
+        {
+          "name": "Overfull.FourOdd.joiningQuotient_degree_even_of_even_regular",
+          "source_line": 229
+        },
+        {
+          "name": "Overfull.FourOdd.joiningQuotient_admissible_of_degree_bound",
+          "source_line": 238
+        },
+        {
+          "name": "Overfull.FourOdd.joiningQuotient_degree_zero_of_singleton_fiber",
+          "source_line": 266
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.PairAugmentation",
+      "path": "Overfull/CompatibleCircuits/PairAugmentation.lean",
+      "sha256": "cd76627b9b1cf3f5a3e6cbc7ec7a9935b7d800d3548853403af4b9a45808727d",
+      "public_theorem_count": 29,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_edge_inl",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_edge_inr",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_incident_inr",
+          "source_line": 44
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_firstEnd_inl",
+          "source_line": 48
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_secondEnd_inl",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_virtual_crosses",
+          "source_line": 54
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_cutOn_toLeft",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_cutOn_toRight",
+          "source_line": 72
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_cutOn_card",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_degreeOn_split",
+          "source_line": 90
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_classCutOn_original_card",
+          "source_line": 105
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_classCutOn_virtual_card",
+          "source_line": 124
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_admissibleOn",
+          "source_line": 152
+        },
+        {
+          "name": "Overfull.Multigraph.Compatible.original_of_pairAugmentation",
+          "source_line": 186
+        },
+        {
+          "name": "Overfull.Multigraph.Compatible.pairVirtual_card_le_one",
+          "source_line": 197
+        },
+        {
+          "name": "Overfull.Multigraph.IsCircuit.pairOriginal_nonempty",
+          "source_line": 208
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_even_degreeOn_of_parity",
+          "source_line": 235
+        },
+        {
+          "name": "Overfull.Multigraph.IsCircuit.one_pairVirtual_original",
+          "source_line": 247
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_edgeSupport_of_no_virtual",
+          "source_line": 278
+        },
+        {
+          "name": "Overfull.Multigraph.IsCircuit.no_pairVirtual_original",
+          "source_line": 295
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_cutOn_univ_card",
+          "source_line": 325
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_degree",
+          "source_line": 333
+        },
+        {
+          "name": "Overfull.Multigraph.pairAugmentation_admissibleOn_univ",
+          "source_line": 342
+        },
+        {
+          "name": "Overfull.Multigraph.CompatibleCircuitPartition.mem_pairVirtualParts",
+          "source_line": 365
+        },
+        {
+          "name": "Overfull.Multigraph.CompatibleCircuitPartition.pairOriginal_parts_disjoint",
+          "source_line": 370
+        },
+        {
+          "name": "Overfull.Multigraph.CompatibleCircuitPartition.pairOriginal_parts_cover",
+          "source_line": 379
+        },
+        {
+          "name": "Overfull.Multigraph.CompatibleCircuitPartition.pairOriginal_restriction_injective",
+          "source_line": 394
+        },
+        {
+          "name": "Overfull.Multigraph.CompatibleCircuitPartition.pairVirtual_card_sum",
+          "source_line": 405
+        },
+        {
+          "name": "Overfull.Multigraph.CompatibleCircuitPartition.pairVirtualParts_card",
+          "source_line": 429
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.JoiningPartitions",
+      "path": "Overfull/CompatibleCircuits/JoiningPartitions.lean",
+      "sha256": "889f9385e3f2147cf2bffb9aa05e40099a773b105840e9bb1f225f5a6ebf2116",
+      "public_theorem_count": 11,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.joiningGraph_isMatching_image",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.FourOdd.liftJoiningParts_nonempty",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.FourOdd.liftJoiningParts_isMatching",
+          "source_line": 49
+        },
+        {
+          "name": "Overfull.FourOdd.liftJoiningParts_card_le",
+          "source_line": 57
+        },
+        {
+          "name": "Overfull.FourOdd.liftJoiningParts_disjoint",
+          "source_line": 64
+        },
+        {
+          "name": "Overfull.FourOdd.liftJoiningParts_cover",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.FourOdd.liftJoiningParts_card",
+          "source_line": 90
+        },
+        {
+          "name": "Overfull.FourOdd.liftJoiningParts_cover_univ",
+          "source_line": 94
+        },
+        {
+          "name": "Overfull.FourOdd.exists_joining_matching_partition_of_card_le_three",
+          "source_line": 109
+        },
+        {
+          "name": "Overfull.FourOdd.exists_joining_matching_partition_of_even_fibers",
+          "source_line": 132
+        },
+        {
+          "name": "Overfull.FourOdd.exists_joining_matching_partition_of_even_degree_bound",
+          "source_line": 147
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.TwoOddQuotient",
+      "path": "Overfull/CompatibleCircuits/TwoOddQuotient.lean",
+      "sha256": "0c6f3407a5fa7c86d68fc6bede7fb45d08ca32e083003a481cb9ffaaad48ed91",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.twoOddJoiningQuotient_admissible",
+          "source_line": 37
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddJoiningQuotient_even_degrees",
+          "source_line": 71
+        },
+        {
+          "name": "Overfull.FourOdd.exists_twoOddJoining_circuitPartition",
+          "source_line": 85
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.TwoOddDecomposition",
+      "path": "Overfull/CompatibleCircuits/TwoOddDecomposition.lean",
+      "sha256": "72e7f97588e6d4ab5d307efbcad8ca4fe2ca2d9bbbb0a0d443a406d04ac49c73",
+      "public_theorem_count": 15,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.twoOddParts_union",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddOriginalPart_injective",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddPrimaryParts_card",
+          "source_line": 58
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddParts_families_disjoint",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddParts_nonempty",
+          "source_line": 79
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddParts_isMatching",
+          "source_line": 88
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddParts_disjoint",
+          "source_line": 100
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddParts_cover",
+          "source_line": 114
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddSurplus_no_virtual",
+          "source_line": 135
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddPrimaryParts_card_le",
+          "source_line": 149
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddSurplusParts_card_le",
+          "source_line": 160
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddPrimaryParts_cut_eq_one",
+          "source_line": 173
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddPrimaryParts_odd_cut_iff",
+          "source_line": 184
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddSurplusParts_even_cut",
+          "source_line": 196
+        },
+        {
+          "name": "Overfull.FourOdd.exists_twoOddJoining_decomposition",
+          "source_line": 228
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.FourOdd.exists_joining_matching_partition_of_card_le_three",
+    "Overfull.FourOdd.exists_joining_matching_partition_of_even_degree_bound",
+    "Overfull.FourOdd.exists_joining_matching_partition_of_even_fibers",
+    "Overfull.FourOdd.exists_twoOddJoining_circuitPartition",
+    "Overfull.FourOdd.exists_twoOddJoining_decomposition",
+    "Overfull.FourOdd.joiningGraph_isMatching_image",
+    "Overfull.FourOdd.joiningQuotient_admissible_of_degree_bound",
+    "Overfull.FourOdd.joiningQuotient_admissible_of_even_fibers",
+    "Overfull.FourOdd.joiningQuotient_classCutOn_card",
+    "Overfull.FourOdd.joiningQuotient_classCutOn_card_le_degree",
+    "Overfull.FourOdd.joiningQuotient_classCutOn_image",
+    "Overfull.FourOdd.joiningQuotient_cutOn_card",
+    "Overfull.FourOdd.joiningQuotient_cutOn_image",
+    "Overfull.FourOdd.joiningQuotient_degreeOn_eq_cut",
+    "Overfull.FourOdd.joiningQuotient_degree_even_of_even_fibers",
+    "Overfull.FourOdd.joiningQuotient_degree_even_of_even_regular",
+    "Overfull.FourOdd.joiningQuotient_degree_parity_of_two_odd_fibers",
+    "Overfull.FourOdd.joiningQuotient_degree_zero_of_singleton_fiber",
+    "Overfull.FourOdd.labelShore_card_even_of_even_fibers",
+    "Overfull.FourOdd.labelShore_card_parity_of_two_odd_fibers",
+    "Overfull.FourOdd.liftJoiningParts_card",
+    "Overfull.FourOdd.liftJoiningParts_card_le",
+    "Overfull.FourOdd.liftJoiningParts_cover",
+    "Overfull.FourOdd.liftJoiningParts_cover_univ",
+    "Overfull.FourOdd.liftJoiningParts_disjoint",
+    "Overfull.FourOdd.liftJoiningParts_isMatching",
+    "Overfull.FourOdd.liftJoiningParts_nonempty",
+    "Overfull.FourOdd.twoOddJoiningQuotient_admissible",
+    "Overfull.FourOdd.twoOddJoiningQuotient_even_degrees",
+    "Overfull.FourOdd.twoOddOriginalPart_injective",
+    "Overfull.FourOdd.twoOddParts_cover",
+    "Overfull.FourOdd.twoOddParts_disjoint",
+    "Overfull.FourOdd.twoOddParts_families_disjoint",
+    "Overfull.FourOdd.twoOddParts_isMatching",
+    "Overfull.FourOdd.twoOddParts_nonempty",
+    "Overfull.FourOdd.twoOddParts_union",
+    "Overfull.FourOdd.twoOddPrimaryParts_card",
+    "Overfull.FourOdd.twoOddPrimaryParts_card_le",
+    "Overfull.FourOdd.twoOddPrimaryParts_cut_eq_one",
+    "Overfull.FourOdd.twoOddPrimaryParts_odd_cut_iff",
+    "Overfull.FourOdd.twoOddSurplusParts_card_le",
+    "Overfull.FourOdd.twoOddSurplusParts_even_cut",
+    "Overfull.FourOdd.twoOddSurplus_no_virtual",
+    "Overfull.Multigraph.Compatible.original_of_pairAugmentation",
+    "Overfull.Multigraph.Compatible.pairVirtual_card_le_one",
+    "Overfull.Multigraph.CompatibleCircuitPartition.mem_pairVirtualParts",
+    "Overfull.Multigraph.CompatibleCircuitPartition.pairOriginal_parts_cover",
+    "Overfull.Multigraph.CompatibleCircuitPartition.pairOriginal_parts_disjoint",
+    "Overfull.Multigraph.CompatibleCircuitPartition.pairOriginal_restriction_injective",
+    "Overfull.Multigraph.CompatibleCircuitPartition.pairVirtualParts_card",
+    "Overfull.Multigraph.CompatibleCircuitPartition.pairVirtual_card_sum",
+    "Overfull.Multigraph.IsCircuit.no_pairVirtual_original",
+    "Overfull.Multigraph.IsCircuit.one_pairVirtual_original",
+    "Overfull.Multigraph.IsCircuit.pairOriginal_nonempty",
+    "Overfull.Multigraph.labelQuotient_classCutOn_endpointClass",
+    "Overfull.Multigraph.labelQuotient_endpointClass_incident_iff",
+    "Overfull.Multigraph.label_endpointClass_of_incident",
+    "Overfull.Multigraph.pairAugmentation_admissibleOn",
+    "Overfull.Multigraph.pairAugmentation_admissibleOn_univ",
+    "Overfull.Multigraph.pairAugmentation_classCutOn_original_card",
+    "Overfull.Multigraph.pairAugmentation_classCutOn_virtual_card",
+    "Overfull.Multigraph.pairAugmentation_cutOn_card",
+    "Overfull.Multigraph.pairAugmentation_cutOn_toLeft",
+    "Overfull.Multigraph.pairAugmentation_cutOn_toRight",
+    "Overfull.Multigraph.pairAugmentation_cutOn_univ_card",
+    "Overfull.Multigraph.pairAugmentation_degree",
+    "Overfull.Multigraph.pairAugmentation_degreeOn_split",
+    "Overfull.Multigraph.pairAugmentation_edgeSupport_of_no_virtual",
+    "Overfull.Multigraph.pairAugmentation_edge_inl",
+    "Overfull.Multigraph.pairAugmentation_edge_inr",
+    "Overfull.Multigraph.pairAugmentation_even_degreeOn_of_parity",
+    "Overfull.Multigraph.pairAugmentation_firstEnd_inl",
+    "Overfull.Multigraph.pairAugmentation_incident_inr",
+    "Overfull.Multigraph.pairAugmentation_secondEnd_inl",
+    "Overfull.Multigraph.pairAugmentation_virtual_crosses"
+  ]
+}

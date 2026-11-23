@@ -8,7 +8,7 @@
   "manuscript_included": false,
   "numbered_mathematical_assertions": 69,
   "numbered_definitions": 3,
-  "source_identification": "The filename and SHA256 identify the exact reviewed TeX source. No manuscript text is reproduced in this repository.",
+  "source_identification": "The filename and SHA256 identify the exact reviewed TeX source. The complete manuscript is not bundled. User-authorized excerpts and their original-statement hash comparisons are preserved under verification/runs/20261122T235931Z; the complete later manuscript is not claimed byte-identical to this pinned source.",
   "specifications": [
     {
       "lean_name": "Overfull.MainTheorem",
@@ -2643,6 +2643,21 @@
         "three-label-circuit-semantic-review.md"
       ],
       "source_mapping": "three-label-circuit-source.json"
+    },
+    {
+      "date": "2026-11-23",
+      "run_started_at_utc": "2026-11-23T01:08:29Z",
+      "base_commit": "5f46a36d87f9ca1cee382f46687d9d155b9b5bc2",
+      "new_modules": 5,
+      "public_theorem_proofs": 75,
+      "numbered_assertions_completed": 0,
+      "complete_numbered_total": 47,
+      "scope": "Original-host joining decomposition for an actual assignment to at most three labels. Derives all half-cut bounds and parity internally from regularity, no overfull set and all-even or exactly two odd fibers. Exact primary/surplus original-copy matching families and host cut footprints are constructed. The source-level assignment, reserves, palette grouping, robust completions and final factorization remain unfinished.",
+      "notes": [
+        "joining-circuit-verification.md",
+        "joining-circuit-semantic-review.md"
+      ],
+      "source_mapping": "joining-circuit-source.json"
     }
   ],
   "later_statement_comparisons": [
@@ -2700,5 +2715,16 @@
     "recovered_main_commit": "54db7b826be05fbba9845f4140aaba0a7db5ba04",
     "continuation_parent_commit": "2eb61f588a26b3fe41edcf0bcec8610c9c343dd8",
     "completed_numbered_assertion_increment": 0
+  },
+  "authorized_source_excerpts": {
+    "path": "verification/runs/20261122T235931Z/authorized-manuscript-recovery.md",
+    "sha256": "84d9b40e35d54aff5a9159e97232be803b3ac4116cc2846ceac3a9789fa8c60b",
+    "authorization_record": "verification/runs/20261122T235931Z/authorization-publication.json",
+    "matched_original_statement_numbers": [
+      "4.4",
+      "4.5",
+      "4.6"
+    ],
+    "complete_manuscript_byte_identity_claimed": false
   }
 }

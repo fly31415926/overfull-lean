@@ -6,7 +6,35 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest continuation: complete compatible circuits on at most three vertices
+## Latest continuation: original-host joining decompositions
+
+For an actual assignment of the original vertices to at most three parts,
+the original regularity, absence of overfull sets, and part parities now
+produce the complete joining-edge circuit and matching stage. When all
+parts are even, the proof partitions every joining copy into nonempty
+matchings of size at most three. When exactly two parts are odd, it
+constructs exactly `h` primary matchings of size at most two and surplus
+matchings of size at most three. The families are disjoint and cover every
+original joining copy exactly; their cut footprints have the required
+odd/even parity at every part. Parallel copies remain distinct.
+
+All quotient half-cut inequalities and degree parities are derived from
+the original host. Neither a circuit partition nor a bound on individual
+joining degrees is assumed in these two parity cases. The construction
+reuses the complete at-most-three-vertex circuit theorem from the previous
+round. See the [proof map](docs/joining-circuit-verification.md),
+[source manifest](docs/joining-circuit-source.json), and
+[semantic review](docs/joining-circuit-semantic-review.md).
+
+This is a supporting stage toward the two-core branch of Corollary 4.6.
+The actual assigned partition, reserve selection, palette grouping,
+robust completion, and final factorization still need construction from
+that full statement. The numbered count remains **47/69**. Complete
+verification evidence is recorded in [verification/results.json](verification/results.json)
+and the [timestamped run directory](verification/runs/20261123T010829Z/).
+The [handoff](docs/continuation-handoff.md) specifies the next proof target.
+
+## Previous continuation: complete compatible circuits on at most three vertices
 
 The original even-degree and half-cut hypotheses now suffice for an exact
 partition of every selected original edge copy into compatible circuits on

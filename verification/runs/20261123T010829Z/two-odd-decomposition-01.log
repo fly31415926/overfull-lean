@@ -1,0 +1,43 @@
+✖ [3159/3159] Building Overfull.CompatibleCircuits.TwoOddDecomposition (9.6s)
+trace: .> LEAN_PATH=/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/build/lib/lean /workspace/scratch/4ffd54dab476/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/4ffd54dab476/overfull-lean-round2/Overfull/CompatibleCircuits/TwoOddDecomposition.lean -o /workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/build/lib/lean/Overfull/CompatibleCircuits/TwoOddDecomposition.olean -i /workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/build/lib/lean/Overfull/CompatibleCircuits/TwoOddDecomposition.ilean -c /workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/build/ir/Overfull/CompatibleCircuits/TwoOddDecomposition.c --setup /workspace/scratch/4ffd54dab476/overfull-lean-round2/.lake/build/ir/Overfull/CompatibleCircuits/TwoOddDecomposition.setup.json --json
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:119:23: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  P.parts.biUnion toLeft
+in the target expression
+  image Subtype.val (P.parts.biUnion toLeft) = joiningCopies G label
+
+V : Type u_1
+E : Type u_2
+I : Type u_3
+inst✝¹ : Fintype E
+inst✝ : DecidableEq I
+G : Multigraph V E
+label : V → I
+a b : I
+hab : a ≠ b
+h : ℕ
+P : (twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition (twoOddJoiningClasses G label h) univ
+⊢ image Subtype.val (P.parts.biUnion toLeft) = joiningCopies G label
+warning: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:189:0: automatically included section variable(s) unused in theorem `Overfull.FourOdd.twoOddSurplusParts_even_cut`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:226:66: Unknown identifier `hab`
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:229:46: Unknown identifier `hab`
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:230:46: Unknown identifier `hab`
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:231:56: Unknown identifier `hab`
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:232:67: Unknown identifier `hab`
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:233:61: Unknown identifier `hab`
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:234:63: Unknown identifier `hab`
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:235:70: Unknown identifier `hab`
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:236:43: Unknown identifier `hab`
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:237:74: Unknown identifier `hab`
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:238:74: Unknown identifier `hab`
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:240:48: Unknown identifier `hab`
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:242:49: Unknown identifier `hab`
+error: Overfull/CompatibleCircuits/TwoOddDecomposition.lean:243:78: Unknown identifier `hab`
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.TwoOddDecomposition
+error: build failed
