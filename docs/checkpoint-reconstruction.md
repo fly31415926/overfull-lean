@@ -1,5 +1,9 @@
 # Reconstruction of checkpoint cb05ef5
 
+Historical record for the reconstructed checkpoint `b5afb03`. The subsequent
+[three-vertex compatible-circuit proof](three-label-circuit-verification.md)
+completes the selector and exact partition that were still open in this record.
+
 The user requested publication of local checkpoint
 `cb05ef5f5b7ef5ada4e535e9dcc652eecaddc43e` to both `main` and
 `verified-bipartite-continuation-2026-11-21`. The original complete checkout

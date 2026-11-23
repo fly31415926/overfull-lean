@@ -98,7 +98,8 @@ def main() -> None:
         raise SystemExit("The supporting Bernoulli-differences source differs from its manifest.")
 
     # Reconstructed closure of ordinary-core Lemma 4.2, plus the recovered
-    # supporting continuation.  Source identity, public names, and actual
+    # supporting continuation, plus the three-label circuit construction.
+    # Source identity, public names, and actual
     # audited modules are checked separately; no historical log is replayed.
     reconstruction = json.loads((ROOT / "docs/checkpoint-reconstruction-source.json").read_text())
     if hashlib.sha256((ROOT / "Audit.lean").read_bytes()).hexdigest() != reconstruction["stock_audit_sha256"]:
@@ -108,7 +109,8 @@ def main() -> None:
             raise SystemExit(f"Recovered original source was modified: {item['path']}")
     extension_maps = {}
     for key, filename in (("ordinary", "ordinary-factorization-full-source.json"),
-                          ("few", "few-exception-source.json")):
+                          ("few", "few-exception-source.json"),
+                          ("circuit", "three-label-circuit-source.json")):
         source = json.loads((ROOT / "docs" / filename).read_text())
         source_modules = {item["module"]: item for item in source["modules"]}
         if (len(source_modules) != source["module_count"]
@@ -140,6 +142,8 @@ def main() -> None:
         raise SystemExit("The ordinary closure does not identify the pinned complete Lemma 4.2.")
     if few_source["numbered_assertions_completed"] != 0:
         raise SystemExit("The few-exception continuation completes no additional numbered assertion.")
+    if extension_maps["circuit"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The three-label circuit result completes no numbered manuscript assertion.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1636,7 +1640,8 @@ def main() -> None:
         ]
         if {item["module"] for item in mapped} != set(source_modules):
             raise SystemExit(f"The {key} declaration mapping omits a reviewed module.")
-        basename = "ordinary-factorization-full" if key == "ordinary" else "few-exception"
+        basename = {"ordinary": "ordinary-factorization-full", "few": "few-exception",
+                    "circuit": "three-label-circuit"}[key]
         map_path = OUTPUT / f"{basename}-declarations.json"
         map_path.write_text(json.dumps({
             "schema_version": 1,
@@ -1704,6 +1709,7 @@ def main() -> None:
         },
         "ordinary_factorization_declaration_map": extension_evidence["ordinary"],
         "few_exception_declaration_map": extension_evidence["few"],
+        "three_label_circuit_declaration_map": extension_evidence["circuit"],
         "checkpoint_reconstruction": {
             "original_checkpoint": reconstruction["original_checkpoint"],
             "original_tree_reproduced": False,

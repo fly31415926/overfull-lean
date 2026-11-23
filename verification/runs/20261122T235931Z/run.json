@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "verification_passed",
+  "run_id": "20261122T235931Z",
+  "run_started_at_utc": "2026-11-22T23:59:31+00:00",
+  "recorded_at_utc": "2026-11-23T00:26:51.638339+00:00",
+  "elapsed_seconds_to_record": 1640.638,
+  "baseline_commit": "b5afb03a0f0613eedd0cb3310e06706942afe2e7",
+  "interim_recovery_commit": "af6c68a561b0beae97d693b6ee099a230a294988",
+  "verification_command": {
+    "command": [
+      "python3",
+      "scripts/verify.py"
+    ],
+    "started_at_utc": "2026-11-23T00:11:06.140364+00:00",
+    "completed_at_utc": "2026-11-23T00:26:34.724665+00:00",
+    "elapsed_seconds": 928.584,
+    "exit_code": 0
+  },
+  "strict_build_jobs": 3665,
+  "verified_declaration_count": 11727,
+  "previous_verified_declarations_preserved": 11514,
+  "new_verified_declaration_count": 213,
+  "all_prior_declaration_names_modules_and_axiom_sets_preserved": true,
+  "all_previous_nonroot_lean_sources_byte_identical": true,
+  "byte_identical_previous_nonroot_lean_source_count": 482,
+  "root_change": "One new import; every previous line preserved.",
+  "stock_audit_byte_identical": true,
+  "source_hash_count": 494,
+  "verification_input_hash_count": 67,
+  "imported_project_module_count": 493,
+  "all_recorded_hashes_match_current_files": true,
+  "all_current_source_and_verification_input_paths_recorded": true,
+  "all_69_original_statement_hashes_preserved": true,
+  "all_47_previous_completed_assertion_records_preserved": true,
+  "recovered_original_statement_hashes": {
+    "4.4": "653e8b0aa8fa12f4368816ce9d9ce8b9d84a49015bce07638fd9c49e94523c2b",
+    "4.5": "89d8e8281fc3e4b7d8b6a81bccac3eb1d49f92622106228a5bee504d3eff1d61",
+    "4.6": "86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26"
+  },
+  "recovered_manuscript_text_published": false,
+  "recovered_manuscript_text_release": "Withheld after automatic approval review; explicit approval required for public source excerpts.",
+  "extended_next_target_assessment_published": false,
+  "fully_verified_numbered_assertion_count": 47,
+  "remaining_numbered_assertion_count": 22,
+  "main_theorem_verified": false,
+  "new_module_count": 11,
+  "new_public_theorem_count": 94,
+  "new_module_audited_declaration_count": 213,
+  "previous_declaration_maps_preserved": [
+    "four-odd-declarations.json",
+    "residual-factorization-declarations.json",
+    "boundary-extension-full-declarations.json",
+    "ordinary-factorization-full-declarations.json",
+    "few-exception-declarations.json"
+  ],
+  "allowed_logical_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "evidence_sha256": {
+    "verification/results.json": "6ef9577803d684cde6b5206ce093b78e58566e72cb6652b05c90bc62e937542b",
+    "verification/build.log": "c8a4339c11ccee3eec2cc0493cd3adbc4849249582c23bc575f28c64b1dfc45f",
+    "verification/axioms.log": "020e430b788302f2123769dba5c1889f62bc333634133e36dabb3d0cd3983c1a",
+    "verification/three-label-circuit-declarations.json": "a3f43b08a30cac341b2f89a672e32cd9f258ea769ab7a865ba41d2e2958604df",
+    "docs/three-label-circuit-source.json": "664ef5d4db0cc06feaac821899bf66485699e654b019fe9717d38c5f6ad1cc7f",
+    "docs/continuation-handoff.md": "0bd4b8abb428463082d9b0a717726cc2942f8eb6884734e4e9b8302b04a91504",
+    "verification/runs/20261122T235931Z/public-name-check.lean": "eee3aef9fd31670379e59cc7e9a9ea42926b444feca1e66a8f5160f8dcd3fc46",
+    "verification/runs/20261122T235931Z/public-name-check.log": "8e37cd57c99154df1e0ce74e4596590d7f4c9482fe8cbd7b2cd35c408c7a0c99",
+    "verification/runs/20261122T235931Z/verification-command.json": "d6e82d6f0045c8f1da1e83dd7585bf2559d2ad10bdc1ff718da499b8aa6f3610",
+    "verification/runs/20261122T235931Z/verification-console.log": "57da32ed4280cf54a9dc51f3af9f4c233d49f066bd820ef58d8657be7e36c85b",
+    "verification/runs/20261122T235931Z/build-passed-checkpoint.json": "94c46aaa6c287c09cebb92071ed7eacc5c9da2d10c71de2414b55c00bacc2e89",
+    "verification/runs/20261122T235931Z/record_run.py": "303e19376d52298690f90f7594af08e18515d389bcd427d91401ab4bf42f2427",
+    "verification/runs/20261122T235931Z/next-target-assessment.md": "e3a0b3102789851203db976b5355f5a3262909c11e849b93deff5615df101158",
+    "verification/runs/20261122T235931Z/manuscript-recovery.md": "c66d144f4e9851ca02cbe444593b0167d8745300caefc1235a87ab8f906dd973",
+    "verification/runs/20261122T235931Z/source-statement-hash-check.json": "c315c1678af77f50dbe84b6ef2d2d16c98b02a6e91d2b7402041ea2941100f79",
+    "verification/runs/20261122T235931Z/source-statement-hash-check.log": "27d6a9f0c585c152534ce5c53d35841d98a9bff55c6e796fb7a232c4b2e9ec47",
+    "verification/runs/20261122T235931Z/publication-restriction.json": "25b8b1016b5fa263ae07e1aa8605536871febf20c2cffad3fb4d683e2c7ad0e2"
+  },
+  "publication": {
+    "repository": "fly31415926/overfull-lean",
+    "target_branches": [
+      "main",
+      "verified-bipartite-continuation-2026-11-21"
+    ],
+    "note": "Verification record generated before branch updates. The containing publication commit identifies this tree; the delivery report verifies both remote branch heads."
+  },
+  "scope": "Compatible circuit selection and exact partition for finite loopless multigraphs on at most three vertices, under the original half-cut inequalities and even degrees. Actual edge-copy identities and arbitrary incidence-class types are preserved. This does not prove the four-label case, full Corollary 4.6, terminal Proposition 4.16, or the main theorem."
+}

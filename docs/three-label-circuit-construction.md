@@ -1,9 +1,12 @@
 # Compatible circuits on at most three labels
 
-This is a mathematical proof for subsequent formalization. It has not yet
-been checked by Lean. The existing checked module
-`Overfull/CompatibleCircuits/ThreeVertexDeletion.lean` supplies the exact
-safe-deletion criterion used below.
+The construction below is now formalized in Lean, including safe selection
+and the exact partition induction. `ThreeLabel.lean` proves the result on
+three named labels, and `AtMostThree.lean` transfers it to every finite
+vertex type of cardinality at most three. The [checked proof map](
+three-label-circuit-verification.md) records the actual modules and scope.
+The original `ThreeVertexDeletion.lean` is preserved unchanged and supplies
+the exact safe-deletion criterion used below.
 
 ## Statement
 
@@ -218,19 +221,22 @@ original compatibility and all residual class-cut inequalities. It passed:
 These computations support the mathematical case analysis. They do not
 replace a Lean proof, and no numbered assertion has been added.
 
-## Suggested formalization interfaces
+## Formalized interfaces
 
 1. `exists_pair_distinct_both_coordinates`: arbitrary finite nonempty
    edge set and two nonconstant coordinate functions.
 2. `LocalCoarsening`: a finite-incidence class map with refinement,
    half-degree bounds, and the property of meeting every locally tight
    class whenever two incidences have different coarse values.
-3. `ThreeLabelBundles`: three disjoint actual-copy bundles, their exact
-   incidence and cut identities, and permutation of the three labels.
-4. `exists_safe_parallel_pair_of_unequal_bundles`: the full unequal case,
-   with sorted x≥y≥z and x>z.
-5. `exists_safe_circuit_of_equal_bundles`: the full equal case s>0.
+3. `ThreeLabelBundles.lean` and `VertexRelabeling.lean`: three disjoint
+   actual-copy bundles, exact incidence/cut identities, and checked sorting
+   by a permutation of the three vertices.
+4. `exists_safe_parallel_pair_of_unequal_threeLabel_bundles`: the full
+   unequal case, requiring only x>z and y≥z.
+5. `exists_safe_circuit_of_equal_threeLabel_bundles`: the full equal case s>0.
 6. `exists_threeLabel_safe_circuit`: combine the two cases and express
    the output using `IsCircuit`, `Compatible`, and `AdmissibleOn`.
 7. `exists_threeLabel_compatibleCircuitPartition`: strong induction on
    the actual edge-copy cardinality, with exact union/disjointness.
+8. `exists_compatibleCircuitPartition_of_card_le_three`: embedding and
+   transport for an arbitrary finite vertex type of cardinality at most three.

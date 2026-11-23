@@ -2432,6 +2432,18 @@
         "old:degree-accounting"
       ],
       "scope": "Choose all error and order thresholds before graph/reserved-set data; derive the actual prepared host from original regular degrees and reservation budgets, complete every supplied balanced exterior color and construct an exact simple 2r-regular oriented remainder. The actual reserved set and compressed balanced exterior coloring remain explicit stage inputs. Full spanning setup, special factors, robust absorber and final original-host factorization are not proved."
+    },
+    {
+      "id": "three_vertex_compatible_circuit_partition",
+      "documentation": "three-label-circuit-verification.md",
+      "lean_declarations": [
+        "Overfull.Multigraph.exists_threeLabel_safe_circuit",
+        "Overfull.Multigraph.exists_threeLabel_compatibleCircuitPartition",
+        "Overfull.Multigraph.exists_safe_circuit_of_card_le_three",
+        "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_three",
+        "Overfull.Multigraph.compatibleCircuitPartition_iff_admissible_of_card_le_three"
+      ],
+      "scope": "Compatible circuit selection and exact partition for finite loopless multigraphs on at most three vertices, under the original half-cut inequalities and even degrees. Actual edge-copy identities and arbitrary incidence-class types are preserved. This does not prove the four-label case, full Corollary 4.6, terminal Proposition 4.16, or the main theorem."
     }
   ],
   "continuation_source_reviews": [
@@ -2616,6 +2628,21 @@
         "few-exception-semantic-review.md",
         "checkpoint-reconstruction.md"
       ]
+    },
+    {
+      "date": "2026-11-22",
+      "run_started_at_utc": "2026-11-22T23:59:31Z",
+      "base_commit": "b5afb03a0f0613eedd0cb3310e06706942afe2e7",
+      "new_modules": 11,
+      "public_theorem_proofs": 94,
+      "numbered_assertions_completed": 0,
+      "complete_numbered_total": 47,
+      "scope": "Compatible circuit selection and exact partition for finite loopless multigraphs on at most three vertices, under the original half-cut inequalities and even degrees. Actual edge-copy identities and arbitrary incidence-class types are preserved. This does not prove the four-label case, full Corollary 4.6, terminal Proposition 4.16, or the main theorem.",
+      "notes": [
+        "three-label-circuit-verification.md",
+        "three-label-circuit-semantic-review.md"
+      ],
+      "source_mapping": "three-label-circuit-source.json"
     }
   ],
   "later_statement_comparisons": [

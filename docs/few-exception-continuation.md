@@ -1,5 +1,9 @@
 # Continuation after full ordinary-core factorization
 
+Historical record for the reconstructed checkpoint `b5afb03`. The subsequent
+[three-vertex compatible-circuit proof](three-label-circuit-verification.md)
+completes the selector and exact partition that were still open in this record.
+
 The six recovered modules extend the completed ordinary-core theorem in
 three directions. They construct the complete one-core branch of
 Corollary 4.6 for at most three exterior vertices, factor terminal
