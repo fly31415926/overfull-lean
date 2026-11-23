@@ -1,3 +1,11 @@
+# Unverified continuation attempt: four-label deletion witnesses (20261123T005647Z)
+
+**Latest attempted branch:** `continuation-attempt/20261123T005647Z` based on `51c17b4936cf450fa86aa40e646328c8f01771f8`. The two verified branches must remain at their last checked checkpoint. A Lean 4.24.0 runtime and pinned mathlib checkout were not available in this execution container, and direct Git transport could not resolve github.com. The new source in `Overfull/CompatibleCircuits/FourVertexDeletion.lean` is **not Lean-checked**. A finite Python arithmetic test of 202 local tuples passed; this is not a kernel proof or a complete assertion. No changes to the 47/69 numbered inventory or source-statement hashes are claimed.
+
+**Concrete next step:** recover this attempt branch in a Lean-capable environment, run `lake env lean Overfull/CompatibleCircuits/FourVertexDeletion.lean` and `python3 scripts/verify.py`, repair any elaboration errors, regenerate source/declaration maps and exact logs, then advance both verified branches only if all gates pass. Continue the original two-core 4.6 joining construction separately; the new lemmas supply a necessary and sufficient safe-deletion test but **do not** construct a selector. A new four-cycle crossing a tight cut four times can never be safe under compatibility; at slack two, a four-crossing circuit must meet that class. No manuscript excerpt from a private workspace is included.
+
+---
+
 # Continuation handoff: complete three-vertex compatible circuits
 
 ## Authoritative state

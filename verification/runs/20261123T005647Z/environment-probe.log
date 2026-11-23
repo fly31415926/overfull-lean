@@ -1,0 +1,12 @@
+$ git ls-remote https://github.com/fly31415926/overfull-lean.git refs/heads/main refs/heads/verified-bipartite-continuation-2026-11-21
+fatal: unable to access 'https://github.com/fly31415926/overfull-lean.git/': Could not resolve host: github.com
+exit status: 128
+
+$ command -v lean; command -v lake
+(no output; neither binary installed)
+
+$ python3 four_cut_arithmetic.py
+PASS arithmetic-equivalence on 202 admissible local integer tuples with 0<=a<=8, 0<=b<=17, d in {0,2,4}, s in {0,1}; not kernel verification
+
+Not run: lake env lean Overfull/CompatibleCircuits/FourVertexDeletion.lean
+Not run: python3 scripts/verify.py

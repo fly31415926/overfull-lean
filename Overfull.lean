@@ -234,3 +234,5 @@ records the final critical-graph reduction with its missing inputs explicit.
 The specification `Overfull.MainTheorem` remains unproved.
 See README.md and docs/coverage.json for the precise scope of the checked work.
 -/
+
+import Overfull.CompatibleCircuits.FourVertexDeletion
