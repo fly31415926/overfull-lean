@@ -1,0 +1,18 @@
+{
+  "command": [
+    "lake",
+    "build",
+    "--wfail",
+    "Overfull.CriticalMultigraph",
+    "Overfull.CompatibleCircuits.Counting",
+    "Overfull.FourOdd.OriginalGraph"
+  ],
+  "started_at_utc": "2026-11-23T04:33:00.717544+00:00",
+  "status": "passed",
+  "module_target_count": 3,
+  "source_of_targets": "three explicit baseline modules",
+  "not_full_verification": true,
+  "finished_at_utc": "2026-11-23T04:33:42.709622+00:00",
+  "elapsed_seconds": 41.992078,
+  "exit_code": 0
+}

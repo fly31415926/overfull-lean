@@ -111,7 +111,8 @@ def main() -> None:
     for key, filename in (("ordinary", "ordinary-factorization-full-source.json"),
                           ("few", "few-exception-source.json"),
                           ("circuit", "three-label-circuit-source.json"),
-                          ("joining", "joining-circuit-source.json")):
+                          ("joining", "joining-circuit-source.json"),
+                          ("assigned", "assigned-part-source.json")):
         source = json.loads((ROOT / "docs" / filename).read_text())
         source_modules = {item["module"]: item for item in source["modules"]}
         if (len(source_modules) != source["module_count"]
@@ -147,6 +148,8 @@ def main() -> None:
         raise SystemExit("The three-label circuit result completes no numbered manuscript assertion.")
     if extension_maps["joining"][0]["numbered_assertions_completed"] != 0:
         raise SystemExit("The joining decomposition completes no numbered manuscript assertion.")
+    if extension_maps["assigned"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The assigned-part continuation completes no numbered manuscript assertion.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1644,7 +1647,8 @@ def main() -> None:
         if {item["module"] for item in mapped} != set(source_modules):
             raise SystemExit(f"The {key} declaration mapping omits a reviewed module.")
         basename = {"ordinary": "ordinary-factorization-full", "few": "few-exception",
-                    "circuit": "three-label-circuit", "joining": "joining-circuit"}[key]
+                    "circuit": "three-label-circuit", "joining": "joining-circuit",
+                    "assigned": "assigned-part"}[key]
         map_path = OUTPUT / f"{basename}-declarations.json"
         map_path.write_text(json.dumps({
             "schema_version": 1,
@@ -1714,6 +1718,7 @@ def main() -> None:
         "few_exception_declaration_map": extension_evidence["few"],
         "three_label_circuit_declaration_map": extension_evidence["circuit"],
         "joining_circuit_declaration_map": extension_evidence["joining"],
+        "assigned_part_declaration_map": extension_evidence["assigned"],
         "checkpoint_reconstruction": {
             "original_checkpoint": reconstruction["original_checkpoint"],
             "original_tree_reproduced": False,

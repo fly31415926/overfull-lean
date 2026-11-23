@@ -1,52 +1,51 @@
-# Remaining targets after the original-host joining stage
+# Next target after actual assigned parts and joining transport
 
-The complete numbered inventory remains **47 of 69**, with **22**
-remaining, including the main theorem. Full ordinary-core Lemma 4.2,
-boundary extension 4.14 and four-odd decomposition 4.15 are complete.
-The one-core branch of Corollary 4.6 is complete; its distinct two-core
-branch remains unfinished.
+The numbered inventory remains **47/69**, with **22** incomplete assertions,
+including the main theorem. The complete one-core branch of 4.6 is retained;
+the original two-core branch is still unfinished.
 
-The latest supporting result constructs the full joining-edge stage for
-an actual assignment into at most three parts. All-even fibers give an
-exact matching partition. Exactly two odd fibers give exactly `h` primary
-matchings and surplus matchings with precise original-host cut footprints.
-Regularity, absence of overfull sets, and fiber parity imply all quotient
-half-cut inequalities and augmented even degrees internally. See
-[the proof map](joining-circuit-verification.md) and
-[the restart handoff](continuation-handoff.md).
+The latest supporting chain constructs the assigned parts and exact
+matching-cut identities from a fixed perfect-matching representative,
+derives their parity, and supplies the complete joining decomposition.
+It also transports that assignment to another regular non-overfull host
+on the same vertices. See [the proof map](assigned-part-verification.md)
+and [the handoff](continuation-handoff.md) for exact interfaces and scope.
 
-## Next concrete proof target
+## Next concrete proof obligation
 
-Construct the actual assigned label map and preceding reserve selection
-from the original two-core, at-most-two-exception hypotheses of 4.6.
-The inspected manuscript groups each internal exceptional pair as one
-part and assigns unpaired exceptional vertices to their core parts.
-This gives at most three labels, but the assignment, reserve choices,
-and subsequent robust completion inputs must be proved rather than
-assumed as the whole corollary. Use the original statement preserved in
-[the authorized excerpts](../verification/runs/20261122T235931Z/authorized-manuscript-recovery.md).
+Construct a native multigraph boundary-pattern/reserve interface that
+retains every original copy and any internal exceptional pair. Begin with
+an actual perfect matching and the two-core/at-most-two-exception partition.
+The [current reserve target note](../verification/runs/20261123T042619Z/next-reserve-target.md)
+identifies checked reusable APIs and separates the proposed next proof
+from established Lean results. A small first target is native boundary
+compression retaining all selected copies touching the exceptions and
+a parity-preserving choice of old-core crossing copies, followed by
+exact weighted copy marginals and pattern-pool capacity bounds.
 
-Compose the new joining decomposition with source-level palette grouping,
-regular auxiliary-graph construction, robust perfect-matching completion,
-and reassembly of the original host. Keep every extra stage assumption
-explicit until derived from the original statement.
+Do not reuse the simple-graph claim that a fixed internal exceptional
+pair has weight at most one. Distinct parallel copies invalidate that
+transfer. Preserve the actual heavy-pattern representative and prove
+any equality between its source pattern statistic and the new actual
+crossing-copy count; do not rename them without a proof.
 
-## Other remaining obligations
+The reserve must provide the actual residual degree bound and preserve
+absence of overfull sets. Removing an arbitrary perfect matching does
+not automatically establish the required residual odd-cut lower bound.
+The separate-host joining theorem exposes these missing inputs. Palette
+grouping, robust completions, regular auxiliary graphs and reassembly
+of the original host remain subsequent obligations.
 
-| Target | Available checked inputs | Remaining proof work |
-| --- | --- | --- |
-| Full Corollary 4.6 | Complete one-core branch, full ordinary-core factorization, complete original-host joining stage for a supplied at-most-three-part assignment | Construct assignment/reserves, palette grouping, robust completion and final two-core factorization. |
-| Full Lemma 4.4 and Corollary 4.5 | Fixed-pattern components, terminal one-core factorization and new joining interfaces | Complete all original branches and incidence/completion conditions. Original 4.5 permits five exceptions; its label is misleading. |
-| Four-label compatible circuits | Complete at-most-three selector/partition and exact four-label critical-cut correction | Prove a selector handling tight and slack-two constraints. The three-label tight-only argument does not suffice. |
-| Proposition 4.16 | Frequent-pattern reduction, full 4.14 and 4.15, one-core bounded input | Complete remaining parity branches and reconstruct the full host factorization. |
-| General Theorem 6.1 and Proposition 6.2 | Uniform localization, coupled parameters, reserved-remainder packing and balanced orientation | Construct spanning setup, special path systems, robust absorber, missing stage inputs and final reconstruction. |
-| Main theorem and structural cases | Robust partition, matching/absorption components and completed special factorizations | Prove remaining structural exclusions, critical average-degree input and source-level compositions. |
+## Other incomplete targets
 
-The numbered inventory remains pinned to
-`Four_Robust_Component_Cases_2026-11-20.tex`. All 69 statement hashes and
-47 complete assertion records are preserved. The complete later
-manuscript is not claimed byte-identical with that original; the exact
-recovered statements of 4.4/4.5/4.6 match their pinned hashes.
+| Target | Remaining work |
+| --- | --- |
+| Full 4.4 and 4.5 | All original fixed-pattern branches and reserve/completion conditions. Original 4.5 allows five exceptions despite its label. |
+| Four-label compatible circuits | A safe selector handling tight and slack-two cuts; the three-label criterion alone is insufficient. |
+| Remaining 4.16 parity branches | Complete the source-level reconstruction using the available special factorizations. |
+| General 6.1 and 6.2 | Spanning setup, special path systems, robust absorber and final factorization. |
+| Main theorem | Remaining structural exclusions, critical average-degree input and complete source-level compositions. |
 
-[The reconstruction record](checkpoint-reconstruction.md) distinguishes
-the recovered/recreated baseline from unavailable `cb05ef5`.
+All 69 original statement hashes and all 47 completed assertion records
+remain pinned. The recovery/recreation provenance is distinct from the
+unavailable original `cb05ef5` tree.

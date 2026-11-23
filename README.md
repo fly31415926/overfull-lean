@@ -6,7 +6,35 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest continuation: original-host joining decompositions
+## Latest continuation: actual assigned parts and exact matching cuts
+
+The assigned parts are now constructed from a specified actual perfect
+matching and the two-core/exceptional vertex partition. The explicit
+`Fin 3` labels retain both original cores, assign unpaired exceptions to
+their matched core, and keep an internal exceptional pair together. With
+at most two exceptions, that third fiber is empty or has two vertices.
+The proof derives all-even or exactly-two-odd fiber parity and proves
+that both assigned cores have exactly the selected original copies
+between the two old cores as their matching cut.
+
+This composes with the joining theorem below. A new separate-host
+interface uses the original representative's assignment in another
+regular non-overfull host on the same vertices, without requiring the
+representative to survive reserve deletion. The latter host conditions
+remain explicit stage inputs. Reserve selection, residual safety,
+palette grouping, robust completion and full Corollary 4.6 remain open;
+the numbered count stays **47/69**.
+
+See the [proof map](docs/assigned-part-verification.md),
+[source manifest](docs/assigned-part-source.json),
+[semantic review](docs/assigned-part-semantic-review.md), and
+[current run records](verification/runs/20261123T042619Z/).
+The joining sources were recovered byte-for-byte from the published
+recovery checkpoint. Unpublished assigned-part drafts were lost with a
+workspace replacement and have been recreated for fresh checking;
+the run does not claim the lost draft bytes or invent their old logs.
+
+## Recovered continuation: original-host joining decompositions
 
 For an actual assignment of the original vertices to at most three parts,
 the original regularity, absence of overfull sets, and part parities now

@@ -131,3 +131,13 @@ Fresh source/input hashes and declaration counts are in
 `verification/joining-circuit-declarations.json`. Genuine setup failures,
 targeted compiler diagnostics, source snapshots, and final run evidence
 are retained under `verification/runs/20261123T010829Z/`.
+
+## Later recovery continuation
+
+The final publication following the observed 01:47 UTC audit was interrupted.
+The five mapped Lean sources retain their exact bytes from the early
+checkpoint. This addendum extends the recovered proof notes to identify
+the current recovery/assigned-part continuation, which records
+its fresh complete checks under `verification/runs/20261123T042619Z/`.
+Read the latest `verification/results.json` only with its exact current hashes;
+the earlier run directory retains its actual historical targeted checks.

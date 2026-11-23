@@ -1,0 +1,506 @@
+[
+  {
+    "name": "mathlib",
+    "status": "passed",
+    "expected_revision": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "actual_revision": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "tracked_sources_clean": true,
+    "started_at_utc": "2026-11-23T04:28:00.516672+00:00",
+    "completed_at_utc": "2026-11-23T04:28:10.790351+00:00",
+    "commands": [
+      {
+        "command": [
+          "git",
+          "init",
+          "-q",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/mathlib"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/mathlib",
+          "remote",
+          "add",
+          "origin",
+          "https://github.com/leanprover-community/mathlib4.git"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/mathlib",
+          "fetch",
+          "--depth",
+          "1",
+          "origin",
+          "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/mathlib",
+          "checkout",
+          "--detach",
+          "FETCH_HEAD"
+        ],
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "name": "plausible",
+    "status": "passed",
+    "expected_revision": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "actual_revision": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "tracked_sources_clean": true,
+    "started_at_utc": "2026-11-23T04:28:00.518764+00:00",
+    "completed_at_utc": "2026-11-23T04:28:04.454119+00:00",
+    "commands": [
+      {
+        "command": [
+          "git",
+          "init",
+          "-q",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/plausible"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/plausible",
+          "remote",
+          "add",
+          "origin",
+          "https://github.com/leanprover-community/plausible"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/plausible",
+          "fetch",
+          "--depth",
+          "1",
+          "origin",
+          "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/plausible",
+          "checkout",
+          "--detach",
+          "FETCH_HEAD"
+        ],
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "name": "LeanSearchClient",
+    "status": "passed",
+    "expected_revision": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "actual_revision": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "tracked_sources_clean": true,
+    "started_at_utc": "2026-11-23T04:28:00.519830+00:00",
+    "completed_at_utc": "2026-11-23T04:28:04.795505+00:00",
+    "commands": [
+      {
+        "command": [
+          "git",
+          "init",
+          "-q",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/LeanSearchClient"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/LeanSearchClient",
+          "remote",
+          "add",
+          "origin",
+          "https://github.com/leanprover-community/LeanSearchClient"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/LeanSearchClient",
+          "fetch",
+          "--depth",
+          "1",
+          "origin",
+          "99657ad92e23804e279f77ea6dbdeebaa1317b98"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/LeanSearchClient",
+          "checkout",
+          "--detach",
+          "FETCH_HEAD"
+        ],
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "name": "importGraph",
+    "status": "passed",
+    "expected_revision": "d768126816be17600904726ca7976b185786e6b9",
+    "actual_revision": "d768126816be17600904726ca7976b185786e6b9",
+    "tracked_sources_clean": true,
+    "started_at_utc": "2026-11-23T04:28:00.520048+00:00",
+    "completed_at_utc": "2026-11-23T04:28:04.431629+00:00",
+    "commands": [
+      {
+        "command": [
+          "git",
+          "init",
+          "-q",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/importGraph"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/importGraph",
+          "remote",
+          "add",
+          "origin",
+          "https://github.com/leanprover-community/import-graph"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/importGraph",
+          "fetch",
+          "--depth",
+          "1",
+          "origin",
+          "d768126816be17600904726ca7976b185786e6b9"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/importGraph",
+          "checkout",
+          "--detach",
+          "FETCH_HEAD"
+        ],
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "name": "proofwidgets",
+    "status": "passed",
+    "expected_revision": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "actual_revision": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "tracked_sources_clean": true,
+    "started_at_utc": "2026-11-23T04:28:04.431783+00:00",
+    "completed_at_utc": "2026-11-23T04:28:07.872786+00:00",
+    "commands": [
+      {
+        "command": [
+          "git",
+          "init",
+          "-q",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/proofwidgets"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/proofwidgets",
+          "remote",
+          "add",
+          "origin",
+          "https://github.com/leanprover-community/ProofWidgets4"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/proofwidgets",
+          "fetch",
+          "--depth",
+          "1",
+          "origin",
+          "556caed0eadb7901e068131d1be208dd907d07a2"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/proofwidgets",
+          "checkout",
+          "--detach",
+          "FETCH_HEAD"
+        ],
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "name": "aesop",
+    "status": "passed",
+    "expected_revision": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "actual_revision": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "tracked_sources_clean": true,
+    "started_at_utc": "2026-11-23T04:28:04.454241+00:00",
+    "completed_at_utc": "2026-11-23T04:28:07.887736+00:00",
+    "commands": [
+      {
+        "command": [
+          "git",
+          "init",
+          "-q",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/aesop"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/aesop",
+          "remote",
+          "add",
+          "origin",
+          "https://github.com/leanprover-community/aesop"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/aesop",
+          "fetch",
+          "--depth",
+          "1",
+          "origin",
+          "725ac8cd67acd70a7beaf47c3725e23484c1ef50"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/aesop",
+          "checkout",
+          "--detach",
+          "FETCH_HEAD"
+        ],
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "name": "Qq",
+    "status": "passed",
+    "expected_revision": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "actual_revision": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "tracked_sources_clean": true,
+    "started_at_utc": "2026-11-23T04:28:04.795658+00:00",
+    "completed_at_utc": "2026-11-23T04:28:07.848342+00:00",
+    "commands": [
+      {
+        "command": [
+          "git",
+          "init",
+          "-q",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/Qq"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/Qq",
+          "remote",
+          "add",
+          "origin",
+          "https://github.com/leanprover-community/quote4"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/Qq",
+          "fetch",
+          "--depth",
+          "1",
+          "origin",
+          "dea6a3361fa36d5a13f87333dc506ada582e025c"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/Qq",
+          "checkout",
+          "--detach",
+          "FETCH_HEAD"
+        ],
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "name": "batteries",
+    "status": "passed",
+    "expected_revision": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "actual_revision": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "tracked_sources_clean": true,
+    "started_at_utc": "2026-11-23T04:28:07.848481+00:00",
+    "completed_at_utc": "2026-11-23T04:28:11.820551+00:00",
+    "commands": [
+      {
+        "command": [
+          "git",
+          "init",
+          "-q",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/batteries"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/batteries",
+          "remote",
+          "add",
+          "origin",
+          "https://github.com/leanprover-community/batteries"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/batteries",
+          "fetch",
+          "--depth",
+          "1",
+          "origin",
+          "8da40b72fece29b7d3fe3d768bac4c8910ce9bee"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/batteries",
+          "checkout",
+          "--detach",
+          "FETCH_HEAD"
+        ],
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "name": "Cli",
+    "status": "passed",
+    "expected_revision": "91c18fa62838ad0ab7384c03c9684d99d306e1da",
+    "actual_revision": "91c18fa62838ad0ab7384c03c9684d99d306e1da",
+    "tracked_sources_clean": true,
+    "started_at_utc": "2026-11-23T04:28:07.872926+00:00",
+    "completed_at_utc": "2026-11-23T04:28:11.686601+00:00",
+    "commands": [
+      {
+        "command": [
+          "git",
+          "init",
+          "-q",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/Cli"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/Cli",
+          "remote",
+          "add",
+          "origin",
+          "https://github.com/leanprover/lean4-cli"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/Cli",
+          "fetch",
+          "--depth",
+          "1",
+          "origin",
+          "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/Cli",
+          "checkout",
+          "--detach",
+          "FETCH_HEAD"
+        ],
+        "exit_code": 0
+      }
+    ]
+  }
+]

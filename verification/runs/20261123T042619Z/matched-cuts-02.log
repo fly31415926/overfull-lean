@@ -1,0 +1,12 @@
+⚠ [3149/3149] Building Overfull.AssignedParts.MatchedCuts (10s)
+trace: .> LEAN_PATH=/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/build/lib/lean /workspace/scratch/4ffd54dab476/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/4ffd54dab476/overfull-lean-current/Overfull/AssignedParts/MatchedCuts.lean -o /workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/build/lib/lean/Overfull/AssignedParts/MatchedCuts.olean -i /workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/build/lib/lean/Overfull/AssignedParts/MatchedCuts.ilean -c /workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/build/ir/Overfull/AssignedParts/MatchedCuts.c --setup /workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/build/ir/Overfull/AssignedParts/MatchedCuts.setup.json --json
+warning: Overfull/AssignedParts/MatchedCuts.lean:34:14: This simp argument is unused:
+  prop_ne_iff_xor
+
+Hint: Omit it from the simp argument list.
+  simp_all ̵[̵p̵r̵o̵p̵_̵n̵e̵_̵i̵f̵f̵_̵x̵o̵r̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- Overfull.AssignedParts.MatchedCuts
+error: build failed

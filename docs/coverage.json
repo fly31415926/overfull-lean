@@ -9,7 +9,7 @@
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
   "fully_verified_numbered_assertion_count": 47,
-  "scope": "47 of 69 numbered manuscript assertions have complete checked proofs; 22, including the main theorem, remain incomplete. Full ordinary-core Lemma 4.2, boundary extension 4.14 and four-odd decomposition 4.15 remain complete. This continuation derives all quotient half-cut bounds and degree parities from an original regular non-overfull host with an actual assignment to at most three labels, and constructs exact original-copy joining matching decompositions for all-even fibers or exactly two odd fibers. In the two-odd case there are exactly h nonempty primary matchings of size at most two, surplus matchings of size at most three, and exact host cut footprints. The actual source-level assignment, reserves, palette grouping, robust completion and final two-core factorization remain unfinished; no numbered assertion is newly completed. All original numbered statements and historical proofs are preserved.",
+  "scope": "47 of 69 numbered manuscript assertions remain fully proved; 22, including the main theorem, remain incomplete. This continuation recovers five original-host joining modules and recreates five assigned-part modules for fresh verification. It constructs exact assignments from a fixed perfect-matching representative and exact selected cuts, derives parity, and composes joining decomposition in the original or a separate regular non-overfull host. No numbered assertion is newly complete. All original statements and completed records are preserved. Heavy-pattern reserves, residual safety, source alignment, palettes, completion and final two-core factorization remain unfinished.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -5038,6 +5038,23 @@
         "three:lem:bounded-input, supporting joining construction",
         "two:eq:compatible-cut-condition, at-most-three assigned parts"
       ]
+    },
+    {
+      "id": "actual_assigned_parts_and_cuts",
+      "kind": "graph_theoretic_result",
+      "description": "From a supplied actual perfect matching and two disjoint cores plus exceptions, constructs exact Fin3 assigned fibers, original-copy matching-cut identities and derived fiber parity. At most two exceptions give an optional pair fiber of size zero or two. Composes with joining decomposition in the original or another regular non-overfull host on the same vertices.",
+      "lean_declarations": [
+        "Overfull.AssignedParts.exists_two_core_assigned_labels",
+        "Overfull.AssignedParts.corePart_cutOn_eq_core_crossings",
+        "Overfull.AssignedParts.assignedLabel_parity_eq_core_crossing",
+        "Overfull.AssignedParts.assignedLabel_joining_decomposition",
+        "Overfull.AssignedParts.assignedLabel_joining_decomposition_in_host"
+      ],
+      "scope_limit": "The supplied perfect-matching representative is retained. Heavy-pattern/reserve selection, residual degree bounds and non-overfull safety, source-statistic alignment, palettes, robust completion and final factorization remain unproved; full Corollary 4.6 is incomplete.",
+      "manuscript_locations": [
+        "three:lem:bounded-input, two-core assigned-part and joining stages",
+        "two:short:fixed-pattern, supporting actual-copy assignment"
+      ]
     }
   ],
   "numbered_assertions": [
@@ -5926,10 +5943,11 @@
         "one_core_three_exceptions",
         "three_label_safe_deletion",
         "three_vertex_compatible_circuit_partition",
-        "original_host_joining_decomposition"
+        "original_host_joining_decomposition",
+        "actual_assigned_parts_and_cuts"
       ],
       "imported_statement": false,
-      "formalization_scope": "Complete one-core branch under the original hypotheses; complete at-most-three-vertex compatible circuit theorem; complete original-host joining decomposition for a supplied assignment with all-even or exactly two odd fibers. Actual two-core assignment/reserve selection, palette grouping, robust completion and final reassembly remain incomplete."
+      "formalization_scope": "Complete one-core branch; complete at-most-three compatible circuit and original-host joining stages; actual fixed-representative two-core assigned labels, original matching cuts and fiber parity, including optional single pair under at most two exceptions. Joining composes in a separate host with explicit regularity/non-overfull inputs. Heavy-pattern reserves, residual safety, source alignment, palettes, robust completion and final two-core factorization remain incomplete."
     },
     {
       "number": "4.7",

@@ -1,142 +1,150 @@
-# Continuation handoff: original-host joining decompositions
+# Continuation handoff: actual assigned parts and residual-host joining
 
-## Authoritative state and scope
+## Recover the authoritative state
 
-Fetch the newest remote `main` and
+Fetch and inspect both `main` and
 `verified-bipartite-continuation-2026-11-21` in `fly31415926/overfull-lean`
-before editing. Verified publications keep both branches at the same
-commit. This round began from `5f46a36d87f9ca1cee382f46687d9d155b9b5bc2`,
-tree `6f951398782cb08956a07765f1fbf168ddc3a3de`, with 603 tracked files.
-That base adds the user-authorized source excerpts to the previous fully
-verified three-label proof checkpoint `51c17b4936cf450fa86aa40e646328c8f01771f8`.
-Neither is the unavailable original `cb05ef5` tree.
+before editing. Both verified branches pointed to
+`5f46a36d87f9ca1cee382f46687d9d155b9b5bc2` at this run's start.
+The previous source work was preserved at recovery commit
+`28edc7b555d459b93a00d15258ca374abf5f0bb0`; all five joining module hashes
+were recovered exactly. A later observed full check finished on
+2026-11-23 at 01:47:29 UTC, but the workspace was replaced before final
+publication, so its final raw outputs were not available from that commit.
+This run repeats verification rather than treating the old observation
+as fresh evidence.
 
-Run ID: `20261123T010829Z`, started 2026-11-23 01:08:29 UTC.
-Read `verification/runs/20261123T010829Z/` for actual command records,
-targeted failures and snapshots, setup recovery, complete-verifier status
-and preservation evidence. `verification/results.json` is valid only for
-its exact recorded source and input hashes. A pending or failed run is not
-a verified checkpoint. The interim recovery branch, when published, is
-`continuation-attempt/20261123T010829Z`; its role and exact commit are
-recorded in this run's report.
+Current run: `20261123T042619Z`, started 2026-11-23 04:26:19 UTC.
+An early source recovery checkpoint is
+`b6356191c948cac240f77ca3560c1910de42112e` on
+`continuation-attempt/20261123T042619Z`. It predates fresh compiler checks
+and the separate-host refinement. Later run reports and the exact latest
+remote heads take precedence. Read `verification/runs/20261123T042619Z/`.
+Only a successful complete verifier for the exact current source/input
+hashes permits a new source checkpoint on the two verified branches.
 
-**47/69 numbered assertions are complete; 22 and the main theorem remain
-unfinished.** This round adds a supporting joining stage, not full 4.6.
+The five assigned-part drafts were lost with the transient workspace and
+recreated in this run. No byte identity with those lost drafts is claimed,
+and their missing historical logs have not been fabricated. The original
+`cb05ef5` recovery record remains historical and unchanged.
 
-## New checked interfaces
+## Completed mathematical interfaces
 
-All five new modules are under `Overfull/CompatibleCircuits/`:
+The recovered modules under `Overfull/CompatibleCircuits/` are
+`QuotientCuts`, `PairAugmentation`, `JoiningPartitions`, `TwoOddQuotient`
+and `TwoOddDecomposition`. They derive every quotient cut condition and
+degree parity from a regular non-overfull host and supplied all-even or
+two-odd fibers on at most three labels. They construct exact original-copy
+joining matching decompositions; the two-odd case has exactly `h` primary
+parts and surplus parts with checked cut footprints.
 
-| Module | Result |
+The new modules under `Overfull/AssignedParts/` are:
+
+| Module | Main role |
 | --- | --- |
-| `QuotientCuts.lean` | Exact original-copy cut/class/degree transport, fiber parity, host half-cut bounds and singleton-fiber obstruction. |
-| `PairAugmentation.lean` | A generic family of `h` virtual copies between two distinct labels; admissibility, parity repair, restrictions, disjoint coverage and exactly `h` virtual-containing parts. |
-| `JoiningPartitions.lean` | Injective whole-partition lift to host matchings and complete all-even-fiber decomposition. |
-| `TwoOddQuotient.lean` | Original host implies all augmented half-cut inequalities and even degrees; internally constructs a compatible circuit partition. |
-| `TwoOddDecomposition.lean` | Exact primary/surplus families on original copies with counts, sizes, disjointness, coverage and fiber-cut footprints. |
+| `PairFiberParity.lean` | Exact fiber sum and exhaustive parity alternatives. |
+| `ThreePartLabels.lean` | An explicit label map with exact fibers for a disjoint covering triple. |
+| `Basic.lean` | Actual matching-based core assignment, optional pair support, disjoint coverage and derived fiber parity. |
+| `MatchedCuts.lean` | Exact original selected matching cuts and crossing-count parity. |
+| `JoiningConstruction.lean` | Composition in the original host or another host on the same vertices. |
 
-Main interfaces are in `Overfull.FourOdd` (the historical namespace does
-not impose four labels):
+Key declarations in `Overfull.AssignedParts`:
 
 ```lean
-exists_joining_matching_partition_of_even_fibers
-twoOddJoiningQuotient_admissible
-twoOddJoiningQuotient_even_degrees
-exists_twoOddJoining_circuitPartition
-exists_twoOddJoining_decomposition
+assignedLabel
+assignedLabel_fibers
+exists_two_core_assigned_labels
+corePart_cutOn_eq_core_crossings
+assignedLabel_parity_eq_core_crossing
+assignedLabel_joining_decomposition
+assignedLabel_joining_decomposition_in_host
 ```
 
-For finite `G : Multigraph V E`, `label : V → I`, `Fintype.card I ≤ 3`,
-regular degree `h` and no `h`-overfull set:
+The supplied perfect-matching representative `M` is retained. The label
+fibers are the two old cores enlarged by their matched unpaired exceptions
+and the support of actual matching copies internal to `Z`. With `|Z|≤2`,
+that third fiber has size zero or two and there is at most one internal
+copy. Both assigned core cuts of `M` equal
+`G.cutOn M U₀ ∩ G.cutOn M U₁`; the pair-part selected cut is empty.
+Fiber parity is derived from the actual matching.
 
-- All fibers even: every joining copy is covered exactly by pairwise
-  disjoint nonempty host matchings of size at most three.
-- Exactly two odd fibers `a,b`, with `a ≠ b`: exactly `h` primary matchings
-  of size at most two and surplus matchings of size at most three. Every
-  primary has one crossing copy at each odd fiber and odd cut footprint
-  exactly there. Every surplus has even fiber-cut footprint everywhere.
+The generic construction can aggregate multiple internal pairs. A source
+interpretation as one optional pair requires the displayed `|Z|≤2` result.
+In the separate-host theorem, `M` belongs to the original graph `G`, while
+the joining parts use actual copies of another graph `H` on the same
+vertices. `H` regularity and absence of overfull sets remain explicit
+inputs; the theorem does not prove reserve deletion preserves them.
 
-`TwoOddJoiningDecomposition G label a b h` records the actual families.
-No bound on individual joining degrees is assumed in these two results.
-The separate even-degree/`2 * D ≤ h` wrapper has a stronger explicit
-sufficient assumption and is not the original corollary. See
-`docs/joining-circuit-verification.md`, its independent semantic review,
-and `docs/joining-circuit-source.json` for the full proof map.
+See `docs/assigned-part-verification.md`, its semantic review and source
+manifest. `verification/results.json`, the generated declaration maps and
+this run's actual command records determine the completed verification
+status; a source manifest alone is not a proof check.
 
-## Next concrete obligation
+## Exact next obligation and pitfalls
 
-Continue the **two-core, at-most-two-exception branch of Corollary 4.6**.
-The original statements and inspected assigned-part construction are in
-`verification/runs/20261122T235931Z/authorized-manuscript-recovery.md`,
-with assessment in `authorized-next-target-assessment.md` beside it.
-These two documents were explicitly approved and published; the old
-restriction records are historical evidence only.
+Continue the original two-core branch of Corollary 4.6 through native
+multigraph boundary-pattern compression and reserve selection. Read
+`verification/runs/20261123T042619Z/next-reserve-target.md` for the exact
+existing APIs and proposed smallest next theorem. Native actual-copy
+perfect-matching distributions and `SmallCuts` results are available;
+graph-independent pattern-weight aggregation and rounding may be reusable.
 
-Construct the actual label map and preceding reserves from the original
-heavy-boundary pattern: assign unpaired exceptional vertices to a core
-part and keep each internal exceptional pair as one extra part. Prove
-the part-count and parity alternatives, then apply the new joining
-interfaces. Derive subsequent palette grouping, incidence supply, robust
-perfect-matching completion, regular auxiliary graphs and final host
-factorization. These have not been supplied by the new decomposition and
-must not be hidden in stronger hypotheses.
+Existing `Patterns`/`CircuitPatterns` distribution and reserve wrappers
+use `SimpleGraph`. Their internal-pair weight-at-most-one argument cannot
+be applied to several parallel copies. Retain the internal pair and prove
+native copy marginals/capacities. Do not substitute an unrelated matching
+for the chosen heavy-pattern representative. Prove source-statistic
+alignment rather than simply identifying it with the new crossing count.
 
-Reuse `Overfull/FewExceptions/`, `Overfull/OrdinaryFactorization/`,
-`Overfull/TerminalComplement/` and actual fixed-pattern/reserve interfaces
-located by source search. Original 4.5 permits five exceptions despite
-its `two-four-exceptions` label. Keep the numbered inventory unchanged.
+Reserve degree estimates, residual non-overfull safety, palette grouping,
+robust perfect-matching completion, regular auxiliary graphs and final
+factorization remain unfinished. Generic joining data are matchings; no
+separate connected-path object was added for one-virtual parts.
 
-General four-label circuits, full 4.4/4.5, remaining 4.16 parity cases,
-Section 6 setup/absorber, critical average-degree input and main theorem
-remain open. For four labels both tight and slack-two cuts matter.
+Lean-specific lessons: normalize equal decidability instances before
+rewriting partition coverage; retain distinct-label hypotheses explicitly
+when section-variable inference would omit them; use small propositional
+helpers instead of broad `tauto` in a large graph context. Fresh failures
+and exact source snapshots belong in the run record.
 
-## Details and failed approaches to preserve
+**47/69 numbered assertions remain complete; full 4.6 and the main theorem
+are not proved.** Full 4.4/4.5, general four-label circuits, remaining 4.16,
+Section 6 setup/absorber and structural/critical-average-degree inputs are
+also incomplete. Original 4.5 allows five exceptions. The already-approved
+source excerpts remain under `verification/runs/20261122T235931Z/`;
+old restriction records are historical only.
 
-- Keep actual copies: subtype-value lifting is injective, and nonempty
-  original restrictions prevent distinct parts from collapsing.
-- Compatibility permits at most one virtual copy per circuit; exactly
-  `h` virtual-containing parts follows from exact partition coverage.
-- A zero-virtual restriction remains a circuit in the joining quotient;
-  its host projection is a matching. The one-virtual result proves size
-  and degree/parity profile, not a separate connected-path object.
-- Quotient `P.cover` rewrites may fail due to equal decidability instances.
-  Normalize with `convert P.cover using 1`, `congr`, and
-  `Subsingleton.elim _ _` before transporting the equality.
-- Lean may omit section hypotheses unused syntactically in a statement.
-  The final two-odd existence theorem explicitly includes `hab : a ≠ b`.
-- A singleton quotient fiber is not harmless: the checked obstruction
-  says endpoint-class admissibility there forces vertex degree zero.
+## Reproduce and publish
 
-## Reproduce, verify and publish
-
-Use Lean `leanprover/lean4:v4.24.0` and the committed manifest, including
-mathlib `f897ebcf72cd16f89ab4577d0c826cd14afaafc7`. Do not run `lake update`.
+Use Lean 4.24.0, the committed dependency manifest and mathlib
+`f897ebcf72cd16f89ab4577d0c826cd14afaafc7`. Do not run `lake update`.
 
 ```sh
 python3 scripts/setup_vizing.py
 python3 scripts/update_joining_manifest.py
+python3 scripts/update_assigned_manifest.py
 python3 scripts/verify.py
 ```
 
-The verifier checks exact new source hashes and public names against the
-fresh complete audit, in addition to every previous gate. Stock
-`Audit.lean` remains unchanged; only `propext`, `Classical.choice` and
-`Quot.sound` are allowed. Refreshing manifests is not verification. Do
-not edit source or hashed documentation during the complete audit.
+The unchanged stock `Audit.lean` must audit every project module and
+permit only `propext`, `Classical.choice` and `Quot.sound`. The verifier
+retains every prior gate and checks exact source hashes, public names and
+modules for both new source maps. Preserve all historical proof sources,
+69 statement hashes, completed assertion records and actual logs.
 
-The temporary checkout is
-`/workspace/scratch/4ffd54dab476/overfull-lean-round2`; runtime binaries
-are under `/workspace/scratch/4ffd54dab476/lean-runtime/lean-4.24.0-linux/bin`.
-These may disappear. Recover from GitHub and the pinned dependencies.
-Setup logs record a missing ProofWidgets release-tag lookup and mathlib
-HTTP 429, resolved without changing dependency revisions.
+Temporary checkout:
+`/workspace/scratch/4ffd54dab476/overfull-lean-current`.
+Temporary runtime:
+`/workspace/scratch/4ffd54dab476/lean-runtime/lean-4.24.0-linux/bin`.
+These can disappear; recover from GitHub. Never depend on an unpublished
+local-only checkpoint. Publish early attempt branches and genuine logs,
+then update both verified branches only after the full exact candidate
+passes. Fetch fresh heads, preserve concurrent work, and read back the
+published commit/tree and both branch heads. Exclude caches, binaries,
+credentials and unrelated private files.
 
-The user authorizes autonomous continuation and publication after every
-run. Publish sources, mappings, docs and genuine logs; exclude caches,
-compiled binaries and credentials. Refresh remote heads before updates,
-preserve concurrent work, and verify published commit/tree and both heads.
-Use an attempt branch for unfinished or unverified sources, keeping the
-verified branches at the last complete passing source checkpoint.
-No supported new-conversation control is exposed here; do not claim to
-open one. Resume from this handoff without chat history, and do not
-duplicate or alter the existing hourly automation.
+The existing hourly automation was found paused and re-enabled at the
+user's request during this run; no duplicate task or unrelated schedule
+was changed. A scheduled run is not proof that verification or publication
+succeeded. No supported fresh-conversation operation is exposed here;
+resume from this durable handoff without claiming to open a new chat.

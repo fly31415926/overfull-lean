@@ -19,18 +19,15 @@ open scoped BigOperators
 
 variable {V E : Type*} (G : Multigraph V E)
 
-private theorem prop_ne_iff_xor (p q : Prop) :
-    p ≠ q ↔ (p ∧ ¬ q) ∨ (¬ p ∧ q) := by
-  by_cases hp : p <;> by_cases hq : q <;> simp [hp, hq]
-
 /-- A small propositional kernel, isolated from the graph context. -/
 private theorem assigned_cut_iff_core_crossing (a b z c d w : Prop)
     (hacover : a ∨ b ∨ z) (hccover : c ∨ d ∨ w)
     (hab : ¬ (a ∧ b)) (haz : ¬ (a ∧ z)) (hbz : ¬ (b ∧ z))
     (hcd : ¬ (c ∧ d)) (hcw : ¬ (c ∧ w)) (hdw : ¬ (d ∧ w)) :
     ((a ∨ (z ∧ c)) ≠ (c ∨ (w ∧ a))) ↔ (a ≠ c) ∧ (b ≠ d) := by
-  simp only [prop_ne_iff_xor]
-  tauto
+  rcases hacover with ha | hb | hz <;>
+    rcases hccover with hc | hd | hw <;>
+    simp_all
 
 /-- On a selected copy, a first endpoint is assigned using that same copy. -/
 theorem firstEnd_mem_corePart_iff {M : Finset E} (hM : G.IsMatching M)
@@ -73,7 +70,7 @@ theorem secondEnd_mem_corePart_iff {M : Finset E} (hM : G.IsMatching M)
 /-- Every selected edge touching the exceptional pair support stays inside it. -/
 theorem pairPart_cutOn_eq_empty {M : Finset E} (hM : G.IsMatching M)
     (Z : Finset V) : G.cutOn M (pairPart G M Z) = ∅ := by
-  apply eq_empty_iff_forall_not_mem.mpr
+  apply eq_empty_iff_forall_notMem.mpr
   intro e hecut
   obtain ⟨he, hcross⟩ := (G.mem_cutOn _ _ e).mp hecut
   have hfirst : G.firstEnd e ∈ G.edge e := (G.incident_iff e _).mpr (Or.inl rfl)

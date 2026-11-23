@@ -1,0 +1,122 @@
+Assigned-part and joining semantic review
+Run: 20261123T042619Z
+Reviewer: recreate_cuts_0427
+
+Authorship and scope
+--------------------
+This reviewer authored the newly recreated MatchedCuts.lean in this run.
+The review of that module below is therefore a self-review. Basic.lean and
+JoiningConstruction.lean were written by other agents and independently
+read by this reviewer. This is a source-level mathematical review and a
+record of targeted compiler evidence, not the complete repository audit.
+No byte identity with the lost unpublished draft is asserted.
+
+Independently reviewed Basic.lean
+--------------------------------
+Path: Overfull/AssignedParts/Basic.lean
+SHA256: 033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12
+
+No semantic defect was found in the reviewed source. The support-count
+argument counts both endpoints of each actual matching copy and obtains
+support cardinality twice the number of selected copies. Perfectness
+then identifies the support with all vertices and derives even order.
+
+assignedExceptions uses an actual selected copy of the supplied matching
+M, not an unrelated existential matching. Matching uniqueness proves
+disjointness of the two assigned core parts and the internal-exception
+support. The original partition and perfectness supply coverage.
+Unpaired exceptional vertices retain their selected copy to the assigned
+core. The label fibers are proved equal to the three constructed parts;
+the resulting parity split is derived, rather than assumed.
+
+The bound Z.card <= 2 is explicit where needed to obtain at most one
+internal selected copy and a third fiber of cardinality zero or two.
+The generic partition and parity results allow more exceptional pairs
+and aggregate their support in the third fiber. That generic theorem
+does not by itself assert the source-specific one-pair conclusion.
+
+Observed targeted evidence: assigned-basic-01.json and assigned-basic-01.log.
+The command lake build --wfail Overfull.AssignedParts.Basic exited zero
+at 2026-11-23T04:34:24.949751+00:00. The log reports 3148 jobs and freshly
+compiled ThreePartLabels, PairFiberParity, and Basic. The source remained
+unchanged during that check. No whole-repository audit is inferred from it.
+
+Independently reviewed JoiningConstruction.lean
+-----------------------------------------------
+Path: Overfull/AssignedParts/JoiningConstruction.lean
+SHA256: dd070d578403598115b359cf4649fa2f8a786cd8e189eee43123d9ceace54ed1
+
+No semantic defect was found in the reviewed source. Both wrappers use
+the actual fixed perfect matching to construct the label map and derive
+its parity. The all-even case invokes the existing actual-copy matching
+partition; the two-odd case invokes the existing complete two-odd joining
+decomposition. Neither wrapper assumes quotient admissibility.
+
+The separate-host theorem carries the same constructed vertex labels to
+a possibly different multigraph H. It correctly keeps H's regularity and
+absence of overfull sets as explicit hypotheses. It does not assert that
+the representative matching survives in H, or that deleting matchings
+automatically preserves the no-overfull property. This is an appropriate
+composition interface for a future independently proved safe residual.
+
+Both wrappers are generic in the size of Z. Their third label can collect
+several exceptional pairs. Applying the source's at-most-one-pair case
+requires the separate Z.card <= 2 construction. These wrappers finish a
+joining stage only; reserves, residual safety, palette grouping, robust
+completion, auxiliary regularity and full factorization remain open.
+
+The root agent owns the targeted check of this wrapper and the complete
+repository verifier. This review does not claim either passed.
+
+MatchedCuts self-review and actual local attempts
+-------------------------------------------------
+Path: Overfull/AssignedParts/MatchedCuts.lean
+Final SHA256: 500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766
+
+The cut equalities concern actual members of the fixed M. They require
+only IsMatching for endpoint assignment, empty pair-support cut, and
+equality of both enlarged-core cuts with the intersection of the old-core
+cuts. They use a disjoint cover U0,U1,Z. No cardinality bound on Z or
+perfectness is introduced into these generic cut statements.
+
+Perfectness is used for shore cardinality/cut parity through the selected
+degree-sum identity. It then yields assigned fiber parity from the exact
+old-core crossing count. The proof does not identify that count with an
+unprovided pattern-code statistic or construct a reserve.
+
+matched-cuts-01.json records an actual strict failure at
+2026-11-23T04:36:09.537196+00:00 (exit 1). The isolated six-proposition
+tauto helper exceeded the default 200000-heartbeat limit. A deprecated
+Finset.eq_empty_iff_forall_not_mem use also produced a warning. The later
+unknown-constant diagnostic arose because the private helper had failed.
+The exact failed source and compiler output are preserved in
+matched-cuts-01.lean and matched-cuts-01.log.
+
+The next source replaces that logical search with explicit nine cases
+for the endpoint partition memberships, followed by simp_all, and uses
+Finset.eq_empty_iff_forall_notMem. All public theorem statements are
+unchanged. matched-cuts-02.json records an actual strict failure at
+2026-11-23T04:36:40.073029+00:00 (exit 1). The only diagnostic was an
+unused simp argument: the propositional XOR helper was no longer needed.
+The exact second source and output remain preserved as matched-cuts-02.
+
+The third source removes that unused helper and argument. It preserves
+all eight public theorem statements. matched-cuts-03.json and its log
+record a successful strict check of that final source:
+  lake build --wfail Overfull.AssignedParts.MatchedCuts
+  exit code: 0
+  completed: 2026-11-23T04:37:20.888398+00:00
+  elapsed: 12.546 seconds
+  jobs: 3149
+  source unchanged during check: true
+The precise checked source is saved as matched-cuts-03.lean. No full
+repository audit or numbered manuscript assertion follows from this
+targeted check alone.
+
+Next-target research
+--------------------
+next-reserve-target.md records a separate source-based research review.
+It proposes native two-core boundary compression and weighted actual-copy
+pool capacity. It identifies why the existing simple-graph bound of one
+for a fixed exceptional endpoint pair cannot be reused with arbitrary
+parallel copies. Its proof plan is not additional compiled progress.

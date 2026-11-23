@@ -1,0 +1,28 @@
+[
+  {
+    "command": [
+      "git",
+      "-C",
+      "/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/proofwidgets",
+      "fetch",
+      "--depth",
+      "1",
+      "origin",
+      "refs/tags/v0.0.74:refs/tags/v0.0.74"
+    ],
+    "started_at_utc": "2026-11-23T04:28:24.581106+00:00",
+    "completed_at_utc": "2026-11-23T04:28:28.753416+00:00",
+    "exit_code": 0,
+    "log": "proofwidgets-release-tag-fetch.log"
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/setup_vizing.py"
+    ],
+    "started_at_utc": "2026-11-23T04:28:28.753697+00:00",
+    "completed_at_utc": "2026-11-23T04:28:35.750521+00:00",
+    "exit_code": 0,
+    "log": "vizing-setup.log"
+  }
+]
