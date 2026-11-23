@@ -227,6 +227,7 @@ import Overfull.CompatibleCircuits.AtMostThree
 import Overfull.CompatibleCircuits.TwoOddDecomposition
 import Overfull.AssignedParts.JoiningConstruction
 import Overfull.AssignedParts.NativePatternConstruction
+import Overfull.AssignedParts.BoundarySchedule
 
 /-!
 # Partial formalization of the overfull manuscript
