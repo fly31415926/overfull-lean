@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "kind": "authorized_document_release",
+  "recorded_at_utc": "2026-11-23T01:05:35.109526+00:00",
+  "preceding_commit": "51c17b4936cf450fa86aa40e646328c8f01771f8",
+  "preceding_tree": "b8098d987a741eb246cd6752b1dd738be783326b",
+  "repository": "fly31415926/overfull-lean",
+  "target_branches": [
+    "main",
+    "verified-bipartite-continuation-2026-11-21"
+  ],
+  "authorization": {
+    "question": "Do you explicitly authorize publishing these two private-workspace documents to the public repository as well?",
+    "user_reply": "Yes",
+    "scope": "The two reviewed documents listed below, including their recovered manuscript excerpts and extended assessment."
+  },
+  "released_documents": [
+    {
+      "path": "verification/runs/20261122T235931Z/authorized-manuscript-recovery.md",
+      "reviewed_copy_filename": "withheld-manuscript-recovery-20261122T235931Z.md",
+      "bytes": 9152,
+      "sha256": "84d9b40e35d54aff5a9159e97232be803b3ac4116cc2846ceac3a9789fa8c60b",
+      "byte_identical_to_reviewed_copy": true
+    },
+    {
+      "path": "verification/runs/20261122T235931Z/authorized-next-target-assessment.md",
+      "reviewed_copy_filename": "withheld-next-target-assessment-20261122T235931Z.md",
+      "bytes": 18276,
+      "sha256": "01aefffb325736ae6dba2f8aff9699000088440e84bb6ef3bcab6c1d9b6047ae",
+      "byte_identical_to_reviewed_copy": true
+    }
+  ],
+  "statement_identity_checks": [
+    {
+      "assertion": "4.4",
+      "bytes": 688,
+      "statement_sha256": "653e8b0aa8fa12f4368816ce9d9ce8b9d84a49015bce07638fd9c49e94523c2b",
+      "matches_current_pinned_inventory": true
+    },
+    {
+      "assertion": "4.5",
+      "bytes": 275,
+      "statement_sha256": "89d8e8281fc3e4b7d8b6a81bccac3eb1d49f92622106228a5bee504d3eff1d61",
+      "matches_current_pinned_inventory": true
+    },
+    {
+      "assertion": "4.6",
+      "bytes": 443,
+      "statement_sha256": "86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26",
+      "matches_current_pinned_inventory": true
+    }
+  ],
+  "publication_method": "Four additive files under the original run directory; retain every preceding repository file byte-for-byte.",
+  "prior_restriction_records": "Historical records of the earlier rejection remain unchanged; this later authorization permits the two-document release.",
+  "fresh_lean_build_or_audit_claimed": false,
+  "new_lean_theorem_claimed": false,
+  "prior_verification": {
+    "commit": "51c17b4936cf450fa86aa40e646328c8f01771f8",
+    "results_blob": "5fbcc8a852cb8be29fd4ff34fd381c9731690dca",
+    "strict_build_jobs": 3665,
+    "audited_declarations": 11727,
+    "source_hashes": 494,
+    "verification_input_hashes": 67,
+    "toolchain": "leanprover/lean4:v4.24.0",
+    "mathlib_revision": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "fully_verified_numbered_assertions": 47,
+    "main_theorem_verified": false
+  },
+  "candidate_checks": {
+    "reviewed_copy_sizes_and_sha256_match": true,
+    "all_three_original_statement_hashes_match": true,
+    "all_new_paths_outside_recorded_sources_and_verification_inputs": true
+  },
+  "publication_note": "The containing commit identifies this release. Remote heads and the complete tree are checked before reporting publication."
+}
