@@ -224,6 +224,8 @@ import Overfull.FewExceptions.Complement
 import Overfull.FewExceptions.Factorization
 import Overfull.CompatibleCircuits.ThreeVertexDeletion
 import Overfull.CompatibleCircuits.AtMostThree
+import Overfull.CompatibleCircuits.TwoOddDecomposition
+import Overfull.AssignedParts.JoiningConstruction
 
 /-!
 # Partial formalization of the overfull manuscript

@@ -9,7 +9,7 @@
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
   "fully_verified_numbered_assertion_count": 47,
-  "scope": "47 of 69 numbered manuscript assertions have complete checked proofs; 22, including the main theorem, remain incomplete. Full ordinary-core Lemma 4.2, boundary extension 4.14 and four-odd decomposition 4.15 remain complete. This continuation proves the full compatible-circuit safe selector and exact partition on every finite vertex type of cardinality at most three, under the original even-degree and half-cut hypotheses, with arbitrary edge-copy and incidence-class types. It adds no numbered assertion. The prior one-core branch of Corollary 4.6 and terminal one-core factorizations remain checked. The two-core branch of 4.6, full fixed-pattern 4.4/4.5, four-label compatible-circuit theorem, terminal 4.16, general Section 6, critical average-degree input and main theorem remain incomplete. All original numbered statements and the historical recovered/reconstructed sources are preserved.",
+  "scope": "47 of 69 numbered manuscript assertions remain fully proved; 22, including the main theorem, remain incomplete. This continuation recovers five original-host joining modules and recreates five assigned-part modules for fresh verification. It constructs exact assignments from a fixed perfect-matching representative and exact selected cuts, derives parity, and composes joining decomposition in the original or a separate regular non-overfull host. No numbered assertion is newly complete. All original statements and completed records are preserved. Heavy-pattern reserves, residual safety, source alignment, palettes, completion and final two-core factorization remain unfinished.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -5020,6 +5020,41 @@
         "three:lem:bounded-input, supporting compatible-circuit construction",
         "two:eq:compatible-cut-condition, at-most-three-vertex case"
       ]
+    },
+    {
+      "id": "original_host_joining_decomposition",
+      "kind": "graph_theoretic_result",
+      "description": "Original regular non-overfull host, a supplied assignment to at most three labels and all-even or exactly-two-odd fiber parity yield exact joining matching decompositions. Derives all quotient inequalities and augmented parity internally; in the two-odd case constructs exactly h primary parts and surplus parts with exact original-host cut footprints.",
+      "lean_declarations": [
+        "Overfull.FourOdd.joiningQuotient_classCutOn_card",
+        "Overfull.FourOdd.exists_joining_matching_partition_of_even_fibers",
+        "Overfull.FourOdd.twoOddJoiningQuotient_admissible",
+        "Overfull.FourOdd.exists_twoOddJoining_decomposition",
+        "Overfull.FourOdd.joiningQuotient_degree_zero_of_singleton_fiber",
+        "Overfull.Multigraph.CompatibleCircuitPartition.pairVirtualParts_card"
+      ],
+      "scope_limit": "A complete joining stage for a supplied label assignment and fiber parities. Does not construct the original manuscript assignment, reserves, palette grouping, completion inputs or final factorization; full Corollary 4.6 remains incomplete.",
+      "manuscript_locations": [
+        "three:lem:bounded-input, supporting joining construction",
+        "two:eq:compatible-cut-condition, at-most-three assigned parts"
+      ]
+    },
+    {
+      "id": "actual_assigned_parts_and_cuts",
+      "kind": "graph_theoretic_result",
+      "description": "From a supplied actual perfect matching and two disjoint cores plus exceptions, constructs exact Fin3 assigned fibers, original-copy matching-cut identities and derived fiber parity. At most two exceptions give an optional pair fiber of size zero or two. Composes with joining decomposition in the original or another regular non-overfull host on the same vertices.",
+      "lean_declarations": [
+        "Overfull.AssignedParts.exists_two_core_assigned_labels",
+        "Overfull.AssignedParts.corePart_cutOn_eq_core_crossings",
+        "Overfull.AssignedParts.assignedLabel_parity_eq_core_crossing",
+        "Overfull.AssignedParts.assignedLabel_joining_decomposition",
+        "Overfull.AssignedParts.assignedLabel_joining_decomposition_in_host"
+      ],
+      "scope_limit": "The supplied perfect-matching representative is retained. Heavy-pattern/reserve selection, residual degree bounds and non-overfull safety, source-statistic alignment, palettes, robust completion and final factorization remain unproved; full Corollary 4.6 is incomplete.",
+      "manuscript_locations": [
+        "three:lem:bounded-input, two-core assigned-part and joining stages",
+        "two:short:fixed-pattern, supporting actual-copy assignment"
+      ]
     }
   ],
   "numbered_assertions": [
@@ -5907,10 +5942,12 @@
       "checked_components": [
         "one_core_three_exceptions",
         "three_label_safe_deletion",
-        "three_vertex_compatible_circuit_partition"
+        "three_vertex_compatible_circuit_partition",
+        "original_host_joining_decomposition",
+        "actual_assigned_parts_and_cuts"
       ],
       "imported_statement": false,
-      "formalization_scope": "Complete one-core branch from the original regular non-overfull host with at most three exterior vertices; complete supporting compatible-circuit selection and partition on at most three quotient vertices. The distinct two-core branch and the required original-host joining construction/reassembly remain incomplete."
+      "formalization_scope": "Complete one-core branch; complete at-most-three compatible circuit and original-host joining stages; actual fixed-representative two-core assigned labels, original matching cuts and fiber parity, including optional single pair under at most two exceptions. Joining composes in a separate host with explicit regularity/non-overfull inputs. Heavy-pattern reserves, residual safety, source alignment, palettes, robust completion and final two-core factorization remain incomplete."
     },
     {
       "number": "4.7",

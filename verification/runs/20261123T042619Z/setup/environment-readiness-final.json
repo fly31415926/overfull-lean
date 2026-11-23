@@ -1,0 +1,72 @@
+{
+  "recorded_at_utc": "2026-11-23T04:43:12.419042+00:00",
+  "runtime_bin": "/workspace/scratch/4ffd54dab476/lean-runtime/lean-4.24.0-linux/bin",
+  "dependency_source_revisions": [
+    {
+      "name": "mathlib",
+      "revision": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "plausible",
+      "revision": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "LeanSearchClient",
+      "revision": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "importGraph",
+      "revision": "d768126816be17600904726ca7976b185786e6b9",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "proofwidgets",
+      "revision": "556caed0eadb7901e068131d1be208dd907d07a2",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "aesop",
+      "revision": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "Qq",
+      "revision": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "batteries",
+      "revision": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "Cli",
+      "revision": "91c18fa62838ad0ab7384c03c9684d99d306e1da",
+      "tracked_sources_clean": true
+    }
+  ],
+  "shared_prerequisites": {
+    "command_record": "shared-prerequisites-command.json",
+    "exit_code": 0,
+    "jobs": 3145
+  },
+  "existing_prerequisites": {
+    "command_record": "existing-prerequisites-command.json",
+    "exit_code": 0,
+    "jobs": 3668,
+    "explicit_module_targets": 224,
+    "all_target_olean_files_observed": true,
+    "finished_at_utc": "2026-11-23T04:42:56.485542+00:00",
+    "elapsed_seconds": 544.730044
+  },
+  "full_candidate_verification_performed_by_this_setup": false,
+  "new_assigned_parts_targets_excluded_from_this_build": true,
+  "cache_first_attempt_exit_code": 1,
+  "cache_first_attempt_http429_failures": 272,
+  "cache_retry_exit_code": 0,
+  "cache_archives_restored": 3130,
+  "historical_interim_readiness_preserved": true
+}

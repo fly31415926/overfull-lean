@@ -1,0 +1,142 @@
+Overfull/CompatibleCircuits/PairAugmentation.lean:93:70: error: unsolved goals
+case pos
+V : Type u_1
+E : Type u_2
+Q : Multigraph V E
+a b : V
+hab : a ≠ b
+h : ℕ
+C : Finset (E ⊕ Fin h)
+v : V
+S : Finset (E ⊕ Fin h) := {e ∈ C | v ∈ (Q.pairAugmentation a b hab h).edge e}
+hleft : S.toLeft = {e ∈ C.toLeft | v ∈ Q.edge e}
+j : Fin h
+hv : v = a ∨ v = b
+⊢ Sum.inr j ∈ C ∧ (a = v ∨ b = v) ↔ j ∈ if a = v ∨ b = v then C.toRight else ∅
+
+case neg
+V : Type u_1
+E : Type u_2
+Q : Multigraph V E
+a b : V
+hab : a ≠ b
+h : ℕ
+C : Finset (E ⊕ Fin h)
+v : V
+S : Finset (E ⊕ Fin h) := {e ∈ C | v ∈ (Q.pairAugmentation a b hab h).edge e}
+hleft : S.toLeft = {e ∈ C.toLeft | v ∈ Q.edge e}
+j : Fin h
+hv : ¬(v = a ∨ v = b)
+⊢ Sum.inr j ∈ C ∧ (a = v ∨ b = v) ↔ j ∈ if a = v ∨ b = v then C.toRight else ∅
+Overfull/CompatibleCircuits/PairAugmentation.lean:95:68: warning: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  simp [S, Sym2.mem_iff, eq_comm,̵ ̵h̵v̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/CompatibleCircuits/PairAugmentation.lean:131:72: error: unsolved goals
+case pos
+V : Type u_1
+E : Type u_2
+K : Type u_3
+Q : Multigraph V E
+a b : V
+hab : a ≠ b
+h : ℕ
+classOf : V → E → K
+C : Finset (E ⊕ Fin h)
+v : V
+X : Finset V
+S : Finset (E ⊕ Fin h) := (Q.pairAugmentation a b hab h).classCutOn (pairAugmentationClass h classOf) C v (Sum.inr ()) X
+hleft : S.toLeft = ∅
+j : Fin h
+hs : (a ∈ X) ≠ (b ∈ X)
+hv : v = a ∨ v = b
+⊢ Sum.inr j ∈ C ∧ (a = v ∨ b = v) ↔ j ∈ if a = v ∨ b = v then C.toRight else ∅
+
+case neg
+V : Type u_1
+E : Type u_2
+K : Type u_3
+Q : Multigraph V E
+a b : V
+hab : a ≠ b
+h : ℕ
+classOf : V → E → K
+C : Finset (E ⊕ Fin h)
+v : V
+X : Finset V
+S : Finset (E ⊕ Fin h) := (Q.pairAugmentation a b hab h).classCutOn (pairAugmentationClass h classOf) C v (Sum.inr ()) X
+hleft : S.toLeft = ∅
+j : Fin h
+hs : (a ∈ X) ≠ (b ∈ X)
+hv : ¬(v = a ∨ v = b)
+⊢ Sum.inr j ∈ C ∧ (a = v ∨ b = v) ↔ j ∈ if a = v ∨ b = v then C.toRight else ∅
+Overfull/CompatibleCircuits/PairAugmentation.lean:139:4: error: Type mismatch: After simplification, term
+  Eq.symm hc
+ has type
+  #S = #(if ¬(a ∈ X ↔ b ∈ X) ∧ (v = a ∨ v = b) then C.toRight else ∅)
+but is expected to have type
+  #((Q.pairAugmentation a b hab h).classCutOn (pairAugmentationClass h classOf) C v (Sum.inr ()) X) =
+    if ¬(a ∈ X ↔ b ∈ X) ∧ (v = a ∨ v = b) then #C.toRight else 0
+Overfull/CompatibleCircuits/PairAugmentation.lean:135:81: warning: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  simp [S, classCutOn, pairAugmentationClass,
+  ̵  ̵ ̵ ̵ ̵ ̵ ̵ ̵Q.pairAugmentation_virtual_crosses a b hab h,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲Sym2.mem_iff, eq_comm, hs,̵ ̵h̵v̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/CompatibleCircuits/PairAugmentation.lean:168:22: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  f ≥ 0
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  c - 2*e + f ≤ -1
+where
+ c := ↑(#(Q.cutOn C.toLeft X))
+ d := ↑(#C.toRight)
+ e := ↑(if (a ∈ X) ≠ (b ∈ X) ∧ True then #C.toRight else 0)
+ f := ↑(if (a ∈ X) ≠ (b ∈ X) then #C.toRight else 0)
+Overfull/CompatibleCircuits/PairAugmentation.lean:167:49: warning: This simp argument is unused:
+  hs
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵s̵,̵ ̵h̵v̵,̵[̲h̲v̲,̲ and_self, if_true, and_false, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/CompatibleCircuits/PairAugmentation.lean:167:57: warning: This simp argument is unused:
+  and_self
+
+Hint: Omit it from the simp argument list.
+  simp only [hs, hv, a̵n̵d̵_̵s̵e̵l̵f̵,̵ ̵if_true, and_false, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/CompatibleCircuits/PairAugmentation.lean:167:67: warning: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [hs, hv, and_self, i̵f̵_̵t̵r̵u̵e̵,̵ ̵and_false, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/CompatibleCircuits/PairAugmentation.lean:255:49: error: Application type mismatch: The argument
+  v
+has type
+  V
+but is expected to have type
+  Multigraph ?m.171 ?m.172
+in the application
+  @even_degreeOn ?m.171 ?m.172 v
+Overfull/CompatibleCircuits/PairAugmentation.lean:386:8: error: invalid `▸` notation, expected result type of cast is 
+  e ∈ D'.toLeft
+however, the equality 
+  heq
+of type 
+  (fun D => D.toLeft) D = (fun D => D.toLeft) D'
+does not contain the expected result type on either the left or the right hand side
+Overfull/CompatibleCircuits/PairAugmentation.lean:417:59: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.

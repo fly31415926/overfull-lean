@@ -1,0 +1,56 @@
+{
+  "status": "runtime_restored",
+  "started_at_utc": "2026-11-23T04:27:47.414004+00:00",
+  "finished_at_utc": "2026-11-23T04:28:07.115330+00:00",
+  "archive_url": "https://github.com/leanprover/lean4/releases/download/v4.24.0/lean-4.24.0-linux.tar.zst",
+  "archive_bytes": 459625674,
+  "archive_sha256": "b14f5e5159219dd1a1956c3b806813319f5e94ccd5bdfd56f54520609a5bb5ec",
+  "runtime_bin": "/workspace/scratch/4ffd54dab476/lean-runtime/lean-4.24.0-linux/bin",
+  "commands": [
+    {
+      "command": [
+        "curl",
+        "-L",
+        "--fail",
+        "--retry",
+        "3",
+        "--retry-delay",
+        "2",
+        "-o",
+        "/workspace/scratch/4ffd54dab476/lean-runtime/lean-4.24.0-linux.tar.zst",
+        "https://github.com/leanprover/lean4/releases/download/v4.24.0/lean-4.24.0-linux.tar.zst"
+      ],
+      "started_at_utc": "2026-11-23T04:27:47.414020+00:00",
+      "finished_at_utc": "2026-11-23T04:28:02.659903+00:00",
+      "elapsed_seconds": 15.245883,
+      "exit_code": 0,
+      "log": "lean-runtime-download.log"
+    },
+    {
+      "command": [
+        "tar",
+        "--zstd",
+        "-xf",
+        "/workspace/scratch/4ffd54dab476/lean-runtime/lean-4.24.0-linux.tar.zst",
+        "-C",
+        "/workspace/scratch/4ffd54dab476/lean-runtime"
+      ],
+      "started_at_utc": "2026-11-23T04:28:03.265390+00:00",
+      "finished_at_utc": "2026-11-23T04:28:07.057104+00:00",
+      "elapsed_seconds": 3.791714,
+      "exit_code": 0,
+      "log": "lean-runtime-extract.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/4ffd54dab476/lean-runtime/lean-4.24.0-linux/bin/lean",
+        "--version"
+      ],
+      "started_at_utc": "2026-11-23T04:28:07.058151+00:00",
+      "finished_at_utc": "2026-11-23T04:28:07.114907+00:00",
+      "elapsed_seconds": 0.056756,
+      "exit_code": 0,
+      "log": "lean-runtime-version.log"
+    }
+  ]
+}

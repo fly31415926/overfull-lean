@@ -1,0 +1,13 @@
+✖ [3149/3149] Building Overfull.AssignedParts.MatchedCuts (26s)
+trace: .> LEAN_PATH=/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/build/lib/lean /workspace/scratch/4ffd54dab476/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/4ffd54dab476/overfull-lean-current/Overfull/AssignedParts/MatchedCuts.lean -o /workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/build/lib/lean/Overfull/AssignedParts/MatchedCuts.olean -i /workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/build/lib/lean/Overfull/AssignedParts/MatchedCuts.ilean -c /workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/build/ir/Overfull/AssignedParts/MatchedCuts.c --setup /workspace/scratch/4ffd54dab476/overfull-lean-current/.lake/build/ir/Overfull/AssignedParts/MatchedCuts.setup.json --json
+error: Overfull/AssignedParts/MatchedCuts.lean:26:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+warning: Overfull/AssignedParts/MatchedCuts.lean:76:8: `Finset.eq_empty_iff_forall_not_mem` has been deprecated: Use `Finset.eq_empty_iff_forall_notMem` instead
+error: Overfull/AssignedParts/MatchedCuts.lean:97:8: (kernel) unknown constant '_private.Overfull.AssignedParts.MatchedCuts.0.Overfull.AssignedParts.assigned_cut_iff_core_crossing'
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.AssignedParts.MatchedCuts
+error: build failed

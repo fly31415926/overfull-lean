@@ -1,35 +1,51 @@
-# Remaining verification targets after the three-label circuit proof
+# Next target after actual assigned parts and joining transport
 
-The current complete numbered inventory is **47 of 69**, with **22**
-remaining, including the main theorem. Full ordinary-core Lemma 4.2 joins
-the previously completed Lemmas 4.14 and 4.15. The recovered continuation
-completes the one-core branch of Corollary 4.6 but not its two-core branch.
-The latest continuation also proves the full compatible-circuit selector
-and exact partition on every finite vertex type of cardinality at most three.
+The numbered inventory remains **47/69**, with **22** incomplete assertions,
+including the main theorem. The complete one-core branch of 4.6 is retained;
+the original two-core branch is still unfinished.
 
-The preceding checkpoint recreated eleven unavailable supporting modules and
-preserved nine recovered original source modules. The
-[reconstruction record](checkpoint-reconstruction.md) distinguishes this
-new proof-checking run from the original unavailable `cb05ef5` tree.
+The latest supporting chain constructs the assigned parts and exact
+matching-cut identities from a fixed perfect-matching representative,
+derives their parity, and supplies the complete joining decomposition.
+It also transports that assignment to another regular non-overfull host
+on the same vertices. See [the proof map](assigned-part-verification.md)
+and [the handoff](continuation-handoff.md) for exact interfaces and scope.
 
-## Next substantive obligations
+## Next concrete proof obligation
 
-| Target | Available checked inputs | Remaining proof work |
-| --- | --- | --- |
-| Full Corollary 4.6 | Complete one-core branch with at most three exceptional vertices; full ordinary-core factorization; complete compatible-circuit decomposition on at most three vertices | Prove the distinct two-core branch and the joining construction required by the original statement, including actual quotient hypotheses and reconstruction. |
-| Full Lemma 4.4 and Corollary 4.5 | Actual fixed-pattern components and terminal one-core factorization under its incidence hypotheses | Construct the requisite compatible joining edges and incidence conditions and complete all branches. |
-| Four-label compatible-circuit decomposition | Complete safe selector and exact partition on at most three vertices, plus exact four-label critical-cut correction and checked small kernels | Prove a four-label selector handling both tight and slack-two constraints, or prove the needed joining construction using the completed three-label theorem. Do not apply the three-label tight-only criterion to four labels. |
-| Proposition 4.16 | Frequent-pattern reduction, full boundary extension 4.14, full four-odd decomposition 4.15, and complete one-core bounded input | Complete every remaining parity branch and reassemble the full original host factorization. |
-| General Theorem 6.1 and Proposition 6.2 | Uniform localization, coupled parameters, actual reserved-remainder packing and exact balanced orientation | Construct the compatible spanning setup, special path systems, robust absorber and required stage inputs, then prove complete reconstruction. |
-| Main theorem and structural cases | Robust partition, many safe matching and absorption components, and the completed special factorizations | Supply the remaining structural exclusions, critical average-degree input, and source-level compositions. |
+Construct a native multigraph boundary-pattern/reserve interface that
+retains every original copy and any internal exceptional pair. Begin with
+an actual perfect matching and the two-core/at-most-two-exception partition.
+The [current reserve target note](../verification/runs/20261123T042619Z/next-reserve-target.md)
+identifies checked reusable APIs and separates the proposed next proof
+from established Lean results. A small first target is native boundary
+compression retaining all selected copies touching the exceptions and
+a parity-preserving choice of old-core crossing copies, followed by
+exact weighted copy marginals and pattern-pool capacity bounds.
 
-The numbered inventory stays pinned to
-`Four_Robust_Component_Cases_2026-11-20.tex`. Later manuscript inspections
-and supporting branches do not silently replace that inventory or count
-as complete numbered assertions.
+Do not reuse the simple-graph claim that a fixed internal exceptional
+pair has weight at most one. Distinct parallel copies invalidate that
+transfer. Preserve the actual heavy-pattern representative and prove
+any equality between its source pattern statistic and the new actual
+crossing-copy count; do not rename them without a proof.
 
-The next run should first inspect the original two-core branch of 4.6
-and its quotient/lifting interfaces, seeking an exact application of the
-completed at-most-three-vertex theorem. If an essential fourth label remains,
-record that obstruction and address the genuine four-label selector.
-The [restart handoff](continuation-handoff.md) lists the checked entry points.
+The reserve must provide the actual residual degree bound and preserve
+absence of overfull sets. Removing an arbitrary perfect matching does
+not automatically establish the required residual odd-cut lower bound.
+The separate-host joining theorem exposes these missing inputs. Palette
+grouping, robust completions, regular auxiliary graphs and reassembly
+of the original host remain subsequent obligations.
+
+## Other incomplete targets
+
+| Target | Remaining work |
+| --- | --- |
+| Full 4.4 and 4.5 | All original fixed-pattern branches and reserve/completion conditions. Original 4.5 allows five exceptions despite its label. |
+| Four-label compatible circuits | A safe selector handling tight and slack-two cuts; the three-label criterion alone is insufficient. |
+| Remaining 4.16 parity branches | Complete the source-level reconstruction using the available special factorizations. |
+| General 6.1 and 6.2 | Spanning setup, special path systems, robust absorber and final factorization. |
+| Main theorem | Remaining structural exclusions, critical average-degree input and complete source-level compositions. |
+
+All 69 original statement hashes and all 47 completed assertion records
+remain pinned. The recovery/recreation provenance is distinct from the
+unavailable original `cb05ef5` tree.

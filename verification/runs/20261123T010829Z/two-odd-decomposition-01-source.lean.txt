@@ -1,0 +1,246 @@
+import Overfull.CompatibleCircuits.TwoOddQuotient
+
+/-!
+# Exact original-copy joining decomposition for two odd parts
+
+The virtual circuit partition is restricted to original joining copies and
+then projected injectively to the host copy type. Exactly `h` parts contain
+a virtual copy; their original restrictions are nonempty matchings of size
+at most two with the required odd-part footprints. The remaining parts are
+nonempty matchings of size at most three with even footprints everywhere.
+No parts or parallel copies are identified or discarded.
+
+This proves the supporting circuit stage from an actual assigned label map.
+It does not construct the manuscript's reserves, assigned parts, palette,
+perfect-matching completions, or final one-factorization.
+-/
+
+noncomputable section
+
+namespace Overfull.FourOdd
+
+open Finset Classical
+
+variable {V E I : Type*} [Fintype E] [DecidableEq I]
+    (G : Multigraph V E) (label : V → I) (a b : I) (hab : a ≠ b) (h : ℕ)
+
+/-- Retain only actual original copies of one augmented circuit. -/
+def twoOddOriginalPart (D : Finset ((joiningCopies G label) ⊕ Fin h)) : Finset E :=
+  D.toLeft.image Subtype.val
+
+variable (P : (twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition
+  (twoOddJoiningClasses G label h) univ)
+
+/-- The original restrictions of the actual parts using a virtual copy. -/
+def twoOddPrimaryParts : Finset (Finset E) :=
+  P.pairVirtualParts.image (twoOddOriginalPart G label h)
+
+/-- The original restrictions of the remaining actual circuit parts. -/
+def twoOddSurplusParts : Finset (Finset E) :=
+  (P.parts \ P.pairVirtualParts).image (twoOddOriginalPart G label h)
+
+/-- The two families retain all circuit indices. -/
+theorem twoOddParts_union :
+    twoOddPrimaryParts G label a b hab h P ∪ twoOddSurplusParts G label a b hab h P =
+      P.parts.image (twoOddOriginalPart G label h) := by
+  unfold twoOddPrimaryParts twoOddSurplusParts
+  rw [← image_union, union_sdiff_of_subset]
+  exact filter_subset _ _
+
+/-- Original-copy projection cannot merge distinct augmented circuit parts. -/
+theorem twoOddOriginalPart_injective :
+    Set.InjOn (twoOddOriginalPart G label h) P.parts := by
+  intro D hD D' hD' heq
+  apply P.pairOriginal_restriction_injective hD hD'
+  exact Finset.image_injective Subtype.val_injective heq
+
+/-- Exactly `h` distinct original matching parts contain the virtual-path footprints. -/
+theorem twoOddPrimaryParts_card : (twoOddPrimaryParts G label a b hab h P).card = h := by
+  unfold twoOddPrimaryParts
+  rw [card_image_iff.mpr ?_, P.pairVirtualParts_card]
+  intro D hD D' hD' heq
+  exact twoOddOriginalPart_injective G label a b hab h P
+    (mem_filter.mp hD).1 (mem_filter.mp hD').1 heq
+
+/-- A part cannot appear in both the primary and surplus families. -/
+theorem twoOddParts_families_disjoint :
+    Disjoint (twoOddPrimaryParts G label a b hab h P)
+      (twoOddSurplusParts G label a b hab h P) := by
+  apply disjoint_left.mpr
+  intro M hM hM'
+  obtain ⟨D, hD, rfl⟩ := mem_image.mp hM
+  obtain ⟨D', hD', heq⟩ := mem_image.mp hM'
+  obtain ⟨hD'part, hD'not⟩ := mem_sdiff.mp hD'
+  have hsame : D = D' := twoOddOriginalPart_injective G label a b hab h P
+    (mem_filter.mp hD).1 hD'part heq.symm
+  exact hD'not (hsame ▸ hD)
+
+/-- Each lifted original part is nonempty. -/
+theorem twoOddParts_nonempty {M : Finset E}
+    (hM : M ∈ twoOddPrimaryParts G label a b hab h P ∪
+      twoOddSurplusParts G label a b hab h P) : M.Nonempty := by
+  rw [twoOddParts_union] at hM
+  obtain ⟨D, hD, rfl⟩ := mem_image.mp hM
+  exact (Multigraph.IsCircuit.pairOriginal_nonempty
+    (joiningQuotient G label) a b hab h (P.circuit D hD) (P.compatible D hD)).image _
+
+/-- Each lifted original part is a matching in the original host. -/
+theorem twoOddParts_isMatching {M : Finset E}
+    (hM : M ∈ twoOddPrimaryParts G label a b hab h P ∪
+      twoOddSurplusParts G label a b hab h P) : G.IsMatching M := by
+  rw [twoOddParts_union] at hM
+  obtain ⟨D, hD, rfl⟩ := mem_image.mp hM
+  apply joiningGraph_isMatching_image G label
+  apply ((joiningGraph G label).compatible_endpointClass_iff label
+    (joiningGraph_join G label) D.toLeft).mp
+  exact Multigraph.Compatible.original_of_pairAugmentation
+    (joiningQuotient G label) a b hab h (P.compatible D hD)
+
+/-- Distinct lifted parts remain edge-disjoint in the original copy type. -/
+theorem twoOddParts_disjoint {M N : Finset E}
+    (hM : M ∈ twoOddPrimaryParts G label a b hab h P ∪
+      twoOddSurplusParts G label a b hab h P)
+    (hN : N ∈ twoOddPrimaryParts G label a b hab h P ∪
+      twoOddSurplusParts G label a b hab h P) (hne : M ≠ N) : Disjoint M N := by
+  rw [twoOddParts_union] at hM hN
+  obtain ⟨D, hD, rfl⟩ := mem_image.mp hM
+  obtain ⟨D', hD', rfl⟩ := mem_image.mp hN
+  apply (Finset.disjoint_image Subtype.val_injective).mpr
+  apply P.pairOriginal_parts_disjoint hD hD'
+  intro heq
+  exact hne (congrArg (twoOddOriginalPart G label h) heq)
+
+/-- The two lifted families cover exactly all original joining copies. -/
+theorem twoOddParts_cover :
+    (twoOddPrimaryParts G label a b hab h P ∪
+      twoOddSurplusParts G label a b hab h P).biUnion id = joiningCopies G label := by
+  rw [twoOddParts_union, image_biUnion]
+  change P.parts.biUnion (fun D => D.toLeft.image Subtype.val) = joiningCopies G label
+  rw [← biUnion_image, P.pairOriginal_parts_cover]
+  ext e
+  constructor
+  · intro he
+    obtain ⟨f, _, rfl⟩ := mem_image.mp he
+    exact f.property
+  · intro he
+    exact mem_image.mpr ⟨⟨e, he⟩, mem_univ _, rfl⟩
+
+/-- A surplus circuit contains no virtual copy. -/
+theorem twoOddSurplus_no_virtual {D : Finset ((joiningCopies G label) ⊕ Fin h)}
+    (hD : D ∈ P.parts \ P.pairVirtualParts) : D.toRight = ∅ := by
+  obtain ⟨hDpart, hDnot⟩ := mem_sdiff.mp hD
+  apply card_eq_zero.mp
+  have hle := Multigraph.Compatible.pairVirtual_card_le_one
+    (joiningQuotient G label) a b hab h (P.compatible D hDpart)
+  have hne : D.toRight.card ≠ 1 := by
+    intro hc
+    exact hDnot ((P.mem_pairVirtualParts D).mpr ⟨hDpart, hc⟩)
+  omega
+
+variable [Fintype I]
+
+/-- Primary original parts contain at most two actual copies on at most three labels. -/
+theorem twoOddPrimaryParts_card_le (hI : Fintype.card I ≤ 3) {M : Finset E}
+    (hM : M ∈ twoOddPrimaryParts G label a b hab h P) : M.card ≤ 2 := by
+  obtain ⟨D, hD, rfl⟩ := mem_image.mp hM
+  obtain ⟨hDpart, hDvirtual⟩ := (P.mem_pairVirtualParts D).mp hD
+  have hbound := (Multigraph.IsCircuit.one_pairVirtual_original
+    (joiningQuotient G label) a b hab h (P.circuit D hDpart) hDvirtual).1
+  change (D.toLeft.image Subtype.val).card ≤ 2
+  rw [card_image_of_injective _ Subtype.val_injective]
+  omega
+
+/-- Surplus original parts contain at most three actual copies. -/
+theorem twoOddSurplusParts_card_le (hI : Fintype.card I ≤ 3) {M : Finset E}
+    (hM : M ∈ twoOddSurplusParts G label a b hab h P) : M.card ≤ 3 := by
+  obtain ⟨D, hD, rfl⟩ := mem_image.mp hM
+  have hcir := Multigraph.IsCircuit.no_pairVirtual_original
+    (joiningQuotient G label) a b hab h (P.circuit D (mem_sdiff.mp hD).1)
+      (twoOddSurplus_no_virtual G label a b hab h P hD)
+  change (D.toLeft.image Subtype.val).card ≤ 3
+  rw [card_image_of_injective _ Subtype.val_injective]
+  exact hcir.card_le.trans hI
+
+variable [Fintype V]
+
+/-- Each primary original part crosses each odd fiber exactly once. -/
+theorem twoOddPrimaryParts_cut_eq_one {M : Finset E}
+    (hM : M ∈ twoOddPrimaryParts G label a b hab h P) (i : I)
+    (hi : i = a ∨ i = b) : (G.cutOn M (labelShore label {i})).card = 1 := by
+  obtain ⟨D, hD, rfl⟩ := mem_image.mp hM
+  obtain ⟨hDpart, hDvirtual⟩ := (P.mem_pairVirtualParts D).mp hD
+  change (G.cutOn (D.toLeft.image Subtype.val) (labelShore label {i})).card = 1
+  rw [← joiningQuotient_degreeOn_eq_cut]
+  exact (Multigraph.IsCircuit.one_pairVirtual_original
+    (joiningQuotient G label) a b hab h (P.circuit D hDpart) hDvirtual).2.1 i hi
+
+/-- The only odd original fiber footprints of a primary part are the two specified ends. -/
+theorem twoOddPrimaryParts_odd_cut_iff {M : Finset E}
+    (hM : M ∈ twoOddPrimaryParts G label a b hab h P) (i : I) :
+    Odd ((G.cutOn M (labelShore label {i})).card) ↔ i = a ∨ i = b := by
+  obtain ⟨D, hD, rfl⟩ := mem_image.mp hM
+  obtain ⟨hDpart, hDvirtual⟩ := (P.mem_pairVirtualParts D).mp hD
+  change Odd ((G.cutOn (D.toLeft.image Subtype.val) (labelShore label {i})).card) ↔ _
+  rw [← joiningQuotient_degreeOn_eq_cut]
+  exact (Multigraph.IsCircuit.one_pairVirtual_original
+    (joiningQuotient G label) a b hab h (P.circuit D hDpart) hDvirtual).2.2 i
+
+/-- Every surplus original part has even footprint at every fiber. -/
+theorem twoOddSurplusParts_even_cut {M : Finset E}
+    (hM : M ∈ twoOddSurplusParts G label a b hab h P) (i : I) :
+    Even ((G.cutOn M (labelShore label {i})).card) := by
+  obtain ⟨D, hD, rfl⟩ := mem_image.mp hM
+  have hcir := Multigraph.IsCircuit.no_pairVirtual_original
+    (joiningQuotient G label) a b hab h (P.circuit D (mem_sdiff.mp hD).1)
+      (twoOddSurplus_no_virtual G label a b hab h P hD)
+  change Even ((G.cutOn (D.toLeft.image Subtype.val) (labelShore label {i})).card)
+  rw [← joiningQuotient_degreeOn_eq_cut]
+  exact Multigraph.IsCircuit.even_degreeOn (joiningQuotient G label) hcir i
+
+/-- Transparent exact joining-copy output of the two-odd-part circuit stage. -/
+structure TwoOddJoiningDecomposition where
+  primary : Finset (Finset E)
+  surplus : Finset (Finset E)
+  primary_card : primary.card = h
+  families_disjoint : Disjoint primary surplus
+  nonempty : ∀ M ∈ primary ∪ surplus, M.Nonempty
+  matching : ∀ M ∈ primary ∪ surplus, G.IsMatching M
+  disjoint : ∀ M ∈ primary ∪ surplus, ∀ N ∈ primary ∪ surplus, M ≠ N → Disjoint M N
+  cover : (primary ∪ surplus).biUnion id = joiningCopies G label
+  primary_card_le : ∀ M ∈ primary, M.card ≤ 2
+  surplus_card_le : ∀ M ∈ surplus, M.card ≤ 3
+  primary_cut_eq_one : ∀ M ∈ primary, ∀ i, i = a ∨ i = b →
+    (G.cutOn M (labelShore label {i})).card = 1
+  primary_odd_cut_iff : ∀ M ∈ primary, ∀ i,
+    Odd ((G.cutOn M (labelShore label {i})).card) ↔ i = a ∨ i = b
+  surplus_even_cut : ∀ M ∈ surplus, ∀ i, Even ((G.cutOn M (labelShore label {i})).card)
+
+/-- Construct the exact original-copy primary/surplus decomposition from
+regularity, no overfull set, at most three labels, and exactly two odd fibers. -/
+theorem exists_twoOddJoining_decomposition (hI : Fintype.card I ≤ 3)
+    (hregular : ∀ v, G.degree v = h)
+    (hno : ∀ X : Finset V, ¬ G.IsOverfull h X)
+    (hfibers : ∀ i, (univ.filter (fun v => label v = i)).card % 2 =
+      if i = a ∨ i = b then 1 else 0) :
+    Nonempty (TwoOddJoiningDecomposition G label a b h) := by
+  obtain ⟨P⟩ := exists_twoOddJoining_circuitPartition G label a b hab h
+    hI hregular hno hfibers
+  exact ⟨{
+    primary := twoOddPrimaryParts G label a b hab h P
+    surplus := twoOddSurplusParts G label a b hab h P
+    primary_card := twoOddPrimaryParts_card G label a b hab h P
+    families_disjoint := twoOddParts_families_disjoint G label a b hab h P
+    nonempty := fun _ hM => twoOddParts_nonempty G label a b hab h P hM
+    matching := fun _ hM => twoOddParts_isMatching G label a b hab h P hM
+    disjoint := fun _ hM _ hN hne => twoOddParts_disjoint G label a b hab h P hM hN hne
+    cover := twoOddParts_cover G label a b hab h P
+    primary_card_le := fun _ hM => twoOddPrimaryParts_card_le G label a b hab h P hI hM
+    surplus_card_le := fun _ hM => twoOddSurplusParts_card_le G label a b hab h P hI hM
+    primary_cut_eq_one := fun _ hM i hi =>
+      twoOddPrimaryParts_cut_eq_one G label a b hab h P hM i hi
+    primary_odd_cut_iff := fun _ hM i =>
+      twoOddPrimaryParts_odd_cut_iff G label a b hab h P hM i
+    surplus_even_cut := fun _ hM i => twoOddSurplusParts_even_cut G label a b hab h P hM i
+  }⟩
+
+end Overfull.FourOdd
