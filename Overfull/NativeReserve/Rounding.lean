@@ -78,7 +78,7 @@ theorem prefix_signature_reserve (η : ℝ) (hη₀ : 0 ≤ η) (hη₁ : η ≤
   have h := proposedMultiplicity_le_remaining η (signatureWeight D U₀ Z) p₀
     (reserveSize D U₀ Z s) hη₀ hη₁ (signatureWeight_nonneg D U₀ Z)
     (reserveSize_le_weight D U₀ Z s) p₀
-  simp only [remainingWeight, if_pos rfl] at h
+  simp [remainingWeight] at h
   change _ ≤ signatureWeight D U₀ Z p₀ - m p₀
   change (multiplicity D η U₀ Z s p₀ : ℝ) ≤ _ at h
   linarith

@@ -16,7 +16,7 @@ namespace Overfull.NativeReserve
 
 open Finset Classical BoundaryExtension
 
-variable {V E : Type*} [Fintype E] {G : Multigraph V E} {U : Finset V}
+variable {V E : Type*} {G : Multigraph V E} {U : Finset V}
 variable {q : ℕ} {S : Fin q → Finset U} {θ σ : ℝ}
 
 def subcoreInNativeResidual (C : SmallCuts.Core G U)

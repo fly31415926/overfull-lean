@@ -37,7 +37,7 @@ theorem boundary_signature_eq_of_pool_counts (U₀ U₁ Z : Finset V)
       (B ∩ poolCopies G U₀ U₁ Z p).card) :
     coarseSignature G F U₀ Z = coarseSignature G B U₀ Z := by
   have hpair : (G.internalOn F Z).Nonempty ↔ (G.internalOn B Z).Nonempty := by
-    rw [← card_pos, ← card_pos, ← inter_internalPool_eq, ← inter_internalPool_eq]
+    rw [← card_pos, ← card_pos, ← inter_internalPool_eq G F Z, ← inter_internalPool_eq G B Z]
     exact congrArg (fun n => 0 < n) (hcounts .pair) |> Eq.to_iff
   have hparts : corePart G F Z U₀ = corePart G B Z U₀ :=
     corePart_eq_of_exception_pool_counts G U₀ Z h0Z F B (fun z => by
@@ -57,7 +57,7 @@ theorem boundary_assignedLabel_eq_of_pool_counts (U₀ U₁ Z : Finset V)
       simpa only [poolCopies, if_pos rfl] using hcounts (.exception z 0))
   have hparts₁ : corePart G F Z U₁ = corePart G B Z U₁ :=
     corePart_eq_of_exception_pool_counts G U₁ Z h1Z F B (fun z => by
-      simpa only [poolCopies, Fin.one_ne_zero, if_false] using hcounts (.exception z 1))
+      simpa [poolCopies] using hcounts (.exception z 1))
   simp only [assignedLabel, hparts₀, hparts₁]
 
 theorem boundary_whole_cut_eq_of_pool_counts (U₀ U₁ Z X : Finset V)

@@ -91,12 +91,12 @@ theorem poolCopies_specialEnds (U₀ U₁ Z : Finset V)
     · exact disjoint_left.mp h0Z hh.2 (h.symm ▸ hvZ)
 
 theorem poolCopies_disjoint_core (U₀ U₁ Z U : Finset V)
-    (h01 : Disjoint U₀ U₁) (h0Z : Disjoint U₀ Z) (h1Z : Disjoint U₁ Z)
+    (_h01 : Disjoint U₀ U₁) (h0Z : Disjoint U₀ Z) (h1Z : Disjoint U₁ Z)
     (hU : U = U₀ ∨ U = U₁) (C : SmallCuts.Core G U) (p : PoolKind Z) :
     Disjoint (poolCopies G U₀ U₁ Z p) (OneCore.coreEdges C) := by
   apply disjoint_left.mpr
   intro e he heC
-  have hend := OneCore.coreEdges_endpoint C heC
+  have hend {v : V} (hv : v ∈ G.edge e) : v ∈ U := OneCore.coreEdges_endpoint C heC hv
   have hUZ : Disjoint U Z := by rcases hU with rfl | rfl <;> assumption
   cases p with
   | pair =>
@@ -107,10 +107,10 @@ theorem poolCopies_disjoint_core (U₀ U₁ Z U : Finset V)
   | crossing =>
     obtain ⟨he0, he1⟩ := mem_inter.mp he
     rcases hU with rfl | rfl
-    · have hcut := (G.mem_cutOn univ U₀ e).mp he0 |>.2
+    · have hcut := (G.mem_cutOn univ _ e).mp he0 |>.2
       exact hcut (propext ⟨fun _ => hend ((G.incident_iff e _).mpr (Or.inr rfl)),
         fun _ => hend ((G.incident_iff e _).mpr (Or.inl rfl))⟩)
-    · have hcut := (G.mem_cutOn univ U₁ e).mp he1 |>.2
+    · have hcut := (G.mem_cutOn univ _ e).mp he1 |>.2
       exact hcut (propext ⟨fun _ => hend ((G.incident_iff e _).mpr (Or.inr rfl)),
         fun _ => hend ((G.incident_iff e _).mpr (Or.inl rfl))⟩)
 
@@ -170,6 +170,8 @@ theorem poolCopies_pairwiseDisjoint (U₀ U₁ Z : Finset V)
     have hij : i = j := by
       by_contra hij
       fin_cases i <;> fin_cases j <;> simp_all
+      · exact disjoint_left.mp h01 ho ho'
+      · exact disjoint_left.mp h01 ho' ho
     exact hpq (hij ▸ rfl)
   · have hh := congrArg card hs
     simp [poolSpecial] at hh

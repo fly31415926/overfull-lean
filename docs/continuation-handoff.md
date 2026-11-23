@@ -1,165 +1,135 @@
-# Continuation handoff: native two-core assignment patterns
+# Continuation handoff: native reserve completion
 
-## Resume from the authoritative remote
+## Authoritative state and recovery
 
-Fetch and inspect both `main` and
-`verified-bipartite-continuation-2026-11-21` in `fly31415926/overfull-lean`
-before editing. At this run's start both branches pointed to
-`ec258578dfa68d0ac50cd9ff9e70b8dcbc2232b6`, tree
-`8e59576eb2b94c02b6b1072c4afaf29543540db6`, with 751 tracked files.
-The newest remote heads and their current run reports supersede this
-baseline; do not restart from the earlier reconstruction checkpoints.
+Read the current remote heads of `main` and
+`verified-bipartite-continuation-2026-11-21` in
+`fly31415926/overfull-lean` before continuing. This run began from
+`98c6b228a997fead863d05041f12799c93fac18b`, tree
+`1a3d5f43124a34de81c46a260d6c399fcecb5c96`, with 1027 tracked files.
+The published baseline audited 12055 declarations and completed 47 of 69
+numbered assertions. A later verified commit supersedes this baseline.
 
-Current run: `20261123T113235Z`, started 2026-11-23 11:32:35 UTC.
-The early source-only checkpoint is
-`95be6df3e3d4a43fca9393210942b912f4252b58` on
-`continuation-attempt/20261123T113235Z`. It predates the complete new
-construction and fresh full verification. Later commits on that branch
-and the verified branches take precedence. Exact command records, source
-snapshots, final preservation checks and reports are in this run folder.
-Only a successful complete verifier for the exact current source/input
-hashes permits a new source checkpoint on the two verified branches.
+Current run: `20261123T201422Z`, started 2026-11-23T20:14:22.720770Z.
+Recovery source checkpoints are on `recovery/native-reserve-20261123`.
+The first preserves the exact recovered `AcceptedRealization.lean` at
+`2eccf2a00df03c9a3c07f14fdbecd38087c8028d`; the next, `40ee472`,
+preserves 21 draft/recovered modules and actual setup evidence.
+Source-only checkpoints are not full verification claims.
 
-No source reconstruction was required for this run. The original
-`cb05ef5` reconstruction and later lost-draft records remain historical.
-The current work starts from the exact published `ec25857` sources.
+The earlier run `20261123T125102Z` was observed to complete a build/audit,
+but its complete publication was interrupted and its scratch artifacts
+became unavailable. Only the recovered source identified above has an
+exact original-byte recovery claim. Other sources in this run were
+reconstructed and require fresh verification. Missing old logs are not
+recreated. See this run's `recovery-provenance.md` and actual command records.
 
-## Completed native interfaces
+## Current completed construction interface
 
-The eight new modules under `Overfull/AssignedParts/` are:
+The final interface is
+`Overfull.NativeReserve.exists_native_reserve_completion_parameters`.
+The exact source manifest, proof map and semantic review are in
+`docs/native-reserve-source.json`, `docs/native-reserve-verification.md`,
+and `docs/native-reserve-semantic-review.md`. Actual full verifier records
+for the exact current source hashes determine checked status.
 
-| Module | Role |
-| --- | --- |
-| `NativeWeights` | Native scaled marginals, exact pool expectations, selected-copy capacities and weighted pigeonhole. |
-| `Signatures` | An actual matching signature in `Option (↥Z → Fin 2)`, constant assigned parts and crossing parity, at most five codes. |
-| `SignaturePools` | Actual-copy usage of the internal pair, exceptional-to-core and old-core crossing pools. |
-| `HeavySignature` | A heavy actual representative with weight at least `k/5` and linear forced pool supplies; exact internal-pair weight. |
-| `ExactPoolWeights` | Exact total signature weight for an exceptional-to-core assignment equals its original copy-pool cardinality. |
-| `BoundaryCompression` | Retains all exceptional matching copies and zero or one actual crossing copy, with size and assignment preservation. |
-| `CompressionCuts` | Exact original/compressed cut splits, preserved cut parity and even uncovered order in both old cores. |
-| `NativePatternConstruction` | Composition retaining one representative and exact alignment of the compressed crossing statistic. |
+The theorem chooses positive error/robustness constants and an order
+threshold before the host. From original regularity, absence of overfull
+sets, two disjoint large robust embedded cores, at most two exceptions,
+and a sufficiently small original core degree error, it constructs:
 
-Key declarations in `Overfull.AssignedParts`:
+- An actual linear reserve of disjoint compressed boundaries sharing one
+  actual matching's native assignment signature.
+- A disjoint perfect matching family avoiding every reserved copy.
+- Integers satisfying `k/30≤r≤h`, `h+q=k`, and `h-r≤δn`.
+- The actual `h`-regular residual with no `h`-overfull vertex set.
+- Actual retained robust cores on both old core vertex sets, each with
+  minimum degree at least `h-a`.
 
-```lean
-coarseSignature
-assignedParts_eq_of_signature_eq
-card_assignmentSignature_le_five
-exists_heavy_signature_with_pools
-signatureWeight_none_eq_internalPool
-signature_assignment_weight_eq_pool
-compressedBoundary
-compressedBoundary_internalOn
-compressedBoundary_assignedLabel
-compressedBoundary_uncovered_even
-compressedBoundary_coarseSignature
-compressedBoundary_coreCrossing_card
-compressedBoundary_crossing_card_eq_of_signature_eq
-exists_compressed_assignment_with_linear_pools
-```
+Every object uses original multigraph edge copies, including arbitrary
+parallel copies in an exceptional pair. The original representative need
+not be a perfect matching of the residual. Its assignment remains the
+one used in the next joining stage. The exact original-assignment
+`assignedLabel_joining_decomposition_in_host` interface is already
+available in the preserved baseline.
 
-The finite host result assumes positive regular degree, no overfull set,
-a disjoint covering pair of old cores and at most two exceptional vertices.
-It constructs an actual perfect matching and its actual compressed boundary.
-The compression has at most `|Z|+1` copies, retains every exceptional copy,
-keeps the selected internal exceptional pair exactly, leaves even uncovered
-order in each old core, and preserves the representative's assignment.
-The retained old-core crossing count is exactly its original crossing
-parity and is constant for a fixed signature.
+## Next proof obligation: grouping and residual factorization
 
-The paired code is retained even with arbitrary parallel multiplicity.
-Its weight equals the number of original internal exceptional copies.
-For each exception and either original core, the sum of weights of the
-signatures assigning it there equals the corresponding copy-pool size.
-Each pool forced by a heavy signature has size at least `k/5`.
-These are original-host copy counts, not distinct-neighbor bounds or
-surviving reserve guarantees.
+Apply the existing assigned-part/joining decomposition to the actual
+residual constructed above, then prove the palette grouping and final
+factorization. The following points are proposals to prove, not checked
+new conclusions of the reserve theorem.
 
-The compression itself permits any exceptional-set size. The five-code
-bound and the identification of `none` with one pair require `|Z|≤2`.
-Full Corollary 4.5 still permits five exceptions; do not silently replace
-that source condition. The separate general simple-host `Encodes` relation
-has not been identified with this native code.
+1. Derive joining-copy degree bounds in the actual assigned residual:
+   at an old-core vertex, use the retained core-complement error `a`;
+   at an exception, use the `r` surviving reserved incidences internal
+   to its assigned part, giving the proposed bound `h-r`.
+2. Develop a finite palette assignment preserving the parity of every
+   joining piece. For the two-odd case, precolor the `h` primary pieces
+   injectively, then add surplus pieces using endpoint conflicts and
+   bounded class loads. A candidate greedy condition is `6D<h`, where
+   `D=max(a,h-r)`; its hypotheses must be derived from uniform constants.
+3. Retain individual parity certificates in the all-even case. The
+   existing wrapper that forgets these certificates is not sufficient
+   by itself for grouping; use the underlying compatible-circuit data.
+4. Align reserved old-core crossing copies with the necessary primary
+   palette structure. A reserved crossing copy may be a joining copy;
+   it is not automatically internal to an assigned part or aligned to
+   an arbitrary circuit decomposition. Only the exceptional reserved
+   incidences are automatically internal to the assigned parts.
+5. Prove group footprint size, parity and vertex-load bounds. A piece
+   with at most three edges can produce a much larger grouped palette
+   class, so the individual-piece size bound does not justify the
+   required robust extension input for the whole group.
+6. Treat a two-vertex exceptional pair fiber with its actual parallel
+   copies. Exact equal free palettes and regularity should supply the
+   required pair-copy assignment; this still needs a Lean construction.
+7. Combine completed residual color classes with the already removed
+   perfect matchings using disjoint palettes, then invoke the available
+   coloring-to-one-factorization bridge. This requires an actual residual
+   coloring and is not supplied by a conditional reconstruction lemma.
 
-See `docs/native-pattern-verification.md`, its semantic review and source
-manifest. Actual compiler and stock-audit records determine verification;
-a source manifest or semantic review alone does not.
+The new reserve theorem solves the reserve/actual-safe-residual stage;
+do not repeat it or silently assume the next palette conclusions.
+Full Corollary 4.5 still permits five exceptions; this construction's
+`|Z|≤2` hypothesis must not replace that manuscript condition.
 
-## Exact next obligation
+**Coverage remains 47/69; full two-core Corollary 4.6 and the main theorem
+remain incomplete.** General four-label circuits, the remaining terminal
+factorization, structural/critical-average-degree and Section 6 obligations
+remain distinct gaps. The 69 original assertion records are unchanged.
 
-Proceed to **native reserve realization and residual safety** for the
-original two-core branch of Corollary 4.6. The previous handoff's native
-weight, coarse-signature, pool-usage and small boundary bridge has now been
-implemented. Do not repeat that bridge or reapply the simple-host shortcut
-that an exceptional endpoint pair has weight at most one.
+## Verification, preservation and publication
 
-1. Choose numerical multiplicities for the native signatures, retaining
-   the heavy signature's reserve and its possible internal exceptional
-   pair. The graph-independent rounding identities in
-   `CircuitPatterns/Rounding.lean` are available; its simple-host selection
-   structure and no-internal-pair fields are not directly applicable.
-2. Realize those multiplicities by pairwise disjoint actual boundary
-   matchings with the required incidence and reserve budgets. The new
-   exact pool weight identities supply counts, but do not by themselves
-   guarantee simultaneously compatible choices.
-3. Complete the selected boundaries in the actual robust cores, accounting
-   for earlier deletions and preserving the prescribed copies and labels.
-   The original uniform error and order parameters must precede the host.
-4. Prove regularity and absence of overfull sets for the actual residual.
-   Native `SmallCuts` and exact selected/residual cut formulas are already
-   available. Regularity after perfect-matching deletion alone does not
-   imply odd-cut safety.
-5. Apply the existing assigned-part and joining decomposition to that
-   verified residual, then construct palette grouping, regular auxiliary
-   graphs, robust completions and the final factorization reconstruction.
-
-The previously checked
-`assignedLabel_joining_decomposition_in_host` uses the original
-representative's assignment in another host on the same vertices. It does
-not require the representative to survive deletion. Its residual regularity
-and no-overfull hypotheses still need to be proved at the reserve stage.
-
-**47/69 numbered assertions remain complete; full Corollary 4.6 and the
-main theorem remain unproved.** The general fixed-pattern and five-exception
-statements, remaining terminal factorization, Section 6 setup/absorber,
-general four-label circuits and structural/critical-average-degree inputs
-remain separate obligations. Original authorized source excerpts remain
-in `verification/runs/20261122T235931Z/`.
-
-## Reproduce, preserve and publish
-
-Use the pinned Lean 4.24.0 and dependency manifest, with mathlib
+Use Lean 4.24.0 and the existing dependency manifest, with mathlib
 `f897ebcf72cd16f89ab4577d0c826cd14afaafc7`. Do not run `lake update`.
+The current runtime is `/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin`.
+Temporary workspaces may disappear; reachable GitHub checkpoints and their
+real run records are the durable authority.
 
 ```sh
 python3 scripts/setup_vizing.py
-python3 scripts/update_native_pattern_manifest.py
-python3 scripts/verify.py
+python3 scripts/update_native_reserve_manifest.py
+python3 verification/runs/20261123T201422Z/run-verifier.py full-01
+python3 verification/runs/20261123T201422Z/record-final.py
 ```
 
-The stock `Audit.lean` remains byte-identical and audits every imported
-project declaration, including generated and private proofs. Only
-`propext`, `Classical.choice` and `Quot.sound` are permitted. The verifier
-retains every prior gate and adds exact hash/public-name/module checks
-for the native-pattern manifest. Preserve every old proof source,
-all 69 assertion records, all prior completed results and genuine logs.
+Use a new attempt directory if a full check must be rerun. Keep all real
+success, failure and interrupted logs. `Audit.lean` is byte-identical and
+retains only `propext`, `Classical.choice`, and `Quot.sound`. The verifier
+has exactly four additive source-map checks for this continuation. Every
+prior proof, declaration mapping, numbered assertion record and historical
+verification artifact must be preserved.
 
-This run used an isolated checkout at
-`/workspace/scratch/d5dce0496f02/overfull-lean` and Lean at
-`/workspace/scratch/4ffd54dab476/lean-runtime/lean-4.24.0-linux/bin`.
-Temporary workspaces can disappear; recover from GitHub when necessary.
-The restored ProofWidgets checkout initially lacked upstream release tags;
-fetching them preserved its pinned revision and allowed the normal cache
-setup. A cache download hit HTTP 429; retrying with three concurrent
-transfers succeeded. All setup failures and genuine proof attempts are
-preserved. No dependency source or verifier gate was weakened.
+The first dependency-cache attempt hit HTTP 429; a lower-concurrency retry
+restored 3106 cache files successfully. Duplicate initial dependency builds
+were explicitly interrupted with observed exit 130 and retained records;
+a single baseline build then completed before targeted native checks.
+These interruptions do not constitute failed mathematical proofs or passes.
 
-Native git fetch works; push had no transport credential in this environment.
-The connected GitHub Git Data API can publish source blobs, exact trees and
-commits. Compare every published tree with the local tree, fetch fresh
-branch heads before updating, preserve concurrent work, and use expected
-heads when advancing both verified branches. Read back the final commit,
-tree and both heads. Exclude caches, binaries, credentials and unrelated
-files. Existing user authorization covers publishing all project sources,
-documentation, mappings and genuine verification logs; no repeat approval
-is required.
+After a fresh complete strict build, full transitive audit, exact mapping
+validation and preservation check pass, publish all sources, documentation,
+mappings and genuine run logs to both authorized verified branches. Read
+back both branch heads and the exact commit/tree. The user has already
+authorized autonomous recovery, continuation and this publication; do not
+ask again. Do not label a source-only checkpoint as verified.

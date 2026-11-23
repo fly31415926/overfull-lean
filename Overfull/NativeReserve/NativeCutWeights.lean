@@ -96,7 +96,7 @@ theorem poolCutIndicator_eq_one_iff (G : Multigraph V E) (U₀ U₁ Z X : Finset
   · rw [if_pos h]
     obtain ⟨f, hf, hfx⟩ := h
     have hex := (poolCopies_cut_uniform G U₀ U₁ Z X h01 hZ hwhole0 hwhole1 j he hf).mpr hfx
-    simp only [hex, iff_self]
+    exact ⟨fun _ => hex, fun _ => rfl⟩
   · rw [if_neg h]
     simp only [Nat.zero_ne_one, false_iff]
     exact fun hx => h ⟨e, he, hx⟩
@@ -251,6 +251,7 @@ theorem even_uncovered_whole_union {I : Type*} [Fintype I]
   · intro i _ j _ hij
     exact (hdisj hij).mono sdiff_subset sdiff_subset
 
+omit [Fintype E] in
 theorem compressedBoundary_whole_cut_parity (G : Multigraph V E)
     {M : Finset E} (hM : G.IsPerfectMatching M) (U₀ U₁ Z X : Finset V)
     (h01 : Disjoint U₀ U₁) (h0Z : Disjoint U₀ Z) (h1Z : Disjoint U₁ Z)
@@ -323,5 +324,64 @@ theorem completed_native_cut_count_eq_demand (G : Multigraph V E)
     (G.cutOn N X).card = wholeCutDemand G D U₀ U₁ Z X p := by
   rw [completed_native_cutOn_eq G U₀ U₁ Z X h01 h0Z h1Z hX F N hFN hadded]
   exact native_cut_count_eq_demand G D U₀ U₁ Z X h01 h0Z h1Z hZ hX F p hpool huse
+
+variable [Fintype V]
+
+/-- Native boundary counts, their internal completions, and embedded
+retained cores give the actual residual no-overfull conclusion. -/
+theorem native_residual_no_overfull {J : Type*} (G : Multigraph V E)
+    (D : MultigraphMatchingProbability.Distribution G k S) (hk : 0 < k)
+    (U₀ U₁ Z : Finset V)
+    (h01 : Disjoint U₀ U₁) (h0Z : Disjoint U₀ Z) (h1Z : Disjoint U₁ Z)
+    (hcover : ∀ v, v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z) (hZ : Z.card ≤ 2)
+    (B N : J → Finset E) (T : Finset J) (kind : J → AssignmentSignature Z)
+    (hNdisj : (T : Set J).Pairwise (fun i j => Disjoint (N i) (N j)))
+    (hperfect : ∀ j ∈ T, G.IsPerfectMatching (N j)) (hT : T.card ≤ k)
+    (hBN : ∀ j ∈ T, B j ⊆ N j)
+    (hadded : ∀ j ∈ T, ∀ e ∈ N j,
+      e ∈ B j ∨ e ∈ G.internalOn univ U₀ ∨ e ∈ G.internalOn univ U₁)
+    (hpool : ∀ j ∈ T, ∀ e ∈ B j, ∃ r, e ∈ poolCopies G U₀ U₁ Z r)
+    (huse : ∀ j ∈ T, ∀ r,
+      (B j ∩ poolCopies G U₀ U₁ Z r).card = poolDemand D U₀ U₁ Z r (kind j))
+    (hregular : ∀ v, G.degree v = k) (hno : ∀ X, ¬ G.IsOverfull k X)
+    (C : ∀ i, SmallCuts.Core (residualGraph G N T) (originalCores U₀ U₁ i))
+    (α c ν τ a : ℝ)
+    (hα : 0 < α) (hc : 0 < c) (hν : 0 < ν) (hτ : 0 ≤ τ) (hτα : τ ≤ α / 10)
+    (hklo : α * Fintype.card V ≤ ((k - T.card : ℕ) : ℝ))
+    (hkhi : ((k - T.card : ℕ) : ℝ) ≤ 2 * Fintype.card V)
+    (ha : a ≤ α * Fintype.card V / 10)
+    (hlarge : 3 < ν ^ 2 * c ^ 2 * (Fintype.card V : ℝ))
+    (hsize : ∀ i, c * Fintype.card V ≤ ((originalCores U₀ U₁ i).card : ℝ))
+    (hrobust : ∀ i, IsRobustExpander (C i).graph ν τ)
+    (hdegree : ∀ i v, ((k - T.card : ℕ) : ℝ) - a ≤ ((C i).graph.degree v : ℝ))
+    (proposal accepted : AssignmentSignature Z → ℕ)
+    (hn : ∀ p, familyMultiplicity kind T p ≤ accepted p)
+    (hm : ∀ p, accepted p ≤ proposal p)
+    (hweight : ∀ p, (proposal p : ℝ) ≤ signatureWeight D U₀ Z p)
+    (hprotected : ∀ X ∈ wholeUnions (originalCores U₀ U₁) Z, X.card % 2 = 0 →
+      (G.cutSize X : ℝ) -
+        (∑ p, (proposal p : ℝ) * wholeCutDemand G D U₀ U₁ Z X p) < 2 * a →
+          ∀ p, accepted p * wholeCutDemand G D U₀ U₁ Z X p = 0) :
+    ∀ X, ¬ (residualGraph G N T).IsOverfull (k - T.card) X := by
+  have hcover' : ∀ v, v ∈ Z ∨ ∃ i, v ∈ originalCores U₀ U₁ i := by
+    intro v
+    rcases hcover v with h0 | h1 | hz
+    · exact Or.inr ⟨0, by simpa [originalCores] using h0⟩
+    · exact Or.inr ⟨1, by simpa [originalCores] using h1⟩
+    · exact Or.inl hz
+  apply residual_no_overfull_of_pattern_counts G N T hNdisj hperfect
+    (originalCores U₀ U₁) Z (originalCores_disjoint U₀ U₁ h01)
+    (originalCores_disjoint_exceptions U₀ U₁ Z h0Z h1Z) hcover'
+    kind k hT hregular hno C α c ν τ a hα hc hν hτ hτα hklo hkhi ha hlarge
+    hsize hrobust hdegree (signatureWeight D U₀ Z) (signatureWeight_sum D U₀ Z)
+    proposal accepted hn hm hweight (wholeCutDemand G D U₀ U₁ Z)
+  · intro X hX j hj
+    exact completed_native_cut_count_eq_demand G D U₀ U₁ Z X h01 h0Z h1Z hZ hX
+      (B j) (N j) (kind j) (hBN j hj) (hadded j hj) (hpool j hj) (huse j hj)
+  · intro X hX hodd p hp
+    exact wholeCutDemand_odd_positive G D U₀ U₁ Z X h01 h0Z h1Z hcover hZ hX hodd p hp
+  · intro X hX
+    exact wholeCutDemand_capacity G D hk U₀ U₁ Z X h01 h0Z h1Z hcover hZ hX
+  · exact hprotected
 
 end Overfull.NativeReserve

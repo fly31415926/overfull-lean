@@ -6,7 +6,38 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest continuation: native multigraph assignment patterns
+## Latest continuation: native reserve completion and actual residual safety
+
+The native two-core stage now constructs an actual linear reserve of disjoint
+compressed boundaries and completes the accepted boundary family to disjoint
+perfect matchings inside the original embedded robust cores. All constants
+are chosen before the host. The completions avoid the reserved original
+copies, and the actual residual is regular, has no overfull set, and retains
+robust embedded cores on both old core vertex sets.
+
+The final interface is
+`Overfull.NativeReserve.exists_native_reserve_completion_parameters`.
+It gives `k/30≤r≤h`, `h+q=k`, and `h-r≤δn`. Every parallel copy remains
+distinct. Rounding and protected-cut tests use the original matching
+weights, and exact copy accounting connects selection to the actual residual.
+
+This is supporting progress toward the two-core branch of Corollary 4.6.
+Palette grouping and the remaining factorization still require proofs.
+The numbered count remains **47/69**, with **22** incomplete assertions,
+including the main theorem.
+
+See the [proof map](docs/native-reserve-verification.md),
+[source manifest](docs/native-reserve-source.json),
+[semantic review](docs/native-reserve-semantic-review.md),
+[continuation handoff](docs/continuation-handoff.md), and
+[current run records](verification/runs/20261123T201422Z/).
+Current compiler and audit records determine verification status. The run
+recovered one original source byte-for-byte and reconstructed the remaining
+continuation after an interrupted publication; its
+[provenance](verification/runs/20261123T201422Z/recovery-provenance.md)
+distinguishes those sources from historical observed checks.
+
+## Previous continuation: native multigraph assignment patterns
 
 The native two-core construction now selects an actual perfect-matching
 representative from a signature of scaled weight at least `k/5`. With at most

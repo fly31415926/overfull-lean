@@ -56,5 +56,8 @@ theorem pack_original_core (α γ ν τ σ : ℝ)
   · simpa only [Fintype.card_coe] using hfoot
   · intro v
     convert hload v using 1
+    congr 2
+    ext j
+    simp
 
 end Overfull.NativeReserve

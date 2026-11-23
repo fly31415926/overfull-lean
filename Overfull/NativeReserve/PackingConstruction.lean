@@ -112,10 +112,11 @@ theorem exists_linear_boundary_reserve [Fintype V] [Fintype E]
     (hregular : ∀ v, G.degree v = k)
     (hno : ∀ X : Finset V, ¬ G.IsOverfull k X)
     (U₀ U₁ Z : Finset V) (hZ : Z.card ≤ 2) :
-    ∃ r M, G.IsPerfectMatching M ∧ (k : ℝ)/30 ≤ r ∧
+    ∃ (r : ℕ) (M : Finset E), G.IsPerfectMatching M ∧ (k : ℝ)/30 ≤ r ∧
       Nonempty (BoundaryPacking G U₀ U₁ Z M r) := by
-  obtain ⟨S, _, ⟨D⟩⟩ := MultigraphMatchingProbability.exists_distribution G
+  obtain ⟨S, hS, ⟨D⟩⟩ := MultigraphMatchingProbability.exists_distribution (G := G)
     (show 0 < k by omega) hregular hno
+  letI := hS
   obtain ⟨s, _, hs⟩ := exists_heavy_signature D (by omega) U₀ Z hZ
   obtain ⟨hr, hb⟩ := linear_boundary_reserve_bounds k hk
   refine ⟨⌊(k : ℝ)/15⌋₊, D.matching s, D.perfect s, hr, ?_⟩

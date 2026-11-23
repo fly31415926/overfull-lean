@@ -28,11 +28,16 @@ theorem cut_toggle (G : Multigraph V E) (X : Finset V) (v : V) :
       G.cutSize X + G.degree v := by
   have h := MultigraphMatchingProbability.cut_toggle (G := G) univ X v
   rw [MultigraphMatchingProbability.incidentCount_univ] at h
-  simpa only [cutIncidence, Multigraph.cutSize, Multigraph.cutEdges,
-    Multigraph.incidenceEdges, MultigraphMatchingProbability.cutCount,
-    MultigraphMatchingProbability.cutEdges, MultigraphMatchingProbability.incidentCount,
-    Lovasz.BMatch.cut, filter_filter, G.incident_iff, filter_and,
-    ← Finset.filter_mem_eq_inter] using h
+  have hi : MultigraphMatchingProbability.incidentCount (G := G) (G.cutEdges X) v =
+      cutIncidence G X v := by
+    unfold MultigraphMatchingProbability.incidentCount cutIncidence
+    congr 1
+    ext e
+    simp [G.incident_iff]
+  change G.cutSize (toggle X v) +
+    2 * MultigraphMatchingProbability.incidentCount (G := G) (G.cutEdges X) v =
+      G.cutSize X + G.degree v at h
+  rwa [hi] at h
 
 theorem regular_odd_cut_lower (G : Multigraph V E) (k : ℕ)
     (hregular : ∀ v, G.degree v = k)
@@ -104,7 +109,14 @@ theorem residual_cutIncidence (G : Multigraph V E) (N : J → Finset E) (T : Fin
       exact ⟨⟨ha, a.property⟩, hv⟩
     · rintro ⟨⟨hcross, he⟩, hv⟩
       exact ⟨⟨e, he⟩, ⟨hcross, hv⟩, rfl⟩
-  rw [cutIncidence, ← card_image_of_injective _ Subtype.val_injective, himage]
+  rw [cutIncidence, ← card_image_of_injective _ Subtype.val_injective]
+  calc
+    _ = (((residualGraph G N T).cutEdges X ∩
+        (residualGraph G N T).incidenceEdges v).image Subtype.val).card := by
+      congr 2
+      ext e
+      simp
+    _ = _ := congrArg card himage
 
 theorem toggle_safe_of_preserved_cut (G : Multigraph V E)
     (N : J → Finset E) (T : Finset J) (k h : ℕ)

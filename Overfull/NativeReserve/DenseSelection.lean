@@ -51,6 +51,8 @@ theorem dense_discard_bound (η : ℝ) (hη₀ : 0 ≤ η) (hη₁ : η ≤ 1) (
       (∑ p, (denseMultiplicity D η U₀ U₁ Z s L p : ℝ)) + 6*L := by
   let bad (j : PoolKind Z) (p : AssignmentSignature Z) :=
     ((poolCopies G U₀ U₁ Z j).card : ℝ) < L ∧ 0 < poolDemand D U₀ U₁ Z j p
+  letI (j : PoolKind Z) (p : AssignmentSignature Z) : Decidable (bad j p) :=
+    Classical.propDecidable _
   have hcoverBad (p : AssignmentSignature Z) (hp : ¬densePoolKeep D U₀ U₁ Z L p) :
       ∃ j, bad j p := by
     by_contra hn

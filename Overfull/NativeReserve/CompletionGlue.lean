@@ -14,7 +14,7 @@ namespace Overfull.NativeReserve
 
 open Finset Classical SmallCuts BoundaryExtension
 
-variable {V E J : Type*} [Fintype E] {G : Multigraph V E} {U₀ U₁ U : Finset V}
+variable {V E J : Type*} {G : Multigraph V E} {U₀ U₁ U : Finset V}
 
 theorem coreEdges_disjoint_of_vertices (C₀ : Core G U₀) (C₁ : Core G U₁)
     (h01 : Disjoint U₀ U₁) : Disjoint (OneCore.coreEdges C₀) (OneCore.coreEdges C₁) := by
@@ -119,11 +119,17 @@ theorem completedBoundary_pairwiseDisjoint (C₀ : Core G U₀) (C₁ : Core G U
   have hcores (r s : J) : Disjoint (coreMatchingCopies C₀ (N₀ r)) (coreMatchingCopies C₁ (N₁ s)) :=
     (coreEdges_disjoint_of_vertices C₀ C₁ h01).mono
       (coreMatchingCopies_subset_core C₀ (N₀ r)) (coreMatchingCopies_subset_core C₁ (N₁ s))
+  have hFF := hdisj hij
+  have hF0 := hF₀ i j
+  have hF1 := hF₁ i j
+  have h0F := (hF₀ j i).symm
+  have h1F := (hF₁ j i).symm
+  have h00 := coreMatchingCopies_disjoint C₀ _ _ (hN₀ hij)
+  have h11 := coreMatchingCopies_disjoint C₁ _ _ (hN₁ hij)
+  have h01' := hcores i j
+  have h10 := (hcores j i).symm
   simp only [completedBoundary, disjoint_union_left, disjoint_union_right]
-  exact ⟨⟨⟨hdisj hij, hF₀ i j⟩, hF₁ i j⟩,
-    ⟨⟨(hF₀ j i).symm, coreMatchingCopies_disjoint C₀ _ _ (hN₀ hij)⟩, hcores i j⟩⟩,
-    ⟨⟨(hF₁ j i).symm, (hcores j i).symm⟩,
-      coreMatchingCopies_disjoint C₁ _ _ (hN₁ hij)⟩⟩
+  tauto
 
 theorem completedBoundary_avoids (C₀ : Core G U₀) (C₁ : Core G U₁)
     (F A : Finset E) (hFA : Disjoint F A)
@@ -172,6 +178,8 @@ theorem completedBoundary_core₁_copy_iff (C₀ : Core G U₀) (C₁ : Core G U
       (coreMatchingCopies_subset_core C₀ N₀ he) heC
   simp only [completedBoundary, mem_union, hnotF, false_or, hnot₀]
   exact mem_coreMatchingCopies_of_embedded C₁ N₁ e
+
+variable [Fintype E]
 
 theorem completedBoundary_added_internal (C₀ : Core G U₀) (C₁ : Core G U₁)
     (F : Finset E) (N₀ : C₀.graph.Subgraph) (N₁ : C₁.graph.Subgraph)

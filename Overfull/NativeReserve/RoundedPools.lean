@@ -17,7 +17,7 @@ namespace Overfull.NativeReserve
 open Finset Classical AssignedParts AssignedParts.NativeWeights CircuitPatterns
 open scoped BigOperators
 
-variable {V E S : Type*} [Fintype S] [Fintype E] {G : Multigraph V E} {k : ℕ}
+variable {V E S : Type*} [Fintype S] {G : Multigraph V E} {k : ℕ}
   (D : MultigraphMatchingProbability.Distribution G k S)
 
 def internalDemand {Z : Finset V} (p : AssignmentSignature Z) : ℕ :=
@@ -54,6 +54,9 @@ private def poolKindEquiv (Z : Finset V) :
     · rcases h with ⟨z, i⟩; rfl
     · cases u; rfl
 
+instance poolKindFintype (Z : Finset V) : Fintype (PoolKind Z) :=
+  Fintype.ofEquiv (Unit ⊕ ((↥Z × Fin 2) ⊕ Unit)) (poolKindEquiv Z).symm
+
 theorem poolKind_card (Z : Finset V) : Fintype.card (PoolKind Z) = 2+2*Z.card := by
   rw [Fintype.card_congr (poolKindEquiv Z)]
   simp only [Fintype.card_sum, Fintype.card_prod, Fintype.card_unit,
@@ -79,11 +82,13 @@ theorem crossingDemand_at_sample (U₀ U₁ Z : Finset V)
     (hcover : ∀ v, v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z) (hZ : Z.card ≤ 2) (s : S) :
     crossingDemand D U₀ U₁ Z (coarseSignature G (D.matching s) U₀ Z) =
       (G.cutOn (D.matching s) U₀ ∩ G.cutOn (D.matching s) U₁).card % 2 := by
-  unfold crossingDemand
-  rw [dif_pos (show ∃ t, coarseSignature G (D.matching t) U₀ Z =
-      coarseSignature G (D.matching s) U₀ Z from ⟨s, rfl⟩)]
+  have hs : ∃ t, coarseSignature G (D.matching t) U₀ Z =
+      coarseSignature G (D.matching s) U₀ Z := ⟨s, rfl⟩
+  rw [crossingDemand, dif_pos hs]
   exact coreCrossing_parity_eq_of_signature_eq G (D.perfect _) (D.perfect s)
-    U₀ U₁ Z h01 h0Z h1Z hcover hZ (Classical.choose_spec _)
+    U₀ U₁ Z h01 h0Z h1Z hcover hZ hs.choose_spec
+
+variable [Fintype E]
 
 private theorem compressed_inter_exception_pool (M : Finset E)
     (U₀ U₁ Z U : Finset V) (z : ↥Z) :

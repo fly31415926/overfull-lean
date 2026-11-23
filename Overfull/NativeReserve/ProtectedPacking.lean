@@ -20,6 +20,7 @@ open scoped BigOperators
 variable {V E S : Type*} [Fintype S] [Fintype E] {G : Multigraph V E} {k : ℕ}
   (D : MultigraphMatchingProbability.Distribution G k S)
 
+omit [Fintype E] in
 theorem exists_rounded_boundary_reserve (hk : 0 < k) (U₀ U₁ Z : Finset V)
     (hZ : Z.card ≤ 2) (s : S) :
     Nonempty (BoundaryPacking G U₀ U₁ Z (D.matching s) (reserveSize D U₀ Z s)) := by
@@ -33,17 +34,20 @@ variable {U₀ U₁ Z : Finset V} {s : S} {r : ℕ}
 
 def reservedCopies : Finset E := removedCopies Q.boundary univ
 
+omit [Fintype E] in
 theorem reserved_degree {z : V} (hz : z ∈ Z) :
     G.degreeOn (Q.reservedCopies D) z = r := by
   rw [reservedCopies, removed_degreeOn G Q.boundary univ
     (fun _ _ _ _ hij => Q.pairwise_disjoint hij)]
-  simp only [Q.exceptional_degree hz, sum_const, card_univ, Fintype.card_fin, smul_eq_mul,
+  have hu (i : Fin r) : G.degreeOn (Q.boundary i) z = 1 := Q.exceptional_degree i hz
+  simp only [hu, sum_const, card_univ, Fintype.card_fin, smul_eq_mul,
     mul_one]
 
+omit [Fintype E] in
 theorem reserved_card : (Q.reservedCopies D).card ≤ r*(Z.card+1) := by
   calc
     _ ≤ ∑ i : Fin r, (Q.boundary i).card := card_biUnion_le
-    _ ≤ ∑ _i : Fin r, Z.card+1 := sum_le_sum (fun i _ => Q.card_le i)
+    _ ≤ ∑ _i : Fin r, (Z.card+1) := sum_le_sum (fun i _ => Q.card_le i)
     _ = _ := by simp
 
 theorem reserved_pool_card

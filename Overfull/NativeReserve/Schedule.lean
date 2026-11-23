@@ -15,14 +15,14 @@ namespace Overfull.NativeReserve
 open Finset Classical AssignedParts
 open scoped BigOperators
 
-variable {V E R : Type*} [Fintype E] [Fintype R] (G : Multigraph V E)
+variable {V E R : Type*} [Fintype R] (G : Multigraph V E)
 
 abbrev BoundarySlots (B : R → Finset E) := (r : R) × ↥(B r)
 
 theorem boundarySlots_round_card (B : R → Finset E) (r : R) :
     (univ.filter (fun x : BoundarySlots B => x.1 = r)).card = (B r).card := by
   simp only [card_eq_sum_ones, sum_filter, Fintype.sum_sigma]
-  simp
+  simp [apply_ite]
 
 theorem boundarySlots_pool_card (B : R → Finset E) {P : Type*}
     (kind : BoundarySlots B → P) (pool : P → Finset E)
@@ -32,7 +32,8 @@ theorem boundarySlots_pool_card (B : R → Finset E) {P : Type*}
     Fintype.sum_sigma, hkind]
   apply sum_congr rfl
   intro r _
-  simp [← Finset.sum_attach]
+  simp [← Finset.filter_mem_eq_inter]
+  rw [filter_attach (fun e : E => e ∈ pool p) (B r), card_map, card_attach]
 
 theorem boundarySlots_round_pool_card (B : R → Finset E) {P : Type*}
     (kind : BoundarySlots B → P) (pool : P → Finset E)
@@ -40,7 +41,10 @@ theorem boundarySlots_round_pool_card (B : R → Finset E) {P : Type*}
     ((univ.filter (fun x : BoundarySlots B => x.1 = r)).filter
       (fun x => kind x = p)).card = (B r ∩ pool p).card := by
   simp only [card_eq_sum_ones, sum_filter, Fintype.sum_sigma, hkind]
-  simp [← Finset.sum_attach]
+  simp [← Finset.filter_mem_eq_inter]
+  rw [filter_attach (fun e : E => e ∈ pool p) (B r), card_map, card_attach]
+
+variable [Fintype E]
 
 theorem exists_family_avoiding_with_representative_pools
     (U₀ U₁ Z : Finset V) (C₀ : SmallCuts.Core G U₀) (C₁ : SmallCuts.Core G U₁)
@@ -64,7 +68,7 @@ theorem exists_family_avoiding_with_representative_pools
       (∀ r, Disjoint (F r) A) ∧
       (∀ r, Z ⊆ G.edgeSupport (F r)) ∧
       (∀ r, ∀ e ∈ F r, ∃ p, e ∈ poolCopies G U₀ U₁ Z p) ∧
-      (∀ r, (F r).card ≤ (B r).card) ∧
+      (∀ r, (F r).card = (B r).card) ∧
       (∀ r p, (F r ∩ poolCopies G U₀ U₁ Z p).card =
         (B r ∩ poolCopies G U₀ U₁ Z p).card) := by
   let pool := poolCopies G U₀ U₁ Z
@@ -109,8 +113,9 @@ theorem exists_family_avoiding_with_representative_pools
             k a hregular hdegree₁ ⟨v,hv⟩)
       · exact (hvZ hv).elim
   have hround (r : R) :
-      ∑ _x ∈ univ.filter (fun x : BoundarySlots B => x.1 = r), 2 ≤ 6 := by
-    simp only [sum_const_nat, boundarySlots_round_card]
+      ∑ _x ∈ univ.filter (fun x : BoundarySlots B => x.1 = r), (2 : ℕ) ≤ 6 := by
+    have := hcard r
+    simp only [sum_const, nsmul_eq_mul, boundarySlots_round_card, Nat.cast_id]
     omega
   have hcap (x : BoundarySlots B) :
       CircuitPatternRealization.demandCount kind (kind x) + 6 * ⌊a⌋₊ <
@@ -169,7 +174,7 @@ theorem exists_family_avoiding_with_representative_pools
     obtain ⟨x, _, rfl⟩ := (mem_chosenRound _ pick r e).mp he
     exact ⟨kind x, hpickPool x⟩
   · intro r
-    change ((univ.filter (fun x : BoundarySlots B => x.1 = r)).image pick).card ≤ _
+    change ((univ.filter (fun x : BoundarySlots B => x.1 = r)).image pick).card = _
     rw [card_image_of_injective _ hinj, boundarySlots_round_card]
   · intro r p
     change ((univ.filter (fun x : BoundarySlots B => x.1 = r)).image pick ∩ pool p).card = _
