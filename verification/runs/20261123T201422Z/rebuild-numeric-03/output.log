@@ -1,0 +1,30 @@
+✔ [3263/3265] Built Overfull.NativeReserve.Rounding (3.7s)
+✖ [3264/3265] Building Overfull.NativeReserve.RoundedPools (3.3s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5d2e6f7b5492/overfull-lean/Overfull/NativeReserve/RoundedPools.lean -o /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/RoundedPools.olean -i /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/RoundedPools.ilean -c /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/RoundedPools.c --setup /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/RoundedPools.setup.json --json
+error: Overfull/NativeReserve/RoundedPools.lean:57:39: failed to synthesize
+  Fintype (PoolKind Z)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/NativeReserve/RoundedPools.lean:58:6: failed to synthesize
+  Fintype (PoolKind Z)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/NativeReserve/RoundedPools.lean:57:81: unsolved goals
+V : Type u_1
+Z : Finset V
+⊢ sorry = 2 + 2 * #Z
+error: Overfull/NativeReserve/RoundedPools.lean:64:4: failed to synthesize
+  Fintype (PoolKind Z)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/NativeReserve/RoundedPools.lean:66:2: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 3
+  0 ≤ a ≤ 2
+where
+ a := ↑(#Z)
+ b := ↑(#?m.19)
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeReserve.RoundedPools
+error: build failed

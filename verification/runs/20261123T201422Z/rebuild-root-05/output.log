@@ -1,0 +1,14 @@
+✔ [3295/3297] Built Overfull.NativeReserve.CompletionCuts (2.0s)
+✖ [3296/3297] Building Overfull.NativeReserve.Construction (3.2s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5d2e6f7b5492/overfull-lean/Overfull/NativeReserve/Construction.lean -o /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/Construction.olean -i /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/Construction.ilean -c /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/Construction.c --setup /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/Construction.setup.json --json
+error: Overfull/NativeReserve/Construction.lean:43:36: Function expected at
+  BoundaryPacking
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  G
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeReserve.Construction
+error: build failed

@@ -1,0 +1,23 @@
+✖ [3261/3261] Building Overfull.NativeReserve.CompletionGlue (4.3s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5d2e6f7b5492/overfull-lean/Overfull/NativeReserve/CompletionGlue.lean -o /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/CompletionGlue.olean -i /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/CompletionGlue.ilean -c /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/CompletionGlue.c --setup /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/CompletionGlue.setup.json --json
+error: Overfull/NativeReserve/CompletionGlue.lean:123:11: Application type mismatch: The argument
+  hdisj hij
+has type
+  (fun i j => Disjoint (F i) (F j)) i j
+but is expected to have type
+  Disjoint (F i) (F j) ∧ Disjoint (coreMatchingCopies C₀ (N₀ i)) (F j)
+in the application
+  And.intro (hdisj hij)
+error: Overfull/NativeReserve/CompletionGlue.lean:124:6: Application type mismatch: The argument
+  Disjoint.symm (hF₀ j i)
+has type
+  Disjoint (coreMatchingCopies C₀ (N₀ i)) (F j)
+but is expected to have type
+  Disjoint (F i) (coreMatchingCopies C₁ (N₁ j))
+in the application
+  And.intro (Disjoint.symm (hF₀ j i))
+error: Overfull/NativeReserve/CompletionGlue.lean:124:81: unexpected token ','; expected command
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeReserve.CompletionGlue
+error: build failed

@@ -1624,7 +1624,170 @@
     "native_pattern_closure_80": "Overfull.AssignedParts.uses_coreCrossingPool_of_nonempty",
     "native_pattern_closure_81": "Overfull.AssignedParts.uses_exceptionCorePool_of_witness",
     "native_pattern_closure_82": "Overfull.Multigraph.IsMatching.degreeOn_sum_eq_covered",
-    "native_pattern_closure_83": "Overfull.Multigraph.IsMatching.uncovered_even_iff_cut_parity"
+    "native_pattern_closure_83": "Overfull.Multigraph.IsMatching.uncovered_even_iff_cut_parity",
+    "native_reserve_closure_1": "Overfull.NativeReserve.BoundaryPacking.assignedLabel",
+    "native_reserve_closure_2": "Overfull.NativeReserve.BoundaryPacking.card_le",
+    "native_reserve_closure_3": "Overfull.NativeReserve.BoundaryPacking.crossing_card",
+    "native_reserve_closure_4": "Overfull.NativeReserve.BoundaryPacking.exceptional_degree",
+    "native_reserve_closure_5": "Overfull.NativeReserve.BoundaryPacking.isMatching",
+    "native_reserve_closure_6": "Overfull.NativeReserve.BoundaryPacking.pairwise_disjoint",
+    "native_reserve_closure_7": "Overfull.NativeReserve.BoundaryPacking.reserved_card",
+    "native_reserve_closure_8": "Overfull.NativeReserve.BoundaryPacking.reserved_degree",
+    "native_reserve_closure_9": "Overfull.NativeReserve.BoundaryPacking.reserved_pool_card",
+    "native_reserve_closure_10": "Overfull.NativeReserve.BoundaryPacking.retains_internal_pairs",
+    "native_reserve_closure_11": "Overfull.NativeReserve.BoundaryPacking.uncovered_even",
+    "native_reserve_closure_12": "Overfull.NativeReserve.BoundaryPacking.unreserved_pool_accounting",
+    "native_reserve_closure_13": "Overfull.NativeReserve.BoundaryPacking.unreserved_pool_lower",
+    "native_reserve_closure_14": "Overfull.NativeReserve.accepted_family_boundary_properties",
+    "native_reserve_closure_15": "Overfull.NativeReserve.accepted_retainedDegree_bounds",
+    "native_reserve_closure_16": "Overfull.NativeReserve.augmentInCoreRemainder_robust",
+    "native_reserve_closure_17": "Overfull.NativeReserve.augmentInCore_removed_iff",
+    "native_reserve_closure_18": "Overfull.NativeReserve.boundarySlots_pool_card",
+    "native_reserve_closure_19": "Overfull.NativeReserve.boundarySlots_round_card",
+    "native_reserve_closure_20": "Overfull.NativeReserve.boundarySlots_round_pool_card",
+    "native_reserve_closure_21": "Overfull.NativeReserve.boundary_assignedLabel_eq_of_pool_counts",
+    "native_reserve_closure_22": "Overfull.NativeReserve.boundary_disjoint_core",
+    "native_reserve_closure_23": "Overfull.NativeReserve.boundary_signature_eq_of_pool_counts",
+    "native_reserve_closure_24": "Overfull.NativeReserve.boundary_whole_cut_eq_of_pool_counts",
+    "native_reserve_closure_25": "Overfull.NativeReserve.chosenRound_isMatching",
+    "native_reserve_closure_26": "Overfull.NativeReserve.chosenRound_pairwiseDisjoint",
+    "native_reserve_closure_27": "Overfull.NativeReserve.completedBoundary_added_internal",
+    "native_reserve_closure_28": "Overfull.NativeReserve.completedBoundary_avoids",
+    "native_reserve_closure_29": "Overfull.NativeReserve.completedBoundary_contains",
+    "native_reserve_closure_30": "Overfull.NativeReserve.completedBoundary_core\u2080_copy_iff",
+    "native_reserve_closure_31": "Overfull.NativeReserve.completedBoundary_core\u2081_copy_iff",
+    "native_reserve_closure_32": "Overfull.NativeReserve.completedBoundary_isMatching",
+    "native_reserve_closure_33": "Overfull.NativeReserve.completedBoundary_isPerfectMatching",
+    "native_reserve_closure_34": "Overfull.NativeReserve.completedBoundary_pairwiseDisjoint",
+    "native_reserve_closure_35": "Overfull.NativeReserve.completedBoundary_pool_eq",
+    "native_reserve_closure_36": "Overfull.NativeReserve.completed_native_cutOn_eq",
+    "native_reserve_closure_37": "Overfull.NativeReserve.completed_native_cut_count_eq_demand",
+    "native_reserve_closure_38": "Overfull.NativeReserve.completed_residual_whole_cutSize",
+    "native_reserve_closure_39": "Overfull.NativeReserve.completed_surviving_whole_cut_eq",
+    "native_reserve_closure_40": "Overfull.NativeReserve.completed_whole_cut_certificates",
+    "native_reserve_closure_41": "Overfull.NativeReserve.completion_admissibility_budgets",
+    "native_reserve_closure_42": "Overfull.NativeReserve.compressedBoundary_exists_pool",
+    "native_reserve_closure_43": "Overfull.NativeReserve.compressedBoundary_pool_usage",
+    "native_reserve_closure_44": "Overfull.NativeReserve.compressedBoundary_pool_usage_at_sample",
+    "native_reserve_closure_45": "Overfull.NativeReserve.compressedBoundary_whole_cut_parity",
+    "native_reserve_closure_46": "Overfull.NativeReserve.coreEdges_disjoint_of_vertices",
+    "native_reserve_closure_47": "Overfull.NativeReserve.coreEnds_card_le_two",
+    "native_reserve_closure_48": "Overfull.NativeReserve.coreFootprint_admissible",
+    "native_reserve_closure_49": "Overfull.NativeReserve.coreFootprint_card",
+    "native_reserve_closure_50": "Overfull.NativeReserve.coreFootprint_card_le_six",
+    "native_reserve_closure_51": "Overfull.NativeReserve.coreFootprint_compl_card",
+    "native_reserve_closure_52": "Overfull.NativeReserve.coreFootprint_load_eq",
+    "native_reserve_closure_53": "Overfull.NativeReserve.coreFootprint_load_le_error",
+    "native_reserve_closure_54": "Overfull.NativeReserve.coreFootprint_parity",
+    "native_reserve_closure_55": "Overfull.NativeReserve.corePart_eq_of_exception_pool_counts",
+    "native_reserve_closure_56": "Overfull.NativeReserve.crossingDemand_at_sample",
+    "native_reserve_closure_57": "Overfull.NativeReserve.cutOn_eq_inter",
+    "native_reserve_closure_58": "Overfull.NativeReserve.cut_toggle",
+    "native_reserve_closure_59": "Overfull.NativeReserve.degree_le_twice_order",
+    "native_reserve_closure_60": "Overfull.NativeReserve.denseMultiplicity_le",
+    "native_reserve_closure_61": "Overfull.NativeReserve.denseMultiplicity_pos_pool",
+    "native_reserve_closure_62": "Overfull.NativeReserve.dense_discard_bound",
+    "native_reserve_closure_63": "Overfull.NativeReserve.dense_prefix_pool_demand",
+    "native_reserve_closure_64": "Overfull.NativeReserve.dense_prefix_pool_demand_reserved",
+    "native_reserve_closure_65": "Overfull.NativeReserve.dense_retainedDegree_bounds",
+    "native_reserve_closure_66": "Overfull.NativeReserve.even_uncovered_whole_union",
+    "native_reserve_closure_67": "Overfull.NativeReserve.exceptionDemand_weight_eq_pool",
+    "native_reserve_closure_68": "Overfull.NativeReserve.exists_accepted_family_avoiding_reserve",
+    "native_reserve_closure_69": "Overfull.NativeReserve.exists_boundaryPacking",
+    "native_reserve_closure_70": "Overfull.NativeReserve.exists_completion_parameters",
+    "native_reserve_closure_71": "Overfull.NativeReserve.exists_completion_setup_parameters",
+    "native_reserve_closure_72": "Overfull.NativeReserve.exists_disjoint_selected_family",
+    "native_reserve_closure_73": "Overfull.NativeReserve.exists_family_avoiding_with_representative_pools",
+    "native_reserve_closure_74": "Overfull.NativeReserve.exists_linear_boundary_reserve",
+    "native_reserve_closure_75": "Overfull.NativeReserve.exists_native_reserve_completion_parameters",
+    "native_reserve_closure_76": "Overfull.NativeReserve.exists_rounded_boundary_reserve",
+    "native_reserve_closure_77": "Overfull.NativeReserve.exists_rounded_signature_choice",
+    "native_reserve_closure_78": "Overfull.NativeReserve.exists_sample_avoiding",
+    "native_reserve_closure_79": "Overfull.NativeReserve.familyMultiplicity_pos",
+    "native_reserve_closure_80": "Overfull.NativeReserve.familyMultiplicity_statistic",
+    "native_reserve_closure_81": "Overfull.NativeReserve.familyMultiplicity_sum",
+    "native_reserve_closure_82": "Overfull.NativeReserve.family_card_le_degree",
+    "native_reserve_closure_83": "Overfull.NativeReserve.glue_two_core_packings",
+    "native_reserve_closure_84": "Overfull.NativeReserve.internalDemand_weight_eq_pool",
+    "native_reserve_closure_85": "Overfull.NativeReserve.linear_boundary_reserve_bounds",
+    "native_reserve_closure_86": "Overfull.NativeReserve.margin_of_degree_upper",
+    "native_reserve_closure_87": "Overfull.NativeReserve.mem_chosenRound",
+    "native_reserve_closure_88": "Overfull.NativeReserve.mem_coreEnds",
+    "native_reserve_closure_89": "Overfull.NativeReserve.mem_coreFootprint",
+    "native_reserve_closure_90": "Overfull.NativeReserve.mem_coreMatchingCopies_of_embedded",
+    "native_reserve_closure_91": "Overfull.NativeReserve.mem_removedCopies",
+    "native_reserve_closure_92": "Overfull.NativeReserve.mem_specialEnds",
+    "native_reserve_closure_93": "Overfull.NativeReserve.multiplicity_le_scaled",
+    "native_reserve_closure_94": "Overfull.NativeReserve.multiplicity_le_weight",
+    "native_reserve_closure_95": "Overfull.NativeReserve.multiplicity_pos_witness",
+    "native_reserve_closure_96": "Overfull.NativeReserve.native_boundary_reserve_selection",
+    "native_reserve_closure_97": "Overfull.NativeReserve.native_cut_count_eq_demand",
+    "native_reserve_closure_98": "Overfull.NativeReserve.native_cut_count_eq_sum_pools",
+    "native_reserve_closure_99": "Overfull.NativeReserve.native_pool_cut_card",
+    "native_reserve_closure_100": "Overfull.NativeReserve.native_residual_no_overfull",
+    "native_reserve_closure_101": "Overfull.NativeReserve.no_overfull_of_whole_cut_bounds",
+    "native_reserve_closure_102": "Overfull.NativeReserve.originalCores_disjoint",
+    "native_reserve_closure_103": "Overfull.NativeReserve.originalCores_disjoint_exceptions",
+    "native_reserve_closure_104": "Overfull.NativeReserve.originalCores_whole",
+    "native_reserve_closure_105": "Overfull.NativeReserve.pack_original_core",
+    "native_reserve_closure_106": "Overfull.NativeReserve.packingCopy_survives_iff",
+    "native_reserve_closure_107": "Overfull.NativeReserve.packingRemainderCore_degree_lower",
+    "native_reserve_closure_108": "Overfull.NativeReserve.packingRemainderCore_edgeMap_val",
+    "native_reserve_closure_109": "Overfull.NativeReserve.packingRemainderCore_graph",
+    "native_reserve_closure_110": "Overfull.NativeReserve.packingRemainderCore_robust",
+    "native_reserve_closure_111": "Overfull.NativeReserve.packing_density_and_horizon",
+    "native_reserve_closure_112": "Overfull.NativeReserve.patternCopies_familyMultiplicity",
+    "native_reserve_closure_113": "Overfull.NativeReserve.poolCopies_cut_uniform",
+    "native_reserve_closure_114": "Overfull.NativeReserve.poolCopies_disjoint_core",
+    "native_reserve_closure_115": "Overfull.NativeReserve.poolCopies_pairwiseDisjoint",
+    "native_reserve_closure_116": "Overfull.NativeReserve.poolCopies_specialEnds",
+    "native_reserve_closure_117": "Overfull.NativeReserve.poolCutIndicator_eq_one_iff",
+    "native_reserve_closure_118": "Overfull.NativeReserve.poolCutIndicator_le_one",
+    "native_reserve_closure_119": "Overfull.NativeReserve.poolDemand_le_one",
+    "native_reserve_closure_120": "Overfull.NativeReserve.poolDemand_weight_capacity",
+    "native_reserve_closure_121": "Overfull.NativeReserve.poolKind_card",
+    "native_reserve_closure_122": "Overfull.NativeReserve.poolKind_card_le_six",
+    "native_reserve_closure_123": "Overfull.NativeReserve.pool_core_incidence_le_error",
+    "native_reserve_closure_124": "Overfull.NativeReserve.prefix_pool_demand_reserved",
+    "native_reserve_closure_125": "Overfull.NativeReserve.prefix_pool_reserve",
+    "native_reserve_closure_126": "Overfull.NativeReserve.prefix_signature_reserve",
+    "native_reserve_closure_127": "Overfull.NativeReserve.protectedMultiplicity_cut_zero",
+    "native_reserve_closure_128": "Overfull.NativeReserve.protectedMultiplicity_eq_accepted",
+    "native_reserve_closure_129": "Overfull.NativeReserve.protectedMultiplicity_le_dense",
+    "native_reserve_closure_130": "Overfull.NativeReserve.protected_cut_discard_bound",
+    "native_reserve_closure_131": "Overfull.NativeReserve.protected_retainedDegree_bounds",
+    "native_reserve_closure_132": "Overfull.NativeReserve.realized_sample_boundary_properties",
+    "native_reserve_closure_133": "Overfull.NativeReserve.regular_odd_cut_lower",
+    "native_reserve_closure_134": "Overfull.NativeReserve.removed_degreeOn",
+    "native_reserve_closure_135": "Overfull.NativeReserve.removed_pool_card",
+    "native_reserve_closure_136": "Overfull.NativeReserve.reserveSize_le_third",
+    "native_reserve_closure_137": "Overfull.NativeReserve.reserveSize_le_weight",
+    "native_reserve_closure_138": "Overfull.NativeReserve.residual_cutIncidence",
+    "native_reserve_closure_139": "Overfull.NativeReserve.residual_cutSize",
+    "native_reserve_closure_140": "Overfull.NativeReserve.residual_cut_accounting",
+    "native_reserve_closure_141": "Overfull.NativeReserve.residual_cut_pool_unchanged",
+    "native_reserve_closure_142": "Overfull.NativeReserve.residual_degree_accounting",
+    "native_reserve_closure_143": "Overfull.NativeReserve.residual_no_overfull",
+    "native_reserve_closure_144": "Overfull.NativeReserve.residual_no_overfull_of_pattern_counts",
+    "native_reserve_closure_145": "Overfull.NativeReserve.residual_pattern_cut_accounting",
+    "native_reserve_closure_146": "Overfull.NativeReserve.residual_pattern_pool_accounting",
+    "native_reserve_closure_147": "Overfull.NativeReserve.residual_pattern_pool_lower",
+    "native_reserve_closure_148": "Overfull.NativeReserve.residual_pool_accounting",
+    "native_reserve_closure_149": "Overfull.NativeReserve.residual_proposed_cut_dichotomy",
+    "native_reserve_closure_150": "Overfull.NativeReserve.residual_regular",
+    "native_reserve_closure_151": "Overfull.NativeReserve.residual_weighted_odd_cut",
+    "native_reserve_closure_152": "Overfull.NativeReserve.residual_whole_toggles_safe",
+    "native_reserve_closure_153": "Overfull.NativeReserve.retainedDegree_bounds",
+    "native_reserve_closure_154": "Overfull.NativeReserve.signatureWeight_mul_poolDemand_le",
+    "native_reserve_closure_155": "Overfull.NativeReserve.three_mul_reserveSize_le_weight",
+    "native_reserve_closure_156": "Overfull.NativeReserve.toggle_safe_of_incidence",
+    "native_reserve_closure_157": "Overfull.NativeReserve.toggle_safe_of_preserved_cut",
+    "native_reserve_closure_158": "Overfull.NativeReserve.two_core_wholeUnions_card",
+    "native_reserve_closure_159": "Overfull.NativeReserve.wholeCutDemand_at_sample",
+    "native_reserve_closure_160": "Overfull.NativeReserve.wholeCutDemand_capacity",
+    "native_reserve_closure_161": "Overfull.NativeReserve.wholeCutDemand_odd_positive",
+    "native_reserve_closure_162": "Overfull.NativeReserve.whole_core_membership_iff",
+    "native_reserve_closure_163": "Overfull.NativeReserve.whole_cut_core_incidence"
   },
   "lean_build_passed": true,
   "axiom_audit_passed": true,
@@ -2061,7 +2224,7 @@
     "Classical.choice",
     "Quot.sound"
   ],
-  "verified_declaration_count": 12055,
+  "verified_declaration_count": 12391,
   "declaration_count_includes_generated_support_lemmas": true,
   "verified_declarations": [
     {
@@ -8887,6 +9050,15 @@
       ],
       "module": "Overfull.AssignedParts.CompressionCuts",
       "name": "Overfull.AssignedParts.compressedBoundary_uncovered_even_first"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.AssignedParts.coreCrossingPool.eq_1"
     },
     {
       "axioms": [
@@ -26292,6 +26464,15 @@
       ],
       "module": "Overfull.CircuitPatterns.Realization",
       "name": "Overfull.CircuitPatternRealization.coreEnds_card_add"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Schedule",
+      "name": "Overfull.CircuitPatternRealization.demandCount.eq_1"
     },
     {
       "axioms": [
@@ -62994,6 +63175,15 @@
     },
     {
       "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.Multigraph.firstEnd.eq_1"
+    },
+    {
+      "axioms": [
         "propext",
         "Quot.sound",
         "Classical.choice"
@@ -64434,6 +64624,15 @@
     },
     {
       "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.Multigraph.secondEnd.eq_1"
+    },
+    {
+      "axioms": [
         "propext",
         "Quot.sound",
         "Classical.choice"
@@ -65440,6 +65639,2728 @@
       ],
       "module": "Overfull.MultigraphMatchingProbability",
       "name": "Overfull.MultigraphMatchingProbability.total_incidence"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.assignedLabel"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.boundary.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.card_le"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.crossing_card"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.disjoint"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.exceptional_degree"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.isMatching"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.mk.inj"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.mk.injEq"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.pairwise_disjoint"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.perfect"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedPacking",
+      "name": "Overfull.NativeReserve.BoundaryPacking.reservedCopies.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedPacking",
+      "name": "Overfull.NativeReserve.BoundaryPacking.reserved_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedPacking",
+      "name": "Overfull.NativeReserve.BoundaryPacking.reserved_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedPacking",
+      "name": "Overfull.NativeReserve.BoundaryPacking.reserved_pool_card"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.retains_internal_pairs"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.sameSignature"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.BoundaryPacking.uncovered_even"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedPacking",
+      "name": "Overfull.NativeReserve.BoundaryPacking.unreserved_pool_accounting"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedPacking",
+      "name": "Overfull.NativeReserve.BoundaryPacking.unreserved_pool_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.PoolKind.crossing.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.PoolKind.exception.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.PoolKind.exception.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.PoolKind.exception.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.PoolKind.pair.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.BoundaryProperties",
+      "name": "Overfull.NativeReserve.accepted_family_boundary_properties"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Rounding",
+      "name": "Overfull.NativeReserve.accepted_retainedDegree_bounds"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.augmentInCoreRemainder_robust"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.augmentInCore_removed_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.augmentInCore_removed_iff._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.augmentInCore_removed_iff._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Schedule",
+      "name": "Overfull.NativeReserve.boundarySlots_pool_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Schedule",
+      "name": "Overfull.NativeReserve.boundarySlots_pool_card._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Schedule",
+      "name": "Overfull.NativeReserve.boundarySlots_round_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Schedule",
+      "name": "Overfull.NativeReserve.boundarySlots_round_pool_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Schedule",
+      "name": "Overfull.NativeReserve.boundarySlots_round_pool_card._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.BoundaryProperties",
+      "name": "Overfull.NativeReserve.boundary_assignedLabel_eq_of_pool_counts"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionFootprints",
+      "name": "Overfull.NativeReserve.boundary_disjoint_core"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.BoundaryProperties",
+      "name": "Overfull.NativeReserve.boundary_signature_eq_of_pool_counts"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.BoundaryProperties",
+      "name": "Overfull.NativeReserve.boundary_whole_cut_eq_of_pool_counts"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Realization",
+      "name": "Overfull.NativeReserve.chosenRound.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Realization",
+      "name": "Overfull.NativeReserve.chosenRound_isMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Realization",
+      "name": "Overfull.NativeReserve.chosenRound_pairwiseDisjoint"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_added_internal"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_avoids"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_avoids._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_contains"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_core\u2080_copy_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_core\u2080_copy_iff._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_core\u2081_copy_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_core\u2081_copy_iff._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_isMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_isMatching._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_isPerfectMatching"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_pairwiseDisjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_pairwiseDisjoint._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_pairwiseDisjoint._simp_1_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.completedBoundary_pool_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.completed_native_cutOn_eq"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.completed_native_cutOn_eq._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.completed_native_cut_count_eq_demand"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionCuts",
+      "name": "Overfull.NativeReserve.completed_residual_whole_cutSize"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionCuts",
+      "name": "Overfull.NativeReserve.completed_surviving_whole_cut_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionCuts",
+      "name": "Overfull.NativeReserve.completed_whole_cut_certificates"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.completion_admissibility_budgets"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.compressedBoundary_exists_pool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.compressedBoundary_pool_usage"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.compressedBoundary_pool_usage_at_sample"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.compressedBoundary_whole_cut_parity"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.coreEdges_disjoint_of_vertices"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Realization",
+      "name": "Overfull.NativeReserve.coreEnds.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Realization",
+      "name": "Overfull.NativeReserve.coreEnds_card_le_two"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionFootprints",
+      "name": "Overfull.NativeReserve.coreFootprint.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionFootprints",
+      "name": "Overfull.NativeReserve.coreFootprint_admissible"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionFootprints",
+      "name": "Overfull.NativeReserve.coreFootprint_card"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionFootprints",
+      "name": "Overfull.NativeReserve.coreFootprint_card_le_six"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionFootprints",
+      "name": "Overfull.NativeReserve.coreFootprint_compl_card"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionFootprints",
+      "name": "Overfull.NativeReserve.coreFootprint_load_eq"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionFootprints",
+      "name": "Overfull.NativeReserve.coreFootprint_load_le_error"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionFootprints",
+      "name": "Overfull.NativeReserve.coreFootprint_parity"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionFootprints",
+      "name": "Overfull.NativeReserve.coreFootprint_parity._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.BoundaryProperties",
+      "name": "Overfull.NativeReserve.corePart_eq_of_exception_pool_counts"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.BoundaryProperties",
+      "name": "Overfull.NativeReserve.corePart_eq_of_exception_pool_counts._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.crossingDemand.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.crossingDemand_at_sample"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.cutIncidence.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.cutOn_eq_inter"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.cut_toggle"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.degree_le_twice_order"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.DenseSelection",
+      "name": "Overfull.NativeReserve.denseMultiplicity.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.DenseSelection",
+      "name": "Overfull.NativeReserve.denseMultiplicity_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.DenseSelection",
+      "name": "Overfull.NativeReserve.denseMultiplicity_pos_pool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.DenseSelection",
+      "name": "Overfull.NativeReserve.denseMultiplicity_pos_pool._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.DenseSelection",
+      "name": "Overfull.NativeReserve.dense_discard_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.DenseSelection",
+      "name": "Overfull.NativeReserve.dense_discard_bound._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.DenseSelection",
+      "name": "Overfull.NativeReserve.dense_prefix_pool_demand"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.DenseSelection",
+      "name": "Overfull.NativeReserve.dense_prefix_pool_demand_reserved"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.DenseSelection",
+      "name": "Overfull.NativeReserve.dense_retainedDegree_bounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.even_uncovered_whole_union"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.even_uncovered_whole_union._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.even_uncovered_whole_union._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.even_uncovered_whole_union._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.exceptionDemand.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.exceptionDemand_weight_eq_pool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.AcceptedRealization",
+      "name": "Overfull.NativeReserve.exists_accepted_family_avoiding_reserve"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.AcceptedRealization",
+      "name": "Overfull.NativeReserve.exists_accepted_family_avoiding_reserve._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.exists_boundaryPacking"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.exists_boundaryPacking._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.exists_boundaryPacking._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.exists_completion_parameters"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.exists_completion_parameters._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.exists_completion_setup_parameters"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.exists_completion_setup_parameters._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.WeightedPacking",
+      "name": "Overfull.NativeReserve.exists_disjoint_selected_family"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Schedule",
+      "name": "Overfull.NativeReserve.exists_family_avoiding_with_representative_pools"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Schedule",
+      "name": "Overfull.NativeReserve.exists_family_avoiding_with_representative_pools._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.exists_linear_boundary_reserve"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.exists_linear_boundary_reserve._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CompletionConstruction",
+      "name": "Overfull.NativeReserve.exists_native_reserve_completion_parameters"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CompletionConstruction",
+      "name": "Overfull.NativeReserve.exists_native_reserve_completion_parameters._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionConstruction",
+      "name": "Overfull.NativeReserve.exists_native_reserve_completion_parameters._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionConstruction",
+      "name": "Overfull.NativeReserve.exists_native_reserve_completion_parameters._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CompletionConstruction",
+      "name": "Overfull.NativeReserve.exists_native_reserve_completion_parameters._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionConstruction",
+      "name": "Overfull.NativeReserve.exists_native_reserve_completion_parameters._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CompletionConstruction",
+      "name": "Overfull.NativeReserve.exists_native_reserve_completion_parameters._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedPacking",
+      "name": "Overfull.NativeReserve.exists_rounded_boundary_reserve"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Rounding",
+      "name": "Overfull.NativeReserve.exists_rounded_signature_choice"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Rounding",
+      "name": "Overfull.NativeReserve.exists_rounded_signature_choice._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.WeightedPacking",
+      "name": "Overfull.NativeReserve.exists_sample_avoiding"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.WeightedSafety",
+      "name": "Overfull.NativeReserve.familyMultiplicity.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.WeightedSafety",
+      "name": "Overfull.NativeReserve.familyMultiplicity_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.WeightedSafety",
+      "name": "Overfull.NativeReserve.familyMultiplicity_statistic"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeReserve.WeightedSafety",
+      "name": "Overfull.NativeReserve.familyMultiplicity_statistic._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.WeightedSafety",
+      "name": "Overfull.NativeReserve.familyMultiplicity_sum"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.family_card_le_degree"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.family_card_le_degree._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.glue_two_core_packings"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.instDecidableEqPoolKind.decEq._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.instDecidableEqPoolKind.decEq._proof_10"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.instDecidableEqPoolKind.decEq._proof_11"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.instDecidableEqPoolKind.decEq._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.instDecidableEqPoolKind.decEq._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.instDecidableEqPoolKind.decEq._proof_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.instDecidableEqPoolKind.decEq._proof_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.instDecidableEqPoolKind.decEq._proof_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.instDecidableEqPoolKind.decEq._proof_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.instDecidableEqPoolKind.decEq._proof_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.instDecidableEqPoolKind.decEq._proof_9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.internalDemand.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.internalDemand_weight_eq_pool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "name": "Overfull.NativeReserve.linear_boundary_reserve_bounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.margin_of_degree_upper"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.margin_of_degree_upper._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.margin_of_degree_upper._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.margin_of_degree_upper._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.margin_of_degree_upper._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.margin_of_degree_upper._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.margin_of_degree_upper._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.margin_of_degree_upper._simp_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Realization",
+      "name": "Overfull.NativeReserve.mem_chosenRound"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Realization",
+      "name": "Overfull.NativeReserve.mem_coreEnds"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Realization",
+      "name": "Overfull.NativeReserve.mem_coreEnds._simp_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionFootprints",
+      "name": "Overfull.NativeReserve.mem_coreFootprint"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionFootprints",
+      "name": "Overfull.NativeReserve.mem_coreFootprint._simp_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "Overfull.NativeReserve.mem_coreMatchingCopies_of_embedded"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.mem_removedCopies"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.mem_removedCopies._simp_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Realization",
+      "name": "Overfull.NativeReserve.mem_specialEnds"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Realization",
+      "name": "Overfull.NativeReserve.mem_specialEnds._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Rounding",
+      "name": "Overfull.NativeReserve.multiplicity_le_scaled"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Rounding",
+      "name": "Overfull.NativeReserve.multiplicity_le_weight"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Rounding",
+      "name": "Overfull.NativeReserve.multiplicity_pos_witness"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Construction",
+      "name": "Overfull.NativeReserve.native_boundary_reserve_selection"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Construction",
+      "name": "Overfull.NativeReserve.native_boundary_reserve_selection._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Construction",
+      "name": "Overfull.NativeReserve.native_boundary_reserve_selection._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.native_cut_count_eq_demand"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.native_cut_count_eq_sum_pools"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.native_cut_count_eq_sum_pools._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.native_cut_count_eq_sum_pools._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.native_cut_count_eq_sum_pools._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.native_cut_count_eq_sum_pools._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.native_pool_cut_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.native_residual_no_overfull"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.no_overfull_of_whole_cut_bounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.no_overfull_of_whole_cut_bounds._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.originalCores._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.originalCores.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.originalCores_disjoint"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.originalCores_disjoint._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.originalCores_disjoint_exceptions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.originalCores_whole"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CorePacking",
+      "name": "Overfull.NativeReserve.pack_original_core"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.packingCopy_survives_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.packingCopy_survives_iff._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.packingRemainderCore._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.packingRemainderCore._proof_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.packingRemainderCore._proof_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.packingRemainderCore_degree_lower"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.packingRemainderCore_edgeMap_val"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.packingRemainderCore_graph"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.packingRemainderCore_robust"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "name": "Overfull.NativeReserve.packing_density_and_horizon"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Construction",
+      "name": "Overfull.NativeReserve.patternCopies_familyMultiplicity"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.poolCopies._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.BoundaryProperties",
+      "name": "Overfull.NativeReserve.poolCopies.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.BoundaryProperties",
+      "name": "Overfull.NativeReserve.poolCopies.eq_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.BoundaryProperties",
+      "name": "Overfull.NativeReserve.poolCopies.eq_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.poolCopies_cut_uniform"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.poolCopies_cut_uniform._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.poolCopies_disjoint_core"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.poolCopies_pairwiseDisjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.poolCopies_pairwiseDisjoint._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.poolCopies_pairwiseDisjoint._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.poolCopies_pairwiseDisjoint._proof_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.poolCopies_pairwiseDisjoint._proof_1_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.poolCopies_pairwiseDisjoint._proof_1_9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.poolCopies_specialEnds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.poolCopies_specialEnds._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.poolCopies_specialEnds._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.poolCutIndicator.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.poolCutIndicator_eq_one_iff"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.poolCutIndicator_eq_one_iff._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.poolCutIndicator_le_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.poolCutIndicator_le_one._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.poolCutIndicator_le_one._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.poolDemand.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.poolDemand.eq_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.poolDemand.eq_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.poolDemand_le_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.poolDemand_le_one._proof_1_10"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.poolDemand_le_one._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.poolDemand_le_one._proof_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.poolDemand_weight_capacity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.poolKind_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.poolKind_card._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.poolKind_card_le_six"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.poolKind_card_le_six._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.poolSpecial.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.poolSpecial.eq_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.poolSpecial.eq_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "Overfull.NativeReserve.pool_core_incidence_le_error"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.prefix_pool_demand_reserved"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.prefix_pool_reserve"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Rounding",
+      "name": "Overfull.NativeReserve.prefix_signature_reserve"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedSelection",
+      "name": "Overfull.NativeReserve.protectedMultiplicity_cut_zero"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedSelection",
+      "name": "Overfull.NativeReserve.protectedMultiplicity_eq_accepted"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedSelection",
+      "name": "Overfull.NativeReserve.protectedMultiplicity_le_dense"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedSelection",
+      "name": "Overfull.NativeReserve.protected_cut_discard_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedSelection",
+      "name": "Overfull.NativeReserve.protected_cut_discard_bound._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedSelection",
+      "name": "Overfull.NativeReserve.protected_retainedDegree_bounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.BoundaryProperties",
+      "name": "Overfull.NativeReserve.realized_sample_boundary_properties"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.regular_odd_cut_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.regular_odd_cut_lower._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.removedCopies.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.removed_degreeOn"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.removed_degreeOn._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.removed_degreeOn._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.removed_pool_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.removed_pool_card._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.removed_pool_card._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Rounding",
+      "name": "Overfull.NativeReserve.reserveSize._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Rounding",
+      "name": "Overfull.NativeReserve.reserveSize_le_third"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Rounding",
+      "name": "Overfull.NativeReserve.reserveSize_le_weight"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.residualGraph.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.residual_cutIncidence"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.residual_cutIncidence._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.residual_cutIncidence._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.residual_cutIncidence._simp_1_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.residual_cutIncidence._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.residual_cutIncidence._simp_1_5"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.residual_cutSize"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.residual_cutSize._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.residual_cut_accounting"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.residual_cut_pool_unchanged"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.residual_degree_accounting"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.residual_no_overfull"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.WeightedSafety",
+      "name": "Overfull.NativeReserve.residual_no_overfull_of_pattern_counts"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.WeightedSafety",
+      "name": "Overfull.NativeReserve.residual_pattern_cut_accounting"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.WeightedSafety",
+      "name": "Overfull.NativeReserve.residual_pattern_pool_accounting"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.WeightedSafety",
+      "name": "Overfull.NativeReserve.residual_pattern_pool_lower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.residual_pool_accounting"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.WeightedSafety",
+      "name": "Overfull.NativeReserve.residual_proposed_cut_dichotomy"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.WeightedSafety",
+      "name": "Overfull.NativeReserve.residual_proposed_cut_dichotomy._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.residual_regular"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Residual",
+      "name": "Overfull.NativeReserve.residual_regular._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.WeightedSafety",
+      "name": "Overfull.NativeReserve.residual_weighted_odd_cut"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.residual_whole_toggles_safe"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Rounding",
+      "name": "Overfull.NativeReserve.retainedDegree.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Rounding",
+      "name": "Overfull.NativeReserve.retainedDegree_bounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "Overfull.NativeReserve.signatureWeight_mul_poolDemand_le"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedSelection",
+      "name": "Overfull.NativeReserve.smallEvenWholeCut._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Realization",
+      "name": "Overfull.NativeReserve.specialEnds.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.subcoreInNativeResidual._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.subcoreInNativeResidual._proof_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "name": "Overfull.NativeReserve.subcoreInNativeResidual._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.Rounding",
+      "name": "Overfull.NativeReserve.three_mul_reserveSize_le_weight"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.toggle_safe_of_incidence"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.toggle_safe_of_incidence._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.toggle_safe_of_preserved_cut"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.toggle_safe_of_preserved_cut._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedSelection",
+      "name": "Overfull.NativeReserve.two_core_wholeUnions_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedSelection",
+      "name": "Overfull.NativeReserve.two_core_wholeUnions_card._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.ProtectedSelection",
+      "name": "Overfull.NativeReserve.two_core_wholeUnions_card._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.wholeCutDemand_at_sample"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.wholeCutDemand_capacity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.wholeCutDemand_odd_positive"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "Overfull.NativeReserve.wholeCutDemand_odd_positive._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.whole_core_membership_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CutSafety",
+      "name": "Overfull.NativeReserve.whole_cut_core_incidence"
     },
     {
       "axioms": [
@@ -102240,6 +105161,179 @@
     {
       "axioms": [
         "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.BoundaryProperties",
+      "name": "_private.Overfull.NativeReserve.BoundaryProperties.0.Overfull.NativeReserve.instFintypePoolKind.match_5.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.BoundaryProperties",
+      "name": "_private.Overfull.NativeReserve.BoundaryProperties.0.Overfull.NativeReserve.instFintypePoolKind.match_5.eq_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.BoundaryProperties",
+      "name": "_private.Overfull.NativeReserve.BoundaryProperties.0.Overfull.NativeReserve.instFintypePoolKind.match_5.eq_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "_private.Overfull.NativeReserve.CompletionGlue.0.Overfull.NativeReserve.boundary_core_no_common"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "name": "_private.Overfull.NativeReserve.CompletionGlue.0.Overfull.NativeReserve.two_core_no_common"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "_private.Overfull.NativeReserve.Greedy.0.Overfull.NativeReserve.core_choice_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "_private.Overfull.NativeReserve.Greedy.0.Overfull.NativeReserve.instFintypePoolKind.match_5.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "_private.Overfull.NativeReserve.Greedy.0.Overfull.NativeReserve.instFintypePoolKind.match_5.eq_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.Greedy",
+      "name": "_private.Overfull.NativeReserve.Greedy.0.Overfull.NativeReserve.instFintypePoolKind.match_5.eq_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "_private.Overfull.NativeReserve.NativeCutWeights.0.Overfull.NativeReserve.cut_membership_of_edge_eq"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "name": "_private.Overfull.NativeReserve.NativeCutWeights.0.Overfull.NativeReserve.cut_membership_of_edge_eq._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "_private.Overfull.NativeReserve.RoundedPools.0.Overfull.NativeReserve.compressed_inter_exception_pool"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "_private.Overfull.NativeReserve.RoundedPools.0.Overfull.NativeReserve.inter_coreCrossingPool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "_private.Overfull.NativeReserve.RoundedPools.0.Overfull.NativeReserve.inter_coreCrossingPool._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "_private.Overfull.NativeReserve.RoundedPools.0.Overfull.NativeReserve.inter_coreCrossingPool._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "_private.Overfull.NativeReserve.RoundedPools.0.Overfull.NativeReserve.inter_coreCrossingPool._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "_private.Overfull.NativeReserve.RoundedPools.0.Overfull.NativeReserve.poolDemand.match_1.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "_private.Overfull.NativeReserve.RoundedPools.0.Overfull.NativeReserve.poolDemand.match_1.eq_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "_private.Overfull.NativeReserve.RoundedPools.0.Overfull.NativeReserve.poolDemand.match_1.eq_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "_private.Overfull.NativeReserve.RoundedPools.0.Overfull.NativeReserve.poolKindEquiv._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "name": "_private.Overfull.NativeReserve.RoundedPools.0.Overfull.NativeReserve.poolKindEquiv._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
         "Classical.choice",
         "Quot.sound"
       ],
@@ -105327,6 +108421,30 @@
     "Overfull.MultigraphFanApplications",
     "Overfull.MultigraphGreedy",
     "Overfull.MultigraphMatchingProbability",
+    "Overfull.NativeReserve.AcceptedRealization",
+    "Overfull.NativeReserve.BoundaryProperties",
+    "Overfull.NativeReserve.CompletionConstruction",
+    "Overfull.NativeReserve.CompletionCuts",
+    "Overfull.NativeReserve.CompletionFootprints",
+    "Overfull.NativeReserve.CompletionGlue",
+    "Overfull.NativeReserve.CompletionParameters",
+    "Overfull.NativeReserve.Construction",
+    "Overfull.NativeReserve.CorePacking",
+    "Overfull.NativeReserve.CutSafety",
+    "Overfull.NativeReserve.DenseSelection",
+    "Overfull.NativeReserve.Greedy",
+    "Overfull.NativeReserve.NativeCutWeights",
+    "Overfull.NativeReserve.PackingConstruction",
+    "Overfull.NativeReserve.ProtectedPacking",
+    "Overfull.NativeReserve.ProtectedSelection",
+    "Overfull.NativeReserve.Realization",
+    "Overfull.NativeReserve.Residual",
+    "Overfull.NativeReserve.RetainedCore",
+    "Overfull.NativeReserve.RoundedPools",
+    "Overfull.NativeReserve.Rounding",
+    "Overfull.NativeReserve.Schedule",
+    "Overfull.NativeReserve.WeightedPacking",
+    "Overfull.NativeReserve.WeightedSafety",
     "Overfull.OneCore.ApexChoices",
     "Overfull.OneCore.Complement",
     "Overfull.OneCore.Cuts",
@@ -105652,6 +108770,14 @@
     "verified_declaration_count": 128,
     "numbered_assertions_completed": 0
   },
+  "native_reserve_declaration_map": {
+    "path": "verification/native-reserve-declarations.json",
+    "sha256": "75a98354399fa4b2d95e2646e5ec24f737d2f5ee7b16318a9ba3dcb11f19a4cf",
+    "module_count": 24,
+    "public_theorem_count": 163,
+    "verified_declaration_count": 336,
+    "numbered_assertions_completed": 0
+  },
   "checkpoint_reconstruction": {
     "original_checkpoint": "cb05ef5f5b7ef5ada4e535e9dcc652eecaddc43e",
     "original_tree_reproduced": false,
@@ -105660,7 +108786,7 @@
     "fresh_build_and_audit": true
   },
   "source_sha256": {
-    "Overfull.lean": "9902329d332ac220c1ea75a334a7546a8529212ed1ba45401cdf389a4e93f34b",
+    "Overfull.lean": "f8f137302a0cc7d0d6d5c2f97fbbc9f6b46bf8441c534fb64c8d22e809bfcf84",
     "Audit.lean": "76886fd9261a3a7b07660f9a434272c0347130a4013cf57da6e1761a34fc6603",
     "Overfull/Absorption/Bounded.lean": "722ca71ecdc9b0f4c17b400c32d51a284d9eac61211e1a52e448fcc8f5bb2f52",
     "Overfull/Absorption/Core.lean": "1f5f39cd8497918341bf336db7f1735b131c9f564077b158b7245fbb474a0946",
@@ -105994,6 +109120,30 @@
     "Overfull/MultigraphFanApplications.lean": "4c351e024b6d515c77aab5d76f66f954200b0373cc35243b00f8092b01d95a2b",
     "Overfull/MultigraphGreedy.lean": "aeaadd9a5c1beef6c2825bf840b369e80f505767e33c043740c7c56b5f519473",
     "Overfull/MultigraphMatchingProbability.lean": "376fda0fa9f99763af1d638879f380e89d29ade6671d30f16445ce2911fec527",
+    "Overfull/NativeReserve/AcceptedRealization.lean": "c566a01ed8c8fc1dcb61ba9082b2f9f44d3afe46503913bc05a5a5b36e8b805b",
+    "Overfull/NativeReserve/BoundaryProperties.lean": "e906b097173d3670a61ff79ec2834ac2f50d03ed689dea4e70411fb33623ecf3",
+    "Overfull/NativeReserve/CompletionConstruction.lean": "153d51f84b36e94af946ba9b45d9c63d37aaf39df3967d9e62338eeea90d77e6",
+    "Overfull/NativeReserve/CompletionCuts.lean": "973ecee46f95683603c9d429296e9ac8adcbae4774ec7e38371608bb39febd92",
+    "Overfull/NativeReserve/CompletionFootprints.lean": "c5db62a549316cb7fa5b999998b1857bfbb77c5bd6b106536a1378b03a69afe7",
+    "Overfull/NativeReserve/CompletionGlue.lean": "7e018e2d5fc64b86b74f19216c059f8bc2379f2751d1c707d5a0d95b710eaabc",
+    "Overfull/NativeReserve/CompletionParameters.lean": "088fc727be14da251efd2a3f3d3a100bb725a5a60280c017627d1783fa57b10e",
+    "Overfull/NativeReserve/Construction.lean": "ffc97fd4bfc3be8f291954d6aefdf21c2418eaa5135e82990214546b6730678d",
+    "Overfull/NativeReserve/CorePacking.lean": "f0df4c447821d47a1eac9bd292ffbb83c22e991ffee01c5a856aeadf44a9e9fe",
+    "Overfull/NativeReserve/CutSafety.lean": "28ac51de4fba919653e7535a8b9d4912db5b37cc3e41c6dfd4a069cd59d7102f",
+    "Overfull/NativeReserve/DenseSelection.lean": "ce3f878ca3e26fcd161cd87ef1f824253c80ab31b9ce15b71b2db653ddb38f03",
+    "Overfull/NativeReserve/Greedy.lean": "d2786d6ef64821bf38900fcefe884cf0bfb1eeaa6df00d4e941d42dcb06f0586",
+    "Overfull/NativeReserve/NativeCutWeights.lean": "e61eea00516c3fe9b81986bffa284f14276d6e023f9e874e7a842a43acfdc315",
+    "Overfull/NativeReserve/PackingConstruction.lean": "e6f2d1d4e6f7687b0bb6d7e4365f976e504c52917fd125f23ec886e0f536119a",
+    "Overfull/NativeReserve/ProtectedPacking.lean": "508e42545b7d9cd6c99586382f1d241a16e100856a0452c990d4faa3b2737848",
+    "Overfull/NativeReserve/ProtectedSelection.lean": "55c714bc777b3e66c3e64b2e8e3bb2e517b02f2ef3c65fdd586834f0806ce024",
+    "Overfull/NativeReserve/Realization.lean": "73763e6b7be126f22833c6c5c8607ceea03f6f28a93ec767cf92f1bc3d735fc1",
+    "Overfull/NativeReserve/Residual.lean": "ebc71049b3cfe6123cbba01359d5053ee461c99d4faee67a117777aa48fbfa8a",
+    "Overfull/NativeReserve/RetainedCore.lean": "ce76266f7a6595c8c13b0c83ad55652e142e4307b988f5c2acdf6414e8daedd6",
+    "Overfull/NativeReserve/RoundedPools.lean": "1e85977d0d361bf97e4a1ef3982958d2a9c69088805b7252a7851e1a5ba2e100",
+    "Overfull/NativeReserve/Rounding.lean": "eadbcd19245523c23687446304d98e1961d69ad08ba114755fe6d3a891b74230",
+    "Overfull/NativeReserve/Schedule.lean": "c02b0c2e5b7420ab2a842131c6e6ce9fa0f2ec0746fb59e1b598bd2f94a372cc",
+    "Overfull/NativeReserve/WeightedPacking.lean": "83930fb28d9ab46771f3372058a85c17486a00442ffef190bb79f8dfdb3a8494",
+    "Overfull/NativeReserve/WeightedSafety.lean": "bad515485b63488105b3a003806b025dd077b16802fed153456ad8ab4704c513",
     "Overfull/OneCore/ApexChoices.lean": "f603fb89fb7ce1b337e44bc679f4a9cce118173e6467a2f2e6a296a66f66d298",
     "Overfull/OneCore/Complement.lean": "8b7a6bde5fb928d9adde64434f8b17c878053392407247e2ee4d38dfd8c920fd",
     "Overfull/OneCore/Cuts.lean": "4d35f610069561767c4028b49ba94e11c245d8ee7227bc6b17136e0b1762e9e6",
@@ -106177,7 +109327,7 @@
     ".github/workflows/lean.yml": "bf5cd8ff5d9c54814b5a0a2a98732a90dae5e4d1a7268954fe9deba218753e83",
     "CIRCULATION_NOTICE.txt": "c8913077edf119bdb2ff790f24c3a27188a14b37d3cbc03121c917aee157a419",
     "LICENSE_BMATCHING.txt": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
-    "README.md": "20da7da2b263880ecadcdea473ae9e2d286b2a34fd2d0fcd760541bfc9a2d9cf",
+    "README.md": "58877b457cbdabb0ccaf7ae2fa46047e38ba431eb90a8ce9b875e9aa3b798bb5",
     "THIRD_PARTY_NOTICES.txt": "9002356e653c2943115b2feeba04713b005074a3d7c283bd894a47d8ca63dcd7",
     "docs/adaptive-packing.md": "eed3d11bde80300511bfa046813661c1617bb0ddc4c131efbed9576a33e53c7e",
     "docs/assigned-part-semantic-review.md": "e66abf61bc77c96e36e2eb13f64c0a238db4341fd120b4982f4c9a3119b553ca",
@@ -106198,7 +109348,7 @@
     "docs/checkpoint-reconstruction-source.json": "15b678ca340bc3e5f6120c242e5e87255ddea8de45cfa82267fbf83b44784322",
     "docs/checkpoint-reconstruction.md": "281491521d047dde7fd88f197d5f6b45cad146ca8643eafb31c796a86dae208c",
     "docs/circulation-source.json": "2b3d7bdf1b05c6b8445e2961efe99fe3eb6100a9c08c1eb3af8bbb4fd28350aa",
-    "docs/continuation-handoff.md": "a423a388ee3ef10df5858396adf52d4aa3869bda2f4f3fd4b8cacb21b2bc1d1a",
+    "docs/continuation-handoff.md": "c1e8d02878b3c83267eb9416df06540958794c315ce137ede513ba4343180828",
     "docs/coverage.json": "fd664d98fc0483bdf891b206424557226380968a7828a9bb6da2481511e16aff",
     "docs/critical-partition-consequences.md": "b0b0db1f855f47e3a3c6c63046bf7375c65b452640b73615baf9ca6a34d8dc91",
     "docs/dense-link-packing.md": "e34a37bb7b482fcd950977d2ff4835f573038c78a873c0f30823a5a1bcc181cf",
@@ -106222,6 +109372,9 @@
     "docs/native-pattern-semantic-review.md": "8e99db953e75bb886950fdac69fb616561058ce3d1d1efcb07a8e7352c418427",
     "docs/native-pattern-source.json": "99ac0120043c11169b82beb69ffc5c43fa2c7b7b9c5bc23514d87a5450282b3c",
     "docs/native-pattern-verification.md": "f320440fff4f2da8de362017b8fe764bf29846f9cd249bacc6daeb5a633c5e55",
+    "docs/native-reserve-semantic-review.md": "ee5786b145448301e88d568ba1ef7eb534716d546915181ed434a6c6e0803426",
+    "docs/native-reserve-source.json": "c0a7044fdcf78df7af252152352bcf90877d56d4b101c2787d7d9dbd160820a2",
+    "docs/native-reserve-verification.md": "9bd909b8d6cba47b6dbaec39eb1d529dc922592718445057c52ed122aac7a069",
     "docs/next-verification-target.md": "f07f14d29d8c2cb10fdf1caad10151020f835fc33dae1d177531b3462caf810d",
     "docs/ordinary-factorization-full-semantic-review.md": "8ccd470ebbd237c0191e0907770a827f9d785ab273de733a3e831bc4acfe38a0",
     "docs/ordinary-factorization-full-source.json": "814c007ffd25a7c4aad82ffbcdd171ee26efe1544bdc4b326ef71577d995d103",
@@ -106250,9 +109403,10 @@
     "scripts/update_assigned_manifest.py": "0041947e59aec0cc7a2c4920de49eff4ebbe3457e557202eea4962a572f13c93",
     "scripts/update_joining_manifest.py": "49e353003a9aceff1e4d94345d8f2363fab81fb07eb218e651e666a879300449",
     "scripts/update_native_pattern_manifest.py": "f6ccde61f5ab28684ac8837391cf148371fe885d00f8a8584d60f5ba029e2501",
+    "scripts/update_native_reserve_manifest.py": "f81ae2f7cd8ee484a8e353cdcd00338b3674fe85b0be801fcb8eea6a06bab4f6",
     "scripts/update_reconstruction_manifest.py": "d3fb79aff0e1ebe718ecf77f0a554d292ee494821f9018115c3ae46f82681935",
     "scripts/update_three_label_manifest.py": "b99977121869aa9ef849a0cf6dd8f6833c7dcc6487c56b1e975070550f29190d",
-    "scripts/verify.py": "56a81271491e7f6be1d83d36d4c8442ca7ea9057b793e8500ba72b2b3378d100"
+    "scripts/verify.py": "c4d93a96ef9573b307bbbe6b5a867cc993c0a2e708f1d31fffc047de680d3862"
   },
   "scope": "47 of 69 numbered manuscript assertions remain fully proved; 22, including the main theorem, remain incomplete. This continuation proves native multigraph matching-distribution capacities, at most five actual assignment signatures and a heavy representative with linear original-copy pool supplies, exact exceptional-pool marginal identities, and exceptional-retaining boundary compression with exact core-crossing parity and even uncovered core orders. All 69 original assertion records and prior completed results are preserved. Simultaneous reserves, residual safety, full source-pattern interfaces, palettes, robust completion and final two-core factorization remain unfinished."
 }

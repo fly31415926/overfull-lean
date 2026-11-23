@@ -1,0 +1,62 @@
+✔ [3233/3234] Built Overfull.NativeReserve.Greedy (3.9s)
+✖ [3234/3234] Building Overfull.NativeReserve.Schedule (3.7s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5d2e6f7b5492/overfull-lean/Overfull/NativeReserve/Schedule.lean -o /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/Schedule.olean -i /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/Schedule.ilean -c /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/Schedule.c --setup /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/Schedule.setup.json --json
+error: Overfull/NativeReserve/Schedule.lean:23:76: unsolved goals
+E : Type u_2
+R : Type u_3
+inst✝ : Fintype R
+B : R → Finset E
+r : R
+⊢ ∑ x, #(if x = r then (B x).attach else ∅) = #(B r)
+error: Overfull/NativeReserve/Schedule.lean:30:79: unsolved goals
+E : Type u_2
+R : Type u_3
+inst✝ : Fintype R
+B : R → Finset E
+P : Type u_4
+kind : BoundarySlots B → P
+pool : P → Finset E
+hkind : ∀ (x : BoundarySlots B) (p : P), kind x = p ↔ ↑x.snd ∈ pool p
+p : P
+r : R
+a✝ : r ∈ univ
+⊢ #({x ∈ (B r).attach | ↑x ∈ pool p}) = #({i ∈ B r | i ∈ pool p})
+warning: Overfull/NativeReserve/Schedule.lean:35:8: This simp argument is unused:
+  Finset.sum_coe_sort
+
+Hint: Omit it from the simp argument list.
+  simp [F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵c̵o̵e̵_̵s̵o̵r̵t̵,̵ ̵← Finset.filter_mem_eq_inter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Overfull/NativeReserve/Schedule.lean:41:59: unsolved goals
+E : Type u_2
+R : Type u_3
+inst✝ : Fintype R
+B : R → Finset E
+P : Type u_4
+kind : BoundarySlots B → P
+pool : P → Finset E
+hkind : ∀ (x : BoundarySlots B) (p : P), kind x = p ↔ ↑x.snd ∈ pool p
+r : R
+p : P
+⊢ #({x ∈ (B r).attach | ↑x ∈ pool p}) = #({i ∈ B r | i ∈ pool p})
+warning: Overfull/NativeReserve/Schedule.lean:43:8: This simp argument is unused:
+  Finset.sum_coe_sort
+
+Hint: Omit it from the simp argument list.
+  simp [F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵c̵o̵e̵_̵s̵o̵r̵t̵,̵ ̵← Finset.filter_mem_eq_inter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Overfull/NativeReserve/Schedule.lean:117:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 4
+  0 ≤ c ≤ 3
+  0 ≤ b ≤ 2
+where
+ b := ↑(#Z)
+ c := ↑(#(B r))
+ d := ↑↑(#(B r))
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeReserve.Schedule
+error: build failed

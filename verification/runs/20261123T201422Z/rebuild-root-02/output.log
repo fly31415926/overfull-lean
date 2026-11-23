@@ -1,0 +1,33 @@
+✔ [3157/3162] Built Overfull.AssignedParts.NativeWeights (6.8s)
+✔ [3158/3162] Built Overfull.AssignedParts.HeavySignature (5.3s)
+✔ [3159/3162] Built Overfull.NativeReserve.WeightedPacking (6.8s)
+✔ [3160/3162] Built Overfull.AssignedParts.ExactPoolWeights (6.0s)
+✔ [3161/3162] Built Overfull.AssignedParts.NativePatternConstruction (3.3s)
+✖ [3162/3162] Building Overfull.NativeReserve.PackingConstruction (3.6s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5d2e6f7b5492/overfull-lean/Overfull/NativeReserve/PackingConstruction.lean -o /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/PackingConstruction.olean -i /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/PackingConstruction.ilean -c /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/PackingConstruction.c --setup /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/PackingConstruction.setup.json --json
+error: Overfull/NativeReserve/PackingConstruction.lean:116:44: Application type mismatch: The argument
+  r
+has type
+  ℝ
+but is expected to have type
+  ℕ
+in the application
+  BoundaryPacking G U₀ U₁ Z M r
+error: Overfull/NativeReserve/PackingConstruction.lean:118:5: Type mismatch
+  this
+has type
+  0 < k
+but is expected to have type
+  ∀ (v : ?m.38), Multigraph.degree ?m.42 v = ?m.43
+error: Overfull/NativeReserve/PackingConstruction.lean:117:74: Application type mismatch: The argument
+  G
+has type
+  Multigraph V E
+of sort `Type (max u_1 u_2)` but is expected to have type
+  0 < ?m.43
+of sort `Prop` in the application
+  MultigraphMatchingProbability.exists_distribution G
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeReserve.PackingConstruction
+error: build failed

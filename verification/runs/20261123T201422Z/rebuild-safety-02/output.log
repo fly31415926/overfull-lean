@@ -1,0 +1,45 @@
+✔ [3188/3208] Built Overfull.CircuitPatterns.Weights (8.4s)
+✔ [3189/3208] Built Overfull.PrescribedMatching.Selection (8.5s)
+✔ [3190/3208] Built Overfull.ForeignEdges.ColorClasses (10s)
+✔ [3191/3208] Built Overfull.PrescribedMatching.ShortPaths (10s)
+✔ [3192/3208] Built Overfull.PrescribedMatching.Matching (12s)
+✔ [3193/3208] Built Overfull.Compression.Labels (14s)
+✔ [3194/3208] Built Overfull.AssignedParts.NativeWeights (6.8s)
+✔ [3195/3208] Built Overfull.PrescribedMatching.Components (7.2s)
+✔ [3196/3208] Built Overfull.OneCore.Cuts (21s)
+✔ [3197/3208] Built Overfull.AssignedParts.HeavySignature (7.2s)
+✔ [3198/3208] Built Overfull.PrescribedMatching (5.4s)
+✔ [3199/3208] Built Overfull.Compression.Matching (8.6s)
+✔ [3200/3208] Built Overfull.AssignedParts.ExactPoolWeights (5.1s)
+✔ [3201/3208] Built Overfull.SafePrescription.Construction (5.9s)
+✔ [3202/3208] Built Overfull.AssignedParts.NativePatternConstruction (2.0s)
+✔ [3203/3208] Built Overfull.ForeignEdges.Phase (4.4s)
+✔ [3204/3208] Built Overfull.NativeReserve.Residual (3.3s)
+✔ [3205/3208] Built Overfull.CircuitPatterns.Cuts (3.9s)
+✔ [3206/3208] Built Overfull.CircuitPatterns.Safety (3.6s)
+✖ [3207/3208] Building Overfull.NativeReserve.CutSafety (3.8s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5d2e6f7b5492/overfull-lean/Overfull/NativeReserve/CutSafety.lean -o /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/CutSafety.olean -i /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/CutSafety.ilean -c /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/CutSafety.c --setup /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/CutSafety.setup.json --json
+error: Overfull/NativeReserve/CutSafety.lean:112:71: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  image Subtype.val ((residualGraph G N T).cutEdges X ∩ (residualGraph G N T).incidenceEdges v)
+in the target expression
+  #(image Subtype.val ((residualGraph G N T).cutEdges X ∩ (residualGraph G N T).incidenceEdges v)) =
+    #(G.cutEdges X \ removedCopies N T ∩ G.incidenceEdges v)
+
+V : Type u_1
+E : Type u_2
+J : Type u_4
+inst✝ : Fintype E
+G : Multigraph V E
+N : J → Finset E
+T : Finset J
+X : Finset V
+v : V
+himage :
+  image Subtype.val ((residualGraph G N T).cutEdges X ∩ (residualGraph G N T).incidenceEdges v) =
+    G.cutEdges X \ removedCopies N T ∩ G.incidenceEdges v
+⊢ #(image Subtype.val ((residualGraph G N T).cutEdges X ∩ (residualGraph G N T).incidenceEdges v)) =
+    #(G.cutEdges X \ removedCopies N T ∩ G.incidenceEdges v)
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeReserve.CutSafety
+error: build failed

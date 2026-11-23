@@ -1,0 +1,39 @@
+✖ [3248/3250] Building Overfull.NativeReserve.ProtectedPacking (3.2s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5d2e6f7b5492/overfull-lean/Overfull/NativeReserve/ProtectedPacking.lean -o /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/ProtectedPacking.olean -i /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/ProtectedPacking.ilean -c /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/ProtectedPacking.c --setup /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/ProtectedPacking.setup.json --json
+warning: Overfull/NativeReserve/ProtectedPacking.lean:23:0: automatically included section variable(s) unused in theorem `Overfull.NativeReserve.exists_rounded_boundary_reserve`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Overfull/NativeReserve/ProtectedPacking.lean:36:0: automatically included section variable(s) unused in theorem `Overfull.NativeReserve.BoundaryPacking.reserved_degree`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+error: Overfull/NativeReserve/ProtectedPacking.lean:48:13: unsolved goals
+V : Type u_1
+E : Type u_2
+S : Type u_3
+inst✝¹ : Fintype S
+inst✝ : Fintype E
+G : Multigraph V E
+k : ℕ
+D : MultigraphMatchingProbability.Distribution G k S
+U₀ U₁ Z : Finset V
+s : S
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z (D.matching s) r
+⊢ r * #Z + 1 = r * (#Z + 1)
+error: Overfull/NativeReserve/ProtectedPacking.lean:47:34: Type mismatch
+  sum_le_sum fun i x => card_le Q i
+has type
+  ∑ i ∈ ?m.85, #(Q.boundary i) ≤ ∑ i ∈ ?m.85, (#Z + 1)
+but is expected to have type
+  ∑ i, #(Q.boundary i) ≤ ∑ _i, #Z + 1
+error: Lean exited with code 1
+✔ [3249/3250] Built Overfull.CircuitPatterns.Multiplicity (3.5s)
+Some required targets logged failures:
+- Overfull.NativeReserve.ProtectedPacking
+error: build failed

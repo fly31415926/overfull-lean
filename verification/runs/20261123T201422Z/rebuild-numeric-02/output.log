@@ -1,0 +1,59 @@
+✔ [3211/3235] Built Overfull.CircuitPatterns.Weights (6.5s)
+✔ [3212/3235] Built Overfull.BipartitePackingDeletion (8.0s)
+✔ [3213/3235] Built Overfull.OrdinaryRandomReserve (10s)
+✔ [3214/3235] Built Overfull.AssignedParts.NativeWeights (7.9s)
+✔ [3215/3235] Built Overfull.BipartitePackingBounds (14s)
+✔ [3216/3235] Built Overfull.BipartitePackingWorking (9.0s)
+✔ [3217/3235] Built Overfull.OrdinaryPackingBounds (6.3s)
+✔ [3218/3235] Built Overfull.AssignedParts.HeavySignature (7.4s)
+✔ [3219/3235] Built Overfull.OrdinaryRandomReserveDegrees (12s)
+✔ [3220/3235] Built Overfull.OrdinaryPackingStrategy (7.8s)
+✖ [3221/3235] Building Overfull.NativeReserve.Rounding (7.2s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5d2e6f7b5492/overfull-lean/Overfull/NativeReserve/Rounding.lean -o /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/Rounding.olean -i /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/Rounding.ilean -c /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/Rounding.c --setup /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/Rounding.setup.json --json
+error: Overfull/NativeReserve/Rounding.lean:84:2: linarith failed to find a contradiction
+case h
+V : Type u_1
+E : Type u_2
+S : Type u_3
+inst✝ : Fintype S
+G : Multigraph V E
+k : ℕ
+D : MultigraphMatchingProbability.Distribution G k S
+η : ℝ
+hη₀ : 0 ≤ η
+hη₁ : η ≤ 1
+U₀ Z : Finset V
+s : S
+m : AssignmentSignature Z → ℕ
+hm : ∀ (p : AssignmentSignature Z), m p ≤ multiplicity D η U₀ Z s p
+p₀ : AssignmentSignature Z := coarseSignature G (D.matching s) U₀ Z
+hmR : ↑(m p₀) ≤ ↑(multiplicity D η U₀ Z s p₀)
+h : ↑(multiplicity D η U₀ Z s p₀) ≤ signatureWeight D U₀ Z p₀ - if True then ↑(reserveSize D U₀ Z s) else 0
+a✝ : signatureWeight D U₀ Z p₀ - ↑(m p₀) < ↑(reserveSize D U₀ Z s)
+⊢ False
+failed
+warning: Overfull/NativeReserve/Rounding.lean:81:30: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [remainingWeight,̵ ̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+✔ [3222/3235] Built Overfull.BipartitePackingParameters (15s)
+✔ [3223/3235] Built Overfull.BipartiteRange (30s)
+✔ [3224/3235] Built Overfull.OrdinaryPackingParameters (10s)
+✔ [3225/3235] Built Overfull.BipartitePackingReserve (3.2s)
+✔ [3226/3235] Built Overfull.OrdinaryPackingInitial (11s)
+✔ [3227/3235] Built Overfull.BipartitePackingInitial (5.4s)
+✔ [3228/3235] Built Overfull.BipartitePackingRound (6.4s)
+✔ [3229/3235] Built Overfull.BipartitePackingStrategy (3.8s)
+✔ [3230/3235] Built Overfull.BipartitePacking (4.9s)
+✔ [3231/3235] Built Overfull.OrdinaryPackingRound (13s)
+✔ [3232/3235] Built Overfull.OrdinaryPacking (6.3s)
+✔ [3233/3235] Built Overfull.OrdinaryPackingPrefix (7.1s)
+✔ [3234/3235] Built Overfull.BoundaryExtension.Packing (3.9s)
+✔ [3235/3235] Built Overfull.NativeReserve.CompletionParameters (7.2s)
+Some required targets logged failures:
+- Overfull.NativeReserve.Rounding
+error: build failed

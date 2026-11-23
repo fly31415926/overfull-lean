@@ -1,0 +1,86 @@
+✔ [3277/3285] Built Overfull.BoundaryExtension.BoundaryData (3.5s)
+✔ [3278/3285] Built Overfull.CircuitPatterns.Pairing (3.6s)
+✖ [3279/3285] Building Overfull.NativeReserve.CutSafety (6.8s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5d2e6f7b5492/overfull-lean/Overfull/NativeReserve/CutSafety.lean -o /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/CutSafety.olean -i /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/CutSafety.ilean -c /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/CutSafety.c --setup /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/CutSafety.setup.json --json
+error: Overfull/NativeReserve/CutSafety.lean:113:22: Application type mismatch: The argument
+  himage
+has type
+  image Subtype.val
+      (@Inter.inter (Finset { e // e ∉ removedCopies N T })
+        (@instInter { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) ((residualGraph G N T).cutEdges X)
+        ((residualGraph G N T).incidenceEdges v)) =
+    G.cutEdges X \ removedCopies N T ∩ G.incidenceEdges v
+but is expected to have type
+  image Subtype.val
+      (@Inter.inter (Finset { e // e ∉ removedCopies N T })
+        (@instInter { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) ((residualGraph G N T).cutEdges X)
+        ((residualGraph G N T).incidenceEdges v)) =
+    G.cutEdges X \ removedCopies N T ∩ G.incidenceEdges v
+in the application
+  congrArg card himage
+error: Lean exited with code 1
+✔ [3281/3285] Built Overfull.CircuitPatterns.IncidenceLoad (3.5s)
+✔ [3282/3285] Built Overfull.BoundaryExtension.Assembly (3.8s)
+✔ [3283/3285] Built Overfull.NativeReserve.CompletionFootprints (3.1s)
+✖ [3284/3285] Building Overfull.NativeReserve.CorePacking (3.4s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5d2e6f7b5492/overfull-lean/Overfull/NativeReserve/CorePacking.lean -o /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/CorePacking.olean -i /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/lib/lean/Overfull/NativeReserve/CorePacking.ilean -c /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/CorePacking.c --setup /workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/build/ir/Overfull/NativeReserve/CorePacking.setup.json --json
+error: Overfull/NativeReserve/CorePacking.lean:57:2: unsolved goals
+case h.e'_3
+α γ ν τ σ : ℝ
+hα : 0 < α
+hα1 : α ≤ 1
+hγ : 0 < γ
+hν : 0 < ν
+hντ : ν ≤ τ
+hτ : τ ≤ α / 8
+hσ : 0 < σ
+hσhalf : σ < 1 / 2
+ε θ : ℝ
+hε : 0 < ε
+hθ : 0 < θ
+m₀ : ℕ
+hpack :
+  ∀ (W : Type u_1) [inst : Fintype W] (H : SimpleGraph W) (d : ℝ),
+    m₀ ≤ Fintype.card W →
+      IsRobustExpander H ν τ →
+        α * ↑(Fintype.card W) ≤ d →
+          (∀ (v : W), |↑(H.degree v) - d| ≤ ε * ↑(Fintype.card W)) →
+            ∀ (q : ℕ) (S : Fin q → Finset W),
+              q ≤ ⌊d - γ * ↑(Fintype.card W)⌋₊ →
+                (∀ (j : Fin q), #(S j) % 2 = Fintype.card W % 2) →
+                  (∀ (j : Fin q), ↑(#(S j)) ≤ ε * ↑(Fintype.card W)) →
+                    (∀ (v : W), ↑(#{j | v ∈ S j}) ≤ ε * ↑(Fintype.card W)) →
+                      Nonempty (BoundaryExtension.CorePacking H q S θ σ)
+V : Type u_1
+E : Type u_2
+inst✝ : Fintype E
+G : Multigraph V E
+U : Finset V
+C : SmallCuts.Core G U
+k : ℕ
+a : ℝ
+hm : m₀ ≤ #U
+hrobust : IsRobustExpander C.graph ν τ
+hdensity : α * ↑(#U) ≤ ↑k
+hregular : ∀ (v : V), G.degree v = k
+hdegree : ∀ (v : { x // x ∈ U }), ↑k - a ≤ ↑(C.graph.degree v)
+herror : a ≤ ε * ↑(#U)
+hsize : 6 ≤ ε * ↑(#U)
+q : ℕ
+F : Fin q → Finset E
+hq : q ≤ ⌊↑k - γ * ↑(#U)⌋₊
+hdisj : Pairwise fun i j => Disjoint (F i) (F j)
+hout : ∀ (j : Fin q), Disjoint (F j) (OneCore.coreEdges C)
+hcard : ∀ (j : Fin q), #(F j) ≤ 3
+heven : ∀ (j : Fin q), Even #(U \ G.edgeSupport (F j))
+hnear : ∀ (v : { x // x ∈ U }), |↑(C.graph.degree v) - ↑k| ≤ ε * ↑(#U)
+hparity : ∀ (j : Fin q), #(coreFootprint G U (F j)) % 2 = Fintype.card { x // x ∈ U } % 2
+hfoot : ∀ (j : Fin q), ↑(#(coreFootprint G U (F j))) ≤ ε * ↑(Fintype.card { x // x ∈ U })
+hload : ∀ (v : { x // x ∈ U }), ↑(#{j | v ∈ coreFootprint G U (F j)}) ≤ ε * ↑(Fintype.card { x // x ∈ U })
+v : { x // x ∈ U }
+⊢ ↑(#{j | v ∈ coreFootprint G U (F j)}) = ↑(#{j | v ∈ coreFootprint G U (F j)})
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeReserve.CutSafety
+- Overfull.NativeReserve.CorePacking
+error: build failed

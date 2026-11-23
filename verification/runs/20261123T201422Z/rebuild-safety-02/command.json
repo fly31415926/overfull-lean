@@ -1,0 +1,42 @@
+{
+  "command": [
+    "lake",
+    "build",
+    "--wfail",
+    "Overfull.NativeReserve.Residual",
+    "Overfull.NativeReserve.CutSafety",
+    "Overfull.NativeReserve.WeightedSafety"
+  ],
+  "cwd": "/workspace/scratch/5d2e6f7b5492/overfull-lean",
+  "started_at_utc": "2026-11-23T20:30:00.618786+00:00",
+  "source_sha256": {
+    "Overfull/NativeReserve/AcceptedRealization.lean": "c566a01ed8c8fc1dcb61ba9082b2f9f44d3afe46503913bc05a5a5b36e8b805b",
+    "Overfull/NativeReserve/BoundaryProperties.lean": "e906b097173d3670a61ff79ec2834ac2f50d03ed689dea4e70411fb33623ecf3",
+    "Overfull/NativeReserve/CompletionConstruction.lean": "6f668ad502b14da778b160f1a3fca8eef5a5779a0fd241a69a43b2acc5e8faa6",
+    "Overfull/NativeReserve/CompletionCuts.lean": "973ecee46f95683603c9d429296e9ac8adcbae4774ec7e38371608bb39febd92",
+    "Overfull/NativeReserve/CompletionFootprints.lean": "c5db62a549316cb7fa5b999998b1857bfbb77c5bd6b106536a1378b03a69afe7",
+    "Overfull/NativeReserve/CompletionGlue.lean": "510811e913ebb8c264071a1813f63cd534b51e50a9aaffa56d17edd612664f92",
+    "Overfull/NativeReserve/CompletionParameters.lean": "088fc727be14da251efd2a3f3d3a100bb725a5a60280c017627d1783fa57b10e",
+    "Overfull/NativeReserve/Construction.lean": "baceee4d4728f6a7c90f844e11b69473eac5a36a70253c9a87220fac6b8f2e97",
+    "Overfull/NativeReserve/CorePacking.lean": "9d056f9f672006aaaf04a20c55ccba78a44e7562a5a6e85d39ee7e19e33d6faf",
+    "Overfull/NativeReserve/CutSafety.lean": "3e81a4132ba431b370de3f9b2263967dc3885fd871e3fe532436b50d54c09608",
+    "Overfull/NativeReserve/DenseSelection.lean": "ccc8e968fd70c09c26d926801f7333cc5ed57d2270b005ec45ee33f54ececfd3",
+    "Overfull/NativeReserve/Greedy.lean": "90d845995dd9205101107883daa685bfffaeeaa9bcae6764d83e9bb76377dbe2",
+    "Overfull/NativeReserve/NativeCutWeights.lean": "2eca2a50d7caab0017bac050e3cdc9efc3dbbc25aacee201bcd6e16b10bb34d3",
+    "Overfull/NativeReserve/PackingConstruction.lean": "022ff1d84043ec4b1333396696682e68951a66143cc5b06138636b8da2e7d6a9",
+    "Overfull/NativeReserve/ProtectedPacking.lean": "a7fa0f152073f8a41a36a76098cb028703f252249a503897a295abfb4bd4c3a9",
+    "Overfull/NativeReserve/ProtectedSelection.lean": "55c714bc777b3e66c3e64b2e8e3bb2e517b02f2ef3c65fdd586834f0806ce024",
+    "Overfull/NativeReserve/Realization.lean": "73763e6b7be126f22833c6c5c8607ceea03f6f28a93ec767cf92f1bc3d735fc1",
+    "Overfull/NativeReserve/Residual.lean": "ebc71049b3cfe6123cbba01359d5053ee461c99d4faee67a117777aa48fbfa8a",
+    "Overfull/NativeReserve/RetainedCore.lean": "0721e8c88933dc23cb67ca18589c8b26b23c59ba2b44bd5eca438dca76aaeaf6",
+    "Overfull/NativeReserve/RoundedPools.lean": "d4a62bcf7f84fbe8e9c0d5a5c23536fd6ab0e8e6c7ae4bd8c38d35667c23758c",
+    "Overfull/NativeReserve/Rounding.lean": "dec56a4bd53a3969bd57bb6e3aa2e6f58569c1d6ed483651201da074e491b3d4",
+    "Overfull/NativeReserve/Schedule.lean": "54f3d325dc78d2dcd613dfe04b56b31392eabc6b93b5da41ab3d6100f072b446",
+    "Overfull/NativeReserve/WeightedPacking.lean": "83930fb28d9ab46771f3372058a85c17486a00442ffef190bb79f8dfdb3a8494",
+    "Overfull/NativeReserve/WeightedSafety.lean": "bad515485b63488105b3a003806b025dd077b16802fed153456ad8ab4704c513"
+  },
+  "status": "failed",
+  "exit_code": 1,
+  "finished_at_utc": "2026-11-23T20:30:47.474724+00:00",
+  "elapsed_seconds": 46.855938
+}
