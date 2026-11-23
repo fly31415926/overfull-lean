@@ -1,0 +1,11 @@
+2026-11-23 UTC environment observations
+$ command -v lean; command -v lake
+lean: not installed
+lake: not installed
+$ git ls-remote https://github.com/fly31415926/overfull-lean.git refs/heads/main
+fatal: unable to access 'https://github.com/fly31415926/overfull-lean.git/': Could not resolve host: github.com
+$ test -d /workspace/scratch/4ffd54dab476/overfull-lean-rebuild
+checkout absent
+Targeted Lean compile: NOT RUN
+Full python3 scripts/verify.py: NOT RUN
+Stock Audit.lean: NOT RUN
