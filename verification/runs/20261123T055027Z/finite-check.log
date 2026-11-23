@@ -1,0 +1,3 @@
+PASS: 8 parallel-copy models (k=1..8), 510 exact pool equalities
+For k>1 the common endpoint-pair pattern weight equals k, not one.
+This is finite rational arithmetic, not Lean checking.
