@@ -1,5 +1,9 @@
 # Semantic review of the recovered continuation
 
+Historical record for the reconstructed checkpoint `b5afb03`. The subsequent
+[three-vertex compatible-circuit proof](three-label-circuit-verification.md)
+completes the selector and exact partition that were still open in this record.
+
 All six continuation modules are recovered original bytes. Their fixed
 source hashes and all 27 public proof names are recorded in
 [`few-exception-source.json`](few-exception-source.json). Their current

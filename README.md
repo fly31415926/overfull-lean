@@ -6,7 +6,27 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest checkpoint: recreated ordinary-core closure and recovered continuation
+## Latest continuation: complete compatible circuits on at most three vertices
+
+The original even-degree and half-cut hypotheses now suffice for an exact
+partition of every selected original edge copy into compatible circuits on
+at most three vertices. The proof constructs a safely removable parallel
+pair or triangle, preserves every class-cut inequality, and performs the
+complete induction with exact disjoint coverage. Arbitrary parallel
+multiplicities and incidence-class types are allowed; no circuit-selector
+assumption remains in the final theorem.
+
+The [proof and scope](docs/three-label-circuit-verification.md),
+[source mapping](docs/three-label-circuit-source.json), and
+[independent semantic review](docs/three-label-circuit-semantic-review.md)
+explain the construction. The latest [run records](verification/runs/) and
+[continuation handoff](docs/continuation-handoff.md) identify the next target.
+This supporting theorem adds no numbered manuscript assertion: the count
+remains **47/69**, and the general four-label compatible-circuit theorem,
+full two-core branch of Corollary 4.6, terminal Proposition 4.16, and main
+theorem remain incomplete.
+
+## Previous checkpoint: recreated ordinary-core closure and recovered continuation
 
 The original local checkpoint `cb05ef5` was not available as a complete checkout
 or archive. At the user's request, eleven missing Lean modules were recreated

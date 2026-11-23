@@ -223,6 +223,7 @@ import Overfull.TerminalComplement.Factorization
 import Overfull.FewExceptions.Complement
 import Overfull.FewExceptions.Factorization
 import Overfull.CompatibleCircuits.ThreeVertexDeletion
+import Overfull.CompatibleCircuits.AtMostThree
 
 /-!
 # Partial formalization of the overfull manuscript

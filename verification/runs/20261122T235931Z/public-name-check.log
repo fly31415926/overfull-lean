@@ -1,0 +1,381 @@
+Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_dominant_bundle.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (AB AC : Finset E) (f : E → K) (z : ℕ) (hdisj : Disjoint AB AC) (hxz : z < AB.card)
+  (hAB : ∀ (k : K), 2 * {e ∈ AB | f e = k}.card ≤ AB.card + z)
+  (hAC : ∀ (k : K), 2 * {e ∈ AC | f e = k}.card ≤ AC.card + z)
+  (Q : Overfull.CompatibleCircuits.LocalCoarsening (AB ∪ AC) f) : ∃ e ∈ AB, ∃ h ∈ AB, Q.coarse e ≠ Q.coarse h
+Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_equal_bundle.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (B D : Finset E) (classOf : E → K) (hBD : Disjoint B D) (hcard : D.card = B.card) (hpos : 0 < B.card)
+  (L : Overfull.CompatibleCircuits.LocalCoarsening (B ∪ D) classOf)
+  (hB : ∀ (k : K), {e ∈ B | classOf e = k}.card < B.card) (hD : ∀ (k : K), {e ∈ D | classOf e = k}.card < D.card) :
+  ∃ e ∈ B, ∃ h ∈ B, L.coarse e ≠ L.coarse h
+Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_large_subset.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  {S T : Finset E} {classOf : E → K} (L : Overfull.CompatibleCircuits.LocalCoarsening T classOf) (hST : S ⊆ T)
+  (hlarge : T.card < 2 * S.card) : ∃ e ∈ S, ∃ h ∈ S, L.coarse e ≠ L.coarse h
+Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (AB AC BC : Finset E) (a b c : E → K) (hABAC : Disjoint AB AC) (hABBC : Disjoint AB BC) (hACBC : Disjoint AC BC)
+  (hAC : AC.card = AB.card) (hBC : BC.card = AB.card) (hpos : 0 < AB.card)
+  (hA : ∀ (k : K), 2 * {e ∈ AB ∪ AC | a e = k}.card ≤ (AB ∪ AC).card)
+  (hB : ∀ (k : K), 2 * {e ∈ AB ∪ BC | b e = k}.card ≤ (AB ∪ BC).card)
+  (hC : ∀ (k : K), 2 * {e ∈ AC ∪ BC | c e = k}.card ≤ (AC ∪ BC).card) (hmono : ∃ k, ∀ e ∈ AB, a e = k) :
+  ∃ e ∈ AB, ∃ h ∈ AC, ∃ g ∈ BC, a e ≠ a h ∧ b e ≠ b g ∧ c h ≠ c g
+Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles_of_monochromatic.{u_1, u_2} {E : Type u_1}
+  {K : Type u_2} (AB AC BC : Finset E) (a b c : E → K) (hABAC : Disjoint AB AC) (hABBC : Disjoint AB BC)
+  (hACBC : Disjoint AC BC) (hAC : AC.card = AB.card) (hBC : BC.card = AB.card) (hpos : 0 < AB.card)
+  (hA : ∀ (k : K), 2 * {e ∈ AB ∪ AC | a e = k}.card ≤ (AB ∪ AC).card)
+  (hB : ∀ (k : K), 2 * {e ∈ AB ∪ BC | b e = k}.card ≤ (AB ∪ BC).card)
+  (hC : ∀ (k : K), 2 * {e ∈ AC ∪ BC | c e = k}.card ≤ (AC ∪ BC).card)
+  (hmono :
+    (∃ k, ∀ e ∈ AB, a e = k) ∨
+      (∃ k, ∀ e ∈ AC, a e = k) ∨
+        (∃ k, ∀ e ∈ AB, b e = k) ∨ (∃ k, ∀ e ∈ BC, b e = k) ∨ (∃ k, ∀ e ∈ AC, c e = k) ∨ ∃ k, ∀ e ∈ BC, c e = k) :
+  ∃ e ∈ AB, ∃ h ∈ AC, ∃ g ∈ BC, a e ≠ a h ∧ b e ≠ b g ∧ c h ≠ c g
+Overfull.CompatibleCircuits.exists_distinct_classes_of_large_subset.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (S T : Finset E) (classOf : E → K) (hST : S ⊆ T) (hhalf : ∀ (k : K), 2 * {e ∈ T | classOf e = k}.card ≤ T.card)
+  (hlarge : T.card < 2 * S.card) : ∃ e ∈ S, ∃ h ∈ S, classOf e ≠ classOf h
+Overfull.CompatibleCircuits.exists_localCoarsening.{u_1, u_2} {E : Type u_1} {K : Type u_2} (S : Finset E)
+  (classOf : E → K) (hhalf : ∀ (k : K), 2 * {e ∈ S | classOf e = k}.card ≤ S.card) :
+  Nonempty (Overfull.CompatibleCircuits.LocalCoarsening S classOf)
+Overfull.CompatibleCircuits.exists_mem_ne_of_union_fiber_bound.{u_1, u_2} {E : Type u_1} {K : Type u_2} (S T : Finset E)
+  (f : E → K) (hST : Disjoint S T) (hbound : ∀ (k : K), {e ∈ S ∪ T | f e = k}.card ≤ S.card) {g : E} (hg : g ∈ T) :
+  ∃ e ∈ S, f e ≠ f g
+Overfull.CompatibleCircuits.exists_pair_distinct_both_coordinates.{u_1, u_2, u_3} {E : Type u_1} {K : Type u_2}
+  {L : Type u_3} (S : Finset E) (f : E → K) (g : E → L) (hf : ∃ e ∈ S, ∃ h ∈ S, f e ≠ f h)
+  (hg : ∃ e ∈ S, ∃ h ∈ S, g e ≠ g h) : ∃ e ∈ S, ∃ h ∈ S, e ≠ h ∧ f e ≠ f h ∧ g e ≠ g h
+Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_equal_bundles.{u_1, u_2, u_3} {E : Type u_1}
+  {K : Type u_2} {L : Type u_3} (AB AC BC : Finset E) (a : E → K) (b : E → L) (hABAC : Disjoint AB AC)
+  (hABBC : Disjoint AB BC) (hAC : AC.card = AB.card) (hBC : BC.card = AB.card) (hpos : 0 < AB.card)
+  (hA : ∀ (k : K), 2 * {e ∈ AB ∪ AC | a e = k}.card ≤ (AB ∪ AC).card)
+  (hB : ∀ (k : L), 2 * {e ∈ AB ∪ BC | b e = k}.card ≤ (AB ∪ BC).card)
+  (hAAB : ∀ (k : K), {e ∈ AB | a e = k}.card < AB.card) (hAAC : ∀ (k : K), {e ∈ AC | a e = k}.card < AC.card)
+  (hBAB : ∀ (k : L), {e ∈ AB | b e = k}.card < AB.card) (hBBC : ∀ (k : L), {e ∈ BC | b e = k}.card < BC.card) :
+  ∃ e ∈ AB,
+    ∃ h ∈ AB,
+      e ≠ h ∧
+        a e ≠ a h ∧
+          b e ≠ b h ∧
+            (∀ (k : K), 2 * {d ∈ AB ∪ AC | a d = k}.card = (AB ∪ AC).card → a e = k ∨ a h = k) ∧
+              ∀ (k : L), 2 * {d ∈ AB ∪ BC | b d = k}.card = (AB ∪ BC).card → b e = k ∨ b h = k
+Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_large_subset.{u_1, u_2, u_3} {E : Type u_1}
+  {K : Type u_2} {L : Type u_3} (B S T : Finset E) (f : E → K) (g : E → L) (hBS : B ⊆ S) (hBT : B ⊆ T)
+  (hf : ∀ (k : K), 2 * {e ∈ S | f e = k}.card ≤ S.card) (hg : ∀ (l : L), 2 * {e ∈ T | g e = l}.card ≤ T.card)
+  (hS : S.card < 2 * B.card) (hT : T.card < 2 * B.card) :
+  ∃ e ∈ B,
+    ∃ h ∈ B,
+      e ≠ h ∧
+        f e ≠ f h ∧
+          g e ≠ g h ∧
+            (∀ (k : K), 2 * {a ∈ S | f a = k}.card = S.card → f e = k ∨ f h = k) ∧
+              ∀ (l : L), 2 * {a ∈ T | g a = l}.card = T.card → g e = l ∨ g h = l
+Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_unequal_bundles.{u_1, u_2, u_3} {E : Type u_1}
+  {K : Type u_2} {L : Type u_3} (AB AC BC : Finset E) (f : E → K) (g : E → L) (hABAC : Disjoint AB AC)
+  (hABBC : Disjoint AB BC) (hxz : BC.card < AB.card) (hyz : BC.card ≤ AC.card)
+  (hf : ∀ (k : K), 2 * {e ∈ AB ∪ AC | f e = k}.card ≤ (AB ∪ AC).card)
+  (hg : ∀ (l : L), 2 * {e ∈ AB ∪ BC | g e = l}.card ≤ (AB ∪ BC).card)
+  (hfAB : ∀ (k : K), 2 * {e ∈ AB | f e = k}.card ≤ AB.card + BC.card)
+  (hfAC : ∀ (k : K), 2 * {e ∈ AC | f e = k}.card ≤ AC.card + BC.card) :
+  ∃ e ∈ AB,
+    ∃ h ∈ AB,
+      e ≠ h ∧
+        f e ≠ f h ∧
+          g e ≠ g h ∧
+            (∀ (k : K),
+                2 * {a ∈ AB ∪ AC | f a = k}.card = (AB ∪ AC).card ∨ 2 * {a ∈ AB | f a = k}.card = AB.card + BC.card →
+                  f e = k ∨ f h = k) ∧
+              ∀ (l : L),
+                2 * {a ∈ AB ∪ BC | g a = l}.card = (AB ∪ BC).card ∨ 2 * {a ∈ AB | g a = l}.card = AB.card + AC.card →
+                  g e = l ∨ g h = l
+Overfull.CompatibleCircuits.fiber_card_union_of_disjoint.{u_1, u_2} {E : Type u_1} {K : Type u_2} (S T : Finset E)
+  (f : E → K) (hST : Disjoint S T) (k : K) :
+  {e ∈ S ∪ T | f e = k}.card = {e ∈ S | f e = k}.card + {e ∈ T | f e = k}.card
+Overfull.CompatibleCircuits.local_tight_of_second_endpoint_nonlocal_tight.{u_1, u_3} {E : Type u_1} {L : Type u_3}
+  (AB AC BC : Finset E) (g : E → L) (hdisj : Disjoint AB BC) (hyz : BC.card ≤ AC.card)
+  (hlocal : ∀ (l : L), 2 * {e ∈ AB ∪ BC | g e = l}.card ≤ (AB ∪ BC).card) {l : L}
+  (htight : 2 * {e ∈ AB | g e = l}.card = AB.card + AC.card) : 2 * {e ∈ AB ∪ BC | g e = l}.card = (AB ∪ BC).card
+Overfull.CompatibleCircuits.mem_one_of_two_classes_of_card_sum.{u_1, u_2} {E : Type u_1} {K : Type u_2} (S : Finset E)
+  (f : E → K) {k l : K} (hkl : k ≠ l) (hsize : S.card ≤ {e ∈ S | f e = k}.card + {e ∈ S | f e = l}.card) {e : E}
+  (he : e ∈ S) : f e = k ∨ f e = l
+Overfull.CompatibleCircuits.mem_one_of_two_distinct_tight_classes.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (S : Finset E) (classOf : E → K) {k l : K} (hkl : k ≠ l) (hk : 2 * {e ∈ S | classOf e = k}.card = S.card)
+  (hl : 2 * {e ∈ S | classOf e = l}.card = S.card) {e : E} (he : e ∈ S) : classOf e = k ∨ classOf e = l
+Overfull.CompatibleCircuits.ne_of_monochromatic_union_fiber_bound.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (S T : Finset E) (f : E → K) (hST : Disjoint S T) (hbound : ∀ (k : K), {e ∈ S ∪ T | f e = k}.card ≤ S.card) {k : K}
+  (hmono : ∀ e ∈ S, f e = k) {e g : E} (he : e ∈ S) (hg : g ∈ T) : f e ≠ f g
+Overfull.CompatibleCircuits.pair_meets_endpoint_tight_classes_of_crossing_nonlocal.{u_1, u_2} {E : Type u_1}
+  {K : Type u_2} (AB AC : Finset E) (f : E → K) (z : ℕ) (hdisj : Disjoint AB AC)
+  (hAC : ∀ (k : K), 2 * {e ∈ AC | f e = k}.card ≤ AC.card + z) {k : K} (hk : 2 * {e ∈ AB | f e = k}.card = AB.card + z)
+  {e h : E} (he : e ∈ AB) (hh : h ∈ AB) (hdiff : decide (f e = k) ≠ decide (f h = k)) :
+  f e ≠ f h ∧
+    ∀ (l : K),
+      2 * {a ∈ AB ∪ AC | f a = l}.card = (AB ∪ AC).card ∨ 2 * {a ∈ AB | f a = l}.card = AB.card + z → f e = l ∨ f h = l
+Overfull.Multigraph.AdmissibleOn.bundle_class_bound.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {K : Type u_3}
+  (G : Overfull.Multigraph V E) {classOf : V → E → K} {C : Finset E} (hadmissible : G.AdmissibleOn classOf C) {v w : V}
+  (hne : v ≠ w) (k : K) : 2 * {e ∈ G.edgeBundleOn C v w | classOf v e = k}.card ≤ G.degreeOn C w
+Overfull.Multigraph.AdmissibleOn.local_class_bound.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {K : Type u_3}
+  (G : Overfull.Multigraph V E) {classOf : V → E → K} {C : Finset E} (hadmissible : G.AdmissibleOn classOf C) (v : V)
+  (k : K) : 2 * {e ∈ C | v ∈ G.edge e ∧ classOf v e = k}.card ≤ G.degreeOn C v
+Overfull.Multigraph.CompatibleCircuitPartition.exists_safe_circuit.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {K : Type u_3} (G : Overfull.Multigraph V E) {classOf : V → E → K} {C : Finset E}
+  (P : G.CompatibleCircuitPartition classOf C) (hC : C.Nonempty) :
+  ∃ D ⊆ C, G.IsCircuit D ∧ G.Compatible classOf D ∧ G.AdmissibleOn classOf (C \ D)
+Overfull.Multigraph.HasSafeCircuitSelection.mono.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {K : Type u_3}
+  (G : Overfull.Multigraph V E) {classOf : V → E → K} {C R : Finset E} (h : G.HasSafeCircuitSelection classOf C)
+  (hRC : R ⊆ C) : G.HasSafeCircuitSelection classOf R
+Overfull.Multigraph.IsCircuit.of_embedVertices.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) [Fintype V] (φ : V ↪ W) {C : Finset E} (hC : (G.embedVertices φ).IsCircuit C) :
+  G.IsCircuit C
+Overfull.Multigraph.IsCircuit.renameVertices.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ≃ W) {C : Finset E} (hC : G.IsCircuit C) : (G.renameVertices φ).IsCircuit C
+Overfull.Multigraph.admissibleOn_iff_singleton_cuts.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {K : Type u_3}
+  (G : Overfull.Multigraph V E) [Fintype V] (hV : Fintype.card V ≤ 3) (classOf : V → E → K) (C : Finset E) :
+  G.AdmissibleOn classOf C ↔ ∀ (v : V) (k : K) (w : V), 2 * (G.classCutOn classOf C v k {w}).card ≤ G.degreeOn C w
+Overfull.Multigraph.admissibleOn_sdiff_iff_meets_tight_singletons.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {K : Type u_3} (G : Overfull.Multigraph V E) [Fintype V] (hV : Fintype.card V ≤ 3) (classOf : V → E → K)
+  {C D : Finset E} (hDC : D ⊆ C) (hD : G.IsCircuit D) (hadmissible : G.AdmissibleOn classOf C)
+  (heven : ∀ (v : V), Even (G.degreeOn C v)) :
+  G.AdmissibleOn classOf (C \ D) ↔
+    ∀ (v : V) (k : K) (w : V),
+      G.degreeOn C w = 2 * (G.classCutOn classOf C v k {w}).card →
+        (G.cutOn D {w}).Nonempty → (G.classCutOn classOf D v k {w}).Nonempty
+Overfull.Multigraph.admissibleOn_sdiff_parallel_pair_of_no_nonlocal_tight.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (Q : Overfull.Multigraph (Fin 3) E) (classOf : Fin 3 → E → K) {C : Finset E} {e h : E} (heC : e ∈ C) (hhC : h ∈ C)
+  (hne : e ≠ h) (he : Q.edge e = s(0, 1)) (hh : Q.edge h = s(0, 1)) (hadmissible : Q.AdmissibleOn classOf C)
+  (heven : ∀ (v : Fin 3), Even (Q.degreeOn C v))
+  (hno : ∀ (v : Fin 3) (k : K) (w : Fin 3), v ≠ w → Q.degreeOn C w ≠ 2 * (Q.classCutOn classOf C v k {w}).card)
+  (hmeet0 : ∀ (k : K), Q.degreeOn C 0 = 2 * (Q.classCutOn classOf C 0 k {0}).card → classOf 0 e = k ∨ classOf 0 h = k)
+  (hmeet1 : ∀ (k : K), Q.degreeOn C 1 = 2 * (Q.classCutOn classOf C 1 k {1}).card → classOf 1 e = k ∨ classOf 1 h = k) :
+  Q.AdmissibleOn classOf (C \ {e, h})
+Overfull.Multigraph.classCutOn_compl.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {K : Type u_3}
+  (G : Overfull.Multigraph V E) [Fintype V] (classOf : V → E → K) (C : Finset E) (v : V) (k : K) (X : Finset V) :
+  G.classCutOn classOf C v k Xᶜ = G.classCutOn classOf C v k X
+Overfull.Multigraph.classCutOn_nonempty_of_full_bundle.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (Q : Overfull.Multigraph (Fin 3) E) {classOf : Fin 3 → E → K} {C D : Finset E} (hDC : D ⊆ C) {v w : Fin 3}
+  (hne : v ≠ w) (k : K) (hfull : Q.classCutOn classOf C v k {w} = Q.edgeBundleOn C v w)
+  (hpart : (Q.edgeBundleOn D v w).Nonempty) : (Q.classCutOn classOf D v k {w}).Nonempty
+Overfull.Multigraph.classCutOn_singleton_other.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {K : Type u_3}
+  (G : Overfull.Multigraph V E) (classOf : V → E → K) (C : Finset E) {v w : V} (hne : v ≠ w) (k : K) :
+  G.classCutOn classOf C v k {w} = {e ∈ G.edgeBundleOn C v w | classOf v e = k}
+Overfull.Multigraph.classCutOn_singleton_self.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {K : Type u_3}
+  (G : Overfull.Multigraph V E) (classOf : V → E → K) (C : Finset E) (v : V) (k : K) :
+  G.classCutOn classOf C v k {v} = {e ∈ C | v ∈ G.edge e ∧ classOf v e = k}
+Overfull.Multigraph.compatibleCircuitPartition_iff_admissible_of_card_le_three.{u_1, u_2, u_3} {V : Type u_1}
+  {E : Type u_2} {K : Type u_3} [Fintype V] (G : Overfull.Multigraph V E) (hV : Fintype.card V ≤ 3)
+  (classOf : V → E → K) (C : Finset E) (heven : ∀ (v : V), Even (G.degreeOn C v)) :
+  Nonempty (G.CompatibleCircuitPartition classOf C) ↔ G.AdmissibleOn classOf C
+Overfull.Multigraph.compatible_parallel_pair.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (Q : Overfull.Multigraph (Fin 3) E) (classOf : Fin 3 → E → K) {e h : E} (he : Q.edge e = s(0, 1))
+  (hh : Q.edge h = s(0, 1)) (h0 : classOf 0 e ≠ classOf 0 h) (h1 : classOf 1 e ≠ classOf 1 h) :
+  Q.Compatible classOf {e, h}
+Overfull.Multigraph.compatible_triangle.{u_1, u_2} {E : Type u_1} {K : Type u_2} (Q : Overfull.Multigraph (Fin 3) E)
+  (classOf : Fin 3 → E → K) {e h g : E} (he : Q.edge e = s(0, 1)) (hh : Q.edge h = s(0, 2)) (hg : Q.edge g = s(1, 2))
+  (h0 : classOf 0 e ≠ classOf 0 h) (h1 : classOf 1 e ≠ classOf 1 g) (h2 : classOf 2 h ≠ classOf 2 g) :
+  Q.Compatible classOf {e, h, g}
+Overfull.Multigraph.cutOn_compl.{u_1, u_2} {V : Type u_1} {E : Type u_2} (G : Overfull.Multigraph V E) [Fintype V]
+  (C : Finset E) (X : Finset V) : G.cutOn C Xᶜ = G.cutOn C X
+Overfull.Multigraph.cutOn_singleton.{u_1, u_2} {V : Type u_1} {E : Type u_2} (G : Overfull.Multigraph V E)
+  (C : Finset E) (v : V) : G.cutOn C {v} = {e ∈ C | v ∈ G.edge e}
+Overfull.Multigraph.cutOn_singleton_card.{u_1, u_2} {V : Type u_1} {E : Type u_2} (G : Overfull.Multigraph V E)
+  (C : Finset E) (v : V) : (G.cutOn C {v}).card = G.degreeOn C v
+Overfull.Multigraph.edgeBundleOn_disjoint.{u_1, u_2} {V : Type u_1} {E : Type u_2} (G : Overfull.Multigraph V E)
+  {C : Finset E} {u v u' v' : V} (hne : s(u, v) ≠ s(u', v')) : Disjoint (G.edgeBundleOn C u v) (G.edgeBundleOn C u' v')
+Overfull.Multigraph.edgeBundleOn_subset.{u_1, u_2} {V : Type u_1} {E : Type u_2} (G : Overfull.Multigraph V E)
+  (C : Finset E) (u v : V) : G.edgeBundleOn C u v ⊆ C
+Overfull.Multigraph.edgeBundleOn_swap.{u_1, u_2} {V : Type u_1} {E : Type u_2} (G : Overfull.Multigraph V E)
+  (C : Finset E) (u v : V) : G.edgeBundleOn C u v = G.edgeBundleOn C v u
+Overfull.Multigraph.embedIncidenceClasses_image.{u_1, u_2, u_3, u_4} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  {K : Type u_4} (φ : V ↪ W) (classOf : V → E → K) (v : V) (e : E) :
+  Overfull.Multigraph.embedIncidenceClasses φ classOf (φ v) e = some (classOf v e)
+Overfull.Multigraph.embedVertices_admissibleOn.{u_1, u_2, u_3, u_4} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  {K : Type u_4} (G : Overfull.Multigraph V E) [Fintype V] (φ : V ↪ W) (classOf : V → E → K) (C : Finset E) :
+  (G.embedVertices φ).AdmissibleOn (Overfull.Multigraph.embedIncidenceClasses φ classOf) C ↔ G.AdmissibleOn classOf C
+Overfull.Multigraph.embedVertices_classCutOn_image.{u_1, u_2, u_3, u_4} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  {K : Type u_4} (G : Overfull.Multigraph V E) [Fintype V] (φ : V ↪ W) (classOf : V → E → K) (C : Finset E) (v : V)
+  (k : K) (X : Finset W) :
+  (G.embedVertices φ).classCutOn (Overfull.Multigraph.embedIncidenceClasses φ classOf) C (φ v) (some k) X =
+    G.classCutOn classOf C v k {u | φ u ∈ X}
+Overfull.Multigraph.embedVertices_classCutOn_image_map.{u_1, u_2, u_3, u_4} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  {K : Type u_4} (G : Overfull.Multigraph V E) [Fintype V] (φ : V ↪ W) (classOf : V → E → K) (C : Finset E) (v : V)
+  (k : K) (X : Finset V) :
+  (G.embedVertices φ).classCutOn (Overfull.Multigraph.embedIncidenceClasses φ classOf) C (φ v) (some k)
+      (Finset.map φ X) =
+    G.classCutOn classOf C v k X
+Overfull.Multigraph.embedVertices_compatible.{u_1, u_2, u_3, u_4} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  {K : Type u_4} (G : Overfull.Multigraph V E) (φ : V ↪ W) (classOf : V → E → K) (C : Finset E) :
+  (G.embedVertices φ).Compatible (Overfull.Multigraph.embedIncidenceClasses φ classOf) C ↔ G.Compatible classOf C
+Overfull.Multigraph.embedVertices_cutOn.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) [Fintype V] (φ : V ↪ W) (C : Finset E) (X : Finset W) :
+  (G.embedVertices φ).cutOn C X = G.cutOn C {v | φ v ∈ X}
+Overfull.Multigraph.embedVertices_cutOn_map.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) [Fintype V] (φ : V ↪ W) (C : Finset E) (X : Finset V) :
+  (G.embedVertices φ).cutOn C (Finset.map φ X) = G.cutOn C X
+Overfull.Multigraph.embedVertices_degreeOn.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ↪ W) (C : Finset E) (v : V) :
+  (G.embedVertices φ).degreeOn C (φ v) = G.degreeOn C v
+Overfull.Multigraph.embedVertices_degreeOn_zero.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ↪ W) (C : Finset E) {w : W} (hw : ¬∃ v, φ v = w) :
+  (G.embedVertices φ).degreeOn C w = 0
+Overfull.Multigraph.embedVertices_edgeSupport.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ↪ W) (C : Finset E) :
+  (G.embedVertices φ).edgeSupport C = Finset.map φ (G.edgeSupport C)
+Overfull.Multigraph.embedVertices_even_degrees.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ↪ W) {C : Finset E} (heven : ∀ (v : V), Even (G.degreeOn C v)) (w : W) :
+  Even ((G.embedVertices φ).degreeOn C w)
+Overfull.Multigraph.embedVertices_incident.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ↪ W) (e : E) (w : W) : w ∈ (G.embedVertices φ).edge e ↔ ∃ v ∈ G.edge e, φ v = w
+Overfull.Multigraph.embedVertices_incident_image.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ↪ W) (e : E) (v : V) : φ v ∈ (G.embedVertices φ).edge e ↔ v ∈ G.edge e
+Overfull.Multigraph.embedVertices_not_incident.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ↪ W) {w : W} (hw : ¬∃ v, φ v = w) (e : E) : w ∉ (G.embedVertices φ).edge e
+Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_three.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {K : Type u_3} [Fintype V] (G : Overfull.Multigraph V E) (hV : Fintype.card V ≤ 3) (classOf : V → E → K)
+  (C : Finset E) (hadmissible : G.AdmissibleOn classOf C) (heven : ∀ (v : V), Even (G.degreeOn C v)) :
+  Nonempty (G.CompatibleCircuitPartition classOf C)
+Overfull.Multigraph.exists_compatibleCircuitPartition_of_safe_selection.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {K : Type u_3} (G : Overfull.Multigraph V E) (classOf : V → E → K) (C : Finset E)
+  (hselect : G.HasSafeCircuitSelection classOf C) (hadmissible : G.AdmissibleOn classOf C)
+  (heven : ∀ (v : V), Even (G.degreeOn C v)) : Nonempty (G.CompatibleCircuitPartition classOf C)
+Overfull.Multigraph.exists_compatibleCircuitPartition_of_tight_class_selection.{u_1, u_2, u_3} {V : Type u_1}
+  {E : Type u_2} {K : Type u_3} (G : Overfull.Multigraph V E) [Fintype V] (hV : Fintype.card V ≤ 3)
+  (classOf : V → E → K) (C : Finset E)
+  (hselect :
+    ∀ R ⊆ C,
+      R.Nonempty →
+        G.AdmissibleOn classOf R →
+          (∀ (v : V), Even (G.degreeOn R v)) →
+            ∃ D ⊆ R,
+              G.IsCircuit D ∧
+                G.Compatible classOf D ∧
+                  ∀ (v : V) (k : K) (X : Finset V),
+                    (G.cutOn R X).card = 2 * (G.classCutOn classOf R v k X).card →
+                      (G.cutOn D X).Nonempty → (G.classCutOn classOf D v k X).Nonempty)
+  (hadmissible : G.AdmissibleOn classOf C) (heven : ∀ (v : V), Even (G.degreeOn C v)) :
+  Nonempty (G.CompatibleCircuitPartition classOf C)
+Overfull.Multigraph.exists_compatible_triangle_of_equal_bundles.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (Q : Overfull.Multigraph (Fin 3) E) (classOf : Fin 3 → E → K) (AB AC BC : Finset E) (hABAC : Disjoint AB AC)
+  (hABBC : Disjoint AB BC) (hACBC : Disjoint AC BC) (hABedge : ∀ e ∈ AB, Q.edge e = s(0, 1))
+  (hACedge : ∀ e ∈ AC, Q.edge e = s(0, 2)) (hBCedge : ∀ e ∈ BC, Q.edge e = s(1, 2)) (hAC : AC.card = AB.card)
+  (hBC : BC.card = AB.card) (hpos : 0 < AB.card)
+  (hA : ∀ (k : K), 2 * {e ∈ AB ∪ AC | classOf 0 e = k}.card ≤ (AB ∪ AC).card)
+  (hB : ∀ (k : K), 2 * {e ∈ AB ∪ BC | classOf 1 e = k}.card ≤ (AB ∪ BC).card)
+  (hC : ∀ (k : K), 2 * {e ∈ AC ∪ BC | classOf 2 e = k}.card ≤ (AC ∪ BC).card) (hmono : ∃ k, ∀ e ∈ AB, classOf 0 e = k) :
+  ∃ D ⊆ AB ∪ AC ∪ BC, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ D.card = 3
+Overfull.Multigraph.exists_safe_circuit_of_card_le_three.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2} {K : Type u_3}
+  [Fintype V] (G : Overfull.Multigraph V E) (hV : Fintype.card V ≤ 3) (classOf : V → E → K) (C : Finset E)
+  (hC : C.Nonempty) (hadmissible : G.AdmissibleOn classOf C) (heven : ∀ (v : V), Even (G.degreeOn C v)) :
+  ∃ D ⊆ C, G.IsCircuit D ∧ G.Compatible classOf D ∧ G.AdmissibleOn classOf (C \ D) ∧ (D.card = 2 ∨ D.card = 3)
+Overfull.Multigraph.exists_safe_circuit_of_equal_threeLabel_bundles.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (Q : Overfull.Multigraph (Fin 3) E) (classOf : Fin 3 → E → K) (C : Finset E) (hadmissible : Q.AdmissibleOn classOf C)
+  (heven : ∀ (v : Fin 3), Even (Q.degreeOn C v)) (hAC : (Q.edgeBundleOn C 0 2).card = (Q.edgeBundleOn C 0 1).card)
+  (hBC : (Q.edgeBundleOn C 1 2).card = (Q.edgeBundleOn C 0 1).card) (hpos : 0 < (Q.edgeBundleOn C 0 1).card) :
+  ∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ Q.AdmissibleOn classOf (C \ D) ∧ (D.card = 2 ∨ D.card = 3)
+Overfull.Multigraph.exists_safe_circuit_of_sorted_threeLabel_bundles.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (Q : Overfull.Multigraph (Fin 3) E) (classOf : Fin 3 → E → K) (C : Finset E) (hC : C.Nonempty)
+  (hadmissible : Q.AdmissibleOn classOf C) (heven : ∀ (v : Fin 3), Even (Q.degreeOn C v))
+  (hxy : (Q.edgeBundleOn C 0 2).card ≤ (Q.edgeBundleOn C 0 1).card)
+  (hyz : (Q.edgeBundleOn C 1 2).card ≤ (Q.edgeBundleOn C 0 2).card) :
+  ∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ Q.AdmissibleOn classOf (C \ D) ∧ (D.card = 2 ∨ D.card = 3)
+Overfull.Multigraph.exists_safe_parallel_pair_of_equal_bundles_no_nonlocal_tight.{u_1, u_2} {E : Type u_1}
+  {K : Type u_2} (Q : Overfull.Multigraph (Fin 3) E) (classOf : Fin 3 → E → K) (C : Finset E)
+  (hadmissible : Q.AdmissibleOn classOf C) (heven : ∀ (v : Fin 3), Even (Q.degreeOn C v))
+  (hAC : (Q.edgeBundleOn C 0 2).card = (Q.edgeBundleOn C 0 1).card)
+  (hBC : (Q.edgeBundleOn C 1 2).card = (Q.edgeBundleOn C 0 1).card) (hpos : 0 < (Q.edgeBundleOn C 0 1).card)
+  (hno : ∀ (v : Fin 3) (k : K) (w : Fin 3), v ≠ w → Q.degreeOn C w ≠ 2 * (Q.classCutOn classOf C v k {w}).card) :
+  ∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ D.card = 2 ∧ Q.AdmissibleOn classOf (C \ D)
+Overfull.Multigraph.exists_safe_parallel_pair_of_unequal_threeLabel_bundles.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (Q : Overfull.Multigraph (Fin 3) E) (classOf : Fin 3 → E → K) (C : Finset E) (hadmissible : Q.AdmissibleOn classOf C)
+  (heven : ∀ (v : Fin 3), Even (Q.degreeOn C v)) (hxz : (Q.edgeBundleOn C 1 2).card < (Q.edgeBundleOn C 0 1).card)
+  (hyz : (Q.edgeBundleOn C 1 2).card ≤ (Q.edgeBundleOn C 0 2).card) :
+  ∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ Q.AdmissibleOn classOf (C \ D) ∧ D.card = 2
+Overfull.Multigraph.exists_safe_triangle_of_equal_bundles_of_nonlocal_tight.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (Q : Overfull.Multigraph (Fin 3) E) (classOf : Fin 3 → E → K) (C : Finset E) (hadmissible : Q.AdmissibleOn classOf C)
+  (hAC : (Q.edgeBundleOn C 0 2).card = (Q.edgeBundleOn C 0 1).card)
+  (hBC : (Q.edgeBundleOn C 1 2).card = (Q.edgeBundleOn C 0 1).card) (hpos : 0 < (Q.edgeBundleOn C 0 1).card)
+  (htight : ∃ v w k, v ≠ w ∧ Q.degreeOn C w = 2 * (Q.classCutOn classOf C v k {w}).card) :
+  ∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ Q.AdmissibleOn classOf (C \ D) ∧ D.card = 3
+Overfull.Multigraph.exists_threeLabel_compatibleCircuitPartition.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (Q : Overfull.Multigraph (Fin 3) E) (classOf : Fin 3 → E → K) (C : Finset E) (hadmissible : Q.AdmissibleOn classOf C)
+  (heven : ∀ (v : Fin 3), Even (Q.degreeOn C v)) : Nonempty (Q.CompatibleCircuitPartition classOf C)
+Overfull.Multigraph.exists_threeLabel_safe_circuit.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (Q : Overfull.Multigraph (Fin 3) E) (classOf : Fin 3 → E → K) (C : Finset E) (hC : C.Nonempty)
+  (hadmissible : Q.AdmissibleOn classOf C) (heven : ∀ (v : Fin 3), Even (Q.degreeOn C v)) :
+  ∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ Q.AdmissibleOn classOf (C \ D) ∧ (D.card = 2 ∨ D.card = 3)
+Overfull.Multigraph.exists_threeLabel_sorted_renaming.{u_3} {E : Type u_3} (Q : Overfull.Multigraph (Fin 3) E)
+  (C : Finset E) :
+  ∃ φ,
+    ((Q.renameVertices φ).edgeBundleOn C 0 2).card ≤ ((Q.renameVertices φ).edgeBundleOn C 0 1).card ∧
+      ((Q.renameVertices φ).edgeBundleOn C 1 2).card ≤ ((Q.renameVertices φ).edgeBundleOn C 0 2).card
+Overfull.Multigraph.incident_pair_iff_edge_eq.{u_1, u_2} {V : Type u_1} {E : Type u_2} (G : Overfull.Multigraph V E)
+  {u v : V} (hne : u ≠ v) (e : E) : u ∈ G.edge e ∧ v ∈ G.edge e ↔ G.edge e = s(u, v)
+Overfull.Multigraph.isCircuit_triangle.{u_1} {E : Type u_1} (Q : Overfull.Multigraph (Fin 3) E) {e h g : E}
+  (he : Q.edge e = s(0, 1)) (hh : Q.edge h = s(0, 2)) (hg : Q.edge g = s(1, 2)) : Q.IsCircuit {e, h, g}
+Overfull.Multigraph.mem_edgeBundleOn.{u_1, u_2} {V : Type u_1} {E : Type u_2} (G : Overfull.Multigraph V E)
+  (C : Finset E) (u v : V) (e : E) : e ∈ G.edgeBundleOn C u v ↔ e ∈ C ∧ G.edge e = s(u, v)
+Overfull.Multigraph.renameVertices_admissibleOn.{u_1, u_2, u_3, u_4} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  {K : Type u_4} (G : Overfull.Multigraph V E) (φ : V ≃ W) (classOf : V → E → K) (C : Finset E) :
+  (G.renameVertices φ).AdmissibleOn (fun w e => classOf (φ.symm w) e) C ↔ G.AdmissibleOn classOf C
+Overfull.Multigraph.renameVertices_classCutOn.{u_1, u_2, u_3, u_4} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  {K : Type u_4} (G : Overfull.Multigraph V E) (φ : V ≃ W) (classOf : V → E → K) (C : Finset E) (w : W) (k : K)
+  (X : Finset W) :
+  (G.renameVertices φ).classCutOn (fun w e => classOf (φ.symm w) e) C w k X =
+    G.classCutOn classOf C (φ.symm w) k (Finset.map φ.symm.toEmbedding X)
+Overfull.Multigraph.renameVertices_compatible.{u_1, u_2, u_3, u_4} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  {K : Type u_4} (G : Overfull.Multigraph V E) (φ : V ≃ W) (classOf : V → E → K) (C : Finset E) :
+  (G.renameVertices φ).Compatible (fun w e => classOf (φ.symm w) e) C ↔ G.Compatible classOf C
+Overfull.Multigraph.renameVertices_cutOn.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ≃ W) (C : Finset E) (X : Finset W) :
+  (G.renameVertices φ).cutOn C X = G.cutOn C (Finset.map φ.symm.toEmbedding X)
+Overfull.Multigraph.renameVertices_degreeOn.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ≃ W) (C : Finset E) (w : W) :
+  (G.renameVertices φ).degreeOn C w = G.degreeOn C (φ.symm w)
+Overfull.Multigraph.renameVertices_edgeBundleOn.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ≃ W) (C : Finset E) (u v : V) :
+  (G.renameVertices φ).edgeBundleOn C (φ u) (φ v) = G.edgeBundleOn C u v
+Overfull.Multigraph.renameVertices_edgeBundleOn_symm.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ≃ W) (C : Finset E) (u v : W) :
+  (G.renameVertices φ).edgeBundleOn C u v = G.edgeBundleOn C (φ.symm u) (φ.symm v)
+Overfull.Multigraph.renameVertices_edgeSupport.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ≃ W) (C : Finset E) :
+  (G.renameVertices φ).edgeSupport C = Finset.map φ.toEmbedding (G.edgeSupport C)
+Overfull.Multigraph.renameVertices_incident.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ≃ W) (e : E) (w : W) : w ∈ (G.renameVertices φ).edge e ↔ φ.symm w ∈ G.edge e
+Overfull.Multigraph.renameVertices_isCircuit.{u_1, u_2, u_3} {V : Type u_1} {W : Type u_2} {E : Type u_3}
+  (G : Overfull.Multigraph V E) (φ : V ≃ W) (C : Finset E) : (G.renameVertices φ).IsCircuit C ↔ G.IsCircuit C
+Overfull.Multigraph.shore_cases_of_card_le_three.{u_1} {V : Type u_1} [Fintype V] (hV : Fintype.card V ≤ 3)
+  (X : Finset V) : X = ∅ ∨ X = Finset.univ ∨ ∃ w, X = {w} ∨ X = {w}ᶜ
+Overfull.Multigraph.threeLabel_bundle_parity.{u_2} {E : Type u_2} (Q : Overfull.Multigraph (Fin 3) E) {C : Finset E}
+  (heven : ∀ (v : Fin 3), Even (Q.degreeOn C v)) :
+  (Q.edgeBundleOn C 0 1).card % 2 = (Q.edgeBundleOn C 0 2).card % 2 ∧
+    (Q.edgeBundleOn C 0 1).card % 2 = (Q.edgeBundleOn C 1 2).card % 2
+Overfull.Multigraph.threeLabel_bundles_cover.{u_2} {E : Type u_2} (Q : Overfull.Multigraph (Fin 3) E) (C : Finset E) :
+  Q.edgeBundleOn C 0 1 ∪ Q.edgeBundleOn C 0 2 ∪ Q.edgeBundleOn C 1 2 = C
+Overfull.Multigraph.threeLabel_compatibleCircuitPartition_iff_admissible.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (Q : Overfull.Multigraph (Fin 3) E) (classOf : Fin 3 → E → K) (C : Finset E)
+  (heven : ∀ (v : Fin 3), Even (Q.degreeOn C v)) :
+  Nonempty (Q.CompatibleCircuitPartition classOf C) ↔ Q.AdmissibleOn classOf C
+Overfull.Multigraph.threeLabel_degree_of_equal_bundles.{u_1} {E : Type u_1} (Q : Overfull.Multigraph (Fin 3) E)
+  {C : Finset E} (hAC : (Q.edgeBundleOn C 0 2).card = (Q.edgeBundleOn C 0 1).card)
+  (hBC : (Q.edgeBundleOn C 1 2).card = (Q.edgeBundleOn C 0 1).card) (v : Fin 3) :
+  Q.degreeOn C v = 2 * (Q.edgeBundleOn C 0 1).card
+Overfull.Multigraph.threeLabel_degree_one.{u_2} {E : Type u_2} (Q : Overfull.Multigraph (Fin 3) E) (C : Finset E) :
+  Q.degreeOn C 1 = (Q.edgeBundleOn C 0 1).card + (Q.edgeBundleOn C 1 2).card
+Overfull.Multigraph.threeLabel_degree_two.{u_2} {E : Type u_2} (Q : Overfull.Multigraph (Fin 3) E) (C : Finset E) :
+  Q.degreeOn C 2 = (Q.edgeBundleOn C 0 2).card + (Q.edgeBundleOn C 1 2).card
+Overfull.Multigraph.threeLabel_degree_zero.{u_2} {E : Type u_2} (Q : Overfull.Multigraph (Fin 3) E) (C : Finset E) :
+  Q.degreeOn C 0 = (Q.edgeBundleOn C 0 1).card + (Q.edgeBundleOn C 0 2).card
+Overfull.Multigraph.threeLabel_edge_cases.{u_2} {E : Type u_2} (Q : Overfull.Multigraph (Fin 3) E) (e : E) :
+  Q.edge e = s(0, 1) ∨ Q.edge e = s(0, 2) ∨ Q.edge e = s(1, 2)
+Overfull.Multigraph.threeLabel_equal_bundle_card.{u_1} {E : Type u_1} (Q : Overfull.Multigraph (Fin 3) E) {C : Finset E}
+  (hAC : (Q.edgeBundleOn C 0 2).card = (Q.edgeBundleOn C 0 1).card)
+  (hBC : (Q.edgeBundleOn C 1 2).card = (Q.edgeBundleOn C 0 1).card) (v w : Fin 3) (hne : v ≠ w) :
+  (Q.edgeBundleOn C v w).card = (Q.edgeBundleOn C 0 1).card
+Overfull.Multigraph.threeLabel_incident_one.{u_2} {E : Type u_2} (Q : Overfull.Multigraph (Fin 3) E) (C : Finset E) :
+  {e ∈ C | 1 ∈ Q.edge e} = Q.edgeBundleOn C 0 1 ∪ Q.edgeBundleOn C 1 2
+Overfull.Multigraph.threeLabel_incident_two.{u_2} {E : Type u_2} (Q : Overfull.Multigraph (Fin 3) E) (C : Finset E) :
+  {e ∈ C | 2 ∈ Q.edge e} = Q.edgeBundleOn C 0 2 ∪ Q.edgeBundleOn C 1 2
+Overfull.Multigraph.threeLabel_incident_zero.{u_2} {E : Type u_2} (Q : Overfull.Multigraph (Fin 3) E) (C : Finset E) :
+  {e ∈ C | 0 ∈ Q.edge e} = Q.edgeBundleOn C 0 1 ∪ Q.edgeBundleOn C 0 2
+Overfull.Multigraph.threeLabel_nonlocal_tight_eq_bundle_of_equal_bundles.{u_1, u_2} {E : Type u_1} {K : Type u_2}
+  (Q : Overfull.Multigraph (Fin 3) E) (classOf : Fin 3 → E → K) {C : Finset E}
+  (hAC : (Q.edgeBundleOn C 0 2).card = (Q.edgeBundleOn C 0 1).card)
+  (hBC : (Q.edgeBundleOn C 1 2).card = (Q.edgeBundleOn C 0 1).card) {v w : Fin 3} (hne : v ≠ w) (k : K)
+  (htight : 2 * (Q.classCutOn classOf C v k {w}).card = Q.degreeOn C w) :
+  Q.classCutOn classOf C v k {w} = Q.edgeBundleOn C v w
