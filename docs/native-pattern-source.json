@@ -1,0 +1,410 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "ec258578dfa68d0ac50cd9ff9e70b8dcbc2232b6",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "scope": "Native actual-copy matching-distribution capacities, at most five two-core assignment signatures and a heavy actual representative, forced copy pools, and boundary compression retaining every exceptional matching copy and crossing parity. Supporting progress toward Corollary 4.6 only. Does not construct simultaneous reserves or a safe residual, prove robust completion or palette grouping, or complete a numbered manuscript assertion.",
+  "review": "docs/native-pattern-semantic-review.md",
+  "proof_map": "docs/native-pattern-verification.md",
+  "authorized_manuscript_excerpts": "verification/runs/20261122T235931Z/authorized-manuscript-recovery.md",
+  "module_count": 6,
+  "public_theorem_count": 69,
+  "modules": [
+    {
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "path": "Overfull/AssignedParts/NativeWeights.lean",
+      "sha256": "b0aeab0ebc6c35dc89f771af2e5a2870d6bdbf774aab9f71183b8d92713ef5fe",
+      "public_theorem_count": 11,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.AssignedParts.NativeWeights.scaledWeight_nonneg",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.AssignedParts.NativeWeights.scaledWeight_sum",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.AssignedParts.NativeWeights.scaledWeight_marginal",
+          "source_line": 36
+        },
+        {
+          "name": "Overfull.AssignedParts.NativeWeights.weighted_pool_sum",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.AssignedParts.NativeWeights.scaled_matching_pool_eq",
+          "source_line": 57
+        },
+        {
+          "name": "Overfull.AssignedParts.NativeWeights.scaled_selected_edge_le_one",
+          "source_line": 64
+        },
+        {
+          "name": "Overfull.AssignedParts.NativeWeights.scaled_selected_capacity",
+          "source_line": 75
+        },
+        {
+          "name": "Overfull.AssignedParts.NativeWeights.aggregateWeight_total",
+          "source_line": 87
+        },
+        {
+          "name": "Overfull.AssignedParts.NativeWeights.aggregate_capacity",
+          "source_line": 92
+        },
+        {
+          "name": "Overfull.AssignedParts.NativeWeights.aggregateWeight_le_pool",
+          "source_line": 104
+        },
+        {
+          "name": "Overfull.AssignedParts.NativeWeights.exists_heavy_code",
+          "source_line": 120
+        }
+      ]
+    },
+    {
+      "module": "Overfull.AssignedParts.Signatures",
+      "path": "Overfull/AssignedParts/Signatures.lean",
+      "sha256": "5c9df88e9ede395eb539a1aace08f272c5f725a47148e55b3da161a20150330e",
+      "public_theorem_count": 15,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.AssignedParts.assignmentChoice_eq_zero_iff",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.AssignedParts.assignmentChoice_eq_one_iff",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.AssignedParts.coarseSignature_eq_none_iff",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.AssignedParts.coarseSignature_eq_some_iff",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.AssignedParts.pairPart_eq_exceptions_of_internal",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.AssignedParts.corePart_eq_original_of_pairPart_eq",
+          "source_line": 67
+        },
+        {
+          "name": "Overfull.AssignedParts.pairPart_eq_empty_of_internal_eq_empty",
+          "source_line": 79
+        },
+        {
+          "name": "Overfull.AssignedParts.pairPart_eq_of_signature_eq",
+          "source_line": 86
+        },
+        {
+          "name": "Overfull.AssignedParts.firstCorePart_eq_of_signature_eq",
+          "source_line": 106
+        },
+        {
+          "name": "Overfull.AssignedParts.secondCorePart_eq_of_other_parts_eq",
+          "source_line": 134
+        },
+        {
+          "name": "Overfull.AssignedParts.assignedParts_eq_of_signature_eq",
+          "source_line": 160
+        },
+        {
+          "name": "Overfull.AssignedParts.assignedLabel_eq_of_signature_eq",
+          "source_line": 175
+        },
+        {
+          "name": "Overfull.AssignedParts.coreCrossing_parity_eq_of_signature_eq",
+          "source_line": 189
+        },
+        {
+          "name": "Overfull.AssignedParts.card_assignmentSignature",
+          "source_line": 203
+        },
+        {
+          "name": "Overfull.AssignedParts.card_assignmentSignature_le_five",
+          "source_line": 210
+        }
+      ]
+    },
+    {
+      "module": "Overfull.AssignedParts.SignaturePools",
+      "path": "Overfull/AssignedParts/SignaturePools.lean",
+      "sha256": "1fd2b90fb89be304ad1e94b14d02fc031f31a812ef82f3484edf12b0f5e1f1ea",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.AssignedParts.signature_none_uses_internalPool",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.AssignedParts.uses_exceptionCorePool_of_witness",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.AssignedParts.signature_some_uses_exceptionCorePool",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.AssignedParts.uses_coreCrossingPool_of_nonempty",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.AssignedParts.signature_uses_coreCrossingPool_of_odd",
+          "source_line": 89
+        }
+      ]
+    },
+    {
+      "module": "Overfull.AssignedParts.HeavySignature",
+      "path": "Overfull/AssignedParts/HeavySignature.lean",
+      "sha256": "e2ef3ed1a2e8bdff0c44cf6df6059f1a20d5ce6b9ad46666036c4b7c12094b36",
+      "public_theorem_count": 8,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.AssignedParts.signatureWeight_nonneg",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.AssignedParts.signatureWeight_sum",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.AssignedParts.exists_heavy_signature",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.AssignedParts.signatureWeight_none_le_internalPool",
+          "source_line": 50
+        },
+        {
+          "name": "Overfull.AssignedParts.signatureWeight_some_le_exceptionCorePool",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.AssignedParts.signatureWeight_le_coreCrossingPool_of_odd",
+          "source_line": 68
+        },
+        {
+          "name": "Overfull.AssignedParts.exists_heavy_signature_with_pools",
+          "source_line": 82
+        },
+        {
+          "name": "Overfull.AssignedParts.exists_assignment_matching_with_linear_pools",
+          "source_line": 117
+        }
+      ]
+    },
+    {
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "path": "Overfull/AssignedParts/BoundaryCompression.lean",
+      "sha256": "99fcda3685b092a0c2cbd0287d8046b2e45d845f4ec375da8f50c01fc8e5360f",
+      "public_theorem_count": 19,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.IsMatching.degreeOn_sum_eq_covered",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.Multigraph.IsMatching.uncovered_even_iff_cut_parity",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.AssignedParts.mem_exceptionalCopies",
+          "source_line": 60
+        },
+        {
+          "name": "Overfull.AssignedParts.exceptionalCopies_subset",
+          "source_line": 65
+        },
+        {
+          "name": "Overfull.AssignedParts.mem_exceptionalCopies_of_incident",
+          "source_line": 69
+        },
+        {
+          "name": "Overfull.AssignedParts.exceptionalCopies_card_le",
+          "source_line": 79
+        },
+        {
+          "name": "Overfull.AssignedParts.paritySelection_subset",
+          "source_line": 102
+        },
+        {
+          "name": "Overfull.AssignedParts.paritySelection_card",
+          "source_line": 111
+        },
+        {
+          "name": "Overfull.AssignedParts.paritySelection_card_le_one",
+          "source_line": 119
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_subset",
+          "source_line": 127
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_isMatching",
+          "source_line": 135
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_retains_exceptional",
+          "source_line": 141
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_card_le",
+          "source_line": 144
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_support_card_le",
+          "source_line": 154
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_assignedExceptions",
+          "source_line": 161
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_corePart",
+          "source_line": 173
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_internalOn",
+          "source_line": 178
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_pairPart",
+          "source_line": 189
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_assignedLabel",
+          "source_line": 193
+        }
+      ]
+    },
+    {
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "path": "Overfull/AssignedParts/CompressionCuts.lean",
+      "sha256": "de47e0a4b2a045aef1490e325ccbdd71003715c652e11794caf14f4655c425b9",
+      "public_theorem_count": 11,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.AssignedParts.mem_coreCrossings_iff",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.AssignedParts.exceptionalCopies_disjoint_coreCrossings",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.AssignedParts.core_cut_split",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.AssignedParts.cutOn_paritySelection_coreCrossings",
+          "source_line": 86
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_cut_split",
+          "source_line": 96
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_core_crossings",
+          "source_line": 108
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_internal_core_empty",
+          "source_line": 137
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_cut_parity",
+          "source_line": 152
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_uncovered_even_first",
+          "source_line": 174
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_swap",
+          "source_line": 185
+        },
+        {
+          "name": "Overfull.AssignedParts.compressedBoundary_uncovered_even",
+          "source_line": 192
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.AssignedParts.NativeWeights.aggregateWeight_le_pool",
+    "Overfull.AssignedParts.NativeWeights.aggregateWeight_total",
+    "Overfull.AssignedParts.NativeWeights.aggregate_capacity",
+    "Overfull.AssignedParts.NativeWeights.exists_heavy_code",
+    "Overfull.AssignedParts.NativeWeights.scaledWeight_marginal",
+    "Overfull.AssignedParts.NativeWeights.scaledWeight_nonneg",
+    "Overfull.AssignedParts.NativeWeights.scaledWeight_sum",
+    "Overfull.AssignedParts.NativeWeights.scaled_matching_pool_eq",
+    "Overfull.AssignedParts.NativeWeights.scaled_selected_capacity",
+    "Overfull.AssignedParts.NativeWeights.scaled_selected_edge_le_one",
+    "Overfull.AssignedParts.NativeWeights.weighted_pool_sum",
+    "Overfull.AssignedParts.assignedLabel_eq_of_signature_eq",
+    "Overfull.AssignedParts.assignedParts_eq_of_signature_eq",
+    "Overfull.AssignedParts.assignmentChoice_eq_one_iff",
+    "Overfull.AssignedParts.assignmentChoice_eq_zero_iff",
+    "Overfull.AssignedParts.card_assignmentSignature",
+    "Overfull.AssignedParts.card_assignmentSignature_le_five",
+    "Overfull.AssignedParts.coarseSignature_eq_none_iff",
+    "Overfull.AssignedParts.coarseSignature_eq_some_iff",
+    "Overfull.AssignedParts.compressedBoundary_assignedExceptions",
+    "Overfull.AssignedParts.compressedBoundary_assignedLabel",
+    "Overfull.AssignedParts.compressedBoundary_card_le",
+    "Overfull.AssignedParts.compressedBoundary_corePart",
+    "Overfull.AssignedParts.compressedBoundary_core_crossings",
+    "Overfull.AssignedParts.compressedBoundary_cut_parity",
+    "Overfull.AssignedParts.compressedBoundary_cut_split",
+    "Overfull.AssignedParts.compressedBoundary_internalOn",
+    "Overfull.AssignedParts.compressedBoundary_internal_core_empty",
+    "Overfull.AssignedParts.compressedBoundary_isMatching",
+    "Overfull.AssignedParts.compressedBoundary_pairPart",
+    "Overfull.AssignedParts.compressedBoundary_retains_exceptional",
+    "Overfull.AssignedParts.compressedBoundary_subset",
+    "Overfull.AssignedParts.compressedBoundary_support_card_le",
+    "Overfull.AssignedParts.compressedBoundary_swap",
+    "Overfull.AssignedParts.compressedBoundary_uncovered_even",
+    "Overfull.AssignedParts.compressedBoundary_uncovered_even_first",
+    "Overfull.AssignedParts.coreCrossing_parity_eq_of_signature_eq",
+    "Overfull.AssignedParts.corePart_eq_original_of_pairPart_eq",
+    "Overfull.AssignedParts.core_cut_split",
+    "Overfull.AssignedParts.cutOn_paritySelection_coreCrossings",
+    "Overfull.AssignedParts.exceptionalCopies_card_le",
+    "Overfull.AssignedParts.exceptionalCopies_disjoint_coreCrossings",
+    "Overfull.AssignedParts.exceptionalCopies_subset",
+    "Overfull.AssignedParts.exists_assignment_matching_with_linear_pools",
+    "Overfull.AssignedParts.exists_heavy_signature",
+    "Overfull.AssignedParts.exists_heavy_signature_with_pools",
+    "Overfull.AssignedParts.firstCorePart_eq_of_signature_eq",
+    "Overfull.AssignedParts.mem_coreCrossings_iff",
+    "Overfull.AssignedParts.mem_exceptionalCopies",
+    "Overfull.AssignedParts.mem_exceptionalCopies_of_incident",
+    "Overfull.AssignedParts.pairPart_eq_empty_of_internal_eq_empty",
+    "Overfull.AssignedParts.pairPart_eq_exceptions_of_internal",
+    "Overfull.AssignedParts.pairPart_eq_of_signature_eq",
+    "Overfull.AssignedParts.paritySelection_card",
+    "Overfull.AssignedParts.paritySelection_card_le_one",
+    "Overfull.AssignedParts.paritySelection_subset",
+    "Overfull.AssignedParts.secondCorePart_eq_of_other_parts_eq",
+    "Overfull.AssignedParts.signatureWeight_le_coreCrossingPool_of_odd",
+    "Overfull.AssignedParts.signatureWeight_none_le_internalPool",
+    "Overfull.AssignedParts.signatureWeight_nonneg",
+    "Overfull.AssignedParts.signatureWeight_some_le_exceptionCorePool",
+    "Overfull.AssignedParts.signatureWeight_sum",
+    "Overfull.AssignedParts.signature_none_uses_internalPool",
+    "Overfull.AssignedParts.signature_some_uses_exceptionCorePool",
+    "Overfull.AssignedParts.signature_uses_coreCrossingPool_of_odd",
+    "Overfull.AssignedParts.uses_coreCrossingPool_of_nonempty",
+    "Overfull.AssignedParts.uses_exceptionCorePool_of_witness",
+    "Overfull.Multigraph.IsMatching.degreeOn_sum_eq_covered",
+    "Overfull.Multigraph.IsMatching.uncovered_even_iff_cut_parity"
+  ]
+}

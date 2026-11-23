@@ -112,7 +112,8 @@ def main() -> None:
                           ("few", "few-exception-source.json"),
                           ("circuit", "three-label-circuit-source.json"),
                           ("joining", "joining-circuit-source.json"),
-                          ("assigned", "assigned-part-source.json")):
+                          ("assigned", "assigned-part-source.json"),
+                          ("native_pattern", "native-pattern-source.json")):
         source = json.loads((ROOT / "docs" / filename).read_text())
         source_modules = {item["module"]: item for item in source["modules"]}
         if (len(source_modules) != source["module_count"]
@@ -150,6 +151,9 @@ def main() -> None:
         raise SystemExit("The joining decomposition completes no numbered manuscript assertion.")
     if extension_maps["assigned"][0]["numbered_assertions_completed"] != 0:
         raise SystemExit("The assigned-part continuation completes no numbered manuscript assertion.")
+
+    if extension_maps["native_pattern"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The native-pattern continuation completes no numbered manuscript assertion.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1648,7 +1652,7 @@ def main() -> None:
             raise SystemExit(f"The {key} declaration mapping omits a reviewed module.")
         basename = {"ordinary": "ordinary-factorization-full", "few": "few-exception",
                     "circuit": "three-label-circuit", "joining": "joining-circuit",
-                    "assigned": "assigned-part"}[key]
+                    "assigned": "assigned-part", "native_pattern": "native-pattern"}[key]
         map_path = OUTPUT / f"{basename}-declarations.json"
         map_path.write_text(json.dumps({
             "schema_version": 1,
@@ -1719,6 +1723,7 @@ def main() -> None:
         "three_label_circuit_declaration_map": extension_evidence["circuit"],
         "joining_circuit_declaration_map": extension_evidence["joining"],
         "assigned_part_declaration_map": extension_evidence["assigned"],
+        "native_pattern_declaration_map": extension_evidence["native_pattern"],
         "checkpoint_reconstruction": {
             "original_checkpoint": reconstruction["original_checkpoint"],
             "original_tree_reproduced": False,
