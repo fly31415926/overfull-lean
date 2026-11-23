@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "status": "verified_complete_numbered_assertion",
+  "verification_completed_at_utc": "2026-11-22T20:52:03.314309+00:00",
+  "repository": "fly31415926/overfull-lean",
+  "base_commit": "a90d674d0d03f59895633a0f8d64f2b250fcb076",
+  "local_branch": "assertion46-closure-2026-11-22",
+  "target_branches": [
+    "main",
+    "verified-bipartite-continuation-2026-11-21"
+  ],
+  "manuscript_number": "4.14",
+  "manuscript_label": "three:lem:boundary",
+  "statement_sha256": "67baedd4ae2e0451a8842fd27ea0976f50db94c9054eacd2f5dd40ce2cfa21e3",
+  "public_theorem": "Overfull.boundary_extension",
+  "numbered_assertions_completed_in_this_continuation": 1,
+  "fully_verified_numbered_assertion_count": 46,
+  "remaining_numbered_assertion_count": 23,
+  "main_theorem_verified": false,
+  "strict_build_jobs": 3633,
+  "verified_declaration_count": 11318,
+  "previous_verified_declarations_preserved": 11056,
+  "new_verified_declaration_count": 262,
+  "declaration_count_includes_private_and_generated_support_lemmas": true,
+  "recovered_historical_declarations_preserved": 1214,
+  "imported_project_module_count": 462,
+  "new_project_module_count": 15,
+  "closure_module_count": 17,
+  "closure_audited_declaration_count": 269,
+  "source_hash_count": 463,
+  "verification_input_hash_count": 51,
+  "allowed_logical_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "all_recorded_source_and_input_hashes_match": true,
+  "all_previous_proof_names_modules_and_axiom_sets_preserved": true,
+  "all_45_previously_completed_assertion_records_unchanged": true,
+  "all_69_statement_hashes_unchanged": true,
+  "source_recovery_manifest_byte_identical_to_base": true,
+  "stock_audit_program_byte_identical_to_base": true,
+  "original_statements_and_proof_bodies_preserved": [
+    "exists_uniform_first_half",
+    "exists_uniform_bipartite_reduction"
+  ],
+  "verification_command": "python3 scripts/verify.py",
+  "strict_build_command": "lake build --wfail",
+  "axiom_audit_command": "lake env lean Audit.lean",
+  "scope": "Full prescribed boundary extension for the actual finite edge copies incident with an odd robust core, preserving every original singleton/triple boundary label pointwise. Uniform error and order choices precede the host and coloring. The direct constructed one-apex/two-apex factorization has no residual-coloring, absorber, full Corollary 4.6 or Theorem 6.1 premise. General Lemma 4.2, Corollary 4.6, Theorem 6.1, Proposition 4.16 and the main theorem remain incomplete.",
+  "additional_probability_support": {
+    "module": "Overfull.Probability.BernoulliDifferences",
+    "part_of_boundary_extension_proof": false,
+    "numbered_assertions_completed": 0
+  },
+  "evidence_sha256": {
+    "verification/results.json": "a6635af43f2100c278404e129df5579fd675e19681a3cf9b6a1a44439826726a",
+    "verification/build.log": "d571153d438bf776ebea417f688d35fe8e9e4a6c3ddbd5ae3abf49a6575e0eb7",
+    "verification/axioms.log": "1e5fd68f4d3f6eb643190e3aab1319bbc58832aa7f9bd313daf575063a395b9b",
+    "verification/lean-version.log": "36c0bbaf090c97bc8217c6ff497ff9144fd83d9003f12cd505162b943aaaee77",
+    "verification/vizing-source.log": "e91712c222adcda35d3eac8804b7f83ffefe0283a4c35be6e0f28dfda0e238e8",
+    "verification/boundary-extension-full-declarations.json": "2508f4daec0c1490546f3972e9b6d07e86500162964d6a2a5e6c166471457511",
+    "verification/four-odd-declarations.json": "25de2dc7c11e7e439613571e7a4fd05baf5b8a8977b70a6c6630a197679c9725",
+    "verification/residual-factorization-declarations.json": "60bd07fd5199eddaa9aa4781bc800cf9b8a860a7c923f389e9b13ddedbcbeabd",
+    "docs/boundary-extension-full-source.json": "b9ecf5128ee336b8bcec11476fd7c1ecbf0fb6567f0260360a4f56610fd2b641",
+    "docs/boundary-extension-full-semantic-review.md": "14eb9c9e046e39c9d5fa817e8a63cc4beefb0d7a1fafdaaad04be53e8fe04a55",
+    "docs/boundary-extension.md": "b509151397ae43b2a6d57eac75d3e5586216e8b814ad18ea39d3ddb72ce7e968",
+    "docs/coverage.json": "4412b25b38889068604ebad656c0c6574450ce0d01a93c3241395285c5df09b8",
+    "docs/manuscript-source.json": "41549563236d1c73c4437aa0221cebf74c7f77f55787335d8ffeba5d9f52f23d",
+    "docs/source-recovery.json": "a533903bf4ebab7dec8baec4ead1d5f0a9f70a825605f2a180befd97289dfb3b",
+    "Audit.lean": "76886fd9261a3a7b07660f9a434272c0347130a4013cf57da6e1761a34fc6603"
+  },
+  "publication": {
+    "status": "prepared_for_publication",
+    "note": "This verification record is created before publication. The final local checkpoint commit and any exact-tree GitHub publication commit are identified in the publication commit message and delivery report; no self-referential commit hash is embedded here."
+  }
+}

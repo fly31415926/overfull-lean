@@ -1,0 +1,14 @@
+Vizing source verified: c4fc77be6af1a48a44351234120898ad3cf6b545
+Traceback (most recent call last):
+  File "/workspace/scratch/96ddfd820f7d/overfull-next/scripts/verify.py", line 1768, in <module>
+    main()
+  File "/workspace/scratch/96ddfd820f7d/overfull-next/scripts/verify.py", line 119, in main
+    source = json.loads((ROOT / "docs" / filename).read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/96ddfd820f7d/overfull-next/docs/residual-palette-source.json'

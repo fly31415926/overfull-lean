@@ -228,6 +228,11 @@ import Overfull.CompatibleCircuits.TwoOddDecomposition
 import Overfull.AssignedParts.JoiningConstruction
 import Overfull.AssignedParts.NativePatternConstruction
 import Overfull.NativeReserve.CompletionConstruction
+import Overfull.ResidualPalette.UniformJoining
+import Overfull.ResidualPalette.PaletteBudget
+import Overfull.ResidualPalette.JoiningGrouping
+import Overfull.ResidualPalette.NativeProtectedPalette
+import Overfull.ResidualPalette.ProtectedBudget
 
 /-!
 # Partial formalization of the overfull manuscript

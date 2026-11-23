@@ -1,0 +1,48 @@
+/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/NativeReservedCrossings.lean:73:69: error: Application type mismatch: The argument
+  G
+has type
+  Multigraph V E
+but is expected to have type
+  BoundaryPacking ?m.71 ?m.72 ?m.73 ?m.74 ?m.75 ?m.76
+in the application
+  assignedLabel G
+/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/NativeReservedCrossings.lean:76:66: error: Application type mismatch: The argument
+  G
+has type
+  Multigraph V E
+but is expected to have type
+  BoundaryPacking ?m.123 ?m.124 ?m.125 ?m.126 ?m.127 ?m.128
+in the application
+  assignedLabel G
+/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/NativeReservedCrossings.lean:77:8: error: Application type mismatch: The argument
+  f j
+has type
+  { x // x ∈ joiningCopies (residualGraph G N T) ?m.78 }
+but is expected to have type
+  { x // x ∈ joiningCopies (residualGraph G N T) ?m.130 }
+in the application
+  (joiningQuotient (residualGraph G N T) ?m.130).edge (f j)
+/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/NativeReservedCrossings.lean:118:69: error: Application type mismatch: The argument
+  G
+has type
+  Multigraph V E
+but is expected to have type
+  BoundaryPacking ?m.71 ?m.72 ?m.73 ?m.74 ?m.75 ?m.76
+in the application
+  assignedLabel G
+/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/NativeReservedCrossings.lean:121:70: error: Application type mismatch: The argument
+  G
+has type
+  Multigraph V E
+but is expected to have type
+  BoundaryPacking ?m.124 ?m.125 ?m.126 ?m.127 ?m.128 ?m.129
+in the application
+  assignedLabel G
+/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/NativeReservedCrossings.lean:122:8: error: Application type mismatch: The argument
+  e
+has type
+  { x // x ∈ joiningCopies (residualGraph G N T) ?m.78 }
+but is expected to have type
+  { x // x ∈ joiningCopies (residualGraph G N T) ?m.131 }
+in the application
+  (joiningQuotient (residualGraph G N T) ?m.131).edge e

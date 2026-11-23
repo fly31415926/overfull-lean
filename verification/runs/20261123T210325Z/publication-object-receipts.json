@@ -1,0 +1,26 @@
+{
+  "recorded_at_utc": "2026-11-23 21:37:43 UTC",
+  "repository": "fly31415926/overfull-lean",
+  "scope": "Actual successful content-object receipts before the separately recorded upload rejection.",
+  "tree_receipts": [
+    {
+      "object_type": "tree",
+      "sha": "e4dd8091fad74108fbe93b8879263d45241a9cdc",
+      "reported_status": "created",
+      "commit_or_branch_ref_created": false
+    },
+    {
+      "object_type": "tree",
+      "sha": "ad08904961f3926ae4c2deb03896cf4b815e57bb",
+      "reported_status": "created",
+      "commit_or_branch_ref_created": false
+    }
+  ],
+  "earlier_blob_receipt": {
+    "sha": "5b107e59d784582a626254b13f93ce2634c65a67",
+    "reported_status": "created_and_matched_expected_blob_sha",
+    "scope": "A single exact project blob; recorded before the transport-tree batches."
+  },
+  "completed_verified_commit_or_branch_publication": false,
+  "note": "Some unreferenced content objects were created. This record does not claim that no data upload occurred, or that a verified commit or branch update succeeded. The two verified branch refs were subsequently read back unchanged, as recorded in publication-status.json."
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "old": "                          (\"native_reserve\", \"native-reserve-source.json\")):\n",
+    "new": "                          (\"native_reserve\", \"native-reserve-source.json\"),\n                          (\"residual_palette\", \"residual-palette-source.json\")):\n"
+  },
+  {
+    "old": "    # Every first-party mathematical file must be included in the library build.\n",
+    "new": "    if extension_maps[\"residual_palette\"][0][\"numbered_assertions_completed\"] != 0:\n        raise SystemExit(\"The residual-palette continuation completes no numbered manuscript assertion.\")\n\n    # Every first-party mathematical file must be included in the library build.\n"
+  },
+  {
+    "old": "                    \"native_reserve\": \"native-reserve\"}[key]\n",
+    "new": "                    \"native_reserve\": \"native-reserve\",\n                    \"residual_palette\": \"residual-palette\"}[key]\n"
+  },
+  {
+    "old": "        \"native_reserve_declaration_map\": extension_evidence[\"native_reserve\"],\n",
+    "new": "        \"native_reserve_declaration_map\": extension_evidence[\"native_reserve\"],\n        \"residual_palette_declaration_map\": extension_evidence[\"residual_palette\"],\n"
+  }
+]

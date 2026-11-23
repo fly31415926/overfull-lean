@@ -1,0 +1,12 @@
+{
+  "kind": "observed_tool_error",
+  "observed_at_utc": "2026-11-23T21:08:53.631663+00:00",
+  "command": [
+    "python3",
+    "scripts/update_residual_palette_manifest.py"
+  ],
+  "exit_code": 1,
+  "error": "ValueError: Unmatched namespace at /workspace/scratch/96ddfd820f7d/overfull-next/Overfull/ResidualPalette/ReservedPrimary.lean:286",
+  "source_sha256": "10ae21b1da715245ec55fdcd5548b5230361207ed0f111193270c53b131a6c42",
+  "explanation": "The initial manifest scanner did not distinguish a named Lean section from a namespace. The following full-01 failed before compilation because the manifest had not been generated. Its actual output is retained."
+}

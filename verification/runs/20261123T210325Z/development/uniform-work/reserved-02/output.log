@@ -1,0 +1,31 @@
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:18:26: error: unexpected token 'omit'; expected 'lemma'
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:29:75: error: unexpected token 'omit'; expected 'lemma'
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:130:6: error: Type mismatch
+  Multigraph.isCircuit_parallel_pair (Q.pairAugmentation a b hab h) ?m.768 ?m.769
+has type
+  (Q.pairAugmentation a b hab h).IsCircuit {Sum.inl e, Sum.inr j}
+but is expected to have type
+  (Q.pairAugmentation a b hab h).IsCircuit D
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:141:6: error: Type mismatch
+  Multigraph.even_degreeOn_sdiff (Q.pairAugmentation a b hab h) hDsub heven
+    (Multigraph.IsCircuit.even_degreeOn (Q.pairAugmentation a b hab h) hDcir)
+has type
+  ∀ (v : V),
+    Even
+      ((Q.pairAugmentation a b hab h).degreeOn
+        (@sdiff (Finset (E ⊕ Fin h)) (@instSDiff (E ⊕ Fin h) fun a b => propDecidable (a = b)) (C.disjSum B) D) v)
+but is expected to have type
+  ∀ (v : V),
+    Even
+      ((Q.pairAugmentation a b hab h).degreeOn
+        (@sdiff (Finset (E ⊕ Fin h)) (@instSDiff (E ⊕ Fin h) fun a b => instDecidableEqSum a b) (C.disjSum B) D) v)
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:146:13: error: Application type mismatch: The argument
+  P'
+has type
+  (Q.pairAugmentation a b hab h).CompatibleCircuitPartition (Multigraph.pairAugmentationClass h classOf)
+    (@sdiff (Finset (E ⊕ Fin h)) (@instSDiff (E ⊕ Fin h) fun a b => instDecidableEqSum a b) (C.disjSum B) D)
+but is expected to have type
+  (Q.pairAugmentation a b hab h).CompatibleCircuitPartition (Multigraph.pairAugmentationClass h classOf)
+    (@sdiff (Finset (E ⊕ Fin h)) (@instSDiff (E ⊕ Fin h) fun a b => propDecidable (a = b)) (C.disjSum B) D)
+in the application
+  Multigraph.CompatibleCircuitPartition.insertCircuit (Q.pairAugmentation a b hab h) P'

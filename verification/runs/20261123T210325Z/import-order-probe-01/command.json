@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lake",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "/workspace/scratch/96ddfd820f7d/uniform-work/import-order-probe-01/OldPrefixThenPalette.lean"
+  ],
+  "cwd": "/workspace/scratch/96ddfd820f7d/overfull-next",
+  "started_at_utc": "2026-11-23T21:29:53.245925+00:00",
+  "status": "passed",
+  "exit_code": 0,
+  "parent_verified_commit": "b7be9966640e932ef7bbd030d3dae42f7bcb4638",
+  "scope": "Module attribution only; no axiom traversal or complete verification.",
+  "source_sha256": {
+    "/workspace/scratch/96ddfd820f7d/uniform-work/import-order-probe-01/OldPrefixThenPalette.lean": "8675bb459362344ef2533432b93c405975b01d1d66a4ebbaad185eb9b2591f36"
+  },
+  "parent_root_sha256": "f8f137302a0cc7d0d6d5c2f97fbbc9f6b46bf8441c534fb64c8d22e809bfcf84",
+  "proposed_root_sha256": "f293bdb427ae4a459f9a8fd46294d5c3e513f8093dea1e35cffa4b7487fb4587",
+  "root_added_imports_sha256": "7474eb3006782625b55bba6fa171591bd6f57ce950266a4ed05f9c5cfa959e83",
+  "finished_at_utc": "2026-11-23T21:30:01.060219+00:00",
+  "elapsed_seconds": 7.814294,
+  "output_sha256": "6d1d06aec3fb20eed83e71a81d100b693be768c2725304800d7b489233386259"
+}

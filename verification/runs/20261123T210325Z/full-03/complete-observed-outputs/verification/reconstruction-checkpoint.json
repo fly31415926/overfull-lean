@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "verified_reconstruction_ready_for_publication",
+  "verification_completed_at_utc": "2026-11-22T23:44:09.298757+00:00",
+  "repository": "fly31415926/overfull-lean",
+  "original_checkpoint": "cb05ef5f5b7ef5ada4e535e9dcc652eecaddc43e",
+  "original_tree": "e8a2de1dd1cf26d3454dd884ece6695a74a4780f",
+  "original_tree_reproduced": false,
+  "base_commit": "a825b24b0dd0ad6edd336388c740530bcfb38d99",
+  "base_tree": "b19c235f189e1939dac5a70e0a350de7ee65a2bd",
+  "target_branches": [
+    "main",
+    "verified-bipartite-continuation-2026-11-21"
+  ],
+  "tracked_publication_file_count": 569,
+  "recovered_original_source_count": 9,
+  "recreated_source_count": 11,
+  "all_recovered_original_source_hashes_match": true,
+  "previous_lean_source_count": 463,
+  "byte_identical_previous_lean_sources_except_root_import": 462,
+  "root_change": "Seven new imports and one blank line; all previous root content retained.",
+  "source_hash_count": 483,
+  "verification_input_hash_count": 62,
+  "imported_project_module_count": 482,
+  "strict_build_jobs": 3654,
+  "verified_declaration_count": 11514,
+  "previous_verified_declarations_preserved": 11318,
+  "new_verified_declaration_count": 196,
+  "all_previous_proof_names_modules_and_axiom_sets_preserved": true,
+  "historical_source_recovery_declarations_preserved": 1214,
+  "all_69_statement_hashes_unchanged": true,
+  "all_46_previously_completed_assertion_records_unchanged": true,
+  "newly_completed_numbered_assertions": [
+    "4.2"
+  ],
+  "fully_verified_numbered_assertion_count": 47,
+  "remaining_numbered_assertion_count": 22,
+  "main_theorem_verified": false,
+  "ordinary_closure": {
+    "path": "verification/ordinary-factorization-full-declarations.json",
+    "sha256": "5873d8011ba12ad1989fb82d94bfc4aa01ee27df3f2ae02bc5076a13b3abf650",
+    "module_count": 14,
+    "public_theorem_count": 57,
+    "verified_declaration_count": 142,
+    "numbered_assertions_completed": 1
+  },
+  "few_exception_continuation": {
+    "path": "verification/few-exception-declarations.json",
+    "sha256": "d0a030c6f6b40b9b9d93b03b8f4656cea54cf95a3cff38073b48e67c53c5bef3",
+    "module_count": 6,
+    "public_theorem_count": 27,
+    "verified_declaration_count": 54,
+    "numbered_assertions_completed": 0
+  },
+  "all_recorded_source_and_input_hashes_match": true,
+  "all_current_source_and_input_paths_recorded": true,
+  "stock_audit_program_byte_identical_to_base": true,
+  "source_recovery_manifest_byte_identical_to_base": true,
+  "previous_declaration_maps_byte_identical_to_base": {
+    "verification/four-odd-declarations.json": true,
+    "verification/residual-factorization-declarations.json": true,
+    "verification/boundary-extension-full-declarations.json": true
+  },
+  "allowed_logical_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "fresh_audit_log_matches_complete_report": true,
+  "verification_command": "python3 scripts/verify.py",
+  "strict_build_command": "lake build --wfail",
+  "axiom_audit_command": "lake env lean Audit.lean",
+  "evidence_sha256": {
+    "verification/results.json": "ab8d2fa02dd0e4e6fa677cd0423a3ae73a4aca4bb967fa044a1b9d3198f2b7fa",
+    "verification/build.log": "6f9fe32b6f2ba9ed1624ca28d105475643fb9d23bb2422de1d36e2f59a3d7e86",
+    "verification/axioms.log": "748d6bc4d1a2312266cb6b1f77226aac0803c97158d30dec185379aa40472ce4",
+    "verification/lean-version.log": "36c0bbaf090c97bc8217c6ff497ff9144fd83d9003f12cd505162b943aaaee77",
+    "verification/vizing-source.log": "e91712c222adcda35d3eac8804b7f83ffefe0283a4c35be6e0f28dfda0e238e8",
+    "verification/ordinary-factorization-full-declarations.json": "5873d8011ba12ad1989fb82d94bfc4aa01ee27df3f2ae02bc5076a13b3abf650",
+    "verification/few-exception-declarations.json": "d0a030c6f6b40b9b9d93b03b8f4656cea54cf95a3cff38073b48e67c53c5bef3",
+    "verification/three-label-selector-check.log": "430a88caad01b6fe317ba9077f9d9de03335cc05e68037a756307d666bd878cb",
+    "docs/checkpoint-reconstruction-source.json": "15b678ca340bc3e5f6120c242e5e87255ddea8de45cfa82267fbf83b44784322",
+    "docs/ordinary-factorization-full-source.json": "814c007ffd25a7c4aad82ffbcdd171ee26efe1544bdc4b326ef71577d995d103",
+    "docs/few-exception-source.json": "f5facc94fd90dc729fb59d5af62c1b81763e30f84cb2758a66a5415f3e434ae6",
+    "docs/source-recovery.json": "a533903bf4ebab7dec8baec4ead1d5f0a9f70a825605f2a180befd97289dfb3b",
+    "Audit.lean": "76886fd9261a3a7b07660f9a434272c0347130a4013cf57da6e1761a34fc6603"
+  },
+  "publication_note": "Generated before branch updates. Final commit and exact tree are identified by the publication commit and delivery report. Historical recovered logs are separate evidence and do not certify the recreated sources.",
+  "scope": "47 of 69 numbered manuscript assertions have complete checked proofs; 22, including the main theorem, remain incomplete. Full ordinary-core Lemma 4.2 is proved under its original hypotheses and yields an exact partition of all original multigraph copies into perfect matchings. The supporting continuation proves the one-core branch of Corollary 4.6 with at most three exceptional vertices, terminal one-core factorization under the recorded incidence hypotheses, and the exact three-label safe-deletion criterion. It completes no additional numbered assertion. The two-core branch of 4.6, full fixed-pattern Lemma 4.4, general compatible-circuit selection, terminal Proposition 4.16, general Section 6 factorization, critical average-degree input, and the main theorem remain incomplete. Eleven unavailable source modules were recreated under explicit user authorization; all nine recovered original source modules and the stock audit were preserved. This is a newly verified checkpoint, not the original cb05ef5 tree."
+}

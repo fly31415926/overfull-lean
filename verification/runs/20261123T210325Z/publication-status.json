@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-23 21:23:47 UTC",
+  "repository": "fly31415926/overfull-lean",
+  "repository_visibility": "public",
+  "status": "publication_paused_after_automatic_approval_rejection",
+  "target_branches": [
+    "main",
+    "verified-bipartite-continuation-2026-11-21"
+  ],
+  "observed_remote_branches": [
+    {
+      "branch": "main",
+      "commit": "98c6b228a997fead863d05041f12799c93fac18b",
+      "observed_at_utc": "2026-11-23 21:23:47 UTC",
+      "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/main"
+    },
+    {
+      "branch": "verified-bipartite-continuation-2026-11-21",
+      "commit": "98c6b228a997fead863d05041f12799c93fac18b",
+      "observed_at_utc": "2026-11-23 21:23:47 UTC",
+      "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/verified-bipartite-continuation-2026-11-21"
+    }
+  ],
+  "source_and_log_upload_rejected": true,
+  "denial_evidence": "verification/runs/20261123T210325Z/publication-attempt-rejection.json",
+  "denial_summary": "Automatic approval review did not recognize sufficient authorization to export project sources, documentation, mappings, and verification logs to the named public repository.",
+  "subsequent_checks": {
+    "repository_owner_matches_authenticated_account": true,
+    "connected_account_has_push_permissions": true,
+    "explicit_standing_user_authorization_recovered": true,
+    "personal_context_and_account_profile_not_embedded": "Raw personal-context and account-profile responses are intentionally not included in project publication evidence."
+  },
+  "subsequent_native_verified_upload_attempt": {
+    "observed_tool_outcome": "aborted by user after 25.0s",
+    "successful_tool_result_received": false,
+    "commit_or_ref_update_attempted": false,
+    "note": "The tool receipt does not establish whether an unreferenced content tree was created. No successful result is claimed."
+  },
+  "verified_branch_updates_completed": false,
+  "local_verification_continued": true,
+  "local_native_checkpoint_commit": "b7be9966640e932ef7bbd030d3dae42f7bcb4638",
+  "local_native_checkpoint_tree": "7b7c84d18ee0f7826e87829de5d175fd6eea7ff6",
+  "next_action": "Complete local verification and preservation, then request explicit confirmation of this concrete public publication because automatic approval review blocked the upload."
+}

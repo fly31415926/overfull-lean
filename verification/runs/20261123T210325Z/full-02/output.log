@@ -1,0 +1,9 @@
+Vizing source verified: c4fc77be6af1a48a44351234120898ad3cf6b545
+Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)
+✖ [3706/3707] Building Overfull (3.1s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/96ddfd820f7d/overfull-next/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/96ddfd820f7d/overfull-next/Overfull.lean -o /workspace/scratch/96ddfd820f7d/overfull-next/.lake/build/lib/lean/Overfull.olean -i /workspace/scratch/96ddfd820f7d/overfull-next/.lake/build/lib/lean/Overfull.ilean -c /workspace/scratch/96ddfd820f7d/overfull-next/.lake/build/ir/Overfull.c --setup /workspace/scratch/96ddfd820f7d/overfull-next/.lake/build/ir/Overfull.setup.json --json
+error: Overfull.lean:241:0: invalid 'import' command, it must be used in the beginning of the file
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull
+error: build failed

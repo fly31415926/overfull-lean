@@ -1,0 +1,72 @@
+{
+  "status": "read_only_historical_and_import_order_helpers_passed",
+  "scope": "Historical full-03 evidence, failed preservation check, root correction and targeted probe only.",
+  "final_checker_main_executed": false,
+  "current_full_verifier_executed": false,
+  "current_full_verifier_attempt_observed": "full-04",
+  "current_full_verifier_status_observed": "running",
+  "current_full_verifier_pass_claimed": false,
+  "parent_verified_commit": "b7be9966640e932ef7bbd030d3dae42f7bcb4638",
+  "historical_full_03": {
+    "snapshot_manifest_path": "verification/runs/20261123T210325Z/full-03/complete-observed-outputs/snapshot.json",
+    "snapshot_manifest_sha256": "4ac0570ba72b7316a52f95e0773d32f996356a98557f84b96010f849503d592e",
+    "archived_file_count": 32,
+    "all_archived_file_hashes_match": true,
+    "full_verifier_attempt": "full-03",
+    "full_verifier_status": "passed",
+    "strict_build_jobs": 3719,
+    "verified_declaration_count": 12559,
+    "frozen_input_count": 635,
+    "supplementary_preservation_status": "failed",
+    "preservation_gate_unchanged": true,
+    "historical_native_parent_comparison": {
+      "recorded_native_commit": "b7be9966640e932ef7bbd030d3dae42f7bcb4638",
+      "supplied_comparison_commit": "b7be9966640e932ef7bbd030d3dae42f7bcb4638",
+      "identical_native_tree": "7b7c84d18ee0f7826e87829de5d175fd6eea7ff6",
+      "verified_results_and_root_bytes_identical": true,
+      "historical_commit_identity_retained": true
+    },
+    "declaration_difference_path": "verification/runs/20261123T210325Z/preservation-check-01/declaration-difference.json",
+    "declaration_difference_sha256": "c3741913d4369c5c775764a94c74ab20865a34bd69dc7205b563c7ea76e537a2",
+    "missing_previous_declaration_count": 0,
+    "changed_previous_axiom_set_count": 0,
+    "changed_generated_declaration_module_label_count": 5,
+    "changed_generated_declaration_names": [
+      "Overfull.BipartiteMatchingCompletion.uncoveredLeftOutside.eq_1",
+      "Overfull.BipartiteMatchingCompletion.uncoveredRightOutside.eq_1",
+      "Overfull.IsRobustExpander.congr_simp",
+      "Overfull.MatchingProbability.graphCutEdges.eq_1",
+      "Overfull.internalEdges.eq_1"
+    ],
+    "new_declaration_count": 168,
+    "historical_root_import_order": "five new imports before the original import prefix",
+    "required_final_root_import_order": "complete original import prefix followed by the five new imports",
+    "expected_next_full_attempt": "full-04",
+    "actual_latest_full_attempt": "full-04",
+    "note": "Full-03 passed compilation and the full axiom audit but failed supplementary declaration-module preservation. Its archived outputs are historical evidence, not the final verified candidate."
+  },
+  "import_order_correction": {
+    "correction_metadata_path": "verification/runs/20261123T210325Z/root-import-order-correction.json",
+    "correction_metadata_sha256": "b7873632ac59ad844e62228c4ead57a95f3cc0eb5e38b68ff1e2d91f4894ead4",
+    "corrected_root_snapshot_path": "verification/runs/20261123T210325Z/corrected-Overfull.lean",
+    "corrected_root_sha256": "0f014047bd2ab0cccfa75eaa213aa9b74a2537e723399014aabf855438087f2b",
+    "historical_native_parent_comparison": {
+      "recorded_native_commit": "b7be9966640e932ef7bbd030d3dae42f7bcb4638",
+      "supplied_comparison_commit": "b7be9966640e932ef7bbd030d3dae42f7bcb4638",
+      "identical_native_tree": "7b7c84d18ee0f7826e87829de5d175fd6eea7ff6",
+      "verified_results_and_root_bytes_identical": true,
+      "historical_commit_identity_retained": true
+    },
+    "probe_comparison_path": "verification/runs/20261123T210325Z/import-order-probe-01/comparison.json",
+    "probe_comparison_sha256": "26851338f786e4af260cf4d66cfae43283170c23a9173f3b6fe6eb3e17059e2c",
+    "probe_file_count": 7,
+    "probe_generated_module_labels_restored": 5,
+    "all_previous_root_bytes_preserved_after_removing_added_imports": true,
+    "original_import_prefix_and_added_import_sequence_match_probe": true,
+    "probe_and_actual_root_byte_identity_required": false,
+    "formatting_note": "The targeted probe places the existing blank line before the five additions; the actual corrected root places it after them. Their import sequence is identical, and removing the five additions from either restores the exact original root bytes.",
+    "scope": "The successful targeted ownership probe supports the import-order repair; only the later successful complete verifier supplies the final audit claim."
+  },
+  "supplementary_preservation_command_count": 1,
+  "targeted_probe_command_count": 1
+}

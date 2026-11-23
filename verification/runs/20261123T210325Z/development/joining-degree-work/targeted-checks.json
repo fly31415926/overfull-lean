@@ -1,0 +1,365 @@
+{
+  "recorded_at_utc": "2026-11-23T21:05:29.661094+00:00",
+  "scope": "Targeted scratch compilation evidence only. The parent must run the full project build and unchanged full axiom audit before publication as verified.",
+  "compiler": "Lean 4.24.0",
+  "records": [
+    {
+      "id": "check-01",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--wfail",
+        "/workspace/scratch/96ddfd820f7d/joining-degree-work/JoiningBounds.lean"
+      ],
+      "cwd": "/workspace/scratch/5d2e6f7b5492/overfull-lean",
+      "runtime_bin": "/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin",
+      "exit_code": 1,
+      "status": "failed",
+      "source_snapshot": "check-01.lean",
+      "source_sha256": "5b1b5a6f95f89b915b9d7d3f34be15f9602bf31554ad66b05bf669732cd276c5",
+      "log": "check-01.log",
+      "log_sha256": "3c3fe32541f2ca763bb62a6acdc7d60e5c148fe6e90f090046b10a1ed7ca3997",
+      "timing": "not recorded by the initial manual command; exit code observed in tool result"
+    },
+    {
+      "id": "check-02",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/workspace/scratch/96ddfd820f7d/joining-degree-work/JoiningBounds.lean"
+      ],
+      "cwd": "/workspace/scratch/5d2e6f7b5492/overfull-lean",
+      "runtime_bin": "/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin",
+      "exit_code": 1,
+      "status": "failed",
+      "source_snapshot": "check-02.lean",
+      "source_sha256": "5b1b5a6f95f89b915b9d7d3f34be15f9602bf31554ad66b05bf669732cd276c5",
+      "log": "check-02.log",
+      "log_sha256": "3a1d83fb94d5da911c29bd52a9b0b3b561d22998e19e3a8b42c035c1db73b068",
+      "timing": "not recorded by the initial manual command; exit code observed in tool result"
+    },
+    {
+      "id": "check-03",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/workspace/scratch/96ddfd820f7d/joining-degree-work/JoiningBounds.lean"
+      ],
+      "cwd": "/workspace/scratch/5d2e6f7b5492/overfull-lean",
+      "runtime_bin": "/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin",
+      "exit_code": 0,
+      "status": "passed",
+      "source_snapshot": "check-03.lean",
+      "source_sha256": "3808670ccbf58bbbc6ab65e683dae63631ddc6e378aea1eb4db45c56ffe39f4f",
+      "log": "check-03.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timing": "not recorded by the initial manual command; exit code observed in tool result"
+    },
+    {
+      "id": "check-04",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/workspace/scratch/96ddfd820f7d/joining-degree-work/JoiningBounds.lean"
+      ],
+      "cwd": "/workspace/scratch/5d2e6f7b5492/overfull-lean",
+      "runtime_bin": "/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin",
+      "exit_code": 1,
+      "status": "failed",
+      "source_snapshot": "check-04.lean",
+      "source_sha256": "36d9fa0637101b4916c2a04363bc9953f09b28742c146568899b2dcaac7a93a7",
+      "log": "check-04.log",
+      "log_sha256": "346f8552d936e0af2a0f66af0857a41ea2d6dd570e6a425d551cf1b25ddd5536",
+      "timing": "not recorded by the initial manual command; exit code observed in tool result"
+    },
+    {
+      "id": "check-05",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/workspace/scratch/96ddfd820f7d/joining-degree-work/JoiningBounds.lean"
+      ],
+      "cwd": "/workspace/scratch/5d2e6f7b5492/overfull-lean",
+      "runtime_bin": "/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin",
+      "exit_code": 1,
+      "status": "failed",
+      "source_snapshot": "check-05.lean",
+      "source_sha256": "7a09056b3417de84079e5846a6e0475cf8363900fbfd130ea5a0fca3e7f3a5d7",
+      "log": "check-05.log",
+      "log_sha256": "9425b61483624e1174cc9507e652088ff42892481b687de0981963d7e30e5ba2",
+      "timing": "not recorded by the initial manual command; exit code observed in tool result"
+    },
+    {
+      "id": "check-06",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/workspace/scratch/96ddfd820f7d/joining-degree-work/JoiningBounds.lean"
+      ],
+      "cwd": "/workspace/scratch/5d2e6f7b5492/overfull-lean",
+      "runtime_bin": "/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin",
+      "exit_code": 0,
+      "status": "passed",
+      "source_snapshot": "check-06.lean",
+      "source_sha256": "65269d7e522de59a0e1bb25f6b04aa20f8f6ad6eb9c1f4b8ddc5f0dabade55f1",
+      "log": "check-06.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timing": "not recorded by the initial manual command; exit code observed in tool result"
+    },
+    {
+      "id": "check-07",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/workspace/scratch/96ddfd820f7d/joining-degree-work/JoiningBounds.lean"
+      ],
+      "cwd": "/workspace/scratch/5d2e6f7b5492/overfull-lean",
+      "runtime_bin": "/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin",
+      "exit_code": 0,
+      "status": "passed",
+      "source_snapshot": "check-07.lean",
+      "source_sha256": "8ba8934776e5c26374d02dcb40ad0672810cfcdff03be684756ac56aae4f5db6",
+      "log": "check-07.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timing": "not recorded by the initial manual command; exit code observed in tool result"
+    },
+    {
+      "id": "check-08",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "/workspace/scratch/96ddfd820f7d/joining-degree-work/JoiningBounds.lean"
+      ],
+      "cwd": "/workspace/scratch/5d2e6f7b5492/overfull-lean",
+      "runtime_bin": "/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin",
+      "exit_code": 0,
+      "status": "passed",
+      "source_snapshot": "check-08.lean",
+      "source_sha256": "ffb88acf6fd2bf4aa78d761bbf2cf5452ee8d377488a1245c4acf17f2ce77a93",
+      "log": "check-08.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timing": "not recorded by the initial manual command; exit code observed in tool result"
+    },
+    {
+      "id": "check-09-joining",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "--root=/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib",
+        "-o=/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/JoiningBounds.olean",
+        "/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/JoiningBounds.lean"
+      ],
+      "cwd": "/workspace/scratch/5d2e6f7b5492/overfull-lean",
+      "runtime_bin": "/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin",
+      "exit_code": 1,
+      "status": "failed",
+      "source_snapshot": "check-08.lean",
+      "source_sha256": "ffb88acf6fd2bf4aa78d761bbf2cf5452ee8d377488a1245c4acf17f2ce77a93",
+      "log": "check-09-joining.log",
+      "log_sha256": "9e3759f50774d2fff946f11d9ef9199392934cf310fe9ef0994054d390d134f3",
+      "timing": "not recorded by the initial manual command; exit code observed in tool result"
+    },
+    {
+      "id": "check-09-uniform",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "--root=/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib",
+        "-o=/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/UniformCompletion.olean",
+        "/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/UniformCompletion.lean"
+      ],
+      "cwd": "/workspace/scratch/5d2e6f7b5492/overfull-lean",
+      "runtime_bin": "/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin",
+      "exit_code": 1,
+      "status": "failed",
+      "source_snapshot": "canonical-UniformCompletion.lean",
+      "source_sha256": "f7dd90052b368583d94b94c35b95555340f77c2cc8a04d4a3c12b362715924d3",
+      "log": "check-09-uniform.log",
+      "log_sha256": "37fbbfc266ae479da51914e471e35c44a3a8244475804ae1805bb556f6ec2ac8",
+      "timing": "not recorded by the initial manual command; exit code observed in tool result"
+    },
+    {
+      "id": "check-10-joining",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "--root=/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib",
+        "-o",
+        "/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/JoiningBounds.olean",
+        "/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/JoiningBounds.lean"
+      ],
+      "cwd": "/workspace/scratch/5d2e6f7b5492/overfull-lean",
+      "runtime_bin": "/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin",
+      "exit_code": 0,
+      "status": "passed",
+      "source_snapshot": "check-08.lean",
+      "source_sha256": "ffb88acf6fd2bf4aa78d761bbf2cf5452ee8d377488a1245c4acf17f2ce77a93",
+      "log": "check-10-joining.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timing": "not recorded by the initial manual command; exit code observed in tool result"
+    },
+    {
+      "id": "check-10-uniform",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "--root=/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib",
+        "-o",
+        "/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/UniformCompletion.olean",
+        "/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/UniformCompletion.lean"
+      ],
+      "cwd": "/workspace/scratch/5d2e6f7b5492/overfull-lean",
+      "runtime_bin": "/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin",
+      "exit_code": 0,
+      "status": "passed",
+      "source_snapshot": "canonical-UniformCompletion.lean",
+      "source_sha256": "f7dd90052b368583d94b94c35b95555340f77c2cc8a04d4a3c12b362715924d3",
+      "log": "check-10-uniform.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timing": "not recorded by the initial manual command; exit code observed in tool result"
+    },
+    {
+      "id": "uniform-check-01",
+      "metadata": "uniform-check-01/command.json",
+      "metadata_sha256": "a2ae3b09c321d8d7f4cb21647e29e476556f45dca67c4bf61e36bf7a899337d6",
+      "status": "failed",
+      "exit_code": 1,
+      "source_snapshots": {
+        "JoiningBounds.lean": "ffb88acf6fd2bf4aa78d761bbf2cf5452ee8d377488a1245c4acf17f2ce77a93",
+        "UniformCompletion.lean": "f7dd90052b368583d94b94c35b95555340f77c2cc8a04d4a3c12b362715924d3",
+        "UniformJoining.lean": "8c23e41c61cd68ef1275b740f4ddbe6865a3646df2037ab8c3ec88df9ee91844"
+      },
+      "log": "uniform-check-01/output.log",
+      "log_sha256": "8f2195b990f55cf403b79025e5ebbcdded7c00088c3f27f2ce1d23a828b56c68"
+    },
+    {
+      "id": "uniform-check-02",
+      "metadata": "uniform-check-02/command.json",
+      "metadata_sha256": "5427b7a3cad665cf09514ba0566c50e7bc3899015a2a73be2080037ae9805fc4",
+      "status": "passed",
+      "exit_code": 0,
+      "source_snapshots": {
+        "JoiningBounds.lean": "ffb88acf6fd2bf4aa78d761bbf2cf5452ee8d377488a1245c4acf17f2ce77a93",
+        "UniformCompletion.lean": "f7dd90052b368583d94b94c35b95555340f77c2cc8a04d4a3c12b362715924d3",
+        "UniformJoining.lean": "8c23e41c61cd68ef1275b740f4ddbe6865a3646df2037ab8c3ec88df9ee91844"
+      },
+      "log": "uniform-check-02/output.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "budget-check-01",
+      "metadata": "budget-check-01/command.json",
+      "metadata_sha256": "7cab7845e3be6cb9ff667c4aee179278fbe0ba5de928bc2ebeedf9e722d50ea0",
+      "status": "failed",
+      "exit_code": 1,
+      "source_snapshots": {
+        "PaletteBudget.lean": "f968e09730a6c8129ad74676babf3085d3f8de2835f7b26f8343128c1e5708db",
+        "PaletteGrouping.lean": "b3234409b31258e3d9dc51924a5023c5e4af084137c0968466d98085f916cf62"
+      },
+      "log": "budget-check-01/output.log",
+      "log_sha256": "ba3a74c654eed14c5581c232ea857f93d8310a6abb4b91179eaed976732c6fa3"
+    },
+    {
+      "id": "budget-check-02",
+      "metadata": "budget-check-02/command.json",
+      "metadata_sha256": "91826bd3d5549c4280532377f1ed62ec811b2fa30e34267ce7a9c2f9d4ed1c88",
+      "status": "passed",
+      "exit_code": 0,
+      "source_snapshots": {
+        "PaletteBudget.lean": "1120ba467e8ab8f2fafc2f732fa8632f613d2b1faa64ca7e21e40376a8584370",
+        "PaletteGrouping.lean": "b3234409b31258e3d9dc51924a5023c5e4af084137c0968466d98085f916cf62"
+      },
+      "log": "budget-check-02/output.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "budget-check-03",
+      "metadata": "budget-check-03/command.json",
+      "metadata_sha256": "1f7b2e3c7a1559328045292aba6316d7f32e91fc6b564e5efdb292a2bdb753a3",
+      "status": "passed",
+      "exit_code": 0,
+      "source_snapshots": {
+        "PaletteBudget.lean": "58346edddc1fedeea111af98f5a02115178f7b8e305200bbecbd98f20e381cba",
+        "PaletteGrouping.lean": "b3234409b31258e3d9dc51924a5023c5e4af084137c0968466d98085f916cf62"
+      },
+      "log": "budget-check-03/output.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "crossing-check-01",
+      "metadata": "crossing-check-01/command.json",
+      "metadata_sha256": "a18a3c28aea11a850715101a8df50fd9d33104d54dc0c9c18081b71e33592197",
+      "status": "failed",
+      "exit_code": 1,
+      "source_snapshots": {
+        "JoiningBounds.lean": "ffb88acf6fd2bf4aa78d761bbf2cf5452ee8d377488a1245c4acf17f2ce77a93",
+        "NativeReservedCrossings.lean": "30d4b98edce7bce9902a0755b30497fda0a6e460ee5be7b0bf891862b0a6621b"
+      },
+      "log": "crossing-check-01/output.log",
+      "log_sha256": "1697ab6a3221ba5068756a9048c14d523a2a89b9c999c8f2293af7e0a6e0ee91"
+    },
+    {
+      "id": "crossing-check-02",
+      "metadata": "crossing-check-02/command.json",
+      "metadata_sha256": "26437948442838fc4cc345e1921594575405ffe057b604b5104c2927bc56fcea",
+      "status": "passed",
+      "exit_code": 0,
+      "source_snapshots": {
+        "JoiningBounds.lean": "ffb88acf6fd2bf4aa78d761bbf2cf5452ee8d377488a1245c4acf17f2ce77a93",
+        "NativeReservedCrossings.lean": "185029e1a02d75552b0013a95fbb1f23a8b119944db410958b5c73df186bbb6e"
+      },
+      "log": "crossing-check-02/output.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "protected-budget-check-01",
+      "metadata": "protected-budget-check-01/command.json",
+      "metadata_sha256": "d61991028ec4feb39a127214b87a86bff773848fbc3fd1a48ad409aae878d1c6",
+      "status": "passed",
+      "exit_code": 0,
+      "source_snapshots": {
+        "ProtectedBudget.lean": "eae750e4b0b2455a847b76c68f7e966ecf194188374ddb97e2e50bead522b203"
+      },
+      "log": "protected-budget-check-01/output.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "current_sources": {
+    "JoiningBounds.lean": "ffb88acf6fd2bf4aa78d761bbf2cf5452ee8d377488a1245c4acf17f2ce77a93",
+    "UniformJoining.lean": "8c23e41c61cd68ef1275b740f4ddbe6865a3646df2037ab8c3ec88df9ee91844",
+    "PaletteBudget.lean": "58346edddc1fedeea111af98f5a02115178f7b8e305200bbecbd98f20e381cba",
+    "NativeReservedCrossings.lean": "185029e1a02d75552b0013a95fbb1f23a8b119944db410958b5c73df186bbb6e",
+    "ProtectedBudget.lean": "eae750e4b0b2455a847b76c68f7e966ecf194188374ddb97e2e50bead522b203"
+  },
+  "archive_note": "Archive these files and snapshot subdirectories but exclude checklib, whose unrelated project modules are temporary symlinks to baseline build outputs.",
+  "current_public_theorem_counts": {
+    "JoiningBounds.lean": 12,
+    "UniformJoining.lean": 1,
+    "PaletteBudget.lean": 8,
+    "NativeReservedCrossings.lean": 6,
+    "ProtectedBudget.lean": 5
+  }
+}

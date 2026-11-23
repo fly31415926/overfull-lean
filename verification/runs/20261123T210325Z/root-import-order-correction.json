@@ -1,0 +1,16 @@
+{
+  "recorded_at_utc": "2026-11-23T21:29:43.122782+00:00",
+  "reason": "Preserve prior import order and generated declaration module attribution. Move only the five new imports to the end of the existing import block, before non-import commands.",
+  "parent": "b7be9966640e932ef7bbd030d3dae42f7bcb4638",
+  "old_root_sha256": "cfb1e2d1740b3d32128787aa99e64885fe2c0c65ced284593d720b416dc0eb20",
+  "corrected_root_sha256": "0f014047bd2ab0cccfa75eaa213aa9b74a2537e723399014aabf855438087f2b",
+  "original_parent_root_sha256": "f8f137302a0cc7d0d6d5c2f97fbbc9f6b46bf8441c534fb64c8d22e809bfcf84",
+  "prior_root_bytes_exact_after_removing_five_imports": true,
+  "added_imports": [
+    "import Overfull.ResidualPalette.UniformJoining",
+    "import Overfull.ResidualPalette.PaletteBudget",
+    "import Overfull.ResidualPalette.JoiningGrouping",
+    "import Overfull.ResidualPalette.NativeProtectedPalette",
+    "import Overfull.ResidualPalette.ProtectedBudget"
+  ]
+}

@@ -1,0 +1,13 @@
+/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/PaletteBudget.lean:58:11: error: `mul_le_mul_right` has been deprecated: Use `mul_le_mul_iff_left₀` instead
+/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/PaletteBudget.lean:62:2: error: 'change' tactic failed, pattern
+  6 * (↑t + 1) ≤ 180 * δ / α * ↑n + 6
+is not definitionally equal to target
+  ↑(6 * (N / (h - 6 * D) + 1)) ≤ 180 * δ / α * ↑n + 6
+/workspace/scratch/96ddfd820f7d/joining-degree-work/checklib/Overfull/ResidualPalette/PaletteBudget.lean:102:18: error: Application type mismatch: The argument
+  hbudget
+has type
+  ↑(6 * (Fintype.card I / (h - 6 * D) + 1)) ≤ ε * ↑(Fintype.card V)
+but is expected to have type
+  6 * (↑(Fintype.card I / (h - 6 * D)) + 1) ≤ ε * ↑(Fintype.card V)
+in the application
+  LE.le.trans hsR hbudget

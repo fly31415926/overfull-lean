@@ -114,7 +114,8 @@ def main() -> None:
                           ("joining", "joining-circuit-source.json"),
                           ("assigned", "assigned-part-source.json"),
                           ("native_pattern", "native-pattern-source.json"),
-                          ("native_reserve", "native-reserve-source.json")):
+                          ("native_reserve", "native-reserve-source.json"),
+                          ("residual_palette", "residual-palette-source.json")):
         source = json.loads((ROOT / "docs" / filename).read_text())
         source_modules = {item["module"]: item for item in source["modules"]}
         if (len(source_modules) != source["module_count"]
@@ -158,6 +159,9 @@ def main() -> None:
 
     if extension_maps["native_reserve"][0]["numbered_assertions_completed"] != 0:
         raise SystemExit("The native-reserve continuation completes no numbered manuscript assertion.")
+
+    if extension_maps["residual_palette"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The residual-palette continuation completes no numbered manuscript assertion.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1657,7 +1661,8 @@ def main() -> None:
         basename = {"ordinary": "ordinary-factorization-full", "few": "few-exception",
                     "circuit": "three-label-circuit", "joining": "joining-circuit",
                     "assigned": "assigned-part", "native_pattern": "native-pattern",
-                    "native_reserve": "native-reserve"}[key]
+                    "native_reserve": "native-reserve",
+                    "residual_palette": "residual-palette"}[key]
         map_path = OUTPUT / f"{basename}-declarations.json"
         map_path.write_text(json.dumps({
             "schema_version": 1,
@@ -1730,6 +1735,7 @@ def main() -> None:
         "assigned_part_declaration_map": extension_evidence["assigned"],
         "native_pattern_declaration_map": extension_evidence["native_pattern"],
         "native_reserve_declaration_map": extension_evidence["native_reserve"],
+        "residual_palette_declaration_map": extension_evidence["residual_palette"],
         "checkpoint_reconstruction": {
             "original_checkpoint": reconstruction["original_checkpoint"],
             "original_tree_reproduced": False,

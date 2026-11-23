@@ -6,7 +6,32 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest continuation: native reserve completion and actual residual safety
+## Latest continuation: actual residual joining palettes
+
+The continuation now derives the actual residual joining-degree bounds and
+constructs bounded matching color classes covering every joining copy, with
+whole-class parity, footprint, and vertex-load certificates. The retained
+robustness parameter is chosen before the later error tolerance. In the
+odd assigned-part case, a selected half of the surviving reserve crossings
+can be forced into singleton primary pieces and protected through grouping.
+Explicit uniform numeric bounds keep the complete palette footprints small.
+
+The principal interfaces are
+`exists_uniform_native_reserve_completion_with_small_joining`,
+`AssignedParts.exists_assigned_joiningPalette_in_host`, and
+`exists_native_protected_joiningPalette`. The resulting uncovered-order certificates
+refer to assigned fibers. Internal exceptional completion, old-core robust
+completion, the full residual factorization and reconstruction remain open.
+**Coverage remains 47/69, with 22 incomplete assertions.**
+
+See the [proof map](docs/residual-palette-verification.md),
+[source manifest](docs/residual-palette-source.json),
+[semantic review](docs/residual-palette-semantic-review.md), and
+[current run records](verification/runs/20261123T210325Z/).
+The exact current strict build and complete axiom audit determine verified
+status. Prior source, mapping and historical evidence are preserved.
+
+## Previous continuation: native reserve completion and actual residual safety
 
 The native two-core stage now constructs an actual linear reserve of disjoint
 compressed boundaries and completes the accepted boundary family to disjoint

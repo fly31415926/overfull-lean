@@ -1,0 +1,43 @@
+/workspace/scratch/96ddfd820f7d/palette-work/JoiningGrouping.lean:88:14: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : DecidableEq K
+G : Multigraph V E
+label : V → K
+P : EvenJoiningDecomposition G label
+h D L : ℕ
+hdegree : ∀ (v : V), G.degreeOn (joiningCopies G label) v ≤ D
+hL : 0 < L
+hDh : 6 * D < h
+hbudget : Fintype.card V * D ≤ 2 * L * (h - 6 * D)
+M : { x // x ∈ P.parts } → Finset E := Subtype.val
+hM : ∀ (j : { x // x ∈ P.parts }), G.IsMatching (M j)
+hsize : ∀ (j : { x // x ∈ P.parts }), #(M j) ≤ 3
+hdis : Pairwise fun i j => Disjoint (M i) (M j)
+hsubset : ∀ (j : { x // x ∈ P.parts }), M j ⊆ joiningCopies G label
+hcount : Fintype.card { x // x ∈ P.parts } ≤ L * (h - 6 * D)
+hpos : 0 < h
+c : { x // x ∈ P.parts } → Fin h
+left✝ : ∀ i ∈ ∅, c i = ⟨0, hpos⟩
+hcload : ∀ (i : Fin h), #{j | c j = i} ≤ L
+hmatching : ∀ (i : Fin h), G.IsMatching (groupedCopies M c i)
+hgroups : Pairwise fun i j => Disjoint (groupedCopies M c i) (groupedCopies M c j)
+hcover : univ.biUnion (groupedCopies M c) = univ.biUnion M
+hcard : ∀ (i : Fin h), #(groupedCopies M c i) ≤ 3 * L
+hsupport : ∀ (i : Fin h), #(G.edgeSupport (groupedCopies M c i)) ≤ 6 * L
+hcoverM : univ.biUnion M = joiningCopies G label
+j : Fin h
+i : K
+a : { x // x ∈ P.parts }
+a✝ : a ∈ {j_1 | c j_1 = j}
+⊢ Even #(G.cutOn (M a) (labelShore label {i}))
+/workspace/scratch/96ddfd820f7d/palette-work/JoiningGrouping.lean:91:4: error: Type mismatch
+  P.even_cut (↑a) a.property i
+has type
+  Even #(G.cutOn (↑a) (labelShore label {i}))
+but is expected to have type
+  ∀ ⦃y : { x // x ∈ P.parts }⦄, y ∈ ↑{j_1 | c j_1 = j} → a ≠ y → Function.onFun Disjoint M a y

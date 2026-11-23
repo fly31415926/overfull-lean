@@ -1,0 +1,27 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "verification/runs/20261123T210325Z/history-check-01/check-history.py",
+    "b7be9966640e932ef7bbd030d3dae42f7bcb4638"
+  ],
+  "cwd": "/workspace/scratch/96ddfd820f7d/overfull-next",
+  "started_at_utc": "2026-11-23T21:36:40.729932+00:00",
+  "status": "passed",
+  "exit_code": 0,
+  "source_sha256": {
+    "/workspace/scratch/96ddfd820f7d/overfull-next/verification/runs/20261123T210325Z/record-final.py": "7a4e57548f345c1f8aee6c32b90355f77385528c9bec52b236f57fdd68659f16",
+    "/workspace/scratch/96ddfd820f7d/overfull-next/verification/runs/20261123T210325Z/history-check-01/check-history.py": "aac2375063ffbad9775e2041f971f16c501424a3f137d98f236f7e90894d5c24"
+  },
+  "frozen_input_hash_count": 635,
+  "frozen_input_manifest_sha256": "f676e6a8cb09b730309ea0a1c80fc8120c9a75814650e927ce8b4bad08845197",
+  "scope": "Only the new read-only historical/import-order helper functions; no main/final checker or complete verifier execution.",
+  "finished_at_utc": "2026-11-23T21:36:41.222933+00:00",
+  "elapsed_seconds": 0.5109707379997417,
+  "final_source_sha256": {
+    "/workspace/scratch/96ddfd820f7d/overfull-next/verification/runs/20261123T210325Z/record-final.py": "7a4e57548f345c1f8aee6c32b90355f77385528c9bec52b236f57fdd68659f16",
+    "/workspace/scratch/96ddfd820f7d/overfull-next/verification/runs/20261123T210325Z/history-check-01/check-history.py": "aac2375063ffbad9775e2041f971f16c501424a3f137d98f236f7e90894d5c24"
+  },
+  "all_frozen_inputs_unchanged": true,
+  "output_sha256": "7407d5156e100b0bf43c7b869f80445cf08fc38ce62003b5aa8e9612cc6b9f57"
+}

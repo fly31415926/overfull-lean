@@ -1,0 +1,57 @@
+/workspace/scratch/96ddfd820f7d/joining-degree-work/JoiningBounds.lean:38:6: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a =>
+    (if _a then 0 else if G.firstEnd e ∈ corePart G M Z U₁ then 1 else 2) =
+      if G.secondEnd e ∈ corePart G M Z U₀ then 0 else if G.secondEnd e ∈ corePart G M Z U₁ then 1 else 2
+Error: Application type mismatch: The argument
+  decidableMem (G.firstEnd e) (corePart G M Z U₀)
+has type
+  Decidable (G.firstEnd e ∈ corePart G M Z U₀)
+but is expected to have type
+  Decidable _a
+in the application
+  @ite (Fin 3) _a (decidableMem (G.firstEnd e) (corePart G M Z U₀))
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+M : Finset E
+hM : G.IsMatching M
+U₀ U₁ Z : Finset V
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+e : E
+he : e ∈ M
+hZ : G.firstEnd e ∈ Z ∨ G.secondEnd e ∈ Z
+hsame : ∀ (U : Finset V), Disjoint U Z → (G.firstEnd e ∈ corePart G M Z U ↔ G.secondEnd e ∈ corePart G M Z U)
+⊢ (if G.firstEnd e ∈ corePart G M Z U₀ then 0 else if G.firstEnd e ∈ corePart G M Z U₁ then 1 else 2) =
+    if G.secondEnd e ∈ corePart G M Z U₀ then 0 else if G.secondEnd e ∈ corePart G M Z U₁ then 1 else 2
+/workspace/scratch/96ddfd820f7d/joining-degree-work/JoiningBounds.lean:118:63: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a b => a.instDecidableEq b
+inferred
+  fun a b => propDecidable (a = b)
+/workspace/scratch/96ddfd820f7d/joining-degree-work/JoiningBounds.lean:117:67: error: unsolved goals
+V : Type u_1
+E : Type u_2
+I : Type u_3
+inst✝¹ : Fintype E
+inst✝ : DecidableEq I
+G : Multigraph V E
+label : V → I
+D A : Finset E
+havoid : Disjoint A D
+z : V
+hinternal : ∀ e ∈ A, z ∈ G.edge e → label (G.firstEnd e) = label (G.secondEnd e)
+R : Multigraph V { e // e ∉ D } := MultigraphMatchingProbability.remainingGraph G D
+S : Finset E := {e ∈ A | z ∈ G.edge e}
+T : Finset { e // e ∉ D } := R.incidenceEdges z \ FourOdd.joiningCopies R label
+f : { x // x ∈ S } → { x // x ∈ T } := fun e => ⟨⟨↑e, ⋯⟩, ⋯⟩
+hf : Function.Injective f
+hcount : G.degreeOn A z ≤ #T
+hsplit :
+  #(R.incidenceEdges z \ FourOdd.joiningCopies R label) + #(R.incidenceEdges z ∩ FourOdd.joiningCopies R label) =
+    #(R.incidenceEdges z)
+⊢ #(R.incidenceEdges z ∩ FourOdd.joiningCopies R label) = #(R.incidenceEdges z ∩ FourOdd.joiningCopies R label)

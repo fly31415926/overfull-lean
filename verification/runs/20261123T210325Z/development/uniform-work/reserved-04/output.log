@@ -1,0 +1,129 @@
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:135:58: error: unsolved goals
+case h.e'_6
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝ : Fintype V
+Q : Multigraph V E
+a b : V
+hab : a ≠ b
+h : ℕ
+hV : Fintype.card V ≤ 3
+classOf : V → E → K
+this : DecidableEq (E ⊕ Fin h) := Classical.decEq (E ⊕ Fin h)
+e : E
+A : Finset E
+heA : e ∉ A
+ih :
+  ∀ (C : Finset E) (B : Finset (Fin h)),
+    A ⊆ C →
+      (∀ e ∈ A, Q.edge e = s(a, b)) →
+        #A ≤ #B →
+          (∀ (X : Finset V),
+              (a ∈ X) = (b ∈ X) → ∀ (v : V) (k : K), 2 * #(Q.classCutOn classOf C v k X) ≤ #(Q.cutOn C X)) →
+            (∀ (X : Finset V),
+                (a ∈ X) ≠ (b ∈ X) →
+                  #B ≤ #(Q.cutOn C X) ∧ ∀ (v : V) (k : K), #(Q.classCutOn classOf C v k X) ≤ #B - #A) →
+              (∀ (v : V), Even ((Q.pairAugmentation a b hab h).degreeOn (C.disjSum B) v)) →
+                ∃ P, ∀ e ∈ A, ∃ j, {Sum.inl e, Sum.inr j} ∈ P.parts
+C : Finset E
+B : Finset (Fin h)
+hAC : insert e A ⊆ C
+hpair : ∀ e_1 ∈ insert e A, Q.edge e_1 = s(a, b)
+hAB : #(insert e A) ≤ #B
+hclosed : ∀ (X : Finset V), (a ∈ X) = (b ∈ X) → ∀ (v : V) (k : K), 2 * #(Q.classCutOn classOf C v k X) ≤ #(Q.cutOn C X)
+hseparating :
+  ∀ (X : Finset V),
+    (a ∈ X) ≠ (b ∈ X) → #B ≤ #(Q.cutOn C X) ∧ ∀ (v : V) (k : K), #(Q.classCutOn classOf C v k X) ≤ #B - #(insert e A)
+heven : ∀ (v : V), Even ((Q.pairAugmentation a b hab h).degreeOn (C.disjSum B) v)
+heC : e ∈ C
+hepair : Q.edge e = s(a, b)
+hBpos : 0 < #B
+j : Fin h
+hj : j ∈ B
+C' : Finset E := C \ {e}
+B' : Finset (Fin h) := B \ {j}
+D : Finset (E ⊕ Fin h) := {Sum.inl e, Sum.inr j}
+hAC' : A ⊆ C'
+hBcount : #B' + 1 = #B
+hAB' : #A ≤ #B'
+hcutClosed : ∀ (X : Finset V), (a ∈ X) = (b ∈ X) → Q.cutOn C' X = Q.cutOn C X
+hclosed' :
+  ∀ (X : Finset V), (a ∈ X) = (b ∈ X) → ∀ (v : V) (k : K), 2 * #(Q.classCutOn classOf C' v k X) ≤ #(Q.cutOn C' X)
+hsep' :
+  ∀ (X : Finset V),
+    (a ∈ X) ≠ (b ∈ X) → #B' ≤ #(Q.cutOn C' X) ∧ ∀ (v : V) (k : K), #(Q.classCutOn classOf C' v k X) ≤ #B' - #A
+hDsub : D ⊆ C.disjSum B
+hDcir : (Q.pairAugmentation a b hab h).IsCircuit D
+⊢ D = {Sum.inl e, Sum.inr j}
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:153:4: error: unsolved goals
+case insert.inl
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝ : Fintype V
+Q : Multigraph V E
+a b : V
+hab : a ≠ b
+h : ℕ
+hV : Fintype.card V ≤ 3
+classOf : V → E → K
+this : DecidableEq (E ⊕ Fin h) := Classical.decEq (E ⊕ Fin h)
+A : Finset E
+ih :
+  ∀ (C : Finset E) (B : Finset (Fin h)),
+    A ⊆ C →
+      (∀ e ∈ A, Q.edge e = s(a, b)) →
+        #A ≤ #B →
+          (∀ (X : Finset V),
+              (a ∈ X) = (b ∈ X) → ∀ (v : V) (k : K), 2 * #(Q.classCutOn classOf C v k X) ≤ #(Q.cutOn C X)) →
+            (∀ (X : Finset V),
+                (a ∈ X) ≠ (b ∈ X) →
+                  #B ≤ #(Q.cutOn C X) ∧ ∀ (v : V) (k : K), #(Q.classCutOn classOf C v k X) ≤ #B - #A) →
+              (∀ (v : V), Even ((Q.pairAugmentation a b hab h).degreeOn (C.disjSum B) v)) →
+                ∃ P, ∀ e ∈ A, ∃ j, {Sum.inl e, Sum.inr j} ∈ P.parts
+C : Finset E
+B : Finset (Fin h)
+hclosed : ∀ (X : Finset V), (a ∈ X) = (b ∈ X) → ∀ (v : V) (k : K), 2 * #(Q.classCutOn classOf C v k X) ≤ #(Q.cutOn C X)
+heven : ∀ (v : V), Even ((Q.pairAugmentation a b hab h).degreeOn (C.disjSum B) v)
+hBpos : 0 < #B
+j : Fin h
+hj : j ∈ B
+B' : Finset (Fin h) := B \ {j}
+hBcount : #B' + 1 = #B
+hAB' : #A ≤ #B'
+f : E
+heA : f ∉ A
+hAC : insert f A ⊆ C
+hpair : ∀ e ∈ insert f A, Q.edge e = s(a, b)
+hAB : #(insert f A) ≤ #B
+hseparating :
+  ∀ (X : Finset V),
+    (a ∈ X) ≠ (b ∈ X) → #B ≤ #(Q.cutOn C X) ∧ ∀ (v : V) (k : K), #(Q.classCutOn classOf C v k X) ≤ #B - #(insert f A)
+heC : f ∈ C
+hepair : Q.edge f = s(a, b)
+C' : Finset E := C \ {f}
+D : Finset (E ⊕ Fin h) := {Sum.inl f, Sum.inr j}
+hAC' : A ⊆ C'
+hcutClosed : ∀ (X : Finset V), (a ∈ X) = (b ∈ X) → Q.cutOn C' X = Q.cutOn C X
+hclosed' :
+  ∀ (X : Finset V), (a ∈ X) = (b ∈ X) → ∀ (v : V) (k : K), 2 * #(Q.classCutOn classOf C' v k X) ≤ #(Q.cutOn C' X)
+hsep' :
+  ∀ (X : Finset V),
+    (a ∈ X) ≠ (b ∈ X) → #B' ≤ #(Q.cutOn C' X) ∧ ∀ (v : V) (k : K), #(Q.classCutOn classOf C' v k X) ≤ #B' - #A
+hDsub : D ⊆ C.disjSum B
+hDcir : (Q.pairAugmentation a b hab h).IsCircuit D
+hDcomp : (Q.pairAugmentation a b hab h).Compatible (Multigraph.pairAugmentationClass h classOf) D
+hrest : C'.disjSum B' = C.disjSum B \ D
+heven' : ∀ (v : V), Even ((Q.pairAugmentation a b hab h).degreeOn (C'.disjSum B') v)
+P :
+  (Q.pairAugmentation a b hab h).CompatibleCircuitPartition (Multigraph.pairAugmentationClass h classOf) (C'.disjSum B')
+hP : ∀ e ∈ A, ∃ j, {Sum.inl e, Sum.inr j} ∈ P.parts
+P' : (Q.pairAugmentation a b hab h).CompatibleCircuitPartition (Multigraph.pairAugmentationClass h classOf)
+  (C.disjSum B \ D) :=
+  { parts := P.parts, circuit := ⋯, compatible := ⋯, disjoint := ⋯, cover := ⋯ }
+R : (Q.pairAugmentation a b hab h).CompatibleCircuitPartition (Multigraph.pairAugmentationClass h classOf)
+  (C.disjSum B) :=
+  Multigraph.CompatibleCircuitPartition.insertCircuit (Q.pairAugmentation a b hab h) P' hDsub hDcir hDcomp
+hf : f ∈ insert f A
+⊢ {Sum.inl f, Sum.inr j} = {Sum.inl f, Sum.inr j} ∨ {Sum.inl f, Sum.inr j} ∈ P'.parts

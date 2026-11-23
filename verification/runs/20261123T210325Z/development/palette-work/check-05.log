@@ -1,0 +1,40 @@
+/workspace/scratch/96ddfd820f7d/palette-work/PaletteGrouping.lean:329:64: error: Application type mismatch: The argument
+  hij
+has type
+  (if hj : i ∈ P then (equivFinOfCardEq hP) ⟨i, hj⟩ else ⟨0, hpos⟩) =
+    if hj : j ∈ P then (equivFinOfCardEq hP) ⟨j, hj⟩ else ⟨0, hpos⟩
+but is expected to have type
+  (equivFinOfCardEq hP) ?m.33 = (equivFinOfCardEq hP) ?m.34
+in the application
+  Equiv.injective (equivFinOfCardEq hP) hij
+/workspace/scratch/96ddfd820f7d/palette-work/PaletteGrouping.lean:328:26: warning: This simp argument is unused:
+  dif_pos hi
+
+Hint: Omit it from the simp argument list.
+  simp only [primarySeed, dif_pos hi̵,̵ ̵d̵i̵f̵_̵p̵o̵s̵ ̵h̵j] at hij
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/96ddfd820f7d/palette-work/PaletteGrouping.lean:328:38: warning: This simp argument is unused:
+  dif_pos hj
+
+Hint: Omit it from the simp argument list.
+  simp only [primarySeed, dif_pos hi,̵ ̵d̵i̵f̵_̵p̵o̵s̵ ̵h̵j̵] at hij
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/96ddfd820f7d/palette-work/PaletteGrouping.lean:339:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  c ↑j
+in the target expression
+  (fun j => c ↑j = i) j
+
+case refine_1
+I : Type u_4
+inst✝ : Fintype I
+h : ℕ
+P : Finset I
+hP : #P = h
+hpos : 0 < h
+c : I → Fin h
+hc : ∀ j ∈ P, c j = primarySeed P hP hpos j
+i : Fin h
+j : { x // x ∈ P } := (equivFinOfCardEq hP).symm i
+⊢ (fun j => c ↑j = i) j

@@ -1,0 +1,110 @@
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:185:34: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a =>
+    @instDecidableNot (((joiningQuotient G label).firstEnd a ∈ X) = ((joiningQuotient G label).secondEnd a ∈ X))
+      (@instDecidableEqOfIff ((joiningQuotient G label).firstEnd a ∈ X) ((joiningQuotient G label).secondEnd a ∈ X)
+        (@instDecidableIff ((joiningQuotient G label).firstEnd a ∈ X) ((joiningQuotient G label).secondEnd a ∈ X)
+          (@decidableMem I inst✝ ((joiningQuotient G label).firstEnd a) X)
+          (decidableMem ((joiningQuotient G label).secondEnd a) X)))
+inferred
+  fun a =>
+    @instDecidableNot (((joiningQuotient G label).firstEnd a ∈ X) = ((joiningQuotient G label).secondEnd a ∈ X))
+      (@instDecidableEqOfIff ((joiningQuotient G label).firstEnd a ∈ X) ((joiningQuotient G label).secondEnd a ∈ X)
+        (@instDecidableIff ((joiningQuotient G label).firstEnd a ∈ X) ((joiningQuotient G label).secondEnd a ∈ X)
+          (@decidableMem I (fun a b => propDecidable (a = b)) ((joiningQuotient G label).firstEnd a) X)
+          (decidableMem ((joiningQuotient G label).secondEnd a) X)))
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:273:2: error: unsolved goals
+case refine_1
+W : Type u_4
+F : Type u_5
+I : Type u_6
+inst✝³ : Fintype W
+inst✝² : Fintype F
+inst✝¹ : Fintype I
+inst✝ : DecidableEq I
+G : Multigraph W F
+label : W → I
+a b : I
+hab : a ≠ b
+h D : ℕ
+hI : Fintype.card I ≤ 3
+hregular : ∀ (v : W), G.degree v = h
+hno : ∀ (X : Finset W), ¬G.IsOverfull h X
+hfibers : ∀ (i : I), #{v | label v = i} % 2 = if i = a ∨ i = b then 1 else 0
+A : Finset { x // x ∈ joiningCopies G label }
+hpair : ∀ e ∈ A, (joiningQuotient G label).edge e = s(a, b)
+hA : #A ≤ h
+hdegree : ∀ (v : W), (joiningGraph G label).degree v ≤ D
+hD : D ≤ h - #A
+Q : Multigraph I { x // x ∈ joiningCopies G label } := joiningQuotient G label
+classOf : I → { x // x ∈ joiningCopies G label } → W := (joiningGraph G label).endpointClass label
+hclosed :
+  ∀ (X : Finset I), (a ∈ X) = (b ∈ X) → ∀ (i : I) (v : W), 2 * #(Q.classCutOn classOf univ i v X) ≤ #(Q.cutOn univ X)
+hsep :
+  ∀ (X : Finset I),
+    (a ∈ X) ≠ (b ∈ X) → #univ ≤ #(Q.cutOn univ X) ∧ ∀ (i : I) (v : W), #(Q.classCutOn classOf univ i v X) ≤ #univ - #A
+huniv : univ.disjSum univ = univ
+heven : ∀ (i : I), Even ((Q.pairAugmentation a b hab h).degreeOn (univ.disjSum univ) i)
+P :
+  (Q.pairAugmentation a b hab h).CompatibleCircuitPartition (Multigraph.pairAugmentationClass h classOf)
+    (univ.disjSum univ)
+hP : ∀ e ∈ A, ∃ j, {Sum.inl e, Sum.inr j} ∈ P.parts
+R : (twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition (twoOddJoiningClasses G label h) univ :=
+  { parts := P.parts, circuit := ⋯, compatible := ⋯, disjoint := ⋯, cover := ⋯ }
+T : TwoOddJoiningDecomposition G label a b h :=
+  { primary := twoOddPrimaryParts G label a b hab h R, surplus := twoOddSurplusParts G label a b hab h R,
+    primary_card := ⋯, families_disjoint := ⋯, nonempty := ⋯, matching := ⋯, disjoint := ⋯, cover := ⋯,
+    primary_card_le := ⋯, surplus_card_le := ⋯, primary_cut_eq_one := ⋯, primary_odd_cut_iff := ⋯,
+    surplus_even_cut := ⋯ }
+e : { x // x ∈ joiningCopies G label }
+he : e ∈ A
+j : Fin h
+hj : {Sum.inl e, Sum.inr j} ∈ P.parts
+⊢ #{Sum.inr j}.toRight = 1
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:276:2: error: unsolved goals
+case refine_2
+W : Type u_4
+F : Type u_5
+I : Type u_6
+inst✝³ : Fintype W
+inst✝² : Fintype F
+inst✝¹ : Fintype I
+inst✝ : DecidableEq I
+G : Multigraph W F
+label : W → I
+a b : I
+hab : a ≠ b
+h D : ℕ
+hI : Fintype.card I ≤ 3
+hregular : ∀ (v : W), G.degree v = h
+hno : ∀ (X : Finset W), ¬G.IsOverfull h X
+hfibers : ∀ (i : I), #{v | label v = i} % 2 = if i = a ∨ i = b then 1 else 0
+A : Finset { x // x ∈ joiningCopies G label }
+hpair : ∀ e ∈ A, (joiningQuotient G label).edge e = s(a, b)
+hA : #A ≤ h
+hdegree : ∀ (v : W), (joiningGraph G label).degree v ≤ D
+hD : D ≤ h - #A
+Q : Multigraph I { x // x ∈ joiningCopies G label } := joiningQuotient G label
+classOf : I → { x // x ∈ joiningCopies G label } → W := (joiningGraph G label).endpointClass label
+hclosed :
+  ∀ (X : Finset I), (a ∈ X) = (b ∈ X) → ∀ (i : I) (v : W), 2 * #(Q.classCutOn classOf univ i v X) ≤ #(Q.cutOn univ X)
+hsep :
+  ∀ (X : Finset I),
+    (a ∈ X) ≠ (b ∈ X) → #univ ≤ #(Q.cutOn univ X) ∧ ∀ (i : I) (v : W), #(Q.classCutOn classOf univ i v X) ≤ #univ - #A
+huniv : univ.disjSum univ = univ
+heven : ∀ (i : I), Even ((Q.pairAugmentation a b hab h).degreeOn (univ.disjSum univ) i)
+P :
+  (Q.pairAugmentation a b hab h).CompatibleCircuitPartition (Multigraph.pairAugmentationClass h classOf)
+    (univ.disjSum univ)
+hP : ∀ e ∈ A, ∃ j, {Sum.inl e, Sum.inr j} ∈ P.parts
+R : (twoOddJoiningQuotient G label a b hab h).CompatibleCircuitPartition (twoOddJoiningClasses G label h) univ :=
+  { parts := P.parts, circuit := ⋯, compatible := ⋯, disjoint := ⋯, cover := ⋯ }
+T : TwoOddJoiningDecomposition G label a b h :=
+  { primary := twoOddPrimaryParts G label a b hab h R, surplus := twoOddSurplusParts G label a b hab h R,
+    primary_card := ⋯, families_disjoint := ⋯, nonempty := ⋯, matching := ⋯, disjoint := ⋯, cover := ⋯,
+    primary_card_le := ⋯, surplus_card_le := ⋯, primary_cut_eq_one := ⋯, primary_odd_cut_iff := ⋯,
+    surplus_even_cut := ⋯ }
+e : { x // x ∈ joiningCopies G label }
+he : e ∈ A
+j : Fin h
+hj : {Sum.inl e, Sum.inr j} ∈ P.parts
+⊢ insert (↑e) (image Subtype.val {Sum.inr j}.toLeft) = {↑e}

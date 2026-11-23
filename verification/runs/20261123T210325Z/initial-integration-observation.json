@@ -1,0 +1,26 @@
+{
+  "kind": "actual_tool_output_observation",
+  "observed_at_utc": "2026-11-23T21:04:05.339187+00:00",
+  "command": [
+    "lake",
+    "build",
+    "--wfail",
+    "Overfull.ResidualPalette.UniformJoining",
+    "Overfull.ResidualPalette.PaletteBudget",
+    "Overfull.ResidualPalette.JoiningGrouping"
+  ],
+  "cwd": "/workspace/scratch/96ddfd820f7d/overfull-next",
+  "exit_code": 0,
+  "status": "passed",
+  "timing_note": "The initial integration command was started before this run folder existed. No start timestamp is inferred. The complete returned build output and raw tool result are retained.",
+  "output_log": "initial-integration-build.log",
+  "observed_source_sha256": {
+    "Overfull/ResidualPalette/JoiningBounds.lean": "ffb88acf6fd2bf4aa78d761bbf2cf5452ee8d377488a1245c4acf17f2ce77a93",
+    "Overfull/ResidualPalette/JoiningGrouping.lean": "2faf0de462bc509e4112f555daa3a132703a0973ab922be98c699b8aa676188a",
+    "Overfull/ResidualPalette/PaletteBudget.lean": "58346edddc1fedeea111af98f5a02115178f7b8e305200bbecbd98f20e381cba",
+    "Overfull/ResidualPalette/PaletteGrouping.lean": "b3234409b31258e3d9dc51924a5023c5e4af084137c0968466d98085f916cf62",
+    "Overfull/ResidualPalette/PaletteParity.lean": "9d8ef8bbad5283d5afc5d8eb0a0411f67657e6cbca83a425330b2b04c3a52e7f",
+    "Overfull/ResidualPalette/UniformCompletion.lean": "f7dd90052b368583d94b94c35b95555340f77c2cc8a04d4a3c12b362715924d3",
+    "Overfull/ResidualPalette/UniformJoining.lean": "8c23e41c61cd68ef1275b740f4ddbe6865a3646df2037ab8c3ec88df9ee91844"
+  }
+}

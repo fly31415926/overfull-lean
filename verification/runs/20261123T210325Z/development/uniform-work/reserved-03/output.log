@@ -1,0 +1,22 @@
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:136:6: error: Type mismatch
+  original_virtual_pair_compatible Q a b hab h classOf e j
+has type
+  (Q.pairAugmentation a b hab h).Compatible (Multigraph.pairAugmentationClass h classOf) {Sum.inl e, Sum.inr j}
+but is expected to have type
+  (Q.pairAugmentation a b hab h).Compatible (Multigraph.pairAugmentationClass h classOf) D
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:151:15: error: Application type mismatch: The argument
+  mem_insert_self ?m.951 ?m.952
+has type
+  ?m.951 ∈ insert ?m.951 ?m.952
+but is expected to have type
+  {Sum.inl f, Sum.inr j} ∈ R.parts
+in the application
+  Exists.intro j (mem_insert_self ?m.951 ?m.952)
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:153:33: error: Application type mismatch: The argument
+  hk
+has type
+  {Sum.inl f, Sum.inr k} ∈ P.parts
+but is expected to have type
+  {Sum.inl f, Sum.inr k} ∈ P'.parts
+in the application
+  mem_insert_of_mem hk

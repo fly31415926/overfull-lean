@@ -1,0 +1,75 @@
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:19:0: error: automatically included section variable(s) unused in theorem `Overfull.NativeReserve.pair_copy_crosses`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:29:0: error: automatically included section variable(s) unused in theorem `Overfull.NativeReserve.original_virtual_pair_compatible`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:94:10: error: Invalid rewrite argument: Expected an equality or iff proof or definition name, but `C'` is a value of type
+  Finset E
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:127:62: error: unsolved goals
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝ : Fintype V
+Q : Multigraph V E
+a b : V
+hab : a ≠ b
+h : ℕ
+hV : Fintype.card V ≤ 3
+classOf : V → E → K
+e : E
+A : Finset E
+heA : e ∉ A
+ih :
+  ∀ (C : Finset E) (B : Finset (Fin h)),
+    A ⊆ C →
+      (∀ e ∈ A, Q.edge e = s(a, b)) →
+        #A ≤ #B →
+          (∀ (X : Finset V),
+              (a ∈ X) = (b ∈ X) → ∀ (v : V) (k : K), 2 * #(Q.classCutOn classOf C v k X) ≤ #(Q.cutOn C X)) →
+            (∀ (X : Finset V),
+                (a ∈ X) ≠ (b ∈ X) →
+                  #B ≤ #(Q.cutOn C X) ∧ ∀ (v : V) (k : K), #(Q.classCutOn classOf C v k X) ≤ #B - #A) →
+              (∀ (v : V), Even ((Q.pairAugmentation a b hab h).degreeOn (C.disjSum B) v)) →
+                ∃ P, ∀ e ∈ A, ∃ j, {Sum.inl e, Sum.inr j} ∈ P.parts
+C : Finset E
+B : Finset (Fin h)
+hAC : insert e A ⊆ C
+hpair : ∀ e_1 ∈ insert e A, Q.edge e_1 = s(a, b)
+hAB : #(insert e A) ≤ #B
+hclosed : ∀ (X : Finset V), (a ∈ X) = (b ∈ X) → ∀ (v : V) (k : K), 2 * #(Q.classCutOn classOf C v k X) ≤ #(Q.cutOn C X)
+hseparating :
+  ∀ (X : Finset V),
+    (a ∈ X) ≠ (b ∈ X) → #B ≤ #(Q.cutOn C X) ∧ ∀ (v : V) (k : K), #(Q.classCutOn classOf C v k X) ≤ #B - #(insert e A)
+heven : ∀ (v : V), Even ((Q.pairAugmentation a b hab h).degreeOn (C.disjSum B) v)
+heC : e ∈ C
+hepair : Q.edge e = s(a, b)
+hBpos : 0 < #B
+j : Fin h
+hj : j ∈ B
+C' : Finset E := C \ {e}
+B' : Finset (Fin h) := B \ {j}
+D : Finset (E ⊕ Fin h) := {Sum.inl e, Sum.inr j}
+hAC' : A ⊆ C'
+hBcount : #B' + 1 = #B
+hAB' : #A ≤ #B'
+hcutClosed : ∀ (X : Finset V), (a ∈ X) = (b ∈ X) → Q.cutOn C' X = Q.cutOn C X
+hclosed' :
+  ∀ (X : Finset V), (a ∈ X) = (b ∈ X) → ∀ (v : V) (k : K), 2 * #(Q.classCutOn classOf C' v k X) ≤ #(Q.cutOn C' X)
+hsep' :
+  ∀ (X : Finset V),
+    (a ∈ X) ≠ (b ∈ X) → #B' ≤ #(Q.cutOn C' X) ∧ ∀ (v : V) (k : K), #(Q.classCutOn classOf C' v k X) ≤ #B' - #A
+hDsub : D ⊆ C.disjSum B
+⊢ ¬?m.744 = ?m.745
+/workspace/scratch/96ddfd820f7d/uniform-work/ReservedPrimary.lean:128:12: error: Type mismatch: After simplification, term
+  hepair
+ has type
+  Q.edge e = s(a, b)
+but is expected to have type
+  (Q.pairAugmentation a b hab h).edge ?m.744 = (Q.pairAugmentation a b hab h).edge ?m.745

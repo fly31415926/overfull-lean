@@ -1,0 +1,127 @@
+{
+  "old_count": 12391,
+  "new_count": 12559,
+  "missing": [],
+  "changed": [
+    {
+      "name": "Overfull.MatchingProbability.graphCutEdges.eq_1",
+      "old": {
+        "axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "module": "Overfull.Patterns.Cuts",
+        "name": "Overfull.MatchingProbability.graphCutEdges.eq_1"
+      },
+      "new": {
+        "axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "module": "Overfull.CircuitPatterns.Cuts",
+        "name": "Overfull.MatchingProbability.graphCutEdges.eq_1"
+      }
+    },
+    {
+      "name": "Overfull.BipartiteMatchingCompletion.uncoveredRightOutside.eq_1",
+      "old": {
+        "axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "module": "Overfull.BipartitePackingRound",
+        "name": "Overfull.BipartiteMatchingCompletion.uncoveredRightOutside.eq_1"
+      },
+      "new": {
+        "axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "module": "Overfull.OrdinaryMatchingCompletion",
+        "name": "Overfull.BipartiteMatchingCompletion.uncoveredRightOutside.eq_1"
+      }
+    },
+    {
+      "name": "Overfull.BipartiteMatchingCompletion.uncoveredLeftOutside.eq_1",
+      "old": {
+        "axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "module": "Overfull.BipartitePackingRound",
+        "name": "Overfull.BipartiteMatchingCompletion.uncoveredLeftOutside.eq_1"
+      },
+      "new": {
+        "axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "module": "Overfull.OrdinaryMatchingCompletion",
+        "name": "Overfull.BipartiteMatchingCompletion.uncoveredLeftOutside.eq_1"
+      }
+    },
+    {
+      "name": "Overfull.IsRobustExpander.congr_simp",
+      "old": {
+        "axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "module": "Overfull.OrdinaryRandomReserve",
+        "name": "Overfull.IsRobustExpander.congr_simp"
+      },
+      "new": {
+        "axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "module": "Overfull.PairedCut.Full",
+        "name": "Overfull.IsRobustExpander.congr_simp"
+      }
+    },
+    {
+      "name": "Overfull.internalEdges.eq_1",
+      "old": {
+        "axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "module": "Overfull.CutCounting",
+        "name": "Overfull.internalEdges.eq_1"
+      },
+      "new": {
+        "axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "module": "Overfull.Multigraph",
+        "name": "Overfull.internalEdges.eq_1"
+      }
+    }
+  ],
+  "new_name_count": 168,
+  "new_name_modules": {
+    "Overfull.ResidualPalette.PaletteGrouping": 42,
+    "Overfull.ResidualPalette.JoiningGrouping": 27,
+    "Overfull.ResidualPalette.PaletteParity": 14,
+    "Overfull.ResidualPalette.ProtectedGrouping": 12,
+    "Overfull.ResidualPalette.ReservedPrimary": 19,
+    "Overfull.ResidualPalette.NativeReservedCrossings": 8,
+    "Overfull.ResidualPalette.JoiningBounds": 17,
+    "Overfull.ResidualPalette.NativeProtectedPalette": 3,
+    "Overfull.ResidualPalette.UniformCompletion": 7,
+    "Overfull.ResidualPalette.UniformJoining": 2,
+    "Overfull.ResidualPalette.PaletteBudget": 8,
+    "Overfull.ResidualPalette.ProtectedBudget": 9
+  }
+}
