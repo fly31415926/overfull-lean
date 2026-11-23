@@ -1,0 +1,71 @@
+Overfull/ExceptionalPalette/ReserveNative.lean:67:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Q.residualBoundary N T (q e) ∩ joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z)
+in the target expression
+  (fun i => Q.residualBoundary N T i ∩ joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z)) (q e) =
+    (fun i => Q.residualBoundary N T i ∩ joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z)) (q e')
+
+V : Type u_1
+E : Type u_2
+J : Type u_3
+inst✝¹ : Fintype V
+inst✝ : Fintype E
+G : Multigraph V E
+U₀ U₁ Z : Finset V
+M : Finset E
+hM : G.IsPerfectMatching M
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+hZ : #Z ≤ 2
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+hodd : #(corePart G M Z U₀) % 2 = 1
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L : ℕ
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+hno : ∀ (X : Finset V), ¬(residualGraph G N T).IsOverfull h X
+hdegree : ∀ (v : V), (joiningGraph (residualGraph G N T) (assignedLabel G M U₀ U₁ Z)).degree v ≤ D
+hL : 0 < L
+hmargin : 6 * D + r / 2 < h
+hbudget : Fintype.card V * D ≤ 2 * L * (h - 6 * D - r / 2)
+A : Finset { x // x ∈ joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) }
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L fun i => if i = 0 ∨ i = 1 then 1 else 0
+hcard : #A = r / 2
+hsource : ∀ e ∈ A, ↑↑e ∈ removedCopies Q.boundary univ
+_hpair : ∀ e ∈ A, (joiningQuotient (residualGraph G N T) (assignedLabel G M U₀ U₁ Z)).edge e = s(0, 1)
+_hsingle : ∀ e ∈ A, ∃ j, C.classes j = {↑e}
+f : { x // x ∈ A } → Fin h
+hf : Function.Injective f
+hfclass : ∀ (e : { x // x ∈ A }), C.classes (f e) = {↑↑e}
+q : { x // x ∈ A } → Fin r
+hq : ∀ (e : { x // x ∈ A }), ↑↑↑e ∈ Q.boundary (q e)
+htrace :
+  ∀ (e : { x // x ∈ A }),
+    Q.residualBoundary N T (q e) ∩ joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) = C.classes (f e)
+e e' : { x // x ∈ A }
+heq : q e = q e'
+hs :
+  (fun i => Q.residualBoundary N T i ∩ joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z)) (q e) =
+    (fun i => Q.residualBoundary N T i ∩ joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z)) (q e')
+⊢ e = e'
+Overfull/ExceptionalPalette/ReserveNative.lean:78:45: error: Application type mismatch: The argument
+  htrace
+has type
+  ∀ (e : { x // x ∈ A }),
+    @Inter.inter (Finset { e // e ∉ removedCopies N T })
+        (@instInter { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (Q.residualBoundary N T (q e))
+        (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z)) =
+      C.classes (f e)
+but is expected to have type
+  ∀ (i : { x // x ∈ A }),
+    @Inter.inter (Finset { e // e ∉ removedCopies N T })
+        (@instInter { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (B i)
+        (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z)) =
+      C.classes (f i)
+in the application
+  @reserveExtension V { e // e ∉ removedCopies N T } (Fin 3) { x // x ∈ A } inst✝¹
+    (Subtype.fintype fun e => e ∉ removedCopies N T) (instDecidableEqFin 3) (residualGraph G N T)
+    (assignedLabel G M U₀ U₁ Z) h D L (fun i => if i = 0 ∨ i = 1 then 1 else 0) C ?m.697 B f hf hBm hBd htrace

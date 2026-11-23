@@ -1862,7 +1862,86 @@
     "residual_palette_closure_72": "Overfull.NativeReserve.uniform_palette_budget",
     "residual_palette_closure_73": "Overfull.NativeReserve.uniform_palette_capacity",
     "residual_palette_closure_74": "Overfull.NativeReserve.uniform_palette_capacity_support_small",
-    "residual_palette_closure_75": "Overfull.NativeReserve.uniform_protected_palette_budget"
+    "residual_palette_closure_75": "Overfull.NativeReserve.uniform_protected_palette_budget",
+    "exceptional_palette_closure_1": "Overfull.AssignedParts.exists_assigned_even_joiningPalette_avoiding_colors_in_host",
+    "exceptional_palette_closure_2": "Overfull.AssignedParts.exists_assigned_pair_completion",
+    "exceptional_palette_closure_3": "Overfull.AssignedParts.exists_small_assigned_even_joiningPalette_avoiding_colors_in_host",
+    "exceptional_palette_closure_4": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors",
+    "exceptional_palette_closure_5": "Overfull.FourOdd.EvenJoiningDecomposition.exists_small_palette_avoiding_colors",
+    "exceptional_palette_closure_6": "Overfull.NativeReserve.BoundaryPacking.boundary_disjoint_removed",
+    "exceptional_palette_closure_7": "Overfull.NativeReserve.BoundaryPacking.boundary_joining_eq_crossing",
+    "exceptional_palette_closure_8": "Overfull.NativeReserve.BoundaryPacking.mem_residualBoundary",
+    "exceptional_palette_closure_9": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_card_le",
+    "exceptional_palette_closure_10": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_covers_exceptional",
+    "exceptional_palette_closure_11": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_disjoint",
+    "exceptional_palette_closure_12": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_image",
+    "exceptional_palette_closure_13": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_joining_empty",
+    "exceptional_palette_closure_14": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_joining_singleton",
+    "exceptional_palette_closure_15": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_matching",
+    "exceptional_palette_closure_16": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_support",
+    "exceptional_palette_closure_17": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_uncovered_even",
+    "exceptional_palette_closure_18": "Overfull.NativeReserve.JoiningPalette.classes_subset_joining",
+    "exceptional_palette_closure_19": "Overfull.NativeReserve.JoiningPalette.classes_subset_pairExtended",
+    "exceptional_palette_closure_20": "Overfull.NativeReserve.JoiningPalette.exists_pairFiber_completion",
+    "exceptional_palette_closure_21": "Overfull.NativeReserve.JoiningPalette.exists_pair_bijection",
+    "exceptional_palette_closure_22": "Overfull.NativeReserve.JoiningPalette.exists_pair_extension",
+    "exceptional_palette_closure_23": "Overfull.NativeReserve.JoiningPalette.freeColors_card_add_degree",
+    "exceptional_palette_closure_24": "Overfull.NativeReserve.JoiningPalette.mem_freeColors",
+    "exceptional_palette_closure_25": "Overfull.NativeReserve.JoiningPalette.pairAdded_disjoint_support",
+    "exceptional_palette_closure_26": "Overfull.NativeReserve.JoiningPalette.pairExtended_card_le",
+    "exceptional_palette_closure_27": "Overfull.NativeReserve.JoiningPalette.pairExtended_class_of_copy",
+    "exceptional_palette_closure_28": "Overfull.NativeReserve.JoiningPalette.pairExtended_cover",
+    "exceptional_palette_closure_29": "Overfull.NativeReserve.JoiningPalette.pairExtended_covers_pair",
+    "exceptional_palette_closure_30": "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_eq",
+    "exceptional_palette_closure_31": "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_parity",
+    "exceptional_palette_closure_32": "Overfull.NativeReserve.JoiningPalette.pairExtended_disjoint",
+    "exceptional_palette_closure_33": "Overfull.NativeReserve.JoiningPalette.pairExtended_isMatching",
+    "exceptional_palette_closure_34": "Overfull.NativeReserve.JoiningPalette.pairExtended_outside_load_le",
+    "exceptional_palette_closure_35": "Overfull.NativeReserve.JoiningPalette.pairExtended_support_card_le",
+    "exceptional_palette_closure_36": "Overfull.NativeReserve.JoiningPalette.pairExtended_support_outside",
+    "exceptional_palette_closure_37": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_card",
+    "exceptional_palette_closure_38": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_eq",
+    "exceptional_palette_closure_39": "Overfull.NativeReserve.JoiningPalette.pair_support_iff",
+    "exceptional_palette_closure_40": "Overfull.NativeReserve.JoiningPalette.usedColors_card",
+    "exceptional_palette_closure_41": "Overfull.NativeReserve.PairFiberCompletion.prescribed_class",
+    "exceptional_palette_closure_42": "Overfull.NativeReserve.cutOn_inter_joining",
+    "exceptional_palette_closure_43": "Overfull.NativeReserve.exists_native_even_reserved_palette",
+    "exceptional_palette_closure_44": "Overfull.NativeReserve.exists_native_reserved_palette",
+    "exceptional_palette_closure_45": "Overfull.NativeReserve.joiningPalette_class_subset",
+    "exceptional_palette_closure_46": "Overfull.NativeReserve.mem_pairColorClass",
+    "exceptional_palette_closure_47": "Overfull.NativeReserve.mem_pairFiberCopies_iff",
+    "exceptional_palette_closure_48": "Overfull.NativeReserve.mem_survivingCopies",
+    "exceptional_palette_closure_49": "Overfull.NativeReserve.pairColorClass_card_le_one",
+    "exceptional_palette_closure_50": "Overfull.NativeReserve.pairColorClass_contains_prescribed",
+    "exceptional_palette_closure_51": "Overfull.NativeReserve.pairColorClass_cover",
+    "exceptional_palette_closure_52": "Overfull.NativeReserve.pairColorClass_covers_free",
+    "exceptional_palette_closure_53": "Overfull.NativeReserve.pairColorClass_disjoint",
+    "exceptional_palette_closure_54": "Overfull.NativeReserve.pairColorClass_eq_singleton",
+    "exceptional_palette_closure_55": "Overfull.NativeReserve.pairColorClass_isMatching",
+    "exceptional_palette_closure_56": "Overfull.NativeReserve.pairColorClass_subset",
+    "exceptional_palette_closure_57": "Overfull.NativeReserve.pairColorClass_support_subset",
+    "exceptional_palette_closure_58": "Overfull.NativeReserve.pairFiberCopies_disjoint_joining",
+    "exceptional_palette_closure_59": "Overfull.NativeReserve.pairFiberCopies_eq_nonjoining_incidence",
+    "exceptional_palette_closure_60": "Overfull.NativeReserve.pairFiberCopies_incident",
+    "exceptional_palette_closure_61": "Overfull.NativeReserve.reserveClasses_added_copies",
+    "exceptional_palette_closure_62": "Overfull.NativeReserve.reserveClasses_at",
+    "exceptional_palette_closure_63": "Overfull.NativeReserve.reserveClasses_card_le",
+    "exceptional_palette_closure_64": "Overfull.NativeReserve.reserveClasses_contains_original",
+    "exceptional_palette_closure_65": "Overfull.NativeReserve.reserveClasses_cover",
+    "exceptional_palette_closure_66": "Overfull.NativeReserve.reserveClasses_cut_eq",
+    "exceptional_palette_closure_67": "Overfull.NativeReserve.reserveClasses_cut_parity",
+    "exceptional_palette_closure_68": "Overfull.NativeReserve.reserveClasses_disjoint",
+    "exceptional_palette_closure_69": "Overfull.NativeReserve.reserveClasses_joining",
+    "exceptional_palette_closure_70": "Overfull.NativeReserve.reserveClasses_matching",
+    "exceptional_palette_closure_71": "Overfull.NativeReserve.reserveClasses_other",
+    "exceptional_palette_closure_72": "Overfull.NativeReserve.reserveClasses_support_card_le",
+    "exceptional_palette_closure_73": "Overfull.NativeReserve.reserveClasses_vertex_load_eq",
+    "exceptional_palette_closure_74": "Overfull.NativeReserve.reserveClasses_vertex_load_le",
+    "exceptional_palette_closure_75": "Overfull.NativeReserve.survivingCopies_card",
+    "exceptional_palette_closure_76": "Overfull.NativeReserve.survivingCopies_disjoint",
+    "exceptional_palette_closure_77": "Overfull.NativeReserve.survivingCopies_image",
+    "exceptional_palette_closure_78": "Overfull.NativeReserve.survivingCopies_isMatching",
+    "exceptional_palette_closure_79": "Overfull.NativeReserve.survivingCopies_support"
   },
   "lean_build_passed": true,
   "axiom_audit_passed": true,
@@ -2299,7 +2378,7 @@
     "Classical.choice",
     "Quot.sound"
   ],
-  "verified_declaration_count": 12559,
+  "verified_declaration_count": 12738,
   "declaration_count_includes_generated_support_lemmas": true,
   "verified_declarations": [
     {
@@ -9449,8 +9528,34 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.AssignedParts.exists_assigned_even_joiningPalette_avoiding_colors_in_host"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.ResidualPalette.JoiningGrouping",
       "name": "Overfull.AssignedParts.exists_assigned_joiningPalette_in_host"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.AssignedParts.exists_assigned_pair_completion"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.AssignedParts.exists_assigned_pair_completion._simp_1_1"
     },
     {
       "axioms": [
@@ -9495,6 +9600,15 @@
       ],
       "module": "Overfull.AssignedParts.HeavySignature",
       "name": "Overfull.AssignedParts.exists_heavy_signature_with_pools"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenBudget",
+      "name": "Overfull.AssignedParts.exists_small_assigned_even_joiningPalette_avoiding_colors_in_host"
     },
     {
       "axioms": [
@@ -50100,6 +50214,75 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors._simp_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenBudget",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_small_palette_avoiding_colors"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.ResidualPalette.PaletteParity",
       "name": "Overfull.FourOdd.EvenJoiningDecomposition.matching"
     },
@@ -60798,6 +60981,14 @@
     {
       "axioms": [
         "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.Multigraph.IsMatching.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
         "propext",
         "Classical.choice"
       ],
@@ -66052,6 +66243,24 @@
         "propext",
         "Classical.choice"
       ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.boundary_disjoint_removed"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.boundary_joining_eq_crossing"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
       "module": "Overfull.NativeReserve.PackingConstruction",
       "name": "Overfull.NativeReserve.BoundaryPacking.card_le"
     },
@@ -66135,6 +66344,24 @@
       ],
       "module": "Overfull.NativeReserve.PackingConstruction",
       "name": "Overfull.NativeReserve.BoundaryPacking.isMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.mem_residualBoundary"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.mem_residualBoundary._simp_1"
     },
     {
       "axioms": [
@@ -66241,6 +66468,114 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_covers_exceptional"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_image"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_joining_empty"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_joining_empty._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_joining_singleton"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_joining_singleton._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_matching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_support"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_uncovered_even"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.ResidualPalette.JoiningBounds",
       "name": "Overfull.NativeReserve.BoundaryPacking.residual_exceptional_joining_degree"
     },
@@ -66313,6 +66648,24 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.classes_subset_joining"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.classes_subset_pairExtended"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.ResidualPalette.JoiningGrouping",
       "name": "Overfull.NativeReserve.JoiningPalette.congr_parity._proof_1"
     },
@@ -66349,8 +66702,94 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.JoiningPalette.exists_pairFiber_completion"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.JoiningPalette.exists_pairFiber_completion._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.JoiningPalette.exists_pairFiber_completion._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.JoiningPalette.exists_pairFiber_completion._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.JoiningPalette.exists_pair_bijection"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.exists_pair_extension"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.freeColors.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.freeColors_card_add_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.ResidualPalette.JoiningGrouping",
       "name": "Overfull.NativeReserve.JoiningPalette.matching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.mem_freeColors"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.mem_freeColors._simp_1"
     },
     {
       "axioms": [
@@ -66385,6 +66824,320 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairAdded_disjoint_support"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtendedClasses.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_class_of_copy"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cover._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cover._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cover._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_covers_pair"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_covers_pair._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_covers_pair._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_eq"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_eq._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_eq._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_eq._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_isMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_outside_load_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_outside_load_le._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_outside_load_le._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_support_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_support_outside"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_support_outside._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_support_outside._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_card._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_card._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_card._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_card._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_support_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_support_iff._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_support_iff._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_support_iff._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_support_iff._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.ResidualPalette.JoiningGrouping",
       "name": "Overfull.NativeReserve.JoiningPalette.support_card_le"
     },
@@ -66403,8 +67156,161 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.usedColors_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.usedColors_card._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.ResidualPalette.JoiningGrouping",
       "name": "Overfull.NativeReserve.JoiningPalette.vertex_load_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.class_of_copy"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.color_injective"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.contains_joining"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.covers"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.cut_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.matching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.mk.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.mk.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.outside_load_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.prescribed_class"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.support_card_le"
     },
     {
       "axioms": [
@@ -66445,6 +67351,159 @@
       ],
       "module": "Overfull.NativeReserve.Greedy",
       "name": "Overfull.NativeReserve.PoolKind.pair.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.added_copies"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.contains_original"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.cut_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.cut_parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.joining"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.matching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.mk.inj"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.mk.injEq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.mk.sizeOf_spec"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.prescribed"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.support_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.unchanged"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.vertex_load_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.vertex_load_le"
     },
     {
       "axioms": [
@@ -67081,6 +68140,40 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.cutOn_inter_joining"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.cutOn_inter_joining._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.cutOn_inter_joining._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.cutOn_inter_joining._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.NativeReserve.CutSafety",
       "name": "Overfull.NativeReserve.cut_toggle"
     },
@@ -67568,6 +68661,32 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.ExceptionalPalette.EvenNative",
+      "name": "Overfull.NativeReserve.exists_native_even_reserved_palette"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenNative",
+      "name": "Overfull.NativeReserve.exists_native_even_reserved_palette._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenNative",
+      "name": "Overfull.NativeReserve.exists_native_even_reserved_palette._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.ResidualPalette.NativeProtectedPalette",
       "name": "Overfull.NativeReserve.exists_native_protected_joiningPalette"
     },
@@ -67649,6 +68768,23 @@
       ],
       "module": "Overfull.NativeReserve.CompletionConstruction",
       "name": "Overfull.NativeReserve.exists_native_reserve_completion_parameters._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveNative",
+      "name": "Overfull.NativeReserve.exists_native_reserved_palette"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveNative",
+      "name": "Overfull.NativeReserve.exists_native_reserved_palette._simp_1_1"
     },
     {
       "axioms": [
@@ -68121,6 +69257,15 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.joiningPalette_class_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.ResidualPalette.JoiningBounds",
       "name": "Overfull.NativeReserve.joining_degree_le_core_error"
     },
@@ -68305,6 +69450,74 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.mem_pairColorClass"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.mem_pairColorClass._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.mem_pairColorClass._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.mem_pairColorClass._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.mem_pairColorClass._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.mem_pairFiberCopies_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.mem_pairFiberCopies_iff._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.mem_pairFiberCopies_iff._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.NativeReserve.Residual",
       "name": "Overfull.NativeReserve.mem_removedCopies"
     },
@@ -68334,6 +69547,24 @@
       ],
       "module": "Overfull.NativeReserve.Realization",
       "name": "Overfull.NativeReserve.mem_specialEnds._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.mem_survivingCopies"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.mem_survivingCopies._simp_1"
     },
     {
       "axioms": [
@@ -68674,6 +69905,180 @@
       ],
       "module": "Overfull.NativeReserve.CompletionParameters",
       "name": "Overfull.NativeReserve.packing_density_and_horizon"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_card_le_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_contains_prescribed"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_covers_free"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_covers_free._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_covers_free._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_eq_singleton"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_isMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_support_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_support_subset._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_support_subset._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.pairFiberCopies.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.pairFiberCopies_disjoint_joining"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.pairFiberCopies_eq_nonjoining_incidence"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.pairFiberCopies_eq_nonjoining_incidence._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.pairFiberCopies_eq_nonjoining_incidence._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.pairFiberCopies_incident"
     },
     {
       "axioms": [
@@ -69378,6 +70783,194 @@
     },
     {
       "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_added_copies"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_added_copies._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_added_copies._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_at"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_contains_original"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_cover"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_cut_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_cut_parity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_joining"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_matching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_other"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_support_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_vertex_load_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_vertex_load_eq._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_vertex_load_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_vertex_load_le._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_vertex_load_le._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_vertex_load_le._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_vertex_load_le._simp_1_3"
+    },
+    {
+      "axioms": [
         "Classical.choice",
         "propext",
         "Quot.sound"
@@ -69729,6 +71322,69 @@
       ],
       "module": "Overfull.NativeReserve.RetainedCore",
       "name": "Overfull.NativeReserve.subcoreInNativeResidual._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.survivingCopies.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.survivingCopies_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.survivingCopies_disjoint"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.survivingCopies_image"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.survivingCopies_isMatching"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.survivingCopies_support"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.survivingCopies_support._simp_1_1"
     },
     {
       "axioms": [
@@ -109883,6 +111539,16 @@
     "Overfull.Dense.TripartiteGraph",
     "Overfull.Dense.TripartiteTriangleBridge",
     "Overfull.Dense.UnequalFlow",
+    "Overfull.ExceptionalPalette.EvenBudget",
+    "Overfull.ExceptionalPalette.EvenColors",
+    "Overfull.ExceptionalPalette.EvenNative",
+    "Overfull.ExceptionalPalette.PairAssigned",
+    "Overfull.ExceptionalPalette.PairColoring",
+    "Overfull.ExceptionalPalette.PairExtension",
+    "Overfull.ExceptionalPalette.PairFree",
+    "Overfull.ExceptionalPalette.ReserveCopies",
+    "Overfull.ExceptionalPalette.ReserveInsertion",
+    "Overfull.ExceptionalPalette.ReserveNative",
     "Overfull.External.FiniteCirculation",
     "Overfull.External.PerfectBMatching",
     "Overfull.FewExceptions.Complement",
@@ -110344,6 +112010,14 @@
     "verified_declaration_count": 168,
     "numbered_assertions_completed": 0
   },
+  "exceptional_palette_declaration_map": {
+    "path": "verification/exceptional-palette-declarations.json",
+    "sha256": "18d3be8bc24b824ff407d075e7a5d8692f4d3dde21dbfe594692f69c2fe9d4f2",
+    "module_count": 10,
+    "public_theorem_count": 79,
+    "verified_declaration_count": 179,
+    "numbered_assertions_completed": 0
+  },
   "checkpoint_reconstruction": {
     "original_checkpoint": "cb05ef5f5b7ef5ada4e535e9dcc652eecaddc43e",
     "original_tree_reproduced": false,
@@ -110352,7 +112026,7 @@
     "fresh_build_and_audit": true
   },
   "source_sha256": {
-    "Overfull.lean": "0f014047bd2ab0cccfa75eaa213aa9b74a2537e723399014aabf855438087f2b",
+    "Overfull.lean": "03ee2e0171713df9bea01741e18c06015dc507a138e5912cc11aecd1510a0acd",
     "Audit.lean": "76886fd9261a3a7b07660f9a434272c0347130a4013cf57da6e1761a34fc6603",
     "Overfull/Absorption/Bounded.lean": "722ca71ecdc9b0f4c17b400c32d51a284d9eac61211e1a52e448fcc8f5bb2f52",
     "Overfull/Absorption/Core.lean": "1f5f39cd8497918341bf336db7f1735b131c9f564077b158b7245fbb474a0946",
@@ -110602,6 +112276,16 @@
     "Overfull/Dense/TripartiteGraph.lean": "c28735e93ca70a1952261b01fafae261139ea982516700a06a6ed2320917c37c",
     "Overfull/Dense/TripartiteTriangleBridge.lean": "f3cebc0109e861a0f2ff6e88c2dc267f8058dcdf80dccfd1ccffd4c774dd494c",
     "Overfull/Dense/UnequalFlow.lean": "792ffcef84d8b17007155b85b48d83d7bd6bae8d7e25914b0dc34ebe9f35bd66",
+    "Overfull/ExceptionalPalette/EvenBudget.lean": "5e00b808ae96da6ae07ad5c7fb24c1ee25c0ebe05de4f267e97535ae18acbdeb",
+    "Overfull/ExceptionalPalette/EvenColors.lean": "590fcad5d58487986f856c5cebbcf397b15aca4326df2fe016e490c3a47141e2",
+    "Overfull/ExceptionalPalette/EvenNative.lean": "f0410f63afefad2912fb15de5118335cf99221051285f47abb277d025d3f4db3",
+    "Overfull/ExceptionalPalette/PairAssigned.lean": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920",
+    "Overfull/ExceptionalPalette/PairColoring.lean": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869",
+    "Overfull/ExceptionalPalette/PairExtension.lean": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c",
+    "Overfull/ExceptionalPalette/PairFree.lean": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab",
+    "Overfull/ExceptionalPalette/ReserveCopies.lean": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14",
+    "Overfull/ExceptionalPalette/ReserveInsertion.lean": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a",
+    "Overfull/ExceptionalPalette/ReserveNative.lean": "0c824cd0f9b7cb6872ca58463a268d453d6f6104a1564c66f8639a313c9cefd4",
     "Overfull/External/FiniteCirculation.lean": "6b0a28be60527d79e4769496d829d3ed227455de3fb4e76dbc20a1b3a512b368",
     "Overfull/External/PerfectBMatching.lean": "8a3f5cb9fbf2f44c8a8c22b86db196437666749527d6dcdc3133f0819253c81f",
     "Overfull/FewExceptions/Complement.lean": "71683b81de811824352b8b631a6aaba748ca69ebf8340b603e97b99f0da6f976",
@@ -110905,7 +112589,7 @@
     ".github/workflows/lean.yml": "bf5cd8ff5d9c54814b5a0a2a98732a90dae5e4d1a7268954fe9deba218753e83",
     "CIRCULATION_NOTICE.txt": "c8913077edf119bdb2ff790f24c3a27188a14b37d3cbc03121c917aee157a419",
     "LICENSE_BMATCHING.txt": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
-    "README.md": "7b0969f57c811de718b46f4cc15538b78e080484624816cf71b0f6dd0c303e59",
+    "README.md": "889b3bd829ce375164ccd0419751902e7dc8ac15eee6c78aa64accc743acb74d",
     "THIRD_PARTY_NOTICES.txt": "9002356e653c2943115b2feeba04713b005074a3d7c283bd894a47d8ca63dcd7",
     "docs/adaptive-packing.md": "eed3d11bde80300511bfa046813661c1617bb0ddc4c131efbed9576a33e53c7e",
     "docs/assigned-part-semantic-review.md": "e66abf61bc77c96e36e2eb13f64c0a238db4341fd120b4982f4c9a3119b553ca",
@@ -110926,11 +112610,14 @@
     "docs/checkpoint-reconstruction-source.json": "15b678ca340bc3e5f6120c242e5e87255ddea8de45cfa82267fbf83b44784322",
     "docs/checkpoint-reconstruction.md": "281491521d047dde7fd88f197d5f6b45cad146ca8643eafb31c796a86dae208c",
     "docs/circulation-source.json": "2b3d7bdf1b05c6b8445e2961efe99fe3eb6100a9c08c1eb3af8bbb4fd28350aa",
-    "docs/continuation-handoff.md": "84b6db5aa5823c2f2c5bf8e6234c10e8c331e78d01d2bf0e1f66eea914f252a5",
-    "docs/coverage.json": "fd664d98fc0483bdf891b206424557226380968a7828a9bb6da2481511e16aff",
+    "docs/continuation-handoff.md": "092e9832b621b5391beecb3ca76cef5c349732d53e95ca187891be9cab73a467",
+    "docs/coverage.json": "598cf147064ee1b85436d794f64bb994719ff0e3ceebf904769af5c85f89adc1",
     "docs/critical-partition-consequences.md": "b0b0db1f855f47e3a3c6c63046bf7375c65b452640b73615baf9ca6a34d8dc91",
     "docs/dense-link-packing.md": "e34a37bb7b482fcd950977d2ff4835f573038c78a873c0f30823a5a1bcc181cf",
     "docs/exceptional-absorption.md": "5fc25d8f075878fd04257ca6370ed6d70bce2991c8ab36b29d4f80cde4784eb7",
+    "docs/exceptional-palette-semantic-review.md": "cb512512edc311235393f2d1281f4f3e194592d71de604253258eae7568ac471",
+    "docs/exceptional-palette-source.json": "431f54965151792e76916291b2efc89cf4e3894f26e020b91aff011cb48ec9bd",
+    "docs/exceptional-palette-verification.md": "d96316bb7f64876186520c4c961d9fb6b1563eca420e1b60162899130d7f8472",
     "docs/few-exception-continuation.md": "23c9429c490637e9837d3f1843263760c87a451021ea43003703e1e8e80c85ac",
     "docs/few-exception-semantic-review.md": "896a4a17c596d44bec34c8f096d9ed194d284a6968126079c9daa47482632d14",
     "docs/few-exception-source.json": "f5facc94fd90dc729fb59d5af62c1b81763e30f84cb2758a66a5415f3e434ae6",
@@ -110982,13 +112669,14 @@
     "scripts/setup_vizing.py": "42ab626c3d40e8012aeed8d90b08a32757c3c5ee844b52ee2dc704e89b276094",
     "scripts/three_label_selector_check.py": "0f678a759ef4b8a48675f45739af49a176d506accf869899cd493ccfd6ebc7bf",
     "scripts/update_assigned_manifest.py": "0041947e59aec0cc7a2c4920de49eff4ebbe3457e557202eea4962a572f13c93",
+    "scripts/update_exceptional_palette_manifest.py": "7abf1ee3480be021c7f593afd771e84897a06eafde922f713cf170ef1744d37a",
     "scripts/update_joining_manifest.py": "49e353003a9aceff1e4d94345d8f2363fab81fb07eb218e651e666a879300449",
     "scripts/update_native_pattern_manifest.py": "f6ccde61f5ab28684ac8837391cf148371fe885d00f8a8584d60f5ba029e2501",
     "scripts/update_native_reserve_manifest.py": "f81ae2f7cd8ee484a8e353cdcd00338b3674fe85b0be801fcb8eea6a06bab4f6",
     "scripts/update_reconstruction_manifest.py": "d3fb79aff0e1ebe718ecf77f0a554d292ee494821f9018115c3ae46f82681935",
     "scripts/update_residual_palette_manifest.py": "1d6dca69b6e3cdb3c627059e3ce7194719314e957db08e64bb904bf49224a691",
     "scripts/update_three_label_manifest.py": "b99977121869aa9ef849a0cf6dd8f6833c7dcc6487c56b1e975070550f29190d",
-    "scripts/verify.py": "6c5567c22a7198802f858ce681fc582e0a6fbc0d6cf5e0fae7c0d56da0f66764"
+    "scripts/verify.py": "f503a838096d765f9651d77beeb6bdfc0b953458dfbc93f460c29580717e2237"
   },
-  "scope": "47 of 69 numbered manuscript assertions remain fully proved; 22, including the main theorem, remain incomplete. This continuation proves native multigraph matching-distribution capacities, at most five actual assignment signatures and a heavy representative with linear original-copy pool supplies, exact exceptional-pool marginal identities, and exceptional-retaining boundary compression with exact core-crossing parity and even uncovered core orders. All 69 original assertion records and prior completed results are preserved. Simultaneous reserves, residual safety, full source-pattern interfaces, palettes, robust completion and final two-core factorization remain unfinished."
+  "scope": "47 of 69 numbered manuscript assertions have complete checked proofs; 22, including the main theorem, remain incomplete. The supporting continuation constructs native reserves with a safe regular residual, actual bounded joining palettes, prescribed empty joining colors in the all-even case, exceptional-pair coloring with preserved actual-copy prescriptions, and protected full reserve-boundary extensions. All 69 original assertion records, statement hashes and prior completed mappings are preserved. Internal coloring for exceptions assigned to old cores, full robust completions, final two-core factorization and reconstruction remain unfinished."
 }

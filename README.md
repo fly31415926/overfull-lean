@@ -6,7 +6,29 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest continuation: actual residual joining palettes
+## Latest continuation: internal pair coloring and reserve palette extensions
+
+The new stage derives the common free palette of an actual exceptional pair
+and colors every parallel copy while preserving valid prescribed reserve
+colors. It also constructs all-even joining palettes with prescribed empty
+colors, and extends protected joining classes to full surviving original
+reserve boundaries with exact copy accounting and cut parity.
+
+These are concrete missing construction steps in the two-core argument.
+Exceptional vertices assigned to old cores still require their internal
+coloring construction, followed by the full robust completions and final
+factorization. **Coverage remains 47/69; the main theorem is unverified.**
+
+See the [proof map](docs/exceptional-palette-verification.md),
+[source manifest](docs/exceptional-palette-source.json),
+[semantic review](docs/exceptional-palette-semantic-review.md), and
+[current run records](verification/runs/20261123T221916Z/).
+The exact full build, unchanged axiom audit and preservation report determine
+local verification status. Publication is tracked separately: automatic
+approval review blocked the preceding verified candidate's complete upload,
+and neither public verified branch was advanced in that attempt.
+
+## Previous continuation: actual residual joining palettes
 
 The continuation now derives the actual residual joining-degree bounds and
 constructs bounded matching color classes covering every joining copy, with

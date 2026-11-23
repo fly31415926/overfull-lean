@@ -1,142 +1,132 @@
-# Continuation handoff: actual residual joining palettes
+# Continuation handoff: exceptional pair and reserve palette extensions
 
-## Authoritative state
+## Authoritative state and publication
 
-Fetch and inspect `main` and
-`verified-bipartite-continuation-2026-11-21` in
-`fly31415926/overfull-lean` before editing. Their newest verified commits
-and actual run reports are authoritative. Both verified branches began this
-continuation at `98c6b228a997fead863d05041f12799c93fac18b`. Newer native
-reserve sources were saved at recovery checkpoint
-`964027f1a74cd68149033dc74f87846cabdf2eae`; all 24 native module blobs matched
-the observed local sources.
+Fetch and inspect `main` and `verified-bipartite-continuation-2026-11-21`
+in `fly31415926/overfull-lean` before editing. At the start of this run
+both still pointed to `98c6b228a997fead863d05041f12799c93fac18b`.
 
-The interrupted native-reserve full audit was resumed as
-`verification/runs/20261123T201422Z/full-04`. Its final actual records and
-preservation report determine status. This palette continuation was developed
-in a separate worktree, leaving those frozen source inputs unchanged.
+The preceding complete local verified candidate is
+`1b5663a8fb472e42e698f4e09fcfc55497393815`, tree
+`ab2dd45502da57ea7dfb1db046a9efc9ab0cf067`, with 2,196 files. Its parent
+is the native-reserve verified checkpoint
+`b7be9966640e932ef7bbd030d3dae42f7bcb4638`, tree
+`7b7c84d18ee0f7826e87829de5d175fd6eea7ff6`. The public source-only recovery
+checkpoint `964027f1a74cd68149033dc74f87846cabdf2eae` omits the later full
+evidence and must not be promoted as the completed result.
 
-New run: `20261123T210325Z`. Its folder contains genuine development
-diagnostics, frozen full-check inputs, complete audit, preservation report
-and publication evidence. A targeted compiler pass or source-only recovery
-checkpoint is not a complete verification claim.
+This run independently checked the previous candidate's 635 frozen hashes,
+all 2,196 file blobs, complete 12,559-declaration audit, and preservation of
+12,391 preceding declarations. The connected GitHub integration uploaded
+some objects but automatic approval review blocked the historical-evidence
+batch. Neither verified branch advanced. An uploaded object is not a
+published checkpoint. See this run's `publication-blocked.json`.
 
-## Completed construction interfaces
+The user has repeatedly authorized publication of all sources,
+documentation, mappings and genuine logs to this public repository. The
+first rejected manifest was retried only after recovering explicit prior
+authorization and verifying its source hashes against already-public
+sources; that retry succeeded. A subsequent historical-evidence batch
+was rejected again, so that operation was stopped. Do not bypass an
+approval rejection or claim branch advancement without readback.
 
-The new sources are under `Overfull/ResidualPalette/`. All preceding nonroot
-proof sources are preserved, including the native reserve modules.
+New local run: `20261123T221916Z`. It starts from the exact complete local
+candidate above in a separate worktree. Its actual full command, frozen
+inputs, logs and preservation report determine current local status.
+Preserve this work and any concurrent remote changes when resuming.
 
-- `exists_uniform_native_reserve_completion_parameters` fixes retained
-  robustness `θ>0`, with `θ≤σ`, before every requested surplus error `δ>0`.
-- `native_residual_joining_degree_bounds` gives joining degree at most
-  `a` on old-core vertices and `h-r` on exceptions in the actual residual.
-- `exists_uniform_native_reserve_completion_with_small_joining` constructs
-  the original reserve and safe regular residual with retained robust cores,
-  and natural `D=⌊max(a,h-r)⌋₊` satisfying the degree bound and `6D<h`.
-- `AssignedParts.exists_assigned_joiningPalette_in_host` constructs actual
-  matching classes covering every residual joining copy. It retains the
-  original representative's assignment and proves exact coverage,
-  disjointness, cut parity, whole-class size and vertex-load bounds.
-- `assigned_joiningPalette_uncovered_even` gives even uncovered order in
-  every assigned fiber for every whole palette class.
-- `BoundaryPacking.exists_half_residual_crossing_reserve` selects exactly
-  `r/2` surviving original reserve crossings when the assigned parts are odd.
-- `exists_twoOddJoining_decomposition_with_reserved_primary` forces
-  prescribed actual crossings into singleton primary pieces.
-- `TwoOddJoiningDecomposition.exists_protected_palette` keeps those
-  primaries as whole classes by excluding surplus pieces from their colors.
-- `exists_native_protected_joiningPalette` composes the actual native
-  reserve, forced primaries and protected grouping. It retains original
-  reserve membership and gives an injective map from the selected `r/2`
-  crossings to distinct singleton palette classes.
+## New constructions
 
-The original representative and reserve parent matchings need not survive
-as perfect residual matchings. Parallel copies remain distinct. Selected
-crossings may share vertices and receive different colors. Their singleton
-classes are joining classes, not yet complete compressed reserve boundaries.
+Sources are under `Overfull/ExceptionalPalette/`. The exact source manifest
+lists all public proof names and module hashes. The full axiom audit also
+includes private and generated support. Every preceding nonroot proof
+source remains byte-identical.
 
-## Uniform whole-class budgets
+- **All-even reserve colors:** construct joining classes using the
+  complement of any prescribed palette set Q, leaving those labels empty.
+  Exact original-copy coverage, matching, disjointness, parity, size and
+  vertex load are retained. The margin is `6D+|Q|<h`, with capacity
+  `nD<=2L(h-6D-|Q|)`. Uniform wrappers give whole-class support at most
+  epsilon times the host order, using the existing protected budget.
+- **Actual exceptional pair:** derive equal free palettes from whole-class
+  even cut parity and derive the exact number of internal parallel copies
+  from degree h and joining coverage. Extend an injective prescription to
+  all actual pair copies. Both exceptional vertices are covered in every
+  color; fiber cuts and other vertex supports are unchanged. Each class
+  gains at most one copy and two support vertices. The actual assigned-pair
+  wrapper identifies the source fiber before applying the construction.
+- **Full reserve boundaries:** transport original reserved copies into the
+  actual residual subtype and retain their original indices. Replace
+  protected joining classes by the full boundaries with those exact
+  joining portions. Prove matching, disjointness, joining portion and cut
+  identities, exact additional-copy accounting, whole-class bounds, and
+  the actual vertex-load equation. Native odd/even wrappers establish
+  source-level survival, alignment, exceptional coverage and even
+  uncovered old-core orders in the protected colors.
 
-For unprotected grouping the margin is `h-6D`; with `s` protected colors it
-is `h-6D-s`. Choose the common natural capacity `L=(nD/2)/gap+1`. This
-directly proves the input `nD≤2L*gap` for both parity cases.
+The preceding native selection, reserve completion, residual no-overfull
+safety, uniform retained robustness, joining grouping and half-reserve
+crossing alignment are already proved. Do not restart those stages.
 
-`uniform_palette_budget` proves `6L≤εn` from `h≥αn/30`, `D≤δn`,
-`δ≤α/360`, `δ≤εα/360`, and `n≥12/ε`.
-`uniform_protected_palette_budget` supplies the protected counterpart for
-`s≤h/2`, using `δ≤α/720` and `δ≤εα/720`. It proves the positive protected
-gap; `6D<h` alone does not imply that gap. Robustness being chosen first
-permits taking these errors from later packing tolerances. For a core of
-order at least `cn`, use error `c ε_core` for a core-relative tolerance.
+## Next mathematical obligations
 
-## Next obligations
+The optional pair fiber and exceptional vertices assigned into old cores
+are different cases. For the latter, construct a proper assignment of
+all internal incident copies to remaining free colors while retaining
+selected reserve prescriptions. Keep every parallel copy distinct.
+Unweighted footprint/load estimates alone do not establish all required
+color availability: multiplying whole-class support by the largest
+parallel multiplicity can exceed the available palette. Derive adequate
+weighted compatibility or prove a valid recoloring construction.
 
-1. Insert internal exceptional incidences into the palette classes. A
-   selected protected color in the odd case contains just its reserved
-   crossing, so the remaining copies of that actual compressed reserve
-   boundary are a possible prescribed extension. Prove this extension,
-   distinctness, and exact remaining-copy accounting.
-2. In the all-even case, preserve sufficiently many empty joining colors
-   for the crossing-free reserve boundaries. The current all-even palette
-   theorem does not assert that extra protected-empty-color property.
-3. For a two-vertex exceptional pair fiber, construct the exact equal-free-
-   palette bijection and color its actual parallel copies. Whole-class
-   parity supplies simultaneous covered/uncovered behavior of the pair,
-   but it does not itself supply this coloring.
-4. For exceptions assigned to old cores, assign every remaining internal
-   incident copy to its required free color while avoiding existing core
-   endpoint conflicts and respecting prescribed reserve classes.
-5. After all assigned exceptions are covered in each color, derive even
-   uncovered order on the old cores and the actual extended-boundary
-   footprint/load bounds. Assigned-fiber parity alone is insufficient.
-6. Apply the checked robust boundary/completion interfaces with all their
-   hypotheses, construct the remaining perfect color classes, and restore
-   the previously removed perfect matchings using disjoint palettes. A
-   conditional implication assuming a residual coloring is not this step.
+Compose coverage of assigned exceptions with assigned-fiber parity to
+obtain even uncovered order on each old core in every remaining color.
+Retain actual whole-class footprint and core-vertex-load bounds after
+these additions. Then apply the proved robust completion interfaces with
+all hypotheses established, construct the remaining perfect color classes,
+and restore the removed perfect matchings using disjoint palettes.
+A conditional statement assuming a residual coloring is insufficient.
 
-The selected half-reserve crossing alignment is now constructed. Do not
-restart it or describe it as wholly unproved. Internal exceptional coverage
-and final factorization remain distinct proof obligations.
+Where both pair coloring and reserve insertion apply, compose their exact
+prescription interfaces explicitly; separate existence statements do not
+by themselves assert a full global factorization.
 
-**Coverage remains 47/69.** Full two-core Corollary 4.6 and the main theorem
-remain incomplete. Full five-exception Corollary 4.5, general four-label
-circuits, remaining terminal and Section 6 obligations, and structural or
-critical-average-degree inputs remain separate. All 69 original assertion
-records and statement hashes are unchanged.
+**Coverage remains 47/69.** Full two-core Corollary 4.6, full five-exception
+Corollary 4.5, general four-label circuit obligations, remaining terminal
+and Section 6 obligations, structural/critical-average-degree inputs, and
+the main theorem remain open. All 69 statement records and hashes are
+unchanged. Only the top-level coverage summary is corrected to describe
+later supporting constructions accurately.
 
-## Verification and publication
+## Verification
 
-Use Lean 4.24.0 and mathlib `f897ebcf72cd16f89ab4577d0c826cd14afaafc7`.
-Do not run `lake update`. Runtime:
-`/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin`.
-Palette worktree: `/workspace/scratch/96ddfd820f7d/overfull-next`.
-Scratch paths may disappear; published GitHub sources and genuine records
-are the durable authority.
+Use Lean 4.24.0 and mathlib
+`f897ebcf72cd16f89ab4577d0c826cd14afaafc7`; do not run `lake update`.
+Runtime: `/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin`.
+Worktree: `/workspace/scratch/0f64d20031b0/overfull-next`.
 
 ```sh
 python3 scripts/setup_vizing.py
-python3 scripts/update_residual_palette_manifest.py
-python3 verification/runs/20261123T210325Z/run-verifier.py full-01
+python3 scripts/update_exceptional_palette_manifest.py
+python3 verification/runs/20261123T221916Z/run-verifier.py full-NN
+python3 verification/runs/20261123T221916Z/record-final.py
 ```
 
-Use a new attempt directory for every rerun. `Audit.lean` stays byte-identical
-and permits only `propext`, `Classical.choice`, and `Quot.sound`. The verifier
-has four additive residual-palette source-map extensions and retains every
-prior gate. Compare every prior declaration, module, axiom set, completed
-mapping, assertion record, proof source and historical artifact against the
-actual preceding verified checkpoint before publishing.
+Use a fresh attempt name. `Audit.lean` remains unchanged and allows only
+`propext`, `Classical.choice`, and `Quot.sound`. The verifier adds exactly
+four exceptional-palette source-map extensions and preserves all previous
+gates. Append new root imports after the complete old import prefix, before
+the first non-import command, to preserve generated-declaration ownership.
 
-Every actual intermediate failure remains archived. Direct Lean checks use
-`-DwarningAsError=true`; `--wfail` is a Lake build flag. Unsupported-option
-and scratch module-path diagnostics are retained. The initial isolated
-setup's missing local runner path is recorded and was corrected by copying
-the existing runner from its observed absolute location.
+The supplementary checker compares preceding declaration names, modules,
+axiom sets, completed-result mappings, nonroot sources, source/provenance
+manifests, old proof maps and historical evidence with the actual preceding
+verified local commit. It also checks raw audit records, source maps,
+frozen hashes, command statuses, actual logs and development archives.
+Do not replay historical output as a current check. Keep every genuine
+failed or unfinished attempt with its actual status and diagnostics.
 
-Standing user authorization covers autonomous continuation/recovery and
-publication of all project sources, documentation, mappings and genuine
-logs. After the strict build, full unchanged audit, mappings and preservation
-pass, publish the exact checked sources and evidence to both verified
-branches, preserving concurrent work and using expected-head updates.
-Read back both heads and the exact commit/tree. No repeat confirmation is
-required. Failed or unfinished work belongs on a clearly identified attempt
-branch with actual diagnostics and must not be promoted as verified.
+Publication is separate from local verification. When an authorized upload
+is accepted, preserve the exact checked sources and complete evidence,
+use expected-head branch updates, and read back both branch heads and the
+uploaded commit/tree. Do not promote an incomplete attempt as verified.

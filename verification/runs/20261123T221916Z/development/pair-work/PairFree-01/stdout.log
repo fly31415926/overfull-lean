@@ -1,0 +1,186 @@
+Overfull/ExceptionalPalette/PairFree.lean:51:35: error: failed to synthesize
+  Fintype V
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+Overfull/ExceptionalPalette/PairFree.lean:54:51: error: failed to synthesize
+  Fintype V
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+Overfull/ExceptionalPalette/PairFree.lean:56:60: error: unsolved goals
+V : Type u_1
+E : Type u_2
+inst✝ : Fintype E
+G : Multigraph V E
+h : ℕ
+C : sorry
+v : V
+j : Fin h
+⊢ j ∈ sorry () ↔ ∀ x ∈ sorry (), v ∉ G.edge x
+Overfull/ExceptionalPalette/PairFree.lean:57:8: error: declaration uses 'sorry'
+Overfull/ExceptionalPalette/PairFree.lean:57:8: error: This simp argument is unused:
+  JoiningPalette.freeColors
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵J̵o̵i̵n̵i̵n̵g̵P̵a̵l̵e̵t̵t̵e̵.̵f̵r̵e̵e̵C̵o̵l̵o̵r̵s̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/ExceptionalPalette/PairFree.lean:60:44: error: failed to synthesize
+  Fintype V
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+Overfull/ExceptionalPalette/PairFree.lean:63:19: error(lean.unknownIdentifier): Unknown identifier `h`
+Overfull/ExceptionalPalette/PairFree.lean:62:46: error: unsolved goals
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝¹ : Fintype E
+inst✝ : DecidableEq K
+G : Multigraph V E
+label : V → K
+C : sorry
+v : V
+hd : ∀ (j : Fin sorry), G.degreeOn sorry v = if v ∈ G.edgeSupport sorry then 1 else 0
+⊢ #{j | v ∈ G.edgeSupport sorry} = G.degreeOn (joiningCopies G label) v
+Overfull/ExceptionalPalette/PairFree.lean:80:9: error: failed to synthesize
+  Fintype V
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+Overfull/ExceptionalPalette/PairFree.lean:81:72: error: unsolved goals
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝¹ : Fintype E
+inst✝ : DecidableEq K
+G : Multigraph V E
+label : V → K
+h : ℕ
+C : sorry
+v : V
+⊢ sorry + G.degreeOn (joiningCopies G label) v = h
+Overfull/ExceptionalPalette/PairFree.lean:104:2: error: unsolved goals
+case neg
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝² : Fintype E
+inst✝¹ : DecidableEq K
+G : Multigraph V E
+label : V → K
+h D L : ℕ
+p : K → ℕ
+inst✝ : Fintype V
+C : JoiningPalette G label h D L p
+i : K
+x y : V
+hxy : x ≠ y
+hfiber : labelShore label {i} = {x, y}
+hp : p i = 0
+j : Fin h
+hcut : #(G.cutOn (C.classes j) {x, y}) % 2 = 0
+heven : Even #({x, y} \ G.edgeSupport (C.classes j))
+hx : x ∈ G.edgeSupport (C.classes j)
+hy : y ∉ G.edgeSupport (C.classes j)
+hh : #({x ∈ {x, y} | ∀ x_1 ∈ C.classes j, x ∉ G.edge x_1}) % 2 = 0
+⊢ x ∈ G.edgeSupport (C.classes j) ↔ y ∈ G.edgeSupport (C.classes j)
+Overfull/ExceptionalPalette/PairFree.lean:106:2: error: unsolved goals
+case pos
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝² : Fintype E
+inst✝¹ : DecidableEq K
+G : Multigraph V E
+label : V → K
+h D L : ℕ
+p : K → ℕ
+inst✝ : Fintype V
+C : JoiningPalette G label h D L p
+i : K
+x y : V
+hxy : x ≠ y
+hfiber : labelShore label {i} = {x, y}
+hp : p i = 0
+j : Fin h
+hcut : #(G.cutOn (C.classes j) {x, y}) % 2 = 0
+heven : Even #({x, y} \ G.edgeSupport (C.classes j))
+hx : x ∉ G.edgeSupport (C.classes j)
+hy : y ∈ G.edgeSupport (C.classes j)
+hh : #({x ∈ {x, y} | ∀ x_1 ∈ C.classes j, x ∉ G.edge x_1}) % 2 = 0
+⊢ x ∈ G.edgeSupport (C.classes j) ↔ y ∈ G.edgeSupport (C.classes j)
+Overfull/ExceptionalPalette/PairFree.lean:105:27: error: This simp argument is unused:
+  hx
+
+Hint: Omit it from the simp argument list.
+  simp [sdiff_eq_filter, hx̵,̵ ̵h̵y, hxy] at hh
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/ExceptionalPalette/PairFree.lean:105:31: error: This simp argument is unused:
+  hy
+
+Hint: Omit it from the simp argument list.
+  simp [sdiff_eq_filter, hx, hy̵,̵ ̵h̵xy] at hh
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/ExceptionalPalette/PairFree.lean:105:35: error: This simp argument is unused:
+  hxy
+
+Hint: Omit it from the simp argument list.
+  simp [sdiff_eq_filter, hx, hy,̵ ̵h̵x̵y̵] at hh
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/ExceptionalPalette/PairFree.lean:107:27: error: This simp argument is unused:
+  hx
+
+Hint: Omit it from the simp argument list.
+  simp [sdiff_eq_filter, hx̵,̵ ̵h̵y, hxy] at hh
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/ExceptionalPalette/PairFree.lean:107:31: error: This simp argument is unused:
+  hy
+
+Hint: Omit it from the simp argument list.
+  simp [sdiff_eq_filter, hx, hy̵,̵ ̵h̵xy] at hh
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/ExceptionalPalette/PairFree.lean:107:35: error: This simp argument is unused:
+  hxy
+
+Hint: Omit it from the simp argument list.
+  simp [sdiff_eq_filter, hx, hy,̵ ̵h̵x̵y̵] at hh
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/ExceptionalPalette/PairFree.lean:114:4: error: Invalid field notation: Function `freeColors` does not have a usable parameter of type `JoiningPalette ...` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Overfull/ExceptionalPalette/PairFree.lean:114:21: error: Invalid field notation: Function `freeColors` does not have a usable parameter of type `JoiningPalette ...` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Overfull/ExceptionalPalette/PairFree.lean:115:2: error: No applicable extensionality theorem found for type
+  ?m.30 C i x y hxy hfiber hp
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+Overfull/ExceptionalPalette/PairFree.lean:165:36: error: Invalid field notation: Function `freeColors` does not have a usable parameter of type `JoiningPalette ...` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Overfull/ExceptionalPalette/PairFree.lean:177:16: error: Invalid field notation: Function `freeColors_card_add_degree` does not have a usable parameter of type `JoiningPalette ...` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Overfull/ExceptionalPalette/PairFree.lean:165:60: error: unsolved goals
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝² : Fintype E
+inst✝¹ : DecidableEq K
+G : Multigraph V E
+label : V → K
+h D L : ℕ
+p : K → ℕ
+inst✝ : Fintype V
+C : JoiningPalette G label h D L p
+i : K
+x y : V
+hfiber : labelShore label {i} = {x, y}
+hdegree : G.degree x = h
+hinter : #(G.incidenceEdges x ∩ joiningCopies G label) = G.degreeOn (joiningCopies G label) x
+hsplit : #(pairFiberCopies G x y) + G.degreeOn (joiningCopies G label) x = h
+⊢ #(pairFiberCopies G x y) = sorry

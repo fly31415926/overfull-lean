@@ -1,0 +1,12 @@
+Overfull/ExceptionalPalette/ReserveCopies.lean:38:43: error: unsolved goals
+E : Type u_2
+inst✝ : Fintype E
+R A : Finset E
+hdisj : Disjoint A R
+⊢ #(survivingCopies R (image Subtype.val (survivingCopies R A))) = #(survivingCopies R A)
+Overfull/ExceptionalPalette/ReserveCopies.lean:82:0: error: automatically included section variable(s) unused in theorem `Overfull.NativeReserve.BoundaryPacking.boundary_disjoint_removed`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

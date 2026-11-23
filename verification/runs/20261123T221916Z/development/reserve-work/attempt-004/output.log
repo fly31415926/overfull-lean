@@ -1,0 +1,22 @@
+Overfull/ExceptionalPalette/ReserveCopies.lean:177:86: error: Type mismatch
+  e.property
+has type
+  ↑e ∈ joiningCopies (residualGraph G N T) (AssignedParts.assignedLabel G M U₀ U₁ Z)
+but is expected to have type
+  ↑↑e ∈ joiningCopies G (AssignedParts.assignedLabel G M U₀ U₁ Z)
+Overfull/ExceptionalPalette/ReserveCopies.lean:193:67: error: Application type mismatch: The argument
+  hxJ
+has type
+  x ∈ joiningCopies (residualGraph G N T) (AssignedParts.assignedLabel G M U₀ U₁ Z)
+but is expected to have type
+  ↑x ∈ joiningCopies G (AssignedParts.assignedLabel G M U₀ U₁ Z)
+in the application
+  ⟨(mem_residualBoundary Q N T j x).mp hxB, hxJ⟩
+Overfull/ExceptionalPalette/ReserveCopies.lean:218:6: error: Application type mismatch: The argument
+  (mem_inter.mp he).right
+has type
+  e ∈ joiningCopies (residualGraph G N T) (AssignedParts.assignedLabel G M U₀ U₁ Z)
+but is expected to have type
+  ↑e ∈ joiningCopies G (AssignedParts.assignedLabel G M U₀ U₁ Z)
+in the application
+  ⟨(mem_residualBoundary Q N T j e).mp (mem_inter.mp he).left, (mem_inter.mp he).right⟩

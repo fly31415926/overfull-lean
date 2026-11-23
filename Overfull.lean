@@ -233,6 +233,10 @@ import Overfull.ResidualPalette.PaletteBudget
 import Overfull.ResidualPalette.JoiningGrouping
 import Overfull.ResidualPalette.NativeProtectedPalette
 import Overfull.ResidualPalette.ProtectedBudget
+import Overfull.ExceptionalPalette.EvenBudget
+import Overfull.ExceptionalPalette.EvenNative
+import Overfull.ExceptionalPalette.PairAssigned
+import Overfull.ExceptionalPalette.ReserveNative
 
 /-!
 # Partial formalization of the overfull manuscript

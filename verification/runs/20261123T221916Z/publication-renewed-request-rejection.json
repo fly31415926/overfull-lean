@@ -1,0 +1,11 @@
+{
+  "kind": "observed_automatic_approval_rejection",
+  "observed_at_utc": "2026-11-23T22:27:13.923807+00:00",
+  "operation": "Retry identical seven-blob GitHub tree batch after the renewed publication request",
+  "repository": "fly31415926/overfull-lean",
+  "visibility": "public",
+  "uploaded_batch": false,
+  "branches_updated": false,
+  "reason": "The action again creates a public GitHub tree containing detailed verification manifests, declaration names, source paths and hashes, generated/private Lean declaration information, and historical records; although the user reiterated the publication instruction, automatic approval review required trusted end-user approval specifically identifying that metadata payload and the public repository as its destination.",
+  "resolution": "No further upload attempted; complete unaffected local verification, then request specific authorization for the exact ready candidate."
+}

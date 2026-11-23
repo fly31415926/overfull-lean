@@ -1,0 +1,11 @@
+/workspace/scratch/0f64d20031b0/overfull-next/Overfull/ExceptionalPalette/EvenBudget.lean:46:48: error: Application type mismatch: The argument
+  hsupport
+has type
+  6 * ↑(Fintype.card V * D / 2 / (h - 6 * D - #Q) + 1) ≤ ε * ↑(Fintype.card V)
+but is expected to have type
+  ↑(6 * (Fintype.card V * D / 2 / (h - 6 * D - #Q) + 1)) ≤ ε * ↑(Fintype.card V)
+in the application
+  LE.le.trans
+    (have this := ?m.291;
+    this)
+    hsupport

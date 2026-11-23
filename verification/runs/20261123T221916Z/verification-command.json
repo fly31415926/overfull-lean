@@ -1,0 +1,28 @@
+{
+  "command": [
+    "python3",
+    "scripts/verify.py"
+  ],
+  "cwd": "/workspace/scratch/0f64d20031b0/overfull-next",
+  "started_at_utc": "2026-11-23T22:25:07.496597+00:00",
+  "status": "passed",
+  "exit_code": 0,
+  "attempt": "full-01",
+  "candidate_input_hash_count": 649,
+  "source_sha256": {
+    "Overfull/ExceptionalPalette/EvenBudget.lean": "5e00b808ae96da6ae07ad5c7fb24c1ee25c0ebe05de4f267e97535ae18acbdeb",
+    "Overfull/ExceptionalPalette/EvenColors.lean": "590fcad5d58487986f856c5cebbcf397b15aca4326df2fe016e490c3a47141e2",
+    "Overfull/ExceptionalPalette/EvenNative.lean": "f0410f63afefad2912fb15de5118335cf99221051285f47abb277d025d3f4db3",
+    "Overfull/ExceptionalPalette/PairAssigned.lean": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920",
+    "Overfull/ExceptionalPalette/PairColoring.lean": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869",
+    "Overfull/ExceptionalPalette/PairExtension.lean": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c",
+    "Overfull/ExceptionalPalette/PairFree.lean": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab",
+    "Overfull/ExceptionalPalette/ReserveCopies.lean": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14",
+    "Overfull/ExceptionalPalette/ReserveInsertion.lean": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a",
+    "Overfull/ExceptionalPalette/ReserveNative.lean": "0c824cd0f9b7cb6872ca58463a268d453d6f6104a1564c66f8639a313c9cefd4"
+  },
+  "finished_at_utc": "2026-11-23T22:41:58.108684+00:00",
+  "completed_at_utc": "2026-11-23T22:41:58.108684+00:00",
+  "elapsed_seconds": 1010.612087,
+  "all_frozen_inputs_unchanged": true
+}

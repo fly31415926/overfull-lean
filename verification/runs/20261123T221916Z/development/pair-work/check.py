@@ -1,0 +1,22 @@
+import datetime,json,os,pathlib,shutil,subprocess,sys,time
+root=pathlib.Path('/workspace/scratch/0f64d20031b0/overfull-next')
+work=pathlib.Path('/workspace/scratch/0f64d20031b0/pair-work')
+name,attempt=sys.argv[1:]
+f=root/'Overfull/ExceptionalPalette'/f'{name}.lean'
+a=work/f'{name}-{attempt}'
+a.mkdir(exist_ok=False)
+shutil.copy2(f,a/f.name)
+env=dict(os.environ)
+env['PATH']='/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin:'+env['PATH']
+cmd=['lake','env','lean','-DwarningAsError=true','-o',str(root/'.lake/build/lib/lean/Overfull/ExceptionalPalette'/f'{name}.olean'),str(f.relative_to(root))]
+(root/'.lake/build/lib/lean/Overfull/ExceptionalPalette').mkdir(parents=True,exist_ok=True)
+start=datetime.datetime.now(datetime.timezone.utc).isoformat()
+t=time.time()
+r=subprocess.run(cmd,cwd=root,env=env,capture_output=True,text=True)
+(a/'stdout.log').write_text(r.stdout)
+(a/'stderr.log').write_text(r.stderr)
+(a/'command.json').write_text(json.dumps(dict(command=cmd,cwd=str(root),started_at=start,finished_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),exit_code=r.returncode,elapsed_seconds=time.time()-t),indent=2)+'\n')
+print(json.dumps(dict(attempt=str(a),exit_code=r.returncode,elapsed_seconds=time.time()-t)))
+print(r.stdout)
+print(r.stderr)
+sys.exit(r.returncode)

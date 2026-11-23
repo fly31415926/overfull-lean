@@ -1,0 +1,22 @@
+Overfull/ExceptionalPalette/PairFree.lean:84:13: error: Function expected at
+  filter_card_add_filter_neg_card_eq_card fun j => v ∈ G.edgeSupport (C.classes j)
+but this term has type
+  #({j ∈ ?m.48 | v ∈ G.edgeSupport (C.classes j)}) + #({a ∈ ?m.48 | ¬(fun j => v ∈ G.edgeSupport (C.classes j)) a}) =
+    #?m.48
+
+Note: Expected a function because this term is being applied to the argument
+  (univ : Finset (Fin h))
+Overfull/ExceptionalPalette/PairFree.lean:82:72: error: unsolved goals
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝² : Fintype E
+inst✝¹ : DecidableEq K
+inst✝ : Fintype V
+G : Multigraph V E
+label : V → K
+h D L : ℕ
+p : K → ℕ
+C : JoiningPalette G label h D L p
+v : V
+⊢ #(C.freeColors v) + #{j | v ∈ G.edgeSupport (C.classes j)} = h

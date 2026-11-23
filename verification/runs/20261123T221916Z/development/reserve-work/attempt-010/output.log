@@ -1,0 +1,12 @@
+Overfull/ExceptionalPalette/ReserveNative.lean:80:17: error: Type mismatch: After simplification, term
+  htrace e
+ has type
+  @Inter.inter (Finset { e // e ∉ removedCopies N T })
+      (@instInter { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (Q.residualBoundary N T (q e))
+      (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z)) =
+    C.classes (f e)
+but is expected to have type
+  @Inter.inter (Finset { e // e ∉ removedCopies N T })
+      (@instInter { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (Q.residualBoundary N T (q e))
+      (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z)) =
+    C.classes (f e)
