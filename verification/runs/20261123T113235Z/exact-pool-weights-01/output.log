@@ -1,0 +1,100 @@
+Overfull/AssignedParts/ExactPoolWeights.lean:121:37: error: Application type mismatch: The argument
+  ha
+has type
+  i = 0
+but is expected to have type
+  signatureAssignsCore (coarseSignature G M U₀ Z) z i
+in the application
+  hcode.mp ha
+Overfull/AssignedParts/ExactPoolWeights.lean:122:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ a ≤ 2
+where
+ a := ↑(#Z)
+Overfull/AssignedParts/ExactPoolWeights.lean:125:12: error: Function expected at
+  ha
+but this term has type
+  i = 0
+
+Note: Expected a function because this term is being applied to the argument
+  (hcode.mpr (huse.mp hu))
+Overfull/AssignedParts/ExactPoolWeights.lean:123:2: error: unsolved goals
+case neg
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+inst✝ : Fintype E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+hZ : #Z ≤ 2
+z : { x // x ∈ Z }
+i : Fin 2
+hUZ : Disjoint (if i = 0 then U₀ else U₁) Z
+huse :
+  (M ∩ exceptionCorePool G (↑z) (if i = 0 then U₀ else U₁)).Nonempty ↔ ↑z ∈ corePart G M Z (if i = 0 then U₀ else U₁)
+hcode : signatureAssignsCore (coarseSignature G M U₀ Z) z i ↔ ↑z ∈ corePart G M Z (if i = 0 then U₀ else U₁)
+hle : #(M ∩ exceptionCorePool G (↑z) (if i = 0 then U₀ else U₁)) ≤ 1
+ha : i = 0
+h✝ : ¬signatureAssignsCore (coarseSignature G M U₀ Z) z i
+hn : ¬(M ∩ exceptionCorePool G (↑z) (if i = 0 then U₀ else U₁)).Nonempty
+⊢ M ∩ exceptionCorePool G (↑z) U₀ = ∅
+Overfull/AssignedParts/ExactPoolWeights.lean:111:78: error: unsolved goals
+case pos
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+inst✝ : Fintype E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+hZ : #Z ≤ 2
+z : { x // x ∈ Z }
+i : Fin 2
+hUZ : Disjoint (if i = 0 then U₀ else U₁) Z
+huse :
+  (M ∩ exceptionCorePool G (↑z) (if i = 0 then U₀ else U₁)).Nonempty ↔ ↑z ∈ corePart G M Z (if i = 0 then U₀ else U₁)
+hcode : signatureAssignsCore (coarseSignature G M U₀ Z) z i ↔ ↑z ∈ corePart G M Z (if i = 0 then U₀ else U₁)
+hle : #(M ∩ exceptionCorePool G (↑z) (if i = 0 then U₀ else U₁)) ≤ 1
+ha : ¬i = 0
+h✝ : signatureAssignsCore (coarseSignature G M U₀ Z) z i
+⊢ #(M ∩ exceptionCorePool G (↑z) U₁) = 1
+
+case neg
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+inst✝ : Fintype E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+hZ : #Z ≤ 2
+z : { x // x ∈ Z }
+i : Fin 2
+hUZ : Disjoint (if i = 0 then U₀ else U₁) Z
+huse :
+  (M ∩ exceptionCorePool G (↑z) (if i = 0 then U₀ else U₁)).Nonempty ↔ ↑z ∈ corePart G M Z (if i = 0 then U₀ else U₁)
+hcode : signatureAssignsCore (coarseSignature G M U₀ Z) z i ↔ ↑z ∈ corePart G M Z (if i = 0 then U₀ else U₁)
+hle : #(M ∩ exceptionCorePool G (↑z) (if i = 0 then U₀ else U₁)) ≤ 1
+ha : ¬i = 0
+h✝ : ¬signatureAssignsCore (coarseSignature G M U₀ Z) z i
+⊢ #(M ∩ exceptionCorePool G (↑z) U₁) = 0
+Overfull/AssignedParts/ExactPoolWeights.lean:126:10: error: This simp argument is unused:
+  not_nonempty_iff_eq_empty.mp hn
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵t̵_̵n̵o̵n̵e̵m̵p̵t̵y̵_̵i̵f̵f̵_̵e̵q̵_̵e̵m̵p̵t̵y̵.̵m̵p̵ ̵h̵n̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

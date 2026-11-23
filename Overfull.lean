@@ -226,8 +226,7 @@ import Overfull.CompatibleCircuits.ThreeVertexDeletion
 import Overfull.CompatibleCircuits.AtMostThree
 import Overfull.CompatibleCircuits.TwoOddDecomposition
 import Overfull.AssignedParts.JoiningConstruction
-import Overfull.AssignedParts.HeavySignature
-import Overfull.AssignedParts.CompressionCuts
+import Overfull.AssignedParts.NativePatternConstruction
 
 /-!
 # Partial formalization of the overfull manuscript

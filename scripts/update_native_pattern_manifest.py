@@ -13,8 +13,8 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULES = (
-    "NativeWeights", "Signatures", "SignaturePools", "HeavySignature",
-    "BoundaryCompression", "CompressionCuts",
+    "NativeWeights", "Signatures", "SignaturePools", "HeavySignature", "ExactPoolWeights",
+    "BoundaryCompression", "CompressionCuts", "NativePatternConstruction",
 )
 
 

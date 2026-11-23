@@ -53,6 +53,22 @@ theorem signatureWeight_none_le_internalPool (hk : 0 < k) (U₀ Z : Finset V) :
   intro s hs
   exact signature_none_uses_internalPool G (D.matching s) U₀ Z hs
 
+/-- With at most two exceptions the paired signature has weight exactly
+the total multiplicity of the exceptional internal pool. -/
+theorem signatureWeight_none_eq_internalPool (hk : 0 < k) (U₀ Z : Finset V)
+    (hZ : Z.card ≤ 2) :
+    signatureWeight D U₀ Z none = (G.internalOn univ Z).card := by
+  calc
+    _ = ∑ s, scaledWeight D s *
+        (if coarseSignature G (D.matching s) U₀ Z = none then (1 : ℝ) else 0) := by
+      simp [signatureWeight, aggregateWeight, sum_filter, mul_ite]
+    _ = ∑ s, scaledWeight D s * ((D.matching s ∩ G.internalOn univ Z).card : ℝ) := by
+      apply sum_congr rfl
+      intro s _
+      rw [internalPool_usage_eq_signature G ((D.perfect s).isMatching G) U₀ Z hZ]
+      split_ifs <;> simp
+    _ = _ := scaled_matching_pool_eq D hk (G.internalOn univ Z)
+
 theorem signatureWeight_some_le_exceptionCorePool (hk : 0 < k)
     (U₀ U₁ Z : Finset V) (h0Z : Disjoint U₀ Z) (h1Z : Disjoint U₁ Z)
     (hcover : ∀ v, v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z)
@@ -110,7 +126,6 @@ theorem exists_heavy_signature_with_pools (hk : 0 < k)
     exact assignedLabel_eq_of_signature_eq G (D.perfect t) (D.perfect s)
       U₀ U₁ Z h01 h0Z h1Z hcover hZ ht
 
-omit D in
 /-- Positive regular degree and absence of overfull sets construct the
 distribution and its actual matching representative. There is no assumed
 heavy pattern or copy-supply hypothesis. -/

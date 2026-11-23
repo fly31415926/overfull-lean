@@ -1,0 +1,18 @@
+Overfull/AssignedParts/CompressionCuts.lean:166:46: error: unsolved goals
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+M : Finset E
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+hdisj : Disjoint (exceptionalCopies G M Z) (G.cutOn M U₀ ∩ G.cutOn M U₁)
+hdisjcut : Disjoint (G.cutOn (exceptionalCopies G M Z) U₀) (G.cutOn M U₀ ∩ G.cutOn M U₁)
+hdisjpick : Disjoint (G.cutOn (exceptionalCopies G M Z) U₀) (paritySelection (G.cutOn M U₀ ∩ G.cutOn M U₁))
+⊢ #(G.cutOn (exceptionalCopies G M Z) U₀) + #(G.cutOn M U₀ ∩ G.cutOn M U₁) =
+    #(G.cutOn (exceptionalCopies G M Z) U₀) +
+      #((G.cutOn (exceptionalCopies G M Z) U₀ ∪ G.cutOn M U₀ ∩ G.cutOn M U₁) ∩ G.cutOn M U₁)
+Overfull/AssignedParts/CompressionCuts.lean:179:68: error: Invalid field notation: Identifier or numeral expected
+Overfull/AssignedParts/CompressionCuts.lean:181:6: error: No goals to be solved

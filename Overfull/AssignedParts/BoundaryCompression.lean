@@ -32,8 +32,6 @@ theorem IsMatching.degreeOn_sum_eq_covered {F : Finset E} (hF : G.IsMatching F)
   simp_rw [hdegree]
   rw [sum_boole]
   congr 1
-  ext v
-  simp
 
 /-- Even uncovered order is equivalent to the original-copy cut parity. -/
 theorem IsMatching.uncovered_even_iff_cut_parity {F : Finset E} (hF : G.IsMatching F)
@@ -91,7 +89,7 @@ theorem exceptionalCopies_card_le {M : Finset E} (hM : G.IsMatching M)
     · by_cases hfirst : G.firstEnd e ∈ Z <;> simp [pick, hfirst, hsecond]
   · intro e he f hf hef
     exact hM e (exceptionalCopies_subset G M Z he)
-      f (exceptionalCopies_subset G M Z hf) (pick e) (hinc e) (hef ▸ hinc f)
+      f (exceptionalCopies_subset G M Z hf) (pick e) (hinc e) (hef.symm ▸ hinc f)
 
 /-- Select no copy from an even set and one original copy from an odd set. -/
 def paritySelection (T : Finset E) : Finset E :=
@@ -140,6 +138,27 @@ theorem compressedBoundary_isMatching {M : Finset E} (hM : G.IsMatching M)
 
 theorem compressedBoundary_retains_exceptional (M : Finset E) (U₀ U₁ Z : Finset V) :
     exceptionalCopies G M Z ⊆ compressedBoundary G M U₀ U₁ Z := subset_union_left
+
+/-- Every exceptional vertex remains covered by its original matching copy. -/
+theorem compressedBoundary_covers_exceptional {M : Finset E}
+    (hM : G.IsPerfectMatching M) (U₀ U₁ Z : Finset V) :
+    Z ⊆ G.edgeSupport (compressedBoundary G M U₀ U₁ Z) := by
+  intro z hz
+  obtain ⟨e, he, hze⟩ := (G.isPerfectMatching_iff.mp hM).2 z
+  exact (G.mem_edgeSupport _ z).mpr ⟨e,
+    compressedBoundary_retains_exceptional G M U₀ U₁ Z
+      (mem_exceptionalCopies_of_incident G he hz hze), hze⟩
+
+/-- The retained degree at every exceptional vertex is exactly one. -/
+theorem compressedBoundary_exceptional_degree {M : Finset E}
+    (hM : G.IsPerfectMatching M) (U₀ U₁ Z : Finset V) {z : V} (hz : z ∈ Z) :
+    G.degreeOn (compressedBoundary G M U₀ U₁ Z) z = 1 := by
+  have hlo := (G.degreeOn_pos_iff _ z).mpr
+    (compressedBoundary_covers_exceptional G hM U₀ U₁ Z hz)
+  have hhi := (G.isMatching_iff_incident_card_le_one _).mp
+    (compressedBoundary_isMatching G (hM.isMatching G) U₀ U₁ Z) z
+  change G.degreeOn (compressedBoundary G M U₀ U₁ Z) z ≤ 1 at hhi
+  omega
 
 theorem compressedBoundary_card_le {M : Finset E} (hM : G.IsMatching M)
     (U₀ U₁ Z : Finset V) :

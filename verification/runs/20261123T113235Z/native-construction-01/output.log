@@ -1,0 +1,23 @@
+Overfull/AssignedParts/NativePatternConstruction.lean:27:34: error: unsolved goals
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+M : Finset E
+U₀ U₁ Z : Finset V
+⊢ (if (G.internalOn M Z).Nonempty then none else some (assignmentChoice G (compressedBoundary G M U₀ U₁ Z) U₀ Z)) =
+    if (G.internalOn M Z).Nonempty then none else some (assignmentChoice G M U₀ Z)
+Overfull/AssignedParts/NativePatternConstruction.lean:28:30: error: This simp argument is unused:
+  assignmentChoice
+
+Hint: Omit it from the simp argument list.
+  simp only [coarseSignature, a̵s̵s̵i̵g̵n̵m̵e̵n̵t̵C̵h̵o̵i̵c̵e̵,̵ ̵compressedBoundary_internalOn, compressedBoundary_corePart]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/AssignedParts/NativePatternConstruction.lean:29:4: error: This simp argument is unused:
+  compressedBoundary_corePart
+
+Hint: Omit it from the simp argument list.
+  simp only [coarseSignature, assignmentChoice, compressedBoundary_internalOn,̵
+  ̵ ̵ ̵ ̵ ̵c̵o̵m̵p̵r̵e̵s̵s̵e̵d̵B̵o̵u̵n̵d̵a̵r̵y̵_̵c̵o̵r̵e̵P̵a̵r̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -25,6 +25,30 @@ def exceptionCorePool (z : V) (U : Finset V) : Finset E :=
 def coreCrossingPool (U₀ U₁ : Finset V) : Finset E :=
   G.cutOn univ U₀ ∩ G.cutOn univ U₁
 
+/-- Intersecting the full internal pool retains exactly the selected copies. -/
+theorem inter_internalPool_eq (M : Finset E) (Z : Finset V) :
+    M ∩ G.internalOn univ Z = G.internalOn M Z := by
+  ext e
+  simp [Multigraph.internalOn]
+
+/-- With at most two exceptions, the paired signature records exact
+selected internal-pool usage, either one copy or zero copies. -/
+theorem internalPool_usage_eq_signature {M : Finset E} (hM : G.IsMatching M)
+    (U₀ Z : Finset V) (hZ : Z.card ≤ 2) :
+    (M ∩ G.internalOn univ Z).card =
+      if coarseSignature G M U₀ Z = none then 1 else 0 := by
+  rw [inter_internalPool_eq]
+  have hle := internalOn_card_le_one G hM Z hZ
+  by_cases hc : coarseSignature G M U₀ Z = none
+  · rw [if_pos hc]
+    have hp := ((coarseSignature_eq_none_iff G M U₀ Z).mp hc).card_pos
+    omega
+  · rw [if_neg hc]
+    have hn : ¬ (G.internalOn M Z).Nonempty := by
+      intro hi
+      exact hc ((coarseSignature_eq_none_iff G M U₀ Z).mpr hi)
+    simp [not_nonempty_iff_eq_empty.mp hn]
+
 /-- Every sample with the internal-pair signature uses one actual copy in
 the full exceptional internal pool. -/
 theorem signature_none_uses_internalPool (M : Finset E) (U₀ Z : Finset V)
@@ -41,7 +65,7 @@ theorem uses_exceptionCorePool_of_witness (M : Finset E) (z : V) (U : Finset V)
   obtain ⟨e, he, hz, ho⟩ := hw
   exact ⟨e, mem_inter.mpr ⟨he, mem_filter.mpr ⟨mem_univ _, hz, ho⟩⟩⟩
 
-/-- Every unpaired exception uses a copy to exactly the core recorded in
+/-- Every unpaired exception uses a copy to the core recorded in
 its signature, for the original matching whose code is supplied. -/
 theorem signature_some_uses_exceptionCorePool {M : Finset E}
     (hM : G.IsPerfectMatching M) (U₀ U₁ Z : Finset V)

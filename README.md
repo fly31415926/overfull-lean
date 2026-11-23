@@ -6,7 +6,34 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest continuation: actual assigned parts and exact matching cuts
+## Latest continuation: native multigraph assignment patterns
+
+The native two-core construction now selects an actual perfect-matching
+representative from a signature of scaled weight at least `k/5`. With at most
+two exceptional vertices there are at most five signatures. Every original
+copy remains distinct, including parallel copies in an exceptional pair.
+The construction derives linear original-copy supplies for the pair, each
+assigned exception, and the old-core crossing pool when its parity is odd.
+Exact marginal identities also recover each exceptional-to-core pool size
+from the total weight of the signatures assigning that exception there.
+
+A compression of this same representative retains every exceptional-incident
+matching copy and at most one old-core crossing copy. It contains at most
+`|Z|+1` edges, preserves the exact internal exceptional pair and all assigned
+vertex parts, and leaves even uncovered order in both original cores. The
+retained crossing count is proved equal to the original crossing parity.
+
+These eight modules add supporting proofs toward the two-core branch of
+Corollary 4.6. Actual disjoint reserve selection, residual non-overfull safety,
+palette grouping, robust completion and the final factorization remain open.
+The numbered count remains **47/69**, with **22** unfinished assertions.
+
+See the [proof map](docs/native-pattern-verification.md),
+[source manifest](docs/native-pattern-source.json),
+[semantic review](docs/native-pattern-semantic-review.md), and
+[current run records](verification/runs/20261123T113235Z/).
+
+## Previous continuation: actual assigned parts and exact matching cuts
 
 The assigned parts are now constructed from a specified actual perfect
 matching and the two-core/exceptional vertex partition. The explicit

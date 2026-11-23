@@ -164,8 +164,11 @@ theorem compressedBoundary_cut_parity (M : Finset E)
   have horiginal : (G.cutOn M U₀).card =
       (G.cutOn (exceptionalCopies G M Z) U₀).card +
         (G.cutOn M U₀ ∩ G.cutOn M U₁).card := by
-    rw [core_cut_split G M U₀ U₁ Z h01 h0Z h1Z hcover,
-      card_union_of_disjoint hdisjcut]
+    calc
+      _ = (G.cutOn (exceptionalCopies G M Z) U₀ ∪
+          (G.cutOn M U₀ ∩ G.cutOn M U₁)).card :=
+        congrArg card (core_cut_split G M U₀ U₁ Z h01 h0Z h1Z hcover)
+      _ = _ := card_union_of_disjoint hdisjcut
   rw [compressedBoundary_cut_split, card_union_of_disjoint hdisjpick,
     paritySelection_card, horiginal]
   omega
@@ -176,8 +179,8 @@ theorem compressedBoundary_uncovered_even_first {M : Finset E}
     (h01 : Disjoint U₀ U₁) (h0Z : Disjoint U₀ Z) (h1Z : Disjoint U₁ Z)
     (hcover : ∀ v, v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z) :
     Even (U₀ \ G.edgeSupport (compressedBoundary G M U₀ U₁ Z)).card := by
-  apply ((compressedBoundary_isMatching G (hM.isMatching G) U₀ U₁ Z).
-    uncovered_even_iff_cut_parity G U₀).mpr
+  have hmatching := compressedBoundary_isMatching G (hM.isMatching G) U₀ U₁ Z
+  apply (hmatching.uncovered_even_iff_cut_parity G U₀).mpr
   rw [compressedBoundary_cut_parity G M U₀ U₁ Z h01 h0Z h1Z hcover]
   exact perfectMatching_shore_card_parity G hM U₀
 

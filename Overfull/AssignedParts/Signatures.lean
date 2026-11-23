@@ -50,7 +50,7 @@ theorem coarseSignature_eq_some_iff (M : Finset E) (U₀ Z : Finset V)
   · have hn : G.internalOn M Z ≠ ∅ := h.ne_empty
     simp [coarseSignature, h, hn]
   · have he : G.internalOn M Z = ∅ := not_nonempty_iff_eq_empty.mp h
-    simp [coarseSignature, h, he]
+    simp [coarseSignature, he]
 
 /-- With at most two exceptions, one selected internal copy uses all of them. -/
 theorem pairPart_eq_exceptions_of_internal {M : Finset E} (hM : G.IsMatching M)
@@ -147,14 +147,14 @@ theorem secondCorePart_eq_of_other_parts_eq {M N : Finset E}
   constructor
   · intro hv
     rcases coreParts_cover G hN U₀ U₁ Z hcover v with h0 | h1 | hp
-    · exact (disjoint_left.mp hM01 (hfirst ▸ h0) hv).elim
+    · exact (disjoint_left.mp hM01 (hfirst.symm ▸ h0) hv).elim
     · exact h1
-    · exact (disjoint_left.mp hM1p hv (hpair ▸ hp)).elim
+    · exact (disjoint_left.mp hM1p hv (hpair.symm ▸ hp)).elim
   · intro hv
     rcases coreParts_cover G hM U₀ U₁ Z hcover v with h0 | h1 | hp
-    · exact (disjoint_left.mp hN01 (hfirst.symm ▸ h0) hv).elim
+    · exact (disjoint_left.mp hN01 (hfirst ▸ h0) hv).elim
     · exact h1
-    · exact (disjoint_left.mp hN1p hv (hpair.symm ▸ hp)).elim
+    · exact (disjoint_left.mp hN1p hv (hpair ▸ hp)).elim
 
 /-- Every actual assigned part is constant on a native coarse signature. -/
 theorem assignedParts_eq_of_signature_eq {M N : Finset E}
@@ -199,12 +199,10 @@ theorem coreCrossing_parity_eq_of_signature_eq {M N : Finset E}
   rw [firstCorePart_eq_of_signature_eq G
     (hM.isMatching G) (hN.isMatching G) U₀ Z h0Z hZ hcode]
 
-omit G in
 theorem card_assignmentSignature (Z : Finset V) :
     Fintype.card (AssignmentSignature Z) = 2 ^ Z.card + 1 := by
-  simp [AssignmentSignature, Fintype.card_fun]
+  simp [AssignmentSignature]
 
-omit G in
 /-- This upper bound includes unrealizable signatures, which cause no harm
 in the weighted pigeonhole argument. -/
 theorem card_assignmentSignature_le_five (Z : Finset V) (hZ : Z.card ≤ 2) :
