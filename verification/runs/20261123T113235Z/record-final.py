@@ -212,6 +212,11 @@ def main() -> None:
     require(started <= datetime.fromisoformat(command["started_at_utc"]) <=
             datetime.fromisoformat(command["completed_at_utc"]),
             "Fresh verification timestamps do not belong to this run")
+    next_target = load(RUN / "next-native-reserve-target-ready.json")
+    require(next_target.get("status") == "finalized_proposal_not_proved"
+            and next_target.get("path") == rel(RUN / "next-native-reserve-target.md")
+            and next_target.get("sha256") == sha(RUN / "next-native-reserve-target.md"),
+            "Next-target research note is not finalized at its recorded hash")
 
     previous = json.loads(old_bytes("verification/results.json"))
     current = load(ROOT / "verification/results.json")
@@ -370,6 +375,7 @@ def main() -> None:
         "imported_project_module_count": len(current["imported_project_modules"]),
         "allowed_logical_axioms": current["allowed_logical_axioms"],
         "native_pattern": native, "preserved_historical_evidence_paths": historical_paths,
+        "next_native_reserve_target": next_target,
         "retained_command_count": len(checks), "successful_command_count": len(successes),
         "failed_command_count": len(failures), "incomplete_command_count": len(incomplete),
         "command_evidence": checks, "copied_fresh_outputs": copied,
@@ -400,9 +406,14 @@ exceptions, at most five assignment signatures suffice; a positive-weight actual
 representative has signature weight at least `k/5`. Equal signatures retain the
 actual assigned parts and old-core crossing parity. The internal-pair signature
 has weight exactly the original internal-copy multiplicity. The corresponding
-exceptional-to-core and odd cross-core pools satisfy the proved capacity bounds.
-Boundary compression retains all selected exceptional copies and the required
-crossing parity, with the original representative retained throughout.
+exceptional-to-core pool cardinality is exactly the aggregate weight of all
+signatures assigning that exception to that core. Individual heavy signatures
+therefore give the proved pool lower bounds; odd crossing parity also forces
+the cross-core pool lower bound.
+Boundary compression retains all selected exceptional copies, uses at most
+`|Z| + 1` original copies, and leaves an even uncovered order in each core.
+Its zero-or-one retained crossing count is constant on each signature, with
+the original representative and assigned parts retained throughout.
 
 | New module | Public theorem proofs |
 | --- | ---: |
@@ -467,6 +478,9 @@ reserves, enough distinct neighbors, or a residual graph with no overfull set.
 Reserve selection, residual safety, palette grouping, robust completion and
 the full factorization in Corollary 4.6 remain separate obligations. The exact
 same representative must be used when connecting these new results to them.
+The finalized [`next-native-reserve-target.md`](next-native-reserve-target.md)
+specifies proposed next-stage work; it is research planning and contributes no
+additional checked theorem or declaration to the counts above.
 
 This report is generated before publication to the verified branches and does
 not claim that publication has succeeded. The containing checkpoint must be

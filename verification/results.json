@@ -1541,7 +1541,90 @@
     "assigned_closure_40": "Overfull.Multigraph.IsPerfectMatching.even_card",
     "assigned_closure_41": "Overfull.Multigraph.edgeSupport_internalOn_subset",
     "assigned_closure_42": "Overfull.Multigraph.mem_internalOn_of_incident_otherEnd",
-    "assigned_closure_43": "Overfull.Multigraph.otherEnd_mem_of_mem_internalOn"
+    "assigned_closure_43": "Overfull.Multigraph.otherEnd_mem_of_mem_internalOn",
+    "native_pattern_closure_1": "Overfull.AssignedParts.NativeWeights.aggregateWeight_le_pool",
+    "native_pattern_closure_2": "Overfull.AssignedParts.NativeWeights.aggregateWeight_total",
+    "native_pattern_closure_3": "Overfull.AssignedParts.NativeWeights.aggregate_capacity",
+    "native_pattern_closure_4": "Overfull.AssignedParts.NativeWeights.exists_heavy_code",
+    "native_pattern_closure_5": "Overfull.AssignedParts.NativeWeights.scaledWeight_marginal",
+    "native_pattern_closure_6": "Overfull.AssignedParts.NativeWeights.scaledWeight_nonneg",
+    "native_pattern_closure_7": "Overfull.AssignedParts.NativeWeights.scaledWeight_sum",
+    "native_pattern_closure_8": "Overfull.AssignedParts.NativeWeights.scaled_matching_pool_eq",
+    "native_pattern_closure_9": "Overfull.AssignedParts.NativeWeights.scaled_selected_capacity",
+    "native_pattern_closure_10": "Overfull.AssignedParts.NativeWeights.scaled_selected_edge_le_one",
+    "native_pattern_closure_11": "Overfull.AssignedParts.NativeWeights.weighted_pool_sum",
+    "native_pattern_closure_12": "Overfull.AssignedParts.assignedLabel_eq_of_signature_eq",
+    "native_pattern_closure_13": "Overfull.AssignedParts.assignedParts_eq_of_signature_eq",
+    "native_pattern_closure_14": "Overfull.AssignedParts.assignmentChoice_eq_one_iff",
+    "native_pattern_closure_15": "Overfull.AssignedParts.assignmentChoice_eq_zero_iff",
+    "native_pattern_closure_16": "Overfull.AssignedParts.card_assignmentSignature",
+    "native_pattern_closure_17": "Overfull.AssignedParts.card_assignmentSignature_le_five",
+    "native_pattern_closure_18": "Overfull.AssignedParts.coarseSignature_eq_none_iff",
+    "native_pattern_closure_19": "Overfull.AssignedParts.coarseSignature_eq_some_iff",
+    "native_pattern_closure_20": "Overfull.AssignedParts.compressedBoundary_assignedExceptions",
+    "native_pattern_closure_21": "Overfull.AssignedParts.compressedBoundary_assignedLabel",
+    "native_pattern_closure_22": "Overfull.AssignedParts.compressedBoundary_card_le",
+    "native_pattern_closure_23": "Overfull.AssignedParts.compressedBoundary_coarseSignature",
+    "native_pattern_closure_24": "Overfull.AssignedParts.compressedBoundary_coreCrossing_card",
+    "native_pattern_closure_25": "Overfull.AssignedParts.compressedBoundary_corePart",
+    "native_pattern_closure_26": "Overfull.AssignedParts.compressedBoundary_core_crossings",
+    "native_pattern_closure_27": "Overfull.AssignedParts.compressedBoundary_covers_exceptional",
+    "native_pattern_closure_28": "Overfull.AssignedParts.compressedBoundary_crossing_card_eq_of_signature_eq",
+    "native_pattern_closure_29": "Overfull.AssignedParts.compressedBoundary_cut_parity",
+    "native_pattern_closure_30": "Overfull.AssignedParts.compressedBoundary_cut_split",
+    "native_pattern_closure_31": "Overfull.AssignedParts.compressedBoundary_exceptional_degree",
+    "native_pattern_closure_32": "Overfull.AssignedParts.compressedBoundary_internalOn",
+    "native_pattern_closure_33": "Overfull.AssignedParts.compressedBoundary_internal_core_empty",
+    "native_pattern_closure_34": "Overfull.AssignedParts.compressedBoundary_isMatching",
+    "native_pattern_closure_35": "Overfull.AssignedParts.compressedBoundary_pairPart",
+    "native_pattern_closure_36": "Overfull.AssignedParts.compressedBoundary_retains_exceptional",
+    "native_pattern_closure_37": "Overfull.AssignedParts.compressedBoundary_subset",
+    "native_pattern_closure_38": "Overfull.AssignedParts.compressedBoundary_support_card_le",
+    "native_pattern_closure_39": "Overfull.AssignedParts.compressedBoundary_swap",
+    "native_pattern_closure_40": "Overfull.AssignedParts.compressedBoundary_uncovered_even",
+    "native_pattern_closure_41": "Overfull.AssignedParts.compressedBoundary_uncovered_even_first",
+    "native_pattern_closure_42": "Overfull.AssignedParts.coreCrossing_parity_eq_of_signature_eq",
+    "native_pattern_closure_43": "Overfull.AssignedParts.corePart_eq_original_of_pairPart_eq",
+    "native_pattern_closure_44": "Overfull.AssignedParts.core_cut_split",
+    "native_pattern_closure_45": "Overfull.AssignedParts.cutOn_paritySelection_coreCrossings",
+    "native_pattern_closure_46": "Overfull.AssignedParts.exceptionCorePool_matching_card_le_one",
+    "native_pattern_closure_47": "Overfull.AssignedParts.exceptionCorePool_nonempty_iff_corePart",
+    "native_pattern_closure_48": "Overfull.AssignedParts.exceptionCorePool_usage_eq_assignment",
+    "native_pattern_closure_49": "Overfull.AssignedParts.exceptionalCopies_card_le",
+    "native_pattern_closure_50": "Overfull.AssignedParts.exceptionalCopies_disjoint_coreCrossings",
+    "native_pattern_closure_51": "Overfull.AssignedParts.exceptionalCopies_subset",
+    "native_pattern_closure_52": "Overfull.AssignedParts.exists_assignment_matching_with_linear_pools",
+    "native_pattern_closure_53": "Overfull.AssignedParts.exists_compressed_assignment_with_linear_pools",
+    "native_pattern_closure_54": "Overfull.AssignedParts.exists_heavy_signature",
+    "native_pattern_closure_55": "Overfull.AssignedParts.exists_heavy_signature_with_pools",
+    "native_pattern_closure_56": "Overfull.AssignedParts.firstCorePart_eq_of_signature_eq",
+    "native_pattern_closure_57": "Overfull.AssignedParts.inter_internalPool_eq",
+    "native_pattern_closure_58": "Overfull.AssignedParts.internalPool_usage_eq_signature",
+    "native_pattern_closure_59": "Overfull.AssignedParts.mem_coreCrossings_iff",
+    "native_pattern_closure_60": "Overfull.AssignedParts.mem_exceptionalCopies",
+    "native_pattern_closure_61": "Overfull.AssignedParts.mem_exceptionalCopies_of_incident",
+    "native_pattern_closure_62": "Overfull.AssignedParts.pairPart_eq_empty_of_internal_eq_empty",
+    "native_pattern_closure_63": "Overfull.AssignedParts.pairPart_eq_exceptions_of_internal",
+    "native_pattern_closure_64": "Overfull.AssignedParts.pairPart_eq_of_signature_eq",
+    "native_pattern_closure_65": "Overfull.AssignedParts.paritySelection_card",
+    "native_pattern_closure_66": "Overfull.AssignedParts.paritySelection_card_le_one",
+    "native_pattern_closure_67": "Overfull.AssignedParts.paritySelection_subset",
+    "native_pattern_closure_68": "Overfull.AssignedParts.secondCorePart_eq_of_other_parts_eq",
+    "native_pattern_closure_69": "Overfull.AssignedParts.signatureAssignsCore_iff_corePart",
+    "native_pattern_closure_70": "Overfull.AssignedParts.signatureWeight_le_coreCrossingPool_of_odd",
+    "native_pattern_closure_71": "Overfull.AssignedParts.signatureWeight_none_eq_internalPool",
+    "native_pattern_closure_72": "Overfull.AssignedParts.signatureWeight_none_le_internalPool",
+    "native_pattern_closure_73": "Overfull.AssignedParts.signatureWeight_nonneg",
+    "native_pattern_closure_74": "Overfull.AssignedParts.signatureWeight_some_le_exceptionCorePool",
+    "native_pattern_closure_75": "Overfull.AssignedParts.signatureWeight_sum",
+    "native_pattern_closure_76": "Overfull.AssignedParts.signature_assignment_weight_eq_pool",
+    "native_pattern_closure_77": "Overfull.AssignedParts.signature_none_uses_internalPool",
+    "native_pattern_closure_78": "Overfull.AssignedParts.signature_some_uses_exceptionCorePool",
+    "native_pattern_closure_79": "Overfull.AssignedParts.signature_uses_coreCrossingPool_of_odd",
+    "native_pattern_closure_80": "Overfull.AssignedParts.uses_coreCrossingPool_of_nonempty",
+    "native_pattern_closure_81": "Overfull.AssignedParts.uses_exceptionCorePool_of_witness",
+    "native_pattern_closure_82": "Overfull.Multigraph.IsMatching.degreeOn_sum_eq_covered",
+    "native_pattern_closure_83": "Overfull.Multigraph.IsMatching.uncovered_even_iff_cut_parity"
   },
   "lean_build_passed": true,
   "axiom_audit_passed": true,
@@ -1978,7 +2061,7 @@
     "Classical.choice",
     "Quot.sound"
   ],
-  "verified_declaration_count": 11927,
+  "verified_declaration_count": 12055,
   "declaration_count_includes_generated_support_lemmas": true,
   "verified_declarations": [
     {
@@ -8231,12 +8314,161 @@
     },
     {
       "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.aggregateWeight_le_pool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.aggregateWeight_total"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.aggregate_capacity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.exists_heavy_code"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.scaledWeight.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.scaledWeight_marginal"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.scaledWeight_marginal._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.scaledWeight_nonneg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.scaledWeight_sum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.scaledWeight_sum._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.scaled_matching_pool_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.scaled_selected_capacity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.scaled_selected_edge_le_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.weighted_pool_sum"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.AssignedParts.NativeWeights",
+      "name": "Overfull.AssignedParts.NativeWeights.weighted_pool_sum._simp_1_1"
+    },
+    {
+      "axioms": [
         "Quot.sound",
         "propext",
         "Classical.choice"
       ],
       "module": "Overfull.AssignedParts.Basic",
       "name": "Overfull.AssignedParts.assignedExceptions.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.assignedLabel.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.assignedLabel_eq_of_signature_eq"
     },
     {
       "axioms": [
@@ -8289,6 +8521,388 @@
         "propext",
         "Classical.choice"
       ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.assignedParts_eq_of_signature_eq"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.assignmentChoice._proof_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.assignmentChoice.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.assignmentChoice_eq_one_iff"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.assignmentChoice_eq_one_iff._simp_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.assignmentChoice_eq_zero_iff"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.assignmentChoice_eq_zero_iff._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.card_assignmentSignature"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.card_assignmentSignature_le_five"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.card_assignmentSignature_le_five._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.card_assignmentSignature_le_five._proof_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.coarseSignature.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.coarseSignature_eq_none_iff"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.coarseSignature_eq_none_iff._simp_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.coarseSignature_eq_some_iff"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_assignedExceptions"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_assignedExceptions._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_assignedLabel"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_card_le"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_card_le._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativePatternConstruction",
+      "name": "Overfull.AssignedParts.compressedBoundary_coarseSignature"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativePatternConstruction",
+      "name": "Overfull.AssignedParts.compressedBoundary_coreCrossing_card"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_corePart"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.compressedBoundary_core_crossings"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_covers_exceptional"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativePatternConstruction",
+      "name": "Overfull.AssignedParts.compressedBoundary_crossing_card_eq_of_signature_eq"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.compressedBoundary_cut_parity"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.compressedBoundary_cut_parity._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.compressedBoundary_cut_split"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_exceptional_degree"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_exceptional_degree._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_internalOn"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_internalOn._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.compressedBoundary_internal_core_empty"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_isMatching"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_pairPart"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_retains_exceptional"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_subset"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.compressedBoundary_support_card_le"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.compressedBoundary_swap"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.compressedBoundary_uncovered_even"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.compressedBoundary_uncovered_even_first"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.coreCrossing_parity_eq_of_signature_eq"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
       "module": "Overfull.AssignedParts.Basic",
       "name": "Overfull.AssignedParts.corePart.eq_1"
     },
@@ -8333,6 +8947,15 @@
         "propext",
         "Classical.choice"
       ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.corePart_eq_original_of_pairPart_eq"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
       "module": "Overfull.AssignedParts.Basic",
       "name": "Overfull.AssignedParts.corePart_pairPart_disjoint"
     },
@@ -8362,6 +8985,50 @@
       ],
       "module": "Overfull.AssignedParts.Basic",
       "name": "Overfull.AssignedParts.coreParts_disjoint"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.core_cut_split"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.core_cut_split._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.core_cut_split._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.core_cut_split._simp_1_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.core_cut_split._simp_1_4"
     },
     {
       "axioms": [
@@ -8395,8 +9062,133 @@
         "propext",
         "Classical.choice"
       ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.cutOn_paritySelection_coreCrossings"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ExactPoolWeights",
+      "name": "Overfull.AssignedParts.exceptionCorePool_matching_card_le_one"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ExactPoolWeights",
+      "name": "Overfull.AssignedParts.exceptionCorePool_nonempty_iff_corePart"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ExactPoolWeights",
+      "name": "Overfull.AssignedParts.exceptionCorePool_usage_eq_assignment"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ExactPoolWeights",
+      "name": "Overfull.AssignedParts.exceptionCorePool_usage_eq_assignment._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.exceptionalCopies.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.exceptionalCopies_card_le"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.exceptionalCopies_disjoint_coreCrossings"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.exceptionalCopies_subset"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
       "module": "Overfull.AssignedParts.Basic",
       "name": "Overfull.AssignedParts.exceptional_corePart_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.HeavySignature",
+      "name": "Overfull.AssignedParts.exists_assignment_matching_with_linear_pools"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.NativePatternConstruction",
+      "name": "Overfull.AssignedParts.exists_compressed_assignment_with_linear_pools"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.HeavySignature",
+      "name": "Overfull.AssignedParts.exists_heavy_signature"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.HeavySignature",
+      "name": "Overfull.AssignedParts.exists_heavy_signature._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.HeavySignature",
+      "name": "Overfull.AssignedParts.exists_heavy_signature_with_pools"
     },
     {
       "axioms": [
@@ -8439,8 +9231,35 @@
         "propext",
         "Classical.choice"
       ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.firstCorePart_eq_of_signature_eq"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.firstCorePart_eq_of_signature_eq._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
       "module": "Overfull.AssignedParts.MatchedCuts",
       "name": "Overfull.AssignedParts.firstEnd_mem_corePart_iff"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.SignaturePools",
+      "name": "Overfull.AssignedParts.inter_internalPool_eq"
     },
     {
       "axioms": [
@@ -8459,6 +9278,24 @@
       ],
       "module": "Overfull.AssignedParts.Basic",
       "name": "Overfull.AssignedParts.internalOn_card_le_one._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.SignaturePools",
+      "name": "Overfull.AssignedParts.internalPool_usage_eq_signature"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.SignaturePools",
+      "name": "Overfull.AssignedParts.internalPool_usage_eq_signature._proof_1_1"
     },
     {
       "axioms": [
@@ -8622,6 +9459,32 @@
         "propext",
         "Classical.choice"
       ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.mem_coreCrossings_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.mem_coreCrossings_iff._simp_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "Overfull.AssignedParts.mem_coreCrossings_iff._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
       "module": "Overfull.AssignedParts.Basic",
       "name": "Overfull.AssignedParts.mem_corePart"
     },
@@ -8633,6 +9496,42 @@
       ],
       "module": "Overfull.AssignedParts.Basic",
       "name": "Overfull.AssignedParts.mem_corePart._simp_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.mem_exceptionalCopies"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.mem_exceptionalCopies._simp_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.mem_exceptionalCopies_of_incident"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.pairPart.eq_1"
     },
     {
       "axioms": [
@@ -8685,8 +9584,121 @@
         "propext",
         "Classical.choice"
       ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.pairPart_eq_empty_of_internal_eq_empty"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.pairPart_eq_empty_of_internal_eq_empty._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.pairPart_eq_exceptions_of_internal"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.pairPart_eq_exceptions_of_internal._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.pairPart_eq_exceptions_of_internal._proof_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.pairPart_eq_of_signature_eq"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
       "module": "Overfull.AssignedParts.Basic",
       "name": "Overfull.AssignedParts.pairPart_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.paritySelection._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.paritySelection._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.paritySelection_card"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.paritySelection_card._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.paritySelection_card_le_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.paritySelection_card_le_one._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.AssignedParts.paritySelection_subset"
     },
     {
       "axioms": [
@@ -8712,8 +9724,142 @@
         "propext",
         "Classical.choice"
       ],
+      "module": "Overfull.AssignedParts.Signatures",
+      "name": "Overfull.AssignedParts.secondCorePart_eq_of_other_parts_eq"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
       "module": "Overfull.AssignedParts.MatchedCuts",
       "name": "Overfull.AssignedParts.secondEnd_mem_corePart_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.ExactPoolWeights",
+      "name": "Overfull.AssignedParts.signatureAssignsCore.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ExactPoolWeights",
+      "name": "Overfull.AssignedParts.signatureAssignsCore_iff_corePart"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.HeavySignature",
+      "name": "Overfull.AssignedParts.signatureWeight.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.HeavySignature",
+      "name": "Overfull.AssignedParts.signatureWeight_le_coreCrossingPool_of_odd"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.HeavySignature",
+      "name": "Overfull.AssignedParts.signatureWeight_none_eq_internalPool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.HeavySignature",
+      "name": "Overfull.AssignedParts.signatureWeight_none_le_internalPool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.HeavySignature",
+      "name": "Overfull.AssignedParts.signatureWeight_nonneg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.HeavySignature",
+      "name": "Overfull.AssignedParts.signatureWeight_some_le_exceptionCorePool"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.HeavySignature",
+      "name": "Overfull.AssignedParts.signatureWeight_sum"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ExactPoolWeights",
+      "name": "Overfull.AssignedParts.signature_assignment_weight_eq_pool"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.SignaturePools",
+      "name": "Overfull.AssignedParts.signature_none_uses_internalPool"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.SignaturePools",
+      "name": "Overfull.AssignedParts.signature_some_uses_exceptionCorePool"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.SignaturePools",
+      "name": "Overfull.AssignedParts.signature_uses_coreCrossingPool_of_odd"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.SignaturePools",
+      "name": "Overfull.AssignedParts.signature_uses_coreCrossingPool_of_odd._proof_1_1"
     },
     {
       "axioms": [
@@ -8723,6 +9869,24 @@
       ],
       "module": "Overfull.AssignedParts.Basic",
       "name": "Overfull.AssignedParts.unpaired_exception_represented"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.SignaturePools",
+      "name": "Overfull.AssignedParts.uses_coreCrossingPool_of_nonempty"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.SignaturePools",
+      "name": "Overfull.AssignedParts.uses_exceptionCorePool_of_witness"
     },
     {
       "axioms": [
@@ -59023,6 +60187,24 @@
         "propext",
         "Classical.choice"
       ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.Multigraph.IsMatching.degreeOn_sum_eq_covered"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.Multigraph.IsMatching.degreeOn_sum_eq_covered._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
       "module": "Overfull.AssignedParts.Basic",
       "name": "Overfull.Multigraph.IsMatching.edgeSupport_card"
     },
@@ -59070,6 +60252,24 @@
       ],
       "module": "Overfull.MultigraphColoring",
       "name": "Overfull.Multigraph.IsMatching.internal_edges_card_le._proof_1_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.Multigraph.IsMatching.uncovered_even_iff_cut_parity"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.BoundaryCompression",
+      "name": "Overfull.Multigraph.IsMatching.uncovered_even_iff_cut_parity._proof_1_1"
     },
     {
       "axioms": [
@@ -94503,6 +95703,22 @@
       "axioms": [
         "propext"
       ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "_private.Overfull.AssignedParts.CompressionCuts.0.Overfull.AssignedParts.two_core_cut_split_iff"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.CompressionCuts",
+      "name": "_private.Overfull.AssignedParts.CompressionCuts.0.Overfull.AssignedParts.two_disjoint_cuts_iff"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
       "module": "Overfull.AssignedParts.MatchedCuts",
       "name": "_private.Overfull.AssignedParts.MatchedCuts.0.Overfull.AssignedParts.assigned_cut_iff_core_crossing"
     },
@@ -103792,9 +105008,17 @@
     "Overfull.Absorption.ThresholdsSchedule",
     "Overfull.Arithmetic",
     "Overfull.AssignedParts.Basic",
+    "Overfull.AssignedParts.BoundaryCompression",
+    "Overfull.AssignedParts.CompressionCuts",
+    "Overfull.AssignedParts.ExactPoolWeights",
+    "Overfull.AssignedParts.HeavySignature",
     "Overfull.AssignedParts.JoiningConstruction",
     "Overfull.AssignedParts.MatchedCuts",
+    "Overfull.AssignedParts.NativePatternConstruction",
+    "Overfull.AssignedParts.NativeWeights",
     "Overfull.AssignedParts.PairFiberParity",
+    "Overfull.AssignedParts.SignaturePools",
+    "Overfull.AssignedParts.Signatures",
     "Overfull.AssignedParts.ThreePartLabels",
     "Overfull.AuxiliaryCompletion",
     "Overfull.AuxiliaryCompletion.BalancedIncidence",
@@ -104420,6 +105644,14 @@
     "verified_declaration_count": 69,
     "numbered_assertions_completed": 0
   },
+  "native_pattern_declaration_map": {
+    "path": "verification/native-pattern-declarations.json",
+    "sha256": "2f977aa4b787db18cf0905439aa085b185add78fb42901d2363ce4724116c38c",
+    "module_count": 8,
+    "public_theorem_count": 83,
+    "verified_declaration_count": 128,
+    "numbered_assertions_completed": 0
+  },
   "checkpoint_reconstruction": {
     "original_checkpoint": "cb05ef5f5b7ef5ada4e535e9dcc652eecaddc43e",
     "original_tree_reproduced": false,
@@ -104428,7 +105660,7 @@
     "fresh_build_and_audit": true
   },
   "source_sha256": {
-    "Overfull.lean": "1a6cb94e99446980a8bd1d55a4414b4a52ca9121973eda73911fc8a91ef019e9",
+    "Overfull.lean": "9902329d332ac220c1ea75a334a7546a8529212ed1ba45401cdf389a4e93f34b",
     "Audit.lean": "76886fd9261a3a7b07660f9a434272c0347130a4013cf57da6e1761a34fc6603",
     "Overfull/Absorption/Bounded.lean": "722ca71ecdc9b0f4c17b400c32d51a284d9eac61211e1a52e448fcc8f5bb2f52",
     "Overfull/Absorption/Core.lean": "1f5f39cd8497918341bf336db7f1735b131c9f564077b158b7245fbb474a0946",
@@ -104443,9 +105675,17 @@
     "Overfull/Absorption/ThresholdsSchedule.lean": "ee4a54a48dfb49efef44d341b28d3188ffda5a4d77c16e025fe9d5e7e104abc5",
     "Overfull/Arithmetic.lean": "8900852dcfc451630615376c9def333908c11c03a99bc02e7f51043162a7f3a8",
     "Overfull/AssignedParts/Basic.lean": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12",
+    "Overfull/AssignedParts/BoundaryCompression.lean": "1ad73fef8b706983a14d1134093777e3f205f0b2922eb4a858cb2efba31fc756",
+    "Overfull/AssignedParts/CompressionCuts.lean": "cce92372f231238824d1d9d5f6bae518796d3864c5fff5366c32b40556616511",
+    "Overfull/AssignedParts/ExactPoolWeights.lean": "ec9c274790bee1dcac42361d9217d3de727a74ee7d5bc599a2fcff40ea2f13a7",
+    "Overfull/AssignedParts/HeavySignature.lean": "f55dd957b59e70beb47910ee6411dae383e6fd2e68e5e5bf8ce7ab4bc895ef3c",
     "Overfull/AssignedParts/JoiningConstruction.lean": "dd070d578403598115b359cf4649fa2f8a786cd8e189eee43123d9ceace54ed1",
     "Overfull/AssignedParts/MatchedCuts.lean": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766",
+    "Overfull/AssignedParts/NativePatternConstruction.lean": "69c8f8620ed986ae807b8a0e15c414d688ceba9a633c403201381d8b2458eb3a",
+    "Overfull/AssignedParts/NativeWeights.lean": "b0aeab0ebc6c35dc89f771af2e5a2870d6bdbf774aab9f71183b8d92713ef5fe",
     "Overfull/AssignedParts/PairFiberParity.lean": "b3ff00c53a3f30c5ae8cd6d451f937b4a9318ca05c02ccf9ce427e5b26ff4686",
+    "Overfull/AssignedParts/SignaturePools.lean": "f5047488c63e3c77015500b5d2a2a4a1fb9de1c30cf6c3c814cbcc7e7fc2c0e7",
+    "Overfull/AssignedParts/Signatures.lean": "11b7ce4e08a5faf70e3e22ff915faa9a907d8e83b2ed4e9f525ca39e582c03f2",
     "Overfull/AssignedParts/ThreePartLabels.lean": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0",
     "Overfull/AuxiliaryCompletion/BalancedIncidence.lean": "7fa4de3a988c859cdcc82bf7d9ea21fcd698274bca653fa32fe5ec3b2870d253",
     "Overfull/AuxiliaryCompletion/BalancedIncidenceGraph.lean": "f552812c2b99bca08a2ba352a4382800eab55bd415185d9f8c6bd7d1d2754c29",
@@ -104937,7 +106177,7 @@
     ".github/workflows/lean.yml": "bf5cd8ff5d9c54814b5a0a2a98732a90dae5e4d1a7268954fe9deba218753e83",
     "CIRCULATION_NOTICE.txt": "c8913077edf119bdb2ff790f24c3a27188a14b37d3cbc03121c917aee157a419",
     "LICENSE_BMATCHING.txt": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
-    "README.md": "c464e94065c587da0af64c5e5fda70ca32b9e8be151694feede39780f0a089be",
+    "README.md": "20da7da2b263880ecadcdea473ae9e2d286b2a34fd2d0fcd760541bfc9a2d9cf",
     "THIRD_PARTY_NOTICES.txt": "9002356e653c2943115b2feeba04713b005074a3d7c283bd894a47d8ca63dcd7",
     "docs/adaptive-packing.md": "eed3d11bde80300511bfa046813661c1617bb0ddc4c131efbed9576a33e53c7e",
     "docs/assigned-part-semantic-review.md": "e66abf61bc77c96e36e2eb13f64c0a238db4341fd120b4982f4c9a3119b553ca",
@@ -104958,8 +106198,8 @@
     "docs/checkpoint-reconstruction-source.json": "15b678ca340bc3e5f6120c242e5e87255ddea8de45cfa82267fbf83b44784322",
     "docs/checkpoint-reconstruction.md": "281491521d047dde7fd88f197d5f6b45cad146ca8643eafb31c796a86dae208c",
     "docs/circulation-source.json": "2b3d7bdf1b05c6b8445e2961efe99fe3eb6100a9c08c1eb3af8bbb4fd28350aa",
-    "docs/continuation-handoff.md": "727feb3c0978ef66611cacf409a29e1c659f44084d66fa6d78ea1058db1259ca",
-    "docs/coverage.json": "488f809627ac4792d486f750b3a58cdfe4d20009ea2c37c963da6192bf0e0c44",
+    "docs/continuation-handoff.md": "a423a388ee3ef10df5858396adf52d4aa3869bda2f4f3fd4b8cacb21b2bc1d1a",
+    "docs/coverage.json": "fd664d98fc0483bdf891b206424557226380968a7828a9bb6da2481511e16aff",
     "docs/critical-partition-consequences.md": "b0b0db1f855f47e3a3c6c63046bf7375c65b452640b73615baf9ca6a34d8dc91",
     "docs/dense-link-packing.md": "e34a37bb7b482fcd950977d2ff4835f573038c78a873c0f30823a5a1bcc181cf",
     "docs/exceptional-absorption.md": "5fc25d8f075878fd04257ca6370ed6d70bce2991c8ab36b29d4f80cde4784eb7",
@@ -104979,6 +106219,9 @@
     "docs/main-theorem.md": "fa89660ac417eac3f93068971c5851a5b98dc50c1de7f2652c29c057bd7926d9",
     "docs/manuscript-source.json": "875b84338e1fe04d74d4365d23dd9327904dbed6ffe4d01eecc5ff23d88c6969",
     "docs/matching-repair.md": "29d0c587ba983a568eb98b40484e531a90e0f96fbd4dc98069bfd12214481cca",
+    "docs/native-pattern-semantic-review.md": "8e99db953e75bb886950fdac69fb616561058ce3d1d1efcb07a8e7352c418427",
+    "docs/native-pattern-source.json": "99ac0120043c11169b82beb69ffc5c43fa2c7b7b9c5bc23514d87a5450282b3c",
+    "docs/native-pattern-verification.md": "f320440fff4f2da8de362017b8fe764bf29846f9cd249bacc6daeb5a633c5e55",
     "docs/next-verification-target.md": "f07f14d29d8c2cb10fdf1caad10151020f835fc33dae1d177531b3462caf810d",
     "docs/ordinary-factorization-full-semantic-review.md": "8ccd470ebbd237c0191e0907770a827f9d785ab273de733a3e831bc4acfe38a0",
     "docs/ordinary-factorization-full-source.json": "814c007ffd25a7c4aad82ffbcdd171ee26efe1544bdc4b326ef71577d995d103",
@@ -105006,9 +106249,10 @@
     "scripts/three_label_selector_check.py": "0f678a759ef4b8a48675f45739af49a176d506accf869899cd493ccfd6ebc7bf",
     "scripts/update_assigned_manifest.py": "0041947e59aec0cc7a2c4920de49eff4ebbe3457e557202eea4962a572f13c93",
     "scripts/update_joining_manifest.py": "49e353003a9aceff1e4d94345d8f2363fab81fb07eb218e651e666a879300449",
+    "scripts/update_native_pattern_manifest.py": "f6ccde61f5ab28684ac8837391cf148371fe885d00f8a8584d60f5ba029e2501",
     "scripts/update_reconstruction_manifest.py": "d3fb79aff0e1ebe718ecf77f0a554d292ee494821f9018115c3ae46f82681935",
     "scripts/update_three_label_manifest.py": "b99977121869aa9ef849a0cf6dd8f6833c7dcc6487c56b1e975070550f29190d",
-    "scripts/verify.py": "001cd0700f8242fbd025a7233871ad4d037b4c2180f4c1e100257e6b2e28db99"
+    "scripts/verify.py": "56a81271491e7f6be1d83d36d4c8442ca7ea9057b793e8500ba72b2b3378d100"
   },
-  "scope": "47 of 69 numbered manuscript assertions remain fully proved; 22, including the main theorem, remain incomplete. This continuation recovers five original-host joining modules and recreates five assigned-part modules for fresh verification. It constructs exact assignments from a fixed perfect-matching representative and exact selected cuts, derives parity, and composes joining decomposition in the original or a separate regular non-overfull host. No numbered assertion is newly complete. All original statements and completed records are preserved. Heavy-pattern reserves, residual safety, source alignment, palettes, completion and final two-core factorization remain unfinished."
+  "scope": "47 of 69 numbered manuscript assertions remain fully proved; 22, including the main theorem, remain incomplete. This continuation proves native multigraph matching-distribution capacities, at most five actual assignment signatures and a heavy representative with linear original-copy pool supplies, exact exceptional-pool marginal identities, and exceptional-retaining boundary compression with exact core-crossing parity and even uncovered core orders. All 69 original assertion records and prior completed results are preserved. Simultaneous reserves, residual safety, full source-pattern interfaces, palettes, robust completion and final two-core factorization remain unfinished."
 }
