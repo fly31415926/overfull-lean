@@ -1,0 +1,231 @@
+✔ [3519/3540] Built Overfull.WeightedPalette.StarWeights (3.1s)
+⚠ [3520/3549] Building Overfull.TerminalFourTwoOdd.CutCertificates (3.1s)
+trace: .> LEAN_PATH=/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean /workspace/scratch/05b9e46fe96b/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/05b9e46fe96b/overfull-lean/Overfull/TerminalFourTwoOdd/CutCertificates.lean -o /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/CutCertificates.olean -i /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/CutCertificates.ilean -c /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/CutCertificates.c --setup /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/CutCertificates.setup.json --json
+warning: Overfull/TerminalFourTwoOdd/CutCertificates.lean:21:8: automatically included section variable(s) unused in theorem `_private.Overfull.TerminalFourTwoOdd.CutCertificates.0.Overfull.TerminalFourTwoOdd.card_matching_partition`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Overfull/TerminalFourTwoOdd/CutCertificates.lean:108:0: automatically included section variable(s) unused in theorem `Overfull.TerminalFourTwoOdd.whole_matching_cut_parity`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✖ [3521/3549] Building Overfull.ResidualPalette.FourJoiningGrouping (3.2s)
+trace: .> LEAN_PATH=/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean /workspace/scratch/05b9e46fe96b/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/05b9e46fe96b/overfull-lean/Overfull/ResidualPalette/FourJoiningGrouping.lean -o /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/ResidualPalette/FourJoiningGrouping.olean -i /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/ResidualPalette/FourJoiningGrouping.ilean -c /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/ResidualPalette/FourJoiningGrouping.c --setup /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/ResidualPalette/FourJoiningGrouping.setup.json --json
+error: Overfull/ResidualPalette/FourJoiningGrouping.lean:68:23: Unknown identifier `even_zero`
+error: Lean exited with code 1
+✔ [3523/3549] Built Overfull.NativeTerminal.PairColoring (3.3s)
+✔ [3524/3550] Built Overfull.NativeTerminal.ReserveGeometry (3.3s)
+✔ [3525/3552] Built Overfull.TerminalFourTwoOdd.PrefixResult (3.5s)
+✔ [3527/3552] Built Overfull.WeightedPalette.Loads (3.5s)
+✔ [3528/3552] Built Overfull.ExceptionalPalette.ReserveInsertion (4.0s)
+✔ [3529/3555] Built Overfull.WeightedPalette.AsymmetricHall (2.0s)
+✔ [3530/3562] Built Overfull.NativeTerminal.Factorization (3.5s)
+✔ [3531/3564] Built Overfull.ExceptionalPalette.EvenColors (3.8s)
+✔ [3532/3583] Built Overfull.NativeStar.ReserveInjection (3.7s)
+✔ [3534/3583] Built Overfull.TerminalFourTwoOdd.RemainingProfile (4.5s)
+✔ [3535/3589] Built Overfull.ExceptionalPalette.ReserveNative (3.6s)
+✔ [3536/3590] Built Overfull.ResidualPalette.ProtectedBudget (6.8s)
+✔ [3538/3593] Built Overfull.ExceptionalPalette.EvenNative (3.9s)
+✔ [3541/3593] Built Overfull.NativeStar.StarAccounting (4.6s)
+✔ [3542/3593] Built Overfull.ExceptionalPalette.PairFree (9.6s)
+✔ [3543/3593] Built Overfull.Terminal.Contraction (3.5s)
+✔ [3544/3593] Built Overfull.FewExceptions.Factorization (3.0s)
+✔ [3545/3593] Built Overfull.ResidualPalette.UniformCompletion (6.6s)
+✔ [3546/3593] Built Overfull.WeightedPalette.Extension (10s)
+✔ [3547/3593] Built Overfull.BipartiteFactorization.Moves (15s)
+✔ [3548/3593] Built Overfull.NativeCore.WeightedBudget (5.6s)
+✔ [3549/3593] Built Overfull.NativeStar.IncidencePartition (2.6s)
+✔ [3550/3593] Built Overfull.ExceptionalPalette.PairColoring (2.6s)
+✔ [3551/3593] Built Overfull.Terminal.CentralMatchings (2.7s)
+✔ [3552/3593] Built Overfull.WeightedPalette.Grouping (2.7s)
+✔ [3553/3593] Built Overfull.ResidualPalette.UniformJoining (3.7s)
+✔ [3554/3593] Built Overfull.NativeCore.Incidence (2.5s)
+✔ [3555/3593] Built Overfull.NativeStar.CommonPalette (3.0s)
+✖ [3556/3593] Building Overfull.TerminalFourTwoOdd.CentralGeometry (2.7s)
+trace: .> LEAN_PATH=/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean /workspace/scratch/05b9e46fe96b/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/05b9e46fe96b/overfull-lean/Overfull/TerminalFourTwoOdd/CentralGeometry.lean -o /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/CentralGeometry.olean -i /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/CentralGeometry.ilean -c /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/CentralGeometry.c --setup /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/CentralGeometry.setup.json --json
+error: Overfull/TerminalFourTwoOdd/CentralGeometry.lean:19:61: Application type mismatch: The argument
+  h
+has type
+  keptVertex hWS u = keptVertex hWS v
+but is expected to have type
+  Sum.inl u = Sum.inl v
+in the application
+  Sum.inl_injective h
+error: Overfull/TerminalFourTwoOdd/CentralGeometry.lean:17:43: unsolved goals
+V : Type u_1
+S W : Finset V
+hWS : W ⊆ S
+u v : { x // x ∈ W }
+h : keptVertex hWS u = keptVertex hWS v
+⊢ u = v
+error: Lean exited with code 1
+✔ [3558/3593] Built Overfull.Terminal.OddGluing (2.9s)
+✔ [3559/3593] Built Overfull.NativeWeighted.WeightedJoining (2.9s)
+✔ [3560/3593] Built Overfull.NativeCore.Coverage (2.3s)
+✔ [3561/3593] Built Overfull.NativeTerminal.ResidualGeometry (2.5s)
+✔ [3562/3593] Built Overfull.NativeStar.StarChoice (2.4s)
+✔ [3563/3593] Built Overfull.NativeStar.NativeBalance (2.6s)
+✔ [3564/3593] Built Overfull.ExceptionalPalette.PairExtension (6.2s)
+✔ [3565/3593] Built Overfull.NativeWeighted.EvenNative (2.4s)
+✔ [3566/3593] Built Overfull.NativeWeighted.OddNative (2.5s)
+✔ [3567/3593] Built Overfull.NativeTerminal.NativeGeometry (2.5s)
+✔ [3568/3593] Built Overfull.NativeStar.StarExtension (2.4s)
+✔ [3569/3593] Built Overfull.ExceptionalPalette.PairAssigned (2.3s)
+✔ [3570/3593] Built Overfull.NativeWeighted.NativePalette (2.7s)
+✔ [3571/3593] Built Overfull.NativeCore.Parity (2.2s)
+✔ [3572/3593] Built Overfull.NativeStar.TwoStars (2.5s)
+✔ [3573/3593] Built Overfull.NativeAssembly.Paired (2.6s)
+✔ [3574/3593] Built Overfull.NativeWeighted.CoreBounds (2.9s)
+✔ [3575/3593] Built Overfull.NativeAssembly.BaseClasses (2.4s)
+✔ [3576/3593] Built Overfull.NativeCore.Completion (2.9s)
+✔ [3577/3593] Built Overfull.NativeAssembly.NativeBundles (2.1s)
+✔ [3578/3593] Built Overfull.NativeAssembly.ZeroCase (2.2s)
+✔ [3579/3593] Built Overfull.NativeAssembly.OtherCases (3.0s)
+✔ [3580/3593] Built Overfull.NativeAssembly.NativeTwoStars (3.8s)
+✔ [3581/3593] Built Overfull.NativeAssembly.SeparateStars (3.2s)
+✔ [3582/3593] Built Overfull.NativeAssembly.Unpaired (3.2s)
+✔ [3583/3593] Built Overfull.NativeCore.ExternalPalette (2.9s)
+✔ [3584/3593] Built Overfull.NativeCore.NativePrefix (5.4s)
+✔ [3585/3593] Built Overfull.NativeTerminal.PrefixGeometry (2.4s)
+✔ [3586/3593] Built Overfull.NativeTerminal.NativeFactorization (2.3s)
+✔ [3587/3593] Built Overfull.NativeTerminal.NativeCompletion (2.6s)
+✔ [3588/3593] Built Overfull.NativeTerminal.TwoCore (3.2s)
+✔ [3589/3593] Built Overfull.NativeTerminal.BoundedInput (2.7s)
+✖ [3590/3593] Building Overfull.TerminalFourTwoOdd.CentralFactorization (14s)
+trace: .> LEAN_PATH=/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean /workspace/scratch/05b9e46fe96b/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/05b9e46fe96b/overfull-lean/Overfull/TerminalFourTwoOdd/CentralFactorization.lean -o /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/CentralFactorization.olean -i /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/CentralFactorization.ilean -c /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/CentralFactorization.c --setup /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/CentralFactorization.setup.json --json
+error: Overfull/TerminalFourTwoOdd/CentralFactorization.lean:60:4: mod_cast has type
+  C₀.graph.degree ⟨v, hv⟩ < Fintype.card { x // x ∈ U }
+but is expected to have type
+  C₀.graph.degree ⟨v, hv⟩ < #U
+error: Overfull/TerminalFourTwoOdd/CentralFactorization.lean:75:4: Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `List.Mem.casesOn` can only eliminate into `Prop`
+
+α ν τ : ℝ
+hα : 0 < α
+hα1 : α ≤ 1
+hν : 0 < ν
+hντ : ν ≤ τ
+hτ : τ ≤ α / 64
+hτfactor : τ ≤ min α (min α 1) / 16
+η : ℝ
+hη : 0 < η
+mfactor : ℕ
+_hmfactor : 0 < mfactor
+hfactor :
+  ∀ (V : Type ?u.5083) (E : Type ?u.5082) [inst : Fintype V] [inst_1 : Fintype E] (G : Multigraph V E) (k : ℕ) (a : ℝ),
+    mfactor ≤ Fintype.card V →
+      Even (Fintype.card V) →
+        (∀ (v : V), G.degree v = k) →
+          α * ↑(Fintype.card V) ≤ ↑k →
+            (∀ (X : Finset V), ¬G.IsOverfull k X) →
+              a + 1 ≤ η * ↑(Fintype.card V) →
+                ((∃ U C,
+                      #Uᶜ ≤ 3 ∧
+                        α * ↑(Fintype.card V) ≤ ↑(#U) ∧
+                          IsRobustExpander C.graph ν τ ∧ ∀ (v : { x // x ∈ U }), ↑k - a ≤ ↑(C.graph.degree v)) ∨
+                    ∃ U₀ U₁ Z C₀ C₁,
+                      Disjoint U₀ U₁ ∧
+                        Disjoint U₀ Z ∧
+                          Disjoint U₁ Z ∧
+                            (∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z) ∧
+                              #Z ≤ 2 ∧
+                                α * ↑(Fintype.card V) ≤ ↑(#U₀) ∧
+                                  α * ↑(Fintype.card V) ≤ ↑(#U₁) ∧
+                                    IsRobustExpander C₀.graph ν τ ∧
+                                      IsRobustExpander C₁.graph ν τ ∧
+                                        (∀ (v : { x // x ∈ U₀ }), ↑k - a ≤ ↑(C₀.graph.degree v)) ∧
+                                          ∀ (v : { x // x ∈ U₁ }), ↑k - a ≤ ↑(C₁.graph.degree v)) →
+                  Nonempty (G.EdgeColoring k)
+mcut : ℕ
+hmcut : ∀ (n : ℕ), mcut ≤ n → 3 < ν ^ 2 * α ^ 2 * ↑n
+ε : ℝ := min (α / 10) (η / 2)
+hε : 0 < ε
+V : Type u_1
+E : Type u_2
+inst✝¹ : Fintype V
+inst✝ : Fintype E
+G : Multigraph V E
+U W Z : Finset V
+C₀ : Core G U
+C₁ : Core G W
+k : ℕ
+a : ℝ
+hn : max (max mcut mfactor) (max 1 ⌈2 / η⌉₊) ≤ Fintype.card V
+heven : Even (Fintype.card V)
+hUW : Disjoint U W
+hUZ : Disjoint U Z
+hWZ : Disjoint W Z
+hcover : ∀ (v : V), v ∈ U ∨ v ∈ W ∨ v ∈ Z
+hZ : #Z ≤ 2
+hregular : ∀ (v : V), G.degree v = k
+hk : α * ↑(Fintype.card V) ≤ ↑k
+hU : α * ↑(Fintype.card V) ≤ ↑(#U)
+hW : α * ↑(Fintype.card V) ≤ ↑(#W)
+hrobU : IsRobustExpander C₀.graph ν τ
+hrobW : IsRobustExpander C₁.graph ν τ
+ha : a ≤ ε * ↑(Fintype.card V)
+hdegU : ∀ (v : { x // x ∈ U }), ↑k - a ≤ ↑(C₀.graph.degree v)
+hdegW : ∀ (v : { x // x ∈ W }), ↑k - a ≤ ↑(C₁.graph.degree v)
+M : Fin k → Finset E
+hM : ∀ (j : Fin k), G.IsMatching (M j)
+hdM : Pairwise fun i j => Disjoint (M i) (M j)
+hcoverM : ∀ e ∉ G.internalEdges U, e ∉ G.internalEdges W → ∃ j, e ∈ M j
+hZM : ∀ (j : Fin k), Z ⊆ G.edgeSupport (M j)
+hparU : ∀ (j : Fin k), Even #(U \ G.edgeSupport (M j))
+hparW : ∀ (j : Fin k), Even #(W \ G.edgeSupport (M j))
+hncut : mcut ≤ Fintype.card V
+hnfactor : mfactor ≤ Fintype.card V
+hn1 : 1 ≤ Fintype.card V
+hnceil : ⌈2 / η⌉₊ ≤ Fintype.card V
+hnpos : 0 < ↑(Fintype.card V)
+hUpos : 0 < #U
+v : V
+hv : v ∈ U
+hdeglt : ↑(C₀.graph.degree ⟨v, hv⟩) < ↑(#U)
+hUn : ↑(#U) ≤ ↑(Fintype.card V)
+hasmall : a ≤ α * ↑(Fintype.card V) / 10
+hkhi : ↑k ≤ 2 * ↑(Fintype.card V)
+parts : Fin 2 → Finset V := ![U, W]
+i : Fin 2
+this✝ : i ∈ Fintype.elems
+a✝ : List (Fin 2)
+this : List.Mem i a✝
+⊢ List.finRange 2 = a✝ → this✝ ≍ this → Core G (parts i)
+error: Overfull/TerminalFourTwoOdd/CentralFactorization.lean:76:6: Type mismatch
+  C₀
+has type
+  Core G U
+but is expected to have type
+  Core G (parts i)
+error: Overfull/TerminalFourTwoOdd/CentralFactorization.lean:77:4: No goals to be solved
+error: Overfull/TerminalFourTwoOdd/CentralFactorization.lean:117:8: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/TerminalFourTwoOdd/CentralFactorization.lean:115:4: (deterministic) timeout at `«tactic execution»`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/TerminalFourTwoOdd/CentralFactorization.lean:123:4: (deterministic) timeout at `«tactic execution»`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/TerminalFourTwoOdd/CentralFactorization.lean:12:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.TerminalFourTwoOdd.CutCertificates
+- Overfull.ResidualPalette.FourJoiningGrouping
+- Overfull.TerminalFourTwoOdd.CentralGeometry
+- Overfull.TerminalFourTwoOdd.CentralFactorization
+error: build failed

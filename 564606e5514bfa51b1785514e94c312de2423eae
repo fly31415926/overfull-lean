@@ -1,0 +1,10 @@
+{
+  "kind": "documented_recorder_hash_race",
+  "recorded_hash_of_later_live_file": "53ccba193876da2fb99ff694b7221f12d5e20057762cba0f2f9ef5715a5b62ab",
+  "executed_source_snapshot_sha256": "e0587e43ec60b79f85ae2a55b167dace5fa707c186fd321632312d8f97dffbea",
+  "original_command_receipt_sha256": "812486b15ea5dab2735de8116197cdad355817bbb0e0047e24b9419f282bcfa1",
+  "snapshot_captured_before_waiting_for_build_lock": true,
+  "cause": "The inherited recorder saved its source before the lock, but computed recorder_sha256 from the live file after obtaining the lock. The live recorder was enhanced while this command waited. This affects the recorder identity metadata only; original command/log/source data remain unchanged.",
+  "correction": "The archived recorder.py contains the old executing source. Use its SHA256 for recorder source identity. The original command field is retained, not rewritten.",
+  "remedy": "Future recorder snapshots and hashes use a single immutable RECORDER_BYTES value captured before the lock."
+}

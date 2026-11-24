@@ -1,0 +1,2786 @@
+{
+  "schema_version": 1,
+  "title": "An Asymptotically Sharp Form of the Overfull Conjecture",
+  "filename": "Four_Robust_Component_Cases_2026-11-20.tex",
+  "sha256": "4605bdf3ee5b241a7b52dd59d08537fa0a439335cd6f119394cddd4609efffc1",
+  "size_bytes": 262639,
+  "version_date_in_manuscript": "November 20, 2026",
+  "manuscript_included": false,
+  "numbered_mathematical_assertions": 69,
+  "numbered_definitions": 3,
+  "source_identification": "The filename and SHA256 identify the exact reviewed TeX source. The complete manuscript is not bundled. User-authorized excerpts and their original-statement hash comparisons are preserved under verification/runs/20261122T235931Z; the complete later manuscript is not claimed byte-identical to this pinned source.",
+  "specifications": [
+    {
+      "lean_name": "Overfull.MainTheorem",
+      "file": "Overfull/Specifications.lean",
+      "manuscript_label": "main:quarter",
+      "manuscript_number": "1.1",
+      "proved": false,
+      "scope": "The main asymptotic assertion, formulated for labelled finite simple graphs on Fin n, existence of a proper edge coloring with maxDegree colors, and absence of overfull induced vertex sets."
+    },
+    {
+      "lean_name": "Overfull.SharpnessFamily",
+      "file": "Overfull/Specifications.lean",
+      "manuscript_label": "sharp:thm:family",
+      "manuscript_number": "7.1",
+      "proved": true,
+      "scope": "The full assertion of Proposition 7.1 for every odd Delta >= 3: a connected simple graph on Fin (4*Delta+5), maximum degree Delta, no proper Delta-edge-coloring, a proper (Delta+1)-edge-coloring, no Delta-overfull vertex set, and exactly 2*Delta*(Delta+1) edges. The two coloring statements express the exact class-2 conclusion without invoking Vizing\u2019s theorem.",
+      "proof_declaration": "Overfull.sharpness_family",
+      "proof_file": "Overfull/Sharpness/Theorems.lean"
+    }
+  ],
+  "coverage_file": "coverage.json",
+  "main_theorem_verified": false,
+  "full_sharpness_proposition_verified": true,
+  "fully_verified_numbered_assertions": 51,
+  "additional_complete_results": [
+    {
+      "lean_name": "Overfull.arbitrarily_large_class_two_graphs",
+      "file": "Overfull/Sharpness/Theorems.lean",
+      "manuscript_label": "sharp:cor:density",
+      "manuscript_number": "7.2",
+      "proved": true,
+      "scope": "For every real c < 1/4 and every natural order bound N, a connected simple class-2 graph exists on Fin n for some n >= N, with maximum degree at least c*n and no overfull vertex set at its maximum degree."
+    },
+    {
+      "lean_name": "Overfull.foreign_edge_reduction",
+      "file": "Overfull/ForeignEdges/Reduction.lean",
+      "manuscript_label": "three:prop:foreign",
+      "manuscript_number": "4.10",
+      "proved": true,
+      "scope": "Construct the full actual foreign-edge reduction with constants before the graph: an original-host sequence of pairwise edge-disjoint perfect matchings, its exact regular non-overfull residual with factor-256 degree reserve, actual surviving robust cores and partition, at most three core losses and exceptional additions, and the stated total exceptional unassigned-core incidence bound."
+    },
+    {
+      "lean_name": "Overfull.foreign_edge_reduction_with_small_error",
+      "file": "Overfull/ForeignEdges/ReductionError.lean",
+      "manuscript_label": "three:prop:foreign",
+      "manuscript_number": "4.10",
+      "proved": true,
+      "scope": "Full Proposition 4.10 with the robust output parameter fixed before every positive requested final error. The original error tolerance and order threshold precede all graph data. The constructed result also satisfies the requested combined final core-error and exceptional-order bound and retains a linear lower bound on every actual final core."
+    },
+    {
+      "lean_name": "Overfull.bounded_exceptional_absorption",
+      "file": "Overfull/Absorption/Bounded.lean",
+      "manuscript_label": "three:prop:band",
+      "manuscript_number": "4.12",
+      "proved": true,
+      "scope": "Full Proposition 4.12. Construct actual perfect-matching deletions from the regular non-overfull robust-core partition and total foreign-incidence bound. The exact regular non-overfull residual retains at least three quarters of the original degree, has enlarged robust cores, and has a bounded remaining exceptional set. The positive robust output precedes every arbitrary positive function f. The exceptional bound, positive initial error, and order threshold precede all graph data. The final core error is at most f(|Z_final|) times the actual residual degree, with no monotonicity assumption on f. The manuscript main theorem remains unverified."
+    },
+    {
+      "lean_name": "Overfull.frequent_boundary_patterns",
+      "file": "Overfull/Patterns/Frequent.lean",
+      "manuscript_label": "three:lem:pattern",
+      "manuscript_number": "4.13",
+      "proved": true,
+      "scope": "Full Lemma 4.13: construct actual perfect-matching deletions and absorb all exceptional vertices into enlarged robust cores, with exact regular non-overfull residual, degree and integer reserve at least k/(3*b4(t)), arbitrarily small relative core error and reserve gap, and actual matching-or-star pair and cut supply in the four-odd-part case. The positive surviving robust parameter precedes the requested relative error; all other constants precede the graph. The range satisfies tau <= alpha/(1000*b4(t)). The main theorem remains unverified."
+    },
+    {
+      "lean_name": "Overfull.Dense.LinkPacking.exists_tripartite_link_packing",
+      "file": "Overfull/Dense/LinkPacking/Theorem.lean",
+      "manuscript_label": "dense:link-packing",
+      "manuscript_number": "5.12",
+      "proved": true,
+      "scope": "For fixed real b>=1 and 0<lambda<=1, the order threshold precedes n, all three host vertex types, the tripartite graph, and the entire link family. The constants 81,6,2,3 and the actual induced minimum-degree premise are retained. Candidate existence, local-load bounds, and the total failure budget are proved internally. The explicit b>=1 domain records the joint hierarchy convention in 1/n << 1/b,lambda <= 1. The general r-partite BKLOT lemma and the main theorem are not claimed."
+    },
+    {
+      "lean_name": "Overfull.robust_partition",
+      "file": "Overfull/RobustPartition/Theorem.lean",
+      "manuscript_label": "bip:part:imported",
+      "manuscript_number": "2.23",
+      "proved": true,
+      "scope": "Full Theorem 2.23: a positive almost-regularity tolerance and an order threshold precede every finite vertex type and graph. Actual minimum and maximum degree bounds produce an actual disjoint partition into induced robust expanders and ordered almost bipartite pieces, with all square-root size, imbalance, edge-error, whole-part exceptional-degree, and weighted floor bounds. A finite scale ladder and strictly increasing bounded shore rank construct the partition internally. The proof permits n0=1 and needs only positivity of f on (0,1); the manuscript nondecreasing interval-valued functions are included. The additional conditions of the broader published KLOS robust-partition theorem and the main theorem are not claimed."
+    },
+    {
+      "lean_name": "Overfull.circuit_frequent_boundary_pattern",
+      "file": "Overfull/CircuitPatterns/Frequent.lean",
+      "manuscript_label": "three:lem:pattern",
+      "manuscript_number": "4.13",
+      "proved": true,
+      "scope": "Full Lemma 4.13. From a simple regular non-overfull graph with three or four robust cores and at most t exceptional vertices, construct actual perfect-matching deletions and absorb every exceptional vertex. The exact residual has no overfull set after every prefix, degree h >= k/(3*b4(t)), and disjoint enlarged robust cores covering all vertices. The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Proposition 4.16 and the manuscript main theorem remain unverified; Lemma 4.14 is now completed by BoundaryExtension.Full; Lemma 4.15 is now completed by the separate direct FourOdd construction."
+    },
+    {
+      "lean_name": "Overfull.FourOdd.four_odd_parts_decomposition",
+      "file": "Overfull/FourOdd/Theorem.lean",
+      "manuscript_label": "three:lem:four-odd",
+      "manuscript_number": "4.15",
+      "proved": true,
+      "scope": "Full Lemma 4.15 for finite loopless multigraphs, hence also simple graphs. All inputs refer to the original graph: h-regularity, no h-overfull set, four odd label fibers, actual joining degree at most real a, a prescribed perfect matching or three-edge star with at least r0 actual copies on every prescribed pair, and the manuscript forest-cut supply. The explicit sufficient conditions are a/h <= 1/1000 and (h-r0)/h <= 1/1000 for h>0. The output is an exact partition of the actual joining-copy subtype into actual matchings, exactly h with injective perfect-matching/star projection; every surplus projection is a two-edge circuit. The stronger undivided variants need only individual pair supplies and cover h=0. All quotient cuts/parities, finite selections and matching constructions are derived. This is a direct alternative proof; the general compatible-circuit theorem and terminal factorization are not claimed.",
+      "related_proof_declarations": [
+        "Overfull.FourOdd.four_odd_decomposition_real",
+        "Overfull.FourOdd.four_odd_decomposition_nat",
+        "Overfull.FourOdd.Decomposition.surplus_circuit"
+      ]
+    },
+    {
+      "lean_name": "Overfull.boundary_extension",
+      "file": "Overfull/BoundaryExtension/Full.lean",
+      "manuscript_label": "three:lem:boundary",
+      "manuscript_number": "4.14",
+      "proved": true,
+      "scope": "Full Lemma 4.14. For an arbitrary original proper boundary coloring with singleton/triple classes and linearly many singleton colors, construct a proper coloring of every original copy incident with the odd robust core, agreeing pointwise with each prescribed boundary label. Positive error and order threshold precede the graph and prescribed coloring. The finite-edge loopless multigraph formulation permits parallel copies and imposes no regularity outside the core. The direct one-apex/two-apex proof replaces the manuscript application of general Corollary 4.6 without claiming that broader result.",
+      "related_proof_declarations": [
+        "Overfull.OneCore.exists_uniform_one_apex_factorization",
+        "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization"
+      ],
+      "source_manifest": "boundary-extension-full-source.json",
+      "semantic_review": "boundary-extension-full-semantic-review.md"
+    },
+    {
+      "lean_name": "Overfull.single_core_coloring",
+      "file": "Overfull/AuxiliarySimple/SingleCore.lean",
+      "manuscript_label": "single:lem:coloring",
+      "manuscript_number": "3.1",
+      "statement_sha256": "e367990020005abeac5226b4f90e96728cafec20b584b7db4d442fda779af0fe",
+      "proved": true,
+      "scope": "Complete Lemma 3.1 for an arbitrary finite simple graph with actual maximum degree at least one quarter of its order, no maximum-degree-overfull set, a spanning ordinary robust core on at least one quarter of the vertices, and the literal combined degree-error/exceptional-cover budget. Positive error tolerance and order threshold precede the host and all graph-dependent data. The proof derives nonnegative error, permits overlap in the displayed cover, and assumes neither regularity nor even order. Its conclusion is a proper coloring of the original simple graph with exactly its maximum-degree palette. The sufficient fixed robust range is 0 < nu <= tau <= 1/4096000.",
+      "related_proof_declarations": [
+        "Overfull.one_core_nonregular_factorization",
+        "Overfull.two_core_nonregular_factorization",
+        "Overfull.three_core_regular_factorization",
+        "Overfull.three_core_regular_one_factorization"
+      ],
+      "source_manifest": "global-factorization-source.json",
+      "semantic_review": "global-factorization-semantic-review.md"
+    },
+    {
+      "lean_name": "Overfull.frequent_pattern_result_one_factorization",
+      "file": "Overfull/TerminalFour/Result.lean",
+      "manuscript_label": "three:prop:terminal",
+      "manuscript_number": "4.16",
+      "statement_sha256": "1ba102e379594ab72de4ba73cf41c88d9fbdadf1c132e2943b48da04e8c2cc1c",
+      "proved": true,
+      "scope": "Complete Proposition 4.16 for the actual CircuitPatterns.FrequentPatternResult, on an arbitrary finite core index type of cardinality three or four. Uniform tolerances and the order threshold precede the host and result. The proof uses the result's actual stored pattern, forest and pair supplies, exhausts all parity cases, and constructs a one-factorization on the original copies. The positive regular no-overfull assumptions imply the ambient even order.",
+      "source_manifest": "four-core-continuation-source.json",
+      "semantic_review": "four-core-continuation-semantic-review.md"
+    },
+    {
+      "lean_name": "Overfull.regular_core_one_factorization",
+      "file": "Overfull/FourCoreReduction/Regular.lean",
+      "manuscript_label": "three:thm:regular-four",
+      "manuscript_number": "4.17",
+      "statement_sha256": "b271893680e87b1c06c35172a138050dbf84009964eb618dce53c53ba595e322",
+      "proved": true,
+      "scope": "Complete Theorem 4.17 for the original even-order finite simple regular host with no overfull set, three or four disjoint robust cores, and the exceptional set. The original linear budget a + |Z| + 1 <= epsilon*n is retained. An arbitrary positive density is normalized internally, the core error's nonnegativity is derived, and all tolerances precede the host. The whole tolerance function is chosen before bounded absorption fixes its exceptional bound. All prefixes are restored on original edge copies.",
+      "source_manifest": "four-core-continuation-source.json",
+      "semantic_review": "four-core-continuation-semantic-review.md"
+    }
+  ],
+  "density_corollary_verified": true,
+  "additional_checked_components": [
+    {
+      "file": "Overfull/OrdinaryPackingPrefix.lean",
+      "lean_declarations": [
+        "Overfull.OrdinaryPackingStrategy.exists_prefix_rule",
+        "Overfull.adaptive_ordinary_packing_prefix"
+      ],
+      "manuscript_locations": [
+        "two:lem:adaptive",
+        "three:prop:foreign, interrupted packing phases"
+      ],
+      "scope": "Choose one ordinary-packing rule before the adversary and stopping index. Every admissible finite prefix up to the prescribed horizon gives actual edge-disjoint matchings perfect outside the supplied forbidden sets and fixed-parameter robust expansion of the exact unused graph. The uniform constants precede the graph, and admissibility is required only for inputs already presented. The public theorem supplies local feasibility from the proved reserve and round construction. The actual epoch induction applies this prefix interface to the constructed ambient matching process in Proposition 4.10; the stand-alone theorem concerns one supplied core and its admissible prefix."
+    },
+    {
+      "file": "Overfull/ForeignEdges/Minority.lean",
+      "lean_declarations": [
+        "Overfull.ForeignRefinement.minorityVertices_card_le",
+        "Overfull.ForeignRefinement.minorityVertices_subset",
+        "Overfull.ForeignRefinement.surviving_core_membership",
+        "Overfull.ForeignRefinement.minority_shore_deletion"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, minority-shore refinement"
+      ],
+      "scope": "From an actual partition into an exceptional set and disjoint cores of order at least three, and a total cut-minority bound of one, construct an actual set of at most one core vertex to move into the exceptional set. The surviving cores retain their labels, partition the remaining vertices, have at least two vertices each, and lie wholly on their original majority shores. This stand-alone helper assumes the minority-sum inequality. The actual small-cut refinement derives that inequality, and the completed process maintains the resulting partition through at most three vertex moves."
+    },
+    {
+      "file": "Overfull/ForeignEdges/ColorClasses.lean",
+      "lean_declarations": [
+        "Overfull.ForeignColoring.selectedMatching_isMatching_of_edge_copies",
+        "Overfull.ForeignColoring.selectedMatching_spanning_disjoint",
+        "Overfull.ForeignColoring.mem_hostColorClass",
+        "Overfull.ForeignColoring.hostColorClass_subset",
+        "Overfull.ForeignColoring.hostColorClass_isMatching",
+        "Overfull.ForeignColoring.hostColorClass_pairwise_disjoint",
+        "Overfull.ForeignColoring.hostColorClass_union",
+        "Overfull.ForeignColoring.selectedMatching_edgeUnion",
+        "Overfull.ForeignColoring.exists_color_classes",
+        "Overfull.ForeignColoring.exists_three_quarter_color_classes"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, foreign-edge color classes"
+      ],
+      "scope": "Apply the proved multigraph K\u00f6nig theorem to an actual bipartite finset of simple-host edges. Construct actual matching subgraphs whose edge sets partition exactly that finset, with pairwise edge disjointness and exact spanning-graph union. The degree inequality 4*d(v) <= 3*h0 gives floor(3*h0/4) colors, including the zero-color case. This stand-alone helper assumes actual bipartiteness and the incidence-degree bound. The maximizing-assignment theorem derives both hypotheses, and the configured epoch reconstructs the entire current foreign graph and its classes at every restart of the completed process."
+    },
+    {
+      "id": "foreign_assignment",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignAssignment.exists_assignment_color_classes_of_cores",
+        "Overfull.ForeignAssignment.foreignGraph_subgraph_eq",
+        "Overfull.ForeignAssignment.foreignEdges_surviving",
+        "Overfull.ForeignAssignment.exterior_degree_le_error"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, fresh maximizing assignment and coloring"
+      ],
+      "scope": "Construct actual maximizing assignments to same-cluster cores and actual matching color classes for the foreign graph. Derive exceptional and core degree bounds from at most four disjoint embedded cores, and prove exact edge persistence under a fixed assignment. A represented core label is required for each unmarked exceptional vertex. The actual entry and refinement invariants provide this hypothesis and the explicit graph-degree and partition bounds. The completed process chooses a fresh maximizing assignment at every epoch."
+    },
+    {
+      "id": "foreign_refinement",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignRefinement.exists_small_cut_refinement",
+        "Overfull.ForeignRefinement.exists_refinement_step",
+        "Overfull.ForeignRefinement.core_refinement_chain_length",
+        "Overfull.ForeignRefinement.encode_labels_fin_four",
+        "Overfull.ForeignRefinement.history_crossing_edges_le_six",
+        "Overfull.ForeignRefinement.heavyVertices_card_le",
+        "Overfull.ForeignRefinement.marking_leaves_represented_labels",
+        "Overfull.ForeignRefinement.survivingCore_restart",
+        "Overfull.ForeignRefinement.RefinementStep.marked_card_growth",
+        "Overfull.ForeignRefinement.RefinementStep.crossing_edges_bound"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, refinement and marked-vertex accounting"
+      ],
+      "scope": "An actual small cut separating two core majorities produces an actual refinement with at most one moved vertex, actual heavy marks, surviving robust embedded core graphs, Fin-4 labels, strictly more occupied core groups, and controlled intercluster degrees. Recorded-cut history gives at most 6*k0 actual intercluster edges and the actual heavy-set bound. The local refinement consumes an actual triggering cut and the stated small-cut and partition hypotheses; it derives the minority bound internally. RefinementHistory and the actual Entry update maintain the recorded cuts, marks, and strict group increase used by the completed outer induction."
+    },
+    {
+      "id": "foreign_actual_incidence",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignIncidence.footprintCount_add_core_degree_le",
+        "Overfull.ForeignIncidence.footprintCount_le_real_error",
+        "Overfull.ForeignIncidence.next_footprint_le_error",
+        "Overfull.ForeignIncidence.remainingCore_degree_identity",
+        "Overfull.ForeignIncidence.remainingCore_real_degree_bounds",
+        "Overfull.ForeignIncidence.assembled_remainingCore_le_residual",
+        "Overfull.ForeignIncidence.perfect_deletion_regular",
+        "Overfull.ForeignIncidence.allowed_of_partial_prefix"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, adaptive incidence and whole unused core"
+      ],
+      "scope": "Derive the actual covered-core footprint budget from distinct exterior edges, including the current partial matching before its completion exists. Prove exact whole-unused-core and ambient degree identities, actual core embedding, and the precise Allowed predicate from graph-level inputs. These local theorems concern actual supplied partial and completed matching prefixes. The Valid-state and epoch induction construct those prefixes and derive the admissibility of each current partial matching before constructing its core completion."
+    },
+    {
+      "id": "foreign_safe_adaptive_completion",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.prepare_safe_prescription",
+        "Overfull.safe_prescription_of_core_matchings",
+        "Overfull.ForeignCompletion.assemble_core_completions",
+        "Overfull.ForeignRuleCompletion.exists_certified_core_rules",
+        "Overfull.ForeignRuleCompletion.core_matching_from_certificate",
+        "Overfull.ForeignRuleCompletion.assemble_from_certificates",
+        "Overfull.ForeignRuleCompletion.safe_complete_from_certificates"
+      ],
+      "manuscript_locations": [
+        "three:lem:safe-prescription, independent core completion",
+        "three:prop:foreign, fixed-rule safe matching deletion"
+      ],
+      "scope": "Prepare a bounded exceptional partial matching with caller-selected footprint tolerance, then construct its ambient perfect completion from actual certified fixed-rule core outputs. Prove exact induced core matching identities, robust exact residual cores, prescribed-edge loss, and absence of every overfull set in the residual. The preparation constants precede the graph. Completion consumes the safety clause supplied by preparation and actual consistent, admissible core transcripts with their ambient embeddings. The Valid-state and epoch construction maintain these inputs and obtain robust next outputs from the certified fixed packing rules."
+    },
+    {
+      "id": "foreign_fixed_rule_transcripts",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignTranscript.run_eq_prefix",
+        "Overfull.adaptive_ordinary_packing_transcript",
+        "Overfull.ForeignRuleStep.step_of_certificate",
+        "Overfull.ForeignRuleStep.exists_step_rule"
+      ],
+      "manuscript_locations": [
+        "two:lem:adaptive, finite transcript form",
+        "three:prop:foreign, stopped packing epochs"
+      ],
+      "scope": "Identify a finite actual transcript with the online execution of its fixed rule. The proved packing theorem supplies a rule before any transcript. Updating the current entry yields the actual next matching inside the whole unused core, with exact complement coverage, prior-edge disjointness, and unchanged certificate robustness. Admissibility and rule consistency are required only for the actual presented prefix; no future inputs are constrained. The actual Valid-state, inner epoch induction, and outer reduction apply these local interfaces to the complete ambient process."
+    },
+    {
+      "id": "foreign_epoch_parameters",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignPackingSchedule.exists_epoch_parameters",
+        "Overfull.ForeignPackingSchedule.exists_packing_schedule",
+        "Overfull.ForeignEpochParameters.color_horizon_le_packing_horizon",
+        "Overfull.ForeignEpochParameters.common_reserve",
+        "Overfull.ForeignEpochParameters.strict_safe_reserve",
+        "Overfull.ForeignEpochParameters.exists_uniform_epoch_parameters"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, synchronized restarts and uniform constants"
+      ],
+      "scope": "Choose the adaptive packing schedule before any graph, with output range tau/2 and next input half the output robust parameter. Choose one positive original error and order threshold after four fixed positive tolerances and thresholds, uniformly in the exceptional order and up to three vertex moves. Prove the exact phase horizon and strict safe reserve. These scalar and packing-schedule results supply local parameter choices. The uniform process-parameter theorem composes them with safe preparation and all actual core losses and exceptional-set increases, using one original error and order choice for the completed four-epoch construction."
+    },
+    {
+      "id": "foreign_phase_final_count",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignPhase.currentClass_loss",
+        "Overfull.ForeignPhase.complete_phase_card_le_of_prescribed_loss",
+        "Overfull.ForeignPhase.four_phase_degree_reserve",
+        "Overfull.ForeignPhase.complete_foreign_phase_card_le",
+        "Overfull.ForeignPhase.exists_fresh_phase_data",
+        "Overfull.ForeignAssignment.allForeignEdges_incidence_sum",
+        "Overfull.ForeignAssignment.allForeignEdges_incidence_le",
+        "Overfull.ForeignAssignment.final_foreign_incidence_bound"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, full phase and final incidence count"
+      ],
+      "scope": "Choose fresh actual assignment/color-class data before later deletions. Rehost current classes with exact loss identities and prove that a completed phase leaves at most c1 times its number of colors in the actual residual foreign graph. Four phase degree bounds give factor 256. Count every actual exceptional incidence once and obtain 256*(c1+6+t0)*h from the final phase, recorded-cut, marked-set, and retained-degree bounds. The local completed-phase bound consumes an actual deletion sequence with per-class losses and actual recorded-cut and marking bounds. The constructed Valid epoch and maintained process history supply these inputs in the completed reduction. Every refinement rebuilds the entire current foreign graph; the final fresh assignment gives the coefficient with c1 rather than 4*c1."
+    },
+    {
+      "id": "foreign_actual_concatenation",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignConcatenation.appendEpoch_suffix",
+        "Overfull.ForeignConcatenation.appendEpoch_perfect",
+        "Overfull.ForeignConcatenation.appendEpoch_present",
+        "Overfull.ForeignConcatenation.appendEpoch_pairwise_disjoint",
+        "Overfull.ForeignConcatenation.concatenate_epochs",
+        "Overfull.ForeignConcatenation.epoch_degree_reserve",
+        "Overfull.ForeignConcatenation.within_epoch_degree_reserve",
+        "Overfull.ForeignConcatenation.actual_prefix_degree_reserve",
+        "Overfull.ForeignConcatenation.actual_prefix_four_epoch_reserve"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, original-host matching sequence and all-prefix degree reserve"
+      ],
+      "scope": "Rehost actual local perfect matchings in the original graph and concatenate epoch prefixes with exact global-to-local residual identities, current-host containment, perfectness, and pairwise edge disjointness. Derive the factor-four reserve after every epoch and at every interior prefix, giving factor 256 throughout the first four epochs. The concatenation helpers consume actual local matching prefixes. The completed reduction constructs these prefixes and uses their exact residual identities, including at interrupted epochs."
+    },
+    {
+      "id": "foreign_recorded_history",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignRefinement.CutHistory.edge_separated",
+        "Overfull.ForeignRefinement.CutHistory.crossing_card_le_six",
+        "Overfull.ForeignRefinement.RefinementHistory.length_le_three",
+        "Overfull.ForeignRefinement.RefinementHistory.length_lt_three_of_group_increase",
+        "Overfull.ForeignRefinement.RefinementHistory.crossing_card_le_six",
+        "Overfull.ForeignRefinement.RefinementHistory.append_recorded",
+        "Overfull.ForeignRefinement.RefinementHistory.append_shores",
+        "Overfull.ForeignRefinement.RefinementHistory.marked_card_le_nat"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, accumulated cut and marked-vertex history"
+      ],
+      "scope": "Maintain actual recorded host graphs and cut shores under graph deletion, marking, relabeling, and refinement. Every current crossing edge is separated by a recorded cut. The history bounds the number of refinements by three, the crossing edges by 6*k0, and the actual marked-set cardinality. History data records actual graph cuts and survives intervening matching deletions. The actual Entry constructors and refinement transition maintain this history throughout the completed process."
+    },
+    {
+      "id": "foreign_uniform_process_parameters",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignEpochParameters.exists_safe_parameters",
+        "Overfull.ForeignEpochParameters.exists_restart_parameters",
+        "Overfull.ForeignEpochParameters.RestartParameters.safe_parameter_bounds",
+        "Overfull.ForeignEpochParameters.RestartParameters.uniform_initial_parameters",
+        "Overfull.ForeignEpochParameters.prefix_scalar_bounds",
+        "Overfull.ForeignEpochParameters.RestartParameters.exists_process_parameters"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, uniform parameters and actual moving core types"
+      ],
+      "scope": "Choose all four packing and safe-preparation rules and robust restart parameters before the graph. One original positive error and graph-order threshold supplies every actual retained-core packing budget, ambient safe-preparation budget, small-cut bound, robust size inequality, and density and degree reserve at every possible epoch prefix. The original error and order choices precede the vertex and core types, graph, exceptional order, core error, and all actual Entry states. No additional per-stage smallness assumption or local feasibility oracle is introduced."
+    },
+    {
+      "id": "foreign_actual_epoch_state",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignEpoch.valid_zero",
+        "Overfull.ForeignEpoch.Valid.append",
+        "Overfull.ForeignEpoch.Valid.allowed",
+        "Overfull.ForeignEpoch.Valid.allowed_next",
+        "Overfull.ForeignEpoch.Valid.graph_degree",
+        "Overfull.ForeignEpoch.Valid.core_embed",
+        "Overfull.ForeignEpoch.Valid.core_packing",
+        "Overfull.ForeignEpoch.Valid.core_degree",
+        "Overfull.ForeignEpoch.Transcript.currentCore_eq_remaining"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, actual adaptive transcripts and residual cores"
+      ],
+      "scope": "Track actual ambient and partial matchings together with every core transcript. Prove valid initialization and append, actual admissibility before and after completion, exact residual degree, whole-unused-core embedding, sharp degree loss, and certificate robustness at each prefix. Admissibility is derived from actual partial matchings and distinct exterior edges. The state does not assume an admissibility or future-completion oracle; the epoch induction constructs all matching steps."
+    },
+    {
+      "id": "foreign_constructed_epoch",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignProcess.Entry.core_degree_upper",
+        "Overfull.ForeignProcess.Entry.exists_core_rules",
+        "Overfull.ForeignProcess.Entry.exists_fresh_epoch",
+        "Overfull.ForeignEpoch.Setup.degree_reserve",
+        "Overfull.ForeignEpoch.Setup.initial_packing_degrees",
+        "Overfull.ForeignEpoch.Setup.extend_no_trigger",
+        "Overfull.ForeignEpoch.Setup.finish_from_valid",
+        "Overfull.ForeignEpoch.Setup.exists_stopping_transcript"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, fresh epoch configuration and inner induction"
+      ],
+      "scope": "At every actual entry choose fresh maximizing assignment and exact foreign-edge classes together with fixed certified core rules. Construct a safe next ambient perfect matching whenever no actual trigger exists. Finite induction produces a valid stopping transcript that either processes every class or exhibits an actual triggering cut. The inner induction calls the proved safe-preparation and fixed-rule completion constructions on actual graphs. It has no assumption that arbitrary complete phases already exist. Its stopping cut is the input to the actual outer refinement."
+    },
+    {
+      "id": "foreign_actual_process_refinement",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignEpochParameters.RestartParameters.refine_current",
+        "Overfull.ForeignEpochParameters.RestartParameters.refine_at_prefix",
+        "Overfull.ForeignProcess.Entry.graph_le_original",
+        "Overfull.ForeignProcess.Entry.marked_card_le",
+        "Overfull.ForeignProcess.Entry.crossing_card_le",
+        "Overfull.ForeignProcess.Entry.core_card_lower",
+        "Overfull.ForeignProcess.Entry.labels_injective_at_three",
+        "Overfull.ForeignProcess.Entry.no_trigger_at_three",
+        "Overfull.ForeignProcess.Entry.refine_from_prefix"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, actual restart transition and terminal epoch"
+      ],
+      "scope": "Construct the next actual process entry from a triggering cut at a valid interrupted prefix, retaining the original-host matching history and updating the actual surviving cores and exceptional set. At index three the occupied core labels are injective, which rules out every further trigger. The refinement wrapper constructs the actual RefinementStep and next Entry from the proved small-cut theorem. Strict occupied-group growth and at most four original cores give termination after at most three refinements."
+    },
+    {
+      "id": "foreign_completed_epoch_result",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.ForeignEpochParameters.RestartParameters.finalOutput_pos",
+        "Overfull.ForeignEpochParameters.RestartParameters.finalOutput_le",
+        "Overfull.ForeignEpochParameters.RestartParameters.finalOutput_le_range",
+        "Overfull.ForeignEpoch.Valid.final_incidence_bound",
+        "Overfull.ForeignEpoch.Valid.common_core_guarantees",
+        "Overfull.ForeignProcess.ReductionResult.graph_le_original",
+        "Overfull.ForeignProcess.ReductionResult.pairwise_disjoint"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign, final actual graph and incidence conclusion"
+      ],
+      "scope": "A completed actual epoch has the required exceptional unassigned-neighbor sum and exact unused robust cores at one common positive output parameter. The ReductionResult carries an actual original-host perfect-matching sequence, its exact regular non-overfull residual, factor-256 degree reserve, actual partition and assignment, and at most three core losses and exceptional additions. These theorem-level guarantees apply to actual valid transcripts and the constructed result. The deterministic completed-epoch constructor appends the real local matching sequence; the outer induction proves that a completed epoch is reached."
+    },
+    {
+      "id": "foreign_edge_reduction",
+      "documentation": "foreign-edge-reduction.md",
+      "lean_declarations": [
+        "Overfull.foreign_edge_reduction",
+        "Overfull.foreign_edge_reduction_with_small_error",
+        "Overfull.ForeignProcess.reduce_from_entry",
+        "Overfull.ForeignProcess.final_error_of_initial_budget",
+        "Overfull.ForeignProcess.final_core_size_of_initial_budget"
+      ],
+      "manuscript_locations": [
+        "three:prop:foreign"
+      ],
+      "scope": "Full Proposition 4.10. The inner and outer inductions construct the actual matching deletions and at most three refinements from the original robust partition. The result has a regular non-overfull residual of degree at least k0/256, actual surviving robust cores, at most three additional exceptional vertices, and total exceptional unassigned-core incidence at most 256*(classLoss+6+markedLimit)*h. One positive robust output parameter is fixed before an arbitrary requested final error; the original error and order threshold then precede all graph data. Complete under the manuscript density, robust-core, near-regularity, partition, and no-overfull assumptions. The small-error theorem supplies the requested combined final error and a linear lower bound for every actual final core, with output robustness independent of that error request. The manuscript main theorem remains unverified; bounded exceptional absorption is proved separately as Proposition 4.12."
+    },
+    {
+      "id": "absorption_threshold_selection",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.AbsorptionThresholds.bands_disjoint",
+        "Overfull.AbsorptionThresholds.total_band_mass_le",
+        "Overfull.AbsorptionThresholds.exists_light_band",
+        "Overfull.AbsorptionThresholds.absorption_card_bounds"
+      ],
+      "manuscript_locations": [
+        "three:prop:band, threshold bands and exceptional cardinalities"
+      ],
+      "scope": "Partition actual nonnegative exceptional loads into disjoint threshold bands, select a band of small total load, and bound the vertices remaining after each of the two absorptions. These finite counting theorems consume a nonnegative load function and its total bound. The public absorption theorem supplies the actual unassigned-core incidences and all graph-level conclusions."
+    },
+    {
+      "id": "absorption_uniform_parameters",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.AbsorptionThresholds.lowerEnvelope_pos",
+        "Overfull.AbsorptionThresholds.lowerEnvelope_le",
+        "Overfull.AbsorptionThresholds.exists_long_threshold_schedule",
+        "Overfull.AbsorptionThresholds.uniform_final_error_actual_card",
+        "Overfull.AbsorptionParameters.exists_uniform_phase_parameters"
+      ],
+      "manuscript_locations": [
+        "three:prop:band, uniform constants and actual-cardinality error"
+      ],
+      "scope": "Choose the finite threshold schedule, phase error and order threshold, and final error budget before the graph. A positive lower envelope permits the supplied function to be evaluated at the actual remaining exceptional cardinality. The choices supply the degree reserves, packing horizons, footprint bounds, and vertex-addition bounds for the constructed phase. The robust output precedes the arbitrary positive final error function; no monotonicity of that function is assumed."
+    },
+    {
+      "id": "absorption_actual_core_enlargement",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.Absorption.robust_after_addition",
+        "Overfull.Absorption.enlargedCore_degree_lower",
+        "Overfull.Absorption.enlargedCore_robust",
+        "Overfull.Absorption.enlargedSets_pairwise_disjoint",
+        "Overfull.Absorption.enlargedSets_disjoint_remaining",
+        "Overfull.Absorption.enlargedSets_cover",
+        "Overfull.Absorption.enlargedGraphs_degree_lower",
+        "Overfull.Absorption.enlargedGraphs_robust"
+      ],
+      "manuscript_locations": [
+        "three:prop:band, first and second core enlargement"
+      ],
+      "scope": "Construct actual enlarged vertex sets and embedded core graphs, preserve the disjoint partition, and prove the old and added vertices satisfy the required degree and robust-neighborhood bounds. The vertex-addition lemmas require their stated actual addition-size and degree bounds. The two applications in the public theorem derive these bounds from the selected threshold bands and constructed forcing transcript."
+    },
+    {
+      "id": "absorption_forced_star_preparation",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.prepare_forced_star_of_bounds",
+        "Overfull.prepare_forced_star"
+      ],
+      "manuscript_locations": [
+        "three:lem:force, preparation before adaptive completion",
+        "three:prop:band, safe forced matching deletion"
+      ],
+      "scope": "Sample and compress an actual perfect matching to a bounded partial matching meeting the prescribed exceptional-centered star, with safety for every compatible completion having the stated actual robust residual cores. Preparation precedes the adaptive core completion and preserves the exact threshold 11*2^(t+4). The fixed-rule forcing process supplies the compatible completion and its residual robustness."
+    },
+    {
+      "id": "absorption_actual_potential",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.Absorption.outsideStar_card",
+        "Overfull.Absorption.forcingPotential_decreases",
+        "Overfull.Absorption.outsideDegree_le_originalForeign_add",
+        "Overfull.Absorption.forcingPotential_le_originalForeign_add"
+      ],
+      "manuscript_locations": [
+        "three:prop:band, actual decreasing forcing potential"
+      ],
+      "scope": "Count actual outside-neighbor incidences, including exceptional-exceptional edges. Meeting the actual outside star strictly decreases this sum; the initial sum is bounded by the original foreign incidences plus exceptional-set incidences. The decrease concerns the exact graph difference after deleting the actual matching. No proxy count omitting edges between exceptional vertices is used."
+    },
+    {
+      "id": "absorption_fixed_rule_forcing",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.Absorption.ForcingSetup.current_degree_bounds",
+        "Overfull.Absorption.ForcingSetup.extend",
+        "Overfull.Absorption.ForcingSetup.finish_from_valid",
+        "Overfull.Absorption.ForcingSetup.exists_terminal_transcript"
+      ],
+      "manuscript_locations": [
+        "three:prop:band, fixed-rule forcing and finite termination"
+      ],
+      "scope": "Construct each actual safe perfect-matching deletion using one fixed family of certified core rules. Derive admissibility before completion and terminate by induction on the actual potential, retaining s+Phi_s <= Phi_0 and the same robust output parameter. The local process takes static scalar reserves and proved packing certificates. It assumes no future preparation, admissibility, or completion oracle. The public theorem constructs this setup from uniform parameters and actual graph data, including the zero-round case."
+    },
+    {
+      "id": "absorption_actual_result",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.Absorption.enlargedGraphs_degree_lower_of_outside",
+        "Overfull.Absorption.retained_degree_three_quarters",
+        "Overfull.Absorption.AbsorptionResult.graph_le_original",
+        "Overfull.Absorption.AbsorptionResult.pairwise_disjoint"
+      ],
+      "manuscript_locations": [
+        "three:prop:band, exact final residual and second absorption"
+      ],
+      "scope": "Convert the terminal outside-degree bound into the actual enlarged-core degree bound, retain at least three quarters of the original regular degree, and identify the exact residual with an original-host sequence of edge-disjoint perfect matchings. The result structure records the exact residual and graph-level conclusions. The public bounded absorption theorem constructs this result; defining the structure alone is not counted as a proof."
+    },
+    {
+      "id": "bounded_exceptional_absorption",
+      "documentation": "exceptional-absorption.md",
+      "lean_declarations": [
+        "Overfull.bounded_exceptional_absorption"
+      ],
+      "manuscript_locations": [
+        "three:prop:band"
+      ],
+      "scope": "Full Proposition 4.12. Construct actual perfect-matching deletions from the regular non-overfull robust-core partition and total foreign-incidence bound. The exact regular non-overfull residual retains at least three quarters of the original degree, has enlarged robust cores, and has a bounded remaining exceptional set. The positive robust output precedes every arbitrary positive function f. The exceptional bound, positive initial error, and order threshold precede all graph data. The final core error is at most f(|Z_final|) times the actual residual degree, with no monotonicity assumption on f. The manuscript main theorem remains unverified."
+    },
+    {
+      "id": "pattern_fixed_encoding",
+      "documentation": "frequent-patterns.md",
+      "lean_declarations": [
+        "Overfull.Compression.exists_compressed_matching_fixed_code",
+        "Overfull.Patterns.exists_compressed_encoding",
+        "Overfull.Patterns.card_pattern",
+        "Overfull.Patterns.card_pattern_le",
+        "Overfull.Patterns.exists_encoded_distribution"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern"
+      ],
+      "scope": "Fixed common core labels, actual compressed encodings, and the finite pattern-count bound."
+    },
+    {
+      "id": "pattern_weighted_capacity",
+      "documentation": "frequent-patterns.md",
+      "lean_declarations": [
+        "Overfull.Patterns.EncodedDistribution.weight_sum",
+        "Overfull.Patterns.EncodedDistribution.internal_pair_weight_le_one",
+        "Overfull.Patterns.EncodedDistribution.pair_capacity",
+        "Overfull.Patterns.EncodedDistribution.whole_cut_capacity_actual",
+        "Overfull.Patterns.EncodedDistribution.positive_odd_cut"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern"
+      ],
+      "scope": "The actual scaled matching distribution supplies pattern weights, actual pair capacities, whole-cut capacities, and the simple-edge bound for exceptional pairs."
+    },
+    {
+      "id": "pattern_rounding",
+      "documentation": "frequent-patterns.md",
+      "lean_declarations": [
+        "Overfull.Patterns.EncodedDistribution.exists_frequent_reserve",
+        "Overfull.Patterns.pair_cut_discard_bound",
+        "Overfull.Patterns.EncodedDistribution.planned_residual_bounds",
+        "Overfull.Patterns.EncodedDistribution.planned_pool_lower",
+        "Overfull.Patterns.EncodedDistribution.planned_protected_zero",
+        "Overfull.Patterns.EncodedDistribution.planned_pair_demand"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern"
+      ],
+      "scope": "One common proposal, simultaneous pair and cut discards, a linear frequent-pattern reserve, and explicit residual degree bounds."
+    },
+    {
+      "id": "pattern_actual_realization",
+      "documentation": "frequent-patterns.md",
+      "lean_declarations": [
+        "Overfull.Patterns.one_le_error_of_boundary",
+        "Overfull.Patterns.realize_patterns",
+        "Overfull.Patterns.scheduledPattern_total",
+        "Overfull.Patterns.EncodedDistribution.exists_planned_realization",
+        "Overfull.Patterns.RealizedPlan.prefix_count_le"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern"
+      ],
+      "scope": "Actual pairwise edge-disjoint boundary matchings with exact accepted multiplicities, exceptional coverage, parity, and endpoint-conflict slack."
+    },
+    {
+      "id": "pattern_fixed_completion",
+      "documentation": "frequent-patterns.md",
+      "lean_declarations": [
+        "Overfull.Patterns.fixed_boundary_allowed",
+        "Overfull.Patterns.completed_family_disjoint",
+        "Overfull.Patterns.exists_boundary_completion"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern"
+      ],
+      "scope": "One fixed certified rule per core completes the actual boundary schedule; incidence budgets, disjointness, regularity and residual robustness are proved from the constructed graph data."
+    },
+    {
+      "id": "pattern_prefix_safety",
+      "documentation": "frequent-patterns.md",
+      "lean_declarations": [
+        "Overfull.Patterns.afterDeletions_cut_accounting",
+        "Overfull.Patterns.afterDeletions_cut_unchanged",
+        "Overfull.Patterns.no_overfull_of_whole_cut_bounds",
+        "Overfull.Patterns.completed_pattern_whole_cut",
+        "Overfull.Patterns.EncodedDistribution.completed_prefix_safe"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern"
+      ],
+      "scope": "Exact actual cut subtraction, odd whole-cut support, protected even cuts, toggle bounds, and small-cut classification prove safety at every prefix."
+    },
+    {
+      "id": "pattern_residual_supply",
+      "documentation": "frequent-patterns.md",
+      "lean_declarations": [
+        "Overfull.Patterns.completed_pattern_pool_reserved",
+        "Overfull.Patterns.completed_pattern_cut_reserved",
+        "Overfull.Patterns.reserved_pairs_give_neighbors",
+        "Overfull.Patterns.absorb_all_with_reserved_neighbors",
+        "Overfull.Patterns.Encodes.enlarged_four_odd_forest",
+        "Overfull.Patterns.forest_supply_on_enlarged_parts",
+        "Overfull.Patterns.reserved_forest_pair_enlarged",
+        "Overfull.Patterns.assemble_frequent_pattern_result"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern"
+      ],
+      "scope": "Actual surviving edge pools give distinct reserved neighbors, final absorption, part parity, forest shape, actual pair supply and arbitrary union cut supply."
+    },
+    {
+      "id": "pattern_uniform_parameters",
+      "documentation": "frequent-patterns.md",
+      "lean_declarations": [
+        "Overfull.Patterns.exists_pattern_scalar_parameters",
+        "Overfull.Patterns.pattern_packing_horizon",
+        "Overfull.Patterns.exists_frequent_pattern_parameters"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern"
+      ],
+      "scope": "Packing and output robustness precede every requested final error; all scalar thresholds precede the graph and support packing, safety, absorption and the final relative error."
+    },
+    {
+      "id": "frequent_boundary_patterns",
+      "documentation": "frequent-patterns.md",
+      "lean_declarations": [
+        "Overfull.frequent_boundary_patterns"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern"
+      ],
+      "scope": "Full Lemma 4.13: construct actual perfect-matching deletions and absorb all exceptional vertices into enlarged robust cores, with exact regular non-overfull residual, degree and integer reserve at least k/(3*b4(t)), arbitrarily small relative core error and reserve gap, and actual matching-or-star pair and cut supply in the four-odd-part case."
+    },
+    {
+      "id": "boundary_color_footprints",
+      "documentation": "boundary-extension.md",
+      "lean_declarations": [
+        "Overfull.BoundaryExtension.BoundaryColoring.footprint_card",
+        "Overfull.BoundaryExtension.BoundaryColoring.footprint_incidence_eq_degree",
+        "Overfull.BoundaryExtension.BoundaryColoring.singletons_add_triples",
+        "Overfull.BoundaryExtension.BoundaryColoring.triple_horizon",
+        "Overfull.BoundaryExtension.BoundaryColoring.tripleLabel_range"
+      ],
+      "manuscript_locations": [
+        "three:lem:boundary"
+      ],
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Actual boundary edge copies have exactly the prescribed footprint cardinality, and total footprint incidence equals boundary degree. The singleton count supplies the exact triple-packing horizon. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
+    },
+    {
+      "id": "boundary_triple_packing",
+      "documentation": "boundary-extension.md",
+      "lean_declarations": [
+        "Overfull.BoundaryExtension.pack_fixed_forbidden_sets",
+        "Overfull.BoundaryExtension.CorePacking.degree_identity",
+        "Overfull.BoundaryExtension.boundary_degree_le_error",
+        "Overfull.BoundaryExtension.exists_triple_core_packing"
+      ],
+      "manuscript_locations": [
+        "three:lem:boundary"
+      ],
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Uniformly construct actual disjoint core completions of every prescribed triple class, deriving all forbidden-set budgets from the proper coloring and embedded core. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
+    },
+    {
+      "id": "boundary_actual_residual",
+      "documentation": "boundary-extension.md",
+      "lean_declarations": [
+        "Overfull.BoundaryExtension.completedColor_isMatching",
+        "Overfull.BoundaryExtension.completedColor_covers_uniquely",
+        "Overfull.BoundaryExtension.completedColor_boundary",
+        "Overfull.BoundaryExtension.completedColor_disjoint",
+        "Overfull.BoundaryExtension.remainingAmbient_degree_add",
+        "Overfull.BoundaryExtension.remainingAmbient_regular",
+        "Overfull.BoundaryExtension.coreCopy_survives_iff",
+        "Overfull.BoundaryExtension.remainingEmbeddedCore_robust",
+        "Overfull.BoundaryExtension.remainingEmbeddedCore_degree_lower",
+        "Overfull.BoundaryExtension.completedTriples_boundary"
+      ],
+      "manuscript_locations": [
+        "three:lem:boundary"
+      ],
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Assemble actual original-copy completed classes, prove exact core coverage and boundary agreement, and embed the precise packed residual core in the actual deleted-edge host. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
+    },
+    {
+      "id": "boundary_apex_contraction",
+      "documentation": "boundary-extension.md",
+      "lean_declarations": [
+        "Overfull.BoundaryExtension.contract_incident_of_original",
+        "Overfull.BoundaryExtension.incident_inl_iff",
+        "Overfull.BoundaryExtension.incident_apex_iff",
+        "Overfull.BoundaryExtension.degree_inl",
+        "Overfull.BoundaryExtension.degree_apex_eq_cutSize",
+        "Overfull.BoundaryExtension.contract_regular",
+        "Overfull.BoundaryExtension.even_contracted_order",
+        "Overfull.BoundaryExtension.contractCore_degree",
+        "Overfull.BoundaryExtension.contractCore_robust"
+      ],
+      "manuscript_locations": [
+        "three:lem:boundary"
+      ],
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Retain the exact original incident edge copies and contract all outside endpoints, proving looplessness, exact core and apex degrees, even order, and an actual robust embedded core. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
+    },
+    {
+      "id": "one_exterior_odd_cuts",
+      "documentation": "boundary-extension.md",
+      "lean_declarations": [
+        "Overfull.OneCore.odd_small_core_shore",
+        "Overfull.OneCore.odd_cuts_of_minority_bound",
+        "Overfull.OneCore.robust_one_exterior_no_overfull",
+        "Overfull.BoundaryExtension.exists_contraction_cut_threshold"
+      ],
+      "manuscript_locations": [
+        "three:lem:boundary"
+      ],
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Derive all odd-cut inequalities and no-overfullness from a robust core omitting at most one vertex, including uniform thresholds and the actual contraction adapter. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
+    },
+    {
+      "id": "boundary_surviving_singletons",
+      "documentation": "boundary-extension.md",
+      "lean_declarations": [
+        "Overfull.BoundaryExtension.restrictedBoundary_mem_iff",
+        "Overfull.BoundaryExtension.BoundaryColoring.residualLabel_not_mem_triples",
+        "Overfull.BoundaryExtension.BoundaryColoring.residualLabel_injective",
+        "Overfull.BoundaryExtension.BoundaryColoring.singletonBoundaryEquiv_val",
+        "Overfull.BoundaryExtension.BoundaryColoring.residual_cutSize_eq_singletons",
+        "Overfull.BoundaryExtension.BoundaryColoring.residual_cutSize_eq_sub"
+      ],
+      "manuscript_locations": [
+        "three:lem:boundary"
+      ],
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Prove that the actual surviving boundary is bijective with the original singleton colors and that its inherited labels are injective, deriving the exact remaining boundary count. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
+    },
+    {
+      "id": "boundary_color_restoration",
+      "documentation": "boundary-extension.md",
+      "lean_declarations": [
+        "Overfull.Multigraph.PaletteColoring.incidence_bijective",
+        "Overfull.BoundaryExtension.restoreSingletonLabels_boundary",
+        "Overfull.BoundaryExtension.restoreSingletonLabels_range",
+        "Overfull.BoundaryExtension.exists_singleton_boundary_extension",
+        "Overfull.BoundaryExtension.reassemble_deleted_colors",
+        "Overfull.BoundaryExtension.extend_from_completed_triples"
+      ],
+      "manuscript_locations": [
+        "three:lem:boundary"
+      ],
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: From an actual coloring of the exact apex residual, align its palette with the original singleton labels and restore the completed colors with exact agreement and properness at every original vertex. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
+    },
+    {
+      "id": "one_apex_even_core_complement",
+      "documentation": "boundary-extension.md",
+      "lean_declarations": [
+        "Overfull.OneCore.complement_degree_add_core",
+        "Overfull.OneCore.coreEdges_disjoint_cut",
+        "Overfull.OneCore.one_apex_complement_colorable",
+        "Overfull.OneCore.restrictCore_edges",
+        "Overfull.OneCore.restrictCore_one_degree",
+        "Overfull.OneCore.restrictCore_one_robust",
+        "Overfull.OneCore.even_core_complement"
+      ],
+      "manuscript_locations": [
+        "three:lem:boundary"
+      ],
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Move one vertex out of the actual odd core to obtain an even robust core with exactly two exterior vertices and construct an actual coloring of its exceptional complement. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
+    },
+    {
+      "id": "boundary_extension_reduction",
+      "documentation": "boundary-extension.md",
+      "lean_declarations": [
+        "Overfull.boundary_extension_reduction"
+      ],
+      "manuscript_locations": [
+        "three:lem:boundary"
+      ],
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Uniformly construct the exact triple deletions, residual robust core, singleton boundary, and even regular no-overfull apex graph, together with exact reconstruction from an actual coloring of that precise graph. At that checkpoint the full boundary-extension assertion remained unproved. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
+    },
+    {
+      "id": "bounded_forbidden_coloring",
+      "file": "Overfull/ColoringExtension/Uniform.lean",
+      "lean_declarations": [
+        "Overfull.ColoringExtension.restrictionFiber_card",
+        "Overfull.ColoringExtension.permutations_mem_card_le_pow",
+        "Overfull.ColoringExtension.exists_sparse_conflicts",
+        "Overfull.ColoringExtension.repair_relabeling",
+        "Overfull.ColoringExtension.exists_avoiding_with_relabeling",
+        "Overfull.ColoringExtension.exists_avoiding_coloring",
+        "Overfull.ColoringExtension.exists_uniform_coloring_bounds",
+        "Overfull.ColoringExtension.exists_uniform_avoiding_coloring",
+        "Overfull.ColoringExtension.exists_initial_simple_coloring",
+        "Overfull.ColoringExtension.exists_uniform_simple_avoiding"
+      ],
+      "manuscript_locations": [
+        "two:lem:ordinary-special, specialized forbidden-color step"
+      ],
+      "scope": "Prove exact finite permutation-fiber counts, a sparse-conflict relabeling criterion, and deterministic repair with spare colors for actual multigraph edge copies. Uniform forbidden-label tolerances and order thresholds precede the graph. For simple graphs the checked Vizing theorem supplies the initial coloring, giving maxDegree+1+ceil(delta*|V|) colors with bounded prescribed forbidden labels. This proves the specialized bounded-forbidden-label step used in the ordinary-core argument by permutation counting, greedy repair, and Vizing. It does not prove arbitrary-list edge coloring or the general Kahn theorem, and does not complete Lemma 4.2."
+    },
+    {
+      "id": "constrained_color_balance_and_deficits",
+      "file": "Overfull/ColoringExtension/NearPerfect.lean",
+      "lean_declarations": [
+        "Overfull.Multigraph.EdgeColoring.exists_transfer_two_component_avoiding",
+        "Overfull.Multigraph.EdgeColoring.exists_balanced_avoiding",
+        "Overfull.Multigraph.EdgeColoring.exists_equitable",
+        "Overfull.Multigraph.EdgeColoring.uncovered_scaled_bound",
+        "Overfull.Multigraph.EdgeColoring.uncovered_incidence_eq_sub",
+        "Overfull.Multigraph.EdgeColoring.repairVertices_scaled_bound",
+        "Overfull.Multigraph.EdgeColoring.repairVertices_even",
+        "Overfull.ColoringExtension.exists_uniform_simple_balanced_avoiding",
+        "Overfull.ColoringExtension.exists_uniform_near_perfect_coloring",
+        "Overfull.Multigraph.EdgeColoring.exists_equitable_exterior",
+        "Overfull.OrdinaryFactorization.selectedFootprint_load_le_error",
+        "Overfull.OrdinaryFactorization.exists_equitable_selected_exterior"
+      ],
+      "manuscript_locations": [
+        "two:lem:ordinary-special, balancing and repair deficits"
+      ],
+      "scope": "Construct feasible two-color component switches preserving fixed forbidden vertex sets, balance actual color classes, and prove exact uncovered-set and missing-color incidence bounds. Uniform near-perfect internal coloring derives small actual repair sets. An actual exterior coloring can be made equitable, with even core footprints, exact incidence loads, and scaled footprint-size bounds. These are constrained-coloring, actual deficit, and exterior-footprint results. They supply internal-coloring and repair inputs; they do not assume or construct a coloring of the final residual graph."
+    },
+    {
+      "id": "quantitative_cut_and_reserve",
+      "file": "Overfull/OrdinaryFactorization/CutReserve.lean",
+      "lean_declarations": [
+        "Overfull.PairedCut.exists_orientation_quantitative",
+        "Overfull.PairedCut.paired_cut_quantitative",
+        "Overfull.OrdinaryRandomReserve.exists_reserve_with_side_degree_control",
+        "Overfull.OrdinaryRandomReserve.exists_reserve_with_balanced_side_degrees",
+        "Overfull.OrdinaryFactorization.internalLeftover_degree_add",
+        "Overfull.OrdinaryFactorization.exists_cut_reserve",
+        "Overfull.OrdinaryFactorization.CutReserveData.internal_degree_spread",
+        "Overfull.OrdinaryFactorization.CutReserveData.paletteSize_bounds"
+      ],
+      "manuscript_locations": [
+        "two:lem:paired-cut, quantitative strengthening",
+        "two:lem:ordinary-special, cut and reserve selection"
+      ],
+      "scope": "Strengthen the prescribed-pair robust cut to simultaneous additive side-degree estimates, with the crossing robust parameter chosen before the requested degree tolerance. Construct one actual ordinary robust edge sample controlling both side counts, and combine it with the cut to obtain an actual reserve and internal leftover with precise degree estimates and palette bounds. The quantitative cut and sample use the existing finite concentration and robust-lifting proofs. These geometric and degree estimates do not by themselves factorize the host or the residual graph."
+    },
+    {
+      "id": "ordinary_first_group_construction",
+      "file": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "lean_declarations": [
+        "Overfull.OrdinaryFactorization.colorMatching_edgeUnion",
+        "Overfull.OrdinaryFactorization.balanced_color_reserve_repair",
+        "Overfull.OrdinaryFactorization.exists_uniform_repaired_color_family",
+        "Overfull.OrdinaryFactorization.completedClass_isPerfectMatching",
+        "Overfull.OrdinaryFactorization.completedClass_pairwiseDisjoint",
+        "Overfull.OrdinaryFactorization.exists_uniform_first_half",
+        "Overfull.OrdinaryFactorization.FirstHalfData.remaining_regular",
+        "Overfull.OrdinaryFactorization.FirstHalfData.remaining_degree_lower"
+      ],
+      "manuscript_locations": [
+        "two:lem:ordinary-special, first completed color group"
+      ],
+      "scope": "With all tolerances and thresholds chosen before the graph, construct an actual feasible internal coloring and repair its color classes through the sampled reserve. Combine the repaired core matchings with selected original exterior classes to obtain pairwise edge-disjoint perfect matchings of the full host, controlled reserve use and released internal edges, and an exact regular residual. The crossing robust parameter is fixed before the reserve probability. The only coloring input is an actual coloring of the original core complement. The internal coloring and completed first group are constructed. A coloring or factorization of the whole remaining graph is still a separate obligation; full Lemma 4.2 remains unverified."
+    },
+    {
+      "id": "ordinary_exact_residual_reconstruction",
+      "file": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "lean_declarations": [
+        "Overfull.OrdinaryFactorization.deleted_complement_range",
+        "Overfull.OrdinaryFactorization.residualGraph_degree_add",
+        "Overfull.OrdinaryFactorization.residualGraph_regular",
+        "Overfull.OrdinaryFactorization.remainingColors_card",
+        "Overfull.OrdinaryFactorization.compressedResidualComplementColoring_restore",
+        "Overfull.OrdinaryFactorization.residualCrossing_degree_loss",
+        "Overfull.OrdinaryFactorization.residualCrossing_robust",
+        "Overfull.OrdinaryFactorization.FirstHalfData.remainingInside_degree_le_order",
+        "Overfull.OrdinaryFactorization.FirstHalfData.remainingInside_degree_le_half",
+        "Overfull.OrdinaryFactorization.coreCopy_survives_iff",
+        "Overfull.OrdinaryFactorization.residualCrossingCore_graph",
+        "Overfull.OrdinaryFactorization.residualCrossingCore_edgeMap_val",
+        "Overfull.OrdinaryFactorization.inheritedComplement_uncolored_internal",
+        "Overfull.OrdinaryFactorization.extend_restriction_coloring",
+        "Overfull.OrdinaryFactorization.residualCrossingComplement_degree_le_error",
+        "Overfull.OrdinaryFactorization.exists_residualCrossingComplement_coloring_preserving_original",
+        "Overfull.OrdinaryFactorization.exists_coloring_of_residual",
+        "Overfull.OrdinaryFactorization.edgeColorable_of_residual",
+        "Overfull.OrdinaryFactorization.complete_bipartite_reduction",
+        "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction",
+        "Overfull.OrdinaryFactorization.residual_robust_parameters",
+        "Overfull.OrdinaryFactorization.residualCrossingCore_bipartite",
+        "Overfull.OrdinaryFactorization.residualCrossingCore_sides_cover",
+        "Overfull.OrdinaryFactorization.residualCrossingCore_side_card",
+        "Overfull.OrdinaryFactorization.residualCutSides_bipartite",
+        "Overfull.OrdinaryFactorization.residualCutSides_balance",
+        "Overfull.OrdinaryFactorization.residualCutSides_robust_admissible"
+      ],
+      "manuscript_locations": [
+        "two:lem:ordinary-special, exact residual and reconstruction",
+        "three:lem:boundary, indirect ordinary-core prerequisite"
+      ],
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Identify the exact original-copy residual and its surviving exterior labels, compress the unselected palette to k-h colors, and embed the actual remaining crossing graph by its surviving original core copies. Prove crossing robustness after the recorded reserve losses, bound the surviving internal edges and the new complementary degrees, and color the entire new complement by extending its inherited coloring. An explicitly supplied coloring of the whole residual reconstructs a proper original-host coloring with the selected labels preserved. The new complementary coloring is constructed under its proved support and explicit numerical degree/slack bounds. Reconstruction requires an actual coloring of the whole residual as an explicit input. The remaining bipartite-core factorization, Theorem 6.1, full Lemmas 4.2 and 4.14, and the main theorem are not proved here. Uniformly choose the crossing robust parameter before an arbitrary requested complementary error, and then construct a balanced bipartite residual core of any requested side-order threshold with that normalized error, an actual colored complement, and explicit reconstruction from a full residual coloring. The reduction does not construct a coloring of the whole residual host. The recorded actual sides form an equal-size bipartition of the residual core, and the side-indexed graph has a positive robust parameter clipped to its required range; no bipartite factorization is asserted. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
+    },
+    {
+      "id": "bipartite_reverse_robustness",
+      "documentation": "bipartite-prerequisites.md",
+      "files": [
+        "Overfull/BipartiteReverse.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.leftNeighbors_swap",
+        "Overfull.sum_crossing_neighbors_between",
+        "Overfull.bipartite_reverse_incidence_bound",
+        "Overfull.IsBipartiteRobustExpander.reverse",
+        "Overfull.IsBipartiteRobustExpander.reverse_sq"
+      ],
+      "manuscript_locations": [
+        "old:fac:spanning, reverse expansion"
+      ],
+      "scope": "Derive reverse-direction robust expansion of the actual graph under Sum.swap by exact crossing-edge double counting. For equal side order m, 0<nu<=tau<=1/4 and 2<=tau*m, forward (nu,tau)-robustness gives reverse (nu^2/4,2*tau)-robustness. The proof handles the upper range by an actual floor-sized subset. No reverse robustness or minimum-degree conclusion is supplied as an input. This is the directional robustness prerequisite; it does not construct a bipartite regularity setup or factorization."
+    },
+    {
+      "id": "bipartite_actual_exterior",
+      "documentation": "bipartite-prerequisites.md",
+      "files": [
+        "Overfull/BipartiteFactorization/Exterior.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.core_copy_crosses",
+        "Overfull.BipartiteFactorization.degree_sum_eq_copies_of_crossing",
+        "Overfull.BipartiteFactorization.core_side_degree_sums",
+        "Overfull.BipartiteFactorization.exterior_degree_outside",
+        "Overfull.BipartiteFactorization.exterior_degree_le_error",
+        "Overfull.BipartiteFactorization.exterior_side_degree_sums",
+        "Overfull.BipartiteFactorization.exceptional_even",
+        "Overfull.BipartiteFactorization.exists_balanced_exterior"
+      ],
+      "manuscript_locations": [
+        "old:fac:setup, actual exterior coloring"
+      ],
+      "scope": "Count actual embedded bipartite core copies on each side, derive equality of complementary side-degree sums and unchanged exterior degrees, and construct a proper balanced coloring of the actual core complement. Every exceptional vertex is saturated; core footprints have equal side sizes, even order, size at most 2*m*a/k+4, and exact vertex load at most a. The original actual complement must be k-colorable and k>0. The constructed coloring may change its labels. A coloring of the whole host is not asserted."
+    },
+    {
+      "id": "bipartite_bounded_move_neighborhoods",
+      "documentation": "bipartite-prerequisites.md",
+      "files": [
+        "Overfull/BipartiteFactorization/Moves.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.neighborsIn_loss",
+        "Overfull.BipartiteFactorization.repeated_incidence_mono",
+        "Overfull.BipartiteFactorization.repeated_incidence_real_mono",
+        "Overfull.BipartiteFactorization.edgesTo_card_le_of_parallel",
+        "Overfull.BipartiteFactorization.edgesTo_loss",
+        "Overfull.BipartiteFactorization.outside_parallel_le_complement",
+        "Overfull.BipartiteFactorization.repeated_incidence_le_complement",
+        "Overfull.BipartiteFactorization.moved_exceptional_card",
+        "Overfull.BipartiteFactorization.moved_sides_balance",
+        "Overfull.BipartiteFactorization.ordinaryPorts_after_move",
+        "Overfull.BipartiteFactorization.bounded_move_with_ports",
+        "Overfull.BipartiteFactorization.core_move_with_ports",
+        "Overfull.BipartiteFactorization.exists_move_budgets"
+      ],
+      "manuscript_locations": [
+        "old:fac:moves, ordinary exceptional-vertex conditions"
+      ],
+      "scope": "Distinguish actual incident edge copies from distinct neighbors; prove at most a*|Y| incidence loss at old exceptions, at most |Y| distinct-neighbor loss, and monotonicity of repeated incidences. Derive the first ordinary-vertex alternative for newly moved core vertices. Construct the new complement coloring and preserve the ordinary neighborhood conditions with beta/2 and a+|Y| under explicit finite budgets. Choose a positive error tolerance and order threshold uniformly from fixed density, reserve, and a bound on |Y|. This proves the actual neighborhood and coloring part of the bounded move. It does not construct the regularity setup, localized families, special path systems, absorber, or full factorization."
+    },
+    {
+      "id": "bipartite_preferred_representatives",
+      "documentation": "bipartite-localization.md",
+      "files": [
+        "Overfull/BipartiteFactorization/Preferred.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.edgesTo_union",
+        "Overfull.BipartiteFactorization.edgesTo_disjoint",
+        "Overfull.BipartiteFactorization.edgesTo_union_card",
+        "Overfull.BipartiteFactorization.edgesTo_card_le_degree",
+        "Overfull.BipartiteFactorization.preferredSide_eq_left_or_right",
+        "Overfull.BipartiteFactorization.preferredSide_subset",
+        "Overfull.BipartiteFactorization.preferredSide_incidence_lower",
+        "Overfull.BipartiteFactorization.exists_representative_edges",
+        "Overfull.BipartiteFactorization.preferredSide_neighbors_lower",
+        "Overfull.BipartiteFactorization.exists_preferred_representatives",
+        "Overfull.BipartiteFactorization.ordinary_preferred_representatives"
+      ],
+      "manuscript_locations": [
+        "old:fac:setup, preferred sides and representative edges"
+      ],
+      "scope": "Choose the preferred side from actual incidence counts and construct one original copy per distinct neighbor there. Under OrdinaryPorts, degree at most k, 0<=beta<=1 and 10*a<=beta*k, the representatives have distinct core ends, image equal to the chosen neighbor set, and size at least beta*c_x/4. This is finite representative selection; no equal side sizes, regularity, or robust expansion are needed. It does not construct the random blocks or localized graph families."
+    },
+    {
+      "id": "bipartite_palette_preparation",
+      "documentation": "bipartite-localization.md",
+      "files": [
+        "Overfull/BipartiteFactorization/Palettes.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.exists_empty_threshold_band",
+        "Overfull.BipartiteFactorization.paletteThreshold_pos",
+        "Overfull.BipartiteFactorization.paletteThreshold_antitone",
+        "Overfull.BipartiteFactorization.paletteThreshold_succ",
+        "Overfull.BipartiteFactorization.paletteThreshold_le_initial",
+        "Overfull.BipartiteFactorization.exists_palette_threshold",
+        "Overfull.BipartiteFactorization.colorsOn_card_le",
+        "Overfull.BipartiteFactorization.core_colors_card",
+        "Overfull.BipartiteFactorization.smallPool_card_lt",
+        "Overfull.BipartiteFactorization.allowedColors_card_add_excluded",
+        "Overfull.BipartiteFactorization.allowedColors_card_lower",
+        "Overfull.BipartiteFactorization.excludedColors_card_le",
+        "Overfull.BipartiteFactorization.excludedColors_small",
+        "Overfull.BipartiteFactorization.low_core_color_excluded",
+        "Overfull.BipartiteFactorization.small_pool_color_excluded",
+        "Overfull.BipartiteFactorization.active_core_colors_retained",
+        "Overfull.BipartiteFactorization.exists_allowed_palette_data"
+      ],
+      "manuscript_locations": [
+        "old:palettes, threshold separation and excluded colors"
+      ],
+      "scope": "From at most z special incidence values, select an empty band in the fixed z+1-band geometric schedule. Construct actual low and active sets and exclude actual colors on low core incidences and two small correction pools. Prove excluded count <theta*k/512, allowed count >k-theta*k/512, and active core-color retention at least 511*c_x/512. The selected threshold has a positive graph-independent lower bound from the fixed schedule. The input is an actual proper exterior coloring and the ordinary incidence lower bounds. Random subpalette selection with simultaneous row and weighted-pool bounds is not asserted."
+    },
+    {
+      "id": "bipartite_correction_capacity",
+      "documentation": "bipartite-localization.md",
+      "files": [
+        "Overfull/BipartiteFactorization/Capacity.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.CorrectionCapacity.exists_capped_subset",
+        "Overfull.BipartiteFactorization.CorrectionCapacity.card_le_capacity",
+        "Overfull.BipartiteFactorization.CorrectionCapacity.exists_capped_subset_iff",
+        "Overfull.BipartiteFactorization.CorrectionCapacity.score_le_capacity",
+        "Overfull.BipartiteFactorization.CorrectionCapacity.sum_deleted_card_le",
+        "Overfull.BipartiteFactorization.CorrectionCapacity.min_add_loss",
+        "Overfull.BipartiteFactorization.CorrectionCapacity.score_after_deletion",
+        "Overfull.BipartiteFactorization.CorrectionCapacity.exists_capped_subset_after_deletion",
+        "Overfull.BipartiteFactorization.CorrectionCapacity.internal_rows_pairwise",
+        "Overfull.BipartiteFactorization.CorrectionCapacity.internal_rows_union",
+        "Overfull.BipartiteFactorization.CorrectionCapacity.internal_rows_capacity",
+        "Overfull.BipartiteFactorization.CorrectionCapacity.exists_correction_subset",
+        "Overfull.BipartiteFactorization.CorrectionCapacity.correction_score_le_capacity",
+        "Overfull.BipartiteFactorization.CorrectionCapacity.correction_score_after_deletion",
+        "Overfull.BipartiteFactorization.CorrectionCapacity.exists_correction_subset_after_deletion",
+        "Overfull.BipartiteFactorization.correction_pools_disjoint",
+        "Overfull.BipartiteFactorization.correction_pool_incidence",
+        "Overfull.BipartiteFactorization.correction_selection_degree",
+        "Overfull.BipartiteFactorization.exists_graph_correction_subset",
+        "Overfull.BipartiteFactorization.exists_graph_correction_subset_after_deletion",
+        "Overfull.BipartiteFactorization.exists_graph_correction_subset_after_pool_deletion"
+      ],
+      "manuscript_locations": [
+        "old:fac:score, actual capacity",
+        "old:two-families, correction copies and adaptive exclusions"
+      ],
+      "scope": "Realize every size up to the exact capacity of disjoint actual copy pools with integer row caps. Bound the weighted correction score by that capacity and prove loss at most the maximum weight times the size of an arbitrary deleted set. The graph adapter derives pool disjointness and constructs actual correction copies avoiding the deleted set with genuine exceptional-degree caps. The surviving score lower bound is an explicit finite numerical input. No selection witness is assumed, and no independence of the deleted set is required. Finite weighted moments, capped-mean estimates, weighted product swap variance, and actual graph-score variance are now proved in the sampling components. The full graph-specific simultaneous score estimates and uniform budgets remain separate. Deterministic assembly of both families from explicit finite supplies is proved in the two-family component. The strengthened adapter charges only D intersected with the actual correction pool while avoiding all of D."
+    },
+    {
+      "id": "bipartite_selected_graph_coloring",
+      "documentation": "bipartite-localization.md",
+      "files": [
+        "Overfull/BipartiteFactorization/Coloring.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.mem_inactiveExterior",
+        "Overfull.BipartiteFactorization.inactiveExterior_eq",
+        "Overfull.BipartiteFactorization.coloring_of_univ_restriction",
+        "Overfull.BipartiteFactorization.coloring_from_inactive_exterior_nat",
+        "Overfull.BipartiteFactorization.coloring_from_inactive_exterior",
+        "Overfull.BipartiteFactorization.exists_balanced_localized_coloring"
+      ],
+      "manuscript_locations": [
+        "old:two-families, fan coloring criterion and localized footprints"
+      ],
+      "scope": "Derive a proper coloring of an actual selected graph from its inactive residue using critical endpoint-degree and low-degree fan lemmas. Construct balanced localized color classes with exceptional saturation, side spread at most two, footprint bound 2*|Ablock|*a/k+4, parity, and exact vertex load. Requires core degrees at most a, exceptional degrees at most k, 2*a<k, more than 2*a actual core incidences at every active vertex, and a coloring only of the actual inactive residue. The localized corollary additionally assumes balanced side-degree sums, equal core sides/blocks, even exceptional order, exceptional degree k, and zero core degree outside the blocks. Initial residue labels may be recolored. Deterministic family construction and residual coloring are proved in subsequent components. Simultaneous sampling and full factorization remain open."
+    },
+    {
+      "id": "bipartite_palette_rows",
+      "documentation": "bipartite-palette-assembly.md",
+      "files": [
+        "Overfull/BipartiteFactorization/PaletteRows.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.mem_paletteEdges",
+        "Overfull.BipartiteFactorization.paletteBase_subset",
+        "Overfull.BipartiteFactorization.compressedPaletteColoring_restore",
+        "Overfull.BipartiteFactorization.paletteBase_colorable",
+        "Overfull.BipartiteFactorization.palette_degree_eq_coveredColors",
+        "Overfull.BipartiteFactorization.palette_degree_of_degree_eq",
+        "Overfull.BipartiteFactorization.paletteBase_degree_add_core",
+        "Overfull.BipartiteFactorization.palette_row_eq",
+        "Overfull.BipartiteFactorization.palette_low_core_empty",
+        "Overfull.BipartiteFactorization.palette_low_row_zero",
+        "Overfull.BipartiteFactorization.palette_sum_degrees",
+        "Overfull.BipartiteFactorization.palette_side_degree_eq"
+      ],
+      "manuscript_locations": [
+        "old:palettes, actual rows and exceptional base",
+        "old:fac:imbalance, actual selected-class balance"
+      ],
+      "scope": "Derive actual palette degrees and exceptional core-row demands from a proper original coloring; compress selected labels reversibly, inherit the base coloring, prove empty low core rows from exclusion, and derive side-degree equality from actual selected-class balance. Original degree k is explicit wherever saturation is required. Simultaneous palette and block existence remains separate."
+    },
+    {
+      "id": "bipartite_correction_imbalance",
+      "documentation": "bipartite-palette-assembly.md",
+      "files": [
+        "Overfull/BipartiteFactorization/Imbalance.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.mem_betweenCopies",
+        "Overfull.BipartiteFactorization.betweenCopies_inter_card",
+        "Overfull.BipartiteFactorization.restricted_degree_sum",
+        "Overfull.BipartiteFactorization.retained_copy_active_ends",
+        "Overfull.BipartiteFactorization.correction_identity_at_copy",
+        "Overfull.BipartiteFactorization.correction_imbalance_identity",
+        "Overfull.BipartiteFactorization.balanced_correction_imbalance",
+        "Overfull.BipartiteFactorization.selected_degree_balance"
+      ],
+      "manuscript_locations": [
+        "old:fac:imbalance"
+      ],
+      "scope": "Prove the signed actual-copy correction-pool identity. Derive the source row imbalance from actual equal side-degree sums, and derive selected-side balance from exact positive correction usage and empty negative usage. Signed counts use integers. Disjoint sides and active exceptional sets, and empty inactive core rows, are explicit. The palette constructor derives the source side equality."
+    },
+    {
+      "id": "bipartite_preferred_filling",
+      "documentation": "bipartite-palette-assembly.md",
+      "files": [
+        "Overfull/BipartiteFactorization/Selection.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.PreferredSelection.outside_source",
+        "Overfull.BipartiteFactorization.PreferredSelection.edgesTo_mono",
+        "Overfull.BipartiteFactorization.PreferredSelection.internal_incident",
+        "Overfull.BipartiteFactorization.PreferredSelection.pool_outside_incidence",
+        "Overfull.BipartiteFactorization.PreferredSelection.pool_core_incidence",
+        "Overfull.BipartiteFactorization.PreferredSelection.degree_union",
+        "Overfull.BipartiteFactorization.PreferredSelection.degree_zero",
+        "Overfull.BipartiteFactorization.PreferredSelection.internal_base_disjoint",
+        "Overfull.BipartiteFactorization.PreferredSelection.exists_rows",
+        "Overfull.BipartiteFactorization.PreferredSelection.rows_degree",
+        "Overfull.BipartiteFactorization.PreferredSelection.exists_filled_exterior",
+        "Overfull.BipartiteFactorization.PreferredSelection.row_disjoint_pool",
+        "Overfull.BipartiteFactorization.PreferredSelection.pools_disjoint",
+        "Overfull.BipartiteFactorization.exists_preferred_selected_graph"
+      ],
+      "manuscript_locations": [
+        "old:two-families, one-palette preferred filling"
+      ],
+      "scope": "Choose unused preferred rows and derive their disjointness from unique exceptional endpoints. Fill residual demands after actual positive corrections; prove exact exceptional degrees and core rows, exact exceptional base, block support, and both global correction-pool intersections. The specialized theorem derives correction/preferred disjointness geometrically and avoids D off the base. The assembly separately supplies base disjointness to avoid all D. Correction caps and unused supply inequalities are finite inputs."
+    },
+    {
+      "id": "bipartite_palette_assembly",
+      "documentation": "bipartite-palette-assembly.md",
+      "files": [
+        "Overfull/BipartiteFactorization/Assembly.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.color_inactive_from_base",
+        "Overfull.BipartiteFactorization.correctionPool_eq_subtype",
+        "Overfull.BipartiteFactorization.exists_selected_palette",
+        "Overfull.BipartiteFactorization.SelectedPalette.exists_localized_coloring",
+        "Overfull.BipartiteFactorization.exists_localized_palette"
+      ],
+      "manuscript_locations": [
+        "old:fac:imbalance",
+        "old:two-families, one-palette selection and coloring"
+      ],
+      "scope": "Construct one actual selected palette graph and its balanced localized coloring from the original exterior coloring, balanced selected classes, original palette rows, a surviving correction score, and unused preferred supplies. Derive selected exceptional degrees, side balance, block support, exact pool usage, and inactive colorability from the inherited base. Treats e_I,+ >= e_I,-; interchange sides for the opposite sign. Uses cap r_x and full-row preferred supplies. Equal sides/blocks, even exceptional order, ambient core degree <=a, |I|>2a, and active rows >2a yield saturation, side spread <=2, even block-supported footprints <=2*|Ablock|*a/|I|+4, and exact vertex loads. No selected graph or selected coloring is assumed. Deterministic construction and coloring of both complete families and the exact residual are proved in subsequent components. Simultaneous sampling, uniform parameter and boundary budgets, regularity setup, absorber, and factorization remain open."
+    },
+    {
+      "id": "bipartite_oriented_palettes",
+      "documentation": "bipartite-two-families.md",
+      "files": [
+        "Overfull/BipartiteFactorization/Oriented.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.exists_oriented_palette",
+        "Overfull.BipartiteFactorization.OrientedPalette.exists_localized_coloring",
+        "Overfull.BipartiteFactorization.OrientedPalette.localized_coloring",
+        "Overfull.BipartiteFactorization.LocalizedColoring.footprint_avoids"
+      ],
+      "manuscript_locations": [
+        "old:two-families, both correction orientations",
+        "old:fac:localized-footprints, boundary exclusion"
+      ],
+      "scope": "Construct selected palettes in either correction orientation while retaining the original geometry. Prove exact positive and negative correction-pool usage, construct a localized coloring, and derive footprint avoidance from deletion of all incident copies at a prescribed boundary set. The input supplies one of the two original finite palette-selection conditions. The coloring also uses the explicit fan, balance, parity, and block hypotheses. Boundary avoidance requires every incident original copy at the boundary to lie in the deleted set; no boundary budget estimate is assumed proved."
+    },
+    {
+      "id": "bipartite_palette_families",
+      "documentation": "bipartite-two-families.md",
+      "files": [
+        "Overfull/BipartiteFactorization/Families.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.core_incidence_in_support",
+        "Overfull.BipartiteFactorization.palette_supported_copies_disjoint",
+        "Overfull.BipartiteFactorization.mem_familyCopies",
+        "Overfull.BipartiteFactorization.familyCopies_inter",
+        "Overfull.BipartiteFactorization.familyCopies_inter_card",
+        "Overfull.BipartiteFactorization.familyCopies_degree",
+        "Overfull.BipartiteFactorization.familyCopies_avoids",
+        "Overfull.BipartiteFactorization.paletteEdges_family_union",
+        "Overfull.BipartiteFactorization.paletteEdges_disjoint",
+        "Overfull.BipartiteFactorization.paletteBase_family_union",
+        "Overfull.BipartiteFactorization.familyCopies_side_degrees",
+        "Overfull.BipartiteFactorization.OrientedPalette.copies_disjoint",
+        "Overfull.BipartiteFactorization.exists_oriented_palette_family",
+        "Overfull.BipartiteFactorization.OrientedPalette.family_base",
+        "Overfull.BipartiteFactorization.OrientedPalette.family_exceptional_degree",
+        "Overfull.BipartiteFactorization.OrientedPalette.family_exceptional_degree_palette_union",
+        "Overfull.BipartiteFactorization.OrientedPalette.family_rows",
+        "Overfull.BipartiteFactorization.OrientedPalette.family_rows_palette_union",
+        "Overfull.BipartiteFactorization.OrientedPalette.family_core_row_le",
+        "Overfull.BipartiteFactorization.OrientedPalette.family_positive_count",
+        "Overfull.BipartiteFactorization.OrientedPalette.family_negative_count",
+        "Overfull.BipartiteFactorization.OrientedPalette.family_side_degrees"
+      ],
+      "manuscript_locations": [
+        "old:two-families, one-scale families and exact union accounting"
+      ],
+      "scope": "Construct an arbitrary finite family of selected palettes with pairwise disjoint original copies. Derive disjointness from disjoint original palettes and block supports. Prove exact union identities for bases, exceptional degrees, original core rows, both correction pools, and side-degree balance. The original one-palette finite conditions are supplied for each member. Palettes and block unions are pairwise disjoint within the family. No selected family witness is supplied. Simultaneous probability estimates that produce these original data remain separate."
+    },
+    {
+      "id": "bipartite_remaining_coloring",
+      "documentation": "bipartite-two-families.md",
+      "files": [
+        "Overfull/BipartiteFactorization/Remaining.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.remaining_exceptional_degree",
+        "Overfull.BipartiteFactorization.remaining_side_degree_eq",
+        "Overfull.BipartiteFactorization.remaining_core_row_add",
+        "Overfull.BipartiteFactorization.remaining_core_row_lower",
+        "Overfull.BipartiteFactorization.remaining_inactive_color_mem",
+        "Overfull.BipartiteFactorization.remaining_inactive_colorable",
+        "Overfull.BipartiteFactorization.exists_balanced_remaining_coloring"
+      ],
+      "manuscript_locations": [
+        "old:two-families, exact remaining exterior and fan coloring"
+      ],
+      "scope": "Construct a balanced coloring of the exact graph left after deleting selected original copies. Derive exact exceptional degrees and side-degree balance, bound remaining core rows, and build the inactive residue coloring from the unused original labels before applying the fan criterion. The selected copy set must have the exact exceptional base and degrees of its original palette. Original low palette rows are empty, the residual palette has more than 2*a colors, and each active original core row minus the selected palette size is more than 2*a. No coloring of the residual or its inactive part is supplied. Only the inactive part is asserted to use unused original labels."
+    },
+    {
+      "id": "bipartite_family_load",
+      "documentation": "bipartite-two-families.md",
+      "files": [
+        "Overfull/BipartiteFactorization/FamilyColoring.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.palette_family_low",
+        "Overfull.BipartiteFactorization.localized_family_load",
+        "Overfull.BipartiteFactorization.exists_family_and_remaining_colorings"
+      ],
+      "manuscript_locations": [
+        "old:two-families, selected and remaining colorings",
+        "old:fac:localized-footprints, total load"
+      ],
+      "scope": "Construct localized colorings of every selected family member and the exact remaining graph. Prove that the sum of all selected and residual footprint loads at each core vertex equals its original exterior degree, hence is at most the shared degree bound a. The family consists of actual pairwise disjoint selected copy sets with pairwise disjoint palettes. Explicit finite fan thresholds, balanced blocks and sides, and even exceptional order are required. The load sums over every selected member and the residual; it is not merely a separate bound for each family."
+    },
+    {
+      "id": "bipartite_two_families",
+      "documentation": "bipartite-two-families.md",
+      "files": [
+        "Overfull/BipartiteFactorization/TwoFamilies.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.unused_row_after_deletion",
+        "Overfull.BipartiteFactorization.deleted_pool_union_bound",
+        "Overfull.BipartiteFactorization.correctionPool_mono",
+        "Overfull.BipartiteFactorization.ReservedPaletteConditions.after_deletion",
+        "Overfull.BipartiteFactorization.paletteBase_disjoint_family",
+        "Overfull.BipartiteFactorization.exists_two_palette_families",
+        "Overfull.BipartiteFactorization.TwoFamilyConditions.palettes_disjoint",
+        "Overfull.BipartiteFactorization.TwoFamilyConditions.palette_data",
+        "Overfull.BipartiteFactorization.TwoFamilyConditions.palette_card",
+        "Overfull.BipartiteFactorization.exists_colored_two_families"
+      ],
+      "manuscript_locations": [
+        "old:two-families, fine and coarse construction and exact residual",
+        "old:fac:localized-footprints, shared load"
+      ],
+      "scope": "Construct both finite scales from original data by selecting the fine family first, transferring reserved coarse row and correction supplies to the actual fine deletion, and constructing the coarse family disjoint from it. Color both families and the exact remainder, derive residual exceptional degree k minus the sum of all selected palette sizes, and prove the total footprint load equals the original exterior core degree. Fine and coarse blocks may overlap across scales. All palettes are pairwise disjoint; blocks are pairwise disjoint within each scale. Coarse reserves charge the initial deleted set locally and the exact fine-family correction cost once. Finite supplies and fan inequalities remain explicit original-data hypotheses. Simultaneous sampling, graph-independent parameter and boundary-budget choices, regularity setup, absorber, and full host factorization remain unproved."
+    },
+    {
+      "id": "finite_weighted_sampling",
+      "documentation": "bipartite-sampling.md",
+      "files": [
+        "Overfull/Probability/WeightedSampling.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.FiniteProbability.mean_nonneg",
+        "Overfull.FiniteProbability.mean_mono",
+        "Overfull.FiniteProbability.mean_const",
+        "Overfull.FiniteProbability.mean_eq_const_of_support",
+        "Overfull.FiniteProbability.nonempty_of_sum_eq_one",
+        "Overfull.FiniteProbability.mean_add",
+        "Overfull.FiniteProbability.mean_sub",
+        "Overfull.FiniteProbability.mean_mul_left",
+        "Overfull.FiniteProbability.mean_sum",
+        "Overfull.FiniteProbability.mean_indicator",
+        "Overfull.FiniteProbability.variance_nonneg",
+        "Overfull.FiniteProbability.variance_eq_zero_of_support",
+        "Overfull.FiniteProbability.variance_const",
+        "Overfull.FiniteProbability.variance_eq_mean_sq_sub",
+        "Overfull.FiniteProbability.mean_sq_le",
+        "Overfull.FiniteProbability.chebyshev",
+        "Overfull.FiniteProbability.mean_equiv",
+        "Overfull.FiniteProbability.variance_equiv",
+        "Overfull.FiniteProbability.mean_comm",
+        "Overfull.FiniteProbability.mean_prod",
+        "Overfull.FiniteProbability.variance_prod",
+        "Overfull.FiniteProbability.variance_mean_le",
+        "Overfull.FiniteProbability.variance_prod_le",
+        "Overfull.Hypergeometric.variance_zero_sample",
+        "Overfull.Hypergeometric.variance_full_sample",
+        "Overfull.Hypergeometric.weightedSum_eq_indicators",
+        "Overfull.Hypergeometric.mean_member_indicator",
+        "Overfull.Hypergeometric.mean_weightedSum",
+        "Overfull.Hypergeometric.mean_pair_indicator_le",
+        "Overfull.Hypergeometric.weightedSum_sq",
+        "Overfull.Hypergeometric.mean_weightedSum_sq_le",
+        "Overfull.Hypergeometric.variance_weightedSum_le",
+        "Overfull.Hypergeometric.variance_weightedSum_le_max_mul_mean",
+        "Overfull.FiniteProbability.piWeight_nonneg",
+        "Overfull.FiniteProbability.sum_piWeight",
+        "Overfull.FiniteProbability.piWeight_cons",
+        "Overfull.FiniteProbability.variance_pi_fin_le",
+        "Overfull.FiniteProbability.variance_pi_le"
+      ],
+      "manuscript_locations": [
+        "old:fac:pool-demand, finite weighted moments",
+        "old:fac:swap-variance, independent parts"
+      ],
+      "scope": "Prove finite expectation and variance identities, Chebyshev, weighted moments for actual uniform subsets, deterministic zero/full sample endpoints, and variance tensorization for arbitrary finite dependent products. Weighted sample variance is at most the sampling fraction times the sum of squared nonnegative weights, hence at most the maximum weight times the mean. Finite laws have explicit nonnegative normalized weights. Weighted expectation permits arbitrary real weights; the stated variance bounds use nonnegative weights. Product tensorization applies to nonlinear statistics from bounds on every actual coordinate section and does not assume additivity. It supplies analytic ingredients, not the full manuscript simultaneous sampling budget."
+    },
+    {
+      "id": "disjoint_permutation_sampling",
+      "documentation": "bipartite-sampling.md",
+      "files": [
+        "Overfull/Probability/PermutationSampling.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.PermutationSampling.sample_card",
+        "Overfull.PermutationSampling.mem_sample",
+        "Overfull.PermutationSampling.sample_mul",
+        "Overfull.PermutationSampling.sample_injective",
+        "Overfull.PermutationSampling.sample_disjoint",
+        "Overfull.PermutationSampling.exists_sample_eq",
+        "Overfull.PermutationSampling.mem_fiber",
+        "Overfull.PermutationSampling.fiber_card_eq",
+        "Overfull.PermutationSampling.card_perm_eq_choose_mul_fiber",
+        "Overfull.PermutationSampling.weight_nonneg",
+        "Overfull.PermutationSampling.sum_weight",
+        "Overfull.PermutationSampling.probability_sample_eq",
+        "Overfull.PermutationSampling.expectation_sample",
+        "Overfull.PermutationSampling.probability_sample",
+        "Overfull.PermutationSampling.exists_positions",
+        "Overfull.PermutationSampling.exists_disjoint_samples"
+      ],
+      "manuscript_locations": [
+        "old:palettes, disjoint random palettes",
+        "old:fac:row-sampling, simultaneous marginal estimates"
+      ],
+      "scope": "Prove that images of fixed position sets under one uniform permutation have exact uniform-subset marginals and preserve disjointness and cardinality for every sample. Construct positions of prescribed sizes and actual simultaneous good disjoint samples from marginal failure bounds whose sum is less than one. The joint palettes need not be independent. Prescribed total size must fit the actual population; the event bounds and their total budget are explicit inputs. Empty populations, zero-size samples, and empty families are covered. The full graph-specific failure budget is not supplied by this generic existence theorem."
+    },
+    {
+      "id": "capped_sampling_mean",
+      "documentation": "bipartite-sampling.md",
+      "files": [
+        "Overfull/Probability/CappedMean.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.FiniteProbability.harmonic_le_cap",
+        "Overfull.FiniteProbability.mean_sq_le_ratio_second_moment",
+        "Overfull.FiniteProbability.capped_mean_lower_of_second_moment",
+        "Overfull.FiniteProbability.capped_mean_lower_of_variance",
+        "Overfull.FiniteProbability.correction_capped_mean_lower",
+        "Overfull.FiniteProbability.lower_tail_of_mean_lower",
+        "Overfull.FiniteProbability.correction_score_lower_tail"
+      ],
+      "manuscript_locations": [
+        "old:fac:score, capped row mean",
+        "old:fac:swap-variance, numerical lower-tail bound"
+      ],
+      "scope": "Use finite Cauchy-Schwarz to prove a capped-mean lower bound from a nonnegative statistic and a second-moment or variance bound. Verify the explicit 7/4 correction-row margin. Derive a finite lower-tail inequality and the exact 2^21*a/(p0^3*M) numerical correction-score bound from the stated mean and variance estimates. The capped-mean theorem requires positive scaling and cap, and treats zero mean explicitly. The 7/4 corollary retains the manuscript finite inequalities on the cap, mean, and error. The final tail adapter takes its mean and variance estimates as explicit premises; it does not by itself establish the mean of the whole sampled graph score."
+    },
+    {
+      "id": "weighted_swap_variance",
+      "documentation": "bipartite-sampling.md",
+      "files": [
+        "Overfull/Probability/SwapVariance.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.SwapVariance.sliceMean_congr",
+        "Overfull.SwapVariance.sliceMean_const",
+        "Overfull.SwapVariance.sliceMean_add",
+        "Overfull.SwapVariance.sliceMean_sub",
+        "Overfull.SwapVariance.sliceMean_const_mul",
+        "Overfull.SwapVariance.sliceMean_mono",
+        "Overfull.SwapVariance.sliceVariance_eq",
+        "Overfull.SwapVariance.sliceMean_zero",
+        "Overfull.SwapVariance.sliceMean_full",
+        "Overfull.SwapVariance.sliceVariance_zero",
+        "Overfull.SwapVariance.sliceVariance_full",
+        "Overfull.SwapVariance.slice_sum_insert",
+        "Overfull.SwapVariance.add_one_sum",
+        "Overfull.SwapVariance.adjacent_slice_means",
+        "Overfull.SwapVariance.sliceMean_insert",
+        "Overfull.SwapVariance.sliceVariance_insert",
+        "Overfull.SwapVariance.weighted_slice_variance",
+        "Overfull.SwapVariance.hypergeometric_mean_eq",
+        "Overfull.SwapVariance.hypergeometric_variance_eq",
+        "Overfull.Hypergeometric.variance_of_swap",
+        "Overfull.Hypergeometric.variance_of_swap_bounded",
+        "Overfull.Hypergeometric.variance_product_of_swap",
+        "Overfull.Hypergeometric.variance_product_of_swap_bounded"
+      ],
+      "manuscript_locations": [
+        "old:fac:swap-variance"
+      ],
+      "scope": "Prove the uniform-subset weighted swap variance bound 4*(s/n)*sum(omega^2) by finite ground-set induction, maximum-weight conditioning, exact conditional variance, and a proved add-one coupling. Bridge to the actual hypergeometric law and prove arbitrary finite-part product bounds for nonlinear statistics, including the 4*p*W*M corollary. Only pointwise swap inequalities and nonnegative influence weights are inputs; no variance or concentration inequality is assumed. The product version uses coordinate swap bounds for arbitrary configurations of the other part subsets. Zero/full sample sizes and empty populations are included. Graph score influence bounds are derived separately in the block-score components."
+    },
+    {
+      "id": "bipartite_palette_sampling",
+      "documentation": "bipartite-sampling.md",
+      "files": [
+        "Overfull/BipartiteFactorization/PaletteSampling.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.PaletteSampling.mem_liftPalette",
+        "Overfull.BipartiteFactorization.PaletteSampling.liftPalette_subset",
+        "Overfull.BipartiteFactorization.PaletteSampling.liftPalette_card",
+        "Overfull.BipartiteFactorization.PaletteSampling.liftPalette_disjoint",
+        "Overfull.BipartiteFactorization.PaletteSampling.liftPalette_univ",
+        "Overfull.BipartiteFactorization.PaletteSampling.poolColorWeight_nonneg",
+        "Overfull.BipartiteFactorization.PaletteSampling.palette_pool_card_eq_sum",
+        "Overfull.BipartiteFactorization.PaletteSampling.poolDemand_eq_weightedSum",
+        "Overfull.BipartiteFactorization.PaletteSampling.sum_allowed_pool_weights",
+        "Overfull.BipartiteFactorization.PaletteSampling.mean_poolDemand",
+        "Overfull.BipartiteFactorization.PaletteSampling.mean_poolDemand_le",
+        "Overfull.BipartiteFactorization.PaletteSampling.variance_poolDemand_le_max_mul_mean",
+        "Overfull.BipartiteFactorization.PaletteSampling.variance_poolDemand_le",
+        "Overfull.BipartiteFactorization.PaletteSampling.probability_permuted_poolDemand",
+        "Overfull.BipartiteFactorization.PaletteSampling.exists_disjoint_allowed_palettes"
+      ],
+      "manuscript_locations": [
+        "old:fac:pool-demand",
+        "old:palettes, actual allowed-color sampling"
+      ],
+      "scope": "Identify actual selected-color correction-pool copy counts with weighted sampling on the allowed-color subtype. Prove the exact allowed-weight sum, exact mean, pool-size mean and variance bounds, permutation event transfer, and construction of disjoint good palettes in the original color labels. The sampling fraction is s divided by the actual allowed-color count, not s/k. A bound on each allowed color contribution is explicit original-data input. Uniform conversion to the manuscript palette fractions and the full simultaneous graph failure budget remain separate."
+    },
+    {
+      "id": "bipartite_block_score",
+      "documentation": "bipartite-sampling.md",
+      "files": [
+        "Overfull/BipartiteFactorization/BlockSampling.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.BlockSampling.internalEdges_mono",
+        "Overfull.BipartiteFactorization.BlockSampling.parallelEdges_symm",
+        "Overfull.BipartiteFactorization.BlockSampling.sum_parallel_card",
+        "Overfull.BipartiteFactorization.BlockSampling.internal_degree_eq_edgesTo",
+        "Overfull.BipartiteFactorization.BlockSampling.internal_degree_sum",
+        "Overfull.BipartiteFactorization.BlockSampling.betweenCopies_symm",
+        "Overfull.BipartiteFactorization.BlockSampling.cross_degree_sum",
+        "Overfull.BipartiteFactorization.BlockSampling.correction_pool_card",
+        "Overfull.BipartiteFactorization.BlockSampling.vertexWeight_nonneg",
+        "Overfull.BipartiteFactorization.BlockSampling.vertexWeight_le",
+        "Overfull.BipartiteFactorization.BlockSampling.sum_vertexWeight_le",
+        "Overfull.BipartiteFactorization.BlockSampling.internalEdges_insert_card_le",
+        "Overfull.BipartiteFactorization.BlockSampling.edgesTo_insert",
+        "Overfull.BipartiteFactorization.BlockSampling.cappedScore_mono",
+        "Overfull.BipartiteFactorization.BlockSampling.cappedRow_insert_le",
+        "Overfull.BipartiteFactorization.BlockSampling.cappedScore_insert_le",
+        "Overfull.BipartiteFactorization.BlockSampling.cappedScore_swap_le",
+        "Overfull.BipartiteFactorization.BlockSampling.variance_cappedScore_le_weights",
+        "Overfull.BipartiteFactorization.BlockSampling.variance_cappedScore_le"
+      ],
+      "manuscript_locations": [
+        "old:fac:score, actual capped graph score",
+        "old:fac:swap-variance, graph influence accounting"
+      ],
+      "scope": "Prove actual multigraph copy insertion and swap bounds for the nonlinear capped correction score. Derive its vertex influence, maximum at most omega2*a, total at most 2*omega2*|correctionPool|, and uniform-block variance at most 8*(s/|B|)*omega2^2*a*|correctionPool|. The core and exceptional sets are disjoint, 0<=omega1<=omega2, and original core degrees are at most nonnegative a. Caps may be arbitrary real values. No simplicity, finite whole vertex type, influence conclusion, or variance conclusion is assumed. The full actual sampled-score mean is now proved in partition_score_mean; simultaneous parameter budgets remain separate."
+    },
+    {
+      "id": "bipartite_product_score",
+      "documentation": "bipartite-sampling.md",
+      "files": [
+        "Overfull/BipartiteFactorization/BlockProductSampling.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.BlockProductSampling.mem_sampledBlock",
+        "Overfull.BipartiteFactorization.BlockProductSampling.sampledBlock_subset",
+        "Overfull.BipartiteFactorization.BlockProductSampling.sampledBlock_mem_part",
+        "Overfull.BipartiteFactorization.BlockProductSampling.sampledBlock_update_outside",
+        "Overfull.BipartiteFactorization.BlockProductSampling.sampledBlock_update",
+        "Overfull.BipartiteFactorization.BlockProductSampling.sampledBlock_update_swap",
+        "Overfull.BipartiteFactorization.BlockProductSampling.sum_part_weights",
+        "Overfull.BipartiteFactorization.BlockProductSampling.sum_part_weights_le",
+        "Overfull.BipartiteFactorization.BlockProductSampling.cappedScore_coordinate_swap",
+        "Overfull.BipartiteFactorization.BlockProductSampling.cappedScore_product_variance"
+      ],
+      "manuscript_locations": [
+        "old:fac:score, independently sampled partition parts",
+        "old:fac:swap-variance, actual product-score bound"
+      ],
+      "scope": "Construct the actual block as the union of fixed-size samples in disjoint finite vertex parts. Prove the union/update/swap identity and that part weights count each original vertex once, then derive variance at most 8*p0*omega2^2*a*|correctionPool| for the actual nonlinear capped graph score under the product sample law. Parts are pairwise disjoint and contained in B; they need not cover B. Each prescribed size fits its part and each sampling fraction is at most p0. The graph inputs are disjoint core/exceptional sets, ordered nonnegative score weights, and an original core-degree bound. No score-swap, influence-budget, or variance conclusion is supplied as an assumption. Full score expectation is now proved in partition_score_mean; simultaneous numerical budgets remain separate."
+    },
+    {
+      "id": "finite_product_moments",
+      "documentation": "bipartite-score-mean.md",
+      "files": [
+        "Overfull/Probability/ProductMoments.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.FiniteProbability.mean_pi_product",
+        "Overfull.FiniteProbability.mean_pi_coordinate",
+        "Overfull.FiniteProbability.mean_pi_sum",
+        "Overfull.FiniteProbability.mean_pi_mul_coordinates"
+      ],
+      "manuscript_locations": [
+        "old:fac:score",
+        "old:fac:row-sampling",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Exact product expectation factorization, coordinate marginals, coordinate-sum means, and independence of distinct-coordinate real statistics for the actual finite product law. Unused-coordinate laws are explicitly normalized; these are exact finite identities."
+    },
+    {
+      "id": "finite_variance_translation",
+      "documentation": "bipartite-score-mean.md",
+      "files": [
+        "Overfull/Probability/VarianceShift.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.FiniteProbability.variance_add_const",
+        "Overfull.FiniteProbability.variance_const_add",
+        "Overfull.FiniteProbability.variance_pi_sum_le"
+      ],
+      "manuscript_locations": [
+        "old:fac:score",
+        "old:fac:row-sampling",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Translation invariance of finite variance and the coefficient-one variance bound for sums of independent coordinate statistics. Normalization and nonnegative weights are explicit; no variance conclusion is assumed."
+    },
+    {
+      "id": "partition_sample_membership",
+      "documentation": "bipartite-score-mean.md",
+      "files": [
+        "Overfull/BipartiteFactorization/BlockMembership.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.Hypergeometric.mean_pair_indicator_eq",
+        "Overfull.Hypergeometric.mean_pair_indicator_ge_half",
+        "Overfull.BipartiteFactorization.BlockProductSampling.mean_member_part",
+        "Overfull.BipartiteFactorization.BlockProductSampling.mean_pair_same_part",
+        "Overfull.BipartiteFactorization.BlockProductSampling.mean_pair_distinct_parts",
+        "Overfull.BipartiteFactorization.BlockProductSampling.mean_member_eq",
+        "Overfull.BipartiteFactorization.BlockProductSampling.mean_pair_ge_half",
+        "Overfull.BipartiteFactorization.BlockProductSampling.mean_internalEdges_ge"
+      ],
+      "manuscript_locations": [
+        "old:fac:score",
+        "old:fac:row-sampling",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Exact same-part and different-part joint inclusion laws; actual vertex marginals; half-independent pair lower bound; expected original internal edge copies at least p0^2/2 times the original count. Parts partition B and are disjoint; prescribed sizes fit, equal ratios are exact, and each nonempty part selects at least two. Empty parts and parallel edge copies are retained."
+    },
+    {
+      "id": "partition_row_moments",
+      "documentation": "bipartite-score-mean.md",
+      "files": [
+        "Overfull/BipartiteFactorization/BlockRowMoments.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.BlockRowMoments.sum_sampledBlock",
+        "Overfull.BipartiteFactorization.BlockRowMoments.mean_partWeightedSum",
+        "Overfull.BipartiteFactorization.BlockRowMoments.edgesTo_sampledBlock_eq_sum",
+        "Overfull.BipartiteFactorization.BlockRowMoments.sum_part_parallel_card",
+        "Overfull.BipartiteFactorization.BlockRowMoments.mean_edgesTo",
+        "Overfull.BipartiteFactorization.BlockRowMoments.variance_edgesTo_le",
+        "Overfull.BipartiteFactorization.BlockRowMoments.variance_edgesTo_le_of_degree",
+        "Overfull.BipartiteFactorization.BlockRowMoments.capped_row_mean"
+      ],
+      "manuscript_locations": [
+        "old:fac:score",
+        "old:fac:row-sampling",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Exact original exceptional-row decomposition, mean p0*d, variance at most a*p0*d with coefficient one, and the actual capped row mean at least 7/4*lambda*d. Parallel-copy or exterior degree bounds are original-data inputs. Positive row sizes, d<=c/2, the cap interval and a<=p0*c/4096 remain explicit. Both moment conclusions are derived internally."
+    },
+    {
+      "id": "partition_score_mean",
+      "documentation": "bipartite-score-mean.md",
+      "files": [
+        "Overfull/BipartiteFactorization/BlockScoreMean.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.BlockScoreMean.mean_cappedScore",
+        "Overfull.BipartiteFactorization.BlockScoreMean.sum_rows_eq_cross",
+        "Overfull.BipartiteFactorization.BlockScoreMean.cappedScore_mean_of_counts",
+        "Overfull.BipartiteFactorization.BlockScoreMean.exists_support_not_of_probability_lt_one",
+        "Overfull.BipartiteFactorization.BlockScoreMean.sample_card_of_weight_ne_zero",
+        "Overfull.BipartiteFactorization.BlockScoreMean.cappedScore_product_mean",
+        "Overfull.BipartiteFactorization.BlockScoreMean.cappedScore_product_lower_tail",
+        "Overfull.BipartiteFactorization.BlockScoreMean.exists_block_large_score"
+      ],
+      "manuscript_locations": [
+        "old:fac:score",
+        "old:fac:row-sampling",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Full actual capped correction-score mean at least 7/4*lambda*|P|, lower-tail bound 2^21*a/(p0^3*|P|), and a supported good block with every prescribed part size when the bound is less than one. Exact common fractions, the nonempty-part sample-size condition, exterior degree/cap bounds, and a positive pool for the tail are explicit. Actual moments are derived, not assumed. Simultaneous block/palette choices, integer parameter realization, regularity, absorber and final factorization remain separate."
+    },
+    {
+      "id": "palette_pool_budgets",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/BipartiteFactorization/PaletteBudgets.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.FiniteProbability.upper_tail_of_mean_upper",
+        "Overfull.FiniteProbability.palette_pool_upper_tail",
+        "Overfull.BipartiteFactorization.PaletteBudgets.allowed_card_pos",
+        "Overfull.BipartiteFactorization.PaletteBudgets.allowed_fraction_lower",
+        "Overfull.BipartiteFactorization.PaletteBudgets.allowed_fraction_le",
+        "Overfull.BipartiteFactorization.PaletteBudgets.allowed_card_bound_of_retention",
+        "Overfull.BipartiteFactorization.PaletteBudgets.mean_poolDemand_le_scaled",
+        "Overfull.BipartiteFactorization.PaletteBudgets.variance_poolDemand_le_scaled",
+        "Overfull.BipartiteFactorization.PaletteBudgets.poolDemand_upper_tail",
+        "Overfull.BipartiteFactorization.PaletteBudgets.poolDemand_upper_tail_all"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Compare the actual allowed-color fraction with s/k; derive pool mean and variance bounds and the actual upper tail at 5/4 of the nominal mean, including an empty pool. Positive k, positive sample size for the tail, allowed cardinality at least 32k/33, and the actual per-color copy bound are explicit inputs."
+    },
+    {
+      "id": "palette_row_tails",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/BipartiteFactorization/PaletteRowTails.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.PaletteRowTails.lift_rowColors",
+        "Overfull.BipartiteFactorization.PaletteRowTails.rowColors_card",
+        "Overfull.BipartiteFactorization.PaletteRowTails.rowColors_card_le",
+        "Overfull.BipartiteFactorization.PaletteRowTails.colorsOn_palette_inter",
+        "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_card_eq_colors",
+        "Overfull.BipartiteFactorization.PaletteRowTails.row_poolDemand_eq_count",
+        "Overfull.BipartiteFactorization.PaletteRowTails.row_mean_lower",
+        "Overfull.BipartiteFactorization.PaletteRowTails.row_mean_upper",
+        "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_tail",
+        "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_tail_of_exclusions"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Identify actual row demand with the hypergeometric count of retained incident colors and derive failure probability at most 2*exp(-lambda*c/4096) for the 15/16 and 2 row bounds. The proper coloring, allowed population and retained-row bound are explicit; the exclusion wrapper derives them from actual excluded colors. No row mean or probability estimate is assumed."
+    },
+    {
+      "id": "simultaneous_palette_selection",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/BipartiteFactorization/SimultaneousPalettes.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.not_bad_iff_good",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.probability_bad_le",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.failureBudget_le_uniform",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes_of_uniform_budget",
+        "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes_of_exclusions"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Derive the complete active-row and correction-pool union bound and construct actual pairwise disjoint palettes of prescribed sizes satisfying every graph inequality. Positive prescribed sizes sum to at most the allowed cardinality. The explicit total numerical failure budget is below one. Empty pools are supported; the uniform lower-pool-bound corollary instead assumes positive pool sizes."
+    },
+    {
+      "id": "finite_product_pushforward",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/Probability/ProductMap.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.FiniteProbability.mean_map_of_fibers",
+        "Overfull.FiniteProbability.probability_map_of_fibers",
+        "Overfull.FiniteProbability.probability_pi_map_eq",
+        "Overfull.FiniteProbability.mean_pi_map",
+        "Overfull.FiniteProbability.probability_pi_map"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Push arbitrary real finite weights through maps, including product maps, and transfer arbitrary joint-event probabilities from exact coordinate fiber masses. The fiber identities are explicit algebraic premises; no independence of the event is assumed, and normalization is supplied separately in probability applications."
+    },
+    {
+      "id": "shared_partition_permutations",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/Probability/PartitionPermutation.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.PartitionPermutation.sample_card",
+        "Overfull.PartitionPermutation.mem_sample",
+        "Overfull.PartitionPermutation.sample_mono",
+        "Overfull.PartitionPermutation.sample_disjoint",
+        "Overfull.PartitionPermutation.sample_biUnion",
+        "Overfull.PartitionPermutation.sample_univ",
+        "Overfull.PartitionPermutation.weight_nonneg",
+        "Overfull.PartitionPermutation.sum_weight",
+        "Overfull.PartitionPermutation.probability_sample",
+        "Overfull.PartitionPermutation.exists_good_images",
+        "Overfull.PartitionPermutation.exists_positions",
+        "Overfull.PartitionPermutation.exists_disjoint_samples"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Prove the exact independent fixed-size marginal law of each position tuple under one shared permutation per part, then select all good images simultaneously and preserve sizes, inclusion, disjointness, and exact finite unions. Labels may overlap. The generic existence theorem assumes marginal failure bounds and their total below one; graph wrappers derive those bounds. Empty coordinate populations are normalized correctly."
+    },
+    {
+      "id": "partition_concentration",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/Probability/PartitionConcentration.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.PartitionConcentration.expectedCount_nonneg",
+        "Overfull.PartitionConcentration.exponential_moment_le",
+        "Overfull.PartitionConcentration.exponential_tail",
+        "Overfull.PartitionConcentration.chernoff_lower",
+        "Overfull.PartitionConcentration.half_mean_lower_tail"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Derive exponential moments and the lower Chernoff tail for counts in independent fixed-size samples across arbitrary finite parts. Sampling sizes fit their actual populations. The expected count is calculated from the finite experiment; empty coordinate populations are allowed."
+    },
+    {
+      "id": "preferred_row_sampling",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/BipartiteFactorization/PreferredSampling.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_count",
+        "Overfull.BipartiteFactorization.PreferredSampling.sum_part_representatives",
+        "Overfull.BipartiteFactorization.PreferredSampling.expected_representatives",
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_half_mean_lower_tail",
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_endpoints_lower_tail",
+        "Overfull.BipartiteFactorization.PreferredSampling.special_preferred_lower_tail",
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_edges_count",
+        "Overfull.BipartiteFactorization.PreferredSampling.representative_edges_lower_tail"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Derive the actual representative-edge lower tail exp(-beta*p*c/48) and special preferred-row lower tail 18*a/(p*c), retaining original multigraph copies. Representatives have distinct other endpoints and meet the stated size bound. The special row has positive c and at least c/2 copies into its preferred side. Common sample fractions and the exterior degree bound are explicit."
+    },
+    {
+      "id": "block_selection_budgets",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/BipartiteFactorization/BlockSelectionBudget.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.BlockSelectionBudget.not_bad_iff_goodBlock",
+        "Overfull.BipartiteFactorization.BlockSelectionBudget.probability_bad_le",
+        "Overfull.BipartiteFactorization.BlockSelectionBudget.exists_good_block"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Combine ordinary and special preferred-row estimates with the actual capped-score tail; construct a supported good block with every prescribed part size when the explicit graph-derived budget is below one. Exact common fractions, at least two selections in each nonempty part, graph degree/representative/row/cap bounds, and a positive correction pool are explicit. Probability and moment estimates are proved internally."
+    },
+    {
+      "id": "simultaneous_block_selection",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/BipartiteFactorization/SimultaneousBlocks.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_inter_part",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_inter_part_card",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_mono",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_disjoint",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_biUnion",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_univ",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_subset",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_inter_part_card",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_mono",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_disjoint",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_biUnion",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_univ",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlocks_realize",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.exists_good_permutations",
+        "Overfull.BipartiteFactorization.SimultaneousBlocks.exists_good_blocks"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "Construct actual fine/coarse vertex blocks satisfying all graph inequalities and retaining every supplied component size, inclusion, disjointness, coarse union, and full-side coverage relation under shared part permutations. Compatible position sets, exact sample fractions, at least two selections in each nonempty part, all graph/cap hypotheses, a positive correction pool, and an explicit total budget below one remain inputs. Coarse positions may overlap fine positions. No inter-label independence is assumed."
+    },
+    {
+      "id": "uniform_sampling_failure_budget",
+      "documentation": "bipartite-simultaneous-selection.md",
+      "files": [
+        "Overfull/Probability/UniformFailureBudget.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.FiniteProbability.exists_uniform_failure_budget"
+      ],
+      "manuscript_locations": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "scope": "For fixed u,v,w>=0 and r>0, choose epsilon>0 and an integer threshold before m and a so that u*m*exp(-r*m)+v*a/m+w/m<1 for every sufficiently large m and 0<=a<=epsilon*m. This scalar theorem does not itself derive the coefficient domination or integer parameter choices from the manuscript robust-core hypotheses."
+    },
+    {
+      "id": "predictable_bernoulli_concentration",
+      "documentation": "dense-link-packing.md",
+      "files": [
+        "Overfull/Probability/PredictableBernoulli.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.PredictableBernoulli.count_zero",
+        "Overfull.PredictableBernoulli.count_snoc",
+        "Overfull.PredictableBernoulli.choiceWeight_nonneg",
+        "Overfull.PredictableBernoulli.sum_choiceWeight",
+        "Overfull.PredictableBernoulli.weight_nonneg",
+        "Overfull.PredictableBernoulli.sum_weight",
+        "Overfull.PredictableBernoulli.weight_snoc",
+        "Overfull.PredictableBernoulli.mean_snoc",
+        "Overfull.PredictableBernoulli.local_exponential_moment_le",
+        "Overfull.PredictableBernoulli.exponential_moment_le",
+        "Overfull.PredictableBernoulli.exponential_upper_tail",
+        "Overfull.PredictableBernoulli.upper_tail_of_budget_half",
+        "Overfull.PredictableBernoulli.upper_tail_of_budget_half_add_one"
+      ],
+      "manuscript_locations": [
+        "dense:link-packing"
+      ],
+      "scope": "Derive exponential moments and upper tails for Boolean stages that depend on the complete previous history and the current independent uniform choice; the experiment is the actual finite product law. Conditional means are bounded for every fixed previous history. The clean tails use either a half-load mean budget or that budget plus one deterministic success; indicator independence is not assumed."
+    },
+    {
+      "id": "dense_link_packing_candidates",
+      "documentation": "dense-link-packing.md",
+      "files": [
+        "Overfull/Dense/LinkPacking/Candidates.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.DenseLinkPacking.dense_bipartite_bijection",
+        "Overfull.DenseLinkPacking.subtype_neighbor_card",
+        "Overfull.DenseLinkPacking.exists_matching_on_sides",
+        "Overfull.DenseLinkPacking.cross_degree_after_deletion",
+        "Overfull.DenseLinkPacking.liftOfLE_verts",
+        "Overfull.DenseLinkPacking.liftOfLE_adj",
+        "Overfull.DenseLinkPacking.liftOfLE_isMatching",
+        "Overfull.DenseLinkPacking.exists_matching_on_sides_avoiding",
+        "Overfull.DenseLinkPacking.exists_matching_candidates",
+        "Overfull.DenseLinkPacking.harmfulCandidates_card_le",
+        "Overfull.DenseLinkPacking.harmfulCandidates_card_le_sides"
+      ],
+      "manuscript_locations": [
+        "dense:link-packing"
+      ],
+      "scope": "Construct actual balanced bipartite perfect-matching candidates from crossing-degree surplus, retain exact vertex sets under residual-graph inclusion, and bound harmful candidates by actual link overlap. The candidate family is proved by finite Hall and repeated edge deletion. The harmful-candidate bound needs only vertex containment and pairwise edge disjointness, and also covers empty fallback candidates."
+    },
+    {
+      "id": "dense_link_packing_parameters",
+      "documentation": "dense-link-packing.md",
+      "files": [
+        "Overfull/Dense/LinkPacking/Parameters.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.Parameters.load_nonneg",
+        "Overfull.Dense.LinkPacking.Parameters.load_pos",
+        "Overfull.Dense.LinkPacking.Parameters.rpow_three_halves",
+        "Overfull.Dense.LinkPacking.Parameters.load_eq_rpow",
+        "Overfull.Dense.LinkPacking.Parameters.choices_pos",
+        "Overfull.Dense.LinkPacking.Parameters.choices_lower",
+        "Overfull.Dense.LinkPacking.Parameters.choices_upper",
+        "Overfull.Dense.LinkPacking.Parameters.load_add_choices_le",
+        "Overfull.Dense.LinkPacking.Parameters.rate_nonneg",
+        "Overfull.Dense.LinkPacking.Parameters.rate_pos",
+        "Overfull.Dense.LinkPacking.Parameters.rate_le_quarter",
+        "Overfull.Dense.LinkPacking.Parameters.local_ratio_le",
+        "Overfull.Dense.LinkPacking.Parameters.rate_incidence",
+        "Overfull.Dense.LinkPacking.Parameters.quadratic_exp_decay_bound",
+        "Overfull.Dense.LinkPacking.Parameters.exists_threshold"
+      ],
+      "manuscript_locations": [
+        "dense:link-packing"
+      ],
+      "scope": "Choose the rounded candidate count, bound the conditional hit rate, identify the load with lambda^(3/2)*n, and choose one uniform order threshold making the complete quadratic failure budget less than one. The explicit parameter domain is real b>=1 and lambda>0. The order threshold precedes every graph and link family; the final manuscript theorem also retains lambda<=1."
+    },
+    {
+      "id": "dense_link_packing_history",
+      "documentation": "dense-link-packing.md",
+      "files": [
+        "Overfull/Dense/LinkPacking/History.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.candidates_spec",
+        "Overfull.Dense.LinkPacking.candidates_of_not_exists",
+        "Overfull.Dense.LinkPacking.candidates_matching",
+        "Overfull.Dense.LinkPacking.candidates_verts_subset",
+        "Overfull.Dense.LinkPacking.candidates_avoid",
+        "Overfull.Dense.LinkPacking.candidates_disjoint",
+        "Overfull.Dense.LinkPacking.history_snoc",
+        "Overfull.Dense.LinkPacking.history_matching",
+        "Overfull.Dense.LinkPacking.history_disjoint"
+      ],
+      "manuscript_locations": [
+        "dense:link-packing"
+      ],
+      "scope": "Define an actual total finite choice history using feasible candidate families and empty fallback families, and prove matching, vertex-containment, avoidance, and pairwise edge-disjointness properties at every history. Exact coverage is not assumed in the total history. It follows later from the actual local-load bounds and the proved dense candidate-feasibility theorem."
+    },
+    {
+      "id": "dense_link_packing_local_probability",
+      "documentation": "dense-link-packing.md",
+      "files": [
+        "Overfull/Dense/LinkPacking/LocalProbability.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.hits_localMean_eq",
+        "Overfull.Dense.LinkPacking.hits_localMean_le_one",
+        "Overfull.Dense.LinkPacking.hits_localMean_eq_zero_of_not_mem",
+        "Overfull.Dense.LinkPacking.hits_harmful_card_le",
+        "Overfull.Dense.LinkPacking.hits_localMean_le",
+        "Overfull.Dense.LinkPacking.sum_hitsBound_le",
+        "Overfull.Dense.LinkPacking.hits_upper_tail"
+      ],
+      "manuscript_locations": [
+        "dense:link-packing"
+      ],
+      "scope": "Derive each conditional hit probability from actual candidate edges and link intersections, then prove the exponential tail for one monitored link and vertex using the manuscript incidence bound. The process can depend on all previous choices. The monitored link own round contributes at most one; the proof does not assume indicator independence or a probability oracle."
+    },
+    {
+      "id": "dense_link_packing_local_feasibility",
+      "documentation": "dense-link-packing.md",
+      "files": [
+        "Overfull/Dense/LinkPacking/Feasible.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.cross_degree_after_deletion_local",
+        "Overfull.Dense.LinkPacking.exists_candidateOK_of_local_load",
+        "Overfull.Dense.LinkPacking.exists_candidateOK_of_degree_81"
+      ],
+      "manuscript_locations": [
+        "dense:link-packing"
+      ],
+      "scope": "Construct actual candidate families avoiding an arbitrary used graph from balanced local sides, crossing-degree surplus, and the actual used-neighbor load inside the current link. Only local used-edge loss is bounded; the used graph may have arbitrarily large degrees elsewhere. The 81*b*load wrapper derives the rounded candidate budget for b>=1 and load>=8. Empty sides are included."
+    },
+    {
+      "id": "dense_link_packing_load_accounting",
+      "documentation": "dense-link-packing.md",
+      "files": [
+        "Overfull/Dense/LinkPacking/Load.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.localLoad_bot",
+        "Overfull.Dense.LinkPacking.localLoad_mono",
+        "Overfull.Dense.LinkPacking.localLoad_sup",
+        "Overfull.Dense.LinkPacking.localLoad_matching_indicator",
+        "Overfull.Dense.LinkPacking.history_castSucc",
+        "Overfull.Dense.LinkPacking.history_last",
+        "Overfull.Dense.LinkPacking.used_history_zero",
+        "Overfull.Dense.LinkPacking.used_history_succ",
+        "Overfull.Dense.LinkPacking.used_history_init_le",
+        "Overfull.Dense.LinkPacking.hits_count_eq_localLoad",
+        "Overfull.Dense.LinkPacking.history_covers_of_localLoad"
+      ],
+      "manuscript_locations": [
+        "dense:link-packing"
+      ],
+      "scope": "Identify the predictable hit count exactly with the actual final used-edge degree into each monitored link, and prove that final local-load bounds force exact coverage of every history entry. The deterministic covering bridge uses actual candidate feasibility and graph monotonicity. It assumes no prefix-distribution transport or additional probability estimate."
+    },
+    {
+      "id": "dense_link_packing_simultaneous_packing",
+      "documentation": "dense-link-packing.md",
+      "files": [
+        "Overfull/Dense/LinkPacking/Packing.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.probability_badLoad_le",
+        "Overfull.Dense.LinkPacking.exists_bounded_history",
+        "Overfull.Dense.LinkPacking.exists_packing_of_budget"
+      ],
+      "manuscript_locations": [
+        "dense:link-packing"
+      ],
+      "scope": "Sum actual load tails over all link-vertex pairs, obtain a supported complete history with every load bounded, and construct actual pairwise edge-disjoint matchings covering the prescribed balanced local sides. The finite interface displays load>=8 and a total numerical failure budget below one. The final uniform theorem discharges both from the order threshold instead of retaining them as assumptions."
+    },
+    {
+      "id": "dense_link_packing_tripartite_geometry",
+      "documentation": "dense-link-packing.md",
+      "files": [
+        "Overfull/Dense/LinkPacking/Tripartite.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.DenseLinkPacking.TripartiteGeometry.mem_part",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.parts_pairwise_disjoint",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.parts_cover",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_zero",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_one",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_two",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.card_part",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.card_vertices",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.not_adj_of_mem_part",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.leftIndex_ne_omitted",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.rightIndex_ne_omitted",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.leftIndex_ne_rightIndex",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.index_cases",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.local_disjoint",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.local_union",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_left",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_right",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.induced_degree_eq",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.card_Y",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.degree_left",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.degree_right",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_left",
+        "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_right"
+      ],
+      "manuscript_locations": [
+        "dense:link-packing"
+      ],
+      "scope": "Construct the three actual host parts and the two balanced local sides of every omitted-part link, and identify actual induced degrees with opposite-side neighbor counts. The geometry applies to arbitrary finite tripartite vertex types. All part counts, unions, disjointness, and minimum-degree transfers are proved from the graph and the stated link intersections."
+    },
+    {
+      "id": "dense_link_packing",
+      "documentation": "dense-link-packing.md",
+      "files": [
+        "Overfull/Dense/LinkPacking/Theorem.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.Dense.LinkPacking.exists_tripartite_link_packing"
+      ],
+      "manuscript_locations": [
+        "dense:link-packing"
+      ],
+      "scope": "Prove full Lemma 5.12: choose a uniform order threshold and construct actual pairwise edge-disjoint perfect matchings for all balanced omitted-part links under the exact degree, overlap, incidence, and family-size bounds. For fixed real b>=1 and 0<lambda<=1, the order threshold precedes n, all three host vertex types, the tripartite graph, and the entire link family. The constants 81,6,2,3 and the actual induced minimum-degree premise are retained. Candidate existence, local-load bounds, and the total failure budget are proved internally. The explicit b>=1 domain records the joint hierarchy convention in 1/n << 1/b,lambda <= 1. The general r-partite BKLOT lemma and the main theorem are not claimed."
+    },
+    {
+      "id": "robust_partition",
+      "documentation": "robust-partition.md",
+      "files": [
+        "Overfull/RobustPartition/Conclusion.lean",
+        "Overfull/RobustPartition/Counting.lean",
+        "Overfull/RobustPartition/FiniteRefinement.lean",
+        "Overfull/RobustPartition/Induced.lean",
+        "Overfull/RobustPartition/Pieces.lean",
+        "Overfull/RobustPartition/Refinement.lean",
+        "Overfull/RobustPartition/Scales.lean",
+        "Overfull/RobustPartition/Split.lean",
+        "Overfull/RobustPartition/Theorem.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.RobustPartition.rank_eq_weighted_count",
+        "Overfull.RobustPartition.valid_shore_degree_lower",
+        "Overfull.RobustPartition.valid_piece_cut_le",
+        "Overfull.RobustPartition.partition_conclusion_of_terminal",
+        "Overfull.RobustPartition.ecount_nonneg",
+        "Overfull.RobustPartition.cut_nonneg",
+        "Overfull.RobustPartition.bad_nonneg",
+        "Overfull.RobustPartition.ecount_symm",
+        "Overfull.RobustPartition.bad_symm",
+        "Overfull.RobustPartition.ecount_mono",
+        "Overfull.RobustPartition.ecount_le_mul_card",
+        "Overfull.RobustPartition.ecount_union_left_le",
+        "Overfull.RobustPartition.ecount_union_right_le",
+        "Overfull.RobustPartition.ecount_union_left",
+        "Overfull.RobustPartition.ecount_union_right",
+        "Overfull.RobustPartition.ecount_eq_sum",
+        "Overfull.RobustPartition.ecount_univ",
+        "Overfull.RobustPartition.ecount_add_compl",
+        "Overfull.RobustPartition.ecount_self",
+        "Overfull.RobustPartition.cut_eq_sum",
+        "Overfull.RobustPartition.cut_compl",
+        "Overfull.RobustPartition.cut_sdiff_le",
+        "Overfull.RobustPartition.cut_union_le_bad",
+        "Overfull.RobustPartition.ecount_off_left_le_bad",
+        "Overfull.RobustPartition.ecount_off_right_le_bad",
+        "Overfull.RobustPartition.bad_eq_internal_add_cut",
+        "Overfull.RobustPartition.internal_edges_add_cut_le_bad",
+        "Overfull.RobustPartition.min_degree_mul_card_le",
+        "Overfull.RobustPartition.ecount_le_max_degree_mul_card",
+        "Overfull.RobustPartition.card_lower_of_small_off",
+        "Overfull.RobustPartition.block_size_lower",
+        "Overfull.RobustPartition.bipartite_sizes_lower",
+        "Overfull.RobustPartition.internal_good_of_not_bad",
+        "Overfull.RobustPartition.bad_internal_degree_count",
+        "Overfull.RobustPartition.degree_gap_le_off",
+        "Overfull.RobustPartition.bipartite_imbalance",
+        "Overfull.RobustPartition.coarse_count_bound",
+        "Overfull.RobustPartition.sharp_count_estimate",
+        "Overfull.RobustPartition.exists_terminal_of_bounded_rank",
+        "Overfull.RobustPartition.mem_localRN",
+        "Overfull.RobustPartition.localRN_subset",
+        "Overfull.RobustPartition.induced_set_card",
+        "Overfull.RobustPartition.induced_degree_eq_local_count",
+        "Overfull.RobustPartition.induced_robustNeighbors_image",
+        "Overfull.RobustPartition.induced_robustNeighbors_card",
+        "Overfull.RobustPartition.induced_robust_iff",
+        "Overfull.RobustPartition.exists_bad_set_of_not_induced_robust",
+        "Overfull.RobustPartition.unionList_nil",
+        "Overfull.RobustPartition.unionList_cons",
+        "Overfull.RobustPartition.unionList_append",
+        "Overfull.RobustPartition.disjoint_unionList_right",
+        "Overfull.RobustPartition.lower_mul_length_le_union_card",
+        "Overfull.RobustPartition.pairwise_replace_shore",
+        "Overfull.RobustPartition.unionList_replace_shore",
+        "Overfull.RobustPartition.shoreList_append",
+        "Overfull.RobustPartition.shoreList_cons",
+        "Overfull.RobustPartition.shoreList_nil",
+        "Overfull.RobustPartition.rank_append",
+        "Overfull.RobustPartition.rank_ordinary_cons",
+        "Overfull.RobustPartition.rank_bipartite_cons",
+        "Overfull.RobustPartition.partition_replace_ordinary",
+        "Overfull.RobustPartition.Piece.valid_mono",
+        "Overfull.RobustPartition.valid_shore_lower",
+        "Overfull.RobustPartition.valid_rank_bound",
+        "Overfull.RobustPartition.valid_initial",
+        "Overfull.RobustPartition.exists_terminal_partition",
+        "Overfull.RobustPartition.exists_scale_ladder",
+        "Overfull.RobustPartition.split_of_nonexpanding_witness",
+        "Overfull.RobustPartition.nonexpanding_block_split",
+        "Overfull.RobustPartition.exists_uniform_partition",
+        "Overfull.robust_partition"
+      ],
+      "manuscript_locations": [
+        "bip:part:imported"
+      ],
+      "scope": "Full Theorem 2.23: a positive almost-regularity tolerance and an order threshold precede every finite vertex type and graph. Actual minimum and maximum degree bounds produce an actual disjoint partition into induced robust expanders and ordered almost bipartite pieces, with all square-root size, imbalance, edge-error, whole-part exceptional-degree, and weighted floor bounds. A finite scale ladder and strictly increasing bounded shore rank construct the partition internally. The proof permits n0=1 and needs only positivity of f on (0,1); the manuscript nondecreasing interval-valued functions are included. The additional conditions of the broader published KLOS robust-partition theorem and the main theorem are not claimed."
+    },
+    {
+      "id": "frequent_pattern_fixed_encoding",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.Compression.exists_compressed_matching_fixed_code",
+        "Overfull.CircuitPatterns.exists_compressed_encoding",
+        "Overfull.CircuitPatterns.card_pattern_le",
+        "Overfull.CircuitPatterns.Encodes.boundary_edges"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, common pattern encoding and finite count"
+      ],
+      "scope": "Compress every actual support matching using one fixed embedding of the core labels into Fin 4. Construct its finite exceptional-pair, assignment and forest pattern and prove the exact boundary image and the bound b4(t). One common code is chosen before all support matchings. A pattern is backed by actual compressed host edges; the ambient finite pattern type may also contain invalid patterns, which receive weight zero."
+    },
+    {
+      "id": "frequent_pattern_weighted_distribution",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.CircuitPatterns.exists_encoded_distribution",
+        "Overfull.CircuitPatterns.EncodedDistribution.internal_pairs_empty_of_weight_gt_one",
+        "Overfull.CircuitPatterns.EncodedDistribution.pair_capacity",
+        "Overfull.CircuitPatterns.EncodedDistribution.positive_odd_cut",
+        "Overfull.CircuitPatterns.EncodedDistribution.whole_union_capacity"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, actual fractional input and weighted cuts"
+      ],
+      "scope": "Construct the encoded distribution from the proved matching polytope, with total scaled weight k and original edge marginals. Prove actual pair and whole-cut capacities, absence of internal exceptional pairs in a pattern of weight greater than one, and positive odd crossings on the support. The internal-pair weight bound uses simplicity. These are original-host capacities. No fractional matching decomposition of a later greedily realized residual is assumed."
+    },
+    {
+      "id": "frequent_pattern_rounding_selection",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.CircuitPatterns.reserve_floor_bounds",
+        "Overfull.CircuitPatterns.pair_cut_discard_bound",
+        "Overfull.CircuitPatterns.exists_pattern_selection",
+        "Overfull.CircuitPatterns.enumeratedPattern_count"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, common rounding, discards and frequent reserve"
+      ],
+      "scope": "Choose a maximum-weight common pattern, reserve r0=floor(lambda0/2), and construct all accepted integer multiplicities using a single original proposal for sparse-pair and protected-even-cut tests. Prove r0 >= k/(3*b4(t)), retained-degree bounds, endpoint slack, and reserved pair capacities. The explicit discard coefficient is (4*t+6)*(t+8)+2^(t+5). Every accepted internal-exceptional-pair multiplicity is zero. The actual edge realization is a separately proved construction, not a selection hypothesis."
+    },
+    {
+      "id": "frequent_pattern_actual_realization",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.CircuitPatternRealization.selectedMatching_isMatching_of_endpoints",
+        "Overfull.CircuitPatterns.exists_realized_boundary_family_of_slack",
+        "Overfull.CircuitPatterns.RealizedBoundaryFamily.even_uncovered"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, greedy actual boundary realization"
+      ],
+      "scope": "Choose fresh actual edges from disjoint boundary pools while avoiding occupied core endpoints. Construct pairwise edge-disjoint boundary matchings with the exact selected pattern images, complete exceptional coverage, bounded footprints and correct uncovered-core parity. Realizability is derived from candidate counts and actual exterior incidence bounds, including the zero-demand case. No preexisting boundary matching family is assumed in the public selection-to-completion construction."
+    },
+    {
+      "id": "frequent_pattern_fixed_completion",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.CircuitPatterns.fixed_boundary_allowed",
+        "Overfull.CircuitPatterns.exists_core_boundary_completion",
+        "Overfull.CircuitPatterns.exists_boundary_completion",
+        "Overfull.CircuitPatterns.exists_completed_pattern_family"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, simultaneous fixed-rule completion"
+      ],
+      "scope": "Derive admissibility for each exact boundary footprint and run one fixed certified packing rule per core. Construct actual ambient perfect matchings, their presence when deleted, exact regular residuals, and embedded residual robust cores with the sharp degree-error bound. The local completion interface takes proved rule certificates and actual boundary data. The public frequent-pattern theorem supplies those certificates and constructs the boundary family; no future completion or admissibility oracle is assumed."
+    },
+    {
+      "id": "frequent_pattern_prefix_safety",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.CircuitPatterns.pattern_cut_accounting",
+        "Overfull.CircuitPatterns.proposed_cut_dichotomy",
+        "Overfull.CircuitPatterns.no_overfull_after_pattern_deletions",
+        "Overfull.CircuitPatterns.BoundaryCompletion.safe_selected_prefixes"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, exact prefix cut accounting and no-overfull preservation"
+      ],
+      "scope": "Prove exact cut subtraction in the common pattern coordinates, odd-cut lower bounds, the large-or-preserved even-cut dichotomy, and safety of every required vertex toggle. Apply the proved small-cut classification to every actual completed prefix. The concrete wrapper discharges original capacities, positive odd crossings, prefix multiplicity bounds and protected-cut conditions from the encoded distribution and selection. No residual no-overfull hypothesis or residual fractional decomposition appears as an input."
+    },
+    {
+      "id": "frequent_pattern_reserved_supply",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.CircuitPatterns.afterDeletions_pool_accounting",
+        "Overfull.CircuitPatterns.reserved_boundaryPool_card",
+        "Overfull.CircuitPatterns.survivingPool_exceptional_card_le_neighbors",
+        "Overfull.CircuitPatterns.survivingPool_joining_card_le",
+        "Overfull.CircuitPatterns.forest_supply_of_pair_supply"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, actual surviving reserve and forest supply"
+      ],
+      "scope": "Count actual surviving host-edge pools after the completed deletions. Turn the numerical reserve into actual assigned neighbors, actual joining edges between enlarged parts, and every asserted forest-cut lower bound. Supply is a cardinality statement about actual residual edges, not a claim that numerical remaining pattern weights are realized by residual perfect matchings. Distinct joining-pair edge sets are disjoint."
+    },
+    {
+      "id": "frequent_pattern_absorption_parity",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.CircuitPatterns.Encodes.exists_core_assignment",
+        "Overfull.CircuitPatterns.Encodes.enlarged_part_parity",
+        "Overfull.CircuitPatterns.odd_leafForest_classification",
+        "Overfull.CircuitPatterns.Encodes.forestShape_of_four_odd_enlarged"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, complete exceptional absorption and forest shape"
+      ],
+      "scope": "Construct the actual core assignment of every exceptional vertex of the frequent pattern, prove the enlarged-part parity equals the joining-forest degree parity, and classify all-odd forests on four labels as a perfect matching or a three-edge star. The assignment is extracted from an actual positive-weight sample and the parity from its covered exceptional vertices and even uncovered core orders. The finite forest classification is checked by the Lean kernel without native_decide."
+    },
+    {
+      "id": "frequent_pattern_uniform_parameters",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.CircuitPatterns.exists_pattern_parameters"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern, uniform scalar choices"
+      ],
+      "scope": "Choose rounding, initial error and order thresholds supplying the frequent-weight threshold, all core packing reserves, footprint bounds, small-cut classification inequalities, absorption-size bounds and final relative error. The positive packing output and density parameters are fixed before the arbitrary final error request. The initial error and order threshold then precede the graph, actual core orders and actual exceptional cardinality."
+    },
+    {
+      "id": "frequent_boundary_pattern",
+      "documentation": "frequent-pattern.md",
+      "lean_declarations": [
+        "Overfull.circuit_frequent_boundary_pattern"
+      ],
+      "manuscript_locations": [
+        "three:lem:pattern"
+      ],
+      "scope": "Historical supporting checkpoint before the full Lemma 4.14 proof: Full Lemma 4.13. From a simple regular non-overfull graph with three or four robust cores and at most t exceptional vertices, construct actual perfect-matching deletions and absorb every exceptional vertex. The exact residual has no overfull set after every prefix, degree h >= k/(3*b4(t)), and disjoint enlarged robust cores covering all vertices. The positive output robustness is chosen before every requested relative error delta>0; the positive initial tolerance and order threshold precede all graph data. The actual final core error and h-r0 are at most delta*h. In the four-odd-part case the actual label forest is a perfect matching or three-edge star, every forest pair has at least r0 actual joining edges, and every union of parts satisfies the forest-cut supply. This reduction supplies no terminal one-factorization; Lemma 4.14, Proposition 4.16, and the manuscript main theorem remain unverified; Lemma 4.15 is now completed by the separate direct FourOdd construction. Full Lemma 4.14 is now proved by Overfull.boundary_extension; this component retains the limited supporting scope described above."
+    },
+    {
+      "id": "coupled_absorber_integer_parameters",
+      "documentation": "residual-factorization.md",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_source_parameters",
+        "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_parameter_family",
+        "Overfull.BipartiteFactorization.AbsorberParameters.exists_cluster_order",
+        "Overfull.BipartiteFactorization.AbsorberParameters.spanning_divisibilities",
+        "Overfull.BipartiteFactorization.AbsorberParameters.make_valid"
+      ],
+      "manuscript_locations": [
+        "old:fac:palette-sizes",
+        "old:fac:absorber-counts"
+      ],
+      "scope": "Construct actual positive even absorber palettes with exact coupled identities, source palette budgets, structural divisibilities and uniform positive fractions before graph orders. The main ratio is fixed before the reduced cluster count. Constructs numerical parameters only; the geometric bi-setup, special factors and robust absorber remain unproved."
+    },
+    {
+      "id": "bipartite_arbitrary_reserve_packing",
+      "documentation": "residual-factorization.md",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.pack_fixed_bipartite_forbidden_sets",
+        "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_identity",
+        "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_error",
+        "Overfull.BipartiteFactorization.BipartiteCorePacking.subfamily_robust"
+      ],
+      "manuscript_locations": [
+        "old:fac:range"
+      ],
+      "scope": "Uniform actual matching packing for every fixed positive reserve and arbitrary finite balanced footprint family. Exact unused degree, error, bipartiteness and every-subfamily robustness are proved. Requires the explicit actual robust graph and bounded footprints; does not construct the absorber."
+    },
+    {
+      "id": "actual_reserved_copy_core",
+      "documentation": "residual-factorization.md",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.ReservedCore.mem_coreEdges_iff",
+        "Overfull.BipartiteFactorization.ReservedCore.exteriorOriginal_survives",
+        "Overfull.BipartiteFactorization.ReservedCore.core_exterior_identity",
+        "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_core_eq_palette_add",
+        "Overfull.BipartiteFactorization.ReservedCore.core_degree_bounds",
+        "Overfull.BipartiteFactorization.ReservedCore.bipartite_robust_of_reserved_degrees"
+      ],
+      "manuscript_locations": [
+        "old:degree-accounting"
+      ],
+      "scope": "Construct the surviving embedded core from an explicit set of original reserved copies. Identify surviving exterior copies and derive exact ambient/core degree, retained error and robustness. The reserved set and its degree specifications are explicit inputs; existence of the required absorber reservation is not asserted. Same-palette restriction does not compress the exterior coloring."
+    },
+    {
+      "id": "complete_remaining_exterior_classes",
+      "documentation": "residual-factorization.md",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.ComplementCompletion.classes_isPerfectMatching",
+        "Overfull.BipartiteFactorization.ComplementCompletion.exterior_mem_class",
+        "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore_exhausts",
+        "Overfull.BipartiteFactorization.ComplementCompletion.remainingGraph_regular",
+        "Overfull.BipartiteFactorization.sideFootprint_load",
+        "Overfull.BipartiteFactorization.BipartiteCorePacking.remaining_comap"
+      ],
+      "manuscript_locations": [
+        "old:degree-accounting"
+      ],
+      "scope": "Complete all colors of the actual core complement by actual internal matchings; preserve original labels and prove the exact residual core exhausts every surviving copy. Deterministic actual-copy completion; matching existence is supplied by the separate uniform packing theorem."
+    },
+    {
+      "id": "regular_bipartite_residual_orientation",
+      "documentation": "residual-factorization.md",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.exists_regular_bipartite_orientation",
+        "Overfull.BipartiteFactorization.ResidualOrientation.edge_iff_arc",
+        "Overfull.BipartiteFactorization.ResidualOrientation.arc_asymm",
+        "Overfull.BipartiteFactorization.ResidualOrientation.outDegree_eq",
+        "Overfull.BipartiteFactorization.ResidualOrientation.inDegree_eq"
+      ],
+      "manuscript_locations": [
+        "old:degree-accounting"
+      ],
+      "scope": "Use the checked Konig theorem to construct complementary r-regular graphs and orient every original edge exactly once with actual indegree and outdegree r. Covers the actual simple bipartite residual only, including r=0; its factors do not cover isolated exterior vertices."
+    },
+    {
+      "id": "uniform_actual_reserved_remainder",
+      "documentation": "residual-factorization.md",
+      "lean_declarations": [
+        "Overfull.BipartiteFactorization.exists_uniform_oriented_remainder",
+        "Overfull.BipartiteFactorization.exists_uniform_reserved_remainder"
+      ],
+      "manuscript_locations": [
+        "old:degree-accounting"
+      ],
+      "scope": "Choose all error and order thresholds before graph/reserved-set data; derive the actual prepared host from original regular degrees and reservation budgets, complete every supplied balanced exterior color and construct an exact simple 2r-regular oriented remainder. The actual reserved set and compressed balanced exterior coloring remain explicit stage inputs. Full spanning setup, special factors, robust absorber and final original-host factorization are not proved."
+    },
+    {
+      "id": "three_vertex_compatible_circuit_partition",
+      "documentation": "three-label-circuit-verification.md",
+      "lean_declarations": [
+        "Overfull.Multigraph.exists_threeLabel_safe_circuit",
+        "Overfull.Multigraph.exists_threeLabel_compatibleCircuitPartition",
+        "Overfull.Multigraph.exists_safe_circuit_of_card_le_three",
+        "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_three",
+        "Overfull.Multigraph.compatibleCircuitPartition_iff_admissible_of_card_le_three"
+      ],
+      "scope": "Compatible circuit selection and exact partition for finite loopless multigraphs on at most three vertices, under the original half-cut inequalities and even degrees. Actual edge-copy identities and arbitrary incidence-class types are preserved. This does not prove the four-label case, full Corollary 4.6, terminal Proposition 4.16, or the main theorem."
+    }
+  ],
+  "continuation_source_reviews": [
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "sections": [
+        "old:fac:setup",
+        "old:palettes",
+        "old:two-families"
+      ],
+      "documentation": "bipartite-localization.md",
+      "numbered_inventory_rebased": false
+    },
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "sections": [
+        "old:fac:imbalance",
+        "old:two-families"
+      ],
+      "documentation": "bipartite-palette-assembly.md",
+      "numbered_inventory_rebased": false
+    },
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "sections": [
+        "old:two-families",
+        "old:fac:localized-footprints"
+      ],
+      "documentation": "bipartite-two-families.md",
+      "numbered_inventory_rebased": false
+    },
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "sections": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "documentation": "bipartite-sampling.md",
+      "numbered_inventory_rebased": false
+    },
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "sections": [
+        "old:palettes",
+        "old:fac:row-sampling",
+        "old:fac:pool-demand",
+        "old:fac:score",
+        "old:fac:swap-variance"
+      ],
+      "documentation": "bipartite-simultaneous-selection.md",
+      "numbered_inventory_rebased": false
+    },
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "sections": [
+        "dense:link-packing"
+      ],
+      "documentation": "dense-link-packing.md",
+      "numbered_inventory_rebased": false,
+      "statement_source_lines": [
+        4068,
+        4079
+      ],
+      "statement_sha256": "1d5d07d6cfa237c907e332ee99db407b81dd14a39c99ad0904939c710c8fe2f1",
+      "matches_pinned_statement_sha256": true,
+      "parameter_convention": "The joint hierarchy 1/n << 1/b,lambda <= 1 is represented by fixed real b>=1 and 0<lambda<=1, with a uniform order threshold before all graph data."
+    },
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "sections": [
+        "bip:part:imported"
+      ],
+      "documentation": "robust-partition.md",
+      "numbered_inventory_rebased": false,
+      "statement_source_lines": [
+        1600,
+        1628
+      ],
+      "statement_sha256": "be076a6b6c07e78af1793be025ddfde0ac2b3360914be0360ff48fb5866dbf31",
+      "matches_pinned_statement_sha256": true,
+      "parameter_convention": "Both n0 and gamma0 precede every finite vertex type and graph. The proof permits n0=1 and requires only positivity of f on (0,1), including every manuscript nondecreasing function into (0,1)."
+    },
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "sections": [
+        "three:lem:four-odd"
+      ],
+      "documentation": "four-odd-decomposition.md",
+      "numbered_inventory_rebased": false,
+      "statement_source_lines": [
+        3297,
+        3309
+      ],
+      "statement_sha256": "95942bcc2f458912f740b61cecad49f74bcfe9e8679ec1a30e2819e039591eb0",
+      "matches_pinned_statement_sha256": true,
+      "parameter_convention": "The fixed sufficient constant is 1/1000 for both ratios. The natural floor of a supplies the actual integer joining-degree bound. The ratio theorem assumes h>0; undivided variants cover h=0."
+    },
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "numbered_inventory_rebased": false,
+      "sections": [
+        "old:fac:palette-sizes",
+        "old:fac:absorber-counts",
+        "old:fac:range",
+        "old:degree-accounting"
+      ],
+      "documentation": "residual-factorization.md",
+      "source_mapping": "residual-factorization-source.json",
+      "parameter_convention": "The main absorber ratio precedes the reduced cluster count. Uniform errors and thresholds precede every finite host and reserved-copy set. The final remaining-color count is k-2s, distinct from the fine-palette count."
+    }
+  ],
+  "supporting_continuations": [
+    {
+      "date": "2026-11-22",
+      "base_commit": "2eb61f588a26b3fe41edcf0bcec8610c9c343dd8",
+      "public_theorem_proofs": 109,
+      "new_modules": 13,
+      "numbered_assertions_completed": 0,
+      "complete_numbered_total": 44,
+      "scope": "Uniform localization constructions and the deterministic critical-partition reduction. The original numbered assertion inventory and source identity remain unchanged.",
+      "notes": [
+        "uniform-localization.md",
+        "critical-partition-consequences.md"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "base_commit": "46b6dc2c44c66a7a2c4ed9590690224bb2d10af4",
+      "new_modules": 17,
+      "numbered_assertions_completed": 1,
+      "completed_assertions": [
+        "4.15"
+      ],
+      "complete_numbered_total": 45,
+      "scope": "Full Lemma 4.15 for finite loopless multigraphs, hence also simple graphs. All inputs refer to the original graph: h-regularity, no h-overfull set, four odd label fibers, actual joining degree at most real a, a prescribed perfect matching or three-edge star with at least r0 actual copies on every prescribed pair, and the manuscript forest-cut supply. The explicit sufficient conditions are a/h <= 1/1000 and (h-r0)/h <= 1/1000 for h>0. The output is an exact partition of the actual joining-copy subtype into actual matchings, exactly h with injective perfect-matching/star projection; every surplus projection is a two-edge circuit. The stronger undivided variants need only individual pair supplies and cover h=0. All quotient cuts/parities, finite selections and matching constructions are derived. This is a direct alternative proof; the general compatible-circuit theorem and terminal factorization are not claimed.",
+      "notes": [
+        "four-odd-decomposition.md",
+        "four-odd-semantic-review.md"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "base_commit": "1b12919971be8518b185aa59832c209170ec0656",
+      "public_theorem_proofs": 99,
+      "new_modules": 8,
+      "numbered_assertions_completed": 0,
+      "complete_numbered_total": 45,
+      "scope": "Constructed coupled integer absorber parameters, source palette budgets and divisibilities; exact original-copy reservation, arbitrary-reserve bipartite packing, complete exterior-class completion, exact simple regular remainder, and actual balanced orientation. ReservedRemainder composes these graph steps from an original regular host and explicit reserved copies with a supplied compressed balanced exterior coloring. The geometric spanning setup, special path systems, robust absorber, construction of those stage inputs, and final whole-host factorization remain unproved. No numbered assertion is added.",
+      "notes": [
+        "residual-factorization.md",
+        "residual-factorization-semantic-review.md"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "base_commit": "a825b24b0dd0ad6edd336388c740530bcfb38d99",
+      "reconstruction_of": "cb05ef5f5b7ef5ada4e535e9dcc652eecaddc43e",
+      "original_tree_reproduced": false,
+      "new_modules": 20,
+      "numbered_assertions_completed": 1,
+      "completed_assertions": [
+        "4.2"
+      ],
+      "complete_numbered_total": 47,
+      "scope": "47 of 69 numbered manuscript assertions have complete checked proofs; 22, including the main theorem, remain incomplete. Full ordinary-core Lemma 4.2 is proved under its original hypotheses and yields an exact partition of all original multigraph copies into perfect matchings. The supporting continuation proves the one-core branch of Corollary 4.6 with at most three exceptional vertices, terminal one-core factorization under the recorded incidence hypotheses, and the exact three-label safe-deletion criterion. It completes no additional numbered assertion. The two-core branch of 4.6, full fixed-pattern Lemma 4.4, general compatible-circuit selection, terminal Proposition 4.16, general Section 6 factorization, critical average-degree input, and the main theorem remain incomplete. Eleven unavailable source modules were recreated under explicit user authorization; all nine recovered original source modules and the stock audit were preserved. This is a newly verified checkpoint, not the original cb05ef5 tree.",
+      "notes": [
+        "ordinary-factorization-full.md",
+        "ordinary-factorization-full-semantic-review.md",
+        "few-exception-continuation.md",
+        "few-exception-semantic-review.md",
+        "checkpoint-reconstruction.md"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "run_started_at_utc": "2026-11-22T23:59:31Z",
+      "base_commit": "b5afb03a0f0613eedd0cb3310e06706942afe2e7",
+      "new_modules": 11,
+      "public_theorem_proofs": 94,
+      "numbered_assertions_completed": 0,
+      "complete_numbered_total": 47,
+      "scope": "Compatible circuit selection and exact partition for finite loopless multigraphs on at most three vertices, under the original half-cut inequalities and even degrees. Actual edge-copy identities and arbitrary incidence-class types are preserved. This does not prove the four-label case, full Corollary 4.6, terminal Proposition 4.16, or the main theorem.",
+      "notes": [
+        "three-label-circuit-verification.md",
+        "three-label-circuit-semantic-review.md"
+      ],
+      "source_mapping": "three-label-circuit-source.json"
+    },
+    {
+      "date": "2026-11-23",
+      "run_started_at_utc": "2026-11-23T01:08:29Z",
+      "base_commit": "5f46a36d87f9ca1cee382f46687d9d155b9b5bc2",
+      "new_modules": 5,
+      "public_theorem_proofs": 75,
+      "numbered_assertions_completed": 0,
+      "complete_numbered_total": 47,
+      "scope": "Original-host joining decomposition for an actual assignment to at most three labels. Derives all half-cut bounds and parity internally from regularity, no overfull set and all-even or exactly two odd fibers. Exact primary/surplus original-copy matching families and host cut footprints are constructed. The source-level assignment, reserves, palette grouping, robust completions and final factorization remain unfinished.",
+      "notes": [
+        "joining-circuit-verification.md",
+        "joining-circuit-semantic-review.md"
+      ],
+      "source_mapping": "joining-circuit-source.json"
+    },
+    {
+      "date": "2026-11-23",
+      "run_started_at_utc": "2026-11-23T04:26:19Z",
+      "base_commit": "5f46a36d87f9ca1cee382f46687d9d155b9b5bc2",
+      "recovered_attempt_commit": "28edc7b555d459b93a00d15258ca374abf5f0bb0",
+      "recovered_joining_modules": 5,
+      "new_assigned_modules": 5,
+      "public_theorem_proofs": 43,
+      "numbered_assertions_completed": 0,
+      "complete_numbered_total": 47,
+      "scope": "Recreated actual assigned parts, exact original matching cuts and derived parity; same-host and separate-host joining compositions. Preserves supplied representative. Source-specific one optional pair uses at most two exceptions. Heavy-pattern reserves, residual safety, source-statistic alignment, palettes, robust completion and full Corollary 4.6 remain unfinished.",
+      "notes": [
+        "assigned-part-verification.md",
+        "assigned-part-semantic-review.md"
+      ],
+      "source_mapping": "assigned-part-source.json"
+    }
+  ],
+  "later_statement_comparisons": [
+    {
+      "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "sha256": "40d84a4e2f22b328d133958e22050058b1022120358432a126cf2d034b583042",
+      "comparison_date": "2026-11-21",
+      "scope": "Complete statement-environment byte hashes only. The numbered inventory and canonical manuscript source remain pinned to the recorded November 20 file; no claim is made that the full manuscripts are identical.",
+      "assertions": [
+        {
+          "manuscript_number": "4.6",
+          "manuscript_label": "three:lem:bounded-input",
+          "statement_sha256": "86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26",
+          "matches_pinned_statement": true
+        },
+        {
+          "manuscript_number": "4.13",
+          "manuscript_label": "three:lem:pattern",
+          "statement_sha256": "557d62e4c4ab7c00ac7cc29fa403d80601a2b9851e7c7eb62cdeb4caa1d40c3b",
+          "matches_pinned_statement": true
+        },
+        {
+          "manuscript_number": "4.14",
+          "manuscript_label": "three:lem:boundary",
+          "statement_sha256": "67baedd4ae2e0451a8842fd27ea0976f50db94c9054eacd2f5dd40ce2cfa21e3",
+          "matches_pinned_statement": true
+        },
+        {
+          "manuscript_number": "4.15",
+          "manuscript_label": "three:lem:four-odd",
+          "statement_sha256": "95942bcc2f458912f740b61cecad49f74bcfe9e8679ec1a30e2819e039591eb0",
+          "matches_pinned_statement": true
+        },
+        {
+          "manuscript_number": "4.16",
+          "manuscript_label": "three:prop:terminal",
+          "statement_sha256": "1ba102e379594ab72de4ba73cf41c88d9fbdadf1c132e2943b48da04e8c2cc1c",
+          "matches_pinned_statement": true
+        }
+      ]
+    },
+    {
+      "manuscript_number": "4.14",
+      "manuscript_label": "three:lem:boundary",
+      "inspected_filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+      "inspected_source_sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+      "statement_sha256": "67baedd4ae2e0451a8842fd27ea0976f50db94c9054eacd2f5dd40ce2cfa21e3",
+      "matches_pinned_statement_sha256": true,
+      "numbered_inventory_rebased": false,
+      "source_manifest": "boundary-extension-full-source.json"
+    }
+  ],
+  "source_recovery": {
+    "provenance": "source-recovery.json",
+    "recovered_main_commit": "54db7b826be05fbba9845f4140aaba0a7db5ba04",
+    "continuation_parent_commit": "2eb61f588a26b3fe41edcf0bcec8610c9c343dd8",
+    "completed_numbered_assertion_increment": 0
+  },
+  "authorized_source_excerpts": {
+    "path": "verification/runs/20261122T235931Z/authorized-manuscript-recovery.md",
+    "sha256": "84d9b40e35d54aff5a9159e97232be803b3ac4116cc2846ceac3a9789fa8c60b",
+    "authorization_record": "verification/runs/20261122T235931Z/authorization-publication.json",
+    "matched_original_statement_numbers": [
+      "4.4",
+      "4.5",
+      "4.6"
+    ],
+    "complete_manuscript_byte_identity_claimed": false
+  }
+}

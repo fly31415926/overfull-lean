@@ -1,0 +1,22 @@
+\begin{lemma}\label{three:lem:pattern}
+Fix $t$ and a positive lower bound $\alpha$ for the degree and core
+orders relative to the graph order. Choose a robust range $\sigma$
+sufficiently small relative to $\alpha/b_4(t)$, and fix a positive
+robust-neighborhood parameter at most $\sigma$.
+For sufficiently small core error and sufficiently large order, let
+$G$ be a simple $k$-regular graph with no $k$-overfull set,
+$q\in\{3,4\}$ cores, and at most $t$ exceptional vertices. Then $G$ can
+be reduced by perfect-matching deletions and absorptions to an
+$h$-regular graph $G'$ with no $h$-overfull set, covered by $q$ cores
+$A_1,\ldots,A_q$, with arbitrarily small error relative to $h$.
+If $q=4$ and all four $A_i$ are odd, there is a fixed perfect matching or
+three-edge star $F_0$ on their labels and an integer $r_0$ such that
+$h-r_0$ is arbitrarily small relative to $h$ and
+\begin{equation}\label{three:eq:forest-supply}
+ |\cut_{G'}(\bigcup_{i\in I}A_i)|
+ \ge r_0|\cut_{F_0}(I)|\qquad(I\subseteq\{1,2,3,4\}).
+\end{equation}
+Every pair of parts joined in $F_0$ has at least $r_0$ joining
+edges. The retained degree is a fixed positive fraction of the
+initial degree.
+\end{lemma}

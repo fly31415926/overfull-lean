@@ -1,0 +1,98 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Action completed."
+    }
+  ],
+  "structuredContent": {
+    "api_tool_source": "files/read",
+    "results": [
+      {
+        "version_id": "9",
+        "name": "main.tex",
+        "mime_type": "text/x-tex",
+        "size_bytes": 312836,
+        "created_at": "2026-11-24T03:21:57.227640Z",
+        "modified_at": "2026-11-24T21:36:01.765116Z",
+        "file_provider": "native",
+        "library_file_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "ref_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "file_id": "file_000000007fc881f5a6f7b83b2278529c",
+        "surface": "library",
+        "requested_file_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "start_line": 5872,
+        "end_line": 5875,
+        "total_lines": 6646,
+        "has_more": true,
+        "pages": [],
+        "num_pages": 0,
+        "warnings": [],
+        "api_tool_source": "files/read",
+        "read_index": 0,
+        "mode": "full",
+        "include_text": true,
+        "include_images": false,
+        "requested_start_page": null,
+        "requested_end_page": null,
+        "next_start_line": 5876,
+        "next_start_page": null,
+        "next_read": {
+          "ref_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+          "mode": "full",
+          "start_line": 5876,
+          "max_lines": 4,
+          "include_images": false
+        },
+        "next_image_read": null,
+        "content": [
+          "\\begin{proposition}\\label{three:prop:terminal}\nThe graph obtained in Lemma~\\ref{three:lem:pattern}, which is covered\nby its $q$ parts, has a $1$-factorization.\n\\end{proposition}"
+        ]
+      },
+      {
+        "version_id": "9",
+        "name": "main.tex",
+        "mime_type": "text/x-tex",
+        "size_bytes": 312836,
+        "created_at": "2026-11-24T03:21:57.227640Z",
+        "modified_at": "2026-11-24T21:36:01.765116Z",
+        "file_provider": "native",
+        "library_file_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "ref_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "file_id": "file_000000007fc881f5a6f7b83b2278529c",
+        "surface": "library",
+        "requested_file_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "start_line": 5999,
+        "end_line": 6010,
+        "total_lines": 6646,
+        "has_more": true,
+        "pages": [],
+        "num_pages": 0,
+        "warnings": [],
+        "api_tool_source": "files/read",
+        "read_index": 1,
+        "mode": "full",
+        "include_text": true,
+        "include_images": false,
+        "requested_start_page": null,
+        "requested_end_page": null,
+        "next_start_line": 6011,
+        "next_start_page": null,
+        "next_read": {
+          "ref_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+          "mode": "full",
+          "start_line": 6011,
+          "max_lines": 12,
+          "include_images": false
+        },
+        "next_image_read": null,
+        "content": [
+          "\\begin{theorem}\\label{three:thm:regular-four}\nFix a positive density bound $\\alpha$ and ordinary robust parameters\nwith sufficiently small range. For sufficiently small $\\eps>0$\nand large even $n$, let $R$ be a simple $k$-regular graph of order\n$n$ with no $k$-overfull set, where $k\\ge\\alpha n$ and\n\\[\n V(R)=U_1\\cup\\cdots\\cup U_q\\cup Z,\\qquad q\\in\\{3,4\\},\n \\qquad |U_i|\\ge\\alpha n.\n\\]\nIf the $U_i$ contain cores of error $a$ and\n$a+|Z|+1\\le\\eps n$, then $R$ has a $1$-factorization.\n\\end{theorem}"
+        ]
+      }
+    ],
+    "warnings": [],
+    "external_connectors_accessed": false
+  },
+  "isError": false
+}
