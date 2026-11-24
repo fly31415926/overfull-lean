@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "5f46a36d87f9ca1cee382f46687d9d155b9b5bc2",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "scope": "Constructs actual assigned parts and Fin3 labels from a supplied perfect matching and a disjoint partition into two cores and exceptions. At most two exceptions give one optional pair fiber of size zero or two. Preserves the representative and actual copies, proves exact selected matching cuts and crossing-count parity, and derives both fiber parity alternatives. Composes with joining decomposition in the original host or a separate regular non-overfull host on the same vertices. It does not select a heavy boundary pattern, construct reserves, prove residual safety, align palettes, complete perfect matchings, or prove full Corollary 4.6.",
+  "review": "docs/assigned-part-semantic-review.md",
+  "proof_map": "docs/assigned-part-verification.md",
+  "authorized_manuscript_excerpts": "verification/runs/20261122T235931Z/authorized-manuscript-recovery.md",
+  "module_count": 5,
+  "public_theorem_count": 43,
+  "modules": [
+    {
+      "module": "Overfull.AssignedParts.PairFiberParity",
+      "path": "Overfull/AssignedParts/PairFiberParity.lean",
+      "sha256": "b3ff00c53a3f30c5ae8cd6d451f937b4a9318ca05c02ccf9ce427e5b26ff4686",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.AssignedParts.fiber_card_sum_three",
+          "source_line": 12
+        },
+        {
+          "name": "Overfull.AssignedParts.core_fiber_parity_eq_of_even_total_and_pair",
+          "source_line": 21
+        },
+        {
+          "name": "Overfull.AssignedParts.fiber_parity_cases_of_even_total_and_pair",
+          "source_line": 32
+        }
+      ]
+    },
+    {
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0",
+      "public_theorem_count": 7,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.AssignedParts.labelOfThreeParts_eq_zero_iff",
+          "source_line": 12
+        },
+        {
+          "name": "Overfull.AssignedParts.labelOfThreeParts_eq_one_iff",
+          "source_line": 17
+        },
+        {
+          "name": "Overfull.AssignedParts.labelOfThreeParts_eq_two_iff",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.AssignedParts.labelOfThreeParts_fiber_zero",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.AssignedParts.labelOfThreeParts_fiber_one",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.AssignedParts.labelOfThreeParts_fiber_two",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.AssignedParts.labelOfThreeParts_fibers",
+          "source_line": 59
+        }
+      ]
+    },
+    {
+      "module": "Overfull.AssignedParts.Basic",
+      "path": "Overfull/AssignedParts/Basic.lean",
+      "sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12",
+      "public_theorem_count": 23,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.IsMatching.edgeSupport_card",
+          "source_line": 27
+        },
+        {
+          "name": "Overfull.Multigraph.IsPerfectMatching.edgeSupport_eq_univ",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.Multigraph.IsPerfectMatching.even_card",
+          "source_line": 50
+        },
+        {
+          "name": "Overfull.Multigraph.otherEnd_mem_of_mem_internalOn",
+          "source_line": 58
+        },
+        {
+          "name": "Overfull.Multigraph.mem_internalOn_of_incident_otherEnd",
+          "source_line": 67
+        },
+        {
+          "name": "Overfull.Multigraph.edgeSupport_internalOn_subset",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.Multigraph.IsMatching.internalOn",
+          "source_line": 90
+        },
+        {
+          "name": "Overfull.AssignedParts.mem_assignedExceptions",
+          "source_line": 115
+        },
+        {
+          "name": "Overfull.AssignedParts.mem_corePart",
+          "source_line": 120
+        },
+        {
+          "name": "Overfull.AssignedParts.core_subset_corePart",
+          "source_line": 125
+        },
+        {
+          "name": "Overfull.AssignedParts.pairPart_subset",
+          "source_line": 128
+        },
+        {
+          "name": "Overfull.AssignedParts.pairPart_card",
+          "source_line": 132
+        },
+        {
+          "name": "Overfull.AssignedParts.internalOn_card_le_one",
+          "source_line": 137
+        },
+        {
+          "name": "Overfull.AssignedParts.pairPart_card_eq_zero_or_two",
+          "source_line": 144
+        },
+        {
+          "name": "Overfull.AssignedParts.pairPart_card_even",
+          "source_line": 151
+        },
+        {
+          "name": "Overfull.AssignedParts.coreParts_disjoint",
+          "source_line": 157
+        },
+        {
+          "name": "Overfull.AssignedParts.corePart_pairPart_disjoint",
+          "source_line": 174
+        },
+        {
+          "name": "Overfull.AssignedParts.coreParts_cover",
+          "source_line": 187
+        },
+        {
+          "name": "Overfull.AssignedParts.exceptional_corePart_iff",
+          "source_line": 205
+        },
+        {
+          "name": "Overfull.AssignedParts.unpaired_exception_represented",
+          "source_line": 212
+        },
+        {
+          "name": "Overfull.AssignedParts.assignedLabel_fibers",
+          "source_line": 231
+        },
+        {
+          "name": "Overfull.AssignedParts.assignedLabel_parity",
+          "source_line": 246
+        },
+        {
+          "name": "Overfull.AssignedParts.exists_two_core_assigned_labels",
+          "source_line": 260
+        }
+      ]
+    },
+    {
+      "module": "Overfull.AssignedParts.MatchedCuts",
+      "path": "Overfull/AssignedParts/MatchedCuts.lean",
+      "sha256": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766",
+      "public_theorem_count": 8,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.AssignedParts.firstEnd_mem_corePart_iff",
+          "source_line": 33
+        },
+        {
+          "name": "Overfull.AssignedParts.secondEnd_mem_corePart_iff",
+          "source_line": 52
+        },
+        {
+          "name": "Overfull.AssignedParts.pairPart_cutOn_eq_empty",
+          "source_line": 71
+        },
+        {
+          "name": "Overfull.AssignedParts.corePart_cutOn_eq_core_crossings",
+          "source_line": 94
+        },
+        {
+          "name": "Overfull.AssignedParts.coreParts_cutOn_eq",
+          "source_line": 115
+        },
+        {
+          "name": "Overfull.AssignedParts.perfectMatching_shore_card_parity",
+          "source_line": 131
+        },
+        {
+          "name": "Overfull.AssignedParts.corePart_card_parity",
+          "source_line": 141
+        },
+        {
+          "name": "Overfull.AssignedParts.assignedLabel_parity_eq_core_crossing",
+          "source_line": 151
+        }
+      ]
+    },
+    {
+      "module": "Overfull.AssignedParts.JoiningConstruction",
+      "path": "Overfull/AssignedParts/JoiningConstruction.lean",
+      "sha256": "dd070d578403598115b359cf4649fa2f8a786cd8e189eee43123d9ceace54ed1",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.AssignedParts.assignedLabel_joining_decomposition",
+          "source_line": 14
+        },
+        {
+          "name": "Overfull.AssignedParts.assignedLabel_joining_decomposition_in_host",
+          "source_line": 41
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.AssignedParts.assignedLabel_fibers",
+    "Overfull.AssignedParts.assignedLabel_joining_decomposition",
+    "Overfull.AssignedParts.assignedLabel_joining_decomposition_in_host",
+    "Overfull.AssignedParts.assignedLabel_parity",
+    "Overfull.AssignedParts.assignedLabel_parity_eq_core_crossing",
+    "Overfull.AssignedParts.corePart_card_parity",
+    "Overfull.AssignedParts.corePart_cutOn_eq_core_crossings",
+    "Overfull.AssignedParts.corePart_pairPart_disjoint",
+    "Overfull.AssignedParts.coreParts_cover",
+    "Overfull.AssignedParts.coreParts_cutOn_eq",
+    "Overfull.AssignedParts.coreParts_disjoint",
+    "Overfull.AssignedParts.core_fiber_parity_eq_of_even_total_and_pair",
+    "Overfull.AssignedParts.core_subset_corePart",
+    "Overfull.AssignedParts.exceptional_corePart_iff",
+    "Overfull.AssignedParts.exists_two_core_assigned_labels",
+    "Overfull.AssignedParts.fiber_card_sum_three",
+    "Overfull.AssignedParts.fiber_parity_cases_of_even_total_and_pair",
+    "Overfull.AssignedParts.firstEnd_mem_corePart_iff",
+    "Overfull.AssignedParts.internalOn_card_le_one",
+    "Overfull.AssignedParts.labelOfThreeParts_eq_one_iff",
+    "Overfull.AssignedParts.labelOfThreeParts_eq_two_iff",
+    "Overfull.AssignedParts.labelOfThreeParts_eq_zero_iff",
+    "Overfull.AssignedParts.labelOfThreeParts_fiber_one",
+    "Overfull.AssignedParts.labelOfThreeParts_fiber_two",
+    "Overfull.AssignedParts.labelOfThreeParts_fiber_zero",
+    "Overfull.AssignedParts.labelOfThreeParts_fibers",
+    "Overfull.AssignedParts.mem_assignedExceptions",
+    "Overfull.AssignedParts.mem_corePart",
+    "Overfull.AssignedParts.pairPart_card",
+    "Overfull.AssignedParts.pairPart_card_eq_zero_or_two",
+    "Overfull.AssignedParts.pairPart_card_even",
+    "Overfull.AssignedParts.pairPart_cutOn_eq_empty",
+    "Overfull.AssignedParts.pairPart_subset",
+    "Overfull.AssignedParts.perfectMatching_shore_card_parity",
+    "Overfull.AssignedParts.secondEnd_mem_corePart_iff",
+    "Overfull.AssignedParts.unpaired_exception_represented",
+    "Overfull.Multigraph.IsMatching.edgeSupport_card",
+    "Overfull.Multigraph.IsMatching.internalOn",
+    "Overfull.Multigraph.IsPerfectMatching.edgeSupport_eq_univ",
+    "Overfull.Multigraph.IsPerfectMatching.even_card",
+    "Overfull.Multigraph.edgeSupport_internalOn_subset",
+    "Overfull.Multigraph.mem_internalOn_of_incident_otherEnd",
+    "Overfull.Multigraph.otherEnd_mem_of_mem_internalOn"
+  ]
+}

@@ -1,0 +1,284 @@
+import Overfull.FourOdd.OriginalGraph
+import Overfull.CompatibleCircuits.ThreeLabelBundles
+
+/-!
+# Original endpoint classes and actual quotient cut bounds
+
+The joining quotient retains the subtype of actual original joining copies.
+Its endpoint-class cuts are exactly the original incident copies in cuts of
+unions of label fibers.  This transfers the checked regular-host cut bounds
+to admissibility, without assuming an abstract quotient or its class bounds.
+The all-even-fiber result requires no bound on joining degrees.  A separate
+general bridge states its sufficient small-joining-degree hypothesis openly.
+-/
+
+noncomputable section
+
+namespace Overfull.Multigraph
+
+open Finset Classical
+
+variable {V E I : Type*} (G : Multigraph V E)
+
+/-- At an incident quotient label, the original endpoint class has that label. -/
+theorem label_endpointClass_of_incident (label : V → I)
+    (hjoin : ∀ e, label (G.firstEnd e) ≠ label (G.secondEnd e))
+    {e : E} {i : I} (hi : i ∈ (G.labelQuotient label hjoin).edge e) :
+    label (G.endpointClass label i e) = i := by
+  unfold endpointClass
+  split_ifs with h
+  · exact h
+  · exact ((G.labelQuotient_incident_iff label hjoin e i).mp hi).resolve_left h
+
+/-- An endpoint-class incidence is precisely an original incidence in that fiber. -/
+theorem labelQuotient_endpointClass_incident_iff (label : V → I)
+    (hjoin : ∀ e, label (G.firstEnd e) ≠ label (G.secondEnd e))
+    (e : E) (i : I) (v : V) :
+    (i ∈ (G.labelQuotient label hjoin).edge e ∧
+      G.endpointClass label i e = v) ↔ label v = i ∧ v ∈ G.edge e := by
+  constructor
+  · rintro ⟨hi, rfl⟩
+    exact ⟨G.label_endpointClass_of_incident label hjoin hi,
+      G.endpointClass_mem label i e⟩
+  · rintro ⟨hi, hv⟩
+    subst i
+    exact ⟨G.label_incident_of_incident label hjoin hv,
+      G.endpointClass_eq_of_incident label hjoin hv⟩
+
+/-- Exact actual-copy identity for a quotient endpoint-class cut. -/
+theorem labelQuotient_classCutOn_endpointClass (label : V → I)
+    (hjoin : ∀ e, label (G.firstEnd e) ≠ label (G.secondEnd e))
+    (C : Finset E) (i : I) (v : V) (A : Finset I) :
+    (G.labelQuotient label hjoin).classCutOn (G.endpointClass label) C i v A =
+      if label v = i then
+        ((G.labelQuotient label hjoin).cutOn C A).filter (fun e => v ∈ G.edge e)
+      else ∅ := by
+  classical
+  by_cases hv : label v = i
+  · rw [if_pos hv]
+    ext e
+    simp only [classCutOn, mem_filter,
+      G.labelQuotient_endpointClass_incident_iff label hjoin, hv, true_and]
+  · rw [if_neg hv]
+    ext e
+    simp only [classCutOn, mem_filter,
+      G.labelQuotient_endpointClass_incident_iff label hjoin, hv, false_and,
+      and_false, notMem_empty]
+
+end Overfull.Multigraph
+
+namespace Overfull.FourOdd
+
+open Finset Classical
+open scoped BigOperators
+
+variable {V E I : Type*} [Fintype V] [Fintype E] [DecidableEq I]
+    (G : Multigraph V E) (label : V → I)
+
+/-- Every selected quotient cut maps to exactly the selected original cut. -/
+theorem joiningQuotient_cutOn_image (D : Finset (joiningCopies G label)) (A : Finset I) :
+    ((joiningQuotient G label).cutOn D A).image Subtype.val =
+      G.cutOn (D.image Subtype.val) (labelShore label A) := by
+  classical
+  have hmem (e : joiningCopies G label) :
+      e ∈ (joiningQuotient G label).cutOn D A ↔ e ∈ D ∧
+        (label (G.firstEnd e.val) ∈ A) ≠ (label (G.secondEnd e.val) ∈ A) := by
+    simpa only [joiningQuotient, joiningGraph_firstEnd, joiningGraph_secondEnd] using
+      labelQuotient_mem_cutOn_iff (joiningGraph G label) label
+        (joiningGraph_join G label) D A e
+  ext e
+  constructor
+  · intro he
+    obtain ⟨f, hf, rfl⟩ := mem_image.mp he
+    obtain ⟨hf, hcross⟩ := hmem f |>.mp hf
+    apply (G.mem_cutOn _ _ _).mpr
+    exact ⟨mem_image.mpr ⟨f, hf, rfl⟩, by simpa only [mem_labelShore] using hcross⟩
+  · intro he
+    obtain ⟨he, hcross⟩ := (G.mem_cutOn _ _ _).mp he
+    obtain ⟨f, hf, rfl⟩ := mem_image.mp he
+    refine mem_image.mpr ⟨f, (hmem f).mpr ⟨hf, ?_⟩, rfl⟩
+    simpa only [mem_labelShore] using hcross
+
+/-- Selected quotient and original cuts have the same actual-copy cardinality. -/
+theorem joiningQuotient_cutOn_card (D : Finset (joiningCopies G label)) (A : Finset I) :
+    ((joiningQuotient G label).cutOn D A).card =
+      (G.cutOn (D.image Subtype.val) (labelShore label A)).card := by
+  rw [← joiningQuotient_cutOn_image G label D A,
+    card_image_of_injective _ Subtype.val_injective]
+
+/-- Quotient degree is the exact original selected-cut footprint of a fiber. -/
+theorem joiningQuotient_degreeOn_eq_cut (D : Finset (joiningCopies G label)) (i : I) :
+    (joiningQuotient G label).degreeOn D i =
+      (G.cutOn (D.image Subtype.val) (labelShore label {i})).card := by
+  rw [← Multigraph.cutOn_singleton_card, joiningQuotient_cutOn_card]
+
+/-- The image identity retains precisely the original copies in a class cut. -/
+theorem joiningQuotient_classCutOn_image (i : I) (v : V) (A : Finset I) :
+    ((joiningQuotient G label).classCutOn
+      ((joiningGraph G label).endpointClass label) univ i v A).image Subtype.val =
+      if label v = i then
+        (G.cutOn univ (labelShore label A)).filter (fun e => v ∈ G.edge e)
+      else ∅ := by
+  classical
+  change (((joiningGraph G label).labelQuotient label (joiningGraph_join G label)).classCutOn
+    ((joiningGraph G label).endpointClass label) univ i v A).image Subtype.val = _
+  rw [Multigraph.labelQuotient_classCutOn_endpointClass]
+  by_cases hv : label v = i
+  · rw [if_pos hv, if_pos hv]
+    have himage :
+        ((joiningCut G label A).filter (fun e => v ∈ (joiningGraph G label).edge e)).image
+            Subtype.val =
+          ((joiningCut G label A).image Subtype.val).filter (fun e => v ∈ G.edge e) := by
+      ext e
+      simp only [mem_image, mem_filter, joiningGraph_edge]
+      constructor
+      · rintro ⟨f, ⟨hf, hve⟩, rfl⟩
+        exact ⟨⟨f, hf, rfl⟩, hve⟩
+      · rintro ⟨⟨f, hf, rfl⟩, hve⟩
+        exact ⟨f, ⟨hf, hve⟩, rfl⟩
+    exact himage.trans (by rw [joiningCut_image])
+  · rw [if_neg hv, if_neg hv]
+    exact image_empty _
+
+/-- The quotient class count is an original cut degree, or zero off its fiber. -/
+theorem joiningQuotient_classCutOn_card (i : I) (v : V) (A : Finset I) :
+    ((joiningQuotient G label).classCutOn
+      ((joiningGraph G label).endpointClass label) univ i v A).card =
+      if label v = i then G.degreeOn (G.cutOn univ (labelShore label A)) v else 0 := by
+  classical
+  rw [← card_image_of_injective _ Subtype.val_injective,
+    joiningQuotient_classCutOn_image]
+  split_ifs <;> rfl
+
+/-- Every quotient endpoint class is bounded by the actual original vertex degree. -/
+theorem joiningQuotient_classCutOn_card_le_degree (i : I) (v : V) (A : Finset I) :
+    ((joiningQuotient G label).classCutOn
+      ((joiningGraph G label).endpointClass label) univ i v A).card ≤ G.degree v := by
+  rw [joiningQuotient_classCutOn_card]
+  split_ifs
+  · apply card_le_card
+    exact filter_subset_filter (fun e => v ∈ G.edge e) (subset_univ _)
+  · exact Nat.zero_le _
+
+/-- A union of even label fibers has even order. No finiteness of `I` is needed. -/
+theorem labelShore_card_even_of_even_fibers
+    (heven : ∀ i, (univ.filter (fun v => label v = i)).card % 2 = 0)
+    (A : Finset I) : (labelShore label A).card % 2 = 0 := by
+  rw [labelShore_card, sum_nat_mod]
+  simp [heven]
+
+/-- With exactly two odd fibers, odd unions are exactly the shores that
+separate their two labels. The proof counts the actual original vertices. -/
+theorem labelShore_card_parity_of_two_odd_fibers (a b : I) (hab : a ≠ b)
+    (hfibers : ∀ i, (univ.filter (fun v => label v = i)).card % 2 =
+      if i = a ∨ i = b then 1 else 0) (A : Finset I) :
+    (labelShore label A).card % 2 =
+      if (a ∈ A) ≠ (b ∈ A) then 1 else 0 := by
+  classical
+  have hsplit (i : I) : (if i = a ∨ i = b then 1 else 0 : ℕ) =
+      (if i = a then 1 else 0) + (if i = b then 1 else 0) := by
+    by_cases ha : i = a <;> by_cases hb : i = b <;> simp_all
+  rw [labelShore_card, sum_nat_mod]
+  simp_rw [hfibers, hsplit]
+  rw [sum_add_distrib]
+  by_cases ha : a ∈ A <;> by_cases hb : b ∈ A <;> simp [ha, hb]
+
+/-- Original regularity transfers the two odd fibers' exact degree parity. -/
+theorem joiningQuotient_degree_parity_of_two_odd_fibers {h : ℕ}
+    (hregular : ∀ v, G.degree v = h) (a b : I)
+    (hfibers : ∀ i, (univ.filter (fun v => label v = i)).card % 2 =
+      if i = a ∨ i = b then 1 else 0) (i : I) :
+    (joiningQuotient G label).degree i % 2 =
+      if i = a ∨ i = b then h % 2 else 0 := by
+  rw [joiningQuotient_degree_eq_cut, regular_cut_parity G hregular, Nat.mul_mod]
+  have hshore : (labelShore label {i}).card % 2 =
+      if i = a ∨ i = b then 1 else 0 := by
+    simpa only [labelShore, mem_singleton] using hfibers i
+  rw [hshore]
+  split_ifs <;> simp
+
+/-- With even fibers, every quotient endpoint-class bound comes directly
+from the original regular non-overfull host's even-shore cut bound. -/
+theorem joiningQuotient_admissible_of_even_fibers {h : ℕ}
+    (hregular : ∀ v, G.degree v = h)
+    (hno : ∀ X : Finset V, ¬ G.IsOverfull h X)
+    (heven : ∀ i, (univ.filter (fun v => label v = i)).card % 2 = 0) :
+    (joiningQuotient G label).AdmissibleOn
+      ((joiningGraph G label).endpointClass label) univ := by
+  intro i v A
+  rw [joiningQuotient_classCutOn_card]
+  by_cases hv : label v = i
+  · rw [if_pos hv]
+    change 2 * G.degreeOn (G.cutOn univ (labelShore label A)) v ≤
+      (joiningCut G label A).card
+    rw [joiningCut_card]
+    exact regular_even_cut_twice_degree_le G hregular hno _
+      (labelShore_card_even_of_even_fibers label heven A) v
+  · simp [hv]
+
+/-- Even original fibers give even actual quotient degrees. -/
+theorem joiningQuotient_degree_even_of_even_fibers {h : ℕ}
+    (hregular : ∀ v, G.degree v = h)
+    (heven : ∀ i, (univ.filter (fun v => label v = i)).card % 2 = 0) (i : I) :
+    Even ((joiningQuotient G label).degree i) := by
+  rw [Nat.even_iff, joiningQuotient_degree_eq_cut]
+  exact regular_even_cut_parity G hregular _
+    (labelShore_card_even_of_even_fibers label heven {i})
+
+/-- An even regular degree gives even quotient degrees for arbitrary fibers. -/
+theorem joiningQuotient_degree_even_of_even_regular {h : ℕ}
+    (hregular : ∀ v, G.degree v = h) (heven : Even h) (i : I) :
+    Even ((joiningQuotient G label).degree i) := by
+  rw [Nat.even_iff, joiningQuotient_degree_eq_cut, regular_cut_parity G hregular,
+    Nat.mul_mod, Nat.even_iff.mp heven]
+  simp
+
+/-- A sufficient generic admissibility bridge. The additional small-joining
+bound is explicit; this is not asserted to be the full two-core theorem. -/
+theorem joiningQuotient_admissible_of_degree_bound {h D : ℕ}
+    (hregular : ∀ v, G.degree v = h)
+    (hno : ∀ X : Finset V, ¬ G.IsOverfull h X)
+    (hD : ∀ v, G.degreeOn (joiningCopies G label) v ≤ D) (hhalf : 2 * D ≤ h) :
+    (joiningQuotient G label).AdmissibleOn
+      ((joiningGraph G label).endpointClass label) univ := by
+  intro i v A
+  rw [joiningQuotient_classCutOn_card]
+  by_cases hv : label v = i
+  · rw [if_pos hv]
+    change 2 * G.degreeOn (G.cutOn univ (labelShore label A)) v ≤
+      (joiningCut G label A).card
+    rw [joiningCut_card]
+    by_cases hA : (labelShore label A).card % 2 = 0
+    · exact regular_even_cut_twice_degree_le G hregular hno _ hA v
+    · have hodd : (labelShore label A).card % 2 = 1 := by omega
+      have hlower := regular_odd_cut_lower G hregular hno _ hodd
+      have hmono : G.degreeOn (G.cutOn univ (labelShore label A)) v ≤
+          G.degreeOn (joiningCopies G label) v := by
+        apply card_le_card
+        exact filter_subset_filter (fun e => v ∈ G.edge e)
+          (cut_labelShore_subset_joining G label A)
+      have hbound := hD v
+      omega
+  · simp [hv]
+
+/-- A positive-degree original singleton cannot be an admissible endpoint-class
+quotient fiber. This rules out a naive exceptional-singleton contraction. -/
+theorem joiningQuotient_degree_zero_of_singleton_fiber (i : I) (v : V)
+    (hfiber : labelShore label {i} = {v})
+    (hadmissible : (joiningQuotient G label).AdmissibleOn
+      ((joiningGraph G label).endpointClass label) univ) : G.degree v = 0 := by
+  classical
+  have hv : label v = i := by
+    have hmem : v ∈ labelShore label {i} := by rw [hfiber]; simp
+    simpa only [mem_labelShore, mem_singleton] using hmem
+  have hcut := hadmissible i v {i}
+  rw [joiningQuotient_classCutOn_card, if_pos hv] at hcut
+  change 2 * G.degreeOn (G.cutOn univ (labelShore label {i})) v ≤
+    (joiningCut G label {i}).card at hcut
+  rw [joiningCut_card, hfiber] at hcut
+  simp only [Multigraph.cutOn_singleton, Multigraph.degreeOn, filter_filter,
+    and_self] at hcut
+  change 2 * G.degree v ≤ G.degree v at hcut
+  omega
+
+end Overfull.FourOdd

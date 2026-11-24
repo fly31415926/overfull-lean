@@ -1,0 +1,62 @@
+✖ [3131/3131] Building Overfull.CompatibleCircuits.FourBounded (2.9s)
+trace: .> LEAN_PATH=/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean /workspace/scratch/77adbfc63087/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/77adbfc63087/overfull-lean/Overfull/CompatibleCircuits/FourBounded.lean -o /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourBounded.olean -i /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourBounded.ilean -c /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourBounded.c --setup /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourBounded.setup.json --json
+error: Overfull/CompatibleCircuits/FourBounded.lean:74:20: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ e ≤ 3
+  d ≥ 4
+  c ≥ 4
+  b ≥ 4
+  0 ≤ a ≤ 8
+  2*a - b - c - d ≥ 4
+where
+ a := ↑(#C)
+ b := ↑(Q.degreeOn C 1)
+ c := ↑(Q.degreeOn C 2)
+ d := ↑(Q.degreeOn C 3)
+ e := ↑(Q.degreeOn C ((fun i => i) ⟨0, ⋯⟩))
+error: Overfull/CompatibleCircuits/FourBounded.lean:74:20: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ e ≤ 3
+  d ≥ 4
+  c ≥ 4
+  b ≥ 4
+  0 ≤ a ≤ 8
+  2*a - b - c - d ≥ 4
+where
+ a := ↑(#C)
+ b := ↑(Q.degreeOn C 1)
+ c := ↑(Q.degreeOn C 2)
+ d := ↑(Q.degreeOn C 3)
+ e := ↑(Q.degreeOn C ((fun i => i) ⟨1, ⋯⟩))
+error: Overfull/CompatibleCircuits/FourBounded.lean:74:20: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ e ≤ 3
+  d ≥ 4
+  c ≥ 4
+  b ≥ 4
+  0 ≤ a ≤ 8
+  2*a - b - c - d ≥ 4
+where
+ a := ↑(#C)
+ b := ↑(Q.degreeOn C 1)
+ c := ↑(Q.degreeOn C 2)
+ d := ↑(Q.degreeOn C 3)
+ e := ↑(Q.degreeOn C ((fun i => i) ⟨2, ⋯⟩))
+error: Overfull/CompatibleCircuits/FourBounded.lean:74:20: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ e ≤ 3
+  d ≥ 4
+  c ≥ 4
+  b ≥ 4
+  0 ≤ a ≤ 8
+  2*a - b - c - d ≥ 4
+where
+ a := ↑(#C)
+ b := ↑(Q.degreeOn C 1)
+ c := ↑(Q.degreeOn C 2)
+ d := ↑(Q.degreeOn C 3)
+ e := ↑(Q.degreeOn C ((fun i => i) ⟨3, ⋯⟩))
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourBounded
+error: build failed

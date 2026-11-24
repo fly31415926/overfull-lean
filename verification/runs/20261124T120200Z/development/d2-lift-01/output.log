@@ -1,0 +1,192 @@
+✖ [3123/3123] Building Overfull.CompatibleCircuits.FourDegreeTwoLift (2.9s)
+trace: .> LEAN_PATH=/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean /workspace/scratch/77adbfc63087/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/77adbfc63087/overfull-lean/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean -o /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourDegreeTwoLift.olean -i /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourDegreeTwoLift.ilean -c /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourDegreeTwoLift.c --setup /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourDegreeTwoLift.setup.json --json
+warning: Overfull/CompatibleCircuits/FourDegreeTwoLift.lean:60:23: This simp argument is unused:
+  hef
+
+Hint: Omit it from the simp argument list.
+  simp [H, ̲collapse,h̵e̵f̵,̵ ̲suppressionGraph, ̲suppressionClass, ̲hab]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Overfull/CompatibleCircuits/FourDegreeTwoLift.lean:137:10: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  {g ∈ insert f D | v ∈ Q.edge g}
+in the target expression
+  #({e ∈ insert f D | v ∈ Q.edge e}) = 2
+
+E : Type u_1
+Q : Multigraph (Fin 4) E
+C D : Finset E
+a v b : Fin 4
+hav : a ≠ v
+hbv : b ≠ v
+hab : a ≠ b
+e f : E
+hef : e ≠ f
+he : Q.edge e = s(a, v)
+hf : Q.edge f = s(v, b)
+hstar : ∀ g ∈ C, v ∈ Q.edge g → g = e ∨ g = f
+hDC : D ⊆ C.erase f
+heD : e ∈ D
+hfC : f ∈ C
+heven : ∀ (x : Fin 4), Even ((Q.suppressionGraph a b e hab).degreeOn D x)
+hfD : f ∉ D
+hTC : insert f D ⊆ C
+hstarT : ∀ g ∈ insert f D, v ∈ Q.edge g → g = e ∨ g = f
+herase : (insert f D).erase f = D
+hfilter : {g ∈ insert f D | v ∈ Q.edge g} = {e, f}
+⊢ #({e ∈ insert f D | v ∈ Q.edge e}) = 2
+error: Overfull/CompatibleCircuits/FourDegreeTwoLift.lean:192:4: unsolved goals
+case h.mp.inl
+E : Type u_1
+K : Type u_2
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+a v b : Fin 4
+hav : a ≠ v
+hbv : b ≠ v
+hab : a ≠ b
+e f : E
+hef : e ≠ f
+heC : e ∈ C
+hfC : f ∈ C
+he : Q.edge e = s(a, v)
+hf : Q.edge f = s(v, b)
+hstar : ∀ g ∈ C, v ∈ Q.edge g → g = e ∨ g = f
+hclassv : classOf v e ≠ classOf v f
+P : (Q.suppressionGraph a b e hab).CompatibleCircuitPartition (suppressionClass classOf b e f) (C.erase f)
+H : Multigraph (Fin 4) E := Q.suppressionGraph a b e hab
+heS : e ∈ P.parts.biUnion id
+D : Finset E
+hD : D ∈ P.parts
+heD : e ∈ id D
+hDC : D ⊆ C.erase f
+hcomp : Q.Compatible classOf (insert f D)
+heven : ∀ (x : Fin 4), Even (Q.degreeOn (insert f D) x)
+R : Q.CompatibleCircuitPartition classOf (insert f D)
+S : H.CompatibleCircuitPartition (suppressionClass classOf b e f) (C.erase f \ D) :=
+  CompatibleCircuitPartition.eraseCircuit H P hD
+hedge : ∀ g ∈ C.erase f \ D, H.edge g = Q.edge g
+hclasses : ∀ (x : Fin 4), ∀ g ∈ C.erase f \ D, suppressionClass classOf b e f x g = classOf x g
+S' : Q.CompatibleCircuitPartition classOf (C.erase f \ D) := CompatibleCircuitPartition.congrOn H Q S hedge hclasses
+hdisjoint : Disjoint (insert f D) (C.erase f \ D)
+g : E
+hsub : g ∈ D → g ∈ C
+hgf : g = f ∨ g ∈ D
+⊢ g ∈ C
+
+case h.mp.inr
+E : Type u_1
+K : Type u_2
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+a v b : Fin 4
+hav : a ≠ v
+hbv : b ≠ v
+hab : a ≠ b
+e f : E
+hef : e ≠ f
+heC : e ∈ C
+hfC : f ∈ C
+he : Q.edge e = s(a, v)
+hf : Q.edge f = s(v, b)
+hstar : ∀ g ∈ C, v ∈ Q.edge g → g = e ∨ g = f
+hclassv : classOf v e ≠ classOf v f
+P : (Q.suppressionGraph a b e hab).CompatibleCircuitPartition (suppressionClass classOf b e f) (C.erase f)
+H : Multigraph (Fin 4) E := Q.suppressionGraph a b e hab
+heS : e ∈ P.parts.biUnion id
+D : Finset E
+hD : D ∈ P.parts
+heD : e ∈ id D
+hDC : D ⊆ C.erase f
+hcomp : Q.Compatible classOf (insert f D)
+heven : ∀ (x : Fin 4), Even (Q.degreeOn (insert f D) x)
+R : Q.CompatibleCircuitPartition classOf (insert f D)
+S : H.CompatibleCircuitPartition (suppressionClass classOf b e f) (C.erase f \ D) :=
+  CompatibleCircuitPartition.eraseCircuit H P hD
+hedge : ∀ g ∈ C.erase f \ D, H.edge g = Q.edge g
+hclasses : ∀ (x : Fin 4), ∀ g ∈ C.erase f \ D, suppressionClass classOf b e f x g = classOf x g
+S' : Q.CompatibleCircuitPartition classOf (C.erase f \ D) := CompatibleCircuitPartition.congrOn H Q S hedge hclasses
+hdisjoint : Disjoint (insert f D) (C.erase f \ D)
+g : E
+hsub : g ∈ D → g ∈ C
+hg : (g ≠ f ∧ g ∈ C) ∧ g ∉ D
+⊢ g ∈ C
+error: Overfull/CompatibleCircuits/FourDegreeTwoLift.lean:187:52: unsolved goals
+case h.mpr
+E : Type u_1
+K : Type u_2
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+a v b : Fin 4
+hav : a ≠ v
+hbv : b ≠ v
+hab : a ≠ b
+e f : E
+hef : e ≠ f
+heC : e ∈ C
+hfC : f ∈ C
+he : Q.edge e = s(a, v)
+hf : Q.edge f = s(v, b)
+hstar : ∀ g ∈ C, v ∈ Q.edge g → g = e ∨ g = f
+hclassv : classOf v e ≠ classOf v f
+P : (Q.suppressionGraph a b e hab).CompatibleCircuitPartition (suppressionClass classOf b e f) (C.erase f)
+H : Multigraph (Fin 4) E := ⋯
+heS : e ∈ P.parts.biUnion id
+D : Finset E
+hD : D ∈ P.parts
+heD : e ∈ id D
+hDC : D ⊆ C.erase f
+hcomp : Q.Compatible classOf (insert f D)
+heven : ∀ (x : Fin 4), Even (Q.degreeOn (insert f D) x)
+R : Q.CompatibleCircuitPartition classOf (insert f D)
+S : H.CompatibleCircuitPartition (suppressionClass classOf b e f) (C.erase f \ D) := ⋯
+hedge : ∀ g ∈ C.erase f \ D, H.edge g = Q.edge g
+hclasses : ∀ (x : Fin 4), ∀ g ∈ C.erase f \ D, suppressionClass classOf b e f x g = classOf x g
+S' : Q.CompatibleCircuitPartition classOf (C.erase f \ D) := ⋯
+hdisjoint : Disjoint (insert f D) (C.erase f \ D)
+g : E
+hsub : g ∈ D → g ∈ C
+⊢ g ∈ C → (g = f ∨ g ∈ D) ∨ (g ≠ f ∧ g ∈ C) ∧ g ∉ D
+error: Overfull/CompatibleCircuits/FourDegreeTwoLift.lean:158:57: unsolved goals
+E : Type u_1
+K : Type u_2
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+a v b : Fin 4
+hav : a ≠ v
+hbv : b ≠ v
+hab : a ≠ b
+e f : E
+hef : e ≠ f
+heC : e ∈ C
+hfC : f ∈ C
+he : Q.edge e = s(a, v)
+hf : Q.edge f = s(v, b)
+hstar : ∀ g ∈ C, v ∈ Q.edge g → g = e ∨ g = f
+hclassv : classOf v e ≠ classOf v f
+P : (Q.suppressionGraph a b e hab).CompatibleCircuitPartition (suppressionClass classOf b e f) (C.erase f)
+H : Multigraph (Fin 4) E := Q.suppressionGraph a b e hab
+heS : e ∈ P.parts.biUnion id
+D : Finset E
+hD : D ∈ P.parts
+heD : e ∈ id D
+hDC : D ⊆ C.erase f
+hcomp : Q.Compatible classOf (insert f D)
+heven : ∀ (x : Fin 4), Even (Q.degreeOn (insert f D) x)
+R : Q.CompatibleCircuitPartition classOf (insert f D)
+S : H.CompatibleCircuitPartition (suppressionClass classOf b e f) (C.erase f \ D) :=
+  CompatibleCircuitPartition.eraseCircuit H P hD
+hedge : ∀ g ∈ C.erase f \ D, H.edge g = Q.edge g
+hclasses : ∀ (x : Fin 4), ∀ g ∈ C.erase f \ D, suppressionClass classOf b e f x g = classOf x g
+S' : Q.CompatibleCircuitPartition classOf (C.erase f \ D) := CompatibleCircuitPartition.congrOn H Q S hedge hclasses
+hdisjoint : Disjoint (insert f D) (C.erase f \ D)
+hcover : insert f D ∪ C.erase f \ D = C
+⊢ Nonempty (Q.CompatibleCircuitPartition classOf C)
+error: Overfull/CompatibleCircuits/FourDegreeTwoLift.lean:192:24: unexpected token '|'; expected command
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourDegreeTwoLift
+error: build failed

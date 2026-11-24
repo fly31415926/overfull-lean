@@ -1,0 +1,59 @@
+✔ [3119/3120] Built Overfull.CompatibleCircuits.FourDegreeTwoSupport (2.6s)
+✖ [3120/3120] Building Overfull.CompatibleCircuits.FourDegreeTwoParallel (2.6s)
+trace: .> LEAN_PATH=/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean /workspace/scratch/77adbfc63087/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/77adbfc63087/overfull-lean/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean -o /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourDegreeTwoParallel.olean -i /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourDegreeTwoParallel.ilean -c /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourDegreeTwoParallel.c --setup /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourDegreeTwoParallel.setup.json --json
+error: Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean:134:21: unsolved goals
+E : Type u_2
+K : Type u_3
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+hadmissible : Q.AdmissibleOn classOf C
+heven : ∀ (v : Fin 4), Even (Q.degreeOn C v)
+v : Fin 4
+hdegree : Q.degreeOn C v = 2
+e f : E
+heC : e ∈ C
+hfC : f ∈ C
+hef : e ≠ f
+hev : v ∈ Q.edge e
+hparallel : Q.edge e = Q.edge f
+D : Finset E := {e, f}
+⊢ {e, f} ⊆ C
+error: Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean:149:41: Type mismatch: After simplification, term
+  Eq.le hdegree
+ has type
+  Q.degreeOn C v ≤ 2
+but is expected to have type
+  #({a ∈ C | v ∈ Q.edge a}) ≤ 2
+error: Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean:151:6: Type mismatch: After simplification, term
+  Eq.ge hdegree
+ has type
+  2 ≤ #({e ∈ C | v ∈ Q.edge e})
+but is expected to have type
+  2 ≤ #({a ∈ C | v ∈ Q.edge a})
+error: Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean:166:38: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a => @Sym2.Mem.decidable (Fin 4) (instDecidableEqFin 4) v (Q.edge a)
+inferred
+  fun a => @Sym2.Mem.decidable (Fin 4) (fun a b => propDecidable (a = b)) v (Q.edge a)
+error: Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean:169:31: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a => @Sym2.Mem.decidable (Fin 4) (instDecidableEqFin 4) v (Q.edge a)
+inferred
+  fun a => @Sym2.Mem.decidable (Fin 4) (fun a b => propDecidable (a = b)) v (Q.edge a)
+warning: Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean:134:32: This simp argument is unused:
+  heC
+
+Hint: Omit it from the simp argument list.
+  simp [̵D̵,̵h̵e̵C̵,̵h̵f̵C̵]̵[̲D̲,̲ ̲h̲f̲C̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean:134:36: This simp argument is unused:
+  hfC
+
+Hint: Omit it from the simp argument list.
+  simp [̵D̵,̵h̵e̵C̵,̵h̵f̵C̵]̵[̲D̲,̲ ̲h̲e̲C̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourDegreeTwoParallel
+error: build failed

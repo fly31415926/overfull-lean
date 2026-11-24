@@ -1,0 +1,300 @@
+# Native star continuation: proof contracts and verification evidence
+
+This continuation proves surviving native reserve-copy injections, exact
+assigned-star incidence balance, common internal-bundle colors, actual
+remaining-copy/free-color equality, and sequential matching extensions for
+two actual stars under explicit available-color load and weight hypotheses.
+The native weighted odd/even wrappers, their complete reserve/parity
+composition, and the final robust factorization remain to be assembled.
+**No additional numbered assertion is completed: coverage remains 47/69,
+and full Corollary 4.6 and the main theorem remain unproved.**
+
+The authoritative source inventory is
+[native-star-source.json](native-star-source.json). It is generated from
+the current `Overfull/NativeStar/*.lean` files and records each module,
+source path, SHA-256, public theorem name, and source line. The complete
+audit's [native-star declaration map](../verification/native-star-declarations.json)
+additionally includes private and generated proof declarations. The counts
+in those generated records are authoritative; this guide does not freeze a
+separate public-theorem or total-audit count.
+
+## Baseline and status of this document
+
+The preceding verified local checkpoint is
+`af8dca22ef67d66d0de3f6d89954d31f06a4d2fa`, with exact tree
+`5ddefa9b77dfaf2d1cf09df1d7e2d4b541346a85`. Its committed inventory contains
+**2,507 files, 12,811 audited declarations, and 1,979 completed-result
+mappings**. Its 69 numbered assertion records identify 47 complete
+assertions and retain `main_theorem_verified: false`.
+
+The integration procedure pins that exact verified **local** commit and
+tree. At input freeze automatic approval review had blocked its publication; the last
+independently observed public head was `c28cec4`. The generated source
+manifest and `verification/runs/20261123T235203Z/run.json` record this
+local/public distinction explicitly. Separate publication receipts establish
+any later public reconstruction, exact tree equality and branch updates.
+Those later outcomes are not prerequisites for checking these frozen local
+proof inputs and are not silently claimed by this verification guide.
+
+At this documentation freeze, every final module below has a successful
+genuine focused `lake build --wfail` receipt with a matching source snapshot
+and unchanged recorded inputs. The complete frozen verifier is a separate
+gate. Its actual command receipt, current results, complete declaration
+maps, and supplementary preservation report determine full-run status.
+This document does not assert a full-run success or a new global audit
+count in advance of that evidence.
+
+## Principal public proof contracts
+
+Names in the following table are in `Overfull.NativeStar` except the
+`ReserveInjection` methods, which are in
+`Overfull.NativeReserve.BoundaryPacking`, and the residual-membership lemma
+in `Overfull.NativeReserve`.
+
+| Module | Principal entry points | Derived result and explicit boundary |
+|---|---|---|
+| `ReserveInjection` | `exists_residual_assigned_star_injection`, `reserved_assigned_star_card_le`, `residualBoundary_assigned_star_card`, `selected_residual_assigned_star_card` | The original unpaired signature and surviving native boundary packing give one actual assigned-core copy per reserve, a genuine injection, and exact selected copy counts. |
+| `IncidencePartition` | `assigned_incidence_partition`, `assigned_degree_balance`, `exceptionInternalPool_pair_eq` | Joining, assigned-core star, and same-label exceptional incidences partition all actual copies at the exception, retaining the original assignment on any later host. |
+| `NativeBalance` | `native_off_core_degree_bound`, `protected_joining_color_free_of_reserve_trace`, `exists_native_common_bundle_coloring`, `native_remaining_star_balance` | The actual reserve derives `j+t ≤ h-r ≤ D`; actual traces and an actual bundle coloring yield exact remaining copy/color equality and lower bound `h-s-D`. |
+| `CommonPalette` | `exists_common_bundle_coloring_of_combined_bounds`, `remainingStarColors_card_add`, `remaining_star_card_eq_colors_and_lower` | Common colors and finite-set accounting isolate the exact numerical and disjointness requirements. NativeBalance supplies their native geometric inputs. |
+| `StarAccounting` | `coloredStarCopies_cover`, `coloredStarCopies_support_load_le_parallel`, `coloredStarCopies_starWeight_le`, `starWeight_union_le` | Color fibers retain original copies; actual multiplicities bound the extra row and column conflicts created by a first star. |
+| `StarChoice` | `star_row_conflicts_card`, `star_column_conflicts_le`, `exists_star_choice_on_available` | Actual endpoint conflicts satisfy the asymmetric Hall bounds under explicit available-color load and whole-class weight certificates, producing a copy/color equivalence and matching singleton insertions. |
+| `StarExtension` | `exists_star_extension_on_available`, `starExtended_cut_eq`, `starExtended_contains_assigned_copy`, `starExtended_covers_available` | Actual unions preserve matching, disjointness, exact coverage, untouched colors, original copies, and center coverage; internal-copy insertions preserve fiber cuts. |
+| `TwoStars` | `starExtended_available_support_load_le`, `starExtended_available_starWeight_le`, `exists_two_star_extension_on_available` | The second Hall choice runs against the first extended family, with its additional conflicts derived; final matching, exact two-pool coverage, protected-color preservation, and copy/support growth follow. |
+
+### Native reserve and balance
+
+The native data consists of the original graph `G`, a representative
+perfect matching, a partition into old cores and exceptions, an unpaired
+signature `some σ`, a `BoundaryPacking` of size `r`, and selected removals
+disjoint from the entire reserved boundary union. The assignment label
+continues to come from `G` and the original representative. Residual edges
+are surviving original copy subtypes.
+
+At an exception `z`, the native degree identity is
+
+```text
+joining_degree(z) + assigned_star_pool(z).card
+  + internal_exception_pool(z).card = residual_degree(z).
+```
+
+The reserve injection is proved from the packing and survival, so the
+combined off-core bound does not assume the needed `r` star copies as a
+separate unverified premise. The internal exceptional pool is not bounded
+using the old-core multiplicity cap `b`.
+
+The exact remaining-star theorem selects actual residual reserve
+boundaries injectively, assigns their protected colors injectively, and
+requires their actual joining traces to equal the corresponding joining
+classes. It derives that every protected color is joining-free at the
+exception. An injective coloring of the actual internal pool, avoiding
+protected and joining-used colors, then gives
+
+```text
+remaining actual copies = assigned star pool \ selected reserve copies,
+remaining colors = univ \ (protected ∪ joining-used ∪ bundle-used),
+card(remaining actual copies) = card(remaining colors) ≥ h-s-D.
+```
+
+Here `s` is the selected index count, whose equality with both the protected
+copy count and protected color count is proved. The palette is still
+`Fin h`; the construction does not replace `h` by a reduced parameter.
+
+### Actual Hall choice and sequential insertion
+
+`exists_star_choice_on_available` takes a genuine star-copy subset `A` and
+genuine remaining palette `F`. It explicitly requires `|A|=|F|`, the lower
+bound `h-s-D`, `b≤D`, `128*D≤h`, `2*s≤h`, matching current classes, and a free
+exceptional endpoint on `F`. Its two conflict certificates are
+
+```text
+∀ v ∈ U, |{j ∈ F : v ∈ support(C j)}| ≤ D+b,
+∀ j ∈ F, starWeight H z U (C j) ≤ h/8+b.
+```
+
+The row count uses only `F`. The column count includes each conflicting
+actual copy, including parallel copies, and is bounded by the full class's
+blocked-star-copy weight. The resulting equivalence chooses a different
+available label for every actual copy and avoids its occupied old-core
+endpoint. Matching after insertion is proved from both endpoint conditions.
+
+For two stars, the initial family in
+`exists_two_star_extension_on_available` has available loads at most `D`
+and available weights at most `h/8` for each resource. Exact balances and
+lower bounds are explicit inputs for each of the two actual pools. The
+centers are distinct and each is excluded from the other star's core.
+Parallel-copy bounds from both centers into the second core establish the
+second-step increases `D+b` and `h/8+b` after the first star has been
+inserted.
+
+The output consists of actual equivalences for both pools and their actual
+union construction. It proves matching classes, pairwise disjointness,
+exact initial-plus-two-pool coverage, original class containment, exact
+chosen-copy placement, and coverage of each center in every color of its
+own available palette. Each class gains at most two copies and four
+support vertices relative to the initialized family. Classes outside the
+union of the two available palettes remain exactly unchanged.
+
+### Protected-color load restriction
+
+A whole protected reserve can add old-core support at its protected color.
+Consequently its insertion need not preserve a global joining-degree load
+bound `D`. The available-only interfaces were included for this reason;
+the global-load versions remain stronger-input convenience wrappers.
+
+The next native initialization must prove that its class at every available
+color equals the original weighted joining class, or supply an equivalent
+available-color certificate. In the intended construction, all protected
+labels and all internal-bundle labels are excluded from each remaining
+palette. The conditional sequential theorem supplies neither that native
+restriction equality nor the native weighted joining palette itself.
+
+## Genuine focused evidence
+
+All paths in this table are under
+`verification/runs/20261123T235203Z/development/`. Each receipt includes the
+actual command, timestamps, exit status, input hashes, retained output log,
+and NativeStar source snapshot. The listed final snapshots were compared
+byte-for-byte with the reviewed source files.
+
+| Receipt directory | Strict target | Observed result |
+|---|---|---|
+| `reserve-02` | `Overfull.NativeStar.ReserveInjection` | Exit 0; source snapshot matches; unchanged inputs |
+| `incidence-build-01` | `Overfull.NativeStar.IncidencePartition` | Exit 0; source snapshot matches; unchanged inputs |
+| `native-balance-03` | `Overfull.NativeStar.NativeBalance` | Exit 0; source snapshot matches; unchanged inputs |
+| `common-strict-01` | `Overfull.NativeStar.CommonPalette` | Exit 0; source snapshot matches; unchanged inputs |
+| `star-accounting-build-01` | `Overfull.NativeStar.StarAccounting` | Exit 0; source snapshot matches; unchanged inputs |
+| `choice-available-01` | `Overfull.NativeStar.StarChoice` | Exit 0; source snapshot matches; unchanged inputs |
+| `extension-available-01` | `Overfull.NativeStar.StarExtension` | Exit 0; source snapshot matches; unchanged inputs |
+| `two-stars-build-01` | `Overfull.NativeStar.TwoStars` | Exit 0; source snapshot matches; unchanged inputs |
+
+The genuine failed development attempts remain retained, including
+`common-01`, `choice-01`, `choice-02`, `native-balance-01`, and
+`two-stars-01`. Their original source snapshots and logs are not rewritten
+to resemble later successful attempts. Focused receipts are evidence about
+their recorded commands and inputs; complete verification still includes
+the root import closure and the full stock axiom audit.
+
+## Independent review of integration preparation
+
+The original reviewed preparer had SHA-256
+`8c8ed227b87bc93a54ed97821327322aeab0e7b27cabcdf899fb495b87f6054d`.
+Its exact bytes are retained under this run's
+`integration-adaptation/prepare-integration.py.before`. The review inspected
+that complete source and the baseline verifier, manifest generator,
+full-run recorder, preservation checker, and packaging script.
+
+Before execution, the preparer and documentation were adapted to pin the
+verified local baseline honestly while its public reconstruction was pending. At final input freeze, automatic
+approval review had explicitly rejected that publication. The originals and exact before/after identities are preserved
+in `integration-adaptation/`. This adaptation changes publication metadata
+and prose; it does not change the four additive verifier substitutions,
+any Lean source, the full-audit command, or any mathematical preservation
+gate. The final integration preflight records the generated source identities
+and exact four-edit comparison against the pinned local baseline.
+
+The four verifier changes are additive and have distinct purposes:
+
+| Change | Exact effect |
+|---|---|
+| Register `native_star` / `native-star-source.json` in the extension list | Reuse the existing module, source-hash, and public-declaration validation for the new modules. |
+| Add the native `numbered_assertions_completed == 0` gate | Reject a new manifest that promotes a numbered assertion. |
+| Add the `native_star` declaration-map filename prefix | Emit the complete new audited declaration map through the existing mapping loop. |
+| Add `native_star_declaration_map` to the result | Bind the new map's summary and hash into the complete results. |
+
+Each exact replacement anchor occurred once in the preceding verifier.
+Applying these substitutions in memory and reversing only those changes
+recovered the preceding verifier byte-for-byte. The in-memory generated
+manifest tool, complete-run recorder, preservation checker, packaging
+script, and extended verifier all parsed as valid Python. No preparer,
+compiler, complete verifier, preservation checker, or packaging action was
+executed by this review.
+
+The generated preservation checker correctly uses the preceding counts
+2,507 / 12,811 / 1,979; requires the preceding weighted declaration map to
+exist and the new native map to be absent from the baseline; and creates
+exactly the new `native_star_closure_*` public mappings in addition to all
+old mappings. Source discovery and public-proof inventory are dynamic.
+No theorem count is substituted into a fixed expected-new-total gate.
+
+## Complete verification and preservation gates
+
+The generated full runner records a fresh attempt directory, freezes all
+Lean sources, the actual Lake configuration and package manifest, scripts,
+documentation, provenance inputs, and notices, and invokes the complete
+`scripts/verify.py`. It captures genuine output and reports failure if any
+frozen input changes during the command. A source manifest records an
+inventory; successful kernel and audit execution must come from these
+command receipts.
+
+The complete verifier retains the preceding gates for the stock
+`Audit.lean`, dependency revisions and clean tracked dependency sources,
+reachability of every first-party mathematical module, strict
+`lake build --wfail`, and the full transitive axiom audit. The pinned Lean
+version remains `leanprover/lean4:v4.24.0`, and the mathlib revision remains
+`f897ebcf72cd16f89ab4577d0c826cd14afaafc7`. The allowed logical axioms remain
+`propext`, `Classical.choice`, and `Quot.sound`; this continuation does not
+broaden that set.
+
+After a successful complete run, the supplementary checker requires all
+of the following identities before writing a success report:
+
+- All 12,811 preceding audited declaration names retain their exact module
+  and axiom set; all 1,979 preceding completed-result mappings retain their
+  values.
+- Every previous declaration map and its result metadata remain
+  byte-identical. New audited declarations are exactly the complete
+  inventory of the newly mapped modules, including their private and
+  generated proof declarations.
+- All previous nonroot Lean sources, including the stock audit, remain
+  byte-identical. The root change is exactly the recorded contiguous block
+  of new NativeStar imports. No first-party mathematical module is omitted
+  from the actual Lean import inventory.
+- The verifier is exactly the preceding verifier plus the four reviewed
+  substitutions. Prior source and provenance manifests retain their bytes.
+- The four new verification inputs are the native source manifest, these
+  two new Markdown documents, and the new manifest generator. The allowed
+  changes to previous verification inputs are explicitly limited to the
+  README, continuation handoff, verifier, and coverage scope string.
+- All 69 numbered assertion records and statement hashes remain identical.
+  Coverage retains exactly the same 47 completed assertions and the same
+  incomplete main-theorem status. In `coverage.json`, only the top-level
+  descriptive scope string may change.
+- Every baseline file outside those declared mutable inputs, the root
+  import file, and the live verification outputs retains its original
+  bytes. The baseline count of 2,507 is an inventory requirement; it does
+  not incorrectly claim that the explicitly updated live outputs have
+  remained byte-identical.
+- Actual current input hashes, frozen candidate hashes, and hashes in the
+  verifier results coincide. Actual raw axiom-log records equal the result
+  declaration inventory, and the complete console equals the recorded
+  stage logs and final summary.
+- Historical evidence remains intact, and each development/full-run
+  attempt retains its genuine status, output, and snapshot. A later pass
+  does not erase earlier failed or interrupted work.
+
+The packaging procedure subsequently rechecks the preservation receipt,
+complete-run status, and all frozen/evidence hashes before committing a
+verified candidate. Its publication identity and any public branch
+readbacks are separate recorded actions. Neither this guide nor the
+integration preparer constitutes a publication receipt.
+
+## Scope still requiring native proofs
+
+The new results now provide the reserve-derived combined bound, exact
+actual remaining-star balance, concrete endpoint Hall choice, and
+conditional sequential actual-copy extension. The remaining native
+construction must select weighted odd/even joining palettes with valid
+seed/capacity certificates, establish their exact parity and reserve
+traces, initialize full prescribed boundaries and the bundle, derive
+available-color certificates for that initialized family, and compose all
+the actual objects into the required native global assembly.
+
+`starExtended_cut_eq` preserves already justified fiber cuts for internal
+added copies. It does not establish the initial parity or the final
+uncovered-core factorization hypotheses by itself. Full footprint and load
+bounds must account for the initialized reserves and bundle as well as
+the two star insertions. Robust core completion, factorization, and final
+reconstruction remain subsequent proof obligations. The accompanying
+[semantic review](native-star-semantic-review.md) explains these boundaries
+and the protected-color load issue in detail.

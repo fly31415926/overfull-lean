@@ -1,0 +1,1667 @@
+{
+  "schema_version": 1,
+  "file_count": 334,
+  "files": {
+    "development/baseline-warm-01/command.json": {
+      "bytes": 79789,
+      "sha256": "9e05d4d4b2a4474e5efa73f2ba2bdcb831070871dd50c2849157595bdf8b7fb3"
+    },
+    "development/baseline-warm-01/interruption.json": {
+      "bytes": 875,
+      "sha256": "8732293631e1ed1b999422efec1c77197918175dfb021904ac32209ef6d93ec0"
+    },
+    "development/baseline-warm-01/output.log": {
+      "bytes": 33938,
+      "sha256": "2a112682fe7dce4c0026c3f27c5abf7592854906c094f2dc2a5435b41fc0f42a"
+    },
+    "development/baseline-warm-01/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/baseline-warm-01/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/baseline-warm-01/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/baseline-warm-01/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5775,
+      "sha256": "7ecb4952c1bbbd1abb0b2b0743ec4488d1a6f66750c551451284db5b08b1b795"
+    },
+    "development/baseline-warm-01/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/baseline-warm-01/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8250,
+      "sha256": "1ad96d67ccfe4117a59ae2488af1839163c7c5d7def1767f2c713d7d47edc828"
+    },
+    "development/baseline-warm-01/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7444,
+      "sha256": "ea87dd8a6475538981636d818df4ba7836e09afbafa80bfc39c6af6daf6b482f"
+    },
+    "development/baseline-warm-01/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3322,
+      "sha256": "6c17ffd0dd227880bd79e54aac068145a4646d6cbec974f657767f600428bf6f"
+    },
+    "development/baseline-warm-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8252,
+      "sha256": "33183cb9bf1946c6c2ac230d1d7bd3cb9552c47305c28ce66feb87f7387418d4"
+    },
+    "development/baseline-warm-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11171,
+      "sha256": "8354610b06b9c241a7bd0324e41d821fd77fba7d9ba76b55df1274e58c53fa33"
+    },
+    "development/d2-final-01/command.json": {
+      "bytes": 80331,
+      "sha256": "3ffaddaf233f9884b8b43f539e6a12308067ed589d497d58d3874157ea4e6856"
+    },
+    "development/d2-final-01/output.log": {
+      "bytes": 3708,
+      "sha256": "f8670a671eae569f9221b693cf268b8e25682797c35485a8e091bd0d23b6d749"
+    },
+    "development/d2-final-01/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-final-01/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-final-01/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-final-01/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/d2-final-01/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/d2-final-01/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8326,
+      "sha256": "ae1e1cdad4c1058b1d269b274a97f1f1c37f09ec9d0b237db0f2cb69f83dee91"
+    },
+    "development/d2-final-01/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/d2-final-01/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3514,
+      "sha256": "dab7faa627b57f918f4097f0de308aa0f2000cad991a91301779791186cd1231"
+    },
+    "development/d2-final-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/d2-final-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11233,
+      "sha256": "5a28587bee8faf2880767b361bcabba0e83af7b86a7907818ca9d447639936c8"
+    },
+    "development/d2-final-01/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/d2-final-02/command.json": {
+      "bytes": 80331,
+      "sha256": "ced65b9887dd0bc4a5eeb9356a713db93a5d257739a61747803c8fba3ce1e840"
+    },
+    "development/d2-final-02/output.log": {
+      "bytes": 113,
+      "sha256": "c09ae725b0c56e812803447ab7b54cdda184c6c34eda8b388376aa8c248aff6b"
+    },
+    "development/d2-final-02/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-final-02/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-final-02/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-final-02/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/d2-final-02/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 6036,
+      "sha256": "e6b69828aa63be32f4bc38ef3d7029de499e1f2c6bed2e23694a99ce976fa61a"
+    },
+    "development/d2-final-02/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8326,
+      "sha256": "ae1e1cdad4c1058b1d269b274a97f1f1c37f09ec9d0b237db0f2cb69f83dee91"
+    },
+    "development/d2-final-02/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/d2-final-02/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3514,
+      "sha256": "dab7faa627b57f918f4097f0de308aa0f2000cad991a91301779791186cd1231"
+    },
+    "development/d2-final-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/d2-final-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11233,
+      "sha256": "5a28587bee8faf2880767b361bcabba0e83af7b86a7907818ca9d447639936c8"
+    },
+    "development/d2-final-02/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/d2-lift-01/command.json": {
+      "bytes": 80335,
+      "sha256": "28afae67afd9b6279e6000f9589e90338d54e71209fdaec30678e96512ad348d"
+    },
+    "development/d2-lift-01/output.log": {
+      "bytes": 8505,
+      "sha256": "b673e881382a9f49b13c358ba8b3f91fd5326876b6730e383f3e4d8e70417b89"
+    },
+    "development/d2-lift-01/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-lift-01/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-lift-01/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-lift-01/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/d2-lift-01/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/d2-lift-01/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/d2-lift-01/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/d2-lift-01/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3514,
+      "sha256": "dab7faa627b57f918f4097f0de308aa0f2000cad991a91301779791186cd1231"
+    },
+    "development/d2-lift-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/d2-lift-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11233,
+      "sha256": "5a28587bee8faf2880767b361bcabba0e83af7b86a7907818ca9d447639936c8"
+    },
+    "development/d2-lift-01/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/d2-lift-02/command.json": {
+      "bytes": 80336,
+      "sha256": "a0eb26328982f63d380fac941441eb32b4c72848fc97c2f166b633ef387eca8d"
+    },
+    "development/d2-lift-02/output.log": {
+      "bytes": 117,
+      "sha256": "b21dc3cb6d1cf09b988250bea8bfae55c4d3392102722dec3cc39504a81eaf53"
+    },
+    "development/d2-lift-02/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-lift-02/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-lift-02/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-lift-02/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/d2-lift-02/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/d2-lift-02/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8326,
+      "sha256": "ae1e1cdad4c1058b1d269b274a97f1f1c37f09ec9d0b237db0f2cb69f83dee91"
+    },
+    "development/d2-lift-02/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/d2-lift-02/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3514,
+      "sha256": "dab7faa627b57f918f4097f0de308aa0f2000cad991a91301779791186cd1231"
+    },
+    "development/d2-lift-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/d2-lift-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11233,
+      "sha256": "5a28587bee8faf2880767b361bcabba0e83af7b86a7907818ca9d447639936c8"
+    },
+    "development/d2-lift-02/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/d2-parallel-01/command.json": {
+      "bytes": 80339,
+      "sha256": "ffff3b0752cd652f27e28de97f87f011f6c43344db96b47516bf3ffe2d2b4ca5"
+    },
+    "development/d2-parallel-01/output.log": {
+      "bytes": 4191,
+      "sha256": "0a49965385b74a72876d80004af5a32c44aecc34a3d0a73c5835dfe9314e53ad"
+    },
+    "development/d2-parallel-01/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-parallel-01/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-parallel-01/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-parallel-01/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/d2-parallel-01/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/d2-parallel-01/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/d2-parallel-01/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7424,
+      "sha256": "e64dcdb6930437f0d1b789588ce5a945df757c795c9e3c0370bae8b0f6224de8"
+    },
+    "development/d2-parallel-01/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3322,
+      "sha256": "6c17ffd0dd227880bd79e54aac068145a4646d6cbec974f657767f600428bf6f"
+    },
+    "development/d2-parallel-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/d2-parallel-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11171,
+      "sha256": "8354610b06b9c241a7bd0324e41d821fd77fba7d9ba76b55df1274e58c53fa33"
+    },
+    "development/d2-parallel-01/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/d2-parallel-02/command.json": {
+      "bytes": 80339,
+      "sha256": "7bc2a6aab2012ed8c278703466bd7842c456c3f8f59711c3518483b4ed9a17f4"
+    },
+    "development/d2-parallel-02/output.log": {
+      "bytes": 2804,
+      "sha256": "2f5073fdbc6b25d9f709851b9567381b9b74d17163d762a6ca6f26e36ab41b99"
+    },
+    "development/d2-parallel-02/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-parallel-02/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-parallel-02/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-parallel-02/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/d2-parallel-02/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/d2-parallel-02/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/d2-parallel-02/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7325,
+      "sha256": "d6456661f87d7d2d344e6a00f68a378716e502295a4cae4d5cd9be2c2b6d92a7"
+    },
+    "development/d2-parallel-02/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3322,
+      "sha256": "6c17ffd0dd227880bd79e54aac068145a4646d6cbec974f657767f600428bf6f"
+    },
+    "development/d2-parallel-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/d2-parallel-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11171,
+      "sha256": "8354610b06b9c241a7bd0324e41d821fd77fba7d9ba76b55df1274e58c53fa33"
+    },
+    "development/d2-parallel-02/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/d2-parallel-03/command.json": {
+      "bytes": 80339,
+      "sha256": "c105fe64b13f5409514dd2d1bdb74e560add42494264d34632ffa330cb73ea6d"
+    },
+    "development/d2-parallel-03/output.log": {
+      "bytes": 2128,
+      "sha256": "7a2ecae3ee3fe2d908c05cb1e5f78dcb955c3fac3708ea5fb9a33cd37a059be9"
+    },
+    "development/d2-parallel-03/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-parallel-03/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-parallel-03/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-parallel-03/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/d2-parallel-03/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/d2-parallel-03/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/d2-parallel-03/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7422,
+      "sha256": "7c24d8690a65cf31fdd4d743d889a6351889a058318ad0be237c06a6fc1d73dd"
+    },
+    "development/d2-parallel-03/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3322,
+      "sha256": "6c17ffd0dd227880bd79e54aac068145a4646d6cbec974f657767f600428bf6f"
+    },
+    "development/d2-parallel-03/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/d2-parallel-03/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11171,
+      "sha256": "8354610b06b9c241a7bd0324e41d821fd77fba7d9ba76b55df1274e58c53fa33"
+    },
+    "development/d2-parallel-03/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/d2-parallel-04/command.json": {
+      "bytes": 80339,
+      "sha256": "da412c6b356e84d4c5a9c93a8c70fe6f5b43d460091deaad62cb0c1d5f902bb6"
+    },
+    "development/d2-parallel-04/output.log": {
+      "bytes": 121,
+      "sha256": "5c2912eb8cd3cc0ab1f2fd2a0648e99347d37a41994e95cc0dae7a18be2c7840"
+    },
+    "development/d2-parallel-04/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-parallel-04/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-parallel-04/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-parallel-04/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/d2-parallel-04/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/d2-parallel-04/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/d2-parallel-04/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/d2-parallel-04/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3322,
+      "sha256": "6c17ffd0dd227880bd79e54aac068145a4646d6cbec974f657767f600428bf6f"
+    },
+    "development/d2-parallel-04/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/d2-parallel-04/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11171,
+      "sha256": "8354610b06b9c241a7bd0324e41d821fd77fba7d9ba76b55df1274e58c53fa33"
+    },
+    "development/d2-parallel-04/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/d2-reassembly-01/command.json": {
+      "bytes": 80341,
+      "sha256": "fc15d29010e4d1f1c04b5583e6d3756ff942df8a2682daa538059cf6341f3df5"
+    },
+    "development/d2-reassembly-01/output.log": {
+      "bytes": 2353,
+      "sha256": "f184cd7c5b439a353f00edf9dca732ac6eb5381bb2d2786d994d43eb75417277"
+    },
+    "development/d2-reassembly-01/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-reassembly-01/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-reassembly-01/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-reassembly-01/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/d2-reassembly-01/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/d2-reassembly-01/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/d2-reassembly-01/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/d2-reassembly-01/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3322,
+      "sha256": "6c17ffd0dd227880bd79e54aac068145a4646d6cbec974f657767f600428bf6f"
+    },
+    "development/d2-reassembly-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/d2-reassembly-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11171,
+      "sha256": "8354610b06b9c241a7bd0324e41d821fd77fba7d9ba76b55df1274e58c53fa33"
+    },
+    "development/d2-reassembly-01/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/d2-reassembly-02/command.json": {
+      "bytes": 80408,
+      "sha256": "7f6447013d66db916569d68cbf063fa6f6822794eef82910f8d22016f75514bd"
+    },
+    "development/d2-reassembly-02/output.log": {
+      "bytes": 3448,
+      "sha256": "75850be3310e5f12cf5ff53b702a1f8b208ec6b1462a9043164d553d7c5bfacb"
+    },
+    "development/d2-reassembly-02/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-reassembly-02/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-reassembly-02/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-reassembly-02/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/d2-reassembly-02/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/d2-reassembly-02/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/d2-reassembly-02/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/d2-reassembly-02/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3391,
+      "sha256": "a19079ca7b74c97c15bb901f4c30aa4503bd0e862db8bf7d2809ce74ec779162"
+    },
+    "development/d2-reassembly-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/d2-reassembly-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11171,
+      "sha256": "8354610b06b9c241a7bd0324e41d821fd77fba7d9ba76b55df1274e58c53fa33"
+    },
+    "development/d2-reassembly-02/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/d2-reassembly-03/command.json": {
+      "bytes": 80341,
+      "sha256": "55b1a1b59077e97795eae0d02f0d5468be0f165a3ebcf78d21b9e7a8a36328ce"
+    },
+    "development/d2-reassembly-03/output.log": {
+      "bytes": 123,
+      "sha256": "8257f82201522af2cf9e11b3d21b731e9fbb371b8fa566b1c6e7d4b6fac0d3e6"
+    },
+    "development/d2-reassembly-03/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-reassembly-03/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-reassembly-03/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-reassembly-03/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/d2-reassembly-03/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/d2-reassembly-03/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/d2-reassembly-03/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/d2-reassembly-03/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3514,
+      "sha256": "dab7faa627b57f918f4097f0de308aa0f2000cad991a91301779791186cd1231"
+    },
+    "development/d2-reassembly-03/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/d2-reassembly-03/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11233,
+      "sha256": "5a28587bee8faf2880767b361bcabba0e83af7b86a7907818ca9d447639936c8"
+    },
+    "development/d2-reassembly-03/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/d2-support-01/command.json": {
+      "bytes": 78309,
+      "sha256": "a1db2c6f16d85b3f92077beb6ab461c4ed775f989e998cd2201f67e30bf6b877"
+    },
+    "development/d2-support-01/interruption.json": {
+      "bytes": 722,
+      "sha256": "d9f3ec332dcb6a57044c352d6ef583e79975dc034c6028d8ba4ece13757519e5"
+    },
+    "development/d2-support-01/output.log": {
+      "bytes": 28514,
+      "sha256": "b701bc1a4b8f5459ee8463d742895db439d4f54a0cbcbc60ba9b882292dc578f"
+    },
+    "development/d2-support-01/recorder.py": {
+      "bytes": 3245,
+      "sha256": "8b3e5de029e0a840f859063333d134fee3a3003c023237a6685e855cd9e4c153"
+    },
+    "development/d2-support-01/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5775,
+      "sha256": "7ecb4952c1bbbd1abb0b2b0743ec4488d1a6f66750c551451284db5b08b1b795"
+    },
+    "development/d2-support-01/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7407,
+      "sha256": "585dbaa8264449413f600bc716e5cb7f6aa666ade39b62e19ecb6223d38e7af4"
+    },
+    "development/d2-support-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8252,
+      "sha256": "33183cb9bf1946c6c2ac230d1d7bd3cb9552c47305c28ce66feb87f7387418d4"
+    },
+    "development/d2-support-02/command.json": {
+      "bytes": 80339,
+      "sha256": "2492aa436abfdd8546f4c6b4d4a2cd88fef5c74ed72a8e15bb7cbace49a9ac82"
+    },
+    "development/d2-support-02/output.log": {
+      "bytes": 3652,
+      "sha256": "4498fff92236bd70be17b406e9549c697ca26831f85766d17642006f3c780d19"
+    },
+    "development/d2-support-02/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-support-02/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-support-02/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-support-02/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5775,
+      "sha256": "7ecb4952c1bbbd1abb0b2b0743ec4488d1a6f66750c551451284db5b08b1b795"
+    },
+    "development/d2-support-02/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/d2-support-02/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/d2-support-02/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7424,
+      "sha256": "e64dcdb6930437f0d1b789588ce5a945df757c795c9e3c0370bae8b0f6224de8"
+    },
+    "development/d2-support-02/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3322,
+      "sha256": "6c17ffd0dd227880bd79e54aac068145a4646d6cbec974f657767f600428bf6f"
+    },
+    "development/d2-support-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8244,
+      "sha256": "8ca7789e5160d37a53cc797adac18be689ac6c492acf6627368d1e49e5f1ab0d"
+    },
+    "development/d2-support-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11171,
+      "sha256": "8354610b06b9c241a7bd0324e41d821fd77fba7d9ba76b55df1274e58c53fa33"
+    },
+    "development/d2-support-02/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/d2-support-03/command.json": {
+      "bytes": 80338,
+      "sha256": "0fe5f06b64b3aab980643f8b8c299c3807abe914a727861a66b0b2b4603ee6e0"
+    },
+    "development/d2-support-03/output.log": {
+      "bytes": 2712,
+      "sha256": "0222af6874fc315858d3f1f06833a6ffa4e565c71760abf22d946005ec1c21a5"
+    },
+    "development/d2-support-03/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-support-03/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-support-03/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-support-03/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/d2-support-03/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/d2-support-03/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/d2-support-03/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7424,
+      "sha256": "e64dcdb6930437f0d1b789588ce5a945df757c795c9e3c0370bae8b0f6224de8"
+    },
+    "development/d2-support-03/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3322,
+      "sha256": "6c17ffd0dd227880bd79e54aac068145a4646d6cbec974f657767f600428bf6f"
+    },
+    "development/d2-support-03/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8348,
+      "sha256": "a162b8758fc2fcefac350738a85a490b2b8529366a78c3af18fe1c5dffb06df7"
+    },
+    "development/d2-support-03/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11171,
+      "sha256": "8354610b06b9c241a7bd0324e41d821fd77fba7d9ba76b55df1274e58c53fa33"
+    },
+    "development/d2-support-03/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/d2-suppression-01/command.json": {
+      "bytes": 79337,
+      "sha256": "f28f53690665c7fc7956adf5200b60e1242ed69ee778c5df8386e4463ad8de7e"
+    },
+    "development/d2-suppression-01/interruption.json": {
+      "bytes": 629,
+      "sha256": "c74d0ecda66fda4f49357b58325233ae2c3778dad4e8c3aaf78a3c2156812112"
+    },
+    "development/d2-suppression-01/output.log": {
+      "bytes": 3550,
+      "sha256": "08d35058df51a65451373899b359911536665f0d4d364f61e95aaeef934b3c55"
+    },
+    "development/d2-suppression-01/recorder.py": {
+      "bytes": 3245,
+      "sha256": "8b3e5de029e0a840f859063333d134fee3a3003c023237a6685e855cd9e4c153"
+    },
+    "development/d2-suppression-01/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 8063,
+      "sha256": "1dc4d9e564811a5b49d5ed36edf38d0a6793d717d773790cfbb50a48518f99c9"
+    },
+    "development/d2-suppression-01/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-suppression-01/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5775,
+      "sha256": "7ecb4952c1bbbd1abb0b2b0743ec4488d1a6f66750c551451284db5b08b1b795"
+    },
+    "development/d2-suppression-01/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7407,
+      "sha256": "585dbaa8264449413f600bc716e5cb7f6aa666ade39b62e19ecb6223d38e7af4"
+    },
+    "development/d2-suppression-01/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3322,
+      "sha256": "6c17ffd0dd227880bd79e54aac068145a4646d6cbec974f657767f600428bf6f"
+    },
+    "development/d2-suppression-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8252,
+      "sha256": "33183cb9bf1946c6c2ac230d1d7bd3cb9552c47305c28ce66feb87f7387418d4"
+    },
+    "development/d2-suppression-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11171,
+      "sha256": "8354610b06b9c241a7bd0324e41d821fd77fba7d9ba76b55df1274e58c53fa33"
+    },
+    "development/d2-suppression-02/command.json": {
+      "bytes": 80343,
+      "sha256": "2d2e819509aa370f88e99c0b29a6552732a7d3e0d0bf5f12509a739b36873401"
+    },
+    "development/d2-suppression-02/output.log": {
+      "bytes": 14072,
+      "sha256": "cd9661c2e3f57b609aff9e23f53cb8bc6f083f7f9833e30c610bdc5619b78b4b"
+    },
+    "development/d2-suppression-02/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-suppression-02/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-suppression-02/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-suppression-02/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/d2-suppression-02/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/d2-suppression-02/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/d2-suppression-02/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/d2-suppression-02/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3322,
+      "sha256": "6c17ffd0dd227880bd79e54aac068145a4646d6cbec974f657767f600428bf6f"
+    },
+    "development/d2-suppression-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/d2-suppression-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11171,
+      "sha256": "8354610b06b9c241a7bd0324e41d821fd77fba7d9ba76b55df1274e58c53fa33"
+    },
+    "development/d2-suppression-02/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/d2-suppression-03/command.json": {
+      "bytes": 80341,
+      "sha256": "03b985191a4f15e75500f2911fd389774fc8d10fa1c90c434aa5b79c439cdbed"
+    },
+    "development/d2-suppression-03/output.log": {
+      "bytes": 124,
+      "sha256": "1b291fd191d72ee1bc866b945db4b3bb3ad2c081a15f0a489745e4f1e6ceec29"
+    },
+    "development/d2-suppression-03/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/d2-suppression-03/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/d2-suppression-03/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/d2-suppression-03/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/d2-suppression-03/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/d2-suppression-03/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/d2-suppression-03/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/d2-suppression-03/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3391,
+      "sha256": "a19079ca7b74c97c15bb901f4c30aa4503bd0e862db8bf7d2809ce74ec779162"
+    },
+    "development/d2-suppression-03/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/d2-suppression-03/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11233,
+      "sha256": "5a28587bee8faf2880767b361bcabba0e83af7b86a7907818ca9d447639936c8"
+    },
+    "development/d2-suppression-03/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/four-bounded-01/command.json": {
+      "bytes": 80329,
+      "sha256": "889c7cfc36537d4e116faa80e6d86ff1dae899a2e42a7e9068347e23b5df1a6a"
+    },
+    "development/four-bounded-01/output.log": {
+      "bytes": 3350,
+      "sha256": "ee1e11d1e8d04df91aa20659fdab1b4df39db886f05a76ec171ab71bd1c1d497"
+    },
+    "development/four-bounded-01/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/four-bounded-01/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/four-bounded-01/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/four-bounded-01/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/four-bounded-01/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 6036,
+      "sha256": "e6b69828aa63be32f4bc38ef3d7029de499e1f2c6bed2e23694a99ce976fa61a"
+    },
+    "development/four-bounded-01/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8326,
+      "sha256": "ae1e1cdad4c1058b1d269b274a97f1f1c37f09ec9d0b237db0f2cb69f83dee91"
+    },
+    "development/four-bounded-01/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/four-bounded-01/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3514,
+      "sha256": "dab7faa627b57f918f4097f0de308aa0f2000cad991a91301779791186cd1231"
+    },
+    "development/four-bounded-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/four-bounded-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11233,
+      "sha256": "5a28587bee8faf2880767b361bcabba0e83af7b86a7907818ca9d447639936c8"
+    },
+    "development/four-bounded-01/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/four-bounded-02/command.json": {
+      "bytes": 80589,
+      "sha256": "a00d4b9595c41e101315cccb26a6a49e1ceb837c50da2ce0abaa76c8cd854619"
+    },
+    "development/four-bounded-02/output.log": {
+      "bytes": 111,
+      "sha256": "70654f94b0c4f85bb01667a3451d6be0c5b5609507272a1d884bfab3e92f63d7"
+    },
+    "development/four-bounded-02/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/four-bounded-02/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 8156,
+      "sha256": "d88388b19185af7e92fa10c9c1479bbc75d74ceea769d98ba77df792246599fc"
+    },
+    "development/four-bounded-02/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/four-bounded-02/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/four-bounded-02/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 6036,
+      "sha256": "e6b69828aa63be32f4bc38ef3d7029de499e1f2c6bed2e23694a99ce976fa61a"
+    },
+    "development/four-bounded-02/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8326,
+      "sha256": "ae1e1cdad4c1058b1d269b274a97f1f1c37f09ec9d0b237db0f2cb69f83dee91"
+    },
+    "development/four-bounded-02/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/four-bounded-02/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3514,
+      "sha256": "dab7faa627b57f918f4097f0de308aa0f2000cad991a91301779791186cd1231"
+    },
+    "development/four-bounded-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/four-bounded-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11233,
+      "sha256": "5a28587bee8faf2880767b361bcabba0e83af7b86a7907818ca9d447639936c8"
+    },
+    "development/four-bounded-02/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/four-bounded-02/source/Overfull/CompatibleCircuits/FourTriangleSelection.lean": {
+      "bytes": 8729,
+      "sha256": "bd621c4e2e86c6a16001e60e34e9d61d643c4f9050d8ce1a77db2e16057086c7"
+    },
+    "development/four-cut-01/command.json": {
+      "bytes": 80334,
+      "sha256": "5142525c1aad0866613d477f5c39cc7eb431239ea41d870a9f70741338d7d709"
+    },
+    "development/four-cut-01/output.log": {
+      "bytes": 4014,
+      "sha256": "2027d606a9b8001791517833500386e2455247a922caec04132411bd128a8e5b"
+    },
+    "development/four-cut-01/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/four-cut-01/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/four-cut-01/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/four-cut-01/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5775,
+      "sha256": "7ecb4952c1bbbd1abb0b2b0743ec4488d1a6f66750c551451284db5b08b1b795"
+    },
+    "development/four-cut-01/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/four-cut-01/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/four-cut-01/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7424,
+      "sha256": "e64dcdb6930437f0d1b789588ce5a945df757c795c9e3c0370bae8b0f6224de8"
+    },
+    "development/four-cut-01/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3322,
+      "sha256": "6c17ffd0dd227880bd79e54aac068145a4646d6cbec974f657767f600428bf6f"
+    },
+    "development/four-cut-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8244,
+      "sha256": "8ca7789e5160d37a53cc797adac18be689ac6c492acf6627368d1e49e5f1ab0d"
+    },
+    "development/four-cut-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11171,
+      "sha256": "8354610b06b9c241a7bd0324e41d821fd77fba7d9ba76b55df1274e58c53fa33"
+    },
+    "development/four-cut-01/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/four-cut-02/command.json": {
+      "bytes": 80334,
+      "sha256": "c70d1cabca50889da87ef5081e54d9490a5c6d039a04552b26e2d44f74ebd969"
+    },
+    "development/four-cut-02/output.log": {
+      "bytes": 116,
+      "sha256": "20db9b671dfffaa03d013d2faf79989804d4e90368650674b100331724084389"
+    },
+    "development/four-cut-02/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/four-cut-02/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/four-cut-02/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/four-cut-02/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/four-cut-02/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/four-cut-02/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/four-cut-02/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7424,
+      "sha256": "e64dcdb6930437f0d1b789588ce5a945df757c795c9e3c0370bae8b0f6224de8"
+    },
+    "development/four-cut-02/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3322,
+      "sha256": "6c17ffd0dd227880bd79e54aac068145a4646d6cbec974f657767f600428bf6f"
+    },
+    "development/four-cut-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8244,
+      "sha256": "8ca7789e5160d37a53cc797adac18be689ac6c492acf6627368d1e49e5f1ab0d"
+    },
+    "development/four-cut-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11171,
+      "sha256": "8354610b06b9c241a7bd0324e41d821fd77fba7d9ba76b55df1274e58c53fa33"
+    },
+    "development/four-cut-02/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/four-joining-01/command.json": {
+      "bytes": 80596,
+      "sha256": "79e8f203acf67e9400c9d583f66dd0783122946d469633fc2bfc7d2f9038e26b"
+    },
+    "development/four-joining-01/output.log": {
+      "bytes": 2277,
+      "sha256": "66667fab5b2837a29a627f946d8eb380050ab6e5e7481f445c747b5fa4737a4e"
+    },
+    "development/four-joining-01/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/four-joining-01/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 8156,
+      "sha256": "d88388b19185af7e92fa10c9c1479bbc75d74ceea769d98ba77df792246599fc"
+    },
+    "development/four-joining-01/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/four-joining-01/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/four-joining-01/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 6036,
+      "sha256": "e6b69828aa63be32f4bc38ef3d7029de499e1f2c6bed2e23694a99ce976fa61a"
+    },
+    "development/four-joining-01/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8326,
+      "sha256": "ae1e1cdad4c1058b1d269b274a97f1f1c37f09ec9d0b237db0f2cb69f83dee91"
+    },
+    "development/four-joining-01/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/four-joining-01/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3514,
+      "sha256": "dab7faa627b57f918f4097f0de308aa0f2000cad991a91301779791186cd1231"
+    },
+    "development/four-joining-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/four-joining-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11233,
+      "sha256": "5a28587bee8faf2880767b361bcabba0e83af7b86a7907818ca9d447639936c8"
+    },
+    "development/four-joining-01/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/four-joining-01/source/Overfull/CompatibleCircuits/FourTriangleSelection.lean": {
+      "bytes": 8729,
+      "sha256": "bd621c4e2e86c6a16001e60e34e9d61d643c4f9050d8ce1a77db2e16057086c7"
+    },
+    "development/four-joining-02/command.json": {
+      "bytes": 80596,
+      "sha256": "a9934b70f4768925428567cf6ecc96e8c2f63f570eb0098f63e3a6c2162e4ed3"
+    },
+    "development/four-joining-02/output.log": {
+      "bytes": 118,
+      "sha256": "4d868c3ab1cb338c16143fd6aad3ae323a806ea96e1a899cebfb3be9b54f1fbc"
+    },
+    "development/four-joining-02/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/four-joining-02/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 8156,
+      "sha256": "d88388b19185af7e92fa10c9c1479bbc75d74ceea769d98ba77df792246599fc"
+    },
+    "development/four-joining-02/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10305,
+      "sha256": "ccefcf06474efc8459c35a3a3aa96992db23d79c1f696d1313a5677b92406964"
+    },
+    "development/four-joining-02/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/four-joining-02/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 6036,
+      "sha256": "e6b69828aa63be32f4bc38ef3d7029de499e1f2c6bed2e23694a99ce976fa61a"
+    },
+    "development/four-joining-02/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8326,
+      "sha256": "ae1e1cdad4c1058b1d269b274a97f1f1c37f09ec9d0b237db0f2cb69f83dee91"
+    },
+    "development/four-joining-02/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/four-joining-02/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3514,
+      "sha256": "dab7faa627b57f918f4097f0de308aa0f2000cad991a91301779791186cd1231"
+    },
+    "development/four-joining-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/four-joining-02/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11233,
+      "sha256": "5a28587bee8faf2880767b361bcabba0e83af7b86a7907818ca9d447639936c8"
+    },
+    "development/four-joining-02/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/four-joining-02/source/Overfull/CompatibleCircuits/FourTriangleSelection.lean": {
+      "bytes": 8729,
+      "sha256": "bd621c4e2e86c6a16001e60e34e9d61d643c4f9050d8ce1a77db2e16057086c7"
+    },
+    "development/four-triangle-selection-01/command.json": {
+      "bytes": 80599,
+      "sha256": "cd7f2d0c8b8f5596c8b31eca0475942810ef308ec03a9ec3ba65ae18ca0bccb5"
+    },
+    "development/four-triangle-selection-01/output.log": {
+      "bytes": 121,
+      "sha256": "02a36dafd6948efb6ae8091e3f0e0fe7f8907a3f426ce2643cb6096ebd3a99d1"
+    },
+    "development/four-triangle-selection-01/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/four-triangle-selection-01/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/four-triangle-selection-01/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/four-triangle-selection-01/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5872,
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05"
+    },
+    "development/four-triangle-selection-01/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 6036,
+      "sha256": "e6b69828aa63be32f4bc38ef3d7029de499e1f2c6bed2e23694a99ce976fa61a"
+    },
+    "development/four-triangle-selection-01/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8326,
+      "sha256": "ae1e1cdad4c1058b1d269b274a97f1f1c37f09ec9d0b237db0f2cb69f83dee91"
+    },
+    "development/four-triangle-selection-01/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7519,
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f"
+    },
+    "development/four-triangle-selection-01/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3514,
+      "sha256": "dab7faa627b57f918f4097f0de308aa0f2000cad991a91301779791186cd1231"
+    },
+    "development/four-triangle-selection-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8356,
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd"
+    },
+    "development/four-triangle-selection-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11233,
+      "sha256": "5a28587bee8faf2880767b361bcabba0e83af7b86a7907818ca9d447639936c8"
+    },
+    "development/four-triangle-selection-01/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    },
+    "development/four-triangle-selection-01/source/Overfull/CompatibleCircuits/FourTriangleSelection.lean": {
+      "bytes": 8729,
+      "sha256": "bd621c4e2e86c6a16001e60e34e9d61d643c4f9050d8ce1a77db2e16057086c7"
+    },
+    "development/global-coarsening-01/command.json": {
+      "bytes": 80338,
+      "sha256": "72773742609d7d68ffb55efbeaa223f529acf17419046518858b47966fa1c8f9"
+    },
+    "development/global-coarsening-01/output.log": {
+      "bytes": 120,
+      "sha256": "e9dec3accba05a7f76008299cfe93db2b718d309cf749424630eb535a25060c3"
+    },
+    "development/global-coarsening-01/recorder.py": {
+      "bytes": 3853,
+      "sha256": "6dbbc1ae126e7c6bb71f977c81f94ba7dab74eedebfc634f663b34ed2ddc329b"
+    },
+    "development/global-coarsening-01/source/Overfull/CompatibleCircuits/FourBounded.lean": {
+      "bytes": 7986,
+      "sha256": "9a6edf38ded0c241b01b62559fe7cc88566e5b58e476c011b716c259d1862365"
+    },
+    "development/global-coarsening-01/source/Overfull/CompatibleCircuits/FourBoundedJoining.lean": {
+      "bytes": 10285,
+      "sha256": "443a4841101e463d548fd333dbdd10c3f4b00ede673e20f6c2b5e004812fe55d"
+    },
+    "development/global-coarsening-01/source/Overfull/CompatibleCircuits/FourCutCriterion.lean": {
+      "bytes": 5775,
+      "sha256": "7ecb4952c1bbbd1abb0b2b0743ec4488d1a6f66750c551451284db5b08b1b795"
+    },
+    "development/global-coarsening-01/source/Overfull/CompatibleCircuits/FourDegreeTwo.lean": {
+      "bytes": 5821,
+      "sha256": "d74c9ba534ad079364a9cd91886ca8535804873e5230779505ea6abf5c17874f"
+    },
+    "development/global-coarsening-01/source/Overfull/CompatibleCircuits/FourDegreeTwoLift.lean": {
+      "bytes": 8114,
+      "sha256": "11364844dce66e11001d30178c07a1124741e98504b006126bf8197cd2ea91b2"
+    },
+    "development/global-coarsening-01/source/Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean": {
+      "bytes": 7424,
+      "sha256": "e64dcdb6930437f0d1b789588ce5a945df757c795c9e3c0370bae8b0f6224de8"
+    },
+    "development/global-coarsening-01/source/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean": {
+      "bytes": 3322,
+      "sha256": "6c17ffd0dd227880bd79e54aac068145a4646d6cbec974f657767f600428bf6f"
+    },
+    "development/global-coarsening-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean": {
+      "bytes": 8244,
+      "sha256": "8ca7789e5160d37a53cc797adac18be689ac6c492acf6627368d1e49e5f1ab0d"
+    },
+    "development/global-coarsening-01/source/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean": {
+      "bytes": 11171,
+      "sha256": "8354610b06b9c241a7bd0324e41d821fd77fba7d9ba76b55df1274e58c53fa33"
+    },
+    "development/global-coarsening-01/source/Overfull/CompatibleCircuits/FourGlobalCoarsening.lean": {
+      "bytes": 6429,
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d"
+    }
+  },
+  "attempt_count": 26,
+  "attempts": [
+    {
+      "attempt": "baseline-warm-01",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull"
+      ],
+      "exit_code": null,
+      "status": "interrupted",
+      "changed_inputs": null,
+      "observed_tool_exit_code": 130
+    },
+    {
+      "attempt": "d2-final-01",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwo"
+      ],
+      "exit_code": 1,
+      "status": "failed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "d2-final-02",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwo"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "d2-lift-01",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoLift"
+      ],
+      "exit_code": 1,
+      "status": "failed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "d2-lift-02",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoLift"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "d2-parallel-01",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoParallel"
+      ],
+      "exit_code": 1,
+      "status": "failed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "d2-parallel-02",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoParallel"
+      ],
+      "exit_code": 1,
+      "status": "failed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "d2-parallel-03",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoParallel"
+      ],
+      "exit_code": 1,
+      "status": "failed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "d2-parallel-04",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoParallel"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "d2-reassembly-01",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoReassembly"
+      ],
+      "exit_code": 1,
+      "status": "failed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "d2-reassembly-02",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoReassembly"
+      ],
+      "exit_code": 1,
+      "status": "failed",
+      "changed_inputs": [
+        "Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean"
+      ]
+    },
+    {
+      "attempt": "d2-reassembly-03",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoReassembly"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "d2-support-01",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoSupport"
+      ],
+      "exit_code": null,
+      "status": "interrupted",
+      "changed_inputs": null,
+      "observed_tool_exit_code": 130
+    },
+    {
+      "attempt": "d2-support-02",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoSupport"
+      ],
+      "exit_code": 1,
+      "status": "failed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "d2-support-03",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoSupport"
+      ],
+      "exit_code": 1,
+      "status": "failed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "d2-suppression-01",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoSuppression"
+      ],
+      "exit_code": null,
+      "status": "interrupted",
+      "changed_inputs": null,
+      "observed_tool_exit_code": 130
+    },
+    {
+      "attempt": "d2-suppression-02",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoSuppression"
+      ],
+      "exit_code": 1,
+      "status": "failed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "d2-suppression-03",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourDegreeTwoSuppression"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "four-bounded-01",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourBounded"
+      ],
+      "exit_code": 1,
+      "status": "failed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "four-bounded-02",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourBounded"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "four-cut-01",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourCutCriterion"
+      ],
+      "exit_code": 1,
+      "status": "failed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "four-cut-02",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourCutCriterion"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "four-joining-01",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourBoundedJoining"
+      ],
+      "exit_code": 1,
+      "status": "failed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "four-joining-02",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourBoundedJoining"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "four-triangle-selection-01",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourTriangleSelection"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "changed_inputs": []
+    },
+    {
+      "attempt": "global-coarsening-01",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.CompatibleCircuits.FourGlobalCoarsening"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "changed_inputs": []
+    }
+  ],
+  "status_counts": {
+    "passed": 10,
+    "failed": 13,
+    "interrupted": 3
+  }
+}

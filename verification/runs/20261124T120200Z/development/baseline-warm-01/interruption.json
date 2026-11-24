@@ -1,0 +1,23 @@
+{
+  "status": "interrupted",
+  "recorded_at_utc": "2026-11-24T12:17:06.171708+00:00",
+  "observed_tool_exit_code": 130,
+  "child_exit_code": null,
+  "reason": "At the supervising parent request, interrupted the partial baseline warmup after sufficient dependency compilation to let queued focused proof checks proceed. Remaining original modules will be rebuilt by the complete frozen verification gate. No completed baseline build or Lean child exit is claimed.",
+  "tool": "write_stdin",
+  "tool_arguments": {
+    "session_id": 95516,
+    "chars": "\u0003",
+    "yield_time_ms": 1000,
+    "max_output_tokens": 3500
+  },
+  "observed_tool_result": {
+    "chunk_id": "579990",
+    "wall_time_seconds": 0.024089619,
+    "exit_code": 130,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "original_command_receipt_preserved": true,
+  "recorder_cleanup_completed": false
+}

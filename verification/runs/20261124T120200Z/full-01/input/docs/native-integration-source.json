@@ -1,0 +1,759 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "d2e7b1274d280ef6567cb2b562ec6e94eec2dda0",
+  "baseline_tree": "9850008a20bfd828d8ab9da4c5e8d1bf50240570",
+  "baseline_publication_status": "verified_local_publication_blocked_by_automatic_review_at_input_freeze",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "scope": "Native weighted odd/even joining palettes derived from actual residual cores; complete paired and unpaired exceptional-copy assembly with exact selected reserve classes; original-core parity and whole-family load bounds; uniform completion of every nonprotected color, leaving a robust r/2-regular residual whose external copies are exactly the selected native reserve; and independent-exterior one-core factorization. These are supporting constructions; final protected-residual factorization and reassembly, full two-core Corollary 4.6, and the main theorem remain unproved.",
+  "review": "docs/native-integration-semantic-review.md",
+  "proof_map": "docs/native-integration-verification.md",
+  "module_count": 22,
+  "public_theorem_count": 113,
+  "modules": [
+    {
+      "module": "Overfull.NativeAssembly.BaseClasses",
+      "path": "Overfull/NativeAssembly/BaseClasses.lean",
+      "sha256": "76c33a03100751fedd4b13ca4f14dbaacefc73811527bb84277aec46d20eab83",
+      "public_theorem_count": 17,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeAssembly.reserveExtension_eq_of_not_protected",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.NativeAssembly.internalCopies_disjoint_joining",
+          "source_line": 40
+        },
+        {
+          "name": "Overfull.NativeAssembly.bundle_disjoint_reserveExtension",
+          "source_line": 49
+        },
+        {
+          "name": "Overfull.NativeAssembly.bundleClasses_matching",
+          "source_line": 65
+        },
+        {
+          "name": "Overfull.NativeAssembly.bundleClasses_disjoint",
+          "source_line": 84
+        },
+        {
+          "name": "Overfull.NativeAssembly.bundleClasses_cover",
+          "source_line": 94
+        },
+        {
+          "name": "Overfull.NativeAssembly.bundleClasses_contains_reserve",
+          "source_line": 100
+        },
+        {
+          "name": "Overfull.NativeAssembly.bundleClasses_prescribed",
+          "source_line": 105
+        },
+        {
+          "name": "Overfull.NativeAssembly.bundleClasses_cut_parity",
+          "source_line": 116
+        },
+        {
+          "name": "Overfull.NativeAssembly.bundleClasses_eq_on_remaining",
+          "source_line": 126
+        },
+        {
+          "name": "Overfull.NativeAssembly.bundleClasses_free_on_remaining",
+          "source_line": 139
+        },
+        {
+          "name": "Overfull.NativeAssembly.bundleClasses_available_load_le",
+          "source_line": 148
+        },
+        {
+          "name": "Overfull.NativeAssembly.bundleClasses_available_weight_le",
+          "source_line": 161
+        },
+        {
+          "name": "Overfull.NativeAssembly.bundleClasses_covers_not_remaining",
+          "source_line": 172
+        },
+        {
+          "name": "Overfull.NativeAssembly.remaining_star_disjoint_bundleClasses",
+          "source_line": 196
+        },
+        {
+          "name": "Overfull.NativeAssembly.bundleClasses_card_le",
+          "source_line": 212
+        },
+        {
+          "name": "Overfull.NativeAssembly.bundleClasses_support_card_le",
+          "source_line": 217
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeAssembly.NativeBundles",
+      "path": "Overfull/NativeAssembly/NativeBundles.lean",
+      "sha256": "e99c25e9f62c30e6d010b955bbeaed9f08911db5fcc628bb5b90d76475a2682a",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeAssembly.exceptionInternalPool_internal",
+          "source_line": 21
+        },
+        {
+          "name": "Overfull.NativeAssembly.exceptionCorePool_internal",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.NativeAssembly.native_internalPool_disjoint_boundary",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.NativeAssembly.native_star_disjoint_joining",
+          "source_line": 71
+        },
+        {
+          "name": "Overfull.NativeAssembly.native_star_internal",
+          "source_line": 88
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeAssembly.NativeTwoStars",
+      "path": "Overfull/NativeAssembly/NativeTwoStars.lean",
+      "sha256": "c42bcbd87305779d97ad5d5c2e7e043a72fff64e43eb59f39be70a670a47bcc9",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeAssembly.exists_native_same_label_completion",
+          "source_line": 24
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeAssembly.OtherCases",
+      "path": "Overfull/NativeAssembly/OtherCases.lean",
+      "sha256": "63b7a3a1faa1a060675232865b2ddab339d3c572b59ba6fee75ce380bae2eaea",
+      "public_theorem_count": 10,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeAssembly.reserve_eq_on_noBundleColors",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.NativeAssembly.reserve_free_on_noBundleColors",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.NativeAssembly.reserve_available_load_le",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.NativeAssembly.reserve_available_weight_le",
+          "source_line": 49
+        },
+        {
+          "name": "Overfull.NativeAssembly.reserve_covers_not_noBundleColors",
+          "source_line": 58
+        },
+        {
+          "name": "Overfull.NativeAssembly.remaining_star_disjoint_reserve",
+          "source_line": 75
+        },
+        {
+          "name": "Overfull.NativeAssembly.union_remaining_star",
+          "source_line": 91
+        },
+        {
+          "name": "Overfull.NativeAssembly.exceptionInternalPool_singleton_eq_empty",
+          "source_line": 100
+        },
+        {
+          "name": "Overfull.NativeAssembly.native_no_bundle_star_balance",
+          "source_line": 112
+        },
+        {
+          "name": "Overfull.NativeAssembly.exists_native_single_star_extension",
+          "source_line": 159
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeAssembly.Paired",
+      "path": "Overfull/NativeAssembly/Paired.lean",
+      "sha256": "88fcf8927b452ec03f3ccab4162c93f54936299ab3186ce3493e5921c520ef35",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeAssembly.exists_native_reserved_pair_injection",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.NativeAssembly.reserved_pair_class",
+          "source_line": 64
+        },
+        {
+          "name": "Overfull.NativeAssembly.exists_native_paired_completion",
+          "source_line": 111
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeAssembly.SeparateStars",
+      "path": "Overfull/NativeAssembly/SeparateStars.lean",
+      "sha256": "f258170455b2806dc198c04445ce3d3525a1d652a015153c18e112899ec8647c",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeAssembly.exists_native_separate_stars_extension",
+          "source_line": 23
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeAssembly.Unpaired",
+      "path": "Overfull/NativeAssembly/Unpaired.lean",
+      "sha256": "f9835128a96e3fb01f5da5b80f5523cab00705853fe420e93ca7602d984989f5",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeAssembly.small_exception_cases",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.NativeAssembly.pairFiberCopies_subset_exceptional",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.NativeAssembly.exists_native_unpaired_completion",
+          "source_line": 58
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeAssembly.ZeroCase",
+      "path": "Overfull/NativeAssembly/ZeroCase.lean",
+      "sha256": "7e1693cabf7b9dd8e722a7e6d81e3a45c498b8544165cade966ed4dcf536e310",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeAssembly.zero_exception_boundary_subset_joining",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.NativeAssembly.native_zero_exception_extension",
+          "source_line": 42
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeCore.Completion",
+      "path": "Overfull/NativeCore/Completion.lean",
+      "sha256": "0628b91bb2241b3b86393bb60e70f996689584bb6576b53d3df23fcc6c9a3b69",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeCore.pack_bounded_boundaries_in_core",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.NativeCore.exists_two_core_boundary_prefix",
+          "source_line": 76
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeCore.Coverage",
+      "path": "Overfull/NativeCore/Coverage.lean",
+      "sha256": "7f7d651aea33eac33ba47cd4d0460b09cd53544f408981b48de4b0f3044446c4",
+      "public_theorem_count": 4,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeCore.starWeight_mono_core",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.NativeCore.incidence_covered_of_full_palette",
+          "source_line": 35
+        },
+        {
+          "name": "Overfull.NativeCore.exceptionalCopies_covered_of_full_palette",
+          "source_line": 61
+        },
+        {
+          "name": "Overfull.NativeCore.external_union_eq_of_saturation",
+          "source_line": 78
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeCore.ExternalPalette",
+      "path": "Overfull/NativeCore/ExternalPalette.lean",
+      "sha256": "498761dfa9b88b05707f2d7b9a22babb7649cb778bb8ce173aa28ec9faecae33",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeCore.exists_native_external_completion",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.NativeCore.exists_native_external_palette_from_core_bounds",
+          "source_line": 109
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeCore.Incidence",
+      "path": "Overfull/NativeCore/Incidence.lean",
+      "sha256": "e53cc10c86a37a8266d48f4229f30442e898ec293288696bba59d0e20bd397e2",
+      "public_theorem_count": 8,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeCore.outside_parallel_le_core_error",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.NativeCore.outside_parallel_le_floor_error",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.NativeCore.exceptionalCopies_disjoint_core",
+          "source_line": 48
+        },
+        {
+          "name": "Overfull.NativeCore.joining_exceptional_disjoint_core",
+          "source_line": 61
+        },
+        {
+          "name": "Overfull.NativeCore.external_family_load_le_error",
+          "source_line": 72
+        },
+        {
+          "name": "Overfull.NativeCore.exceptionCorePool_subset_exceptional",
+          "source_line": 88
+        },
+        {
+          "name": "Overfull.NativeCore.native_exception_parallel_bounds",
+          "source_line": 98
+        },
+        {
+          "name": "Overfull.NativeCore.residualBoundary_subset_joining_exceptional",
+          "source_line": 117
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeCore.IndependentExterior",
+      "path": "Overfull/NativeCore/IndependentExterior.lean",
+      "sha256": "b259ecaf7879c293b20dfa5a1f0e3d54d248d4c250d4da055acbed08a629ceab",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeCore.edgesTo_exterior_eq_empty",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.NativeCore.complement_colorable_of_independent_exterior",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.NativeCore.complement_colorable_of_independent_exterior_real",
+          "source_line": 77
+        },
+        {
+          "name": "Overfull.NativeCore.core_complement_colorable_of_independent_exterior",
+          "source_line": 92
+        },
+        {
+          "name": "Overfull.NativeCore.exists_uniform_independent_exterior_factorization",
+          "source_line": 106
+        },
+        {
+          "name": "Overfull.NativeCore.exists_uniform_independent_exterior_one_factorization",
+          "source_line": 146
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeCore.NativePrefix",
+      "path": "Overfull/NativeCore/NativePrefix.lean",
+      "sha256": "43e1cff9640b75c859d435c2505b50f3f89694db200f4ddd274bbc4379469c05",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeCore.exists_uniform_native_unprotected_prefix",
+          "source_line": 32
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeCore.Parity",
+      "path": "Overfull/NativeCore/Parity.lean",
+      "sha256": "91d969358710b9d0961b43df3818b6bfc6c61ce7dff2fa82b611d4ef5921443f",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeCore.uncovered_corePart_eq",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.NativeCore.uncovered_old_cores_even",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.NativeCore.old_core_parity_of_joining_cuts",
+          "source_line": 71
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeCore.PrefixSelection",
+      "path": "Overfull/NativeCore/PrefixSelection.lean",
+      "sha256": "82477088824bc26d4475a29339e7b0e9bdfc5df4541d9b89a9c177954affb41d",
+      "public_theorem_count": 23,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeCore.mem_protectedComplement",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.NativeCore.protected_image_card",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.NativeCore.protected_size_le",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.NativeCore.protectedComplement_card",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.NativeCore.unprotectedColor_injective",
+          "source_line": 53
+        },
+        {
+          "name": "Overfull.NativeCore.unprotectedColor_not_protected",
+          "source_line": 58
+        },
+        {
+          "name": "Overfull.NativeCore.unprotectedColor_ne_protected",
+          "source_line": 62
+        },
+        {
+          "name": "Overfull.NativeCore.unprotectedColor_image",
+          "source_line": 68
+        },
+        {
+          "name": "Overfull.NativeCore.color_selected_or_protected",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.NativeCore.unprotectedClasses_matching",
+          "source_line": 99
+        },
+        {
+          "name": "Overfull.NativeCore.unprotectedClasses_disjoint",
+          "source_line": 105
+        },
+        {
+          "name": "Overfull.NativeCore.unprotectedClasses_disjoint_reserve",
+          "source_line": 114
+        },
+        {
+          "name": "Overfull.NativeCore.palette_union_selected_reserve",
+          "source_line": 127
+        },
+        {
+          "name": "Overfull.NativeCore.selected_union_disjoint_reserve",
+          "source_line": 149
+        },
+        {
+          "name": "Overfull.NativeCore.palette_remainder_eq_reserve",
+          "source_line": 162
+        },
+        {
+          "name": "Overfull.NativeCore.completed_prefix_external_trace",
+          "source_line": 178
+        },
+        {
+          "name": "Overfull.NativeCore.completed_prefix_external_remainder",
+          "source_line": 201
+        },
+        {
+          "name": "Overfull.NativeCore.completed_prefix_disjoint_reserve",
+          "source_line": 225
+        },
+        {
+          "name": "Overfull.NativeCore.internalOn_disjoint_joining_exceptional",
+          "source_line": 246
+        },
+        {
+          "name": "Overfull.NativeCore.two_internalOn_disjoint_joining_exceptional",
+          "source_line": 263
+        },
+        {
+          "name": "Overfull.NativeCore.completed_prefix_surviving_external",
+          "source_line": 275
+        },
+        {
+          "name": "Overfull.NativeCore.nonprotected_prefix_le_floor",
+          "source_line": 305
+        },
+        {
+          "name": "Overfull.NativeCore.half_reserve_prefix_room",
+          "source_line": 314
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeCore.WeightedBudget",
+      "path": "Overfull/NativeCore/WeightedBudget.lean",
+      "sha256": "5a6e857e24220ff8c55063a1bca06a2fadac09cfb2f067048ebd9736afba09a8",
+      "public_theorem_count": 11,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeCore.weighted_degree_ratio",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.NativeCore.weighted_palette_margin_lower",
+          "source_line": 35
+        },
+        {
+          "name": "Overfull.NativeCore.weighted_palette_capacity",
+          "source_line": 59
+        },
+        {
+          "name": "Overfull.NativeCore.weighted_piece_capacity",
+          "source_line": 72
+        },
+        {
+          "name": "Overfull.NativeCore.weighted_capacity_support_bound",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.NativeCore.weighted_capacity_support_small",
+          "source_line": 106
+        },
+        {
+          "name": "Overfull.NativeCore.uniform_weighted_palette_budget",
+          "source_line": 124
+        },
+        {
+          "name": "Overfull.NativeCore.native_star_hall_margin",
+          "source_line": 144
+        },
+        {
+          "name": "Overfull.NativeCore.two_star_load_bound",
+          "source_line": 153
+        },
+        {
+          "name": "Overfull.NativeCore.two_star_load_small",
+          "source_line": 162
+        },
+        {
+          "name": "Overfull.NativeCore.exists_uniform_weighted_palette_parameters",
+          "source_line": 176
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeWeighted.CoreBounds",
+      "path": "Overfull/NativeWeighted/CoreBounds.lean",
+      "sha256": "b3b17421a6ee396e72bd98830da3e5a096d04a77e429c03047a5eea58f3936bf",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeWeighted.assigned_core_weight_le_union",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.NativeWeighted.exists_native_palette_from_core_bounds",
+          "source_line": 38
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeWeighted.EvenNative",
+      "path": "Overfull/NativeWeighted/EvenNative.lean",
+      "sha256": "f46f307cd15b2a2a2a64b4425314adbe78c5fea48260b8cad73a332be150ab8a",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeWeighted.exists_native_even_weighted_reserved_palette",
+          "source_line": 24
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeWeighted.NativePalette",
+      "path": "Overfull/NativeWeighted/NativePalette.lean",
+      "sha256": "46efbbbe7b816a3c20a13f780064f9a10df8f550e32e09fde6be0ae688861ad6",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeWeighted.exists_native_weighted_reserved_palette",
+          "source_line": 25
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeWeighted.OddNative",
+      "path": "Overfull/NativeWeighted/OddNative.lean",
+      "sha256": "5580cbf191783b13785d5e855ce3a8cabbede16a3c022898f12dceea884f5ed0",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeWeighted.exists_native_odd_weighted_joining_palette",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.NativeWeighted.exists_native_odd_weighted_reserved_palette",
+          "source_line": 100
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeWeighted.WeightedJoining",
+      "path": "Overfull/NativeWeighted/WeightedJoining.lean",
+      "sha256": "27246048dc6f71438601bd1c104fc7ab5716305a79a2f805c89b559223debe6a",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeWeighted.injective_seed_count_le_one",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.NativeWeighted.injective_seed_weight_le",
+          "source_line": 33
+        },
+        {
+          "name": "Overfull.NativeWeighted.weighted_capacity_of_incidence_budget",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_star_weighted_palette",
+          "source_line": 70
+        },
+        {
+          "name": "Overfull.FourOdd.TwoOddJoiningDecomposition.exists_star_weighted_protected_palette",
+          "source_line": 129
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.FourOdd.EvenJoiningDecomposition.exists_star_weighted_palette",
+    "Overfull.FourOdd.TwoOddJoiningDecomposition.exists_star_weighted_protected_palette",
+    "Overfull.NativeAssembly.bundleClasses_available_load_le",
+    "Overfull.NativeAssembly.bundleClasses_available_weight_le",
+    "Overfull.NativeAssembly.bundleClasses_card_le",
+    "Overfull.NativeAssembly.bundleClasses_contains_reserve",
+    "Overfull.NativeAssembly.bundleClasses_cover",
+    "Overfull.NativeAssembly.bundleClasses_covers_not_remaining",
+    "Overfull.NativeAssembly.bundleClasses_cut_parity",
+    "Overfull.NativeAssembly.bundleClasses_disjoint",
+    "Overfull.NativeAssembly.bundleClasses_eq_on_remaining",
+    "Overfull.NativeAssembly.bundleClasses_free_on_remaining",
+    "Overfull.NativeAssembly.bundleClasses_matching",
+    "Overfull.NativeAssembly.bundleClasses_prescribed",
+    "Overfull.NativeAssembly.bundleClasses_support_card_le",
+    "Overfull.NativeAssembly.bundle_disjoint_reserveExtension",
+    "Overfull.NativeAssembly.exceptionCorePool_internal",
+    "Overfull.NativeAssembly.exceptionInternalPool_internal",
+    "Overfull.NativeAssembly.exceptionInternalPool_singleton_eq_empty",
+    "Overfull.NativeAssembly.exists_native_paired_completion",
+    "Overfull.NativeAssembly.exists_native_reserved_pair_injection",
+    "Overfull.NativeAssembly.exists_native_same_label_completion",
+    "Overfull.NativeAssembly.exists_native_separate_stars_extension",
+    "Overfull.NativeAssembly.exists_native_single_star_extension",
+    "Overfull.NativeAssembly.exists_native_unpaired_completion",
+    "Overfull.NativeAssembly.internalCopies_disjoint_joining",
+    "Overfull.NativeAssembly.native_internalPool_disjoint_boundary",
+    "Overfull.NativeAssembly.native_no_bundle_star_balance",
+    "Overfull.NativeAssembly.native_star_disjoint_joining",
+    "Overfull.NativeAssembly.native_star_internal",
+    "Overfull.NativeAssembly.native_zero_exception_extension",
+    "Overfull.NativeAssembly.pairFiberCopies_subset_exceptional",
+    "Overfull.NativeAssembly.remaining_star_disjoint_bundleClasses",
+    "Overfull.NativeAssembly.remaining_star_disjoint_reserve",
+    "Overfull.NativeAssembly.reserveExtension_eq_of_not_protected",
+    "Overfull.NativeAssembly.reserve_available_load_le",
+    "Overfull.NativeAssembly.reserve_available_weight_le",
+    "Overfull.NativeAssembly.reserve_covers_not_noBundleColors",
+    "Overfull.NativeAssembly.reserve_eq_on_noBundleColors",
+    "Overfull.NativeAssembly.reserve_free_on_noBundleColors",
+    "Overfull.NativeAssembly.reserved_pair_class",
+    "Overfull.NativeAssembly.small_exception_cases",
+    "Overfull.NativeAssembly.union_remaining_star",
+    "Overfull.NativeAssembly.zero_exception_boundary_subset_joining",
+    "Overfull.NativeCore.color_selected_or_protected",
+    "Overfull.NativeCore.complement_colorable_of_independent_exterior",
+    "Overfull.NativeCore.complement_colorable_of_independent_exterior_real",
+    "Overfull.NativeCore.completed_prefix_disjoint_reserve",
+    "Overfull.NativeCore.completed_prefix_external_remainder",
+    "Overfull.NativeCore.completed_prefix_external_trace",
+    "Overfull.NativeCore.completed_prefix_surviving_external",
+    "Overfull.NativeCore.core_complement_colorable_of_independent_exterior",
+    "Overfull.NativeCore.edgesTo_exterior_eq_empty",
+    "Overfull.NativeCore.exceptionCorePool_subset_exceptional",
+    "Overfull.NativeCore.exceptionalCopies_covered_of_full_palette",
+    "Overfull.NativeCore.exceptionalCopies_disjoint_core",
+    "Overfull.NativeCore.exists_native_external_completion",
+    "Overfull.NativeCore.exists_native_external_palette_from_core_bounds",
+    "Overfull.NativeCore.exists_two_core_boundary_prefix",
+    "Overfull.NativeCore.exists_uniform_independent_exterior_factorization",
+    "Overfull.NativeCore.exists_uniform_independent_exterior_one_factorization",
+    "Overfull.NativeCore.exists_uniform_native_unprotected_prefix",
+    "Overfull.NativeCore.exists_uniform_weighted_palette_parameters",
+    "Overfull.NativeCore.external_family_load_le_error",
+    "Overfull.NativeCore.external_union_eq_of_saturation",
+    "Overfull.NativeCore.half_reserve_prefix_room",
+    "Overfull.NativeCore.incidence_covered_of_full_palette",
+    "Overfull.NativeCore.internalOn_disjoint_joining_exceptional",
+    "Overfull.NativeCore.joining_exceptional_disjoint_core",
+    "Overfull.NativeCore.mem_protectedComplement",
+    "Overfull.NativeCore.native_exception_parallel_bounds",
+    "Overfull.NativeCore.native_star_hall_margin",
+    "Overfull.NativeCore.nonprotected_prefix_le_floor",
+    "Overfull.NativeCore.old_core_parity_of_joining_cuts",
+    "Overfull.NativeCore.outside_parallel_le_core_error",
+    "Overfull.NativeCore.outside_parallel_le_floor_error",
+    "Overfull.NativeCore.pack_bounded_boundaries_in_core",
+    "Overfull.NativeCore.palette_remainder_eq_reserve",
+    "Overfull.NativeCore.palette_union_selected_reserve",
+    "Overfull.NativeCore.protectedComplement_card",
+    "Overfull.NativeCore.protected_image_card",
+    "Overfull.NativeCore.protected_size_le",
+    "Overfull.NativeCore.residualBoundary_subset_joining_exceptional",
+    "Overfull.NativeCore.selected_union_disjoint_reserve",
+    "Overfull.NativeCore.starWeight_mono_core",
+    "Overfull.NativeCore.two_internalOn_disjoint_joining_exceptional",
+    "Overfull.NativeCore.two_star_load_bound",
+    "Overfull.NativeCore.two_star_load_small",
+    "Overfull.NativeCore.uncovered_corePart_eq",
+    "Overfull.NativeCore.uncovered_old_cores_even",
+    "Overfull.NativeCore.uniform_weighted_palette_budget",
+    "Overfull.NativeCore.unprotectedClasses_disjoint",
+    "Overfull.NativeCore.unprotectedClasses_disjoint_reserve",
+    "Overfull.NativeCore.unprotectedClasses_matching",
+    "Overfull.NativeCore.unprotectedColor_image",
+    "Overfull.NativeCore.unprotectedColor_injective",
+    "Overfull.NativeCore.unprotectedColor_ne_protected",
+    "Overfull.NativeCore.unprotectedColor_not_protected",
+    "Overfull.NativeCore.weighted_capacity_support_bound",
+    "Overfull.NativeCore.weighted_capacity_support_small",
+    "Overfull.NativeCore.weighted_degree_ratio",
+    "Overfull.NativeCore.weighted_palette_capacity",
+    "Overfull.NativeCore.weighted_palette_margin_lower",
+    "Overfull.NativeCore.weighted_piece_capacity",
+    "Overfull.NativeWeighted.assigned_core_weight_le_union",
+    "Overfull.NativeWeighted.exists_native_even_weighted_reserved_palette",
+    "Overfull.NativeWeighted.exists_native_odd_weighted_joining_palette",
+    "Overfull.NativeWeighted.exists_native_odd_weighted_reserved_palette",
+    "Overfull.NativeWeighted.exists_native_palette_from_core_bounds",
+    "Overfull.NativeWeighted.exists_native_weighted_reserved_palette",
+    "Overfull.NativeWeighted.injective_seed_count_le_one",
+    "Overfull.NativeWeighted.injective_seed_weight_le",
+    "Overfull.NativeWeighted.weighted_capacity_of_incidence_budget"
+  ]
+}

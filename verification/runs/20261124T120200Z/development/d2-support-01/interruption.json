@@ -1,0 +1,22 @@
+{
+  "status": "interrupted",
+  "observed_tool_exit_code": 130,
+  "child_exit_code": null,
+  "wall_time_seconds": 0.044448823,
+  "reason": "The supervising parent requested interrupting the premature uncached build so mathlib cache recovery could complete and then unpack under the shared build lock. The focused build was not certified as complete.",
+  "tool": "write_stdin",
+  "tool_arguments": {
+    "session_id": 18245,
+    "chars": "\u0003",
+    "yield_time_ms": 1000,
+    "max_output_tokens": 2000
+  },
+  "observed_tool_result": {
+    "chunk_id": "1d9761",
+    "wall_time_seconds": 0.044448823,
+    "exit_code": 130,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "original_command_receipt_preserved": true
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "old": "                          (\"three_core_terminal\", \"three-core-terminal-source.json\"),\n",
+    "new": "                          (\"three_core_terminal\", \"three-core-terminal-source.json\"),\n                          (\"four_label_reduction\", \"four-label-reduction-source.json\"),\n"
+  },
+  {
+    "old": "    # Every first-party mathematical file must be included in the library build.\n",
+    "new": "    four_label_source, _, four_label_public = extension_maps[\"four_label_reduction\"]\n    if (four_label_source[\"kind\"] != \"supporting_continuation\"\n            or four_label_source[\"numbered_assertions_completed\"] != 0\n            or four_label_source[\"main_theorem_verified\"] is not False\n            or four_label_source[\"public_theorems\"] != [\n                \"Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_small_degree\",\n                \"Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_degree_le_four\",\n                \"Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_card_le_eight\",\n                \"Overfull.Multigraph.fourLabel_counterexample_degree_and_size\",\n                \"Overfull.Multigraph.fourLabel_admissibleOn_sdiff_iff_cut_witnesses\",\n                \"Overfull.Multigraph.exists_globally_admissible_localCoarsening\",\n                \"Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers_small_cut\",\n                \"Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers_bounded_cuts\",\n                \"Overfull.FourOdd.exists_fourTwoOddJoining_decomposition_of_small_even_cut\"]\n            or not set(four_label_source[\"public_theorems\"]) <= set(four_label_public)):\n        raise SystemExit(\"The four-label reduction completes no additional numbered assertion.\")\n\n    # Every first-party mathematical file must be included in the library build.\n"
+  },
+  {
+    "old": "                    \"three_core_terminal\": \"three-core-terminal\",\n",
+    "new": "                    \"three_core_terminal\": \"three-core-terminal\",\n                    \"four_label_reduction\": \"four-label-reduction\",\n"
+  },
+  {
+    "old": "        \"global_factorization_declaration_map\": extension_evidence[\"global_factorization\"],\n",
+    "new": "        \"global_factorization_declaration_map\": extension_evidence[\"global_factorization\"],\n        \"four_label_reduction_declaration_map\": extension_evidence[\"four_label_reduction\"],\n"
+  }
+]

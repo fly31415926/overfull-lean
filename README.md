@@ -1,6 +1,52 @@
 # Lean formalization of the overfull manuscript
 
-## Current continuation: complete single-core Lemma 3.1
+## Current continuation: four-label low-degree and cut reductions
+
+**Coverage remains 49 of 69 numbered assertions.** This supporting continuation
+constructs compatible circuit partitions for admissible Eulerian multigraphs
+on at most four labels whenever a label has degree at most two. The other
+degrees are unrestricted. It derives the cases where all degrees are at most
+four or the selected set contains at most eight actual edge copies.
+
+The reduction preserves every cut inequality and every original copy. A
+degree-two label either supplies a safely removable parallel pair or is
+suppressed between distinct neighbors; the suppressed partition is then
+restored with the original incidence classes. A possible counterexample to
+the unrestricted four-label theorem must therefore have all degrees at least
+four, some degree at least six, and at least nine copies.
+
+Two further results support the unrestricted problem. The exact deletion
+criterion accounts for both tight cuts and cuts with slack two. Tight local
+incidence coarsening preserves global admissibility, for arbitrary vertex
+types and degrees. Neither statement assumes a safe circuit selector exists.
+
+Original-host applications construct all-even joining matching families when
+some fiber boundary has at most two copies, or all boundaries have at most
+four. With exactly two odd fibers, a small even boundary gives exactly the
+regular degree many primary matching pieces plus an even-footprint surplus
+family. All pieces consist of distinct original copies.
+
+The [source inventory](docs/four-label-reduction-source.json),
+[proof map](docs/four-label-reduction-verification.md),
+[semantic review](docs/four-label-reduction-semantic-review.md), and
+[handoff](docs/continuation-handoff.md) give the exact hypotheses and endpoints.
+The [current run](verification/runs/20261124T120200Z/) retains actual setup and
+development failures, successful checks, source snapshots, the frozen complete
+build/audit, preservation evidence, and separate publication receipts.
+
+The baseline is public commit `e2e5455b11d5b1691d0a974fd3c5f72e989ec5b8`,
+tree `9013f6d5c07676ba130d4bb794062d700bab6136`. All previous nonroot
+mathematical sources, `Audit.lean`, all 69 assertion records, their statements,
+and the 49 completed count are preserved. The root imports and verifier map
+registration are exact additive changes. Actual terminal and preservation
+receipts determine the full verification result.
+
+**The unrestricted four-label existence theorem, the remaining four-core
+terminal cases, full Proposition 4.16, full Theorem 4.17, and the main theorem
+remain incomplete.** Research notes in the run describe possible next steps;
+they are not verified mathematical declarations.
+
+## Previous continuation: complete single-core Lemma 3.1
 
 **49 of the manuscript's 69 numbered assertions are complete.**
 `Overfull.single_core_coloring` proves the full pinned Lemma 3.1: a simple

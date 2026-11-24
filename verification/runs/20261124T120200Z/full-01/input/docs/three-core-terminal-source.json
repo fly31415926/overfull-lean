@@ -1,0 +1,814 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "0cf1c68c4daaeec9b879a03f1871eb64a0fa9640",
+  "baseline_tree": "5d031253d02d0d0878422f8fbc367f04b812450c",
+  "baseline_publication_status": "published_exact_tree_and_both_refs_verified",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "manuscript_number": "4.16",
+  "verified_subcase": "exactly_three_core_parts",
+  "manuscript_label": "three:prop:terminal",
+  "statement_sha256": "1ba102e379594ab72de4ba73cf41c88d9fbdadf1c132e2943b48da04e8c2cc1c",
+  "public_theorems": [
+    "Overfull.three_core_terminal_factorization",
+    "Overfull.three_core_terminal_one_factorization"
+  ],
+  "scope": "Uniform terminal factorization for a simple regular graph of even order with no overfull set and exactly three disjoint covering robust core parts. Fixed positive ambient degree and part-order densities and robust parameters precede a common positive core-error tolerance and order threshold. Joining palettes, completed perfect-matching prefixes, residual cores, the simultaneous contraction of the two odd parts, and compatible leaf colorings are constructed from the original host hypotheses. The conclusion is a coloring and an exact partition of all original edge copies into the degree number of perfect matchings. This proves only the three-core subcase of Proposition 4.16; the four-core cases, full Proposition 4.16, and the main theorem remain unproved. Numbered coverage stays 48 of 69.",
+  "review": "docs/three-core-terminal-semantic-review.md",
+  "proof_map": "docs/three-core-terminal-verification.md",
+  "module_count": 21,
+  "public_theorem_count": 124,
+  "modules": [
+    {
+      "module": "Overfull.Terminal.CentralCuts",
+      "path": "Overfull/Terminal/CentralCuts.lean",
+      "sha256": "5ca689fd09c4838c8620a950aa38884fc8b39b14a8eab079d82e1e2161527b13",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.small_core_shore_not_overfull",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.Terminal.small_core_odd_cut_lower_bound",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.Terminal.no_overfull_of_external_matchings_and_minority",
+          "source_line": 58
+        },
+        {
+          "name": "Overfull.Terminal.exists_two_exterior_cut_threshold",
+          "source_line": 81
+        },
+        {
+          "name": "Overfull.Terminal.robust_two_exterior_no_overfull",
+          "source_line": 115
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.CentralFactorization",
+      "path": "Overfull/Terminal/CentralFactorization.lean",
+      "sha256": "cb29f0cc83e5b69fd3f92d13b02bca75c93a83992f3c422a3f661627548a7823",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.exists_uniform_central_coloring",
+          "source_line": 18
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.CentralMatchings",
+      "path": "Overfull/Terminal/CentralMatchings.lean",
+      "sha256": "2d2901129a3bc1d13bd529d6abf1b8c35fe3fd72becad7b54944c9be9c1492c5",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.cutSize_of_matching_partition",
+          "source_line": 21
+        },
+        {
+          "name": "Overfull.Terminal.mem_centralMatching",
+          "source_line": 44
+        },
+        {
+          "name": "Overfull.Terminal.centralMatching_isMatching",
+          "source_line": 48
+        },
+        {
+          "name": "Overfull.Terminal.central_external_incident_apex",
+          "source_line": 70
+        },
+        {
+          "name": "Overfull.Terminal.centralMatching_external_cover",
+          "source_line": 90
+        },
+        {
+          "name": "Overfull.Terminal.centralBoundaryLabels_injective",
+          "source_line": 130
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.ClosedCores",
+      "path": "Overfull/Terminal/ClosedCores.lean",
+      "sha256": "27a7377ae0469e7048563214f7c3598445e3d95ca964ecc460ce4c81fb0d704e",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.exists_glued_component_coloring",
+          "source_line": 20
+        },
+        {
+          "name": "Overfull.Terminal.exists_uniform_closed_core_factorization",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.Terminal.exists_uniform_closed_core_one_factorization",
+          "source_line": 73
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.CompletedFactorization",
+      "path": "Overfull/Terminal/CompletedFactorization.lean",
+      "sha256": "f73eb10d44c333f03f6a103eaa621955c50ae6337bb90c49f52bb9f886a24435",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.exists_uniform_completed_prefix_factorization",
+          "source_line": 23
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.Contraction",
+      "path": "Overfull/Terminal/Contraction.lean",
+      "sha256": "405b8e7b3f2d8b1b692632aec60707a355df9d417056707d8ac22a0cd7521fa4",
+      "public_theorem_count": 29,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.centralMap_core",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.Terminal.centralMap_eq_inl_iff",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.Terminal.centralMap_injective_at_core",
+          "source_line": 37
+        },
+        {
+          "name": "Overfull.Terminal.centralMap_eq_first_apex_iff",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.Terminal.centralMap_eq_second_apex_iff",
+          "source_line": 50
+        },
+        {
+          "name": "Overfull.Terminal.centralGraph_edge",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.Terminal.central_incident_of_original",
+          "source_line": 84
+        },
+        {
+          "name": "Overfull.Terminal.central_incident_inl_iff",
+          "source_line": 90
+        },
+        {
+          "name": "Overfull.Terminal.central_incident_iff",
+          "source_line": 100
+        },
+        {
+          "name": "Overfull.Terminal.central_retained_of_core_incident",
+          "source_line": 109
+        },
+        {
+          "name": "Overfull.Terminal.central_retained_of_cut",
+          "source_line": 121
+        },
+        {
+          "name": "Overfull.Terminal.central_incident_fiber_iff",
+          "source_line": 130
+        },
+        {
+          "name": "Overfull.Terminal.central_incident_first_apex_iff",
+          "source_line": 141
+        },
+        {
+          "name": "Overfull.Terminal.central_incident_second_apex_iff",
+          "source_line": 146
+        },
+        {
+          "name": "Overfull.Terminal.central_degree_inl",
+          "source_line": 163
+        },
+        {
+          "name": "Overfull.Terminal.central_degree_fiber",
+          "source_line": 185
+        },
+        {
+          "name": "Overfull.Terminal.central_regular",
+          "source_line": 191
+        },
+        {
+          "name": "Overfull.Terminal.central_inl_mem_core",
+          "source_line": 209
+        },
+        {
+          "name": "Overfull.Terminal.central_apex_not_mem_core",
+          "source_line": 212
+        },
+        {
+          "name": "Overfull.Terminal.centralCoreVertices_card",
+          "source_line": 215
+        },
+        {
+          "name": "Overfull.Terminal.centralVertex_card",
+          "source_line": 220
+        },
+        {
+          "name": "Overfull.Terminal.centralCoreVertices_compl_card",
+          "source_line": 223
+        },
+        {
+          "name": "Overfull.Terminal.central_even_order",
+          "source_line": 228
+        },
+        {
+          "name": "Overfull.Terminal.centralCoreEquiv_apply_val",
+          "source_line": 244
+        },
+        {
+          "name": "Overfull.Terminal.centralCoreEquiv_symm_val",
+          "source_line": 247
+        },
+        {
+          "name": "Overfull.Terminal.centralCoreEdgeMap_edge",
+          "source_line": 260
+        },
+        {
+          "name": "Overfull.Terminal.centralCore_graph",
+          "source_line": 285
+        },
+        {
+          "name": "Overfull.Terminal.centralCore_degree",
+          "source_line": 294
+        },
+        {
+          "name": "Overfull.Terminal.centralCore_robust",
+          "source_line": 300
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.CoreBridge",
+      "path": "Overfull/Terminal/CoreBridge.lean",
+      "sha256": "a2defcea9dad137a8ad224368b4b4567f623126559387bfbcfc3becd97b0763e",
+      "public_theorem_count": 4,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.completionCore_graph",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.Terminal.completionCore_robust",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.Terminal.completionCore_degree",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.Terminal.completionResidual_regular",
+          "source_line": 53
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.OddFactorization",
+      "path": "Overfull/Terminal/OddFactorization.lean",
+      "sha256": "e1957ec7fe99d68ac4cc9a728a8a8d02d012eedfa39d8485a19a4c3d54e5bf3d",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.exists_uniform_two_odd_coloring",
+          "source_line": 29
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.OddGluing",
+      "path": "Overfull/Terminal/OddGluing.lean",
+      "sha256": "1c375e5388a215230424c057928383024fbcf624d54b8a3041fd70ed326ddc93",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.glue_central_and_odd_leaves",
+          "source_line": 17
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.Palette",
+      "path": "Overfull/Terminal/Palette.lean",
+      "sha256": "6035ed6e9a0828b5425902dead42f11906c9402a84fad9da8d62881a6816b33d",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.PrefixPalette.boundary_subset",
+          "source_line": 33
+        },
+        {
+          "name": "Overfull.Terminal.PrefixPalette.remaining_subset",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.Terminal.PrefixPalette.uncovered_even",
+          "source_line": 45
+        },
+        {
+          "name": "Overfull.Terminal.PrefixPalette.remaining_eq_joining_sdiff",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.Terminal.exists_even_prefix_palette",
+          "source_line": 71
+        },
+        {
+          "name": "Overfull.Terminal.exists_two_odd_prefix_palette",
+          "source_line": 95
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.Parameters",
+      "path": "Overfull/Terminal/Parameters.lean",
+      "sha256": "d57bc73b64e75780308a292f2c18cc534792fd6dbc89e8e1d8381db9dc055040",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.exists_prefix_parameters",
+          "source_line": 28
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.ParityCases",
+      "path": "Overfull/Terminal/ParityCases.lean",
+      "sha256": "d733f577d2b90119df46be37007bdd0e9bee1efa1d002a1fd820e5cc9ecf2c92",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.exists_third_core_index",
+          "source_line": 16
+        },
+        {
+          "name": "Overfull.Terminal.three_core_even_or_two_odd",
+          "source_line": 37
+        },
+        {
+          "name": "Overfull.Terminal.reordered_three_core_cover",
+          "source_line": 57
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.PartLabels",
+      "path": "Overfull/Terminal/PartLabels.lean",
+      "sha256": "6bbeec4479ea2cdc2244f59ea5ab678ced3629d707447beec3bed7543f8f8c4a",
+      "public_theorem_count": 8,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.threeCoreLabel_fiber",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.Terminal.threeCoreLabel_eq_iff",
+          "source_line": 47
+        },
+        {
+          "name": "Overfull.Terminal.threeCoreLabel_shore",
+          "source_line": 54
+        },
+        {
+          "name": "Overfull.Terminal.three_fiber_parity",
+          "source_line": 64
+        },
+        {
+          "name": "Overfull.Terminal.three_core_parity",
+          "source_line": 98
+        },
+        {
+          "name": "Overfull.Terminal.joiningCopies_three_eq_two_cuts",
+          "source_line": 109
+        },
+        {
+          "name": "Overfull.Terminal.threeCoreLabel_joining",
+          "source_line": 120
+        },
+        {
+          "name": "Overfull.Terminal.fiber_cut_empty_of_joining_empty",
+          "source_line": 129
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.Prefix",
+      "path": "Overfull/Terminal/Prefix.lean",
+      "sha256": "d4ab3bb6eaf6c6540a071c93928fa1e9ea299d8f365da383dd06752edfba4977",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.exists_uniform_three_core_prefix",
+          "source_line": 20
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.PrefixCompletion",
+      "path": "Overfull/Terminal/PrefixCompletion.lean",
+      "sha256": "5851a4b1256d92642a65712a485b31ec9966a8128da623a8a37d7860cf770afa",
+      "public_theorem_count": 7,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.PrefixPalette.simpleBoundary_lt",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.Terminal.selectedMatching_verts_toFinset",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.Terminal.selectedMatching_uncovered_card",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.Terminal.joining_not_internal",
+          "source_line": 50
+        },
+        {
+          "name": "Overfull.Terminal.exists_prefix_completion",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.Terminal.completed_joining_copies",
+          "source_line": 135
+        },
+        {
+          "name": "Overfull.Terminal.remaining_joining_copies",
+          "source_line": 165
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.PrefixResult",
+      "path": "Overfull/Terminal/PrefixResult.lean",
+      "sha256": "8ba5b690dde71440ccff6af41817eed7ca2dd4f0b5a6897ada0915aefd4e1159",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.ThreeCorePrefix.remaining_survives",
+          "source_line": 35
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.Reassembly",
+      "path": "Overfull/Terminal/Reassembly.lean",
+      "sha256": "4a038b5861a83b7c374f1af02b7fb5a3a2a45c7b2cd23cc8b638a230b06879df",
+      "public_theorem_count": 8,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.residualCopyColoring_colorClass_image",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.Terminal.restoredColoring_prefix",
+          "source_line": 67
+        },
+        {
+          "name": "Overfull.Terminal.restoredColoring_residual",
+          "source_line": 78
+        },
+        {
+          "name": "Overfull.Terminal.restoredColorClass_prefix",
+          "source_line": 88
+        },
+        {
+          "name": "Overfull.Terminal.restoredColorClass_residual",
+          "source_line": 99
+        },
+        {
+          "name": "Overfull.Terminal.exists_restored_one_factorization",
+          "source_line": 116
+        },
+        {
+          "name": "Overfull.Terminal.completion_restores_coloring",
+          "source_line": 148
+        },
+        {
+          "name": "Overfull.Terminal.completion_restores_one_factorization",
+          "source_line": 158
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.RemainingProfile",
+      "path": "Overfull/Terminal/RemainingProfile.lean",
+      "sha256": "f59ce3a3da2fcfc33331a32eaa2110e87165c9cfb6f0386e13e9e3bc7ef2bccb",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.ThreeCorePrefix.residual_joining_empty",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.Terminal.ThreeCorePrefix.residual_cuts_empty",
+          "source_line": 31
+        },
+        {
+          "name": "Overfull.Terminal.ThreeCorePrefix.exists_residual_primary_family",
+          "source_line": 45
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.ResidualPools",
+      "path": "Overfull/Terminal/ResidualPools.lean",
+      "sha256": "518e4aa84b0426c580ef3198199d1fce38fbde156221f9a4b3559ae046260035",
+      "public_theorem_count": 15,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.mem_residualPool",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.Terminal.residualPool_image",
+          "source_line": 31
+        },
+        {
+          "name": "Overfull.Terminal.residualPool_image_of_survives",
+          "source_line": 37
+        },
+        {
+          "name": "Overfull.Terminal.residualPool_card",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.Terminal.residualPool_isMatching",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.Terminal.residualPool_disjoint",
+          "source_line": 64
+        },
+        {
+          "name": "Overfull.Terminal.residualPool_cutOn",
+          "source_line": 72
+        },
+        {
+          "name": "Overfull.Terminal.residualPool_cutOn_card",
+          "source_line": 81
+        },
+        {
+          "name": "Overfull.Terminal.residualPool_support_subset",
+          "source_line": 91
+        },
+        {
+          "name": "Overfull.Terminal.residualPool_support_eq",
+          "source_line": 100
+        },
+        {
+          "name": "Overfull.Terminal.residualPool_biUnion",
+          "source_line": 112
+        },
+        {
+          "name": "Overfull.Terminal.residualPool_sdiff_removed",
+          "source_line": 118
+        },
+        {
+          "name": "Overfull.Terminal.residualPool_joining",
+          "source_line": 126
+        },
+        {
+          "name": "Overfull.Terminal.residualFamily_union_joining",
+          "source_line": 136
+        },
+        {
+          "name": "Overfull.Terminal.residualFamily_survives_of_union",
+          "source_line": 147
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.SimpleBridge",
+      "path": "Overfull/Terminal/SimpleBridge.lean",
+      "sha256": "2530264ac1564ca80711928af2577ebaae25eec7e6f60ccdace0fb88e9cf5cd9",
+      "public_theorem_count": 18,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.matchingEdges_isMatching",
+          "source_line": 21
+        },
+        {
+          "name": "Overfull.Terminal.matchingEdges_isPerfectMatching",
+          "source_line": 35
+        },
+        {
+          "name": "Overfull.Terminal.mem_matchingFamilyCopies",
+          "source_line": 49
+        },
+        {
+          "name": "Overfull.Terminal.mem_removedFamilyCopies",
+          "source_line": 54
+        },
+        {
+          "name": "Overfull.Terminal.removedFamilyCopies_eq_range",
+          "source_line": 65
+        },
+        {
+          "name": "Overfull.Terminal.spanningCoe_mem_edgeSet",
+          "source_line": 74
+        },
+        {
+          "name": "Overfull.Terminal.edgeUnion_mem_edgeSet",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.Terminal.mem_residual_iff_not_removed",
+          "source_line": 88
+        },
+        {
+          "name": "Overfull.Terminal.matchingFamilyCopies_pairwise_disjoint",
+          "source_line": 107
+        },
+        {
+          "name": "Overfull.Terminal.matchingFamilyCopies_perfect",
+          "source_line": 118
+        },
+        {
+          "name": "Overfull.Terminal.residualEdgeEmbedding_val",
+          "source_line": 135
+        },
+        {
+          "name": "Overfull.Terminal.residualEdgeEmbedding_edge",
+          "source_line": 140
+        },
+        {
+          "name": "Overfull.Terminal.residualEdgeEmbedding_firstEnd",
+          "source_line": 146
+        },
+        {
+          "name": "Overfull.Terminal.residualEdgeEmbedding_secondEnd",
+          "source_line": 152
+        },
+        {
+          "name": "Overfull.Terminal.residualEdgeEquiv_edge",
+          "source_line": 168
+        },
+        {
+          "name": "Overfull.Terminal.residualEdgeEquiv_embedding",
+          "source_line": 175
+        },
+        {
+          "name": "Overfull.Terminal.residualEdgeEmbedding_image_univ",
+          "source_line": 180
+        },
+        {
+          "name": "Overfull.Terminal.residualEdgeEmbedding_image_filter",
+          "source_line": 194
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.ThreeCore",
+      "path": "Overfull/Terminal/ThreeCore.lean",
+      "sha256": "0b3088e0a199d67f58d580a8cce48777cfd81625ee9a3249d05c62fe3aa092b1",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.three_core_terminal_factorization",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.three_core_terminal_one_factorization",
+          "source_line": 69
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.Terminal.PrefixPalette.boundary_subset",
+    "Overfull.Terminal.PrefixPalette.remaining_eq_joining_sdiff",
+    "Overfull.Terminal.PrefixPalette.remaining_subset",
+    "Overfull.Terminal.PrefixPalette.simpleBoundary_lt",
+    "Overfull.Terminal.PrefixPalette.uncovered_even",
+    "Overfull.Terminal.ThreeCorePrefix.exists_residual_primary_family",
+    "Overfull.Terminal.ThreeCorePrefix.remaining_survives",
+    "Overfull.Terminal.ThreeCorePrefix.residual_cuts_empty",
+    "Overfull.Terminal.ThreeCorePrefix.residual_joining_empty",
+    "Overfull.Terminal.centralBoundaryLabels_injective",
+    "Overfull.Terminal.centralCoreEdgeMap_edge",
+    "Overfull.Terminal.centralCoreEquiv_apply_val",
+    "Overfull.Terminal.centralCoreEquiv_symm_val",
+    "Overfull.Terminal.centralCoreVertices_card",
+    "Overfull.Terminal.centralCoreVertices_compl_card",
+    "Overfull.Terminal.centralCore_degree",
+    "Overfull.Terminal.centralCore_graph",
+    "Overfull.Terminal.centralCore_robust",
+    "Overfull.Terminal.centralGraph_edge",
+    "Overfull.Terminal.centralMap_core",
+    "Overfull.Terminal.centralMap_eq_first_apex_iff",
+    "Overfull.Terminal.centralMap_eq_inl_iff",
+    "Overfull.Terminal.centralMap_eq_second_apex_iff",
+    "Overfull.Terminal.centralMap_injective_at_core",
+    "Overfull.Terminal.centralMatching_external_cover",
+    "Overfull.Terminal.centralMatching_isMatching",
+    "Overfull.Terminal.centralVertex_card",
+    "Overfull.Terminal.central_apex_not_mem_core",
+    "Overfull.Terminal.central_degree_fiber",
+    "Overfull.Terminal.central_degree_inl",
+    "Overfull.Terminal.central_even_order",
+    "Overfull.Terminal.central_external_incident_apex",
+    "Overfull.Terminal.central_incident_fiber_iff",
+    "Overfull.Terminal.central_incident_first_apex_iff",
+    "Overfull.Terminal.central_incident_iff",
+    "Overfull.Terminal.central_incident_inl_iff",
+    "Overfull.Terminal.central_incident_of_original",
+    "Overfull.Terminal.central_incident_second_apex_iff",
+    "Overfull.Terminal.central_inl_mem_core",
+    "Overfull.Terminal.central_regular",
+    "Overfull.Terminal.central_retained_of_core_incident",
+    "Overfull.Terminal.central_retained_of_cut",
+    "Overfull.Terminal.completed_joining_copies",
+    "Overfull.Terminal.completionCore_degree",
+    "Overfull.Terminal.completionCore_graph",
+    "Overfull.Terminal.completionCore_robust",
+    "Overfull.Terminal.completionResidual_regular",
+    "Overfull.Terminal.completion_restores_coloring",
+    "Overfull.Terminal.completion_restores_one_factorization",
+    "Overfull.Terminal.cutSize_of_matching_partition",
+    "Overfull.Terminal.edgeUnion_mem_edgeSet",
+    "Overfull.Terminal.exists_even_prefix_palette",
+    "Overfull.Terminal.exists_glued_component_coloring",
+    "Overfull.Terminal.exists_prefix_completion",
+    "Overfull.Terminal.exists_prefix_parameters",
+    "Overfull.Terminal.exists_restored_one_factorization",
+    "Overfull.Terminal.exists_third_core_index",
+    "Overfull.Terminal.exists_two_exterior_cut_threshold",
+    "Overfull.Terminal.exists_two_odd_prefix_palette",
+    "Overfull.Terminal.exists_uniform_central_coloring",
+    "Overfull.Terminal.exists_uniform_closed_core_factorization",
+    "Overfull.Terminal.exists_uniform_closed_core_one_factorization",
+    "Overfull.Terminal.exists_uniform_completed_prefix_factorization",
+    "Overfull.Terminal.exists_uniform_three_core_prefix",
+    "Overfull.Terminal.exists_uniform_two_odd_coloring",
+    "Overfull.Terminal.fiber_cut_empty_of_joining_empty",
+    "Overfull.Terminal.glue_central_and_odd_leaves",
+    "Overfull.Terminal.joiningCopies_three_eq_two_cuts",
+    "Overfull.Terminal.joining_not_internal",
+    "Overfull.Terminal.matchingEdges_isMatching",
+    "Overfull.Terminal.matchingEdges_isPerfectMatching",
+    "Overfull.Terminal.matchingFamilyCopies_pairwise_disjoint",
+    "Overfull.Terminal.matchingFamilyCopies_perfect",
+    "Overfull.Terminal.mem_centralMatching",
+    "Overfull.Terminal.mem_matchingFamilyCopies",
+    "Overfull.Terminal.mem_removedFamilyCopies",
+    "Overfull.Terminal.mem_residualPool",
+    "Overfull.Terminal.mem_residual_iff_not_removed",
+    "Overfull.Terminal.no_overfull_of_external_matchings_and_minority",
+    "Overfull.Terminal.remaining_joining_copies",
+    "Overfull.Terminal.removedFamilyCopies_eq_range",
+    "Overfull.Terminal.reordered_three_core_cover",
+    "Overfull.Terminal.residualCopyColoring_colorClass_image",
+    "Overfull.Terminal.residualEdgeEmbedding_edge",
+    "Overfull.Terminal.residualEdgeEmbedding_firstEnd",
+    "Overfull.Terminal.residualEdgeEmbedding_image_filter",
+    "Overfull.Terminal.residualEdgeEmbedding_image_univ",
+    "Overfull.Terminal.residualEdgeEmbedding_secondEnd",
+    "Overfull.Terminal.residualEdgeEmbedding_val",
+    "Overfull.Terminal.residualEdgeEquiv_edge",
+    "Overfull.Terminal.residualEdgeEquiv_embedding",
+    "Overfull.Terminal.residualFamily_survives_of_union",
+    "Overfull.Terminal.residualFamily_union_joining",
+    "Overfull.Terminal.residualPool_biUnion",
+    "Overfull.Terminal.residualPool_card",
+    "Overfull.Terminal.residualPool_cutOn",
+    "Overfull.Terminal.residualPool_cutOn_card",
+    "Overfull.Terminal.residualPool_disjoint",
+    "Overfull.Terminal.residualPool_image",
+    "Overfull.Terminal.residualPool_image_of_survives",
+    "Overfull.Terminal.residualPool_isMatching",
+    "Overfull.Terminal.residualPool_joining",
+    "Overfull.Terminal.residualPool_sdiff_removed",
+    "Overfull.Terminal.residualPool_support_eq",
+    "Overfull.Terminal.residualPool_support_subset",
+    "Overfull.Terminal.restoredColorClass_prefix",
+    "Overfull.Terminal.restoredColorClass_residual",
+    "Overfull.Terminal.restoredColoring_prefix",
+    "Overfull.Terminal.restoredColoring_residual",
+    "Overfull.Terminal.robust_two_exterior_no_overfull",
+    "Overfull.Terminal.selectedMatching_uncovered_card",
+    "Overfull.Terminal.selectedMatching_verts_toFinset",
+    "Overfull.Terminal.small_core_odd_cut_lower_bound",
+    "Overfull.Terminal.small_core_shore_not_overfull",
+    "Overfull.Terminal.spanningCoe_mem_edgeSet",
+    "Overfull.Terminal.threeCoreLabel_eq_iff",
+    "Overfull.Terminal.threeCoreLabel_fiber",
+    "Overfull.Terminal.threeCoreLabel_joining",
+    "Overfull.Terminal.threeCoreLabel_shore",
+    "Overfull.Terminal.three_core_even_or_two_odd",
+    "Overfull.Terminal.three_core_parity",
+    "Overfull.Terminal.three_fiber_parity",
+    "Overfull.three_core_terminal_factorization",
+    "Overfull.three_core_terminal_one_factorization"
+  ]
+}

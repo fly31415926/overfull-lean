@@ -1,0 +1,621 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation_source_mapping",
+  "base_commit": "1b12919971be8518b185aa59832c209170ec0656",
+  "date": "2026-11-22",
+  "numbered_assertions_completed": 0,
+  "fully_verified_numbered_assertion_count": 45,
+  "main_theorem_verified": false,
+  "manuscript_assertions": [
+    "6.1",
+    "6.2",
+    "6.3"
+  ],
+  "inspected_manuscript": {
+    "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+    "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+    "numbered_inventory_rebased": false
+  },
+  "source_locations": [
+    {
+      "label": "old:fac:palette-sizes",
+      "lines": [
+        4550,
+        4560
+      ]
+    },
+    {
+      "label": "old:fac:absorber-counts",
+      "lines": [
+        5178,
+        5186
+      ]
+    },
+    {
+      "label": "old:fac:range",
+      "lines": [
+        5366,
+        5395
+      ]
+    },
+    {
+      "label": "old:degree-accounting",
+      "lines": [
+        5397,
+        5456
+      ]
+    }
+  ],
+  "scope": "Constructed coupled integer absorber parameters, source palette budgets and divisibilities; exact original-copy reservation, arbitrary-reserve bipartite packing, complete exterior-class completion, exact simple regular remainder, and actual balanced orientation. ReservedRemainder composes these graph steps from an original regular host and explicit reserved copies with a supplied compressed balanced exterior coloring. The geometric spanning setup, special path systems, robust absorber, construction of those stage inputs, and final whole-host factorization remain unproved. No numbered assertion is added.",
+  "module_count": 8,
+  "public_theorem_count": 99,
+  "modules": [
+    {
+      "module": "Overfull.BipartiteFactorization.AbsorberParameters",
+      "path": "Overfull/BipartiteFactorization/AbsorberParameters.lean",
+      "sha256": "a4fec261e7b23975764ec962fc08ed53bdc0ad3ec892df6f8c7dd7e638d8afd1",
+      "public_theorem_count": 21,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.make_budget",
+          "source_line": 68
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.make_valid",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.palettes",
+          "source_line": 115
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.fine_quotient",
+          "source_line": 123
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.Valid.required_period",
+          "source_line": 129
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.floor_half",
+          "source_line": 135
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rounding_threshold",
+          "source_line": 144
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_data",
+          "source_line": 190
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.palette_fraction_bounds",
+          "source_line": 228
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rates",
+          "source_line": 309
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_cluster_count_threshold",
+          "source_line": 360
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_rates_fixed_rho",
+          "source_line": 393
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.palette_bounds_of_rates",
+          "source_line": 441
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_parameters",
+          "source_line": 470
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_cluster_order",
+          "source_line": 509
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.spanning_divisibilities",
+          "source_line": 522
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.PaletteBounds.mono_lower",
+          "source_line": 548
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_parameter_family",
+          "source_line": 560
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.source_targets_pos",
+          "source_line": 607
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.source_palette_bounds",
+          "source_line": 628
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_source_parameters",
+          "source_line": 672
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BipartiteFactorization.ResidualPacking",
+      "path": "Overfull/BipartiteFactorization/ResidualPacking.lean",
+      "sha256": "4c03b609a6f5cb2d7a667a0ebf26d4b1b6c0624bab5eaa78695695a34e84b1af",
+      "public_theorem_count": 8,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.remaining_le",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.remaining_bipartite",
+          "source_line": 44
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_identity",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_lower",
+          "source_line": 75
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_upper",
+          "source_line": 84
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_error",
+          "source_line": 95
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.subfamily_robust",
+          "source_line": 111
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.pack_fixed_bipartite_forbidden_sets",
+          "source_line": 153
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BipartiteFactorization.ResidualOrientation",
+      "path": "Overfull/BipartiteFactorization/ResidualOrientation.lean",
+      "sha256": "443764c2683ed26942756252da259286c7bd432bcca8029dd267f09448d2a039",
+      "public_theorem_count": 20,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BipartiteFactorization.paletteGraph_le",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.paletteGraph_union",
+          "source_line": 45
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.paletteGraph_disjoint",
+          "source_line": 59
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.paletteGraph_degree",
+          "source_line": 69
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ofSimpleGraph_bipartite",
+          "source_line": 96
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.exists_regular_bipartite_orientation",
+          "source_line": 129
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ResidualOrientation.arc_from_left",
+          "source_line": 196
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ResidualOrientation.arc_to_left",
+          "source_line": 204
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ResidualOrientation.arc_from_right",
+          "source_line": 212
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ResidualOrientation.arc_to_right",
+          "source_line": 220
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ResidualOrientation.arc_subgraph",
+          "source_line": 228
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ResidualOrientation.edge_iff_arc",
+          "source_line": 234
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ResidualOrientation.arc_asymm",
+          "source_line": 255
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ResidualOrientation.arc_irrefl",
+          "source_line": 270
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ResidualOrientation.outNeighbors_left",
+          "source_line": 274
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ResidualOrientation.inNeighbors_left",
+          "source_line": 280
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ResidualOrientation.outNeighbors_right",
+          "source_line": 286
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ResidualOrientation.inNeighbors_right",
+          "source_line": 292
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ResidualOrientation.outDegree_eq",
+          "source_line": 300
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ResidualOrientation.inDegree_eq",
+          "source_line": 311
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BipartiteFactorization.ComplementCompletion",
+      "path": "Overfull/BipartiteFactorization/ComplementCompletion.lean",
+      "sha256": "9d44db0cf53f3760b4cc3b9a3bad8a387a3c3b79fba544a5a7b8e1d11e0d0d6f",
+      "public_theorem_count": 17,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.mem_used",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.classes_isMatching",
+          "source_line": 49
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.classes_disjoint",
+          "source_line": 52
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.classes_isPerfectMatching",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.used_degree",
+          "source_line": 71
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.exterior_mem_class",
+          "source_line": 88
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.exterior_used",
+          "source_line": 93
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.remaining_degree_add",
+          "source_line": 99
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.remaining_degree_core",
+          "source_line": 106
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.remaining_degree_outside",
+          "source_line": 114
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.core_copy_used_iff",
+          "source_line": 125
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.core_copy_survives_iff",
+          "source_line": 144
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore_graph",
+          "source_line": 159
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore_exhausts",
+          "source_line": 163
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore_degree_eq",
+          "source_line": 179
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingGraph_regular",
+          "source_line": 192
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ComplementCompletion.remainingGraph_bipartite",
+          "source_line": 198
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BipartiteFactorization.CompletionTransport",
+      "path": "Overfull/BipartiteFactorization/CompletionTransport.lean",
+      "sha256": "751ea8c17f3ea5701eeadb72c00c4db17168d4189758a680c6b325c113d26160",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BipartiteFactorization.mem_sideFootprint",
+          "source_line": 31
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.sideFootprint_card",
+          "source_line": 37
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.sideFootprint_load",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.mapped_subgraph_adj",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.remaining_comap",
+          "source_line": 95
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.BipartiteCorePacking.completion_robust",
+          "source_line": 106
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BipartiteFactorization.ReservedCore",
+      "path": "Overfull/BipartiteFactorization/ReservedCore.lean",
+      "sha256": "357f72f25165c2fcf893882e006f2b0404f1d16085ae037e9d76aa2143d36c37",
+      "public_theorem_count": 25,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.reservedGraph_le",
+          "source_line": 40
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.coreCopy_reserved_iff",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.remainingGraph_le",
+          "source_line": 57
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.coreCopy_survives_iff",
+          "source_line": 61
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.core_graph",
+          "source_line": 81
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.core_edgeMap_val",
+          "source_line": 84
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.mem_coreEdges_iff",
+          "source_line": 91
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.mem_exterior_iff",
+          "source_line": 114
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.exteriorOriginal_val",
+          "source_line": 128
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.exteriorOriginal_survives",
+          "source_line": 134
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.reservedGraph_degree_le",
+          "source_line": 153
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.core_degree_partition",
+          "source_line": 167
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.core_degree_loss",
+          "source_line": 174
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_add",
+          "source_line": 181
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.core_exterior_degree_add",
+          "source_line": 186
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_core",
+          "source_line": 200
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_outside",
+          "source_line": 209
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.core_exterior_identity",
+          "source_line": 218
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_core_eq_palette_add",
+          "source_line": 226
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.exterior_degree_le_original",
+          "source_line": 236
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.core_degree_bounds",
+          "source_line": 247
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.core_almost_regular",
+          "source_line": 267
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.remainingGraph_bipartite",
+          "source_line": 280
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.bipartite_robust_of_degree_budget",
+          "source_line": 288
+        },
+        {
+          "name": "Overfull.BipartiteFactorization.ReservedCore.bipartite_robust_of_reserved_degrees",
+          "source_line": 314
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BipartiteFactorization.UniformRemainder",
+      "path": "Overfull/BipartiteFactorization/UniformRemainder.lean",
+      "sha256": "028cb6719fa4a027b315de6f3b78c2ccf69f0c81553c1628648059b333274c01",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BipartiteFactorization.exists_uniform_oriented_remainder",
+          "source_line": 26
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BipartiteFactorization.ReservedRemainder",
+      "path": "Overfull/BipartiteFactorization/ReservedRemainder.lean",
+      "sha256": "4930a58d8c2eb14e9fab9d03562f721dd3c76e37c1e47dc0453ff5acd9232cf7",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BipartiteFactorization.exists_uniform_reserved_remainder",
+          "source_line": 24
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.BipartiteFactorization.AbsorberParameters.make_budget",
+    "Overfull.BipartiteFactorization.AbsorberParameters.make_valid",
+    "Overfull.BipartiteFactorization.AbsorberParameters.Valid.palettes",
+    "Overfull.BipartiteFactorization.AbsorberParameters.Valid.fine_quotient",
+    "Overfull.BipartiteFactorization.AbsorberParameters.Valid.required_period",
+    "Overfull.BipartiteFactorization.AbsorberParameters.floor_half",
+    "Overfull.BipartiteFactorization.AbsorberParameters.exists_rounding_threshold",
+    "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_data",
+    "Overfull.BipartiteFactorization.AbsorberParameters.palette_fraction_bounds",
+    "Overfull.BipartiteFactorization.AbsorberParameters.exists_rates",
+    "Overfull.BipartiteFactorization.AbsorberParameters.exists_cluster_count_threshold",
+    "Overfull.BipartiteFactorization.AbsorberParameters.exists_rates_fixed_rho",
+    "Overfull.BipartiteFactorization.AbsorberParameters.palette_bounds_of_rates",
+    "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_parameters",
+    "Overfull.BipartiteFactorization.AbsorberParameters.exists_cluster_order",
+    "Overfull.BipartiteFactorization.AbsorberParameters.spanning_divisibilities",
+    "Overfull.BipartiteFactorization.AbsorberParameters.PaletteBounds.mono_lower",
+    "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_parameter_family",
+    "Overfull.BipartiteFactorization.AbsorberParameters.source_targets_pos",
+    "Overfull.BipartiteFactorization.AbsorberParameters.source_palette_bounds",
+    "Overfull.BipartiteFactorization.AbsorberParameters.exists_uniform_source_parameters",
+    "Overfull.BipartiteFactorization.BipartiteCorePacking.remaining_le",
+    "Overfull.BipartiteFactorization.BipartiteCorePacking.remaining_bipartite",
+    "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_identity",
+    "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_lower",
+    "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_upper",
+    "Overfull.BipartiteFactorization.BipartiteCorePacking.degree_error",
+    "Overfull.BipartiteFactorization.BipartiteCorePacking.subfamily_robust",
+    "Overfull.BipartiteFactorization.pack_fixed_bipartite_forbidden_sets",
+    "Overfull.BipartiteFactorization.paletteGraph_le",
+    "Overfull.BipartiteFactorization.paletteGraph_union",
+    "Overfull.BipartiteFactorization.paletteGraph_disjoint",
+    "Overfull.BipartiteFactorization.paletteGraph_degree",
+    "Overfull.BipartiteFactorization.ofSimpleGraph_bipartite",
+    "Overfull.BipartiteFactorization.exists_regular_bipartite_orientation",
+    "Overfull.BipartiteFactorization.ResidualOrientation.arc_from_left",
+    "Overfull.BipartiteFactorization.ResidualOrientation.arc_to_left",
+    "Overfull.BipartiteFactorization.ResidualOrientation.arc_from_right",
+    "Overfull.BipartiteFactorization.ResidualOrientation.arc_to_right",
+    "Overfull.BipartiteFactorization.ResidualOrientation.arc_subgraph",
+    "Overfull.BipartiteFactorization.ResidualOrientation.edge_iff_arc",
+    "Overfull.BipartiteFactorization.ResidualOrientation.arc_asymm",
+    "Overfull.BipartiteFactorization.ResidualOrientation.arc_irrefl",
+    "Overfull.BipartiteFactorization.ResidualOrientation.outNeighbors_left",
+    "Overfull.BipartiteFactorization.ResidualOrientation.inNeighbors_left",
+    "Overfull.BipartiteFactorization.ResidualOrientation.outNeighbors_right",
+    "Overfull.BipartiteFactorization.ResidualOrientation.inNeighbors_right",
+    "Overfull.BipartiteFactorization.ResidualOrientation.outDegree_eq",
+    "Overfull.BipartiteFactorization.ResidualOrientation.inDegree_eq",
+    "Overfull.BipartiteFactorization.ComplementCompletion.mem_used",
+    "Overfull.BipartiteFactorization.ComplementCompletion.classes_isMatching",
+    "Overfull.BipartiteFactorization.ComplementCompletion.classes_disjoint",
+    "Overfull.BipartiteFactorization.ComplementCompletion.classes_isPerfectMatching",
+    "Overfull.BipartiteFactorization.ComplementCompletion.used_degree",
+    "Overfull.BipartiteFactorization.ComplementCompletion.exterior_mem_class",
+    "Overfull.BipartiteFactorization.ComplementCompletion.exterior_used",
+    "Overfull.BipartiteFactorization.ComplementCompletion.remaining_degree_add",
+    "Overfull.BipartiteFactorization.ComplementCompletion.remaining_degree_core",
+    "Overfull.BipartiteFactorization.ComplementCompletion.remaining_degree_outside",
+    "Overfull.BipartiteFactorization.ComplementCompletion.core_copy_used_iff",
+    "Overfull.BipartiteFactorization.ComplementCompletion.core_copy_survives_iff",
+    "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore_graph",
+    "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore_exhausts",
+    "Overfull.BipartiteFactorization.ComplementCompletion.remainingCore_degree_eq",
+    "Overfull.BipartiteFactorization.ComplementCompletion.remainingGraph_regular",
+    "Overfull.BipartiteFactorization.ComplementCompletion.remainingGraph_bipartite",
+    "Overfull.BipartiteFactorization.mem_sideFootprint",
+    "Overfull.BipartiteFactorization.sideFootprint_card",
+    "Overfull.BipartiteFactorization.sideFootprint_load",
+    "Overfull.BipartiteFactorization.mapped_subgraph_adj",
+    "Overfull.BipartiteFactorization.BipartiteCorePacking.remaining_comap",
+    "Overfull.BipartiteFactorization.BipartiteCorePacking.completion_robust",
+    "Overfull.BipartiteFactorization.ReservedCore.reservedGraph_le",
+    "Overfull.BipartiteFactorization.ReservedCore.coreCopy_reserved_iff",
+    "Overfull.BipartiteFactorization.ReservedCore.remainingGraph_le",
+    "Overfull.BipartiteFactorization.ReservedCore.coreCopy_survives_iff",
+    "Overfull.BipartiteFactorization.ReservedCore.core_graph",
+    "Overfull.BipartiteFactorization.ReservedCore.core_edgeMap_val",
+    "Overfull.BipartiteFactorization.ReservedCore.mem_coreEdges_iff",
+    "Overfull.BipartiteFactorization.ReservedCore.mem_exterior_iff",
+    "Overfull.BipartiteFactorization.ReservedCore.exteriorOriginal_val",
+    "Overfull.BipartiteFactorization.ReservedCore.exteriorOriginal_survives",
+    "Overfull.BipartiteFactorization.ReservedCore.reservedGraph_degree_le",
+    "Overfull.BipartiteFactorization.ReservedCore.core_degree_partition",
+    "Overfull.BipartiteFactorization.ReservedCore.core_degree_loss",
+    "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_add",
+    "Overfull.BipartiteFactorization.ReservedCore.core_exterior_degree_add",
+    "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_core",
+    "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_outside",
+    "Overfull.BipartiteFactorization.ReservedCore.core_exterior_identity",
+    "Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_core_eq_palette_add",
+    "Overfull.BipartiteFactorization.ReservedCore.exterior_degree_le_original",
+    "Overfull.BipartiteFactorization.ReservedCore.core_degree_bounds",
+    "Overfull.BipartiteFactorization.ReservedCore.core_almost_regular",
+    "Overfull.BipartiteFactorization.ReservedCore.remainingGraph_bipartite",
+    "Overfull.BipartiteFactorization.ReservedCore.bipartite_robust_of_degree_budget",
+    "Overfull.BipartiteFactorization.ReservedCore.bipartite_robust_of_reserved_degrees",
+    "Overfull.BipartiteFactorization.exists_uniform_oriented_remainder",
+    "Overfull.BipartiteFactorization.exists_uniform_reserved_remainder"
+  ],
+  "complete_declaration_map": "../verification/residual-factorization-declarations.json",
+  "complete_axiom_log": "../verification/axioms.log",
+  "complete_build_log": "../verification/build.log",
+  "verification_report": "../verification/results.json",
+  "semantic_review": "residual-factorization-semantic-review.md",
+  "historical_source_recovery_preserved": "source-recovery.json"
+}

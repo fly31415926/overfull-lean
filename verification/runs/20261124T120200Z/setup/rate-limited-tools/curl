@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /usr/bin/curl --parallel-max 2 --rate 5/s "$@"

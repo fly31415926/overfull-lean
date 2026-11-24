@@ -1,0 +1,66 @@
+{
+  "baseline_commit": "e2e5455b11d5b1691d0a974fd3c5f72e989ec5b8",
+  "baseline_tree": "9013f6d5c07676ba130d4bb794062d700bab6136",
+  "previous_audited_declarations": 14055,
+  "previous_completed_result_mappings": 2536,
+  "previous_frozen_inputs": 779,
+  "coverage": {
+    "numbered_assertions": 69,
+    "previous_complete": 49,
+    "current_complete": 49,
+    "promoted_assertions": [],
+    "all_69_statement_identities_identical": true,
+    "all_unpromoted_records_identical": true,
+    "main_theorem_verified": false
+  },
+  "all_previous_mathematical_sources_and_audit_unchanged": true,
+  "verifier_changes_exactly_recorded": {
+    "exact_recorded_edit_count": 4,
+    "stock_kernel_audit_byte_identical": true
+  },
+  "new_module_count": 11,
+  "development_evidence": {
+    "attempt_count": 26,
+    "file_count": 334,
+    "status_counts": {
+      "passed": 10,
+      "failed": 13,
+      "interrupted": 3
+    },
+    "attempts_with_recorded_input_changes": [
+      "d2-reassembly-02"
+    ],
+    "attempts_with_unknown_input_change_status": [
+      "baseline-warm-01",
+      "d2-support-01",
+      "d2-suppression-01"
+    ],
+    "exact_inventory_hashes_and_sizes_preserved": true
+  },
+  "status": "passed",
+  "checked_at_utc": "2026-11-24T12:43:58.020228+00:00",
+  "full_verifier_attempt": "full-01",
+  "actual_full_verifier_exit": 0,
+  "audited_declarations": 14260,
+  "new_audited_declarations": 205,
+  "public_theorem_count": 73,
+  "frozen_input_count": 794,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_previous_declarations_owners_axiom_sets_preserved": true,
+  "all_previous_completed_result_mappings_preserved": true,
+  "all_previous_source_declaration_maps_preserved": true,
+  "execution_evidence": {
+    "principal_outputs_present": true,
+    "all_recorded_live_outputs_match_archive": true,
+    "raw_command_output_unchanged": true,
+    "terminal_receipt_identical": true,
+    "all_verification_controls_preserved": true,
+    "control_count": 16,
+    "recorded_output_count": 24
+  },
+  "genuine_command_receipt_sha256": "02c16881a3f0b32cc3f80304451e599fbc11c838dfbb6eee73a6aa8e23ce815b"
+}

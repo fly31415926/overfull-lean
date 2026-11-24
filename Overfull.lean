@@ -283,6 +283,10 @@ import Overfull.Terminal.ThreeCore
 import Overfull.AuxiliarySimple.SingleCore
 import Overfull.CompatibleCircuits.FourAdmissibleRegular
 import Overfull.TerminalFourOdd.Theorem
+import Overfull.CompatibleCircuits.FourCutCriterion
+import Overfull.CompatibleCircuits.FourGlobalCoarsening
+import Overfull.CompatibleCircuits.FourTriangleSelection
+import Overfull.CompatibleCircuits.FourBoundedJoining
 
 /-!
 # Partial formalization of the overfull manuscript

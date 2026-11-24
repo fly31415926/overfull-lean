@@ -1,0 +1,18 @@
+✖ [3121/3121] Building Overfull.CompatibleCircuits.FourDegreeTwoReassembly (2.4s)
+trace: .> LEAN_PATH=/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean /workspace/scratch/77adbfc63087/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/77adbfc63087/overfull-lean/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean -o /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.olean -i /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.ilean -c /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.c --setup /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourDegreeTwoReassembly.setup.json --json
+error: Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean:88:18: Unknown identifier `biUnion_union`
+error: Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean:88:11: unsolved goals
+V : Type u_1
+E : Type u_2
+K : Type u_3
+G H : Multigraph V E
+C D : Finset E
+classOf : V → E → K
+P : G.CompatibleCircuitPartition classOf C
+R : G.CompatibleCircuitPartition classOf D
+hCD : Disjoint C D
+⊢ (P.parts ∪ R.parts).biUnion id = C ∪ D
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourDegreeTwoReassembly
+error: build failed

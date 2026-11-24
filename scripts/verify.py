@@ -122,6 +122,7 @@ def main() -> None:
                           ("native_integration", "native-integration-source.json"),
                           ("native_terminal", "native-terminal-source.json"),
                           ("three_core_terminal", "three-core-terminal-source.json"),
+                          ("four_label_reduction", "four-label-reduction-source.json"),
                           ("global_factorization", "global-factorization-source.json")):
         source = json.loads((ROOT / "docs" / filename).read_text())
         source_modules = {item["module"]: item for item in source["modules"]}
@@ -218,6 +219,23 @@ def main() -> None:
             or not set(global_source["public_theorems"]) <= set(global_public)
             or global_source["main_theorem_verified"] is not False):
         raise SystemExit("The continuation must identify the exact complete single-core Lemma 3.1.")
+
+    four_label_source, _, four_label_public = extension_maps["four_label_reduction"]
+    if (four_label_source["kind"] != "supporting_continuation"
+            or four_label_source["numbered_assertions_completed"] != 0
+            or four_label_source["main_theorem_verified"] is not False
+            or four_label_source["public_theorems"] != [
+                "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_small_degree",
+                "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_degree_le_four",
+                "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_card_le_eight",
+                "Overfull.Multigraph.fourLabel_counterexample_degree_and_size",
+                "Overfull.Multigraph.fourLabel_admissibleOn_sdiff_iff_cut_witnesses",
+                "Overfull.Multigraph.exists_globally_admissible_localCoarsening",
+                "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers_small_cut",
+                "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers_bounded_cuts",
+                "Overfull.FourOdd.exists_fourTwoOddJoining_decomposition_of_small_even_cut"]
+            or not set(four_label_source["public_theorems"]) <= set(four_label_public)):
+        raise SystemExit("The four-label reduction completes no additional numbered assertion.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1734,6 +1752,7 @@ def main() -> None:
                     "native_integration": "native-integration",
                     "native_terminal": "native-terminal",
                     "three_core_terminal": "three-core-terminal",
+                    "four_label_reduction": "four-label-reduction",
                     "global_factorization": "global-factorization"}[key]
         map_path = OUTPUT / f"{basename}-declarations.json"
         map_path.write_text(json.dumps({
@@ -1815,6 +1834,7 @@ def main() -> None:
         "native_terminal_declaration_map": extension_evidence["native_terminal"],
         "three_core_terminal_declaration_map": extension_evidence["three_core_terminal"],
         "global_factorization_declaration_map": extension_evidence["global_factorization"],
+        "four_label_reduction_declaration_map": extension_evidence["four_label_reduction"],
         "checkpoint_reconstruction": {
             "original_checkpoint": reconstruction["original_checkpoint"],
             "original_tree_reproduced": False,

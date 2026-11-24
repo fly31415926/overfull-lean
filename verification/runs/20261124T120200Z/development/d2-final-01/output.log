@@ -1,0 +1,71 @@
+✖ [3124/3124] Building Overfull.CompatibleCircuits.FourDegreeTwo (2.9s)
+trace: .> LEAN_PATH=/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean /workspace/scratch/77adbfc63087/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/77adbfc63087/overfull-lean/Overfull/CompatibleCircuits/FourDegreeTwo.lean -o /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourDegreeTwo.olean -i /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourDegreeTwo.ilean -c /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourDegreeTwo.c --setup /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourDegreeTwo.setup.json --json
+error: Overfull/CompatibleCircuits/FourDegreeTwo.lean:93:62: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  {e ∈ C | v ∈ Q.edge e}
+in the target expression
+  e ∈ {g ∈ C | v ∈ Q.edge g}
+
+E : Type u_2
+K : Type u_3
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+hadmissible : Q.AdmissibleOn classOf C
+heven : ∀ (v : Fin 4), Even (Q.degreeOn C v)
+v : Fin 4
+hdegree : Q.degreeOn C v = 2
+e f : E
+hef : e ≠ f
+hpair : {e ∈ C | v ∈ Q.edge e} = {e, f}
+⊢ e ∈ {g ∈ C | v ∈ Q.edge g}
+error: Overfull/CompatibleCircuits/FourDegreeTwo.lean:94:62: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  {e ∈ C | v ∈ Q.edge e}
+in the target expression
+  f ∈ {g ∈ C | v ∈ Q.edge g}
+
+E : Type u_2
+K : Type u_3
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+hadmissible : Q.AdmissibleOn classOf C
+heven : ∀ (v : Fin 4), Even (Q.degreeOn C v)
+v : Fin 4
+hdegree : Q.degreeOn C v = 2
+e f : E
+hef : e ≠ f
+hpair : {e ∈ C | v ∈ Q.edge e} = {e, f}
+heinc : e ∈ {g ∈ C | v ∈ Q.edge g}
+⊢ f ∈ {g ∈ C | v ∈ Q.edge g}
+error: Overfull/CompatibleCircuits/FourDegreeTwo.lean:100:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  {e ∈ C | v ∈ Q.edge e}
+in the target expression
+  g ∈ {g ∈ C | v ∈ Q.edge g}
+
+E : Type u_2
+K : Type u_3
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+hadmissible : Q.AdmissibleOn classOf C
+heven : ∀ (v : Fin 4), Even (Q.degreeOn C v)
+v : Fin 4
+hdegree : Q.degreeOn C v = 2
+e f : E
+hef : e ≠ f
+hpair : {e ∈ C | v ∈ Q.edge e} = {e, f}
+heinc : e ∈ {g ∈ C | v ∈ Q.edge g}
+hfinc : f ∈ {g ∈ C | v ∈ Q.edge g}
+heC : e ∈ C
+hev : v ∈ Q.edge e
+hfC : f ∈ C
+hfv : v ∈ Q.edge f
+g : E
+hg : g ∈ C
+hvg : v ∈ Q.edge g
+hm : g ∈ {g ∈ C | v ∈ Q.edge g}
+⊢ g = e ∨ g = f
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourDegreeTwo
+error: build failed

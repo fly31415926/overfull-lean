@@ -1,0 +1,502 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "af8dca22ef67d66d0de3f6d89954d31f06a4d2fa",
+  "baseline_tree": "5ddefa9b77dfaf2d1cf09df1d7e2d4b541346a85",
+  "baseline_publication_status": "verified_local_publication_blocked_by_automatic_review_at_input_freeze",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "scope": "Actual reserved-copy injection into unpaired assigned stars, a disjoint joining/star/internal-exception incidence partition, native combined degree bounds, common internal-bundle coloring, exact remaining star copy/color balance, and endpoint-conflict Hall choice with sequential star accounting. These supporting results do not yet assemble the complete native weighted odd/even palette, all protected prescriptions and parity conditions into the full two-core Corollary 4.6, final robust factorization, or main theorem.",
+  "review": "docs/native-star-semantic-review.md",
+  "proof_map": "docs/native-star-verification.md",
+  "module_count": 8,
+  "public_theorem_count": 84,
+  "modules": [
+    {
+      "module": "Overfull.NativeStar.CommonPalette",
+      "path": "Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "public_theorem_count": 9,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeStar.mem_commonBundleColors",
+          "source_line": 27
+        },
+        {
+          "name": "Overfull.NativeStar.commonBundleColors_card_lower",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.NativeStar.exists_common_bundle_coloring",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.NativeStar.exists_common_bundle_coloring_of_combined_bounds",
+          "source_line": 64
+        },
+        {
+          "name": "Overfull.NativeStar.mem_remainingStarColors",
+          "source_line": 77
+        },
+        {
+          "name": "Overfull.NativeStar.remainingStarColors_card_add",
+          "source_line": 83
+        },
+        {
+          "name": "Overfull.NativeStar.remaining_star_card_eq_colors",
+          "source_line": 94
+        },
+        {
+          "name": "Overfull.NativeStar.remaining_star_card_eq_colors_and_lower",
+          "source_line": 105
+        },
+        {
+          "name": "Overfull.NativeStar.exists_remaining_star_equiv",
+          "source_line": 119
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeStar.IncidencePartition",
+      "path": "Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "public_theorem_count": 16,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeStar.mem_joiningIncidenceCopies",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.NativeStar.mem_exceptionInternalPool",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.NativeStar.joining_iff_otherEnd_label_ne",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.NativeStar.joiningIncidenceCopies_card",
+          "source_line": 57
+        },
+        {
+          "name": "Overfull.NativeStar.joiningIncidence_disjoint_star",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.NativeStar.joiningIncidence_disjoint_internal",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.NativeStar.star_disjoint_internal",
+          "source_line": 87
+        },
+        {
+          "name": "Overfull.NativeStar.incidence_partition",
+          "source_line": 97
+        },
+        {
+          "name": "Overfull.NativeStar.incidence_degree_balance",
+          "source_line": 132
+        },
+        {
+          "name": "Overfull.NativeStar.off_core_degree_add_reserve_le",
+          "source_line": 148
+        },
+        {
+          "name": "Overfull.NativeStar.exceptionInternalPool_pair_eq",
+          "source_line": 160
+        },
+        {
+          "name": "Overfull.NativeStar.exceptionInternalPool_pair_eq_empty",
+          "source_line": 182
+        },
+        {
+          "name": "Overfull.NativeStar.unpaired_assignment_fiber_bounds",
+          "source_line": 197
+        },
+        {
+          "name": "Overfull.NativeStar.assigned_incidence_partition",
+          "source_line": 252
+        },
+        {
+          "name": "Overfull.NativeStar.assigned_degree_balance",
+          "source_line": 270
+        },
+        {
+          "name": "Overfull.NativeStar.assigned_off_core_degree_bound",
+          "source_line": 284
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeStar.NativeBalance",
+      "path": "Overfull/NativeStar/NativeBalance.lean",
+      "sha256": "d358b54a4357990b840bb1ac2b532bd0308c91e08c18611edb3efe1d96e7d9f8",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeStar.native_off_core_degree_bound",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.NativeStar.mem_joiningUsedColors",
+          "source_line": 57
+        },
+        {
+          "name": "Overfull.NativeStar.joiningUsedColors_card",
+          "source_line": 63
+        },
+        {
+          "name": "Overfull.NativeStar.protected_joining_color_free_of_reserve_trace",
+          "source_line": 74
+        },
+        {
+          "name": "Overfull.NativeStar.exists_native_common_bundle_coloring",
+          "source_line": 105
+        },
+        {
+          "name": "Overfull.NativeStar.native_remaining_star_balance",
+          "source_line": 166
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeStar.ReserveInjection",
+      "path": "Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "public_theorem_count": 11,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.mem_residual_exceptionCorePool",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.boundary_assigned_star_nonempty",
+          "source_line": 40
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.boundary_assigned_star_card",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_inter_exceptionCorePool_image",
+          "source_line": 69
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_assigned_star_card",
+          "source_line": 93
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_assigned_star_nonempty",
+          "source_line": 107
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.exists_residual_assigned_star_injection",
+          "source_line": 122
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.reserved_assigned_star_card_le",
+          "source_line": 146
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_incidence_eq_assigned_star",
+          "source_line": 160
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.selected_residual_assigned_star_card",
+          "source_line": 187
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residual_assigned_star_union_card",
+          "source_line": 221
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeStar.StarAccounting",
+      "path": "Overfull/NativeStar/StarAccounting.lean",
+      "sha256": "e0b7aa80906e77186e677cba6dfaebeb61050bcf47cc71e36a645d4e6b4af4fb",
+      "public_theorem_count": 18,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeStar.mem_coloredStarCopies",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_subset",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_card_le_one",
+          "source_line": 37
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_disjoint",
+          "source_line": 47
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_cover",
+          "source_line": 58
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_contains",
+          "source_line": 71
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_eq_singleton",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_isMatching",
+          "source_line": 91
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_support_card_le_two",
+          "source_line": 98
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_support_subset",
+          "source_line": 105
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_support_load_le_degreeOn",
+          "source_line": 117
+        },
+        {
+          "name": "Overfull.NativeStar.star_degreeOn_le_parallel",
+          "source_line": 128
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_support_load_le_parallel",
+          "source_line": 142
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_union_support_load_le",
+          "source_line": 158
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_inter_support_card_le_one",
+          "source_line": 180
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_starWeight_le",
+          "source_line": 201
+        },
+        {
+          "name": "Overfull.NativeStar.starWeight_union_le",
+          "source_line": 211
+        },
+        {
+          "name": "Overfull.NativeStar.starWeight_union_coloredStarCopies_le",
+          "source_line": 224
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeStar.StarChoice",
+      "path": "Overfull/NativeStar/StarChoice.lean",
+      "sha256": "7cc6ee673227a937cbaa2f674684083fb2bcd22d74433ffe76743df19b6429fa",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeStar.star_row_conflicts_card",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.NativeStar.star_row_conflicts_le",
+          "source_line": 45
+        },
+        {
+          "name": "Overfull.NativeStar.star_column_conflicts_le",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.NativeStar.matching_union_star_singleton",
+          "source_line": 72
+        },
+        {
+          "name": "Overfull.NativeStar.exists_star_choice_on_available",
+          "source_line": 90
+        },
+        {
+          "name": "Overfull.NativeStar.exists_star_choice",
+          "source_line": 126
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeStar.StarExtension",
+      "path": "Overfull/NativeStar/StarExtension.lean",
+      "sha256": "9a8b0603d674615f7258599351b42c2aa1d5d86c5b520bd2b3bf6f11973a716e",
+      "public_theorem_count": 12,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeStar.classes_subset_starExtended",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.NativeStar.starExtended_card_le",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.NativeStar.starExtended_cover",
+          "source_line": 35
+        },
+        {
+          "name": "Overfull.NativeStar.starExtended_disjoint",
+          "source_line": 50
+        },
+        {
+          "name": "Overfull.NativeStar.starExtended_eq_of_color_avoided",
+          "source_line": 62
+        },
+        {
+          "name": "Overfull.NativeStar.starExtended_isMatching",
+          "source_line": 70
+        },
+        {
+          "name": "Overfull.NativeStar.starExtended_support_card_le",
+          "source_line": 91
+        },
+        {
+          "name": "Overfull.NativeStar.starExtended_cut_eq",
+          "source_line": 109
+        },
+        {
+          "name": "Overfull.NativeStar.exists_star_extension_on_available",
+          "source_line": 133
+        },
+        {
+          "name": "Overfull.NativeStar.exists_star_extension",
+          "source_line": 170
+        },
+        {
+          "name": "Overfull.NativeStar.starExtended_contains_assigned_copy",
+          "source_line": 198
+        },
+        {
+          "name": "Overfull.NativeStar.starExtended_covers_available",
+          "source_line": 204
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeStar.TwoStars",
+      "path": "Overfull/NativeStar/TwoStars.lean",
+      "sha256": "a8fd371129726216c4df1e5f65f841ae233aff477e7422ceea32589f0b23d86d",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeStar.star_pool_avoids_other_center",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.NativeStar.star_pools_disjoint",
+          "source_line": 37
+        },
+        {
+          "name": "Overfull.NativeStar.coloredStarCopies_avoids_other_center",
+          "source_line": 47
+        },
+        {
+          "name": "Overfull.NativeStar.starExtended_available_support_load_le",
+          "source_line": 58
+        },
+        {
+          "name": "Overfull.NativeStar.starExtended_available_starWeight_le",
+          "source_line": 85
+        },
+        {
+          "name": "Overfull.NativeStar.exists_two_star_extension_on_available",
+          "source_line": 100
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.NativeReserve.BoundaryPacking.boundary_assigned_star_card",
+    "Overfull.NativeReserve.BoundaryPacking.boundary_assigned_star_nonempty",
+    "Overfull.NativeReserve.BoundaryPacking.exists_residual_assigned_star_injection",
+    "Overfull.NativeReserve.BoundaryPacking.reserved_assigned_star_card_le",
+    "Overfull.NativeReserve.BoundaryPacking.residualBoundary_assigned_star_card",
+    "Overfull.NativeReserve.BoundaryPacking.residualBoundary_assigned_star_nonempty",
+    "Overfull.NativeReserve.BoundaryPacking.residualBoundary_incidence_eq_assigned_star",
+    "Overfull.NativeReserve.BoundaryPacking.residualBoundary_inter_exceptionCorePool_image",
+    "Overfull.NativeReserve.BoundaryPacking.residual_assigned_star_union_card",
+    "Overfull.NativeReserve.BoundaryPacking.selected_residual_assigned_star_card",
+    "Overfull.NativeReserve.mem_residual_exceptionCorePool",
+    "Overfull.NativeStar.assigned_degree_balance",
+    "Overfull.NativeStar.assigned_incidence_partition",
+    "Overfull.NativeStar.assigned_off_core_degree_bound",
+    "Overfull.NativeStar.classes_subset_starExtended",
+    "Overfull.NativeStar.coloredStarCopies_avoids_other_center",
+    "Overfull.NativeStar.coloredStarCopies_card_le_one",
+    "Overfull.NativeStar.coloredStarCopies_contains",
+    "Overfull.NativeStar.coloredStarCopies_cover",
+    "Overfull.NativeStar.coloredStarCopies_disjoint",
+    "Overfull.NativeStar.coloredStarCopies_eq_singleton",
+    "Overfull.NativeStar.coloredStarCopies_inter_support_card_le_one",
+    "Overfull.NativeStar.coloredStarCopies_isMatching",
+    "Overfull.NativeStar.coloredStarCopies_starWeight_le",
+    "Overfull.NativeStar.coloredStarCopies_subset",
+    "Overfull.NativeStar.coloredStarCopies_support_card_le_two",
+    "Overfull.NativeStar.coloredStarCopies_support_load_le_degreeOn",
+    "Overfull.NativeStar.coloredStarCopies_support_load_le_parallel",
+    "Overfull.NativeStar.coloredStarCopies_support_subset",
+    "Overfull.NativeStar.coloredStarCopies_union_support_load_le",
+    "Overfull.NativeStar.commonBundleColors_card_lower",
+    "Overfull.NativeStar.exceptionInternalPool_pair_eq",
+    "Overfull.NativeStar.exceptionInternalPool_pair_eq_empty",
+    "Overfull.NativeStar.exists_common_bundle_coloring",
+    "Overfull.NativeStar.exists_common_bundle_coloring_of_combined_bounds",
+    "Overfull.NativeStar.exists_native_common_bundle_coloring",
+    "Overfull.NativeStar.exists_remaining_star_equiv",
+    "Overfull.NativeStar.exists_star_choice",
+    "Overfull.NativeStar.exists_star_choice_on_available",
+    "Overfull.NativeStar.exists_star_extension",
+    "Overfull.NativeStar.exists_star_extension_on_available",
+    "Overfull.NativeStar.exists_two_star_extension_on_available",
+    "Overfull.NativeStar.incidence_degree_balance",
+    "Overfull.NativeStar.incidence_partition",
+    "Overfull.NativeStar.joiningIncidenceCopies_card",
+    "Overfull.NativeStar.joiningIncidence_disjoint_internal",
+    "Overfull.NativeStar.joiningIncidence_disjoint_star",
+    "Overfull.NativeStar.joiningUsedColors_card",
+    "Overfull.NativeStar.joining_iff_otherEnd_label_ne",
+    "Overfull.NativeStar.matching_union_star_singleton",
+    "Overfull.NativeStar.mem_coloredStarCopies",
+    "Overfull.NativeStar.mem_commonBundleColors",
+    "Overfull.NativeStar.mem_exceptionInternalPool",
+    "Overfull.NativeStar.mem_joiningIncidenceCopies",
+    "Overfull.NativeStar.mem_joiningUsedColors",
+    "Overfull.NativeStar.mem_remainingStarColors",
+    "Overfull.NativeStar.native_off_core_degree_bound",
+    "Overfull.NativeStar.native_remaining_star_balance",
+    "Overfull.NativeStar.off_core_degree_add_reserve_le",
+    "Overfull.NativeStar.protected_joining_color_free_of_reserve_trace",
+    "Overfull.NativeStar.remainingStarColors_card_add",
+    "Overfull.NativeStar.remaining_star_card_eq_colors",
+    "Overfull.NativeStar.remaining_star_card_eq_colors_and_lower",
+    "Overfull.NativeStar.starExtended_available_starWeight_le",
+    "Overfull.NativeStar.starExtended_available_support_load_le",
+    "Overfull.NativeStar.starExtended_card_le",
+    "Overfull.NativeStar.starExtended_contains_assigned_copy",
+    "Overfull.NativeStar.starExtended_cover",
+    "Overfull.NativeStar.starExtended_covers_available",
+    "Overfull.NativeStar.starExtended_cut_eq",
+    "Overfull.NativeStar.starExtended_disjoint",
+    "Overfull.NativeStar.starExtended_eq_of_color_avoided",
+    "Overfull.NativeStar.starExtended_isMatching",
+    "Overfull.NativeStar.starExtended_support_card_le",
+    "Overfull.NativeStar.starWeight_union_coloredStarCopies_le",
+    "Overfull.NativeStar.starWeight_union_le",
+    "Overfull.NativeStar.star_column_conflicts_le",
+    "Overfull.NativeStar.star_degreeOn_le_parallel",
+    "Overfull.NativeStar.star_disjoint_internal",
+    "Overfull.NativeStar.star_pool_avoids_other_center",
+    "Overfull.NativeStar.star_pools_disjoint",
+    "Overfull.NativeStar.star_row_conflicts_card",
+    "Overfull.NativeStar.star_row_conflicts_le",
+    "Overfull.NativeStar.unpaired_assignment_fiber_bounds"
+  ]
+}

@@ -1,0 +1,272 @@
+✖ [3121/3121] Building Overfull.CompatibleCircuits.FourDegreeTwoSuppression (2.3s)
+trace: .> LEAN_PATH=/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean /workspace/scratch/77adbfc63087/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/77adbfc63087/overfull-lean/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean -o /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.olean -i /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.ilean -c /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.c --setup /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourDegreeTwoSuppression.setup.json --json
+error: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:73:2: unsolved goals
+case pos
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+C : Finset E
+a v b : V
+hav : a ≠ v
+hbv : b ≠ v
+hab : a ≠ b
+e f : E
+hef : e ≠ f
+he : G.edge e = s(a, v)
+hf : G.edge f = s(v, b)
+hstar : ∀ g ∈ C, v ∈ G.edge g → g = e ∨ g = f
+X : Finset V
+⊢ (e ≠ f ∧ e ∈ C) ∧ (a ∈ X) ≠ (b ∈ X) ↔ e ∈ C ∧ (a ∈ X) ≠ (b ∈ X)
+error: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:86:2: unsolved goals
+case pos
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+C : Finset E
+a v b : V
+hav : a ≠ v
+hbv : b ≠ v
+hab : a ≠ b
+e f : E
+hef : e ≠ f
+he : G.edge e = s(a, v)
+hf : G.edge f = s(v, b)
+hstar : ∀ g ∈ C, v ∈ G.edge g → g = e ∨ g = f
+X : Finset V
+g : E
+hge : ¬g = e
+hgf : ¬g = f
+hgC : g ∈ C
+hv : v ∉ G.edge g
+⊢ (g ≠ f ∧ g ∈ C) ∧ (G.firstEnd g ∈ X) ≠ (G.secondEnd g ∈ X) ↔ g ∈ C ∧ (G.firstEnd g ∈ X) ≠ (G.secondEnd g ∈ X)
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:76:25: This simp argument is unused:
+  hef
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_erase,h̵e̵f̵,̵ ̲not_false_eq_true, ̲true_and,
+  ̵  ̵ ̵ ̵ ̵ ̵mem_moveShore_of_ne b v X hav,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲mem_moveShore_self]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:76:29: This simp argument is unused:
+  not_false_eq_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵m̵e̵m̵_̵e̵r̵a̵s̵e̵,̵h̵e̵f̵,̵n̵o̵t̵_̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵t̵r̵u̵e̵_̵a̵n̵d̵,̵[̲m̲e̲m̲_̲e̲r̲a̲s̲e̲,̲ ̲h̲e̲f̲,̲ ̲t̲r̲u̲e̲_̲a̲n̲d̲,̲ mem_moveShore_of_ne b v X h̵a̵v̵,̵m̵e̵m̵_̵m̵o̵v̵e̵S̵h̵o̵r̵e̵_̵s̵e̵l̵f̵]̵h̲a̲v̲,̲ ̲m̲e̲m̲_̲m̲o̲v̲e̲S̲h̲o̲r̲e̲_̲s̲e̲l̲f̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:76:47: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_erase, ̲hef, ̲not_false_eq_true,t̵r̵u̵e̵_̵a̵n̵d̵,̵
+  ̵  ̵ ̵ ̵ ̵ ̵mem_moveShore_of_ne b v X hav, ̲mem_moveShore_self]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:93:35: This simp argument is unused:
+  hgf
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_cutOn, ̲mem_erase,h̵g̵f̵,̵ ̲not_false_eq_true, ̲true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:93:39: This simp argument is unused:
+  not_false_eq_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵m̵e̵m̵_̵c̵u̵t̵O̵n̵,̵m̵e̵m̵_̵e̵r̵a̵s̵e̵,̵h̵g̵f̵,̵n̵o̵t̵_̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵t̵r̵u̵e̵_̵a̵n̵d̵]̵[̲m̲e̲m̲_̲c̲u̲t̲O̲n̲,̲ ̲m̲e̲m̲_̲e̲r̲a̲s̲e̲,̲ ̲h̲g̲f̲,̲ ̲t̲r̲u̲e̲_̲a̲n̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:93:57: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  simp only [̵m̵e̵m̵_̵c̵u̵t̵O̵n̵,̵m̵e̵m̵_̵e̵r̵a̵s̵e̵,̵h̵g̵f̵,̵n̵o̵t̵_̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵t̵r̵u̵e̵_̵a̵n̵d̵]̵[̲m̲e̲m̲_̲c̲u̲t̲O̲n̲,̲ ̲m̲e̲m̲_̲e̲r̲a̲s̲e̲,̲ ̲h̲g̲f̲,̲ ̲n̲o̲t̲_̲f̲a̲l̲s̲e̲_̲e̲q̲_̲t̲r̲u̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:113:2: unsolved goals
+case pos
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+C : Finset E
+a v b : V
+hav : a ≠ v
+hbv : b ≠ v
+hab : a ≠ b
+e f : E
+hef : e ≠ f
+heC : e ∈ C
+hfC : f ∈ C
+he : G.edge e = s(a, v)
+hf : G.edge f = s(v, b)
+hstar : ∀ g ∈ C, v ∈ G.edge g → g = e ∨ g = f
+X : Finset V
+hge : ¬f = e
+⊢ (e ≠ f ∧ True) ∧ (a ∈ X) ≠ (b ∈ X) ↔ (a ∈ X) ≠ (b ∈ X)
+error: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:121:2: unsolved goals
+case pos
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+C : Finset E
+a v b : V
+hav : a ≠ v
+hbv : b ≠ v
+hab : a ≠ b
+e f : E
+hef : e ≠ f
+heC : e ∈ C
+hfC : f ∈ C
+he : G.edge e = s(a, v)
+hf : G.edge f = s(v, b)
+hstar : ∀ g ∈ C, v ∈ G.edge g → g = e ∨ g = f
+X : Finset V
+g : E
+hge : ¬g = e
+hgf : ¬g = f
+hgC : g ∈ C
+hv : v ∉ G.edge g
+⊢ (g ≠ f ∧ g ∈ C) ∧ (G.firstEnd g ∈ X) ≠ (G.secondEnd g ∈ X) ↔ g ∈ C ∧ (G.firstEnd g ∈ X) ≠ (G.secondEnd g ∈ X)
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:117:25: This simp argument is unused:
+  hef
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_erase,h̵e̵f̵,̵ ̲not_false_eq_true, ̲heC, ̲hfC, ̲true_and,
+  ̵  ̵ ̵ ̵ ̵ ̵mem_moveShore_self,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲mem_moveShore_of_ne a v X hbv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:117:29: This simp argument is unused:
+  not_false_eq_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵m̵e̵m̵_̵e̵r̵a̵s̵e̵,̵h̵e̵f̵,̵n̵o̵t̵_̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵h̵e̵C̵,̵h̵f̵C̵,̵t̵r̵u̵e̵_̵a̵n̵d̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵m̵e̵m̵_̵m̵o̵v̵e̵S̵h̵o̵r̵e̵_̵s̵e̵l̵f̵,̵m̵e̵m̵_̵m̵o̵v̵e̵S̵h̵o̵r̵e̵_̵o̵f̵_̵n̵e̵[̲m̲e̲m̲_̲e̲r̲a̲s̲e̲,̲ ̲h̲e̲f̲,̲ ̲h̲e̲C̲,̲ ̲h̲f̲C̲,̲ ̲t̲r̲u̲e̲_̲a̲n̲d̲,̲ ̲m̲e̲m̲_̲m̲o̲v̲e̲S̲h̲o̲r̲e̲_̲s̲e̲l̲f̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲e̲m̲_̲m̲o̲v̲e̲S̲h̲o̲r̲e̲_̲o̲f̲_̲n̲e̲ a v X hbv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:128:35: This simp argument is unused:
+  hgf
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_cutOn, ̲mem_erase,h̵g̵f̵,̵ ̲not_false_eq_true, ̲true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:128:39: This simp argument is unused:
+  not_false_eq_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵m̵e̵m̵_̵c̵u̵t̵O̵n̵,̵m̵e̵m̵_̵e̵r̵a̵s̵e̵,̵h̵g̵f̵,̵n̵o̵t̵_̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵t̵r̵u̵e̵_̵a̵n̵d̵]̵[̲m̲e̲m̲_̲c̲u̲t̲O̲n̲,̲ ̲m̲e̲m̲_̲e̲r̲a̲s̲e̲,̲ ̲h̲g̲f̲,̲ ̲t̲r̲u̲e̲_̲a̲n̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:128:57: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  simp only [̵m̵e̵m̵_̵c̵u̵t̵O̵n̵,̵m̵e̵m̵_̵e̵r̵a̵s̵e̵,̵h̵g̵f̵,̵n̵o̵t̵_̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵t̵r̵u̵e̵_̵a̵n̵d̵]̵[̲m̲e̲m̲_̲c̲u̲t̲O̲n̲,̲ ̲m̲e̲m̲_̲e̲r̲a̲s̲e̲,̲ ̲h̲g̲f̲,̲ ̲n̲o̲t̲_̲f̲a̲l̲s̲e̲_̲e̲q̲_̲t̲r̲u̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:171:2: unsolved goals
+case pos
+V : Type u_1
+E : Type u_2
+K : Type u_3
+G : Multigraph V E
+classOf : V → E → K
+C : Finset E
+a v b : V
+hav : a ≠ v
+hbv : b ≠ v
+hab : a ≠ b
+e f : E
+hef : e ≠ f
+heC : e ∈ C
+hfC : f ∈ C
+he : G.edge e = s(a, v)
+hf : G.edge f = s(v, b)
+hstar : ∀ g ∈ C, v ∈ G.edge g → g = e ∨ g = f
+k : K
+X : Finset V
+hge : ¬f = e
+⊢ ((e ≠ f ∧ True) ∧ (a ∈ X) ≠ (b ∈ X)) ∧ classOf b f = k ↔ (a ∈ X) ≠ (b ∈ X) ∧ classOf b f = k
+error: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:183:2: unsolved goals
+case pos
+V : Type u_1
+E : Type u_2
+K : Type u_3
+G : Multigraph V E
+classOf : V → E → K
+C : Finset E
+a v b : V
+hav : a ≠ v
+hbv : b ≠ v
+hab : a ≠ b
+e f : E
+hef : e ≠ f
+heC : e ∈ C
+hfC : f ∈ C
+he : G.edge e = s(a, v)
+hf : G.edge f = s(v, b)
+hstar : ∀ g ∈ C, v ∈ G.edge g → g = e ∨ g = f
+k : K
+X : Finset V
+g : E
+hge : ¬g = e
+hgf : ¬g = f
+hgC : g ∈ C
+hv : v ∉ G.edge g
+⊢ ((g ≠ f ∧ g ∈ C) ∧ (G.firstEnd g ∈ X) ≠ (G.secondEnd g ∈ X)) ∧ b ∈ G.edge g ∧ classOf b g = k ↔
+    (g ∈ C ∧ (G.firstEnd g ∈ X) ≠ (G.secondEnd g ∈ X)) ∧ b ∈ G.edge g ∧ classOf b g = k
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:175:25: This simp argument is unused:
+  hef
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_erase,h̵e̵f̵,̵ ̲not_false_eq_true, ̲heC, ̲hfC, ̲true_and,
+  ̵  ̵ ̵ ̵ ̵ ̵mem_moveShore_self,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲mem_moveShore_of_ne a v X hbv,
+  ̵  ̵ ̵ ̵ ̵ ̵G.suppressionGraph_edge_self, ̲hf, ̲Sym2.mem_iff, ̲or_true,
+        suppressionClass_at_changed]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:175:29: This simp argument is unused:
+  not_false_eq_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵m̵e̵m̵_̵e̵r̵a̵s̵e̵,̵h̵e̵f̵,̵n̵o̵t̵_̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵h̵e̵C̵,̵h̵f̵C̵,̵t̵r̵u̵e̵_̵a̵n̵d̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵m̵e̵m̵_̵m̵o̵v̵e̵S̵h̵o̵r̵e̵_̵s̵e̵l̵f̵,̵m̵e̵m̵_̵m̵o̵v̵e̵S̵h̵o̵r̵e̵_̵o̵f̵_̵n̵e̵[̲m̲e̲m̲_̲e̲r̲a̲s̲e̲,̲ ̲h̲e̲f̲,̲ ̲h̲e̲C̲,̲ ̲h̲f̲C̲,̲ ̲t̲r̲u̲e̲_̲a̲n̲d̲,̲ ̲m̲e̲m̲_̲m̲o̲v̲e̲S̲h̲o̲r̲e̲_̲s̲e̲l̲f̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲e̲m̲_̲m̲o̲v̲e̲S̲h̲o̲r̲e̲_̲o̲f̲_̲n̲e̲ a v X hbv, G̵.̵s̵u̵p̵p̵r̵e̵s̵s̵i̵o̵n̵G̵r̵a̵p̵h̵_̵e̵d̵g̵e̵_̵s̵e̵l̵f̵,̵h̵f̵,̵S̵y̵m̵2̵.̵m̵e̵m̵_̵i̵f̵f̵,̵o̵r̵_̵t̵r̵u̵e̵,̵G̲.̲s̲u̲p̲p̲r̲e̲s̲s̲i̲o̲n̲G̲r̲a̲p̲h̲_̲e̲d̲g̲e̲_̲s̲e̲l̲f̲,̲ ̲h̲f̲,̲ ̲S̲y̲m̲2̲.̲m̲e̲m̲_̲i̲f̲f̲,̲ ̲o̲r̲_̲t̲r̲u̲e̲,̲
+        suppressionClass_at_changed]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:190:35: This simp argument is unused:
+  hgf
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_cutOn, ̲mem_erase,h̵g̵f̵,̵ ̲not_false_eq_true, ̲true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:190:39: This simp argument is unused:
+  not_false_eq_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵m̵e̵m̵_̵c̵u̵t̵O̵n̵,̵m̵e̵m̵_̵e̵r̵a̵s̵e̵,̵h̵g̵f̵,̵n̵o̵t̵_̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵t̵r̵u̵e̵_̵a̵n̵d̵]̵[̲m̲e̲m̲_̲c̲u̲t̲O̲n̲,̲ ̲m̲e̲m̲_̲e̲r̲a̲s̲e̲,̲ ̲h̲g̲f̲,̲ ̲t̲r̲u̲e̲_̲a̲n̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:190:57: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  simp only [̵m̵e̵m̵_̵c̵u̵t̵O̵n̵,̵m̵e̵m̵_̵e̵r̵a̵s̵e̵,̵h̵g̵f̵,̵n̵o̵t̵_̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵t̵r̵u̵e̵_̵a̵n̵d̵]̵[̲m̲e̲m̲_̲c̲u̲t̲O̲n̲,̲ ̲m̲e̲m̲_̲e̲r̲a̲s̲e̲,̲ ̲h̲g̲f̲,̲ ̲n̲o̲t̲_̲f̲a̲l̲s̲e̲_̲e̲q̲_̲t̲r̲u̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean:224:4: Type mismatch: After simplification, term
+  hh
+ has type
+  #((G.suppressionGraph a b e hab).cutOn (C.erase f) {b}) = #(G.cutOn C ({b}.erase v))
+but is expected to have type
+  #((G.suppressionGraph a b e hab).cutOn (C.erase f) {b}) = #(G.cutOn C {b})
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourDegreeTwoSuppression
+error: build failed
