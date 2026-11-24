@@ -237,6 +237,8 @@ import Overfull.ExceptionalPalette.EvenBudget
 import Overfull.ExceptionalPalette.EvenNative
 import Overfull.ExceptionalPalette.PairAssigned
 import Overfull.ExceptionalPalette.ReserveNative
+import Overfull.WeightedPalette.AsymmetricHall
+import Overfull.WeightedPalette.Grouping
 
 /-!
 # Partial formalization of the overfull manuscript

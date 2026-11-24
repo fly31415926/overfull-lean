@@ -1,0 +1,63 @@
+{
+  "observed_at_utc": "2026-11-23T23:43:09.983550+00:00",
+  "worktree": "/workspace/scratch/0f64d20031b0/overfull-weighted-verified",
+  "execution_connection": "terminal_completion_observed",
+  "tool_session_id": 67485,
+  "observed_terminal_exit_code": 0,
+  "stage": "full_verifier_passed_frozen_inputs_unchanged",
+  "current_full_02_receipt": {
+    "available": true,
+    "sha256": "4343e351a1c0d7e6fe5d77081acf3fc1af24663ad960969c8f51f1254f295e7a",
+    "status": "passed",
+    "exit_code": 0,
+    "all_frozen_inputs_unchanged": true,
+    "started_at_utc": "2026-11-23T23:26:42.710591+00:00",
+    "finished_at_utc": "2026-11-23T23:43:09.473421+00:00",
+    "candidate_input_hash_count": 658
+  },
+  "old_full_01_receipt": {
+    "available": true,
+    "sha256": "d727df8c125ad59813ed048ab2adb8f079ea0ff69e1e89e3ee7f5deff37a14c4",
+    "status": "running",
+    "exit_code": null,
+    "all_frozen_inputs_unchanged": null,
+    "started_at_utc": "2026-11-23T23:16:15.229419+00:00",
+    "finished_at_utc": null,
+    "candidate_input_hash_count": 658
+  },
+  "old_genuine_passed_receipt_available": false,
+  "new_genuine_passed_receipt_available": true,
+  "stage_logs": {
+    "vizing-source.log": {
+      "exists": true,
+      "bytes": 65,
+      "modified_at_utc": "2026-11-23T23:26:42.837016+00:00",
+      "written_after_current_attempt_start": true
+    },
+    "lean-version.log": {
+      "exists": true,
+      "bytes": 106,
+      "modified_at_utc": "2026-11-23T23:26:45.556671+00:00",
+      "written_after_current_attempt_start": true
+    },
+    "build.log": {
+      "exists": true,
+      "bytes": 42,
+      "modified_at_utc": "2026-11-23T23:26:47.902553+00:00",
+      "written_after_current_attempt_start": true,
+      "completion_markers": [
+        "3734"
+      ]
+    },
+    "axioms.log": {
+      "exists": true,
+      "bytes": 2359696,
+      "modified_at_utc": "2026-11-23T23:43:09.101751+00:00",
+      "written_after_current_attempt_start": true,
+      "completion_markers": [
+        "12811"
+      ]
+    }
+  },
+  "control_request": null
+}

@@ -1,0 +1,24 @@
+Overfull/WeightedPalette/Loads.lean:103:54: error: unsolved goals
+J : Type u_1
+h : ℕ
+A : Finset J
+c : J → Fin h
+w : J → ℕ
+q W : ℕ
+⊢ #(overloadedPalettes A c w q W) * (W - q + 1) = #(overloadedPalettes A c w q W) * W - q + 1
+Overfull/WeightedPalette/Loads.lean:105:6: error: Tactic `apply` failed: could not unify the conclusion of `@sum_le_sum`
+  ∑ i ∈ ?s, ?f i ≤ ∑ i ∈ ?s, ?g i
+with the goal
+  ∑ _i ∈ overloadedPalettes A c w q W, W - q + 1 ≤ ∑ i ∈ overloadedPalettes A c w q W, paletteWeight A c w i
+
+Note: The full type of `@sum_le_sum` is
+  ∀ {ι : Type ?u.10195} {N : Type ?u.10194} [inst : AddCommMonoid N] [inst_1 : PartialOrder N] {f g : ι → N}
+    {s : Finset ι} [AddLeftMono N], (∀ i ∈ s, f i ≤ g i) → ∑ i ∈ s, f i ≤ ∑ i ∈ s, g i
+
+J : Type u_1
+h : ℕ
+A : Finset J
+c : J → Fin h
+w : J → ℕ
+q W : ℕ
+⊢ ∑ _i ∈ overloadedPalettes A c w q W, W - q + 1 ≤ ∑ i ∈ overloadedPalettes A c w q W, paletteWeight A c w i

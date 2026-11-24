@@ -1941,7 +1941,48 @@
     "exceptional_palette_closure_76": "Overfull.NativeReserve.survivingCopies_disjoint",
     "exceptional_palette_closure_77": "Overfull.NativeReserve.survivingCopies_image",
     "exceptional_palette_closure_78": "Overfull.NativeReserve.survivingCopies_isMatching",
-    "exceptional_palette_closure_79": "Overfull.NativeReserve.survivingCopies_support"
+    "exceptional_palette_closure_79": "Overfull.NativeReserve.survivingCopies_support",
+    "weighted_palette_closure_1": "Overfull.CircuitPatterns.exists_equiv_of_asymmetric_conflicts",
+    "weighted_palette_closure_2": "Overfull.CircuitPatterns.exists_star_equiv_of_conflict_bounds",
+    "weighted_palette_closure_3": "Overfull.CircuitPatterns.star_hall_margin",
+    "weighted_palette_closure_4": "Overfull.NativeReserve.exists_weighted_palette_extension",
+    "weighted_palette_closure_5": "Overfull.NativeReserve.mem_overloadedPalettes",
+    "weighted_palette_closure_6": "Overfull.NativeReserve.notMem_overloadedPalettes",
+    "weighted_palette_closure_7": "Overfull.NativeReserve.overloadedPalettes_card_le",
+    "weighted_palette_closure_8": "Overfull.NativeReserve.overloadedPalettes_card_le_of_subset",
+    "weighted_palette_closure_9": "Overfull.NativeReserve.overloadedPalettes_card_le_thirteen",
+    "weighted_palette_closure_10": "Overfull.NativeReserve.overloadedPalettes_mul_le",
+    "weighted_palette_closure_11": "Overfull.NativeReserve.paletteWeight_congr",
+    "weighted_palette_closure_12": "Overfull.NativeReserve.paletteWeight_empty",
+    "weighted_palette_closure_13": "Overfull.NativeReserve.paletteWeight_insert",
+    "weighted_palette_closure_14": "Overfull.NativeReserve.paletteWeight_insert_update",
+    "weighted_palette_closure_15": "Overfull.NativeReserve.paletteWeight_mono",
+    "weighted_palette_closure_16": "Overfull.NativeReserve.paletteWeight_sum",
+    "weighted_palette_closure_17": "Overfull.NativeReserve.paletteWeight_update_of_notMem",
+    "weighted_palette_closure_18": "Overfull.NativeReserve.weighted_palette_hall_bounds",
+    "weighted_palette_closure_19": "Overfull.NativeReserve.weighted_palette_item_bound",
+    "weighted_palette_closure_20": "Overfull.NativeReserve.weighted_palette_protected_gap",
+    "weighted_palette_closure_21": "Overfull.NativeReserve.weighted_palette_protected_margin",
+    "weighted_palette_closure_22": "Overfull.NativeReserve.weighted_palette_threshold",
+    "weighted_palette_closure_23": "Overfull.WeightedPalette.exceptionCorePool_card_le_degree",
+    "weighted_palette_closure_24": "Overfull.WeightedPalette.exceptionCorePool_eq_edgesTo",
+    "weighted_palette_closure_25": "Overfull.WeightedPalette.exists_star_weighted_matching_grouping",
+    "weighted_palette_closure_26": "Overfull.WeightedPalette.groupedCopies_eq_seed_on_protected_color",
+    "weighted_palette_closure_27": "Overfull.WeightedPalette.mem_starBlockedCopies",
+    "weighted_palette_closure_28": "Overfull.WeightedPalette.starBlockedCopies_biUnion",
+    "weighted_palette_closure_29": "Overfull.WeightedPalette.starBlockedCopies_eq_edgesTo",
+    "weighted_palette_closure_30": "Overfull.WeightedPalette.starBlockedCopies_subset",
+    "weighted_palette_closure_31": "Overfull.WeightedPalette.starWeight_biUnion_le",
+    "weighted_palette_closure_32": "Overfull.WeightedPalette.starWeight_eq_sum_parallel",
+    "weighted_palette_closure_33": "Overfull.WeightedPalette.starWeight_groupedCopies_le",
+    "weighted_palette_closure_34": "Overfull.WeightedPalette.starWeight_le_four_mul",
+    "weighted_palette_closure_35": "Overfull.WeightedPalette.starWeight_le_inter_support_mul",
+    "weighted_palette_closure_36": "Overfull.WeightedPalette.starWeight_le_six_mul",
+    "weighted_palette_closure_37": "Overfull.WeightedPalette.starWeight_le_support_mul",
+    "weighted_palette_closure_38": "Overfull.WeightedPalette.sum_starWeight_eq_sum_support_load",
+    "weighted_palette_closure_39": "Overfull.WeightedPalette.sum_starWeight_le_mul_degree_bound",
+    "weighted_palette_closure_40": "Overfull.WeightedPalette.sum_starWeight_le_of_degreeOn",
+    "weighted_palette_closure_41": "Overfull.WeightedPalette.sum_starWeight_le_of_support_load"
   },
   "lean_build_passed": true,
   "axiom_audit_passed": true,
@@ -2378,7 +2419,7 @@
     "Classical.choice",
     "Quot.sound"
   ],
-  "verified_declaration_count": 12738,
+  "verified_declaration_count": 12811,
   "declaration_count_includes_generated_support_lemmas": true,
   "verified_declarations": [
     {
@@ -9440,6 +9481,15 @@
       ],
       "module": "Overfull.AssignedParts.CompressionCuts",
       "name": "Overfull.AssignedParts.cutOn_paritySelection_coreCrossings"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.AssignedParts.exceptionCorePool.eq_1"
     },
     {
       "axioms": [
@@ -29709,6 +29759,33 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.WeightedPalette.AsymmetricHall",
+      "name": "Overfull.CircuitPatterns.exists_equiv_of_asymmetric_conflicts"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.AsymmetricHall",
+      "name": "Overfull.CircuitPatterns.exists_equiv_of_asymmetric_conflicts._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.AsymmetricHall",
+      "name": "Overfull.CircuitPatterns.exists_equiv_of_asymmetric_conflicts._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.CircuitPatterns.Pairing",
       "name": "Overfull.CircuitPatterns.exists_equiv_of_few_conflicts"
     },
@@ -29996,6 +30073,15 @@
       ],
       "module": "Overfull.CircuitPatterns.Pairing",
       "name": "Overfull.CircuitPatterns.exists_six_endpoint_pairing"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.AsymmetricHall",
+      "name": "Overfull.CircuitPatterns.exists_star_equiv_of_conflict_bounds"
     },
     {
       "axioms": [
@@ -31443,6 +31529,22 @@
       ],
       "module": "Overfull.CircuitPatterns.Rounding",
       "name": "Overfull.CircuitPatterns.small_proposed_cut_discard_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.AsymmetricHall",
+      "name": "Overfull.CircuitPatterns.star_hall_margin"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.AsymmetricHall",
+      "name": "Overfull.CircuitPatterns.star_hall_margin._proof_1_1"
     },
     {
       "axioms": [
@@ -68932,6 +69034,68 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.WeightedPalette.Extension",
+      "name": "Overfull.NativeReserve.exists_weighted_palette_extension"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Extension",
+      "name": "Overfull.NativeReserve.exists_weighted_palette_extension._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Extension",
+      "name": "Overfull.NativeReserve.exists_weighted_palette_extension._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Extension",
+      "name": "Overfull.NativeReserve.exists_weighted_palette_extension._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Extension",
+      "name": "Overfull.NativeReserve.exists_weighted_palette_extension._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Extension",
+      "name": "Overfull.NativeReserve.exists_weighted_palette_extension._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Extension",
+      "name": "Overfull.NativeReserve.exists_weighted_palette_extension._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.NativeReserve.WeightedSafety",
       "name": "Overfull.NativeReserve.familyMultiplicity.eq_1"
     },
@@ -69450,6 +69614,24 @@
         "Quot.sound",
         "Classical.choice"
       ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.mem_overloadedPalettes"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.mem_overloadedPalettes._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
       "module": "Overfull.ExceptionalPalette.PairColoring",
       "name": "Overfull.NativeReserve.mem_pairColorClass"
     },
@@ -69736,6 +69918,24 @@
     },
     {
       "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.notMem_overloadedPalettes"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.notMem_overloadedPalettes._simp_1"
+    },
+    {
+      "axioms": [
         "propext"
       ],
       "module": "Overfull.NativeReserve.NativeCutWeights",
@@ -69807,6 +70007,67 @@
       ],
       "module": "Overfull.ResidualPalette.ReservedPrimary",
       "name": "Overfull.NativeReserve.original_virtual_pair_compatible._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.overloadedPalettes.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.overloadedPalettes_card_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.overloadedPalettes_card_le._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.overloadedPalettes_card_le_of_subset"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.overloadedPalettes_card_le_thirteen"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.overloadedPalettes_mul_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.overloadedPalettes_mul_le._proof_1_1"
     },
     {
       "axioms": [
@@ -70095,6 +70356,76 @@
       ],
       "module": "Overfull.ResidualPalette.ReservedPrimary",
       "name": "Overfull.NativeReserve.pair_copy_crosses._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight_congr"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight_empty"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight_insert"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight_insert_update"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight_mono"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight_sum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight_update_of_notMem"
     },
     {
       "axioms": [
@@ -71509,6 +71840,88 @@
       ],
       "module": "Overfull.ResidualPalette.ProtectedBudget",
       "name": "Overfull.NativeReserve.uniform_protected_palette_budget"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_hall_bounds"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_hall_bounds._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_item_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_item_bound._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_protected_gap"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_protected_gap._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_protected_margin"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_protected_margin._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_threshold"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_threshold._proof_1_1"
     },
     {
       "axioms": [
@@ -97829,6 +98242,271 @@
     },
     {
       "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.exceptionCorePool_card_le_degree"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.exceptionCorePool_eq_edgesTo"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Grouping",
+      "name": "Overfull.WeightedPalette.exists_star_weighted_matching_grouping"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Grouping",
+      "name": "Overfull.WeightedPalette.exists_star_weighted_matching_grouping._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Grouping",
+      "name": "Overfull.WeightedPalette.exists_star_weighted_matching_grouping._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Grouping",
+      "name": "Overfull.WeightedPalette.groupedCopies_eq_seed_on_protected_color"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.mem_starBlockedCopies"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.mem_starBlockedCopies._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.mem_starBlockedCopies._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starBlockedCopies.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starBlockedCopies_biUnion"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starBlockedCopies_eq_edgesTo"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starBlockedCopies_eq_edgesTo._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starBlockedCopies_eq_edgesTo._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starBlockedCopies_subset"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight.eq_1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_biUnion_le"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_eq_sum_parallel"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_eq_sum_parallel._simp_1_2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_eq_sum_parallel._simp_1_3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_eq_sum_parallel._simp_1_4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_groupedCopies_le"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_le_four_mul"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_le_inter_support_mul"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_le_six_mul"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_le_support_mul"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.sum_starWeight_eq_sum_support_load"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.sum_starWeight_le_mul_degree_bound"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.sum_starWeight_le_of_degreeOn"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.sum_starWeight_le_of_support_load"
+    },
+    {
+      "axioms": [
         "propext",
         "Classical.choice",
         "Quot.sound"
@@ -111846,7 +112524,12 @@
     "Overfull.TwoColorSwitch",
     "Overfull.Vizing.Coloring",
     "Overfull.Vizing.Graph",
-    "Overfull.Vizing.Theorem"
+    "Overfull.Vizing.Theorem",
+    "Overfull.WeightedPalette.AsymmetricHall",
+    "Overfull.WeightedPalette.Extension",
+    "Overfull.WeightedPalette.Grouping",
+    "Overfull.WeightedPalette.Loads",
+    "Overfull.WeightedPalette.StarWeights"
   ],
   "audited_external_modules": [
     "Vizing.Aux",
@@ -112018,6 +112701,14 @@
     "verified_declaration_count": 179,
     "numbered_assertions_completed": 0
   },
+  "weighted_palette_declaration_map": {
+    "path": "verification/weighted-palette-declarations.json",
+    "sha256": "414bc11198996c12a6c59cdd7e538a2351eff19726ccf42a3da7d1746545b65a",
+    "module_count": 5,
+    "public_theorem_count": 41,
+    "verified_declaration_count": 73,
+    "numbered_assertions_completed": 0
+  },
   "checkpoint_reconstruction": {
     "original_checkpoint": "cb05ef5f5b7ef5ada4e535e9dcc652eecaddc43e",
     "original_tree_reproduced": false,
@@ -112026,7 +112717,7 @@
     "fresh_build_and_audit": true
   },
   "source_sha256": {
-    "Overfull.lean": "03ee2e0171713df9bea01741e18c06015dc507a138e5912cc11aecd1510a0acd",
+    "Overfull.lean": "1469a829ce7fd75a0dd6a60ae7c51d66af02611fe44a688fa290fcd962d8d577",
     "Audit.lean": "76886fd9261a3a7b07660f9a434272c0347130a4013cf57da6e1761a34fc6603",
     "Overfull/Absorption/Bounded.lean": "722ca71ecdc9b0f4c17b400c32d51a284d9eac61211e1a52e448fcc8f5bb2f52",
     "Overfull/Absorption/Core.lean": "1f5f39cd8497918341bf336db7f1735b131c9f564077b158b7245fbb474a0946",
@@ -112583,13 +113274,18 @@
     "Overfull/TwoColorSwitch.lean": "c6fc3f1f177057dedf993d8106a4b1a2958c9aea4a8f3c8b1f2a488afd9b344a",
     "Overfull/Vizing/Coloring.lean": "c148fa5edee576949c76306d421c599ae9c9be41c7559d8963d2ed0f0f2e9923",
     "Overfull/Vizing/Graph.lean": "92e84ae3071063593d09d02a3cc1fe712bfeb8b2c03fc7b52792c42b3e00a0ec",
-    "Overfull/Vizing/Theorem.lean": "4e03bbde90393c18c6f89e5acd5b426b06f112c6be26e0cc9297676dff085044"
+    "Overfull/Vizing/Theorem.lean": "4e03bbde90393c18c6f89e5acd5b426b06f112c6be26e0cc9297676dff085044",
+    "Overfull/WeightedPalette/AsymmetricHall.lean": "89f1818188bf9677304fa264dbf4ae0f2e22e8079353bf73630bace9dc3425ea",
+    "Overfull/WeightedPalette/Extension.lean": "c01cbd4e88b1800b5d5cc495ba2e7348686972e9e633e7f7330e2d78e39411ac",
+    "Overfull/WeightedPalette/Grouping.lean": "3f1d6ff5e30f6f3fd7b20274177b3c9376c0215dacbce3e01e33cc552b187944",
+    "Overfull/WeightedPalette/Loads.lean": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4",
+    "Overfull/WeightedPalette/StarWeights.lean": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
   },
   "verification_input_sha256": {
     ".github/workflows/lean.yml": "bf5cd8ff5d9c54814b5a0a2a98732a90dae5e4d1a7268954fe9deba218753e83",
     "CIRCULATION_NOTICE.txt": "c8913077edf119bdb2ff790f24c3a27188a14b37d3cbc03121c917aee157a419",
     "LICENSE_BMATCHING.txt": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
-    "README.md": "889b3bd829ce375164ccd0419751902e7dc8ac15eee6c78aa64accc743acb74d",
+    "README.md": "3b7ddf016903a383f6d1c1ddd1ed8a2a920367461fb62340b8d6c437f752cf80",
     "THIRD_PARTY_NOTICES.txt": "9002356e653c2943115b2feeba04713b005074a3d7c283bd894a47d8ca63dcd7",
     "docs/adaptive-packing.md": "eed3d11bde80300511bfa046813661c1617bb0ddc4c131efbed9576a33e53c7e",
     "docs/assigned-part-semantic-review.md": "e66abf61bc77c96e36e2eb13f64c0a238db4341fd120b4982f4c9a3119b553ca",
@@ -112610,8 +113306,8 @@
     "docs/checkpoint-reconstruction-source.json": "15b678ca340bc3e5f6120c242e5e87255ddea8de45cfa82267fbf83b44784322",
     "docs/checkpoint-reconstruction.md": "281491521d047dde7fd88f197d5f6b45cad146ca8643eafb31c796a86dae208c",
     "docs/circulation-source.json": "2b3d7bdf1b05c6b8445e2961efe99fe3eb6100a9c08c1eb3af8bbb4fd28350aa",
-    "docs/continuation-handoff.md": "092e9832b621b5391beecb3ca76cef5c349732d53e95ca187891be9cab73a467",
-    "docs/coverage.json": "598cf147064ee1b85436d794f64bb994719ff0e3ceebf904769af5c85f89adc1",
+    "docs/continuation-handoff.md": "2aeff34375e4350008ae5b458abb757a501c47f633fd7fadf68ae3ad64c7137b",
+    "docs/coverage.json": "cdef6f594b938c9460d988d1d482a41577220a403ad53a2c4b972af32e2e4534",
     "docs/critical-partition-consequences.md": "b0b0db1f855f47e3a3c6c63046bf7375c65b452640b73615baf9ca6a34d8dc91",
     "docs/dense-link-packing.md": "e34a37bb7b482fcd950977d2ff4835f573038c78a873c0f30823a5a1bcc181cf",
     "docs/exceptional-absorption.md": "5fc25d8f075878fd04257ca6370ed6d70bce2991c8ab36b29d4f80cde4784eb7",
@@ -112662,6 +113358,9 @@
     "docs/three-label-circuit-verification.md": "b440aa5345a8a98a497ba48574d298dc292edbd8be09c8cb0308f28e92a1e516",
     "docs/uniform-localization.md": "dc67eaace78072fc2bae4693ea437fa82bb6d90d1868c91feb78ea4862765943",
     "docs/vizing-source.json": "2e3d01885c5de03c5e071c4d27c80ff64960cd006de36424d26ba28bfb6742c4",
+    "docs/weighted-palette-semantic-review.md": "97a8fee36dc6383f50eb05b63dfff902118204090580ba5027a1009e88b4aa12",
+    "docs/weighted-palette-source.json": "51e8318e8f522a32756985194277af68b881587fdde880e875e0d53a034284ac",
+    "docs/weighted-palette-verification.md": "b29ea401228c128b2e3305fa58de6c2f64c39adbfbfd4af779493b1f2bea8b91",
     "lake-manifest.json": "6170a0f6ef63640502c8d121fabb4f3a555b04b8f00dca862521a59bf2ea80f0",
     "lakefile.toml": "f34bb9e1ca0d83adfe9afd7b17d079ab15cc5b003b8a583605f42f213548c0a7",
     "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
@@ -112676,7 +113375,8 @@
     "scripts/update_reconstruction_manifest.py": "d3fb79aff0e1ebe718ecf77f0a554d292ee494821f9018115c3ae46f82681935",
     "scripts/update_residual_palette_manifest.py": "1d6dca69b6e3cdb3c627059e3ce7194719314e957db08e64bb904bf49224a691",
     "scripts/update_three_label_manifest.py": "b99977121869aa9ef849a0cf6dd8f6833c7dcc6487c56b1e975070550f29190d",
-    "scripts/verify.py": "f503a838096d765f9651d77beeb6bdfc0b953458dfbc93f460c29580717e2237"
+    "scripts/update_weighted_palette_manifest.py": "7e223ee0b0d7fd3efe155258748771a17cf01cd931d49c2d32a79ddf519cfa72",
+    "scripts/verify.py": "72fb02c3c483766b04264eaf23d88a13981254323f60a1a782ed97279149ae10"
   },
-  "scope": "47 of 69 numbered manuscript assertions have complete checked proofs; 22, including the main theorem, remain incomplete. The supporting continuation constructs native reserves with a safe regular residual, actual bounded joining palettes, prescribed empty joining colors in the all-even case, exceptional-pair coloring with preserved actual-copy prescriptions, and protected full reserve-boundary extensions. All 69 original assertion records, statement hashes and prior completed mappings are preserved. Internal coloring for exceptions assigned to old cores, full robust completions, final two-core factorization and reconstruction remain unfinished."
+  "scope": "47 of 69 numbered manuscript assertions have complete checked proofs; 22, including the main theorem, remain incomplete. The supporting continuation constructs native reserves with a safe regular residual, actual bounded joining palettes, prescribed empty joining colors in the all-even case, exceptional-pair coloring with preserved actual-copy prescriptions, and protected full reserve-boundary extensions. The weighted continuation constructs protected matching groupings with actual blocked-star-copy bounds and proves an asymmetric finite Hall criterion. All 69 original assertion records, statement hashes and prior completed mappings are preserved. Exact remaining-star balance and full exceptional-to-core assembly, native weighted wrappers, robust completions, final two-core factorization and reconstruction remain unfinished."
 }

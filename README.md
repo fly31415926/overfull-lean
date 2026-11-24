@@ -6,7 +6,51 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest continuation: internal pair coloring and reserve palette extensions
+## Latest continuation: weighted palettes and actual star-copy bounds
+
+Five new modules prove dynamic weighted palette extension and apply it to
+actual matching pieces, with **41 public theorem proofs**. The weights count
+original exceptional-to-core copies blocked at their old-core endpoints,
+retaining every parallel copy. The construction bounds the actual blocked
+copies of each complete grouped color class by `h/8`, simultaneously for
+at most two specified exceptional resources.
+
+The principal theorem is
+`Overfull.WeightedPalette.exists_star_weighted_matching_grouping`.
+Under its explicit seed certificates, multiplicity and incidence bounds,
+`b<=D`, `128D<=h`, protected-color budget and piece capacity, it preserves
+prescribed seed colors and protected seed unions, properness, exact union
+of the original pieces, matching and disjointness. Each class has at most
+`3L` copies and `6L` support vertices, and each vertex has color load at most
+`D`. The asymmetric Hall theorem permits different conflict bounds on the
+two sides and includes the equality and empty-side cases.
+
+Actual remaining-star/free-palette balance, sequential star insertion,
+native weighted parity/reserve wrappers, robust completion and the final
+factorization still require proofs. **Coverage remains 47/69; full
+Corollary 4.6 and the main theorem remain unproved.**
+
+See the [proof map and exact public inventory](docs/weighted-palette-verification.md),
+[source manifest](docs/weighted-palette-source.json),
+[semantic review](docs/weighted-palette-semantic-review.md),
+[continuation handoff](docs/continuation-handoff.md), and
+[current run records](verification/runs/20261123T230808Z/).
+All five focused strict target builds passed. The actual full-command,
+frozen-input, audit and preservation reports in that run determine global
+verification status; no new global audit count is inferred from those
+focused checks.
+
+The preceding exceptional-palette checkpoint is now published on both
+`main` and `verified-bipartite-continuation-2026-11-21` at
+[`c28cec4`](https://github.com/fly31415926/overfull-lean/commit/c28cec49522e1537452ee9fdc3b2baf3ca1cc3b2),
+with the exact tree of local checkpoint `89678bc`. Its public parent
+[`8c974c8`](https://github.com/fly31415926/overfull-lean/commit/8c974c8a5ca3f7b2fcf557bee596e264480b4b81)
+has the exact tree of `1b5663a`. The earlier publication blocker is resolved.
+This new weighted continuation starts from that public baseline; this
+documentation does not claim that the weighted continuation itself has
+been published.
+
+## Previous continuation: internal pair coloring and reserve palette extensions
 
 The new stage derives the common free palette of an actual exceptional pair
 and colors every parallel copy while preserving valid prescribed reserve
@@ -24,9 +68,11 @@ See the [proof map](docs/exceptional-palette-verification.md),
 [semantic review](docs/exceptional-palette-semantic-review.md), and
 [current run records](verification/runs/20261123T221916Z/).
 The exact full build, unchanged axiom audit and preservation report determine
-local verification status. Publication is tracked separately: automatic
-approval review blocked the preceding verified candidate's complete upload,
-and neither public verified branch was advanced in that attempt.
+local verification status. This stage and its preceding complete verified
+candidate have now been published as the exact source trees recorded above.
+The earlier blocked attempts remain preserved as genuine historical records;
+both public verified branches subsequently advanced to `c28cec4` and were
+independently read back.
 
 ## Previous continuation: actual residual joining palettes
 

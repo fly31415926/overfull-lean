@@ -1,0 +1,77 @@
+{
+  "repository": "https://github.com/fly31415926/overfull-lean",
+  "local_repository": "/workspace/scratch/0f64d20031b0/overfull-next",
+  "fetch": {
+    "command": [
+      "git",
+      "-c",
+      "fetch.writeCommitGraph=false",
+      "fetch",
+      "--no-tags",
+      "--no-write-fetch-head",
+      "--no-recurse-submodules",
+      "origin",
+      "c28cec49522e1537452ee9fdc3b2baf3ca1cc3b2"
+    ],
+    "cwd": "/workspace/scratch/0f64d20031b0/overfull-next",
+    "started_at_utc": "2026-11-23T23:07:33.385647+00:00",
+    "status": "passed",
+    "exit_code": 0,
+    "finished_at_utc": "2026-11-23T23:07:38.123920+00:00",
+    "elapsed_seconds": 4.738287659998605,
+    "stdout": "",
+    "stderr": ""
+  },
+  "branch_ref_readback": {
+    "command": [
+      "git",
+      "ls-remote",
+      "--exit-code",
+      "origin",
+      "refs/heads/main",
+      "refs/heads/verified-bipartite-continuation-2026-11-21"
+    ],
+    "cwd": "/workspace/scratch/0f64d20031b0/overfull-next",
+    "started_at_utc": "2026-11-23T23:07:44.667606+00:00",
+    "finished_at_utc": "2026-11-23T23:07:51.010166+00:00",
+    "elapsed_seconds": 6.3425636520005355,
+    "exit_code": 0,
+    "stdout": "c28cec49522e1537452ee9fdc3b2baf3ca1cc3b2\trefs/heads/main\nc28cec49522e1537452ee9fdc3b2baf3ca1cc3b2\trefs/heads/verified-bipartite-continuation-2026-11-21\n",
+    "stderr": "",
+    "observed_branches": {
+      "refs/heads/main": "c28cec49522e1537452ee9fdc3b2baf3ca1cc3b2",
+      "refs/heads/verified-bipartite-continuation-2026-11-21": "c28cec49522e1537452ee9fdc3b2baf3ca1cc3b2"
+    },
+    "both_expected_branches_at_final_commit": true
+  },
+  "checked_at_utc": "2026-11-23T23:07:38.145299+00:00",
+  "checkpoint": {
+    "public_commit": "c28cec49522e1537452ee9fdc3b2baf3ca1cc3b2",
+    "local_checkpoint": "89678bcf148d5dadb10c954b6a306f39fc941317",
+    "expected_tree": "6a9e73eee4e944b104ff98630b04655e8bfb959d",
+    "observed_tree": "6a9e73eee4e944b104ff98630b04655e8bfb959d",
+    "expected_parents": [
+      "8c974c8a5ca3f7b2fcf557bee596e264480b4b81"
+    ],
+    "observed_parents": [
+      "8c974c8a5ca3f7b2fcf557bee596e264480b4b81"
+    ],
+    "tracked_file_count": 2355,
+    "tree_listing_sha256": "b54ad2b5025600120204071fbcd50af6f5a435f268002f957c953f3d5fed8d79",
+    "every_path_mode_type_and_blob_matches_local_checkpoint": true,
+    "public_commit_object_sha_valid": true,
+    "palette_is_ancestor": true,
+    "parent_chain": [
+      "c28cec49522e1537452ee9fdc3b2baf3ca1cc3b2 6a9e73eee4e944b104ff98630b04655e8bfb959d 8c974c8a5ca3f7b2fcf557bee596e264480b4b81",
+      "8c974c8a5ca3f7b2fcf557bee596e264480b4b81 ab2dd45502da57ea7dfb1db046a9efc9ab0cf067 347b6afe3b37dca8b5b8d9667db41b061b66677b",
+      "347b6afe3b37dca8b5b8d9667db41b061b66677b 7b7c84d18ee0f7826e87829de5d175fd6eea7ff6 964027f1a74cd68149033dc74f87846cabdf2eae",
+      "964027f1a74cd68149033dc74f87846cabdf2eae cc576c7690d365ffb9b6f253aea50a94651adc6f 40ee4726236989479bae2ca307a8678a50e91483"
+    ],
+    "exact_tree_match": true,
+    "exact_parent_match": true
+  },
+  "checked_out_head": "89678bcf148d5dadb10c954b6a306f39fc941317",
+  "worktree_porcelain": "",
+  "verification_passed": true,
+  "publication_integrity_passed": true
+}

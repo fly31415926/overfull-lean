@@ -1,0 +1,6 @@
+{
+  "kind": "tool_observed_preflight_diagnostic",
+  "recorded_at_utc": "2026-11-23T23:17:36.334Z",
+  "exit_code": 1,
+  "note": "Actual failed preflight tool output retained. The ad hoc caller supplied relative paths to a checker function expecting absolute paths. The caller was corrected to use resolve(); no checker gate or Lean source changed. Original execution start/end timestamps were not captured and are not reconstructed. This was not a complete-verifier attempt."
+}
