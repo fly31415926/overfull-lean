@@ -1,0 +1,27 @@
+{
+  "kind": "content_tree_recovery_readback",
+  "file": "batches/content-0001.json",
+  "expected_tree_sha": "983fca21791decdde2b59b45cd3a334577a4a4ca",
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "{\"sha\":\"983fca21791decdde2b59b45cd3a334577a4a4ca\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/trees/983fca21791decdde2b59b45cd3a334577a4a4ca\",\"tree\":[{\"path\":\"blob\",\"mode\":\"040000\",\"type\":\"tree\",\"sha\":\"ee676dc86a3a80d5dcfb80a388bd58c19796626f\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/trees/ee676dc86a3a80d5dcfb80a388bd58c19796626f\"}],\"truncated\":false}",
+      "title": "983fca21791decdde2b59b45cd3a334577a4a4ca",
+      "modified_date": null,
+      "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/trees/983fca21791decdde2b59b45cd3a334577a4a4ca",
+      "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/trees/983fca21791decdde2b59b45cd3a334577a4a4ca",
+      "display_title": "983fca21791decdde2b59b45cd3a334577a4a4ca",
+      "structuredContent": {
+        "title": "983fca21791decdde2b59b45cd3a334577a4a4ca",
+        "content": "{\"sha\":\"983fca21791decdde2b59b45cd3a334577a4a4ca\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/trees/983fca21791decdde2b59b45cd3a334577a4a4ca\",\"tree\":[{\"path\":\"blob\",\"mode\":\"040000\",\"type\":\"tree\",\"sha\":\"ee676dc86a3a80d5dcfb80a388bd58c19796626f\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/trees/ee676dc86a3a80d5dcfb80a388bd58c19796626f\"}],\"truncated\":false}",
+        "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/trees/983fca21791decdde2b59b45cd3a334577a4a4ca"
+      }
+    },
+    "isError": false
+  }
+}

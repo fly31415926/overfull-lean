@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-24T05:19:36.671Z",
+  "status": "automatic_review_interruption_during_publication",
+  "user_report": "Turn ended by Auto-review. Add more context to continue: this occurs again",
+  "tool_observation": "aborted by user after 13.0s",
+  "detailed_rejection_rationale_returned": false,
+  "action": "GitHub create_tree uploads of exact proof-source and verification-artifact content batches",
+  "repository": "fly31415926/overfull-lean",
+  "proposed_source_tree": "4310ca34b44916d161624653b4925910e9bef570",
+  "complete_candidate_file_count": 9064,
+  "baseline_commit": "14978e4dec2bce94f63953df7b1bdd54f61c3e6c",
+  "target_branches": [
+    "main",
+    "verified-bipartite-continuation-2026-11-21"
+  ],
+  "branch_readbacks": [
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "content": "{\"ref\":\"refs/heads/main\",\"node_id\":\"REF_kwDOV2rdlq9yZWZzL2hlYWRzL21haW4\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/main\",\"object\":{\"sha\":\"14978e4dec2bce94f63953df7b1bdd54f61c3e6c\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/14978e4dec2bce94f63953df7b1bdd54f61c3e6c\"}}",
+        "title": "main",
+        "modified_date": null,
+        "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/main",
+        "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/main",
+        "display_title": "main",
+        "structuredContent": {
+          "title": "main",
+          "content": "{\"ref\":\"refs/heads/main\",\"node_id\":\"REF_kwDOV2rdlq9yZWZzL2hlYWRzL21haW4\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/main\",\"object\":{\"sha\":\"14978e4dec2bce94f63953df7b1bdd54f61c3e6c\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/14978e4dec2bce94f63953df7b1bdd54f61c3e6c\"}}",
+          "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/main"
+        }
+      },
+      "isError": false
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "content": "{\"ref\":\"refs/heads/verified-bipartite-continuation-2026-11-21\",\"node_id\":\"REF_kwDOV2rdltoANXJlZnMvaGVhZHMvdmVyaWZpZWQtYmlwYXJ0aXRlLWNvbnRpbnVhdGlvbi0yMDI2LTExLTIx\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/verified-bipartite-continuation-2026-11-21\",\"object\":{\"sha\":\"14978e4dec2bce94f63953df7b1bdd54f61c3e6c\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/14978e4dec2bce94f63953df7b1bdd54f61c3e6c\"}}",
+        "title": "verified-bipartite-continuation-2026-11-21",
+        "modified_date": null,
+        "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/verified-bipartite-continuation-2026-11-21",
+        "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/verified-bipartite-continuation-2026-11-21",
+        "display_title": "verified-bipartite-continuation-2026-11-21",
+        "structuredContent": {
+          "title": "verified-bipartite-continuation-2026-11-21",
+          "content": "{\"ref\":\"refs/heads/verified-bipartite-continuation-2026-11-21\",\"node_id\":\"REF_kwDOV2rdltoANXJlZnMvaGVhZHMvdmVyaWZpZWQtYmlwYXJ0aXRlLWNvbnRpbnVhdGlvbi0yMDI2LTExLTIx\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/verified-bipartite-continuation-2026-11-21\",\"object\":{\"sha\":\"14978e4dec2bce94f63953df7b1bdd54f61c3e6c\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/14978e4dec2bce94f63953df7b1bdd54f61c3e6c\"}}",
+          "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/verified-bipartite-continuation-2026-11-21"
+        }
+      },
+      "isError": false
+    }
+  ],
+  "current_authorization": "Prior explicit authorization to publish the complete project sources, all declaration mappings, paths, hashes, snapshots, and genuine failed/successful logs remains recorded. The current interruption is being treated as an approval-review block; no further public write is attempted here.",
+  "safe_completed_work": "Complete Lean build, axiom audit and preservation checks passed on frozen inputs; exact source tree retained locally and packaged for user review.",
+  "next_step": "Fresh concrete public-publication approval, preferably accompanied by any user-visible review rationale. No review policy or permission controls have been changed."
+}

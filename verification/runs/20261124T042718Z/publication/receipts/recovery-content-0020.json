@@ -1,0 +1,23 @@
+{
+  "kind": "content_tree_recovery_readback",
+  "file": "batches/content-0020.json",
+  "expected_tree_sha": "c9c9c79e77fe6881389a92b36fc7a02201fdfa76",
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"404\"}"
+      }
+    ],
+    "structuredContent": {
+      "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"404\"}",
+      "error_code": "NOT_FOUND",
+      "error_data": {
+        "message": "Not Found",
+        "documentation_url": "https://docs.github.com/rest/git/trees#get-a-tree",
+        "status": "404"
+      }
+    },
+    "isError": true
+  }
+}
