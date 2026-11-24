@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "kind": "inert_review_and_status_publication_receipt",
+  "scope": "ordinary data publication only; no active workflow installation or execution",
+  "artifacts": {
+    "commit-response.json": {
+      "request": {
+        "repository_full_name": "fly31415926/overfull-lean",
+        "parent_sha": "c0c7c88e19a634f956027911beb11aa54e3d9674",
+        "tree_sha": "113815983a8b866c4b12f1eab617c24a512410d4",
+        "message": "Record public recovery and inert publication proposal [skip ci]\n\nPublish the actual independent public-only restoration report, current branch status, automatic-review denial, and exact reviewed publisher proposal with its local preparation receipts.\n\nAll proposal files remain ordinary data outside .github/workflows. No active workflow is installed or executed. The explicit approval request covers installing, running, and removing the reviewed temporary contents:write publication job. Main and the verified continuation branch remain pending that authorization."
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "sha": "e75e9240d20d0a6e021366f33e9bad58b647d857"
+        },
+        "isError": false
+      },
+      "recorded_at_utc": "2026-11-24T22:41:22.333Z"
+    },
+    "plan.json": {
+      "base_commit": "c0c7c88e19a634f956027911beb11aa54e3d9674",
+      "base_tree": "b6e2167823a62ed93a031ebc521b4523e91cd4ac",
+      "expected_tree": "113815983a8b866c4b12f1eab617c24a512410d4",
+      "added_files": 16,
+      "resulting_files": 13366,
+      "independent_and_native_hash_match": true,
+      "request_sha256": "4572ba71a2b2edcb41c91aa7be1c28c8904ddc9e1b2a50969ebc0922bf62db0d"
+    },
+    "post-update-readbacks.json": {
+      "recorded_at_utc": "2026-11-24T22:41:56.766Z",
+      "purpose": "Public inert proposal and status readbacks",
+      "responses": [
+        {
+          "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/reconstruction-four-core-2026-11-24-2130",
+          "result": {
+            "status": "fulfilled",
+            "value": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Action completed."
+                }
+              ],
+              "structuredContent": {
+                "content": "{\"ref\":\"refs/heads/reconstruction-four-core-2026-11-24-2130\",\"node_id\":\"REF_kwDOV2rdltoAM3JlZnMvaGVhZHMvcmVjb25zdHJ1Y3Rpb24tZm91ci1jb3JlLTIwMjYtMTEtMjQtMjEzMA\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/reconstruction-four-core-2026-11-24-2130\",\"object\":{\"sha\":\"e75e9240d20d0a6e021366f33e9bad58b647d857\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/e75e9240d20d0a6e021366f33e9bad58b647d857\"}}",
+                "title": "reconstruction-four-core-2026-11-24-2130",
+                "modified_date": null,
+                "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/reconstruction-four-core-2026-11-24-2130",
+                "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/reconstruction-four-core-2026-11-24-2130",
+                "display_title": "reconstruction-four-core-2026-11-24-2130",
+                "structuredContent": {
+                  "title": "reconstruction-four-core-2026-11-24-2130",
+                  "content": "{\"ref\":\"refs/heads/reconstruction-four-core-2026-11-24-2130\",\"node_id\":\"REF_kwDOV2rdltoAM3JlZnMvaGVhZHMvcmVjb25zdHJ1Y3Rpb24tZm91ci1jb3JlLTIwMjYtMTEtMjQtMjEzMA\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/reconstruction-four-core-2026-11-24-2130\",\"object\":{\"sha\":\"e75e9240d20d0a6e021366f33e9bad58b647d857\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/e75e9240d20d0a6e021366f33e9bad58b647d857\"}}",
+                  "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/reconstruction-four-core-2026-11-24-2130"
+                }
+              },
+              "isError": false
+            }
+          }
+        },
+        {
+          "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/commits/e75e9240d20d0a6e021366f33e9bad58b647d857",
+          "result": {
+            "status": "fulfilled",
+            "value": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Action completed."
+                }
+              ],
+              "structuredContent": {
+                "content": "{\"sha\":\"e75e9240d20d0a6e021366f33e9bad58b647d857\",\"node_id\":\"C_kwDOV2rdltoAKGU3NWU5MjQwZDIwZDBhNmUwMjEzNjZmMzNlOWJhZDU4YjY0N2Q4NTc\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/e75e9240d20d0a6e021366f33e9bad58b647d857\",\"html_url\":\"https://github.com/fly31415926/overfull-lean/commit/e75e9240d20d0a6e021366f33e9bad58b647d857\",\"author\":{\"name\":\"fly31415926\",\"email\":\"fly271828@gmail.com\",\"date\":\"2026-11-24T22:41:22Z\"},\"committer\":{\"name\":\"fly31415926\",\"email\":\"fly271828@gmail.com\",\"date\":\"2026-11-24T22:41:22Z\"},\"tree\":{\"sha\":\"113815983a8b866c4b12f1eab617c24a512410d4\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/trees/113815983a8b866c4b12f1eab617c24a512410d4\"},\"message\":\"Record public recovery and inert publication proposal [skip ci]\\n\\nPublish the actual independent public-only restoration report, current branch status, automatic-review denial, and exact reviewed publisher proposal with its local preparation receipts.\\n\\nAll proposal files remain ordinary data outside .github/workflows. No active workflow is installed or executed. The explicit approval request covers installing, running, and removing the reviewed temporary contents:write publication job. Main and the verified continuation branch remain pending that authorization.\",\"parents\":[{\"sha\":\"c0c7c88e19a634f956027911beb11aa54e3d9674\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/c0c7c88e19a634f956027911beb11aa54e3d9674\",\"html_url\":\"https://github.com/fly31415926/overfull-lean/commit/c0c7c88e19a634f956027911beb11aa54e3d9674\"}],\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null,\"verified_at\":null}}",
+                "title": "e75e9240d20d0a6e021366f33e9bad58b647d857",
+                "modified_date": null,
+                "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/commits/e75e9240d20d0a6e021366f33e9bad58b647d857",
+                "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/commits/e75e9240d20d0a6e021366f33e9bad58b647d857",
+                "display_title": "e75e9240d20d0a6e021366f33e9bad58b647d857",
+                "structuredContent": {
+                  "title": "e75e9240d20d0a6e021366f33e9bad58b647d857",
+                  "content": "{\"sha\":\"e75e9240d20d0a6e021366f33e9bad58b647d857\",\"node_id\":\"C_kwDOV2rdltoAKGU3NWU5MjQwZDIwZDBhNmUwMjEzNjZmMzNlOWJhZDU4YjY0N2Q4NTc\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/e75e9240d20d0a6e021366f33e9bad58b647d857\",\"html_url\":\"https://github.com/fly31415926/overfull-lean/commit/e75e9240d20d0a6e021366f33e9bad58b647d857\",\"author\":{\"name\":\"fly31415926\",\"email\":\"fly271828@gmail.com\",\"date\":\"2026-11-24T22:41:22Z\"},\"committer\":{\"name\":\"fly31415926\",\"email\":\"fly271828@gmail.com\",\"date\":\"2026-11-24T22:41:22Z\"},\"tree\":{\"sha\":\"113815983a8b866c4b12f1eab617c24a512410d4\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/trees/113815983a8b866c4b12f1eab617c24a512410d4\"},\"message\":\"Record public recovery and inert publication proposal [skip ci]\\n\\nPublish the actual independent public-only restoration report, current branch status, automatic-review denial, and exact reviewed publisher proposal with its local preparation receipts.\\n\\nAll proposal files remain ordinary data outside .github/workflows. No active workflow is installed or executed. The explicit approval request covers installing, running, and removing the reviewed temporary contents:write publication job. Main and the verified continuation branch remain pending that authorization.\",\"parents\":[{\"sha\":\"c0c7c88e19a634f956027911beb11aa54e3d9674\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/c0c7c88e19a634f956027911beb11aa54e3d9674\",\"html_url\":\"https://github.com/fly31415926/overfull-lean/commit/c0c7c88e19a634f956027911beb11aa54e3d9674\"}],\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null,\"verified_at\":null}}",
+                  "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/commits/e75e9240d20d0a6e021366f33e9bad58b647d857"
+                }
+              },
+              "isError": false
+            }
+          }
+        }
+      ]
+    },
+    "ref-response.json": {
+      "request": {
+        "repository_full_name": "fly31415926/overfull-lean",
+        "branch_name": "reconstruction-four-core-2026-11-24-2130",
+        "expected_sha": "c0c7c88e19a634f956027911beb11aa54e3d9674",
+        "sha": "e75e9240d20d0a6e021366f33e9bad58b647d857",
+        "force": false
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "success": true
+        },
+        "isError": false
+      },
+      "recorded_at_utc": "2026-11-24T22:41:28.480Z"
+    },
+    "request.json": {
+      "repository_full_name": "fly31415926/overfull-lean",
+      "base_tree_sha": "b6e2167823a62ed93a031ebc521b4523e91cd4ac",
+      "tree_elements": [
+        {
+          "path": "publication-transfer/review-db841575/APPROVAL_REQUEST.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d3d275408b109e1682bf01af01e20e78004c3ea7"
+        },
+        {
+          "path": "publication-transfer/review-db841575/README.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "290dd2b3cca3a1eb49ed3ef068eb3f890574dcaf"
+        },
+        {
+          "path": "publication-transfer/review-db841575/actual-auto-review-denial.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3cf82d3c9c093e2d5deb7bf1e7905b84d1be5c09"
+        },
+        {
+          "path": "publication-transfer/review-db841575/independent-review.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "073448c8acfbe9c0fd4f489921a5611abf6becce"
+        },
+        {
+          "path": "publication-transfer/review-db841575/offline-check-terminal.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2e1593ff1cc42d04dec3c71dc607e6744b9d8687"
+        },
+        {
+          "path": "publication-transfer/review-db841575/offline-verification-receipt.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4a7bd47882413cbf77c01b4e37d9bfddc93898cb"
+        },
+        {
+          "path": "publication-transfer/review-db841575/offline-verification.stderr.log",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "publication-transfer/review-db841575/offline-verification.stdout.log",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1efc175c62b5318dd0c27378fd5d7e8134017a6d"
+        },
+        {
+          "path": "publication-transfer/review-db841575/publish-verified-db841575.yml.txt",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ae98bc9388144e50a5f7f3c0357189cd0c9d94b6"
+        },
+        {
+          "path": "publication-transfer/review-db841575/publish_bundle.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4f921771a5bbb3caa7b75039111f64c8c7a7d9f1"
+        },
+        {
+          "path": "publication-transfer/review-db841575/review-packet.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9f453a00aaa48fb072eec4a339e349cb91758289"
+        },
+        {
+          "path": "publication-transfer/PUBLICATION_STATUS.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3a2e5f2e389d9cac11c924a85e3409f1352c98ff"
+        },
+        {
+          "path": "publication-transfer/status-db841575/archive-anchor-readbacks.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3cb7bfe51d5eaacd9caf4e28cc666c21b8c69063"
+        },
+        {
+          "path": "publication-transfer/status-db841575/public-restoration.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1d176454777733a0441247ca19b7e143780d5648"
+        },
+        {
+          "path": "publication-transfer/status-db841575/publication-status.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d27b2717e13b2adc4ff5d619c4b0081c7407afc6"
+        },
+        {
+          "path": "publication-transfer/status-db841575/verification-outcome.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "70b60bccca96ef484dacf480add0f79b5689559e"
+        }
+      ]
+    },
+    "tree-response.json": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "sha": "113815983a8b866c4b12f1eab617c24a512410d4"
+      },
+      "isError": false
+    }
+  }
+}

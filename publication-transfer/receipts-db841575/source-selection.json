@@ -1,0 +1,43 @@
+{
+  "snapshot_started_at_utc": "2026-11-24T22:42:50.717485+00:00",
+  "cutoff_utc": "2026-11-24T22:42:51.219994+00:00",
+  "source_sets": [
+    "verified-local-checkpoint",
+    "large-evidence-api-01",
+    "verified-bundle-uploads-01",
+    "final-proof-connector-objects-01",
+    "final-proof-connector-supplement-01",
+    "combined-recovery-anchor-to-038384aa",
+    "publication-review-db841575-01",
+    "publication-status-db841575-01",
+    "review-packet-upload-plan-db841575",
+    "public-bundle-readback-01"
+  ],
+  "review_packet_upload_selection": "Root regular files only; all other selected sets recursive.",
+  "additional_files": [
+    "run-publication/branch-readbacks-after-local-commit.json",
+    "independent-bundle-review.md"
+  ],
+  "independent_bundle_review_source": "/workspace/scratch/05b9e46fe96b/recovery-20261124/publication-inventory-20261124T222230Z/independent-bundle-review.md",
+  "excluded_directory_prefixes": [
+    "public-bundle-readback-01/isolated.git/",
+    "public-bundle-readback-01/public-archive/"
+  ],
+  "excluded_body_or_bundle_files": [
+    {
+      "path": "public-bundle-readback-01/restoration-01/public-archive-blob-readback/stdout.bin",
+      "bytes": 2887410
+    },
+    {
+      "path": "public-bundle-readback-01/restoration-01/public-raw-proof-blob-readback/stdout.bin",
+      "bytes": 1708857
+    },
+    {
+      "path": "public-bundle-readback-01/restored-from-public.bundle",
+      "bytes": 2101917
+    }
+  ],
+  "git_ls_tree_stdout_inventories_retained_as_metadata": true,
+  "all_selected_paths_and_bytes_rechecked_stable": true,
+  "later_archive_upload_receipts_outside_cutoff": true
+}
