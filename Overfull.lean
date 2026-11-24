@@ -289,6 +289,7 @@ import Overfull.CompatibleCircuits.FourTriangleSelection
 import Overfull.CompatibleCircuits.FourBoundedJoining
 import Overfull.CompatibleCircuits.FourJoiningComplete
 import Overfull.CompatibleCircuits.FourCharacterization
+import Overfull.FourCoreReduction.Regular
 
 /-!
 # Partial formalization of the overfull manuscript

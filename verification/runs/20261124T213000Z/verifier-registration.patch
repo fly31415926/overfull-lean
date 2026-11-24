@@ -1,0 +1,83 @@
+--- a/scripts/verify.py
++++ b/scripts/verify.py
+@@ -15,7 +15,7 @@
+ OUTPUT = ROOT / "verification"
+ MATHLIB_REVISION = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
+ NUMBERED_ASSERTION_COUNT = 69
+-COMPLETED_NUMBERED_ASSERTION_COUNT = 49
++COMPLETED_NUMBERED_ASSERTION_COUNT = 51
+ 
+ 
+ def run(arguments: list[str], log_name: str) -> str:
+@@ -124,6 +124,7 @@
+                           ("three_core_terminal", "three-core-terminal-source.json"),
+                           ("four_label_reduction", "four-label-reduction-source.json"),
+                           ("four_label_existence", "four-label-existence-source.json"),
++                          ("four_core_continuation", "four-core-continuation-source.json"),
+                           ("global_factorization", "global-factorization-source.json")):
+         source = json.loads((ROOT / "docs" / filename).read_text())
+         source_modules = {item["module"]: item for item in source["modules"]}
+@@ -252,6 +253,25 @@
+                 "Overfull.FourOdd.exists_fourTwoOddJoining_decomposition"]
+             or not set(four_existence_source["public_theorems"]) <= set(four_existence_public)):
+         raise SystemExit("Four-label existence closes no additional numbered manuscript assertion.")
++
++    four_core_source, _, four_core_public = extension_maps["four_core_continuation"]
++    expected_four_core_assertions = [
++        {"number": "4.16", "label": "three:prop:terminal",
++         "statement_sha256": "1ba102e379594ab72de4ba73cf41c88d9fbdadf1c132e2943b48da04e8c2cc1c",
++         "lean_theorems": ["Overfull.frequent_pattern_result_one_factorization"]},
++        {"number": "4.17", "label": "three:thm:regular-four",
++         "statement_sha256": "b271893680e87b1c06c35172a138050dbf84009964eb618dce53c53ba595e322",
++         "lean_theorems": ["Overfull.regular_core_one_factorization"]},
++    ]
++    if (four_core_source["kind"] != "numbered_assertion_closure_with_supporting_continuations"
++            or four_core_source["numbered_assertions_completed"] != 2
++            or four_core_source["main_theorem_verified"] is not False
++            or four_core_source["source_assertions"] != expected_four_core_assertions
++            or four_core_source["public_theorems"] != [
++                "Overfull.frequent_pattern_result_one_factorization",
++                "Overfull.regular_core_one_factorization"]
++            or not set(four_core_source["public_theorems"]) <= set(four_core_public)):
++        raise SystemExit("Four-core continuation must identify exactly the complete pinned 4.16 and 4.17.")
+ 
+     # Every first-party mathematical file must be included in the library build.
+     modules = {"Overfull": ROOT / "Overfull.lean"}
+@@ -1658,10 +1678,20 @@
+         names = assertion.get("lean_theorems", [])
+         if not names or not set(names) <= audited_names:
+             raise SystemExit(f"A completed assertion lacks audited proof declarations: {assertion['number']}")
+-    for number in ("2.24", "4.4", "4.5", "4.16", "6.1", "6.2", "6.3"):
++    for number in ("2.24", "4.4", "4.5", "6.1", "6.2", "6.3"):
+         assertion = next(a for a in coverage["numbered_assertions"] if a["number"] == number)
+         if assertion["full_assertion_verified"]:
+             raise SystemExit(f"Assertion {number} is not completed by the registered supporting results.")
++    for source_assertion in expected_four_core_assertions:
++        assertion = next(a for a in coverage["numbered_assertions"]
++                         if a["number"] == source_assertion["number"])
++        if (assertion["labels"] != [source_assertion["label"]]
++                or assertion["statement_sha256"] != source_assertion["statement_sha256"]
++                or assertion["full_assertion_verified"] is not True
++                or assertion["status"] != "fully_verified"
++                or assertion.get("lean_theorems") != source_assertion["lean_theorems"]
++                or not set(assertion["lean_theorems"]) <= audited_names):
++            raise SystemExit("Four-core numbered closure is not mapped to its exact pinned sole endpoint.")
+     for source_assertion in few_source["source_assertions"]:
+         assertion = next(a for a in coverage["numbered_assertions"]
+                          if a["number"] == source_assertion["number"])
+@@ -1770,6 +1800,7 @@
+                     "three_core_terminal": "three-core-terminal",
+                     "four_label_reduction": "four-label-reduction",
+                     "four_label_existence": "four-label-existence",
++                    "four_core_continuation": "four-core-continuation",
+                     "global_factorization": "global-factorization"}[key]
+         map_path = OUTPUT / f"{basename}-declarations.json"
+         map_path.write_text(json.dumps({
+@@ -1853,6 +1884,7 @@
+         "global_factorization_declaration_map": extension_evidence["global_factorization"],
+         "four_label_reduction_declaration_map": extension_evidence["four_label_reduction"],
+         "four_label_existence_declaration_map": extension_evidence["four_label_existence"],
++        "four_core_continuation_declaration_map": extension_evidence["four_core_continuation"],
+         "checkpoint_reconstruction": {
+             "original_checkpoint": reconstruction["original_checkpoint"],
+             "original_tree_reproduced": False,

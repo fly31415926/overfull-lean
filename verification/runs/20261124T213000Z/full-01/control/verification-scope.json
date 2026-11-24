@@ -1,0 +1,20 @@
+{
+  "baseline_commit": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+  "baseline_tree": "087e26b5f004af1f9423a6f2b137d805f5991f1a",
+  "source_manifest": "docs/four-core-continuation-source.json",
+  "declaration_map": "verification/four-core-continuation-declarations.json",
+  "promoted_assertions": {
+    "4.16": [
+      "Overfull.frequent_pattern_result_one_factorization"
+    ],
+    "4.17": [
+      "Overfull.regular_core_one_factorization"
+    ]
+  },
+  "coverage": {
+    "complete": 51,
+    "total": 69,
+    "main_theorem_verified": false
+  },
+  "scope": "Complete actual-result three/four-core terminal Proposition4.16 and original even-order simple regular host Theorem4.17. Both endpoints retain pinned statement identities. This reconstruction requires its own actual frozen full verification."
+}

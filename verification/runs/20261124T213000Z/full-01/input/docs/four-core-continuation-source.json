@@ -1,0 +1,554 @@
+{
+  "schema_version": 1,
+  "kind": "numbered_assertion_closure_with_supporting_continuations",
+  "baseline_commit": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+  "baseline_tree": "087e26b5f004af1f9423a6f2b137d805f5991f1a",
+  "baseline_publication_status": "both_remote_branches_independently_verified",
+  "numbered_assertions_completed": 2,
+  "main_theorem_verified": false,
+  "source_assertions": [
+    {
+      "number": "4.16",
+      "label": "three:prop:terminal",
+      "statement_sha256": "1ba102e379594ab72de4ba73cf41c88d9fbdadf1c132e2943b48da04e8c2cc1c",
+      "lean_theorems": [
+        "Overfull.frequent_pattern_result_one_factorization"
+      ]
+    },
+    {
+      "number": "4.17",
+      "label": "three:thm:regular-four",
+      "statement_sha256": "b271893680e87b1c06c35172a138050dbf84009964eb618dce53c53ba595e322",
+      "lean_theorems": [
+        "Overfull.regular_core_one_factorization"
+      ]
+    }
+  ],
+  "public_theorems": [
+    "Overfull.frequent_pattern_result_one_factorization",
+    "Overfull.regular_core_one_factorization"
+  ],
+  "scope": "Complete Proposition 4.16 for the actual FrequentPatternResult on an arbitrary finite index type of cardinality three or four, and complete Theorem 4.17 for the original even-order simple regular host with three or four robust cores. Uniform choices precede the host and all graph-dependent data. The all-even and exactly-two-odd four-core branches join the existing three-core and all-four-odd cases. Actual original edge copies, forest and pair supplies, and the literal linear exceptional/core-error budget are preserved. The main theorem remains unverified. The inventory describes current sources; the new full kernel run and preservation receipt establish verification.",
+  "review": "docs/four-core-continuation-semantic-review.md",
+  "proof_map": "docs/four-core-continuation-verification.md",
+  "module_count": 25,
+  "public_theorem_count": 63,
+  "modules": [
+    {
+      "module": "Overfull.FourCoreReduction.Bounded",
+      "path": "Overfull/FourCoreReduction/Bounded.lean",
+      "sha256": "d9d522804612de306959ca3d32ca383ce76c01cf2e0439b3d2a078b305bbb658",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.core_bounded_exception_factorization",
+          "source_line": 23
+        }
+      ]
+    },
+    {
+      "module": "Overfull.FourCoreReduction.Frequent",
+      "path": "Overfull/FourCoreReduction/Frequent.lean",
+      "sha256": "773f1d107600812625cd0aeb619d20d2706cfc6a850b140ebd5db696d468ecd8",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.coloring_from_covering_matchings",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.core_frequent_pattern_factorization",
+          "source_line": 40
+        },
+        {
+          "name": "Overfull.core_frequent_pattern_one_factorization",
+          "source_line": 127
+        }
+      ]
+    },
+    {
+      "module": "Overfull.FourCoreReduction.Regular",
+      "path": "Overfull/FourCoreReduction/Regular.lean",
+      "sha256": "182c4596a1095ed33e58ef4a2059c51a75fbe1edc9b1d96f622aefde1cbf9fe1",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.core_regular_normalized_factorization",
+          "source_line": 27
+        },
+        {
+          "name": "Overfull.core_regular_normalized_one_factorization",
+          "source_line": 179
+        },
+        {
+          "name": "Overfull.regular_core_one_factorization",
+          "source_line": 218
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.FourJoiningGrouping",
+      "path": "Overfull/ResidualPalette/FourJoiningGrouping.lean",
+      "sha256": "4e6be75d810b4617a3691c8fa85de6ac2a4316534639a79745961d9b7dd52639",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.FourJoiningDecomposition.exists_palette",
+          "source_line": 23
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.FourPaletteGrouping",
+      "path": "Overfull/ResidualPalette/FourPaletteGrouping.lean",
+      "sha256": "8a410245769c8fea660bf87e1210bfd114878dfd85adeae0e58e3d12e1da929e",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.pieceConflict_card_le_of_size",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.NativeReserve.groupedCopies_card_le_of_size",
+          "source_line": 37
+        },
+        {
+          "name": "Overfull.NativeReserve.groupedCopies_support_card_le_of_size",
+          "source_line": 47
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_bounded_matching_grouping_of_size",
+          "source_line": 55
+        },
+        {
+          "name": "Overfull.NativeReserve.palette_capacity_of_incidence_budget_of_size",
+          "source_line": 95
+        }
+      ]
+    },
+    {
+      "module": "Overfull.Terminal.FourPalette",
+      "path": "Overfull/Terminal/FourPalette.lean",
+      "sha256": "61805afa55070ce8c2643c61a7fee6244a348e75947c43d82180998bd8c95c34",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Terminal.exists_four_even_prefix_palette",
+          "source_line": 15
+        },
+        {
+          "name": "Overfull.Terminal.exists_four_two_odd_prefix_palette",
+          "source_line": 39
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFour.Parity",
+      "path": "Overfull/TerminalFour/Parity.lean",
+      "sha256": "cd91353cbfb7f03db82e6957084fda3298b46ac101ac54753640abb26b3574bc",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalFour.fiber_card_sum_four",
+          "source_line": 10
+        },
+        {
+          "name": "Overfull.TerminalFour.four_fiber_parity",
+          "source_line": 20
+        },
+        {
+          "name": "Overfull.TerminalFour.four_core_parity",
+          "source_line": 128
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFour.PatternTransport",
+      "path": "Overfull/TerminalFour/PatternTransport.lean",
+      "sha256": "ce0364a630fb817389ea42dd1630ef2ea9b8614a52ffaec59950ed2bb06716ca",
+      "public_theorem_count": 4,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalFour.even_order_of_positive_regular",
+          "source_line": 17
+        },
+        {
+          "name": "Overfull.TerminalFour.fourCodeEquiv_apply",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.TerminalFour.codeEquiv_shore",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.TerminalFour.joining_pairPool_card",
+          "source_line": 60
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFour.Result",
+      "path": "Overfull/TerminalFour/Result.lean",
+      "sha256": "36c5eabe1173480d6e8772546ec48f8668005b6177e1fc77ef692f675a9d9b1a",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.frequent_pattern_result_one_factorization",
+          "source_line": 15
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFour.Theorem",
+      "path": "Overfull/TerminalFour/Theorem.lean",
+      "sha256": "85b5e9f3ebc770a88e4386d44d66665eba4a4030011f321ed1c5356a77f09c30",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.four_core_terminal_one_factorization",
+          "source_line": 15
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFourEven.Completed",
+      "path": "Overfull/TerminalFourEven/Completed.lean",
+      "sha256": "921ef9fa3a1ad745ed1eb4ae914cbef233f03aea3ffa09c8cd47b577369c8ebb",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalFourEven.FourEvenPrefix.residual_joining_empty",
+          "source_line": 20
+        },
+        {
+          "name": "Overfull.TerminalFourEven.FourEvenPrefix.residual_cuts_empty",
+          "source_line": 27
+        },
+        {
+          "name": "Overfull.TerminalFourEven.exists_uniform_completed_four_even_factorization",
+          "source_line": 37
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFourEven.Parameters",
+      "path": "Overfull/TerminalFourEven/Parameters.lean",
+      "sha256": "76437a79287169f035e3278e193fa6e7ad04bd3091af5be387d43f509ff9566f",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalFourEven.exists_four_prefix_parameters",
+          "source_line": 25
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFourEven.Prefix",
+      "path": "Overfull/TerminalFourEven/Prefix.lean",
+      "sha256": "cf69618156521d9358b4aa26035e76b9ccc5b5808be4f546b25fe6ea176bf88b",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalFourEven.exists_uniform_four_even_prefix",
+          "source_line": 21
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFourEven.PrefixResult",
+      "path": "Overfull/TerminalFourEven/PrefixResult.lean",
+      "sha256": "7a133d7a4799edfc4a378b3c63a546f30c38c9fcfb5ac987dad50cf359ed0e5b",
+      "public_theorem_count": 0,
+      "public_proof_declarations": []
+    },
+    {
+      "module": "Overfull.TerminalFourEven.Theorem",
+      "path": "Overfull/TerminalFourEven/Theorem.lean",
+      "sha256": "e86c981eb3708917c011c71aa5ccbf4bafba24267f3fd3b8be8dd4d86bb31254",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.four_even_terminal_one_factorization",
+          "source_line": 17
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFourTwoOdd.CentralFactorization",
+      "path": "Overfull/TerminalFourTwoOdd/CentralFactorization.lean",
+      "sha256": "84bcb0a935a1ea655d849ec0df89b4f8953d761a1f68316bc22916b874b1458c",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalFourTwoOdd.exists_uniform_two_core_central_coloring",
+          "source_line": 13
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFourTwoOdd.CentralGeometry",
+      "path": "Overfull/TerminalFourTwoOdd/CentralGeometry.lean",
+      "sha256": "dc136f6225c4b4a851a1754f47775735725acfaa670c7c42f9b7d2295513dbf6",
+      "public_theorem_count": 15,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalFourTwoOdd.keptVertex_injective",
+          "source_line": 16
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.keptSet_card",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.inl_mem_keptSet",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.apex_not_mem_keptSet",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.centralMap_mem_keptSet",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.keptEquiv_symm_val",
+          "source_line": 59
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.keptCoreEdgeMap_edge",
+          "source_line": 73
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.keptCore_degree",
+          "source_line": 103
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.keptCore_robust",
+          "source_line": 108
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.keptSet_disjoint",
+          "source_line": 114
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.centralApices_card",
+          "source_line": 125
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.centralApices_inl",
+          "source_line": 129
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.centralApices_inr",
+          "source_line": 132
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.keptSet_disjoint_apices",
+          "source_line": 135
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.central_two_core_cover",
+          "source_line": 142
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFourTwoOdd.CentralMatchings",
+      "path": "Overfull/TerminalFourTwoOdd/CentralMatchings.lean",
+      "sha256": "31d6b0d516c90f9d4a7f5849ab753d38bb810996713c479237fc009602d35ab1",
+      "public_theorem_count": 7,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalFourTwoOdd.centralMatching_disjoint",
+          "source_line": 14
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.centralMatching_support_core",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.centralMatching_uncovered_card",
+          "source_line": 40
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.centralMatching_covers_apex",
+          "source_line": 64
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.central_internal_kept_of_original",
+          "source_line": 74
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.central_not_internal_fiber",
+          "source_line": 90
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.centralMatching_two_core_cover",
+          "source_line": 98
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFourTwoOdd.Completed",
+      "path": "Overfull/TerminalFourTwoOdd/Completed.lean",
+      "sha256": "89ea5138e75e68acb660e25ae744c6777b240fa96c038385db3d107c58d97620",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalFourTwoOdd.exists_uniform_completed_four_two_odd_factorization",
+          "source_line": 23
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFourTwoOdd.CutCertificates",
+      "path": "Overfull/TerminalFourTwoOdd/CutCertificates.lean",
+      "sha256": "a0f0de1e95434f7b794380fde23d87b6a398d61288f15b3d0e347b55f7f07a1e",
+      "public_theorem_count": 4,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalFourTwoOdd.matching_partition_odd_cut",
+          "source_line": 49
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.matching_partition_even_incidence",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.whole_cut_covered",
+          "source_line": 96
+        },
+        {
+          "name": "Overfull.TerminalFourTwoOdd.whole_matching_cut_parity",
+          "source_line": 110
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFourTwoOdd.Prefix",
+      "path": "Overfull/TerminalFourTwoOdd/Prefix.lean",
+      "sha256": "e320afc068fbd3072224a1e9167b3759b6a8dc0cb50a867724bfb93e50b7693c",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalFourTwoOdd.exists_uniform_four_two_odd_prefix",
+          "source_line": 21
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFourTwoOdd.PrefixResult",
+      "path": "Overfull/TerminalFourTwoOdd/PrefixResult.lean",
+      "sha256": "250708b0e6a9331ea07c4e22a65a335adc4a44b7beef658b586444ff8f9af164",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalFourTwoOdd.FourTwoOddPrefix.remaining_survives",
+          "source_line": 33
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFourTwoOdd.RemainingProfile",
+      "path": "Overfull/TerminalFourTwoOdd/RemainingProfile.lean",
+      "sha256": "f27fc2968bf5e8419a89507fb497bd17da380770c8a4824f4187e7d0643251fd",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalFourTwoOdd.FourTwoOddPrefix.exists_residual_primary_family",
+          "source_line": 17
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFourTwoOdd.ResidualColoring",
+      "path": "Overfull/TerminalFourTwoOdd/ResidualColoring.lean",
+      "sha256": "a4d860e7aceebc916f6ce598a2bf95b6375f76b98737a8c0f882c19fb5051e0f",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalFourTwoOdd.exists_uniform_four_two_odd_coloring",
+          "source_line": 31
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalFourTwoOdd.Theorem",
+      "path": "Overfull/TerminalFourTwoOdd/Theorem.lean",
+      "sha256": "fb7f38593791c69eac49ccf44b02859d0f67a96501eed113f73986d92eb8a30b",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.four_two_odd_terminal_one_factorization",
+          "source_line": 14
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.FourOdd.FourJoiningDecomposition.exists_palette",
+    "Overfull.NativeReserve.exists_bounded_matching_grouping_of_size",
+    "Overfull.NativeReserve.groupedCopies_card_le_of_size",
+    "Overfull.NativeReserve.groupedCopies_support_card_le_of_size",
+    "Overfull.NativeReserve.palette_capacity_of_incidence_budget_of_size",
+    "Overfull.NativeReserve.pieceConflict_card_le_of_size",
+    "Overfull.Terminal.exists_four_even_prefix_palette",
+    "Overfull.Terminal.exists_four_two_odd_prefix_palette",
+    "Overfull.TerminalFour.codeEquiv_shore",
+    "Overfull.TerminalFour.even_order_of_positive_regular",
+    "Overfull.TerminalFour.fiber_card_sum_four",
+    "Overfull.TerminalFour.fourCodeEquiv_apply",
+    "Overfull.TerminalFour.four_core_parity",
+    "Overfull.TerminalFour.four_fiber_parity",
+    "Overfull.TerminalFour.joining_pairPool_card",
+    "Overfull.TerminalFourEven.FourEvenPrefix.residual_cuts_empty",
+    "Overfull.TerminalFourEven.FourEvenPrefix.residual_joining_empty",
+    "Overfull.TerminalFourEven.exists_four_prefix_parameters",
+    "Overfull.TerminalFourEven.exists_uniform_completed_four_even_factorization",
+    "Overfull.TerminalFourEven.exists_uniform_four_even_prefix",
+    "Overfull.TerminalFourTwoOdd.FourTwoOddPrefix.exists_residual_primary_family",
+    "Overfull.TerminalFourTwoOdd.FourTwoOddPrefix.remaining_survives",
+    "Overfull.TerminalFourTwoOdd.apex_not_mem_keptSet",
+    "Overfull.TerminalFourTwoOdd.centralApices_card",
+    "Overfull.TerminalFourTwoOdd.centralApices_inl",
+    "Overfull.TerminalFourTwoOdd.centralApices_inr",
+    "Overfull.TerminalFourTwoOdd.centralMap_mem_keptSet",
+    "Overfull.TerminalFourTwoOdd.centralMatching_covers_apex",
+    "Overfull.TerminalFourTwoOdd.centralMatching_disjoint",
+    "Overfull.TerminalFourTwoOdd.centralMatching_support_core",
+    "Overfull.TerminalFourTwoOdd.centralMatching_two_core_cover",
+    "Overfull.TerminalFourTwoOdd.centralMatching_uncovered_card",
+    "Overfull.TerminalFourTwoOdd.central_internal_kept_of_original",
+    "Overfull.TerminalFourTwoOdd.central_not_internal_fiber",
+    "Overfull.TerminalFourTwoOdd.central_two_core_cover",
+    "Overfull.TerminalFourTwoOdd.exists_uniform_completed_four_two_odd_factorization",
+    "Overfull.TerminalFourTwoOdd.exists_uniform_four_two_odd_coloring",
+    "Overfull.TerminalFourTwoOdd.exists_uniform_four_two_odd_prefix",
+    "Overfull.TerminalFourTwoOdd.exists_uniform_two_core_central_coloring",
+    "Overfull.TerminalFourTwoOdd.inl_mem_keptSet",
+    "Overfull.TerminalFourTwoOdd.keptCoreEdgeMap_edge",
+    "Overfull.TerminalFourTwoOdd.keptCore_degree",
+    "Overfull.TerminalFourTwoOdd.keptCore_robust",
+    "Overfull.TerminalFourTwoOdd.keptEquiv_symm_val",
+    "Overfull.TerminalFourTwoOdd.keptSet_card",
+    "Overfull.TerminalFourTwoOdd.keptSet_disjoint",
+    "Overfull.TerminalFourTwoOdd.keptSet_disjoint_apices",
+    "Overfull.TerminalFourTwoOdd.keptVertex_injective",
+    "Overfull.TerminalFourTwoOdd.matching_partition_even_incidence",
+    "Overfull.TerminalFourTwoOdd.matching_partition_odd_cut",
+    "Overfull.TerminalFourTwoOdd.whole_cut_covered",
+    "Overfull.TerminalFourTwoOdd.whole_matching_cut_parity",
+    "Overfull.coloring_from_covering_matchings",
+    "Overfull.core_bounded_exception_factorization",
+    "Overfull.core_frequent_pattern_factorization",
+    "Overfull.core_frequent_pattern_one_factorization",
+    "Overfull.core_regular_normalized_factorization",
+    "Overfull.core_regular_normalized_one_factorization",
+    "Overfull.four_core_terminal_one_factorization",
+    "Overfull.four_even_terminal_one_factorization",
+    "Overfull.four_two_odd_terminal_one_factorization",
+    "Overfull.frequent_pattern_result_one_factorization",
+    "Overfull.regular_core_one_factorization"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/shengtongz/lovasz-opus",
+  "commit": "ee0085ddec79996279c7b52044659032e5cf8431",
+  "source_path": "Lovasz/BMatchingPolytope.lean",
+  "original_git_blob": "4f599760ac07c23714ef516e9bc5e07fd472856c",
+  "included_path": "Overfull/External/PerfectBMatching.lean",
+  "included_sha256": "8a3f5cb9fbf2f44c8a8c22b86db196437666749527d6dcdc3133f0819253c81f",
+  "license": "Apache-2.0",
+  "license_file": "LICENSE_BMATCHING.txt",
+  "attribution_file": "THIRD_PARTY_NOTICES.txt",
+  "changes": "Replace import Lovasz.Defs with the needed mathlib imports. The mathematical proof is unchanged.",
+  "tested_toolchain": "leanprover/lean4:v4.24.0",
+  "tested_mathlib_commit": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+  "used_theorem": "Lovasz.BMatch.thmA",
+  "graph_adapter": "Overfull/FractionalMatching.lean",
+  "scope": "The full matching-polytope theorem is proved for actual finite loopless multigraphs, including parallel edge copies, by a proved doubling reduction and exact matching-indicator correspondence. Uniform fractional-matching and perfect-matching distributions are also proved.",
+  "graph_adapters": [
+    "Overfull/FractionalMatching.lean",
+    "Overfull/MatchingPolytope.lean"
+  ]
+}

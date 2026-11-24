@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "kind": "immutable_git_browser_upload_preparation",
+  "prepared_at_utc": "2026-11-24T21:58:58.959646+00:00",
+  "repository": "/workspace/scratch/05b9e46fe96b/overfull-lean",
+  "snapshot": {
+    "object_sha": "9aaf99be730815a01ac32c6a6089787451d7c9f0",
+    "object_type": "tree",
+    "tree_sha": "9aaf99be730815a01ac32c6a6089787451d7c9f0"
+  },
+  "known_public_commits": [
+    {
+      "object_sha": "1008c182a29dd6a86c1672236845ab357c2ceb7c",
+      "object_type": "commit",
+      "commit_sha": "1008c182a29dd6a86c1672236845ab357c2ceb7c",
+      "tree_sha": "fec02f947b26a5abed7a78bfd9cd242ce681081b",
+      "unique_blob_count": 3001
+    }
+  ],
+  "known_public_basis": "Exact already-fetched commits supplied by the caller; no remote check performed here",
+  "shared_objects_directory": "/workspace/shared/overfull-publication-objects",
+  "batch_limits": {
+    "files": 50,
+    "bytes": 12000000
+  },
+  "target_leaf_entry_count": 13661,
+  "target_unique_blob_count": 3163,
+  "known_public_unique_blob_count": 3001,
+  "target_blobs_already_public": 3000,
+  "required_upload_blob_count": 163,
+  "required_upload_bytes": 4926555,
+  "required_upload_path_count": 405,
+  "staged_files_reused_after_hash_check": 0,
+  "batch_count": 4,
+  "manifests": {
+    "target_tree": {
+      "path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/preaudit-browser-objects/target-tree.json",
+      "bytes": 3540678,
+      "sha256": "e98c4eb81e16bb37f66ccb35bd762def6404a249bde48825b3515ac072036f79"
+    },
+    "blob_inventory": {
+      "path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/preaudit-browser-objects/blob-inventory.json",
+      "bytes": 780792,
+      "sha256": "dcf68bda3af54b7b26b86d07df64e6fbe1075ed18b5f652e9623dbe033bb4a74"
+    },
+    "required_uploads": {
+      "path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/preaudit-browser-objects/required-uploads.json",
+      "bytes": 164318,
+      "sha256": "1fd4a8b756d6467a913e6ba2ab86081ea5a83013bc04a8433fc2fc7ef4367984"
+    }
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "file_count": 50,
+      "bytes": 1121152,
+      "manifest": {
+        "path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/preaudit-browser-objects/batch-0001.json",
+        "bytes": 14881,
+        "sha256": "ee78a0c21c44c541f4d2acfd010f5a35d45471face15c281b259e9c2855b90c1"
+      },
+      "paths_file": "/workspace/scratch/05b9e46fe96b/recovery-20261124/preaudit-browser-objects/batch-0001.paths.txt",
+      "paths_sha256": "393e88198d4bae0ed6b8b36559883e360a6472ce316dc4e353aee1322eb0d18b"
+    },
+    {
+      "batch": 2,
+      "file_count": 50,
+      "bytes": 1864656,
+      "manifest": {
+        "path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/preaudit-browser-objects/batch-0002.json",
+        "bytes": 14891,
+        "sha256": "5a2290f04fa1aedaeacefc57870531ffad8725132f07b485510571ea4cd58d4c"
+      },
+      "paths_file": "/workspace/scratch/05b9e46fe96b/recovery-20261124/preaudit-browser-objects/batch-0002.paths.txt",
+      "paths_sha256": "15b4925abd79eb30c8ff36585394319350ae416f216fc80d4688e34d91d3e71a"
+    },
+    {
+      "batch": 3,
+      "file_count": 50,
+      "bytes": 1643129,
+      "manifest": {
+        "path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/preaudit-browser-objects/batch-0003.json",
+        "bytes": 14881,
+        "sha256": "101552127ab8029adfa65c855d3126adfcb638b8811e47cbd771d3c2bda13411"
+      },
+      "paths_file": "/workspace/scratch/05b9e46fe96b/recovery-20261124/preaudit-browser-objects/batch-0003.paths.txt",
+      "paths_sha256": "5e898a05bea6eeaa267275bb6b035499e7b52de97297aa5261963c496ceecdb4"
+    },
+    {
+      "batch": 4,
+      "file_count": 13,
+      "bytes": 297618,
+      "manifest": {
+        "path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/preaudit-browser-objects/batch-0004.json",
+        "bytes": 3966,
+        "sha256": "4cb8a205a0f4a4cf6661920be01d1130bf0a502b1b7c60e0bfd238a1adbf2e8c"
+      },
+      "paths_file": "/workspace/scratch/05b9e46fe96b/recovery-20261124/preaudit-browser-objects/batch-0004.paths.txt",
+      "paths_sha256": "1e0e8c91e6df3ee9c8fbded5ffdd736fd86c6c2adb739015b258b36c2e16f9ba"
+    }
+  ],
+  "all_target_blob_sha1_sha256_lengths_checked": true,
+  "all_tree_objects_independently_reconstructed": true,
+  "all_required_blobs_staged_by_exact_git_sha1": true,
+  "remote_operations_performed": false,
+  "mutating_git_commands_used": [],
+  "helper_sha256": "28c4071bbbd37cba9f90d428fe0dd3ef073cedd6d12aa51811f71a92af366143"
+}

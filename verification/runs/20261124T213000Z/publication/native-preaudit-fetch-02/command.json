@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "kind": "genuine_native_publication_command",
+  "attempt": "native-preaudit-fetch-02",
+  "command": [
+    "git",
+    "fetch",
+    "--no-tags",
+    "--no-write-fetch-head",
+    "https://github.com/fly31415926/overfull-lean.git",
+    "4f1d423a21c48526a4f879c33aff728a7e05bcae"
+  ],
+  "cwd": "/workspace/scratch/05b9e46fe96b/overfull-lean",
+  "environment_overrides": {
+    "GIT_TERMINAL_PROMPT": "0"
+  },
+  "recorder_sha256": "8596e229f529b2145569e576a7981370760b01c0dc2c782031cdfe875e797d9f",
+  "started_at_utc": "2026-11-24T22:10:25.960420+00:00",
+  "status": "passed",
+  "process_started": true,
+  "exit_code": 0,
+  "received_signals": [],
+  "process_group_signals": [],
+  "wrapper_errors": [],
+  "pid": 3,
+  "finished_at_utc": "2026-11-24T22:10:30.836255+00:00",
+  "elapsed_seconds": 4.875839284002723,
+  "wrapper_exit_code": 0,
+  "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "output_bytes": 0
+}

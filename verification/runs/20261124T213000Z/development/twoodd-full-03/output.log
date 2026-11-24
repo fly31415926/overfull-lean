@@ -1,0 +1,40 @@
+✔ [3586/3593] Built Overfull.TerminalFourTwoOdd.CutCertificates (2.4s)
+✔ [3587/3593] Built Overfull.TerminalFourTwoOdd.CentralGeometry (2.6s)
+✖ [3588/3593] Building Overfull.TerminalFourTwoOdd.Prefix (3.0s)
+trace: .> LEAN_PATH=/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean /workspace/scratch/05b9e46fe96b/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/05b9e46fe96b/overfull-lean/Overfull/TerminalFourTwoOdd/Prefix.lean -o /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/Prefix.olean -i /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/Prefix.ilean -c /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/Prefix.c --setup /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/Prefix.setup.json --json
+error: Overfull/TerminalFourTwoOdd/Prefix.lean:65:65: Type mismatch
+  (bounds 0).density
+has type
+  α * ↑n / 2 ≤ ↑(h - prefixRounds h)
+but is expected to have type
+  α / 2 * ↑(Fintype.card V) ≤ ↑(h - r)
+error: Lean exited with code 1
+✖ [3589/3593] Building Overfull.TerminalFourTwoOdd.CentralMatchings (2.3s)
+trace: .> LEAN_PATH=/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean /workspace/scratch/05b9e46fe96b/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/05b9e46fe96b/overfull-lean/Overfull/TerminalFourTwoOdd/CentralMatchings.lean -o /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/CentralMatchings.olean -i /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/CentralMatchings.ilean -c /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/CentralMatchings.c --setup /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/CentralMatchings.setup.json --json
+error: Overfull/TerminalFourTwoOdd/CentralMatchings.lean:59:6: Type mismatch: After simplification, term
+  hh
+ has type
+  centralMap S A ↑w ∈ (centralGraph G S A).edgeSupport (centralMatching G S A M)
+but is expected to have type
+  Sum.inl ⟨↑w, ⋯⟩ ∈ (centralGraph G S A).edgeSupport (centralMatching G S A M)
+error: Overfull/TerminalFourTwoOdd/CentralMatchings.lean:75:8: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a =>
+    @instDecidableRelSubset (CentralVertex S) (fun a b => instDecidableEqSum a b) ((centralGraph G S A).edge a).toFinset
+      (keptSet hWS)
+inferred
+  fun a =>
+    @instDecidableRelSubset (CentralVertex S) (fun a b => propDecidable (a = b)) ((centralGraph G S A).edge a).toFinset
+      (keptSet hWS)
+error: Lean exited with code 1
+✖ [3590/3593] Building Overfull.TerminalFourTwoOdd.CentralFactorization (7.8s)
+trace: .> LEAN_PATH=/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean /workspace/scratch/05b9e46fe96b/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/05b9e46fe96b/overfull-lean/Overfull/TerminalFourTwoOdd/CentralFactorization.lean -o /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/CentralFactorization.olean -i /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/CentralFactorization.ilean -c /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/CentralFactorization.c --setup /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/CentralFactorization.setup.json --json
+error: Overfull/TerminalFourTwoOdd/CentralFactorization.lean:61:4: mod_cast has type
+  C₀.graph.degree ⟨v, hv⟩ < Fintype.card { x // x ∈ U }
+but is expected to have type
+  C₀.graph.degree ⟨v, hv⟩ < #U
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.TerminalFourTwoOdd.Prefix
+- Overfull.TerminalFourTwoOdd.CentralMatchings
+- Overfull.TerminalFourTwoOdd.CentralFactorization
+error: build failed

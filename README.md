@@ -1,6 +1,58 @@
 # Lean formalization of the overfull manuscript
 
-## Current continuation: complete four-label compatible circuits
+## Current reconstruction: full terminal and regular four-core closure
+
+This continuation supplies complete endpoints for Proposition 4.16 and
+Theorem 4.17, including all parity cases with three or four ordinary robust
+cores. Its numbered inventory is **51/69**, leaving **18** assertions
+incomplete, including the main theorem. The fresh full verifier and
+preservation receipts in [the current run](verification/runs/20261124T213000Z/)
+establish whether this reconstructed source has passed; a source inventory or
+focused module build alone is not a full-project verification.
+
+| Assertion | Sole complete Lean endpoint | Objects factored |
+| --- | --- | --- |
+| Proposition 4.16 | `Overfull.frequent_pattern_result_one_factorization` | The actual frequent-pattern residual for any finite core index type of cardinality three or four. |
+| Theorem 4.17 | `Overfull.regular_core_one_factorization` | The original even-order simple regular non-overfull host, with the original linear error/exceptional budget. |
+
+Every positive tolerance and order threshold precedes the host. The full
+terminal endpoint transports the stored code, forest and actual pair supplies,
+and derives even order from positive regularity and no overfull set. The
+regular theorem retains `a + |Z| + 1 ≤ ε*n`, normalizes arbitrary positive
+density internally, derives nonnegative core error, and restores every deleted
+matching on its original edge copies. Its sufficient robust range is
+`0 < ν ≤ τ ≤ min(α,1)/256000`.
+
+The four-piece grouping bounds are proved on actual copy families: conflict
+at most `8D`, at most `4L` copies and at most `8L` support vertices per group.
+The two-odd construction retains **both even cores and their joining edges**
+in the central contraction. Actual matching cuts, their one-vertex toggles,
+and robust small-cut classification establish its no-overfull condition before
+applying the existing bounded-input factorization.
+
+The [proof map](docs/four-core-continuation-verification.md),
+[semantic review](docs/four-core-continuation-semantic-review.md),
+[exact source inventory](docs/four-core-continuation-source.json), and
+[handoff](docs/continuation-handoff.md) record the complete scope. The fresh run
+preserves genuine successful, failed and interrupted commands, frozen inputs,
+complete declaration maps, source-statement recovery and independent reviews.
+Publication receipts are recorded separately under its `publication/` directory.
+
+The baseline is public commit `1c9404a454c99fe5c11ba8d774cb9c259f291f20`,
+tree `087e26b5f004af1f9423a6f2b137d805f5991f1a` (49/69). The originally
+requested checkpoint `6e1c25d84920aacd6ac52e4b19032ad8c6a2ac7d` was not recovered.
+A first reconstruction reached a genuine full pass but lost its local checkout
+during an interrupted upload; only its exact recoverable objects are archived.
+This second reconstruction has its own source bytes and fresh execution
+receipts. It does not substitute a narrative for missing raw verification logs.
+
+The historical sections below retain the counts and scope recorded at those
+checkpoints. The current numbered inventory is the 51-row table below and
+[`docs/coverage.json`](docs/coverage.json), subject to the actual fresh full-run
+and preservation receipts. [The next target](docs/next-verification-target.md)
+is the nonregular three-ordinary-core composition.
+
+## Historical continuation: complete four-label compatible circuits
 
 **The unrestricted compatible-circuit theorem on at most four labels is now
 proved in Lean.** Every finite selected copy set in a loopless multigraph has
@@ -835,9 +887,11 @@ Overfull.mainTheorem_of_criticalExclusion
 | Lemma 2.22: robust auxiliary completion | `Overfull.robust_auxiliary_completion` | The least auxiliary order, even regular completion, original edge copies retained, simple added edges, a robust auxiliary core, and no overfull set |
 | Theorem 2.23: the robust partition | `Overfull.robust_partition` | Uniform constants before the graph; actual induced expanders and ordered almost bipartite parts; all size, edge-error, exceptional-degree, and `q+2ℓ` floor bounds |
 | Lemma 2.25: balanced-core extraction | `Overfull.BalancedCore.balanced_core_of_bipartite_outcome` | From the stated bipartite outcome, actual equal retained sides of size at least `n/3`, at most `6√ρn` deleted vertices, and crossing degrees between `Δ−8√ρn` and `Δ` |
+| Lemma 3.1: single ordinary core | `Overfull.single_core_coloring` | Full original-host maximum-degree coloring; no regularity or parity assumption, exact original error and exceptional budget |
 | Lemma 3.3: replacing a dense core | `Overfull.robust_core_replacement` | An actual robust replacement on the prescribed even vertex set, retaining the exterior and preserving the maximum-degree bound and every overfull-set inequality, with uniform constants |
 | Lemma 4.1: reserve repair | `Overfull.MatchingRepair.reserve_repair` | Uniform constants, actual disjoint repaired matchings perfect outside the prescribed sets, and degree at most `μm` in both the used-reserve and released-original-edge unions |
 | Lemma 4.2: ordinary-core factorization | `Overfull.ordinary_core_factorization`, `Overfull.ordinary_core_one_factorization` | Uniform constants before the host; bounded exterior and actual complementary coloring; exact partition of all original multigraph copies into perfect matchings |
+| Corollary 4.6: bounded-input factorization | `Overfull.bounded_input_one_factorization` | One robust core and at most three exceptions, or two robust cores and at most two exceptions; exact original-copy perfect matching partition |
 | Lemma 4.7: matching-deletion probabilities | `Overfull.MatchingProbability.Distribution.odd_failure_probability`, `even_toggles_failure_probability`, and `family_failure_probability` | All three probability bounds, with the actual residual graph identified; also generalized to loopless multigraphs |
 | Lemma 4.8: retaining prescribed exceptional edges | `Overfull.prescribed_exceptional_core_matching` | An actual perfect matching omitting at most `135720` prescribed matching edges, with all path, connectivity, parity, and Tutte conditions proved from the graph |
 | Lemma 4.9: preserving prescribed exceptional edges | `Overfull.safe_prescription` | An actual perfect matching retaining all but `c₁ = 2q₀ + 4c₀` prescribed edges, fixing the sampled boundary and leaving no overfull set, with uniform constants |
@@ -847,6 +901,8 @@ Overfull.mainTheorem_of_criticalExclusion
 | Lemma 4.13: frequent boundary patterns | `Overfull.frequent_boundary_patterns` | Actual safe perfect-matching deletions and complete exceptional absorption, degree and integer reserve at least `k/(3*b4(t))`, arbitrarily small relative core error, and actual matching-or-star pair and cut supply in the four-odd-part case; fixed output robustness precedes the error request |
 | Lemma 4.14: prescribed boundary extension | `Overfull.boundary_extension` | A proper `d`-coloring of every original edge copy incident with the odd robust core, agreeing exactly with the prescribed singleton/triple boundary labels; all error tolerances and order thresholds precede the graph and coloring |
 | Lemma 4.15: four odd parts | `Overfull.FourOdd.four_odd_parts_decomposition` | An exact partition of every original joining-edge copy into exactly `h` actual matchings projecting to perfect matchings or three-edge stars, with all remaining pieces actual matchings projecting to circuits of length two; the explicit error constant is `1/1000` |
+| Proposition 4.16: full terminal factorization | `Overfull.frequent_pattern_result_one_factorization` | Actual frequent-pattern residual; arbitrary finite three/four-core index type, every parity case, stored forest and pair supplies |
+| Theorem 4.17: regular three/four-core factorization | `Overfull.regular_core_one_factorization` | Original even regular simple non-overfull graph; linear budget `a + |Z| + 1 ≤ ε*n`; uniform constants and exact original-copy reconstruction |
 | Lemma 5.3: encoding a precoloring by triangles | `Overfull.dense_encoding` | Local balance, exact deficit identities, and both directions of the extension/decomposition equivalence |
 | Lemma 5.4: the explicit cycle absorber | `Overfull.Dense.CycleAbsorber.in_host` | Every positive cycle length; both triangle decompositions and the exact counts |
 | Lemma 5.5: the finite absorber | `Overfull.Dense.FiniteAbsorber.finite_absorber_subgraph` | One actual absorber for every allowed balanced remainder, with simultaneous placement and total size at most `4h²2^(h²)` |
@@ -860,7 +916,7 @@ Overfull.mainTheorem_of_criticalExclusion
 | Proposition 7.1: the sharpness family | `Overfull.sharpness_family` | Connectivity, order, maximum degree, class 2, edge count, and no overfull set |
 | Corollary 7.2: arbitrarily large examples below one quarter | `Overfull.arbitrarily_large_class_two_graphs` | Every real coefficient below `1/4` and every order threshold |
 
-These are 47 of the manuscript's 69 numbered assertions. The remaining 22, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
+These are 51 of the manuscript's 69 numbered assertions when the fresh full verifier and preservation gates pass. The remaining 18, including Theorem 1.1, have no complete proof here. Checked components of other assertions are listed separately in [`docs/coverage.json`](docs/coverage.json). The count records complete numbered statements, not the relative size or difficulty of the remaining work.
 
 ## Further checked inputs
 

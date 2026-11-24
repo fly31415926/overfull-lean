@@ -1,0 +1,37 @@
+[
+  {
+    "kind": "exact_coverage_promotion",
+    "old": "COMPLETED_NUMBERED_ASSERTION_COUNT = 49\n",
+    "new": "COMPLETED_NUMBERED_ASSERTION_COUNT = 51\n"
+  },
+  {
+    "kind": "additive",
+    "old": "                          (\"four_label_existence\", \"four-label-existence-source.json\"),\n",
+    "new": "                          (\"four_label_existence\", \"four-label-existence-source.json\"),\n                          (\"four_core_continuation\", \"four-core-continuation-source.json\"),\n"
+  },
+  {
+    "kind": "additive",
+    "old": "        raise SystemExit(\"Four-label existence closes no additional numbered manuscript assertion.\")\n",
+    "new": "        raise SystemExit(\"Four-label existence closes no additional numbered manuscript assertion.\")\n\n    four_core_source, _, four_core_public = extension_maps[\"four_core_continuation\"]\n    expected_four_core_assertions = [\n        {\"number\": \"4.16\", \"label\": \"three:prop:terminal\",\n         \"statement_sha256\": \"1ba102e379594ab72de4ba73cf41c88d9fbdadf1c132e2943b48da04e8c2cc1c\",\n         \"lean_theorems\": [\"Overfull.frequent_pattern_result_one_factorization\"]},\n        {\"number\": \"4.17\", \"label\": \"three:thm:regular-four\",\n         \"statement_sha256\": \"b271893680e87b1c06c35172a138050dbf84009964eb618dce53c53ba595e322\",\n         \"lean_theorems\": [\"Overfull.regular_core_one_factorization\"]},\n    ]\n    if (four_core_source[\"kind\"] != \"numbered_assertion_closure_with_supporting_continuations\"\n            or four_core_source[\"numbered_assertions_completed\"] != 2\n            or four_core_source[\"main_theorem_verified\"] is not False\n            or four_core_source[\"source_assertions\"] != expected_four_core_assertions\n            or four_core_source[\"public_theorems\"] != [\n                \"Overfull.frequent_pattern_result_one_factorization\",\n                \"Overfull.regular_core_one_factorization\"]\n            or not set(four_core_source[\"public_theorems\"]) <= set(four_core_public)):\n        raise SystemExit(\"Four-core continuation must identify exactly the complete pinned 4.16 and 4.17.\")\n"
+  },
+  {
+    "kind": "exact_coverage_promotion",
+    "old": "    for number in (\"2.24\", \"4.4\", \"4.5\", \"4.16\", \"6.1\", \"6.2\", \"6.3\"):\n",
+    "new": "    for number in (\"2.24\", \"4.4\", \"4.5\", \"6.1\", \"6.2\", \"6.3\"):\n"
+  },
+  {
+    "kind": "additive",
+    "old": "            raise SystemExit(f\"Assertion {number} is not completed by the registered supporting results.\")\n",
+    "new": "            raise SystemExit(f\"Assertion {number} is not completed by the registered supporting results.\")\n    for source_assertion in expected_four_core_assertions:\n        assertion = next(a for a in coverage[\"numbered_assertions\"]\n                         if a[\"number\"] == source_assertion[\"number\"])\n        if (assertion[\"labels\"] != [source_assertion[\"label\"]]\n                or assertion[\"statement_sha256\"] != source_assertion[\"statement_sha256\"]\n                or assertion[\"full_assertion_verified\"] is not True\n                or assertion[\"status\"] != \"fully_verified\"\n                or assertion.get(\"lean_theorems\") != source_assertion[\"lean_theorems\"]\n                or not set(assertion[\"lean_theorems\"]) <= audited_names):\n            raise SystemExit(\"Four-core numbered closure is not mapped to its exact pinned sole endpoint.\")\n"
+  },
+  {
+    "kind": "additive",
+    "old": "                    \"four_label_existence\": \"four-label-existence\",\n",
+    "new": "                    \"four_label_existence\": \"four-label-existence\",\n                    \"four_core_continuation\": \"four-core-continuation\",\n"
+  },
+  {
+    "kind": "additive",
+    "old": "        \"four_label_existence_declaration_map\": extension_evidence[\"four_label_existence\"],\n",
+    "new": "        \"four_label_existence_declaration_map\": extension_evidence[\"four_label_existence\"],\n        \"four_core_continuation_declaration_map\": extension_evidence[\"four_core_continuation\"],\n"
+  }
+]

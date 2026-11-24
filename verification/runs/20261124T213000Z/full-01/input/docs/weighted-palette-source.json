@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "c28cec49522e1537452ee9fdc3b2baf3ca1cc3b2",
+  "baseline_tree": "6a9e73eee4e944b104ff98630b04655e8bfb959d",
+  "baseline_publication_status": "published",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "scope": "Weighted palette extension preserving prescribed seeds and protected colors, resource-load and actual blocked-star-copy estimates, and finite Hall choice with asymmetric conflict bounds. These supporting constructions do not establish the exact remaining-star copy/free-color balance, complete actual exceptional-star assembly, native weighted wrappers, final robust factorization, full Corollary 4.6 or the main theorem.",
+  "review": "docs/weighted-palette-semantic-review.md",
+  "proof_map": "docs/weighted-palette-verification.md",
+  "module_count": 5,
+  "public_theorem_count": 41,
+  "modules": [
+    {
+      "module": "Overfull.WeightedPalette.AsymmetricHall",
+      "path": "Overfull/WeightedPalette/AsymmetricHall.lean",
+      "sha256": "89f1818188bf9677304fa264dbf4ae0f2e22e8079353bf73630bace9dc3425ea",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.CircuitPatterns.exists_equiv_of_asymmetric_conflicts",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.CircuitPatterns.star_hall_margin",
+          "source_line": 68
+        },
+        {
+          "name": "Overfull.CircuitPatterns.exists_star_equiv_of_conflict_bounds",
+          "source_line": 75
+        }
+      ]
+    },
+    {
+      "module": "Overfull.WeightedPalette.Extension",
+      "path": "Overfull/WeightedPalette/Extension.lean",
+      "sha256": "c01cbd4e88b1800b5d5cc495ba2e7348686972e9e633e7f7330e2d78e39411ac",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.exists_weighted_palette_extension",
+          "source_line": 27
+        }
+      ]
+    },
+    {
+      "module": "Overfull.WeightedPalette.Grouping",
+      "path": "Overfull/WeightedPalette/Grouping.lean",
+      "sha256": "3f1d6ff5e30f6f3fd7b20274177b3c9376c0215dacbce3e01e33cc552b187944",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.WeightedPalette.groupedCopies_eq_seed_on_protected_color",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.WeightedPalette.exists_star_weighted_matching_grouping",
+          "source_line": 58
+        }
+      ]
+    },
+    {
+      "module": "Overfull.WeightedPalette.Loads",
+      "path": "Overfull/WeightedPalette/Loads.lean",
+      "sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4",
+      "public_theorem_count": 18,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.mem_overloadedPalettes",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.NativeReserve.notMem_overloadedPalettes",
+          "source_line": 37
+        },
+        {
+          "name": "Overfull.NativeReserve.paletteWeight_empty",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.NativeReserve.paletteWeight_sum",
+          "source_line": 47
+        },
+        {
+          "name": "Overfull.NativeReserve.paletteWeight_mono",
+          "source_line": 52
+        },
+        {
+          "name": "Overfull.NativeReserve.paletteWeight_congr",
+          "source_line": 59
+        },
+        {
+          "name": "Overfull.NativeReserve.paletteWeight_insert",
+          "source_line": 69
+        },
+        {
+          "name": "Overfull.NativeReserve.paletteWeight_update_of_notMem",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.NativeReserve.paletteWeight_insert_update",
+          "source_line": 90
+        },
+        {
+          "name": "Overfull.NativeReserve.overloadedPalettes_mul_le",
+          "source_line": 99
+        },
+        {
+          "name": "Overfull.NativeReserve.overloadedPalettes_card_le",
+          "source_line": 114
+        },
+        {
+          "name": "Overfull.NativeReserve.overloadedPalettes_card_le_of_subset",
+          "source_line": 122
+        },
+        {
+          "name": "Overfull.NativeReserve.weighted_palette_item_bound",
+          "source_line": 130
+        },
+        {
+          "name": "Overfull.NativeReserve.weighted_palette_threshold",
+          "source_line": 136
+        },
+        {
+          "name": "Overfull.NativeReserve.overloadedPalettes_card_le_thirteen",
+          "source_line": 142
+        },
+        {
+          "name": "Overfull.NativeReserve.weighted_palette_protected_margin",
+          "source_line": 155
+        },
+        {
+          "name": "Overfull.NativeReserve.weighted_palette_protected_gap",
+          "source_line": 161
+        },
+        {
+          "name": "Overfull.NativeReserve.weighted_palette_hall_bounds",
+          "source_line": 168
+        }
+      ]
+    },
+    {
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "path": "Overfull/WeightedPalette/StarWeights.lean",
+      "sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f",
+      "public_theorem_count": 17,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.WeightedPalette.mem_starBlockedCopies",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.WeightedPalette.exceptionCorePool_eq_edgesTo",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.WeightedPalette.starBlockedCopies_eq_edgesTo",
+          "source_line": 45
+        },
+        {
+          "name": "Overfull.WeightedPalette.starBlockedCopies_subset",
+          "source_line": 53
+        },
+        {
+          "name": "Overfull.WeightedPalette.starWeight_eq_sum_parallel",
+          "source_line": 59
+        },
+        {
+          "name": "Overfull.WeightedPalette.starWeight_le_inter_support_mul",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.WeightedPalette.starWeight_le_support_mul",
+          "source_line": 91
+        },
+        {
+          "name": "Overfull.WeightedPalette.starWeight_le_six_mul",
+          "source_line": 98
+        },
+        {
+          "name": "Overfull.WeightedPalette.starWeight_le_four_mul",
+          "source_line": 105
+        },
+        {
+          "name": "Overfull.WeightedPalette.sum_starWeight_eq_sum_support_load",
+          "source_line": 114
+        },
+        {
+          "name": "Overfull.WeightedPalette.sum_starWeight_le_of_support_load",
+          "source_line": 124
+        },
+        {
+          "name": "Overfull.WeightedPalette.sum_starWeight_le_of_degreeOn",
+          "source_line": 140
+        },
+        {
+          "name": "Overfull.WeightedPalette.exceptionCorePool_card_le_degree",
+          "source_line": 151
+        },
+        {
+          "name": "Overfull.WeightedPalette.sum_starWeight_le_mul_degree_bound",
+          "source_line": 158
+        },
+        {
+          "name": "Overfull.WeightedPalette.starBlockedCopies_biUnion",
+          "source_line": 168
+        },
+        {
+          "name": "Overfull.WeightedPalette.starWeight_biUnion_le",
+          "source_line": 189
+        },
+        {
+          "name": "Overfull.WeightedPalette.starWeight_groupedCopies_le",
+          "source_line": 197
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.CircuitPatterns.exists_equiv_of_asymmetric_conflicts",
+    "Overfull.CircuitPatterns.exists_star_equiv_of_conflict_bounds",
+    "Overfull.CircuitPatterns.star_hall_margin",
+    "Overfull.NativeReserve.exists_weighted_palette_extension",
+    "Overfull.NativeReserve.mem_overloadedPalettes",
+    "Overfull.NativeReserve.notMem_overloadedPalettes",
+    "Overfull.NativeReserve.overloadedPalettes_card_le",
+    "Overfull.NativeReserve.overloadedPalettes_card_le_of_subset",
+    "Overfull.NativeReserve.overloadedPalettes_card_le_thirteen",
+    "Overfull.NativeReserve.overloadedPalettes_mul_le",
+    "Overfull.NativeReserve.paletteWeight_congr",
+    "Overfull.NativeReserve.paletteWeight_empty",
+    "Overfull.NativeReserve.paletteWeight_insert",
+    "Overfull.NativeReserve.paletteWeight_insert_update",
+    "Overfull.NativeReserve.paletteWeight_mono",
+    "Overfull.NativeReserve.paletteWeight_sum",
+    "Overfull.NativeReserve.paletteWeight_update_of_notMem",
+    "Overfull.NativeReserve.weighted_palette_hall_bounds",
+    "Overfull.NativeReserve.weighted_palette_item_bound",
+    "Overfull.NativeReserve.weighted_palette_protected_gap",
+    "Overfull.NativeReserve.weighted_palette_protected_margin",
+    "Overfull.NativeReserve.weighted_palette_threshold",
+    "Overfull.WeightedPalette.exceptionCorePool_card_le_degree",
+    "Overfull.WeightedPalette.exceptionCorePool_eq_edgesTo",
+    "Overfull.WeightedPalette.exists_star_weighted_matching_grouping",
+    "Overfull.WeightedPalette.groupedCopies_eq_seed_on_protected_color",
+    "Overfull.WeightedPalette.mem_starBlockedCopies",
+    "Overfull.WeightedPalette.starBlockedCopies_biUnion",
+    "Overfull.WeightedPalette.starBlockedCopies_eq_edgesTo",
+    "Overfull.WeightedPalette.starBlockedCopies_subset",
+    "Overfull.WeightedPalette.starWeight_biUnion_le",
+    "Overfull.WeightedPalette.starWeight_eq_sum_parallel",
+    "Overfull.WeightedPalette.starWeight_groupedCopies_le",
+    "Overfull.WeightedPalette.starWeight_le_four_mul",
+    "Overfull.WeightedPalette.starWeight_le_inter_support_mul",
+    "Overfull.WeightedPalette.starWeight_le_six_mul",
+    "Overfull.WeightedPalette.starWeight_le_support_mul",
+    "Overfull.WeightedPalette.sum_starWeight_eq_sum_support_load",
+    "Overfull.WeightedPalette.sum_starWeight_le_mul_degree_bound",
+    "Overfull.WeightedPalette.sum_starWeight_le_of_degreeOn",
+    "Overfull.WeightedPalette.sum_starWeight_le_of_support_load"
+  ]
+}

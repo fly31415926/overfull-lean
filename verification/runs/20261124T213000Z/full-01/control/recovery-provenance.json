@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-24T21:32:18.105634+00:00",
+  "original_requested_checkpoint": "6e1c25d84920aacd6ac52e4b19032ad8c6a2ac7d",
+  "original_checkpoint_recovered": false,
+  "prior_local_reconstructed_commit": "d01ec0006621c0e90a0917169497073dad22c513",
+  "prior_local_reconstructed_tree": "c8ceb55dc5c8e2452cd07bf27fa583c4ebdf5d55",
+  "prior_local_raw_full_run_available": false,
+  "prior_full_run_directory": "verification/runs/20261124T173400Z/full-01",
+  "current_run": "verification/runs/20261124T213000Z",
+  "baseline_public_commit": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+  "new_verification_required": true,
+  "recovered_exact_bytes": [
+    {
+      "path": "scripts/verify.py",
+      "git_blob_sha1": "4ff0ffb4cdf316c34b747aa69eeed73f59b618ed",
+      "provenance": "public blob written during interrupted prior publication; fetched and hash checked",
+      "receipt": "recovered-verifier-provenance.json"
+    }
+  ],
+  "evidence_policy": "Earlier reported successful verification does not replace a current raw full-run receipt. Unavailable earlier logs are not synthesized. Current actual successful and failed commands and source snapshots are retained. Other recovered files are inventoried separately by the recovery owner.",
+  "exact_recovered_object_inventory": "recovered-evidence/recovery-index.json",
+  "all_recovered_bytes_index": "recovered-evidence-index.json",
+  "exact_recovered_blob_count": 11,
+  "raw_get_responses_and_absence_readbacks_preserved": true
+}

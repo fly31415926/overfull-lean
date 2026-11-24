@@ -1,0 +1,46 @@
+✔ [3671/3701] Built Overfull.CircuitPatterns.WholeUnions (3.6s)
+✔ [3672/3701] Built Overfull.ForeignEdges.PreparationRule (3.9s)
+✔ [3674/3705] Built Overfull.ForeignEdges.Concatenation (4.1s)
+✔ [3675/3705] Built Overfull.Absorption.Potential (4.1s)
+✔ [3676/3705] Built Overfull.ForeignEdges.FinalCount (4.4s)
+✔ [3677/3705] Built Overfull.ForeignEdges.SmallCutRefinement (4.6s)
+✔ [3678/3705] Built Overfull.ForceMatching.SafeCompletion (4.6s)
+✔ [3679/3705] Built Overfull.CircuitPatterns.SelectedSafety (3.2s)
+✔ [3680/3705] Built Overfull.Absorption.SecondAbsorption (3.0s)
+✔ [3681/3705] Built Overfull.CircuitPatterns.Parameters (7.8s)
+✔ [3682/3705] Built Overfull.ForceMatching (3.3s)
+✔ [3683/3705] Built Overfull.Absorption.ThresholdsSchedule (4.1s)
+✔ [3684/3705] Built Overfull.ForeignEdges.EpochParameters (9.3s)
+✔ [3685/3705] Built Overfull.ForeignEdges.RefinementHistory (4.9s)
+✔ [3686/3705] Built Overfull.Absorption.Result (2.4s)
+✔ [3687/3705] Built Overfull.ForceMatching.Adaptive (3.0s)
+✔ [3688/3705] Built Overfull.Absorption.PhaseParameters (7.8s)
+✔ [3689/3705] Built Overfull.ForeignEdges.GlobalParameters (3.5s)
+✔ [3690/3705] Built Overfull.ForeignEdges.Epoch (4.1s)
+✔ [3691/3705] Built Overfull.Absorption.ForcingProcess (3.3s)
+✔ [3692/3705] Built Overfull.ForeignEdges.ProcessState (3.8s)
+✔ [3693/3705] Built Overfull.ForeignEdges.EpochConclusion (3.9s)
+✔ [3694/3705] Built Overfull.ForeignEdges.PrefixParameters (4.3s)
+✔ [3695/3705] Built Overfull.CircuitPatterns.Frequent (9.8s)
+✔ [3696/3705] Built Overfull.Absorption.Bounded (5.0s)
+✔ [3697/3705] Built Overfull.ForeignEdges.ProcessParameters (3.1s)
+✖ [3698/3705] Building Overfull.FourCoreReduction.Frequent (3.2s)
+trace: .> LEAN_PATH=/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean /workspace/scratch/05b9e46fe96b/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/05b9e46fe96b/overfull-lean/Overfull/FourCoreReduction/Frequent.lean -o /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/FourCoreReduction/Frequent.olean -i /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/FourCoreReduction/Frequent.ilean -c /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/FourCoreReduction/Frequent.c --setup /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/FourCoreReduction/Frequent.setup.json --json
+error: Overfull/FourCoreReduction/Frequent.lean:110:35: Application type mismatch: The argument
+  hcoverM
+has type
+  @Finset.biUnion (Fin RT.h) (↑RT.G.edgeSet) (fun a b => Subtype.instDecidableEq a b) univ M = univ
+but is expected to have type
+  @Finset.biUnion (Fin R.h) (↑R.G.edgeSet) (fun a b => propDecidable (a = b)) univ M = univ
+in the application
+  coloring_from_covering_matchings (Multigraph.ofSimpleGraph R.G) R.h M
+    (fun i => Multigraph.IsPerfectMatching.isMatching (Multigraph.ofSimpleGraph RT.G) (hM i)) hcoverM
+error: Lean exited with code 1
+✔ [3700/3705] Built Overfull.ForeignEdges.ProcessRefinement (2.3s)
+✔ [3701/3705] Built Overfull.ForeignEdges.ReductionResult (2.8s)
+✔ [3702/3705] Built Overfull.ForeignEdges.ConfiguredEpoch (3.0s)
+✔ [3703/3705] Built Overfull.ForeignEdges.Reduction (2.8s)
+✔ [3704/3705] Built Overfull.ForeignEdges.ReductionError (2.6s)
+Some required targets logged failures:
+- Overfull.FourCoreReduction.Frequent
+error: build failed

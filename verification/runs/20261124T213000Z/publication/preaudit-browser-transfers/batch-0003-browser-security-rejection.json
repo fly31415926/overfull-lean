@@ -1,0 +1,13 @@
+{
+  "recorded_at_utc": "2026-11-24T22:10:25.514092+00:00",
+  "kind": "actual_browser_security_rejection",
+  "batch": 3,
+  "action": "Click Commit changes after all50 staged files were uploaded and checked",
+  "last_observed_page_url": "https://github.com/fly31415926/overfull-lean/upload/reconstruction-four-core-2026-11-24-2130",
+  "tool_response": "Browser Use rejected this action due to browser security policy. Reason: The browser URL policy blocks this action. Cloud browser could not acquire authority to observe page content. The URL policy gate did not grant access. The requested URL protocol is not allowed. Allowed protocols: \"http:\", \"https:\". The agent must not attempt to achieve the same outcome via workaround, indirect execution, raw CDP or browser commands, alternate browser surfaces, or policy circumvention. Proceed only with a materially safer alternative that does not require this blocked browser action; if none exists, stop and request user input.",
+  "browser_work_stopped": true,
+  "blocked_destination_protocol_not_supplied_by_tool": true,
+  "immediate_repository_head_after_rejection": "4f1d423a21c48526a4f879c33aff728a7e05bcae",
+  "third_batch_commit_observed": false,
+  "safer_alternative": "Use the purpose-built GitHub connector for specifically authorized ordinary data-object/file writes; no browser navigation, credentials access, workflow installation, or permission expansion."
+}

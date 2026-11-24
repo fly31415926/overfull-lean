@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/05b9e46fe96b/overfull-lean/verification/runs/20261124T213000Z/publication/preflight.py", line 13, in <module>
+    result = checks.preflight()
+             ^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/05b9e46fe96b/overfull-lean/verification/runs/20261124T213000Z/check-preservation.py", line 326, in preflight
+    require((ROOT / 'Overfull.lean').read_text() == expected, 'Root changed beyond recorded additive imports')
+  File "/workspace/scratch/05b9e46fe96b/overfull-lean/verification/runs/20261124T213000Z/check-preservation.py", line 32, in require
+    raise RuntimeError(message)
+RuntimeError: Root changed beyond recorded additive imports

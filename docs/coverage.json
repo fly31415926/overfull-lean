@@ -8,8 +8,8 @@
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
-  "fully_verified_numbered_assertion_count": 49,
-  "scope": "Complete Lemma 3.1 for an arbitrary finite simple graph with actual maximum degree at least one quarter of its order, no maximum-degree-overfull set, a spanning ordinary robust core on at least one quarter of the vertices, and the literal combined degree-error/exceptional-cover budget. Positive error tolerance and order threshold precede the host and all graph-dependent data. The proof derives nonnegative error, permits overlap in the displayed cover, and assumes neither regularity nor even order. Its conclusion is a proper coloring of the original simple graph with exactly its maximum-degree palette. The sufficient fixed robust range is 0 < nu <= tau <= 1/4096000. Supporting continuations prove three-core regular factorization, the original-host all-four-odd terminal subcase, and four-label compatible circuits of degree exactly four at every label. Coverage is 49 of 69; only Lemma 3.1 is promoted. All other 68 assertion records and all 69 statement identities are preserved. Full Proposition 4.16, full Theorem 4.17, the remaining global and bipartite inputs, and the main theorem remain unproved.",
+  "fully_verified_numbered_assertion_count": 51,
+  "scope": "The current four-core continuation completes the exact pinned Proposition 4.16 and Theorem 4.17, bringing complete numbered coverage to 51 of 69 after a successful genuine full verification and preservation check. The main theorem remains unverified. All other 67 numbered records and all 69 statement identities are preserved. Historical scope descriptions in unchanged earlier records describe their corresponding checkpoints. Complete Proposition 4.16 for the actual CircuitPatterns.FrequentPatternResult, on an arbitrary finite core index type of cardinality three or four. Uniform tolerances and the order threshold precede the host and result. The proof uses the result's actual stored pattern, forest and pair supplies, exhausts all parity cases, and constructs a one-factorization on the original copies. The positive regular no-overfull assumptions imply the ambient even order. Complete Theorem 4.17 for the original even-order finite simple regular host with no overfull set, three or four disjoint robust cores, and the exceptional set. The original linear budget a + |Z| + 1 <= epsilon*n is retained. An arbitrary positive density is normalized internally, the core error's nonnegativity is derived, and all tolerances precede the host. The whole tolerance function is chosen before bounded absorption fixes its exceptional bound. All prefixes are restored on original edge copies.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -5140,6 +5140,30 @@
       "manuscript_locations": [
         "three:prop:terminal"
       ]
+    },
+    {
+      "id": "frequent_pattern_terminal_full",
+      "kind": "graph_theoretic_result",
+      "description": "Complete Proposition 4.16 for the actual CircuitPatterns.FrequentPatternResult, on an arbitrary finite core index type of cardinality three or four. Uniform tolerances and the order threshold precede the host and result. The proof uses the result's actual stored pattern, forest and pair supplies, exhausts all parity cases, and constructs a one-factorization on the original copies. The positive regular no-overfull assumptions imply the ambient even order.",
+      "lean_declarations": [
+        "Overfull.frequent_pattern_result_one_factorization"
+      ],
+      "scope_limit": "Exact pinned numbered assertion; the main theorem remains unverified.",
+      "manuscript_locations": [
+        "three:prop:terminal"
+      ]
+    },
+    {
+      "id": "regular_three_four_core_full",
+      "kind": "graph_theoretic_result",
+      "description": "Complete Theorem 4.17 for the original even-order finite simple regular host with no overfull set, three or four disjoint robust cores, and the exceptional set. The original linear budget a + |Z| + 1 <= epsilon*n is retained. An arbitrary positive density is normalized internally, the core error's nonnegativity is derived, and all tolerances precede the host. The whole tolerance function is chosen before bounded absorption fixes its exceptional bound. All prefixes are restored on original edge copies.",
+      "lean_declarations": [
+        "Overfull.regular_core_one_factorization"
+      ],
+      "scope_limit": "Exact pinned numbered assertion; the main theorem remains unverified.",
+      "manuscript_locations": [
+        "three:thm:regular-four"
+      ]
     }
   ],
   "numbered_assertions": [
@@ -6355,10 +6379,16 @@
         3238
       ],
       "statement_sha256": "1ba102e379594ab72de4ba73cf41c88d9fbdadf1c132e2943b48da04e8c2cc1c",
-      "full_assertion_verified": false,
-      "status": "not_formalized_here",
-      "checked_components": [],
-      "imported_statement": false
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "frequent_pattern_terminal_full"
+      ],
+      "imported_statement": false,
+      "formalization_scope": "Complete Proposition 4.16 for the actual CircuitPatterns.FrequentPatternResult, on an arbitrary finite core index type of cardinality three or four. Uniform tolerances and the order threshold precede the host and result. The proof uses the result's actual stored pattern, forest and pair supplies, exhausts all parity cases, and constructs a one-factorization on the original copies. The positive regular no-overfull assumptions imply the ambient even order.",
+      "lean_theorems": [
+        "Overfull.frequent_pattern_result_one_factorization"
+      ]
     },
     {
       "number": "4.17",
@@ -6372,10 +6402,16 @@
         3365
       ],
       "statement_sha256": "b271893680e87b1c06c35172a138050dbf84009964eb618dce53c53ba595e322",
-      "full_assertion_verified": false,
-      "status": "not_formalized_here",
-      "checked_components": [],
-      "imported_statement": false
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "regular_three_four_core_full"
+      ],
+      "imported_statement": false,
+      "formalization_scope": "Complete Theorem 4.17 for the original even-order finite simple regular host with no overfull set, three or four disjoint robust cores, and the exceptional set. The original linear budget a + |Z| + 1 <= epsilon*n is retained. An arbitrary positive density is normalized internally, the core error's nonnegativity is derived, and all tolerances precede the host. The whole tolerance function is chosen before bounded absorption fixes its exceptional bound. All prefixes are restored on original edge copies.",
+      "lean_theorems": [
+        "Overfull.regular_core_one_factorization"
+      ]
     },
     {
       "number": "5.1",

@@ -1,0 +1,20 @@
+✔ [3592/3593] Built Overfull.TerminalFourTwoOdd.Completed (2.8s)
+✖ [3593/3593] Building Overfull.TerminalFourTwoOdd.Theorem (2.0s)
+trace: .> LEAN_PATH=/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean /workspace/scratch/05b9e46fe96b/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/05b9e46fe96b/overfull-lean/Overfull/TerminalFourTwoOdd/Theorem.lean -o /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/Theorem.olean -i /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/Theorem.ilean -c /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/Theorem.c --setup /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/Theorem.setup.json --json
+error: Overfull/TerminalFourTwoOdd/Theorem.lean:56:2: Type mismatch
+  BoundedExterior.exists_oneFactorization_of_coloring (Multigraph.ofSimpleGraph G) h
+    (Eq.mpr (id (forall_congr fun v => congrArg (fun x => x = h) (Multigraph.ofSimpleGraph_degree G v))) hregular) c
+has type
+  ∃ M,
+    (∀ (i : Fin h), (Multigraph.ofSimpleGraph G).IsPerfectMatching (M i)) ∧
+      (Pairwise fun i j => Disjoint (M i) (M j)) ∧
+        @Finset.biUnion (Fin h) (↑G.edgeSet) (fun a b => propDecidable (a = b)) univ M = univ
+but is expected to have type
+  ∃ M,
+    (∀ (i : Fin h), (Multigraph.ofSimpleGraph G).IsPerfectMatching (M i)) ∧
+      (Pairwise fun i j => Disjoint (M i) (M j)) ∧
+        @Finset.biUnion (Fin h) (↑G.edgeSet) (fun a b => Subtype.instDecidableEq a b) univ M = univ
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.TerminalFourTwoOdd.Theorem
+error: build failed

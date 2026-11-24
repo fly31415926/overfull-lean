@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "This action was rejected due to unacceptable risk.\nReason: The tree would persistently add a GitHub Actions workflow with `contents: write` that executes repository code and pushes a proof branch, creating a durable privileged automation path; the user authorized publication of the proof data but did not explicitly authorize installing this persistent write-capable workflow or its security scope.\nDo not bypass this rejection through a workaround or indirect execution. Continue with a safer alternative, or carry out checks to prove that the action is authorized or low risk before trying again. Complete unaffected work without asking for confirmation. Report anything that remains blocked, clarify why it was blocked by auto-review, inform the user of the risk and ask for approval."
+    }
+  ],
+  "isError": true
+}

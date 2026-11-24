@@ -1,0 +1,271 @@
+✔ [3588/3593] Built Overfull.TerminalFourTwoOdd.CentralMatchings (2.4s)
+✔ [3589/3593] Built Overfull.TerminalFourTwoOdd.Prefix (3.0s)
+✔ [3590/3593] Built Overfull.TerminalFourTwoOdd.CentralFactorization (7.7s)
+✖ [3591/3593] Building Overfull.TerminalFourTwoOdd.ResidualColoring (3.5s)
+trace: .> LEAN_PATH=/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean /workspace/scratch/05b9e46fe96b/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/05b9e46fe96b/overfull-lean/Overfull/TerminalFourTwoOdd/ResidualColoring.lean -o /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/ResidualColoring.olean -i /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourTwoOdd/ResidualColoring.ilean -c /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/ResidualColoring.c --setup /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourTwoOdd/ResidualColoring.setup.json --json
+error: Overfull/TerminalFourTwoOdd/ResidualColoring.lean:149:21: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  #(keptSet ?hWS \ (centralGraph ?G ?S ?A).edgeSupport (centralMatching ?G ?S ?A ?M))
+in the target expression
+  Even #(keptSet ⋯ \ (centralGraph G S A).edgeSupport (MC j))
+
+α ν τ : ℝ
+hα : 0 < α
+hα1 : α ≤ 1
+hν : 0 < ν
+hντ : ν ≤ τ
+hτ : τ ≤ α / 64
+εC : ℝ
+hεC : 0 < εC
+mC : ℕ
+hcentral :
+  ∀ (V : Type u_1) (E : Type u_2) [inst : Fintype V] [inst_1 : Fintype E] (G : Multigraph V E) (U W Z : Finset V)
+    (C₀ : Core G U) (C₁ : Core G W) (k : ℕ) (a : ℝ),
+    mC ≤ Fintype.card V →
+      Even (Fintype.card V) →
+        Disjoint U W →
+          Disjoint U Z →
+            Disjoint W Z →
+              (∀ (v : V), v ∈ U ∨ v ∈ W ∨ v ∈ Z) →
+                #Z ≤ 2 →
+                  (∀ (v : V), G.degree v = k) →
+                    α * ↑(Fintype.card V) ≤ ↑k →
+                      α * ↑(Fintype.card V) ≤ ↑(#U) →
+                        α * ↑(Fintype.card V) ≤ ↑(#W) →
+                          IsRobustExpander C₀.graph ν τ →
+                            IsRobustExpander C₁.graph ν τ →
+                              a ≤ εC * ↑(Fintype.card V) →
+                                (∀ (v : { x // x ∈ U }), ↑k - a ≤ ↑(C₀.graph.degree v)) →
+                                  (∀ (v : { x // x ∈ W }), ↑k - a ≤ ↑(C₁.graph.degree v)) →
+                                    ∀ (M : Fin k → Finset E),
+                                      (∀ (j : Fin k), G.IsMatching (M j)) →
+                                        (Pairwise fun i j => Disjoint (M i) (M j)) →
+                                          (∀ e ∉ G.internalEdges U, e ∉ G.internalEdges W → ∃ j, e ∈ M j) →
+                                            (∀ (j : Fin k), Z ⊆ G.edgeSupport (M j)) →
+                                              (∀ (j : Fin k), Even #(U \ G.edgeSupport (M j))) →
+                                                (∀ (j : Fin k), Even #(W \ G.edgeSupport (M j))) →
+                                                  Nonempty (G.EdgeColoring k)
+hτleaf : τ ≤ min α 1 / 16
+εL : ℝ
+hεL : 0 < εL
+mL : ℕ
+hleaf :
+  ∀ (V : Type ?u.8553) (E : Type ?u.8552) [inst : Fintype E] (G : Multigraph V E) (A U : Finset V) (C : Core G U)
+    (k : ℕ) (a : ℝ),
+    U ⊆ A →
+      mL ≤ #U →
+        #(A \ U) ≤ 0 →
+          (∀ v ∈ A, G.degree v = k) →
+            α * ↑(#U) ≤ ↑k →
+              IsRobustExpander C.graph ν τ →
+                a ≤ εL * ↑(#U) →
+                  (∀ (v : { x // x ∈ U }), ↑k - a ≤ ↑(C.graph.degree v)) →
+                    G.internalEdges (A \ U) = ∅ →
+                      (G.cutEdges A = ∅ → Even #A → Nonempty ((retainedGraph G A).EdgeColoring k)) ∧
+                        (G.cutSize A = k →
+                          Odd #A →
+                            (∀ e ∈ G.cutEdges A, ∀ v ∈ G.edge e, v ∈ A → v ∈ U) →
+                              Nonempty ((contract G A).EdgeColoring k))
+V : Type u_1
+E : Type u_2
+inst✝¹ : Fintype V
+inst✝ : Fintype E
+G : Multigraph V E
+U W A B : Finset V
+C₀ : Core G U
+C₁ : Core G W
+C₂ : Core G A
+C₃ : Core G B
+k : ℕ
+a : ℝ
+hUW : Disjoint U W
+hUA : Disjoint U A
+hUB : Disjoint U B
+hWA : Disjoint W A
+hWB : Disjoint W B
+hAB : Disjoint A B
+hcover : ∀ (v : V), v ∈ U ∨ v ∈ W ∨ v ∈ A ∨ v ∈ B
+hU : Even #U
+hW : Even #W
+hA : Odd #A
+hB : Odd #B
+hmU : max mC mL ≤ #U
+hmW : max mC mL ≤ #W
+hmA : max mC mL ≤ #A
+hmB : max mC mL ≤ #B
+hregular : ∀ (v : V), G.degree v = k
+hk : α * ↑(Fintype.card V) ≤ ↑k
+hsizeU : α * ↑(Fintype.card V) ≤ ↑(#U)
+hsizeW : α * ↑(Fintype.card V) ≤ ↑(#W)
+hrobU : IsRobustExpander C₀.graph ν τ
+hrobW : IsRobustExpander C₁.graph ν τ
+hrobA : IsRobustExpander C₂.graph ν τ
+hrobB : IsRobustExpander C₃.graph ν τ
+haU : a ≤ min εC εL * ↑(#U)
+_haW : a ≤ min εC εL * ↑(#W)
+haA : a ≤ min εC εL * ↑(#A)
+haB : a ≤ min εC εL * ↑(#B)
+hdegU : ∀ (v : { x // x ∈ U }), ↑k - a ≤ ↑(C₀.graph.degree v)
+hdegW : ∀ (v : { x // x ∈ W }), ↑k - a ≤ ↑(C₁.graph.degree v)
+hdegA : ∀ (v : { x // x ∈ A }), ↑k - a ≤ ↑(C₂.graph.degree v)
+hdegB : ∀ (v : { x // x ∈ B }), ↑k - a ≤ ↑(C₃.graph.degree v)
+M : Fin k → Finset E
+hM : ∀ (j : Fin k), G.IsMatching (M j)
+hdM : Pairwise fun i j => Disjoint (M i) (M j)
+hcoverM : ∀ e ∉ G.internalEdges U, e ∉ G.internalEdges W → e ∉ G.internalEdges A → e ∉ G.internalEdges B → ∃ j, e ∈ M j
+hcrossA : ∀ (j : Fin k), #(M j ∩ G.cutEdges A) = 1
+hcrossB : ∀ (j : Fin k), #(M j ∩ G.cutEdges B) = 1
+hparU : ∀ (j : Fin k), Even #(U \ G.edgeSupport (M j))
+hparW : ∀ (j : Fin k), Even #(W \ G.edgeSupport (M j))
+S : Finset V := U ∪ W
+hSA : Disjoint S A
+hSB : Disjoint S B
+hcoverS : ∀ (v : V), v ∈ S ∨ v ∈ A ∨ v ∈ B
+hcutA : G.cutSize A = k
+hcutB : G.cutSize B = k
+hS_even : Even #S
+hpartition : S ∪ A ∪ B = univ
+hcard : #S + #A + #B = Fintype.card V
+hAn : #A % 2 = 1
+hBn : #B % 2 = 1
+hcentral_le : Fintype.card (CentralVertex S) ≤ Fintype.card V
+hcentral_leR : ↑(Fintype.card (CentralVertex S)) ≤ ↑(Fintype.card V)
+hUcentral : #U ≤ Fintype.card (CentralVertex S)
+haUC : a ≤ εC * ↑(#U)
+MC : Fin k → Finset (CentralEdge G S A) := fun j => centralMatching G S A (M j)
+j : Fin k
+⊢ Even #(keptSet ⋯ \ (centralGraph G S A).edgeSupport (MC j))
+error: Overfull/TerminalFourTwoOdd/ResidualColoring.lean:150:21: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  #(keptSet ?hWS \ (centralGraph ?G ?S ?A).edgeSupport (centralMatching ?G ?S ?A ?M))
+in the target expression
+  Even #(keptSet ⋯ \ (centralGraph G S A).edgeSupport (MC j))
+
+α ν τ : ℝ
+hα : 0 < α
+hα1 : α ≤ 1
+hν : 0 < ν
+hντ : ν ≤ τ
+hτ : τ ≤ α / 64
+εC : ℝ
+hεC : 0 < εC
+mC : ℕ
+hcentral :
+  ∀ (V : Type u_1) (E : Type u_2) [inst : Fintype V] [inst_1 : Fintype E] (G : Multigraph V E) (U W Z : Finset V)
+    (C₀ : Core G U) (C₁ : Core G W) (k : ℕ) (a : ℝ),
+    mC ≤ Fintype.card V →
+      Even (Fintype.card V) →
+        Disjoint U W →
+          Disjoint U Z →
+            Disjoint W Z →
+              (∀ (v : V), v ∈ U ∨ v ∈ W ∨ v ∈ Z) →
+                #Z ≤ 2 →
+                  (∀ (v : V), G.degree v = k) →
+                    α * ↑(Fintype.card V) ≤ ↑k →
+                      α * ↑(Fintype.card V) ≤ ↑(#U) →
+                        α * ↑(Fintype.card V) ≤ ↑(#W) →
+                          IsRobustExpander C₀.graph ν τ →
+                            IsRobustExpander C₁.graph ν τ →
+                              a ≤ εC * ↑(Fintype.card V) →
+                                (∀ (v : { x // x ∈ U }), ↑k - a ≤ ↑(C₀.graph.degree v)) →
+                                  (∀ (v : { x // x ∈ W }), ↑k - a ≤ ↑(C₁.graph.degree v)) →
+                                    ∀ (M : Fin k → Finset E),
+                                      (∀ (j : Fin k), G.IsMatching (M j)) →
+                                        (Pairwise fun i j => Disjoint (M i) (M j)) →
+                                          (∀ e ∉ G.internalEdges U, e ∉ G.internalEdges W → ∃ j, e ∈ M j) →
+                                            (∀ (j : Fin k), Z ⊆ G.edgeSupport (M j)) →
+                                              (∀ (j : Fin k), Even #(U \ G.edgeSupport (M j))) →
+                                                (∀ (j : Fin k), Even #(W \ G.edgeSupport (M j))) →
+                                                  Nonempty (G.EdgeColoring k)
+hτleaf : τ ≤ min α 1 / 16
+εL : ℝ
+hεL : 0 < εL
+mL : ℕ
+hleaf :
+  ∀ (V : Type ?u.8553) (E : Type ?u.8552) [inst : Fintype E] (G : Multigraph V E) (A U : Finset V) (C : Core G U)
+    (k : ℕ) (a : ℝ),
+    U ⊆ A →
+      mL ≤ #U →
+        #(A \ U) ≤ 0 →
+          (∀ v ∈ A, G.degree v = k) →
+            α * ↑(#U) ≤ ↑k →
+              IsRobustExpander C.graph ν τ →
+                a ≤ εL * ↑(#U) →
+                  (∀ (v : { x // x ∈ U }), ↑k - a ≤ ↑(C.graph.degree v)) →
+                    G.internalEdges (A \ U) = ∅ →
+                      (G.cutEdges A = ∅ → Even #A → Nonempty ((retainedGraph G A).EdgeColoring k)) ∧
+                        (G.cutSize A = k →
+                          Odd #A →
+                            (∀ e ∈ G.cutEdges A, ∀ v ∈ G.edge e, v ∈ A → v ∈ U) →
+                              Nonempty ((contract G A).EdgeColoring k))
+V : Type u_1
+E : Type u_2
+inst✝¹ : Fintype V
+inst✝ : Fintype E
+G : Multigraph V E
+U W A B : Finset V
+C₀ : Core G U
+C₁ : Core G W
+C₂ : Core G A
+C₃ : Core G B
+k : ℕ
+a : ℝ
+hUW : Disjoint U W
+hUA : Disjoint U A
+hUB : Disjoint U B
+hWA : Disjoint W A
+hWB : Disjoint W B
+hAB : Disjoint A B
+hcover : ∀ (v : V), v ∈ U ∨ v ∈ W ∨ v ∈ A ∨ v ∈ B
+hU : Even #U
+hW : Even #W
+hA : Odd #A
+hB : Odd #B
+hmU : max mC mL ≤ #U
+hmW : max mC mL ≤ #W
+hmA : max mC mL ≤ #A
+hmB : max mC mL ≤ #B
+hregular : ∀ (v : V), G.degree v = k
+hk : α * ↑(Fintype.card V) ≤ ↑k
+hsizeU : α * ↑(Fintype.card V) ≤ ↑(#U)
+hsizeW : α * ↑(Fintype.card V) ≤ ↑(#W)
+hrobU : IsRobustExpander C₀.graph ν τ
+hrobW : IsRobustExpander C₁.graph ν τ
+hrobA : IsRobustExpander C₂.graph ν τ
+hrobB : IsRobustExpander C₃.graph ν τ
+haU : a ≤ min εC εL * ↑(#U)
+_haW : a ≤ min εC εL * ↑(#W)
+haA : a ≤ min εC εL * ↑(#A)
+haB : a ≤ min εC εL * ↑(#B)
+hdegU : ∀ (v : { x // x ∈ U }), ↑k - a ≤ ↑(C₀.graph.degree v)
+hdegW : ∀ (v : { x // x ∈ W }), ↑k - a ≤ ↑(C₁.graph.degree v)
+hdegA : ∀ (v : { x // x ∈ A }), ↑k - a ≤ ↑(C₂.graph.degree v)
+hdegB : ∀ (v : { x // x ∈ B }), ↑k - a ≤ ↑(C₃.graph.degree v)
+M : Fin k → Finset E
+hM : ∀ (j : Fin k), G.IsMatching (M j)
+hdM : Pairwise fun i j => Disjoint (M i) (M j)
+hcoverM : ∀ e ∉ G.internalEdges U, e ∉ G.internalEdges W → e ∉ G.internalEdges A → e ∉ G.internalEdges B → ∃ j, e ∈ M j
+hcrossA : ∀ (j : Fin k), #(M j ∩ G.cutEdges A) = 1
+hcrossB : ∀ (j : Fin k), #(M j ∩ G.cutEdges B) = 1
+hparU : ∀ (j : Fin k), Even #(U \ G.edgeSupport (M j))
+hparW : ∀ (j : Fin k), Even #(W \ G.edgeSupport (M j))
+S : Finset V := U ∪ W
+hSA : Disjoint S A
+hSB : Disjoint S B
+hcoverS : ∀ (v : V), v ∈ S ∨ v ∈ A ∨ v ∈ B
+hcutA : G.cutSize A = k
+hcutB : G.cutSize B = k
+hS_even : Even #S
+hpartition : S ∪ A ∪ B = univ
+hcard : #S + #A + #B = Fintype.card V
+hAn : #A % 2 = 1
+hBn : #B % 2 = 1
+hcentral_le : Fintype.card (CentralVertex S) ≤ Fintype.card V
+hcentral_leR : ↑(Fintype.card (CentralVertex S)) ≤ ↑(Fintype.card V)
+hUcentral : #U ≤ Fintype.card (CentralVertex S)
+haUC : a ≤ εC * ↑(#U)
+MC : Fin k → Finset (CentralEdge G S A) := fun j => centralMatching G S A (M j)
+j : Fin k
+⊢ Even #(keptSet ⋯ \ (centralGraph G S A).edgeSupport (MC j))
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.TerminalFourTwoOdd.ResidualColoring
+error: build failed

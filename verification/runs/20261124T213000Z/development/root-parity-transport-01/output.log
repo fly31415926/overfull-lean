@@ -1,0 +1,1105 @@
+✖ [3241/3249] Building Overfull.TerminalFour.Parity (3.5s)
+trace: .> LEAN_PATH=/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean /workspace/scratch/05b9e46fe96b/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/05b9e46fe96b/overfull-lean/Overfull/TerminalFour/Parity.lean -o /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFour/Parity.olean -i /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFour/Parity.ilean -c /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFour/Parity.c --setup /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFour/Parity.setup.json --json
+error: Overfull/TerminalFour/Parity.lean:34:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - d ≥ 0
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(#{v | label v = 1}) / 2
+ d := ↑(#{v | label v = 2}) / 2
+ e := ↑(#{v | label v = ⟨0, ⋯⟩}) / 2
+error: Overfull/TerminalFour/Parity.lean:34:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - d ≥ 0
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(#{v | label v = 1}) / 2
+ d := ↑(#{v | label v = 2}) / 2
+ e := ↑(#{v | label v = ⟨1, ⋯⟩}) / 2
+error: Overfull/TerminalFour/Parity.lean:34:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - d ≥ 0
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(#{v | label v = 1}) / 2
+ d := ↑(#{v | label v = 2}) / 2
+ e := ↑(#{v | label v = ⟨2, ⋯⟩}) / 2
+error: Overfull/TerminalFour/Parity.lean:34:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - d ≥ 0
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(#{v | label v = 1}) / 2
+ d := ↑(#{v | label v = 2}) / 2
+ e := ↑(#{v | label v = ⟨3, ⋯⟩}) / 2
+error: Overfull/TerminalFour/Parity.lean:38:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  e ≥ 0
+  0 ≤ e - 2*f ≤ 1
+  d ≥ 0
+  d - e + 2*f ≥ 1
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(#{v | label v = 1}) / 2
+ d := ↑(if ⟨0, ⋯⟩ = 2 ∨ ⟨0, ⋯⟩ = 3 then 1 else 0)
+ e := ↑(#{v | label v = ⟨0, ⋯⟩})
+ f := ↑(#{v | label v = ⟨0, ⋯⟩}) / 2
+ g := ↑(#{v | label v = 2}) / 2
+error: Overfull/TerminalFour/Parity.lean:38:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  e ≥ 0
+  0 ≤ e - 2*f ≤ 1
+  d ≥ 0
+  d - e + 2*f ≥ 1
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(#{v | label v = 1}) / 2
+ d := ↑(if ⟨1, ⋯⟩ = 2 ∨ ⟨1, ⋯⟩ = 3 then 1 else 0)
+ e := ↑(#{v | label v = ⟨1, ⋯⟩})
+ f := ↑(#{v | label v = ⟨1, ⋯⟩}) / 2
+ g := ↑(#{v | label v = 2}) / 2
+error: Overfull/TerminalFour/Parity.lean:38:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  e ≥ 0
+  0 ≤ e - 2*f ≤ 1
+  d ≥ 0
+  d - e + 2*f ≥ 1
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(#{v | label v = 1}) / 2
+ d := ↑(if ⟨2, ⋯⟩ = 2 ∨ ⟨2, ⋯⟩ = 3 then 1 else 0)
+ e := ↑(#{v | label v = ⟨2, ⋯⟩})
+ f := ↑(#{v | label v = ⟨2, ⋯⟩}) / 2
+ g := ↑(#{v | label v = 2}) / 2
+error: Overfull/TerminalFour/Parity.lean:38:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  e ≥ 0
+  0 ≤ e - 2*f ≤ 1
+  d ≥ 0
+  d - e + 2*f ≥ 1
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(#{v | label v = 1}) / 2
+ d := ↑(if ⟨3, ⋯⟩ = 2 ∨ ⟨3, ⋯⟩ = 3 then 1 else 0)
+ e := ↑(#{v | label v = ⟨3, ⋯⟩})
+ f := ↑(#{v | label v = ⟨3, ⋯⟩}) / 2
+ g := ↑(#{v | label v = 2}) / 2
+error: Overfull/TerminalFour/Parity.lean:42:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  e ≥ 0
+  0 ≤ e - 2*f ≤ 1
+  d ≥ 0
+  d - e + 2*f ≥ 1
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(#{v | label v = 2}) / 2
+ d := ↑(if ⟨0, ⋯⟩ = 1 ∨ ⟨0, ⋯⟩ = 3 then 1 else 0)
+ e := ↑(#{v | label v = ⟨0, ⋯⟩})
+ f := ↑(#{v | label v = ⟨0, ⋯⟩}) / 2
+ g := ↑(#{v | label v = 1}) / 2
+error: Overfull/TerminalFour/Parity.lean:42:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  e ≥ 0
+  0 ≤ e - 2*f ≤ 1
+  d ≥ 0
+  d - e + 2*f ≥ 1
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(#{v | label v = 2}) / 2
+ d := ↑(if ⟨1, ⋯⟩ = 1 ∨ ⟨1, ⋯⟩ = 3 then 1 else 0)
+ e := ↑(#{v | label v = ⟨1, ⋯⟩})
+ f := ↑(#{v | label v = ⟨1, ⋯⟩}) / 2
+ g := ↑(#{v | label v = 1}) / 2
+error: Overfull/TerminalFour/Parity.lean:42:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  e ≥ 0
+  0 ≤ e - 2*f ≤ 1
+  d ≥ 0
+  d - e + 2*f ≥ 1
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(#{v | label v = 2}) / 2
+ d := ↑(if ⟨2, ⋯⟩ = 1 ∨ ⟨2, ⋯⟩ = 3 then 1 else 0)
+ e := ↑(#{v | label v = ⟨2, ⋯⟩})
+ f := ↑(#{v | label v = ⟨2, ⋯⟩}) / 2
+ g := ↑(#{v | label v = 1}) / 2
+error: Overfull/TerminalFour/Parity.lean:42:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  e ≥ 0
+  0 ≤ e - 2*f ≤ 1
+  d ≥ 0
+  d - e + 2*f ≥ 1
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(#{v | label v = 2}) / 2
+ d := ↑(if ⟨3, ⋯⟩ = 1 ∨ ⟨3, ⋯⟩ = 3 then 1 else 0)
+ e := ↑(#{v | label v = ⟨3, ⋯⟩})
+ f := ↑(#{v | label v = ⟨3, ⋯⟩}) / 2
+ g := ↑(#{v | label v = 1}) / 2
+error: Overfull/TerminalFour/Parity.lean:46:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  d ≥ 0
+  0 ≤ d - 2*e ≤ 1
+  c ≥ 0
+  c - d + 2*e ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a - b - f - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(if ⟨0, ⋯⟩ = 1 ∨ ⟨0, ⋯⟩ = 2 then 1 else 0)
+ d := ↑(#{v | label v = ⟨0, ⋯⟩})
+ e := ↑(#{v | label v = ⟨0, ⋯⟩}) / 2
+ f := ↑(#{v | label v = 2}) / 2
+ g := ↑(#{v | label v = 1}) / 2
+error: Overfull/TerminalFour/Parity.lean:46:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  d ≥ 0
+  0 ≤ d - 2*e ≤ 1
+  c ≥ 0
+  c - d + 2*e ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a - b - f - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(if ⟨1, ⋯⟩ = 1 ∨ ⟨1, ⋯⟩ = 2 then 1 else 0)
+ d := ↑(#{v | label v = ⟨1, ⋯⟩})
+ e := ↑(#{v | label v = ⟨1, ⋯⟩}) / 2
+ f := ↑(#{v | label v = 2}) / 2
+ g := ↑(#{v | label v = 1}) / 2
+error: Overfull/TerminalFour/Parity.lean:46:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  d ≥ 0
+  0 ≤ d - 2*e ≤ 1
+  c ≥ 0
+  c - d + 2*e ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a - b - f - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(if ⟨2, ⋯⟩ = 1 ∨ ⟨2, ⋯⟩ = 2 then 1 else 0)
+ d := ↑(#{v | label v = ⟨2, ⋯⟩})
+ e := ↑(#{v | label v = ⟨2, ⋯⟩}) / 2
+ f := ↑(#{v | label v = 2}) / 2
+ g := ↑(#{v | label v = 1}) / 2
+error: Overfull/TerminalFour/Parity.lean:46:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  d ≥ 0
+  0 ≤ d - 2*e ≤ 1
+  c ≥ 0
+  c - d + 2*e ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a - b - f - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 0}) / 2
+ c := ↑(if ⟨3, ⋯⟩ = 1 ∨ ⟨3, ⋯⟩ = 2 then 1 else 0)
+ d := ↑(#{v | label v = ⟨3, ⋯⟩})
+ e := ↑(#{v | label v = ⟨3, ⋯⟩}) / 2
+ f := ↑(#{v | label v = 2}) / 2
+ g := ↑(#{v | label v = 1}) / 2
+error: Overfull/TerminalFour/Parity.lean:50:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  e ≥ 0
+  0 ≤ e - 2*f ≤ 1
+  d ≥ 0
+  d - e + 2*f ≥ 1
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 1}) / 2
+ c := ↑(#{v | label v = 2}) / 2
+ d := ↑(if ⟨0, ⋯⟩ = 0 ∨ ⟨0, ⋯⟩ = 3 then 1 else 0)
+ e := ↑(#{v | label v = ⟨0, ⋯⟩})
+ f := ↑(#{v | label v = ⟨0, ⋯⟩}) / 2
+ g := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:50:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  e ≥ 0
+  0 ≤ e - 2*f ≤ 1
+  d ≥ 0
+  d - e + 2*f ≥ 1
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 1}) / 2
+ c := ↑(#{v | label v = 2}) / 2
+ d := ↑(if ⟨1, ⋯⟩ = 0 ∨ ⟨1, ⋯⟩ = 3 then 1 else 0)
+ e := ↑(#{v | label v = ⟨1, ⋯⟩})
+ f := ↑(#{v | label v = ⟨1, ⋯⟩}) / 2
+ g := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:50:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  e ≥ 0
+  0 ≤ e - 2*f ≤ 1
+  d ≥ 0
+  d - e + 2*f ≥ 1
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 1}) / 2
+ c := ↑(#{v | label v = 2}) / 2
+ d := ↑(if ⟨2, ⋯⟩ = 0 ∨ ⟨2, ⋯⟩ = 3 then 1 else 0)
+ e := ↑(#{v | label v = ⟨2, ⋯⟩})
+ f := ↑(#{v | label v = ⟨2, ⋯⟩}) / 2
+ g := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:50:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  e ≥ 0
+  0 ≤ e - 2*f ≤ 1
+  d ≥ 0
+  d - e + 2*f ≥ 1
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 1}) / 2
+ c := ↑(#{v | label v = 2}) / 2
+ d := ↑(if ⟨3, ⋯⟩ = 0 ∨ ⟨3, ⋯⟩ = 3 then 1 else 0)
+ e := ↑(#{v | label v = ⟨3, ⋯⟩})
+ f := ↑(#{v | label v = ⟨3, ⋯⟩}) / 2
+ g := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:54:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  d ≥ 0
+  0 ≤ d - 2*e ≤ 1
+  c ≥ 0
+  c - d + 2*e ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a - b - f - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 1}) / 2
+ c := ↑(if ⟨0, ⋯⟩ = 0 ∨ ⟨0, ⋯⟩ = 2 then 1 else 0)
+ d := ↑(#{v | label v = ⟨0, ⋯⟩})
+ e := ↑(#{v | label v = ⟨0, ⋯⟩}) / 2
+ f := ↑(#{v | label v = 2}) / 2
+ g := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:54:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  d ≥ 0
+  0 ≤ d - 2*e ≤ 1
+  c ≥ 0
+  c - d + 2*e ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a - b - f - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 1}) / 2
+ c := ↑(if ⟨1, ⋯⟩ = 0 ∨ ⟨1, ⋯⟩ = 2 then 1 else 0)
+ d := ↑(#{v | label v = ⟨1, ⋯⟩})
+ e := ↑(#{v | label v = ⟨1, ⋯⟩}) / 2
+ f := ↑(#{v | label v = 2}) / 2
+ g := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:54:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  d ≥ 0
+  0 ≤ d - 2*e ≤ 1
+  c ≥ 0
+  c - d + 2*e ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a - b - f - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 1}) / 2
+ c := ↑(if ⟨2, ⋯⟩ = 0 ∨ ⟨2, ⋯⟩ = 2 then 1 else 0)
+ d := ↑(#{v | label v = ⟨2, ⋯⟩})
+ e := ↑(#{v | label v = ⟨2, ⋯⟩}) / 2
+ f := ↑(#{v | label v = 2}) / 2
+ g := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:54:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  d ≥ 0
+  0 ≤ d - 2*e ≤ 1
+  c ≥ 0
+  c - d + 2*e ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a - b - f - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 1}) / 2
+ c := ↑(if ⟨3, ⋯⟩ = 0 ∨ ⟨3, ⋯⟩ = 2 then 1 else 0)
+ d := ↑(#{v | label v = ⟨3, ⋯⟩})
+ e := ↑(#{v | label v = ⟨3, ⋯⟩}) / 2
+ f := ↑(#{v | label v = 2}) / 2
+ g := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:58:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  d ≥ 0
+  0 ≤ d - 2*e ≤ 1
+  c ≥ 0
+  c - d + 2*e ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a - b - f - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 2}) / 2
+ c := ↑(if ⟨0, ⋯⟩ = 0 ∨ ⟨0, ⋯⟩ = 1 then 1 else 0)
+ d := ↑(#{v | label v = ⟨0, ⋯⟩})
+ e := ↑(#{v | label v = ⟨0, ⋯⟩}) / 2
+ f := ↑(#{v | label v = 1}) / 2
+ g := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:58:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  d ≥ 0
+  0 ≤ d - 2*e ≤ 1
+  c ≥ 0
+  c - d + 2*e ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a - b - f - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 2}) / 2
+ c := ↑(if ⟨1, ⋯⟩ = 0 ∨ ⟨1, ⋯⟩ = 1 then 1 else 0)
+ d := ↑(#{v | label v = ⟨1, ⋯⟩})
+ e := ↑(#{v | label v = ⟨1, ⋯⟩}) / 2
+ f := ↑(#{v | label v = 1}) / 2
+ g := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:58:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  d ≥ 0
+  0 ≤ d - 2*e ≤ 1
+  c ≥ 0
+  c - d + 2*e ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a - b - f - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 2}) / 2
+ c := ↑(if ⟨2, ⋯⟩ = 0 ∨ ⟨2, ⋯⟩ = 1 then 1 else 0)
+ d := ↑(#{v | label v = ⟨2, ⋯⟩})
+ e := ↑(#{v | label v = ⟨2, ⋯⟩}) / 2
+ f := ↑(#{v | label v = 1}) / 2
+ g := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:58:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  d ≥ 0
+  0 ≤ d - 2*e ≤ 1
+  c ≥ 0
+  c - d + 2*e ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a - b - f - g ≥ 1
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = 2}) / 2
+ c := ↑(if ⟨3, ⋯⟩ = 0 ∨ ⟨3, ⋯⟩ = 1 then 1 else 0)
+ d := ↑(#{v | label v = ⟨3, ⋯⟩})
+ e := ↑(#{v | label v = ⟨3, ⋯⟩}) / 2
+ f := ↑(#{v | label v = 1}) / 2
+ g := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:61:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - c - d - e ≥ 2
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = ⟨0, ⋯⟩}) / 2
+ c := ↑(#{v | label v = 2}) / 2
+ d := ↑(#{v | label v = 1}) / 2
+ e := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:61:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - c - d - e ≥ 2
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = ⟨1, ⋯⟩}) / 2
+ c := ↑(#{v | label v = 2}) / 2
+ d := ↑(#{v | label v = 1}) / 2
+ e := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:61:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - c - d - e ≥ 2
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = ⟨2, ⋯⟩}) / 2
+ c := ↑(#{v | label v = 2}) / 2
+ d := ↑(#{v | label v = 1}) / 2
+ e := ↑(#{v | label v = 0}) / 2
+error: Overfull/TerminalFour/Parity.lean:61:115: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - c - d - e ≥ 2
+where
+ a := ↑(Fintype.card V) / 2
+ b := ↑(#{v | label v = ⟨3, ⋯⟩}) / 2
+ c := ↑(#{v | label v = 2}) / 2
+ d := ↑(#{v | label v = 1}) / 2
+ e := ↑(#{v | label v = 0}) / 2
+warning: Overfull/TerminalFour/Parity.lean:34:31: This simp argument is unused:
+  Fin.reduceEq
+
+Hint: Omit it from the simp argument list.
+  simp only [F̵i̵n̵.̵r̵e̵d̵u̵c̵e̵E̵q̵,̵ ̵or_self, true_or, false_or, or_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:34:45: This simp argument is unused:
+  or_self
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, o̵r̵_̵s̵e̵l̵f̵,̵ ̵true_or, false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:34:54: This simp argument is unused:
+  true_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, t̵r̵u̵e̵_̵o̵r̵,̵ ̵false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:34:63: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, f̵a̵l̵s̵e̵_̵or,̵ ̵o̵r̵_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:34:73: This simp argument is unused:
+  or_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_t̵r̵u̵e̵,̵ ̵o̵r̵_̵false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:34:82: This simp argument is unused:
+  or_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, o̵r̵_̵f̵a̵l̵s̵e̵,̵ ̵if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:34:92: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false,
+  ̲ i̵f̵_̵t̵r̵u̵e̵,̵  ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:34:101: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false, if_true,̵ ̵i̵f̵_̵f̵a̵l̵s̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:38:31: This simp argument is unused:
+  Fin.reduceEq
+
+Hint: Omit it from the simp argument list.
+  simp only [F̵i̵n̵.̵r̵e̵d̵u̵c̵e̵E̵q̵,̵ ̵or_self, true_or, false_or, or_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:38:45: This simp argument is unused:
+  or_self
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, o̵r̵_̵s̵e̵l̵f̵,̵ ̵true_or, false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:38:54: This simp argument is unused:
+  true_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, t̵r̵u̵e̵_̵o̵r̵,̵ ̵false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:38:63: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, f̵a̵l̵s̵e̵_̵or,̵ ̵o̵r̵_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:38:73: This simp argument is unused:
+  or_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_t̵r̵u̵e̵,̵ ̵o̵r̵_̵false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:38:82: This simp argument is unused:
+  or_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, o̵r̵_̵f̵a̵l̵s̵e̵,̵ ̵if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:38:92: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false,
+  ̲ i̵f̵_̵t̵r̵u̵e̵,̵  ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:38:101: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false, if_true,̵ ̵i̵f̵_̵f̵a̵l̵s̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:42:31: This simp argument is unused:
+  Fin.reduceEq
+
+Hint: Omit it from the simp argument list.
+  simp only [F̵i̵n̵.̵r̵e̵d̵u̵c̵e̵E̵q̵,̵ ̵or_self, true_or, false_or, or_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:42:45: This simp argument is unused:
+  or_self
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, o̵r̵_̵s̵e̵l̵f̵,̵ ̵true_or, false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:42:54: This simp argument is unused:
+  true_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, t̵r̵u̵e̵_̵o̵r̵,̵ ̵false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:42:63: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, f̵a̵l̵s̵e̵_̵or,̵ ̵o̵r̵_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:42:73: This simp argument is unused:
+  or_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_t̵r̵u̵e̵,̵ ̵o̵r̵_̵false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:42:82: This simp argument is unused:
+  or_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, o̵r̵_̵f̵a̵l̵s̵e̵,̵ ̵if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:42:92: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false,
+  ̲ i̵f̵_̵t̵r̵u̵e̵,̵  ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:42:101: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false, if_true,̵ ̵i̵f̵_̵f̵a̵l̵s̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:46:31: This simp argument is unused:
+  Fin.reduceEq
+
+Hint: Omit it from the simp argument list.
+  simp only [F̵i̵n̵.̵r̵e̵d̵u̵c̵e̵E̵q̵,̵ ̵or_self, true_or, false_or, or_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:46:45: This simp argument is unused:
+  or_self
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, o̵r̵_̵s̵e̵l̵f̵,̵ ̵true_or, false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:46:54: This simp argument is unused:
+  true_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, t̵r̵u̵e̵_̵o̵r̵,̵ ̵false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:46:63: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, f̵a̵l̵s̵e̵_̵or,̵ ̵o̵r̵_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:46:73: This simp argument is unused:
+  or_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_t̵r̵u̵e̵,̵ ̵o̵r̵_̵false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:46:82: This simp argument is unused:
+  or_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, o̵r̵_̵f̵a̵l̵s̵e̵,̵ ̵if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:46:92: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false,
+  ̲ i̵f̵_̵t̵r̵u̵e̵,̵  ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:46:101: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false, if_true,̵ ̵i̵f̵_̵f̵a̵l̵s̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:50:31: This simp argument is unused:
+  Fin.reduceEq
+
+Hint: Omit it from the simp argument list.
+  simp only [F̵i̵n̵.̵r̵e̵d̵u̵c̵e̵E̵q̵,̵ ̵or_self, true_or, false_or, or_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:50:45: This simp argument is unused:
+  or_self
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, o̵r̵_̵s̵e̵l̵f̵,̵ ̵true_or, false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:50:54: This simp argument is unused:
+  true_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, t̵r̵u̵e̵_̵o̵r̵,̵ ̵false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:50:63: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, f̵a̵l̵s̵e̵_̵or,̵ ̵o̵r̵_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:50:73: This simp argument is unused:
+  or_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_t̵r̵u̵e̵,̵ ̵o̵r̵_̵false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:50:82: This simp argument is unused:
+  or_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, o̵r̵_̵f̵a̵l̵s̵e̵,̵ ̵if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:50:92: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false,
+  ̲ i̵f̵_̵t̵r̵u̵e̵,̵  ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:50:101: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false, if_true,̵ ̵i̵f̵_̵f̵a̵l̵s̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:54:31: This simp argument is unused:
+  Fin.reduceEq
+
+Hint: Omit it from the simp argument list.
+  simp only [F̵i̵n̵.̵r̵e̵d̵u̵c̵e̵E̵q̵,̵ ̵or_self, true_or, false_or, or_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:54:45: This simp argument is unused:
+  or_self
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, o̵r̵_̵s̵e̵l̵f̵,̵ ̵true_or, false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:54:54: This simp argument is unused:
+  true_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, t̵r̵u̵e̵_̵o̵r̵,̵ ̵false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:54:63: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, f̵a̵l̵s̵e̵_̵or,̵ ̵o̵r̵_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:54:73: This simp argument is unused:
+  or_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_t̵r̵u̵e̵,̵ ̵o̵r̵_̵false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:54:82: This simp argument is unused:
+  or_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, o̵r̵_̵f̵a̵l̵s̵e̵,̵ ̵if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:54:92: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false,
+  ̲ i̵f̵_̵t̵r̵u̵e̵,̵  ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:54:101: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false, if_true,̵ ̵i̵f̵_̵f̵a̵l̵s̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:58:31: This simp argument is unused:
+  Fin.reduceEq
+
+Hint: Omit it from the simp argument list.
+  simp only [F̵i̵n̵.̵r̵e̵d̵u̵c̵e̵E̵q̵,̵ ̵or_self, true_or, false_or, or_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:58:45: This simp argument is unused:
+  or_self
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, o̵r̵_̵s̵e̵l̵f̵,̵ ̵true_or, false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:58:54: This simp argument is unused:
+  true_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, t̵r̵u̵e̵_̵o̵r̵,̵ ̵false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:58:63: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, f̵a̵l̵s̵e̵_̵or,̵ ̵o̵r̵_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:58:73: This simp argument is unused:
+  or_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_t̵r̵u̵e̵,̵ ̵o̵r̵_̵false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:58:82: This simp argument is unused:
+  or_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, o̵r̵_̵f̵a̵l̵s̵e̵,̵ ̵if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:58:92: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false,
+  ̲ i̵f̵_̵t̵r̵u̵e̵,̵  ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:58:101: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false, if_true,̵ ̵i̵f̵_̵f̵a̵l̵s̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:61:31: This simp argument is unused:
+  Fin.reduceEq
+
+Hint: Omit it from the simp argument list.
+  simp only [F̵i̵n̵.̵r̵e̵d̵u̵c̵e̵E̵q̵,̵ ̵or_self, true_or, false_or, or_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:61:45: This simp argument is unused:
+  or_self
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, o̵r̵_̵s̵e̵l̵f̵,̵ ̵true_or, false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:61:54: This simp argument is unused:
+  true_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, t̵r̵u̵e̵_̵o̵r̵,̵ ̵false_or, or_true, or_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:61:63: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, f̵a̵l̵s̵e̵_̵or,̵ ̵o̵r̵_true, or_false, if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:61:73: This simp argument is unused:
+  or_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_t̵r̵u̵e̵,̵ ̵o̵r̵_̵false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:61:82: This simp argument is unused:
+  or_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, o̵r̵_̵f̵a̵l̵s̵e̵,̵ ̵if_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:61:92: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false,
+  ̲ i̵f̵_̵t̵r̵u̵e̵,̵  ̲ ̲ ̲ ̲if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFour/Parity.lean:61:101: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.reduceEq, or_self, true_or, false_or, or_true, or_false, if_true,̵ ̵i̵f̵_̵f̵a̵l̵s̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+✔ [3242/3249] Built Overfull.CircuitPatterns.Forest (5.6s)
+✔ [3243/3249] Built Overfull.Absorption.CoreRobust (9.4s)
+✔ [3244/3249] Built Overfull.Absorption.Core (2.5s)
+✔ [3245/3249] Built Overfull.Absorption.CoreFamily (2.4s)
+✔ [3246/3249] Built Overfull.CircuitPatterns.AbsorptionParity (2.7s)
+✔ [3247/3249] Built Overfull.CircuitPatterns.ReservedEdges (2.7s)
+✔ [3248/3249] Built Overfull.CircuitPatterns.Result (2.2s)
+✖ [3249/3249] Building Overfull.TerminalFour.PatternTransport (2.3s)
+trace: .> LEAN_PATH=/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean /workspace/scratch/05b9e46fe96b/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/05b9e46fe96b/overfull-lean/Overfull/TerminalFour/PatternTransport.lean -o /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFour/PatternTransport.olean -i /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFour/PatternTransport.ilean -c /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFour/PatternTransport.c --setup /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFour/PatternTransport.setup.json --json
+error: Overfull/TerminalFour/PatternTransport.lean:27:92: unsolved goals
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+h : ℕ
+hh : 0 < h
+hregular : ∀ (v : V), G.degree v = h
+hno : ∀ (X : Finset V), ¬IsOverfull G h X
+hn : ¬Fintype.card V % 2 = 0
+hodd : #univ % 2 = 1
+s : ℕ
+hs : MatchingProbability.cutCount univ univ = h + s
+right✝ : s % 2 = 0
+⊢ Lovasz.BMatch.cut FractionalMatching.firstEnd FractionalMatching.secondEnd univ univ = ∅
+error: Overfull/TerminalFour/PatternTransport.lean:56:2: Type mismatch
+  coreLabel_eq_iff U ∅ code (fun i j hij => hdisj hij) (fun v => Or.inr (hcover v)) (notMem_empty v) ?m.72
+has type
+  coreLabel U code v = code ?m.72 ↔ v ∈ U ?m.72
+but is expected to have type
+  coreLabel U code v = code ((fourCodeEquiv code hI).symm j) ↔
+    v ∈ U ((fourCodeEquiv code hI).symm (code ((fourCodeEquiv code hI).symm j)))
+error: Overfull/TerminalFour/PatternTransport.lean:73:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ↑(((joiningGraph M label).labelQuotient label ⋯).edgeLabelPair ?e)
+in the target expression
+  image label (↑↑s).toFinset = ↑(Q.edgeLabelPair s)
+
+V : Type u_1
+I : Type u_2
+inst✝ : Fintype V
+G : SimpleGraph V
+U : I → Finset V
+code : I ↪ Fin 4
+p : LabelPair
+M : Multigraph V ↑G.edgeSet := Multigraph.ofSimpleGraph G
+label : V → Fin 4 := coreLabel U code
+Q : Multigraph (Fin 4) { x // x ∈ joiningCopies M label } := joiningQuotient M label
+f : { x // x ∈ joiningCopies M label } → Sym2 V := fun e => ↑↑e
+hinj : Function.Injective f
+s : { x // x ∈ joiningCopies M label }
+⊢ image label (↑↑s).toFinset = ↑(Q.edgeLabelPair s)
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.TerminalFour.Parity
+- Overfull.TerminalFour.PatternTransport
+error: build failed

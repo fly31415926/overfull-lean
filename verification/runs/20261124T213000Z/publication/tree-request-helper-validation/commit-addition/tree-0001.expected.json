@@ -1,0 +1,16 @@
+{
+  "batch": 1,
+  "phase": "upsert",
+  "base_tree_sha": "74c945e7549b0fc99bda7561d8adef0a429dfc4d",
+  "expected_tree_sha": "fec02f947b26a5abed7a78bfd9cd242ce681081b",
+  "entry_count": 1,
+  "request": {
+    "path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-1008/tree-0001.request.json",
+    "bytes": 319,
+    "sha256": "73da96fcfe465224afc5bc8ea3d7e4c1ce0c1c842524af33103b50d15da2ecdf"
+  },
+  "result_leaf_entry_count": 12989,
+  "independent_tree_encoding_matches_git_write_tree": true,
+  "private_index_sha256": "6c200ef0251f61b7351839ffbd1e40dda1d4737674b2ec54d11f7a124347e556",
+  "submission_rule": "Submit only after prior result matches its expected tree; require this result tree to equal expected_tree_sha"
+}
