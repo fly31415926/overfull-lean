@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "kind": "final_public_receipt_copy_integrity",
+  "status": "passed",
+  "started_at_utc": "2026-11-24T22:48:32.345922+00:00",
+  "completed_at_utc": "2026-11-24T22:48:39.392643+00:00",
+  "public_repository_url": "https://github.com/fly31415926/overfull-lean.git",
+  "commit": "b3972a7f246a21633e5a535ce2eb20978efe4bae",
+  "tree": "1263c41ddf91d5e27645e409f34bb37b4211b9aa",
+  "sole_parent": "e75e9240d20d0a6e021366f33e9bad58b647d857",
+  "public_paths_checked": 65,
+  "receipt_archive_paths": 64,
+  "proposal_receipt_paths": 1,
+  "all_expected_path_mode_size_git_sha1_sha256_values_match": true,
+  "public_receipt_parts_reassembled": 58,
+  "reassembled_archive": {
+    "path": "reassembled-public-receipts.tar.gz",
+    "bytes": 1933136,
+    "sha256": "12585dba35a82feb94cdea7d37684b8610e6f7c49530835c80b3747c99406dc9"
+  },
+  "receipt_payload_files_reported_by_manifest": 498,
+  "receipt_cutoff_utc": "2026-11-24T22:42:51.219994+00:00",
+  "all_reassembled_archive_bytes_obtained_from_publicly_fetched_git_objects": true,
+  "source_repository_access_performed": false,
+  "remote_refs_updated": false,
+  "archived_code_executed": false,
+  "workflow_installed_or_executed": false,
+  "proof_rebuild_performed": false,
+  "git_fsck_repeated": false,
+  "helper_sha256": "e82303b9b5147c1264485171c00b5f61515a6d30306e78ca420e9074a2c863c5",
+  "expected_inventory": {
+    "path": "checks/expected-files.json",
+    "bytes": 18555,
+    "sha256": "047b9f5f436b655b2cd997f3a5778f2e0b0e66b9e42253fb88b3d12c11738156"
+  },
+  "public_file_readback": {
+    "path": "checks/public-files-checked.json",
+    "bytes": 19802,
+    "sha256": "edc4667d72229fc55a05b29564074d7e1e3caea629b5127167e4ef89ab00b754"
+  },
+  "native_command_receipts": [
+    {
+      "path": "checks/public-fetch/terminal.json",
+      "bytes": 965,
+      "sha256": "40a4584db96e61a5b339a83763905dff65df3f309959707e01525926727ad095"
+    },
+    {
+      "path": "checks/public-commit-object/terminal.json",
+      "bytes": 902,
+      "sha256": "3b74d76ef56a8ec6605c91e5bb38739a7dd9b2068473df5020b253de299294a2"
+    },
+    {
+      "path": "checks/public-tree-inventory/terminal.json",
+      "bytes": 912,
+      "sha256": "5e0474d545d550fe22700d89c5062c203114ac7d532056e0bbaa4508554588f1"
+    },
+    {
+      "path": "checks/public-file-bytes/terminal.json",
+      "bytes": 1020,
+      "sha256": "f9713c7681cf5a920c37049d367378b325f7ba17f21a0cf6a37fbf415881fbd3"
+    }
+  ]
+}
