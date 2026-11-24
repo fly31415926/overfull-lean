@@ -1,0 +1,1948 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "numbered_assertions_completed": 0,
+  "manuscript_number": null,
+  "statement_sha256": null,
+  "module_count": 10,
+  "public_theorem_count": 79,
+  "verified_declaration_count": 179,
+  "includes_private_and_generated_proofs": true,
+  "proof_declaration_map": [
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.AssignedParts.exists_assigned_even_joiningPalette_avoiding_colors_in_host",
+      "source_path": "Overfull/ExceptionalPalette/EvenColors.lean",
+      "source_sha256": "590fcad5d58487986f856c5cebbcf397b15aca4326df2fe016e490c3a47141e2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.AssignedParts.exists_assigned_pair_completion",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.AssignedParts.exists_assigned_pair_completion._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenBudget",
+      "name": "Overfull.AssignedParts.exists_small_assigned_even_joiningPalette_avoiding_colors_in_host",
+      "source_path": "Overfull/ExceptionalPalette/EvenBudget.lean",
+      "source_sha256": "5e00b808ae96da6ae07ad5c7fb24c1ee25c0ebe05de4f267e97535ae18acbdeb"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors",
+      "source_path": "Overfull/ExceptionalPalette/EvenColors.lean",
+      "source_sha256": "590fcad5d58487986f856c5cebbcf397b15aca4326df2fe016e490c3a47141e2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors._proof_1_1",
+      "source_path": "Overfull/ExceptionalPalette/EvenColors.lean",
+      "source_sha256": "590fcad5d58487986f856c5cebbcf397b15aca4326df2fe016e490c3a47141e2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors._proof_1_2",
+      "source_path": "Overfull/ExceptionalPalette/EvenColors.lean",
+      "source_sha256": "590fcad5d58487986f856c5cebbcf397b15aca4326df2fe016e490c3a47141e2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors._simp_1_4",
+      "source_path": "Overfull/ExceptionalPalette/EvenColors.lean",
+      "source_sha256": "590fcad5d58487986f856c5cebbcf397b15aca4326df2fe016e490c3a47141e2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors._simp_1_5",
+      "source_path": "Overfull/ExceptionalPalette/EvenColors.lean",
+      "source_sha256": "590fcad5d58487986f856c5cebbcf397b15aca4326df2fe016e490c3a47141e2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors._simp_1_6",
+      "source_path": "Overfull/ExceptionalPalette/EvenColors.lean",
+      "source_sha256": "590fcad5d58487986f856c5cebbcf397b15aca4326df2fe016e490c3a47141e2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors._simp_1_7",
+      "source_path": "Overfull/ExceptionalPalette/EvenColors.lean",
+      "source_sha256": "590fcad5d58487986f856c5cebbcf397b15aca4326df2fe016e490c3a47141e2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenBudget",
+      "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_small_palette_avoiding_colors",
+      "source_path": "Overfull/ExceptionalPalette/EvenBudget.lean",
+      "source_sha256": "5e00b808ae96da6ae07ad5c7fb24c1ee25c0ebe05de4f267e97535ae18acbdeb"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "name": "Overfull.Multigraph.IsMatching.eq_1",
+      "source_path": "Overfull/ExceptionalPalette/EvenColors.lean",
+      "source_sha256": "590fcad5d58487986f856c5cebbcf397b15aca4326df2fe016e490c3a47141e2"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.boundary_disjoint_removed",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.boundary_joining_eq_crossing",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.mem_residualBoundary",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.mem_residualBoundary._simp_1",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary.eq_1",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_card_le",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_covers_exceptional",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_disjoint",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_image",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_joining_empty",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_joining_empty._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_joining_singleton",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_joining_singleton._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_matching",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_support",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_uncovered_even",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.classes_subset_joining",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.classes_subset_pairExtended",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.JoiningPalette.exists_pairFiber_completion",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.JoiningPalette.exists_pairFiber_completion._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.JoiningPalette.exists_pairFiber_completion._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.JoiningPalette.exists_pairFiber_completion._simp_1_3",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.JoiningPalette.exists_pair_bijection",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.exists_pair_extension",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.freeColors.eq_1",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.freeColors_card_add_degree",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.mem_freeColors",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.mem_freeColors._simp_1",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairAdded_disjoint_support",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtendedClasses.eq_1",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_card_le",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_class_of_copy",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cover",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cover._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cover._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cover._simp_1_4",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_covers_pair",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_covers_pair._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_covers_pair._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_eq",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_eq._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_eq._simp_1_3",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_eq._simp_1_4",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_parity",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_disjoint",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_isMatching",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_outside_load_le",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_outside_load_le._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_outside_load_le._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_support_card_le",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_support_outside",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_support_outside._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_support_outside._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "source_sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_card",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_card._proof_1_4",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_card._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_card._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_card._simp_1_3",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_eq",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_support_iff",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_support_iff._proof_1_5",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_support_iff._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_support_iff._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.pair_support_iff._simp_1_3",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.usedColors_card",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.JoiningPalette.usedColors_card._proof_1_1",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.card_le",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.class_of_copy",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.color_injective",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.contains_joining",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.cover",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.covers",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.cut_eq",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.disjoint",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.matching",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.mk.inj",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.mk.injEq",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.mk.sizeOf_spec",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.outside_load_le",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.prescribed_class",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "name": "Overfull.NativeReserve.PairFiberCompletion.support_card_le",
+      "source_path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "source_sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.added_copies",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.card_le",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.contains_original",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.cover",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.cut_eq",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.cut_parity",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.disjoint",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.joining",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.matching",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.mk.inj",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.mk.injEq",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.mk.sizeOf_spec",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.prescribed",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.support_card_le",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.unchanged",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.vertex_load_eq",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.ReserveExtension.vertex_load_le",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.cutOn_inter_joining",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.cutOn_inter_joining._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.cutOn_inter_joining._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.cutOn_inter_joining._simp_1_3",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenNative",
+      "name": "Overfull.NativeReserve.exists_native_even_reserved_palette",
+      "source_path": "Overfull/ExceptionalPalette/EvenNative.lean",
+      "source_sha256": "f0410f63afefad2912fb15de5118335cf99221051285f47abb277d025d3f4db3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenNative",
+      "name": "Overfull.NativeReserve.exists_native_even_reserved_palette._proof_1_1",
+      "source_path": "Overfull/ExceptionalPalette/EvenNative.lean",
+      "source_sha256": "f0410f63afefad2912fb15de5118335cf99221051285f47abb277d025d3f4db3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.EvenNative",
+      "name": "Overfull.NativeReserve.exists_native_even_reserved_palette._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/EvenNative.lean",
+      "source_sha256": "f0410f63afefad2912fb15de5118335cf99221051285f47abb277d025d3f4db3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveNative",
+      "name": "Overfull.NativeReserve.exists_native_reserved_palette",
+      "source_path": "Overfull/ExceptionalPalette/ReserveNative.lean",
+      "source_sha256": "0c824cd0f9b7cb6872ca58463a268d453d6f6104a1564c66f8639a313c9cefd4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveNative",
+      "name": "Overfull.NativeReserve.exists_native_reserved_palette._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/ReserveNative.lean",
+      "source_sha256": "0c824cd0f9b7cb6872ca58463a268d453d6f6104a1564c66f8639a313c9cefd4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.joiningPalette_class_subset",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.mem_pairColorClass",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.mem_pairColorClass._simp_1",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.mem_pairColorClass._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.mem_pairColorClass._simp_1_3",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.mem_pairColorClass._simp_1_4",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.mem_pairFiberCopies_iff",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.mem_pairFiberCopies_iff._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.mem_pairFiberCopies_iff._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.mem_survivingCopies",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.mem_survivingCopies._simp_1",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass.eq_1",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_card_le_one",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_contains_prescribed",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_cover",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_covers_free",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_covers_free._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_covers_free._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_disjoint",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_eq_singleton",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_isMatching",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_subset",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_support_subset",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_support_subset._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "name": "Overfull.NativeReserve.pairColorClass_support_subset._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "source_sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.pairFiberCopies.eq_1",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.pairFiberCopies_disjoint_joining",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.pairFiberCopies_eq_nonjoining_incidence",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.pairFiberCopies_eq_nonjoining_incidence._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.pairFiberCopies_eq_nonjoining_incidence._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "name": "Overfull.NativeReserve.pairFiberCopies_incident",
+      "source_path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "source_sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_added_copies",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_added_copies._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_added_copies._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_at",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_card_le",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_contains_original",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_cover",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_cut_eq",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_cut_parity",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_disjoint",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_joining",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_matching",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_other",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_support_card_le",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_vertex_load_eq",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_vertex_load_eq._proof_1_1",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_vertex_load_le",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_vertex_load_le._proof_1_4",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_vertex_load_le._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_vertex_load_le._simp_1_2",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "name": "Overfull.NativeReserve.reserveClasses_vertex_load_le._simp_1_3",
+      "source_path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "source_sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.survivingCopies.eq_1",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.survivingCopies_card",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.survivingCopies_disjoint",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.survivingCopies_image",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.survivingCopies_isMatching",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.survivingCopies_support",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "name": "Overfull.NativeReserve.survivingCopies_support._simp_1_1",
+      "source_path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "source_sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14"
+    }
+  ]
+}

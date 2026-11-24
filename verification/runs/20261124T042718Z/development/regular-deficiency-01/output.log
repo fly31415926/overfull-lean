@@ -1,0 +1,45 @@
+✖ [3587/3588] Building Overfull.AuxiliarySimple.Deficiency (2.8s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/AuxiliarySimple/Deficiency.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/AuxiliarySimple/Deficiency.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/AuxiliarySimple/Deficiency.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/AuxiliarySimple/Deficiency.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/AuxiliarySimple/Deficiency.setup.json --json
+info: Overfull/AuxiliarySimple/Deficiency.lean:47:6: Try this:
+  ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: Overfull/AuxiliarySimple/Deficiency.lean:43:47: unsolved goals
+V : Type u_1
+I : Type u_2
+inst✝ : Fintype V
+G : SimpleGraph V
+U : I → Finset V
+H : (i : I) → SimpleGraph { x // x ∈ U i }
+Z : Finset V
+k : ℕ
+a : ℝ
+hdegree : ∀ (v : V), G.degree v ≤ k
+hk : k ≤ Fintype.card V
+hcover : ∀ (v : V), v ∈ Z ∨ ∃ i, v ∈ U i
+hembed : ∀ (i : I), H i ≤ induce (↑(U i)) G
+hcore : ∀ (i : I) (v : { x // x ∈ U i }), ↑k - a ≤ ↑((H i).degree v)
+ha : 0 ≤ a
+hlocal : ∀ (v : V), ↑(k - G.degree v) ≤ a + if v ∈ Z then ↑(Fintype.card V) else 0
+⊢ ↑(Fintype.card V) * a + ↑(Fintype.card V) * ↑(#(univ ∩ Z)) = ↑(Fintype.card V) * a + ↑(Fintype.card V) * ↑(#Z)
+warning: Overfull/AuxiliarySimple/Deficiency.lean:46:42: This simp argument is unused:
+  sum_const_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [sum_const, nsmul_eq_mul, s̵u̵m̵_̵c̵o̵n̵s̵t̵_̵z̵e̵r̵o̵,̵ ̵add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/AuxiliarySimple/Deficiency.lean:46:58: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [sum_const, nsmul_eq_mul, sum_const_zero,̵ ̵a̵d̵d̵_̵z̵e̵r̵o̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+✔ [3588/3588] Built Overfull.ThreeCoreReduction.Regular (5.9s)
+Some required targets logged failures:
+- Overfull.AuxiliarySimple.Deficiency
+error: build failed

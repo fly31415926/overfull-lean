@@ -1,0 +1,15 @@
+✔ [3132/3133] Built Overfull.AuxiliarySimple.Coloring (2.7s)
+✖ [3133/3133] Building Overfull.AuxiliarySimple.Completion (2.2s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/AuxiliarySimple/Completion.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/AuxiliarySimple/Completion.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/AuxiliarySimple/Completion.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/AuxiliarySimple/Completion.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/AuxiliarySimple/Completion.setup.json --json
+error: Overfull/AuxiliarySimple/Completion.lean:60:56: Application type mismatch: The argument
+  induce Set.univ H
+has type
+  SimpleGraph ↑Set.univ
+but is expected to have type
+  SimpleGraph { x // x ∈ univ }
+in the application
+  mappedCore Function.Embedding.inr univ (induce Set.univ H)
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.AuxiliarySimple.Completion
+error: build failed

@@ -1,0 +1,46 @@
+✔ [3520/3527] Built Overfull.TerminalFourOdd.MultiGluing (2.8s)
+✔ [3521/3527] Built Overfull.TerminalFourOdd.MultiGeometry (2.9s)
+✔ [3522/3527] Built Overfull.TerminalFourOdd.PrefixResult (2.9s)
+✖ [3523/3527] Building Overfull.TerminalFourOdd.StarGeometry (2.3s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/TerminalFourOdd/StarGeometry.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/StarGeometry.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/StarGeometry.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/StarGeometry.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/StarGeometry.setup.json --json
+error: Overfull/TerminalFourOdd/StarGeometry.lean:33:2: unsolved goals
+case pos
+V : Type u_1
+inst✝ : Fintype V
+label : V → Fin 4
+c : Fin 4
+i : LeafLabel c
+v : V
+hv : label v = c
+hvi : label v ≠ ↑i
+⊢ ¬c = ↑i
+warning: Overfull/TerminalFourOdd/StarGeometry.lean:36:48: This simp argument is unused:
+  hvi
+
+Hint: Omit it from the simp argument list.
+  simp [Multi.centralMap, mem_labelShore, hv,̵ ̵h̵v̵i̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Overfull/TerminalFourOdd/StarGeometry.lean:56:46: unexpected token 'omit'; expected 'lemma'
+error: Overfull/TerminalFourOdd/StarGeometry.lean:63:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  #(G.cutOn M (labelShore label {c}))
+in the target expression
+  #M ≤ #({e ∈ M | (G.firstEnd e ∈ labelShore label {c}) ≠ (G.secondEnd e ∈ labelShore label {c})})
+
+V : Type u_1
+E : Type u_2
+inst✝ : Fintype V
+G : Multigraph V E
+label : V → Fin 4
+M : Finset E
+c : Fin 4
+hsize : #M ≤ 3
+hcut : #(G.cutOn M (labelShore label {c})) = 3
+⊢ #M ≤ #({e ∈ M | (G.firstEnd e ∈ labelShore label {c}) ≠ (G.secondEnd e ∈ labelShore label {c})})
+error: Lean exited with code 1
+✔ [3524/3527] Built Overfull.TerminalFourOdd.Dominant (2.5s)
+✔ [3526/3527] Built Overfull.TerminalFourOdd.Residual (2.5s)
+✔ [3527/3527] Built Overfull.TerminalFourOdd.CompletedNondominant (2.5s)
+Some required targets logged failures:
+- Overfull.TerminalFourOdd.StarGeometry
+error: build failed

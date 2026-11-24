@@ -32,7 +32,7 @@
   "coverage_file": "coverage.json",
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
-  "fully_verified_numbered_assertions": 48,
+  "fully_verified_numbered_assertions": 49,
   "additional_complete_results": [
     {
       "lean_name": "Overfull.arbitrarily_large_class_two_graphs",
@@ -124,6 +124,23 @@
       ],
       "source_manifest": "boundary-extension-full-source.json",
       "semantic_review": "boundary-extension-full-semantic-review.md"
+    },
+    {
+      "lean_name": "Overfull.single_core_coloring",
+      "file": "Overfull/AuxiliarySimple/SingleCore.lean",
+      "manuscript_label": "single:lem:coloring",
+      "manuscript_number": "3.1",
+      "statement_sha256": "e367990020005abeac5226b4f90e96728cafec20b584b7db4d442fda779af0fe",
+      "proved": true,
+      "scope": "Complete Lemma 3.1 for an arbitrary finite simple graph with actual maximum degree at least one quarter of its order, no maximum-degree-overfull set, a spanning ordinary robust core on at least one quarter of the vertices, and the literal combined degree-error/exceptional-cover budget. Positive error tolerance and order threshold precede the host and all graph-dependent data. The proof derives nonnegative error, permits overlap in the displayed cover, and assumes neither regularity nor even order. Its conclusion is a proper coloring of the original simple graph with exactly its maximum-degree palette. The sufficient fixed robust range is 0 < nu <= tau <= 1/4096000.",
+      "related_proof_declarations": [
+        "Overfull.one_core_nonregular_factorization",
+        "Overfull.two_core_nonregular_factorization",
+        "Overfull.three_core_regular_factorization",
+        "Overfull.three_core_regular_one_factorization"
+      ],
+      "source_manifest": "global-factorization-source.json",
+      "semantic_review": "global-factorization-semantic-review.md"
     }
   ],
   "density_corollary_verified": true,

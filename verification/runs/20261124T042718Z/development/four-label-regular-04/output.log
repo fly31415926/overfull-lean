@@ -1,0 +1,219 @@
+✔ [3122/3124] Built Overfull.CompatibleCircuits.FourAdmissibleTemplates (4.2s)
+✖ [3123/3124] Building Overfull.CompatibleCircuits.FourAdmissibleClassification (3.9s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/CompatibleCircuits/FourAdmissibleClassification.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourAdmissibleClassification.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourAdmissibleClassification.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourAdmissibleClassification.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourAdmissibleClassification.setup.json --json
+error: Overfull/CompatibleCircuits/FourAdmissibleClassification.lean:40:63: unsolved goals
+E : Type u_1
+Q : Multigraph (Fin 4) E
+C : Finset E
+v : Fin 4
+hlocal :
+  ∀ (x y v : Fin 4), x ≠ y → (if v ∈ s(x, y) then 1 else 0) = ∑ i, if v ∈ pairs i ∧ s(x, y) = pairs i then 1 else 0
+⊢ (∑ a ∈ C, if v ∈ Q.edge a then 1 else 0) = ∑ e ∈ C, if v ∈ Q.edge e then 1 else 0
+error: Overfull/CompatibleCircuits/FourAdmissibleClassification.lean:67:13: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  n ≥ 0
+  m ≥ 0
+  l ≥ 0
+  k ≥ 0
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  f + k + l + m + n ≤ 4
+  e ≥ 0
+  e + h + i + j + k ≤ 4
+  d ≥ 0
+  c ≥ 0
+  c + d + e + f + g ≤ 4
+  c + d + 2*e + 2*f + g + h + i + j + 2*k + l + m + n ≥ 9
+  b ≥ 0
+  a ≥ 0
+  a + b - c - d - 2*e - 2*f - g - h - i - j - 2*k - l - m - n ≤ -8
+where
+ a := ↑(if 0 = 3 then #(bundle Q C (Fin.succ 2).succ) else 0)
+ b := ↑(if 0 = 2 ∨ 0 = 3 then #(bundle Q C (Fin.succ 2).succ.succ) else 0)
+ c := ↑(if 1 = 2 then #(bundle Q C 1) else 0)
+ d := ↑(if 1 = 3 then #(bundle Q C 2) else 0)
+ e := ↑(#(bundle Q C (Fin.succ 2)))
+ f := ↑(#(bundle Q C (Fin.succ 2).succ))
+ g := ↑(if 1 = 2 ∨ 1 = 3 then #(bundle Q C (Fin.succ 2).succ.succ) else 0)
+ h := ↑(if 2 = 0 ∨ 2 = 1 then #(bundle Q C 0) else 0)
+ i := ↑(if 2 = 0 ∨ 2 = 3 then #(bundle Q C 2) else 0)
+ j := ↑(if 2 = 1 ∨ 2 = 3 then #(bundle Q C (Fin.succ 2).succ) else 0)
+ k := ↑(#(bundle Q C (Fin.succ 2).succ.succ))
+ l := ↑(if 3 = 0 ∨ 3 = 1 then #(bundle Q C 0) else 0)
+ m := ↑(if 3 = 0 ∨ 3 = 2 then #(bundle Q C 1) else 0)
+ n := ↑(if 3 = 1 ∨ 3 = 2 then #(bundle Q C (Fin.succ 2)) else 0)
+error: Overfull/CompatibleCircuits/FourAdmissibleClassification.lean:69:45: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  o ≥ 0
+  n ≥ 0
+  m ≥ 0
+  l ≥ 0
+  k ≥ 0
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  f + k + l + m + n ≤ 4
+  f + k + l + m + n + o ≤ 3
+  e ≥ 0
+  e + h + i + j + k ≤ 4
+  d ≥ 0
+  c ≥ 0
+  c + d + e + f + g ≤ 4
+  b ≥ 0
+  a ≥ 0
+  a + b - c - d - 2*e - 2*f - g - h - i - j - 2*k - l - m - n ≤ -8
+where
+ a := ↑(if 0 = 3 then #(bundle Q C (Fin.succ 2).succ) else 0)
+ b := ↑(if 0 = 2 ∨ 0 = 3 then #(bundle Q C (Fin.succ 2).succ.succ) else 0)
+ c := ↑(if 1 = 2 then #(bundle Q C 1) else 0)
+ d := ↑(if 1 = 3 then #(bundle Q C 2) else 0)
+ e := ↑(#(bundle Q C (Fin.succ 2)))
+ f := ↑(#(bundle Q C (Fin.succ 2).succ))
+ g := ↑(if 1 = 2 ∨ 1 = 3 then #(bundle Q C (Fin.succ 2).succ.succ) else 0)
+ h := ↑(if 2 = 0 ∨ 2 = 1 then #(bundle Q C 0) else 0)
+ i := ↑(if 2 = 0 ∨ 2 = 3 then #(bundle Q C 2) else 0)
+ j := ↑(if 2 = 1 ∨ 2 = 3 then #(bundle Q C (Fin.succ 2).succ) else 0)
+ k := ↑(#(bundle Q C (Fin.succ 2).succ.succ))
+ l := ↑(if 3 = 0 ∨ 3 = 1 then #(bundle Q C 0) else 0)
+ m := ↑(if 3 = 0 ∨ 3 = 2 then #(bundle Q C 1) else 0)
+ n := ↑(if 3 = 1 ∨ 3 = 2 then #(bundle Q C (Fin.succ 2)) else 0)
+ o := ↑(#(bundle Q C ⟨2, ⋯⟩))
+error: Overfull/CompatibleCircuits/FourAdmissibleClassification.lean:69:45: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  o ≥ 0
+  n ≥ 0
+  m ≥ 0
+  l ≥ 0
+  k ≥ 0
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  f + k + l + m + n ≤ 4
+  f + k + l + m + n + o ≤ 3
+  e ≥ 0
+  e + h + i + j + k ≤ 4
+  d ≥ 0
+  c ≥ 0
+  c + d + e + f + g ≤ 4
+  b ≥ 0
+  a ≥ 0
+  a + b - c - d - 2*e - 2*f - g - h - i - j - 2*k - l - m - n ≤ -8
+where
+ a := ↑(if 0 = 3 then #(bundle Q C (Fin.succ 2).succ) else 0)
+ b := ↑(if 0 = 2 ∨ 0 = 3 then #(bundle Q C (Fin.succ 2).succ.succ) else 0)
+ c := ↑(if 1 = 2 then #(bundle Q C 1) else 0)
+ d := ↑(if 1 = 3 then #(bundle Q C 2) else 0)
+ e := ↑(#(bundle Q C (Fin.succ 2)))
+ f := ↑(#(bundle Q C (Fin.succ 2).succ))
+ g := ↑(if 1 = 2 ∨ 1 = 3 then #(bundle Q C (Fin.succ 2).succ.succ) else 0)
+ h := ↑(if 2 = 0 ∨ 2 = 1 then #(bundle Q C 0) else 0)
+ i := ↑(if 2 = 0 ∨ 2 = 3 then #(bundle Q C 2) else 0)
+ j := ↑(if 2 = 1 ∨ 2 = 3 then #(bundle Q C (Fin.succ 2).succ) else 0)
+ k := ↑(#(bundle Q C (Fin.succ 2).succ.succ))
+ l := ↑(if 3 = 0 ∨ 3 = 1 then #(bundle Q C 0) else 0)
+ m := ↑(if 3 = 0 ∨ 3 = 2 then #(bundle Q C 1) else 0)
+ n := ↑(if 3 = 1 ∨ 3 = 2 then #(bundle Q C (Fin.succ 2)) else 0)
+ o := ↑(#(bundle Q C ⟨3, ⋯⟩))
+error: Overfull/CompatibleCircuits/FourAdmissibleClassification.lean:69:45: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  o ≥ 0
+  n ≥ 0
+  m ≥ 0
+  l ≥ 0
+  k ≥ 0
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  f + k + l + m + n ≤ 4
+  e ≥ 0
+  e + h + i + j + k ≤ 4
+  e + h + i + j + k + o ≤ 3
+  d ≥ 0
+  c ≥ 0
+  c + d + e + f + g ≤ 4
+  b ≥ 0
+  a ≥ 0
+  a + b - c - d - 2*e - 2*f - g - h - i - j - 2*k - l - m - n ≤ -8
+where
+ a := ↑(if 0 = 3 then #(bundle Q C (Fin.succ 2).succ) else 0)
+ b := ↑(if 0 = 2 ∨ 0 = 3 then #(bundle Q C (Fin.succ 2).succ.succ) else 0)
+ c := ↑(if 1 = 2 then #(bundle Q C 1) else 0)
+ d := ↑(if 1 = 3 then #(bundle Q C 2) else 0)
+ e := ↑(#(bundle Q C (Fin.succ 2)))
+ f := ↑(#(bundle Q C (Fin.succ 2).succ))
+ g := ↑(if 1 = 2 ∨ 1 = 3 then #(bundle Q C (Fin.succ 2).succ.succ) else 0)
+ h := ↑(if 2 = 0 ∨ 2 = 1 then #(bundle Q C 0) else 0)
+ i := ↑(if 2 = 0 ∨ 2 = 3 then #(bundle Q C 2) else 0)
+ j := ↑(if 2 = 1 ∨ 2 = 3 then #(bundle Q C (Fin.succ 2).succ) else 0)
+ k := ↑(#(bundle Q C (Fin.succ 2).succ.succ))
+ l := ↑(if 3 = 0 ∨ 3 = 1 then #(bundle Q C 0) else 0)
+ m := ↑(if 3 = 0 ∨ 3 = 2 then #(bundle Q C 1) else 0)
+ n := ↑(if 3 = 1 ∨ 3 = 2 then #(bundle Q C (Fin.succ 2)) else 0)
+ o := ↑(#(bundle Q C ⟨4, ⋯⟩))
+error: Overfull/CompatibleCircuits/FourAdmissibleClassification.lean:69:45: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  o ≥ 0
+  n ≥ 0
+  m ≥ 0
+  l ≥ 0
+  k ≥ 0
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  f + k + l + m + n ≤ 4
+  e ≥ 0
+  e + h + i + j + k ≤ 4
+  d ≥ 0
+  c ≥ 0
+  c + d + e + f + g ≤ 4
+  c + d + e + f + g + o ≤ 3
+  b ≥ 0
+  a ≥ 0
+  a + b - c - d - 2*e - 2*f - g - h - i - j - 2*k - l - m - n ≤ -8
+where
+ a := ↑(if 0 = 3 then #(bundle Q C (Fin.succ 2).succ) else 0)
+ b := ↑(if 0 = 2 ∨ 0 = 3 then #(bundle Q C (Fin.succ 2).succ.succ) else 0)
+ c := ↑(if 1 = 2 then #(bundle Q C 1) else 0)
+ d := ↑(if 1 = 3 then #(bundle Q C 2) else 0)
+ e := ↑(#(bundle Q C (Fin.succ 2)))
+ f := ↑(#(bundle Q C (Fin.succ 2).succ))
+ g := ↑(if 1 = 2 ∨ 1 = 3 then #(bundle Q C (Fin.succ 2).succ.succ) else 0)
+ h := ↑(if 2 = 0 ∨ 2 = 1 then #(bundle Q C 0) else 0)
+ i := ↑(if 2 = 0 ∨ 2 = 3 then #(bundle Q C 2) else 0)
+ j := ↑(if 2 = 1 ∨ 2 = 3 then #(bundle Q C (Fin.succ 2).succ) else 0)
+ k := ↑(#(bundle Q C (Fin.succ 2).succ.succ))
+ l := ↑(if 3 = 0 ∨ 3 = 1 then #(bundle Q C 0) else 0)
+ m := ↑(if 3 = 0 ∨ 3 = 2 then #(bundle Q C 1) else 0)
+ n := ↑(if 3 = 1 ∨ 3 = 2 then #(bundle Q C (Fin.succ 2)) else 0)
+ o := ↑(#(bundle Q C ⟨5, ⋯⟩))
+error: Overfull/CompatibleCircuits/FourAdmissibleClassification.lean:106:4: unsolved goals
+case inl
+E : Type u_1
+Q : Multigraph (Fin 4) E
+C : Finset E
+hregular : ∀ (v : Fin 4), Q.degreeOn C v = 4
+t : Fin 4
+r : Fin 6
+hcounts : ∀ (i : Fin 6), #{e | Sym2.map (⇑(permutation r)) ((graph t).edge e) = pairs i} = #(bundle Q C i)
+A : Multigraph (Fin 4) (Fin 8) := (graph t).renameVertices (permutation r)
+p : Sym2 (Fin 4)
+hcases : ∀ (p : Sym2 (Fin 4)), p.IsDiag ∨ ∃ i, pairs i = p
+hdiag : p.IsDiag
+hleft : {e | A.edge e = p} = ∅
+hright : {e ∈ C | Q.edge e = p} = ∅
+⊢ #∅ = #∅
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourAdmissibleClassification
+error: build failed

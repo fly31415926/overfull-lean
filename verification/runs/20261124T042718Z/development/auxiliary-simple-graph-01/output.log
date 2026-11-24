@@ -1,0 +1,9 @@
+⚠ [3126/3126] Built Overfull.AuxiliarySimple.Graph (2.2s)
+warning: Overfull/AuxiliarySimple/Graph.lean:113:0: automatically included section variable(s) unused in theorem `Overfull.AuxiliarySimple.core_embed`:
+  [Fintype V]
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (3126 jobs).

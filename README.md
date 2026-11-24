@@ -1,6 +1,60 @@
 # Lean formalization of the overfull manuscript
 
-## Current continuation: uniform three-core terminal factorization
+## Current continuation: complete single-core Lemma 3.1
+
+**49 of the manuscript's 69 numbered assertions are complete.**
+`Overfull.single_core_coloring` proves the full pinned Lemma 3.1: a simple
+graph with maximum degree at least one quarter of its order, no overfull set,
+and one large ordinary robust core with a small combined error and exceptional
+budget has a proper coloring with its actual maximum degree.
+
+The constants are uniform before the original graph. The explicit sufficient
+range is `0 < ν ≤ τ ≤ 1/4096000`. Original parity and regularity are unrestricted;
+the proof derives nonnegative error and permits overlap in the source cover.
+The exact statement hash is unchanged. Only Lemma 3.1 is promoted; the other
+68 assertion records and all 69 statement identities are preserved.
+
+The construction composes foreign-edge reduction, bounded exceptional
+absorption, frequent-pattern reduction and the three-core terminal theorem.
+It chooses the entire downstream tolerance function before absorption returns
+its exceptional bound. Simple auxiliary completions then give uniform
+nonregular two-core and one-core factorization, preserving original copies
+and restricting the resulting colorings back to the original graph.
+
+Two further supporting results are now available:
+
+- `Overfull.four_odd_terminal_one_factorization` proves the all-four-odd
+  terminal subcase from the original robust cores and forest-pair supplies.
+  It constructs the selected prefix, both residual coloring alternatives,
+  and exact original-copy reassembly.
+- `Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_regular`
+  constructs compatible circuit partitions under original admissibility
+  when every one of the four labels has degree four, including disconnected
+  graphs. The template, coarsening and original-copy equivalence are derived.
+
+**20 numbered assertions remain incomplete, including the main theorem.**
+The general admissible Eulerian four-label compatible partition, the other
+four-core terminal cases, full Proposition 4.16 and full Theorem 4.17 are not
+claimed by these supporting results.
+
+The [source inventory](docs/global-factorization-source.json),
+[proof map](docs/global-factorization-verification.md),
+[semantic review](docs/global-factorization-semantic-review.md), and
+[handoff](docs/continuation-handoff.md) state the exact scope. The
+[current run](verification/runs/20261124T042718Z/) retains independent reviews,
+every genuine failed and successful development check, frozen complete
+verification inputs and outputs, and preservation evidence. Its actual
+terminal and preservation receipts establish the complete audit result.
+
+The baseline is public commit `14978e4dec2bce94f63953df7b1bdd54f61c3e6c`,
+exact tree `c16767d2e47032ac8e28fd6f18a2bfe4b0ea4767`. All prior nonroot
+mathematical sources and the axiom audit are byte-identical. Every prior
+declaration, source map and completed-result mapping is checked for
+preservation. Publication has separate exact-tree and both-branch readbacks.
+
+The sections below retain historical checkpoint scope and verification status.
+
+## Previous continuation: uniform three-core terminal factorization
 
 The three-core terminal construction now reaches original-host coloring and
 one-factorization theorems:

@@ -1,0 +1,19 @@
+Overfull/External/FiniteCirculation.lean is adapted from:
+  https://github.com/shengtongz/lovasz-opus
+  Lovasz/Circulation.lean
+  Commit: ee0085ddec79996279c7b52044659032e5cf8431
+  Original blob: 0ab362cdd163365d6b0a947d86b99e96ab974513
+
+Copyright (c) 2026 Shengtong Zhang. All rights reserved.
+Original authorship: Claude Opus 5.5 (AI agent), directed by Shengtong Zhang.
+License: Apache License 2.0; see LICENSE_BMATCHING.txt.
+
+Project adaptation: replace the unrelated Lovasz.Defs import with the
+required mathlib imports, and replace API names with their Lean 4.24/mathlib
+equivalents (push_neg, if_neg, if_pos, continuous_finset_sum). The mathematical
+statements and proofs are retained. The imported proof and the actual-graph
+adapters build on the project's pinned Lean 4.24.0 toolchain. Provenance and
+checksums are recorded in docs/circulation-source.json.
+
+The attribution above records the upstream authors; it does not imply their
+review or endorsement of this overfull-conjecture project.

@@ -1,0 +1,68 @@
+✔ [3527/3531] Built Overfull.TerminalFourOdd.StarGeometry (2.5s)
+✔ [3528/3531] Built Overfull.TerminalFourOdd.CommonCenter (2.9s)
+✖ [3529/3531] Building Overfull.TerminalFourOdd.Completed (2.9s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/TerminalFourOdd/Completed.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/Completed.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/Completed.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/Completed.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/Completed.setup.json --json
+error: Overfull/TerminalFourOdd/Completed.lean:63:16: Application type mismatch: The argument
+  hcover'
+has type
+  @Finset.biUnion (Fin (h - P.rounds)) (↑(afterDeletions G P.completion.full P.rounds).edgeSet)
+      (fun a_1 b => Subtype.instDecidableEq a_1 b) univ M =
+    joiningCopies (Multigraph.ofSimpleGraph R) label
+but is expected to have type
+  @Finset.biUnion (Fin (h - P.rounds)) (↑R.edgeSet) (fun a b => propDecidable (a = b)) univ M =
+    joiningCopies (Multigraph.ofSimpleGraph R) label
+in the application
+  hC V (↑R.edgeSet) (Multigraph.ofSimpleGraph R) label C (h - P.rounds) a
+    (fun i => LE.le.trans (le_max_right mN mC) (hm i)) hodd hregular hk hrobust
+    (fun i =>
+      LE.le.trans (herror i)
+        (mul_le_mul_of_nonneg_right (min_le_right ηN ηC) (Nat.cast_nonneg #(labelShore label {i}))))
+    hdegree M hdisj hcover'
+error: Overfull/TerminalFourOdd/Completed.lean:68:19: Application type mismatch: The argument
+  hcover'
+has type
+  @Finset.biUnion (Fin (h - P.rounds)) (↑(afterDeletions G P.completion.full P.rounds).edgeSet)
+      (fun a_1 b => Subtype.instDecidableEq a_1 b) univ M =
+    joiningCopies (Multigraph.ofSimpleGraph R) label
+but is expected to have type
+  @Finset.biUnion (Fin (h - P.rounds)) (↑R.edgeSet) (fun a b => propDecidable (a = b)) univ M =
+    joiningCopies (Multigraph.ofSimpleGraph R) label
+in the application
+  hN V (↑R.edgeSet) (Multigraph.ofSimpleGraph R) label C (h - P.rounds) a
+    (fun i => LE.le.trans (le_max_left mN mC) (hm i)) hodd hregular hk hrobust ha
+    (fun i =>
+      LE.le.trans (herror i) (mul_le_mul_of_nonneg_right (min_le_left ηN ηC) (Nat.cast_nonneg #(labelShore label {i}))))
+    hdegree M hM hdisj hcover'
+error: Lean exited with code 1
+✖ [3530/3531] Building Overfull.TerminalFourOdd.Prefix (9.7s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/TerminalFourOdd/Prefix.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/Prefix.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/Prefix.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/Prefix.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/Prefix.setup.json --json
+error: Overfull/TerminalFourOdd/Prefix.lean:158:58: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a b => @decidableEq (↑G.edgeSet) (fun a b => Subtype.instDecidableEq a b) a b
+inferred
+  fun a b => @decidableEq (↑G.edgeSet) (fun a b => propDecidable (a = b)) a b
+error: Overfull/TerminalFourOdd/Prefix.lean:174:19: Type mismatch: After simplification, term
+  hselection
+ has type
+  (∃ i,
+      ∀
+        M ∈
+          @SDiff.sdiff (Finset (Finset ↑G.edgeSet))
+            (@instSDiff (Finset ↑G.edgeSet) fun a b =>
+              @decidableEq (↑G.edgeSet) (fun a b => Subtype.instDecidableEq a b) a b)
+            D.primary S,
+        #((Multigraph.ofSimpleGraph G).cutOn M (labelShore label {i})) = 3) ∨
+    ∀ (i : Fin 4), r ≤ #(singletonParts (Multigraph.ofSimpleGraph G) label (D.primary \ S) i)
+but is expected to have type
+  (∃ c,
+      ∀
+        M ∈
+          @SDiff.sdiff (Finset (Finset ↑G.edgeSet))
+            (@instSDiff (Finset ↑G.edgeSet) fun a b => @decidableEq (↑G.edgeSet) (fun a b => propDecidable (a = b)) a b)
+            D.primary S,
+        #((Multigraph.ofSimpleGraph G).cutOn M (labelShore label {c})) = 3) ∨
+    ∀ (i : Fin 4), r ≤ #(singletonParts (Multigraph.ofSimpleGraph G) label (D.primary \ S) i)
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.TerminalFourOdd.Completed
+- Overfull.TerminalFourOdd.Prefix
+error: build failed

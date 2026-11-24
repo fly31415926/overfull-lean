@@ -1,96 +1,93 @@
-# Continuation handoff: three-core terminal factorization
+# Continuation handoff: full single-core coloring
 
-## Scope and exact baseline
+## Current mathematical scope
 
-The new public theorem pair is
-`Overfull.three_core_terminal_factorization` and
-`Overfull.three_core_terminal_one_factorization`. It constructs a coloring
-and an exact original-copy one-factorization from the original three-core
-terminal hypotheses. It is a **subcase of Proposition 4.16**, not completion
-of that full assertion. All 69 assertion records remain identical, coverage
-remains **48/69**, and the main theorem remains incomplete.
+`Overfull.single_core_coloring` completes pinned **Lemma 3.1**,
+`single:lem:coloring`. Coverage is **49/69**; 20 assertions remain incomplete,
+including the main theorem. Only Lemma 3.1 is promoted. All other 68 assertion
+records and all 69 source-statement identities are unchanged.
 
-The baseline is public commit
-`0cf1c68c4daaeec9b879a03f1871eb64a0fa9640`, exact tree
-`5d031253d02d0d0878422f8fbc367f04b812450c`. This is the exact tree of the
-authorized local checkpoint `a7b16ddfcda8ba4247900795d1c9406036a2a9ef`.
-Both public branches were updated without force and read back at the public
-commit. The new run retains baseline publication and branch-readback records.
-Historical upload and approval failures remain preserved in the preceding
-publication evidence; they were resolved before this round began.
+The theorem chooses positive `ε` and `n₀` after fixed
+`0<ν≤τ≤1/4096000` and before the finite original simple graph. It uses actual
+maximum degree, the source's spanning robust core and covering sets, no
+overfull set, density and combined error budget. It derives nonnegative error,
+removes overlap in the exceptional cover, and adds no regularity or parity
+hypothesis. Its conclusion is a coloring of the original simple graph.
 
-The baseline contains 5,478 tracked files, 13,366 audited declarations,
-2,272 completed-result mappings and 716 frozen source/input hashes.
-The current worktree is `/workspace/scratch/7dae4c9bb5a1/overfull-three-core`,
-and the run is `verification/runs/20261124T032118Z/`.
+The supporting chain now contains frequent-pattern and bounded-exception
+three-core composition, full three-core regular composition, simple auxiliary
+realization with exact original-copy transport, and uniform nonregular
+two-core and one-core factorization. The whole absorption tolerance function
+is fixed before the eventual exceptional bound.
 
-## Constructed proof chain
+The all-four-odd terminal one-factorization is also proved from original-host
+hypotheses and actual forest-pair supplies. The proof constructs the selected
+prefix and both residual alternatives: singleton-rich boundary extension or
+three independent apices around a common center, followed by exact reassembly.
 
-The uniform prefix fixes surviving robustness before the requested residual
-error. It derives actual even or two-odd joining decompositions, constructs
-small matching palettes and completes the selected classes with the proved
-adaptive robust-core rules. Its exact joining-copy identity and the new simple
-residual bridge preserve every surviving edge, support and cut cardinality.
+The new compatible-circuit theorem constructs actual-copy partitions under
+original admissibility for four-label multigraphs of degree exactly four at
+each label, including disconnected inputs. It is a degree-four special case.
+Neither supporting result completes full Proposition 4.16.
 
-All-even parts become closed residual components and receive constructed
-colorings. With exactly two odd parts, the surviving primary classes construct
-the two-apex central graph's regularity and no-overfull certificate. Complete
-Corollary 4.6 factors the central graph, singleton boundary extension aligns
-both odd leaves, and the generic original-copy gluer produces the residual
-coloring. Exact reassembly restores every deleted perfect matching.
+## Baseline and evidence
 
-The outer theorem chooses one tolerance and order threshold before the host.
-The core error is nonnegative and satisfies `a + 1 ≤ ε n`; the fixed range
-bound is `ν ≤ τ ≤ min α 1 / 64`. The public result assumes neither a joining
-decomposition nor a final or residual coloring. The evenness hypothesis is
-on the host order, not its regular degree.
+The authoritative baseline is public commit
+`14978e4dec2bce94f63953df7b1bdd54f61c3e6c`, tree
+`c16767d2e47032ac8e28fd6f18a2bfe4b0ea4767`. Both public branches were fetched
+and independently read back at that commit. It contains 6,916 tracked files,
+13,675 audited declarations, 2,396 completed-result mappings and 741 frozen
+source/input hashes.
 
-## Verification and preservation contract
+The repository is `/workspace/scratch/5793769ed3f4/overfull-lean`, initially
+on `continuation-20261124`. The run is
+`verification/runs/20261124T042718Z/`. Its actual terminal receipts, frozen
+snapshots, final preservation and execution reports, and publication receipts
+determine verification and publication status. A handoff or focused build
+alone is not a complete audit or publication receipt.
 
-The exact proof inventory is in `docs/three-core-terminal-source.json`; the
-semantic review and module map are the accompanying documents. Actual full
-verification status comes from the immutable run's terminal receipt and
-preservation report, never from a focused build alone.
+Principal source endpoints:
 
-All preceding nonroot mathematical sources and `Audit.lean` are byte-identical.
-The root receives only new imports. The verifier receives exactly four additive
-registrations, with every preceding guard retained. All 13,366 old declaration
-names, owning modules and axiom sets, all 2,272 old result mappings, all earlier
-source/declaration maps and historical artifacts must survive unchanged.
+- `Overfull/AuxiliarySimple/SingleCore.lean`
+- `Overfull/ThreeCoreReduction/Regular.lean`
+- `Overfull/TerminalFourOdd/Theorem.lean`
+- `Overfull/CompatibleCircuits/FourAdmissibleRegular.lean`
 
-The coverage update appends only the supporting three-core component and
-updates its scope prose. Every numbered assertion record, all source statement
-identities, the list of 48 completed assertions, and `manuscript-source.json`
-remain unchanged. Genuine failed and successful commands are archived with
-their source snapshots, outputs and actual exits. The complete current audit
-includes private and generated declaration names.
+The exact inventory is `docs/global-factorization-source.json`. Its accompanying
+semantic review and verification map describe source agreement, quantifier
+order, original-copy transport, proof responsibilities and scope. The complete
+generated declaration map includes private and generated names.
 
-Publication has separate commit, exact-tree and both-branch readbacks. It must
-not be inferred from local verification. A failed or incomplete candidate
-must not replace either verified branch.
+All prior nonroot mathematical sources and `Audit.lean` are unchanged. The
+root has only three added imports. The verifier has precisely the reviewed
+48-to-49 count update and four additive registrations; old guards and the
+transitive axiom policy remain intact. The complete gate must pass on unchanged
+frozen inputs, preserve every old declaration/owner/axiom set, all previous
+result mappings and source/declaration maps, and use only `propext`,
+`Classical.choice` and `Quot.sound`.
+
+Every genuine failed and successful development command is archived with
+source snapshots and real output/exit. Publication requires the complete
+artifacts and separate exact-tree and both-branch readbacks for `main` and
+`verified-bipartite-continuation-2026-11-21`.
 
 ## Next mathematical obligations
 
-Full Proposition 4.16 still has four-core cases. The all-even and exactly-two-odd
-four-core branches need the compatible-circuit partition theorem for an
-admissible Eulerian four-label quotient. Existing ordinary Eulerian circuits
-or a theorem assuming compatibility do not discharge this obligation.
-The new central contraction argument is reusable; the exactly-two-odd case
-would have two robust central cores and two apices and can use the completed
-two-core branch of Corollary 4.6.
+1. **General four-label compatible circuits.** Arbitrary admissible Eulerian
+   quotients can have larger and unequal even degrees. The degree-four theorem
+   does not cover them. A reduction must preserve all half-cut constraints and
+   actual copies; ordinary Eulerian circuits are insufficient.
+2. **Other four-core terminal cases.** Four even parts and exactly two odd
+   parts still need the general compatible partition. The all-four-odd case
+   with actual forest-pair supplies is now complete and reusable.
+3. **Full regular factorization Theorem 4.17.** The three-core subcase with a
+   small linear exceptional set is complete. The full four-core range still
+   requires the remaining terminal cases and uniform composition.
+4. **Global and bipartite inputs.** Lemma 3.1 alone does not prove the critical
+   corollaries, bipartite factorization branch, all padding results or the main
+   theorem. The numbered inventory gives their exact unchanged status.
 
-The all-four-odd branch already has its original-host primary decomposition.
-It still needs completed-prefix composition, exact residual geometry, and
-singleton/triple leaf restoration. The dominant-center subcase can use the
-independent-exterior one-core theorem. The nondominant case needs the positive
-singleton-color reserve required by full boundary extension.
-
-A separate route is to compose the three-core terminal theorem with the
-existing foreign-edge, bounded-exceptional-absorption and frequent-pattern
-reductions, preserving their quantifier order and original-copy reassembly.
-This would prove the three-core regular factorization subcase and may enable
-the two-core ordinary branch and Lemma 3.1 via auxiliary completion. These
-compositions are not asserted by the current theorem.
-
-The full source assessment, including precise statement hashes and the
-four-label obstruction, remains in `initial-target-assessment.md` in this run.
+Do not promote a support theorem as a complete numbered assertion, assume a
+coloring or partition that the target must construct, or choose uniform
+constants after the host. Preserve every actual edge through contraction,
+auxiliary completion, residual construction and prefix restoration.

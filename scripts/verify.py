@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "verification"
 MATHLIB_REVISION = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
 NUMBERED_ASSERTION_COUNT = 69
-COMPLETED_NUMBERED_ASSERTION_COUNT = 48
+COMPLETED_NUMBERED_ASSERTION_COUNT = 49
 
 
 def run(arguments: list[str], log_name: str) -> str:
@@ -121,7 +121,8 @@ def main() -> None:
                           ("native_star", "native-star-source.json"),
                           ("native_integration", "native-integration-source.json"),
                           ("native_terminal", "native-terminal-source.json"),
-                          ("three_core_terminal", "three-core-terminal-source.json")):
+                          ("three_core_terminal", "three-core-terminal-source.json"),
+                          ("global_factorization", "global-factorization-source.json")):
         source = json.loads((ROOT / "docs" / filename).read_text())
         source_modules = {item["module"]: item for item in source["modules"]}
         if (len(source_modules) != source["module_count"]
@@ -204,6 +205,19 @@ def main() -> None:
                 "Overfull.three_core_terminal_one_factorization"]
             or not set(three_core_source["public_theorems"]) <= set(three_core_public)):
         raise SystemExit("The three-core continuation must identify only its exact terminal subcase.")
+
+    global_source, _, global_public = extension_maps["global_factorization"]
+    if (global_source["kind"] != "numbered_assertion_closure_with_supporting_continuations"
+            or global_source["numbered_assertions_completed"] != 1
+            or global_source["manuscript_number"] != "3.1"
+            or global_source["manuscript_label"] != "single:lem:coloring"
+            or global_source["statement_sha256"] != "e367990020005abeac5226b4f90e96728cafec20b584b7db4d442fda779af0fe"
+            or global_source["public_theorems"] != [
+                "Overfull.single_core_coloring", "Overfull.two_core_nonregular_factorization",
+                "Overfull.three_core_regular_factorization", "Overfull.three_core_regular_one_factorization"]
+            or not set(global_source["public_theorems"]) <= set(global_public)
+            or global_source["main_theorem_verified"] is not False):
+        raise SystemExit("The continuation must identify the exact complete single-core Lemma 3.1.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1719,7 +1733,8 @@ def main() -> None:
                     "native_star": "native-star",
                     "native_integration": "native-integration",
                     "native_terminal": "native-terminal",
-                    "three_core_terminal": "three-core-terminal"}[key]
+                    "three_core_terminal": "three-core-terminal",
+                    "global_factorization": "global-factorization"}[key]
         map_path = OUTPUT / f"{basename}-declarations.json"
         map_path.write_text(json.dumps({
             "schema_version": 1,
@@ -1799,6 +1814,7 @@ def main() -> None:
         "native_integration_declaration_map": extension_evidence["native_integration"],
         "native_terminal_declaration_map": extension_evidence["native_terminal"],
         "three_core_terminal_declaration_map": extension_evidence["three_core_terminal"],
+        "global_factorization_declaration_map": extension_evidence["global_factorization"],
         "checkpoint_reconstruction": {
             "original_checkpoint": reconstruction["original_checkpoint"],
             "original_tree_reproduced": False,

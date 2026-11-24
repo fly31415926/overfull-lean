@@ -1,0 +1,50 @@
+✖ [3612/3614] Building Overfull.AuxiliarySimple.OrdinaryTwo (74s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/AuxiliarySimple/OrdinaryTwo.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/AuxiliarySimple/OrdinaryTwo.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/AuxiliarySimple/OrdinaryTwo.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/AuxiliarySimple/OrdinaryTwo.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/AuxiliarySimple/OrdinaryTwo.setup.json --json
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:157:6: Type mismatch
+  mappedCore_robust Function.Embedding.inl (U 0) (H 0) μ τ
+    (IsRobustExpander.mono_parameter (H 0) (hrobust 0) (min_le_left ν νC))
+has type
+  @IsRobustExpander { x // x ∈ map Function.Embedding.inl (U 0) }
+    (Finset.Subtype.fintype (map Function.Embedding.inl (U 0)))
+    (fun a b =>
+      @Subtype.instDecidableEq (V ⊕ ?m.4104) (Membership.mem (map Function.Embedding.inl (U 0)))
+        (fun a b => propDecidable (a = b)) a b)
+    (mappedCore Function.Embedding.inl (U 0) (H 0))
+    (fun a b => propDecidable ((mappedCore Function.Embedding.inl (U 0) (H 0)).Adj a b)) μ τ
+but is expected to have type
+  @IsRobustExpander { x // x ∈ P ((fun i => i) ⟨0, ⋯⟩) } (Finset.Subtype.fintype (P ((fun i => i) ⟨0, ⋯⟩)))
+    (fun a b =>
+      @Subtype.instDecidableEq (V ⊕ Fin m) (Membership.mem (P ((fun i => i) ⟨0, ⋯⟩)))
+        (fun a b => instDecidableEqSum a b) a b)
+    (K ((fun i => i) ⟨0, ⋯⟩)) (fun a b => propDecidable ((K ((fun i => i) ⟨0, ⋯⟩)).Adj a b)) μ τ
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:159:6: Type mismatch
+  mappedCore_robust Function.Embedding.inl (U 1) (H 1) μ τ
+    (IsRobustExpander.mono_parameter (H 1) (hrobust 1) (min_le_left ν νC))
+has type
+  @IsRobustExpander { x // x ∈ map Function.Embedding.inl (U 1) }
+    (Finset.Subtype.fintype (map Function.Embedding.inl (U 1)))
+    (fun a b =>
+      @Subtype.instDecidableEq (V ⊕ ?m.4127) (Membership.mem (map Function.Embedding.inl (U 1)))
+        (fun a b => propDecidable (a = b)) a b)
+    (mappedCore Function.Embedding.inl (U 1) (H 1))
+    (fun a b => propDecidable ((mappedCore Function.Embedding.inl (U 1) (H 1)).Adj a b)) μ τ
+but is expected to have type
+  @IsRobustExpander { x // x ∈ P ((fun i => i) ⟨1, ⋯⟩) } (Finset.Subtype.fintype (P ((fun i => i) ⟨1, ⋯⟩)))
+    (fun a b =>
+      @Subtype.instDecidableEq (V ⊕ Fin m) (Membership.mem (P ((fun i => i) ⟨1, ⋯⟩)))
+        (fun a b => instDecidableEqSum a b) a b)
+    (K ((fun i => i) ⟨1, ⋯⟩)) (fun a b => propDecidable ((K ((fun i => i) ⟨1, ⋯⟩)).Adj a b)) μ τ
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:162:8: (deterministic) timeout at `isDefEq`, maximum number of heartbeats (1200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:24:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (1200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.AuxiliarySimple.OrdinaryTwo
+error: build failed

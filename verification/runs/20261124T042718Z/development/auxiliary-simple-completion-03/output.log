@@ -1,0 +1,26 @@
+⚠ [3133/3133] Built Overfull.AuxiliarySimple.Completion (2.5s)
+warning: Overfull/AuxiliarySimple/Completion.lean:69:8: automatically included section variable(s) unused in theorem `Overfull.AuxiliarySimple.auxiliaryEquiv_coe`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Overfull/AuxiliarySimple/Completion.lean:81:0: automatically included section variable(s) unused in theorem `Overfull.AuxiliarySimple.auxiliaryCore_degree`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Overfull/AuxiliarySimple/Completion.lean:86:0: automatically included section variable(s) unused in theorem `Overfull.AuxiliarySimple.auxiliaryCore_robust`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Overfull/AuxiliarySimple/Completion.lean:99:0: automatically included section variable(s) unused in theorem `Overfull.AuxiliarySimple.auxiliaryVertices_card`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (3133 jobs).

@@ -1,0 +1,98 @@
+✖ [3587/3587] Building Overfull.ThreeCoreReduction.Regular (13s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/ThreeCoreReduction/Regular.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/ThreeCoreReduction/Regular.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/ThreeCoreReduction/Regular.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/ThreeCoreReduction/Regular.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/ThreeCoreReduction/Regular.setup.json --json
+error: Overfull/ThreeCoreReduction/Regular.lean:52:10: linarith failed to find a contradiction
+case h
+α ν τ : ℝ
+hα : 0 < α
+hα1 : α ≤ 1
+hν : 0 < ν
+hντ : ν ≤ τ
+hτ : τ ≤ α / 256000
+hτpos : 0 < τ
+νF : ℝ
+hνF : 0 < νF
+hνFτ : νF ≤ τ / 2
+hforeign :
+  ∀ (η : ℝ),
+    0 < η →
+      ∃ ε,
+        0 < ε ∧
+          ∃ n₀,
+            ∀ (V : Type u) (I : Type) [inst : Fintype V] [inst_1 : Fintype I] [Nonempty I] (G : SimpleGraph V)
+              (U : I → Finset V) (H : (i : I) → SimpleGraph { x // x ∈ U i }) (Z : Finset V) (k : ℕ) (a : ℝ),
+              n₀ ≤ Fintype.card V →
+                Fintype.card I ≤ 4 →
+                  (∀ (v : V), G.degree v = k) →
+                    α * ↑(Fintype.card V) ≤ ↑k →
+                      (∀ (X : Finset V), ¬IsOverfull G k X) →
+                        (Pairwise fun i l => Disjoint (U i) (U l)) →
+                          (∀ (i : I), Disjoint (U i) Z) →
+                            (∀ (v : V), v ∈ Z ∨ ∃ i, v ∈ U i) →
+                              (∀ (i : I), α * ↑(Fintype.card V) ≤ ↑(#(U i))) →
+                                (∀ (i : I), H i ≤ induce (↑(U i)) G) →
+                                  (∀ (i : I) (x : { x // x ∈ U i }), ↑k - a ≤ ↑((H i).degree x)) →
+                                    (∀ (i : I), IsRobustExpander (H i) ν τ) →
+                                      0 ≤ a →
+                                        a + ↑(#Z) + 1 ≤ ε * ↑(Fintype.card V) →
+                                          ∃ R,
+                                            a + 3 + ↑(#R.Z) + 1 ≤ η * ↑R.h ∧
+                                              ∀ (i : I), α / 2 * ↑(Fintype.card V) ≤ ↑(#(R.U i))
+c : ℝ := ↑(256 * (classLoss + 6 + markedLimit))
+a✝ : α / 256 / 1000 < τ / 2
+⊢ False
+failed
+error: Overfull/ThreeCoreReduction/Regular.lean:61:56: failed to prove positivity/nonnegativity/nonzeroness
+error: Overfull/ThreeCoreReduction/Regular.lean:98:4: mod_cast has type
+  ∑ x ∈ F.Z, #({w ∈ F.G.neighborFinset x | ∃ i, w ∈ F.U i ∧ ¬i = F.assign x}) ≤
+    256 * (classLoss + 6 + markedLimit) * F.h
+but is expected to have type
+  ∑ x ∈ F.Z, #({w ∈ F.G.neighborFinset x | ∃ i, w ∈ F.U i ∧ ¬i = F.assign x}) ≤
+    256 * (classLoss + 6 + markedLimit) * F.h
+error: Overfull/ThreeCoreReduction/Regular.lean:135:4: Type mismatch: After simplification, term
+  cA
+ has type
+  (Multigraph.ofSimpleGraph A.G).EdgeColoring A.h
+but is expected to have type
+  (Multigraph.ofSimpleGraph (afterDeletions F.G A.N A.rounds)).EdgeColoring A.h
+error: Overfull/ThreeCoreReduction/Regular.lean:139:4: 'change' tactic failed, pattern
+  @degree V (afterDeletions F.G A.N A.rounds) v₀
+        (@neighborSetFintype V (afterDeletions F.G A.N A.rounds) inst✝
+          (fun a_1 b => propDecidable ((afterDeletions F.G A.N A.rounds).Adj a_1 b)) v₀) +
+      A.rounds =
+    F.G.degree v₀
+is not definitionally equal to target
+  @degree V (F.G \ BipartitePackingAccounting.edgeUnion (fun j => (A.N j).spanningCoe) (range A.rounds)) v₀
+        (@neighborSetFintype V
+          (F.G \ BipartitePackingAccounting.edgeUnion (fun j => (A.N j).spanningCoe) (range A.rounds)) inst✝
+          (fun a_1 b =>
+            Sdiff.adjDecidable V F.G
+              (BipartitePackingAccounting.edgeUnion (fun j => (A.N j).spanningCoe) (range A.rounds)) a_1 b)
+          v₀) +
+      A.rounds =
+    F.G.degree v₀
+error: Overfull/ThreeCoreReduction/Regular.lean:146:4: Type mismatch: After simplification, term
+  cF
+ has type
+  (Multigraph.ofSimpleGraph F.G).EdgeColoring F.h
+but is expected to have type
+  (Multigraph.ofSimpleGraph (afterDeletions G F.N F.rounds)).EdgeColoring F.h
+error: Overfull/ThreeCoreReduction/Regular.lean:150:4: 'change' tactic failed, pattern
+  @degree V (afterDeletions G F.N F.rounds) v₀
+        (@neighborSetFintype V (afterDeletions G F.N F.rounds) inst✝
+          (fun a_1 b => propDecidable ((afterDeletions G F.N F.rounds).Adj a_1 b)) v₀) +
+      F.rounds =
+    G.degree v₀
+is not definitionally equal to target
+  @degree V (G \ BipartitePackingAccounting.edgeUnion (fun j => (F.N j).spanningCoe) (range F.rounds)) v₀
+        (@neighborSetFintype V
+          (G \ BipartitePackingAccounting.edgeUnion (fun j => (F.N j).spanningCoe) (range F.rounds)) inst✝
+          (fun a_1 b =>
+            Sdiff.adjDecidable V G
+              (BipartitePackingAccounting.edgeUnion (fun j => (F.N j).spanningCoe) (range F.rounds)) a_1 b)
+          v₀) +
+      F.rounds =
+    G.degree v₀
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.ThreeCoreReduction.Regular
+error: build failed

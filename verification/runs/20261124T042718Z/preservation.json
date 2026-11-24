@@ -1,0 +1,71 @@
+{
+  "baseline_commit": "14978e4dec2bce94f63953df7b1bdd54f61c3e6c",
+  "baseline_tree": "c16767d2e47032ac8e28fd6f18a2bfe4b0ea4767",
+  "previous_audited_declarations": 13675,
+  "previous_completed_result_mappings": 2396,
+  "previous_frozen_inputs": 741,
+  "coverage": {
+    "numbered_assertions": 69,
+    "previous_complete": 48,
+    "current_complete": 49,
+    "only_promoted_assertion": "3.1",
+    "all_other_68_records_identical": true,
+    "all_69_statement_identities_identical": true,
+    "main_theorem_verified": false
+  },
+  "all_previous_mathematical_sources_and_audit_unchanged": true,
+  "verifier_changes_exactly_reviewed": true,
+  "new_module_count": 34,
+  "development_evidence": {
+    "attempt_count": 55,
+    "file_count": 1258,
+    "status_counts": {
+      "passed": 16,
+      "failed": 39
+    },
+    "attempts_with_recorded_input_changes": [
+      "auxiliary-simple-completion-04",
+      "auxiliary-simple-single-01",
+      "auxiliary-simple-single-02",
+      "auxiliary-simple-single-03",
+      "auxiliary-simple-two-01",
+      "auxiliary-simple-two-02",
+      "four-label-classification-01",
+      "four-label-classification-02",
+      "four-label-coarsening-01",
+      "four-label-regular-01",
+      "four-label-regular-03",
+      "four-label-templates-01",
+      "four-label-templates-02",
+      "four-odd-theorem-02",
+      "three-reduction-frequent-01"
+    ],
+    "exact_inventory_hashes_and_sizes_preserved": true
+  },
+  "status": "passed",
+  "checked_at_utc": "2026-11-24T05:08:21.701284+00:00",
+  "full_verifier_attempt": "full-01",
+  "actual_full_verifier_exit": 0,
+  "audited_declarations": 14055,
+  "new_audited_declarations": 380,
+  "public_theorem_count": 140,
+  "frozen_input_count": 779,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_previous_declarations_owners_axiom_sets_preserved": true,
+  "all_previous_completed_result_mappings_preserved": true,
+  "all_previous_source_declaration_maps_preserved": true,
+  "execution_evidence": {
+    "principal_outputs_present": true,
+    "all_recorded_live_outputs_match_archive": true,
+    "raw_command_output_unchanged": true,
+    "terminal_receipt_identical": true,
+    "all_verification_controls_preserved": true,
+    "control_count": 12,
+    "recorded_output_count": 23
+  },
+  "genuine_command_receipt_sha256": "a2bd3d6597c8471299ff25cb7f524bed0a20c802ddc2befea7d9894e48e8d308"
+}

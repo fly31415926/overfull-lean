@@ -1,0 +1,40 @@
+name: Lean proofs and axiom audit
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      LEAN_NUM_THREADS: "2"
+      MATHLIB_NO_CACHE_ON_UPDATE: "1"
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee # v1
+        with:
+          auto-config: "false"
+          use-mathlib-cache: "false"
+      - name: Prepare the pinned Vizing proof
+        run: python3 scripts/setup_vizing.py
+      - name: Fetch the pinned mathlib dependencies
+        run: >-
+          lake exe cache get
+          Mathlib.Combinatorics.SimpleGraph.Matching
+          Mathlib.Combinatorics.SimpleGraph.Coloring
+          Mathlib.Combinatorics.SimpleGraph.Tutte
+          Mathlib.Tactic
+          Mathlib.Data.Real.Archimedean
+          Mathlib.Data.Nat.Choose.Basic
+          Mathlib.Analysis.Convex.Combination
+          Mathlib.Analysis.Normed.Operator.Banach
+          Mathlib.Analysis.Normed.Module.FiniteDimension
+          Mathlib.Combinatorics.Hall.Finite
+      - name: Build the formalized results and audit their axioms
+        run: python3 scripts/verify.py

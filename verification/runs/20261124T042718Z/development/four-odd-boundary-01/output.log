@@ -1,0 +1,172 @@
+✖ [3411/3411] Building Overfull.TerminalFourOdd.BoundaryColoring (3.6s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/TerminalFourOdd/BoundaryColoring.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/BoundaryColoring.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/BoundaryColoring.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/BoundaryColoring.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/BoundaryColoring.setup.json --json
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:24:45: Unknown identifier `hcover`
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:29:36: Application type mismatch: The argument
+  hcover
+has type
+  univ.biUnion M = joiningCopies G label
+of sort `Prop` but is expected to have type
+  { x // x ∈ joiningCopies G label }
+of sort `Type u_2` in the application
+  exists_primary_index G label k M hcover
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:32:38: Application type mismatch: The argument
+  M
+has type
+  Fin k → Finset E
+but is expected to have type
+  { x // x ∈ joiningCopies G label }
+in the application
+  primaryIndex G label k M
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:33:36: Unknown identifier `hcover`
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:38:27: Application type mismatch: The argument
+  M
+has type
+  Fin k → Finset E
+but is expected to have type
+  { x // x ∈ joiningCopies G label }
+in the application
+  primaryIndex G label k M
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:41:56: Unknown identifier `hcover`
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:44:69: Unknown identifier `hcover`
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:48:36: Application type mismatch: The argument
+  M
+has type
+  Fin k → Finset E
+but is expected to have type
+  { x // x ∈ joiningCopies G label }
+in the application
+  primaryIndex G label k M
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:54:37: Application type mismatch: The argument
+  M
+has type
+  Fin k → Finset E
+but is expected to have type
+  { x // x ∈ joiningCopies G label }
+in the application
+  primaryIndex G label k M
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:57:42: Application type mismatch: The argument
+  hcover
+has type
+  univ.biUnion M = joiningCopies G label
+of sort `Prop` but is expected to have type
+  { x // x ∈ joiningCopies G label }
+of sort `Type u_2` in the application
+  primaryIndex_mem G label k M hcover
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:59:41: Application type mismatch: The argument
+  hcover
+has type
+  univ.biUnion M = joiningCopies G label
+of sort `Prop` but is expected to have type
+  { x // x ∈ joiningCopies G label }
+of sort `Type u_2` in the application
+  primaryIndex_mem G label k M hcover
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:67:41: Application type mismatch: The argument
+  hcover
+has type
+  univ.biUnion M = joiningCopies G label
+of sort `Prop` but is expected to have type
+  I
+of sort `Type u_3` in the application
+  primaryBoundaryColoring G label k M hcover
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:68:34: Unknown identifier `hcover`
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:73:42: Application type mismatch: The argument
+  hcover
+has type
+  univ.biUnion M = joiningCopies G label
+of sort `Prop` but is expected to have type
+  I
+of sort `Type u_3` in the application
+  primaryBoundaryColoring G label k M hcover
+warning: Overfull/TerminalFourOdd/BoundaryColoring.lean:76:13: This simp argument is unused:
+  mem_image
+
+Hint: Omit it from the simp argument list.
+  simp only [m̵e̵m̵_̵i̵m̵a̵g̵e̵,̵ ̵BoundaryColoring.mem_classEdges, Multigraph.mem_cutOn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/TerminalFourOdd/BoundaryColoring.lean:76:24: This simp argument is unused:
+  BoundaryColoring.mem_classEdges
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_image, B̵o̵u̵n̵d̵a̵r̵y̵C̵o̵l̵o̵r̵i̵n̵g̵.̵m̵e̵m̵_̵c̵l̵a̵s̵s̵E̵d̵g̵e̵s̵,̵ ̵Multigraph.mem_cutOn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:88:42: Application type mismatch: The argument
+  hcover
+has type
+  univ.biUnion M = joiningCopies G label
+of sort `Prop` but is expected to have type
+  I
+of sort `Type u_3` in the application
+  primaryBoundaryColoring G label k M hcover
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:90:56: Unknown identifier `hcover`
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:89:53: unsolved goals
+V : Type u_1
+E : Type u_2
+I : Type u_3
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : DecidableEq I
+G : Multigraph V E
+label : V → I
+k : ℕ
+M : Fin k → Finset E
+i : I
+hM : ∀ (j : Fin k), G.IsMatching (M j)
+hdisj : Pairwise fun i j => Disjoint (M i) (M j)
+j : Fin k
+⊢ sorry = #(G.cutOn (M j) (labelShore label {i}))
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:96:41: Application type mismatch: The argument
+  hcover
+has type
+  univ.biUnion M = joiningCopies G label
+of sort `Prop` but is expected to have type
+  I
+of sort `Type u_3` in the application
+  primaryBoundaryColoring G label k M hcover
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:100:51: Unknown identifier `hcover`
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:97:80: unsolved goals
+case h
+V : Type u_1
+E : Type u_2
+I : Type u_3
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : DecidableEq I
+G : Multigraph V E
+label : V → I
+k : ℕ
+M : Fin k → Finset E
+i : I
+hM : ∀ (j : Fin k), G.IsMatching (M j)
+hdisj : Pairwise fun i j => Disjoint (M i) (M j)
+j : Fin k
+⊢ j ∈ sorry ↔ #(G.cutOn (M j) (labelShore label {i})) = 1
+warning: Overfull/TerminalFourOdd/BoundaryColoring.lean:99:13: This simp argument is unused:
+  BoundaryColoring.singletonColors
+
+Hint: Omit it from the simp argument list.
+  simp only [B̵o̵u̵n̵d̵a̵r̵y̵C̵o̵l̵o̵r̵i̵n̵g̵.̵s̵i̵n̵g̵l̵e̵t̵o̵n̵C̵o̵l̵o̵r̵s̵,̵ ̵mem_filter, mem_univ, true_and,
+      primaryBoundaryColoring_class_card G label k M hcover i hM hdisj j]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:106:41: Application type mismatch: The argument
+  hcover
+has type
+  univ.biUnion M = joiningCopies G label
+of sort `Prop` but is expected to have type
+  I
+of sort `Type u_3` in the application
+  primaryBoundaryColoring G label k M hcover
+error: Overfull/TerminalFourOdd/BoundaryColoring.lean:107:43: Application type mismatch: The argument
+  hcover
+has type
+  univ.biUnion M = joiningCopies G label
+of sort `Prop` but is expected to have type
+  I
+of sort `Type u_3` in the application
+  primaryBoundaryColoring G label k M hcover
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.TerminalFourOdd.BoundaryColoring
+error: build failed

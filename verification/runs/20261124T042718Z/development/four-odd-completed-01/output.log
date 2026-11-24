@@ -1,0 +1,43 @@
+✖ [3518/3519] Building Overfull.TerminalFourOdd.CompletedNondominant (2.6s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/TerminalFourOdd/CompletedNondominant.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/CompletedNondominant.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/CompletedNondominant.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/CompletedNondominant.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/CompletedNondominant.setup.json --json
+error: Overfull/TerminalFourOdd/CompletedNondominant.lean:61:6: Type mismatch: After simplification, term
+  hsingle i
+ has type
+  γ * ↑(#(labelShore label {i})) ≤ ↑(card.{u_1} (singletonParts (Multigraph.ofSimpleGraph G) label P.remaining i))
+but is expected to have type
+  γ * ↑(#(labelShore label {i})) ≤
+    ↑(card.{0} {j | #((Multigraph.ofSimpleGraph R).cutOn (M j) (labelShore label {i})) = 1})
+error: Lean exited with code 1
+✖ [3519/3519] Building Overfull.TerminalFourOdd.MultiGeometry (3.9s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/TerminalFourOdd/MultiGeometry.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/MultiGeometry.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/MultiGeometry.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/MultiGeometry.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/MultiGeometry.setup.json --json
+error: Overfull/TerminalFourOdd/MultiGeometry.lean:97:4: Application type mismatch: The argument
+  central_independent_exterior G U label hout
+has type
+  (centralGraph G U label).internalEdges
+      (@compl (Finset (CentralVertex U I))
+        (@BooleanAlgebra.toHasCompl (Finset (CentralVertex U I))
+          (@booleanAlgebra (CentralVertex U I) (instFintypeSum { x // x ∈ U } I) fun a b => instDecidableEqSum a b))
+        (centralCoreVertices U I)) =
+    ∅
+but is expected to have type
+  (centralGraph G U label).internalEdges
+      (@compl (Finset (CentralVertex U I))
+        (@BooleanAlgebra.toHasCompl (Finset (CentralVertex U I))
+          (@booleanAlgebra (CentralVertex U I) (instFintypeSum { x // x ∈ U } I) fun a b => propDecidable (a = b)))
+        (centralCoreVertices U I)) =
+    ∅
+in the application
+  hfactor (CentralVertex U I) (CentralEdge G U label) (centralGraph G U label) (centralCoreVertices U I)
+    (centralCore C label) k a ?m.217 ?m.218 ?m.219 (central_regular G U label X k hfiber hregular hcut) ?m.224
+    (central_independent_exterior G U label hout)
+error: Overfull/TerminalFourOdd/MultiGeometry.lean:94:8: Type mismatch: After simplification, term
+  hI
+ has type
+  Fintype.card I ≤ s
+but is expected to have type
+  #(centralCoreVertices U I)ᶜ ≤ s
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.TerminalFourOdd.CompletedNondominant
+- Overfull.TerminalFourOdd.MultiGeometry
+error: build failed

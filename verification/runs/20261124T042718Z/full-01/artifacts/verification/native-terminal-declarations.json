@@ -1,0 +1,2138 @@
+{
+  "schema_version": 1,
+  "kind": "complete_assertion_source_mapping",
+  "numbered_assertions_completed": 1,
+  "manuscript_number": "4.6",
+  "statement_sha256": "86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26",
+  "module_count": 16,
+  "public_theorem_count": 96,
+  "verified_declaration_count": 196,
+  "includes_private_and_generated_proofs": true,
+  "proof_declaration_map": [
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.boundary_assigned_parts",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.boundary_first_cut",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.boundary_first_cut_card",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.boundary_otherEnd_mem_core",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.boundary_pair_cut",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.boundary_shore_cuts_eq",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.mem_selectedUnion",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.mem_selectedUnion._simp_1",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.selectedUnion.eq_1",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_cut",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_cut._simp_1_1",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_cut._simp_1_2",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_cut._simp_1_3",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_first_cut_card",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_otherEnd_mem_core",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_pair_cut",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_shore_cuts_eq",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.BoundaryPacking.selected_cuts_disjoint",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.cutSize_of_external_image",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.cut_empty_of_external_image",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.cut_image_of_external_image",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.edge_eq",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.firstEnd",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.incident",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.incident._simp_1",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.mem_cut_iff",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.mem_cut_iff._simp_1",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.mem_cut_iff._simp_1_1",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.mem_external_iff",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.mem_external_iff._simp_1",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.mk.inj",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.mk.injEq",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.mk.sizeOf_spec",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.otherEnd",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.CopyEmbedding.secondEnd",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.apex_not_mem_contractedCoreVertices",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.apex_not_mem_contractedCoreVertices._simp_1",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ColoringGlue",
+      "name": "Overfull.NativeTerminal.boundary_of_two_retained",
+      "source_path": "Overfull/NativeTerminal/ColoringGlue.lean",
+      "source_sha256": "9e1630206ec0b3b91ba9f80bdf558786d5cd83237b1fa30d4ee89db2a21e0437"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ColoringGlue",
+      "name": "Overfull.NativeTerminal.boundary_of_two_retained._simp_1_1",
+      "source_path": "Overfull/NativeTerminal/ColoringGlue.lean",
+      "source_sha256": "9e1630206ec0b3b91ba9f80bdf558786d5cd83237b1fa30d4ee89db2a21e0437"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeTerminal.ColoringGlue",
+      "name": "Overfull.NativeTerminal.boundary_of_two_retained._simp_1_2",
+      "source_path": "Overfull/NativeTerminal/ColoringGlue.lean",
+      "source_sha256": "9e1630206ec0b3b91ba9f80bdf558786d5cd83237b1fa30d4ee89db2a21e0437"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedCore._proof_1",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedCoreEdgeMap._proof_1",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedCoreEdgeMap._proof_2",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedCoreEdgeMap_val",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedCoreEquiv._proof_1",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedCoreEquiv._proof_2",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedCoreEquiv_apply_val",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedCoreEquiv_symm_map",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedCoreVertices.eq_1",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedCoreVertices_card",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedCoreVertices_compl_card",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedCoreVertices_compl_card._proof_1_1",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedCore_degree",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedCore_robust",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.contractedHost_independent_exterior",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.corePart_sdiff_card_le",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "name": "Overfull.NativeTerminal.corePart_sdiff_subset_exceptions",
+      "source_path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "source_sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ColoringGlue",
+      "name": "Overfull.NativeTerminal.exists_glued_closed_shores_coloring",
+      "source_path": "Overfull/NativeTerminal/ColoringGlue.lean",
+      "source_sha256": "9e1630206ec0b3b91ba9f80bdf558786d5cd83237b1fa30d4ee89db2a21e0437"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ColoringGlue",
+      "name": "Overfull.NativeTerminal.exists_glued_contracted_shores_coloring",
+      "source_path": "Overfull/NativeTerminal/ColoringGlue.lean",
+      "source_sha256": "9e1630206ec0b3b91ba9f80bdf558786d5cd83237b1fa30d4ee89db2a21e0437"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ColoringGlue",
+      "name": "Overfull.NativeTerminal.exists_glued_retained_coloring",
+      "source_path": "Overfull/NativeTerminal/ColoringGlue.lean",
+      "source_sha256": "9e1630206ec0b3b91ba9f80bdf558786d5cd83237b1fa30d4ee89db2a21e0437"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ColoringGlue",
+      "name": "Overfull.NativeTerminal.exists_glued_three_shore_coloring",
+      "source_path": "Overfull/NativeTerminal/ColoringGlue.lean",
+      "source_sha256": "9e1630206ec0b3b91ba9f80bdf558786d5cd83237b1fa30d4ee89db2a21e0437"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.exists_reassembled_coloring",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.exists_reassembled_one_factorization",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.NativeFactorization",
+      "name": "Overfull.NativeTerminal.exists_uniform_native_image_factorization",
+      "source_path": "Overfull/NativeTerminal/NativeFactorization.lean",
+      "source_sha256": "fe133211b48696c8fc940e36e421e42d42f0c41d6c5fc61d67a03dca120f8583"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.NativeFactorization",
+      "name": "Overfull.NativeTerminal.exists_uniform_native_image_factorization._proof_1_1",
+      "source_path": "Overfull/NativeTerminal/NativeFactorization.lean",
+      "source_sha256": "fe133211b48696c8fc940e36e421e42d42f0c41d6c5fc61d67a03dca120f8583"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.NativeCompletion",
+      "name": "Overfull.NativeTerminal.exists_uniform_native_remaining_factorization",
+      "source_path": "Overfull/NativeTerminal/NativeCompletion.lean",
+      "source_sha256": "e31750cc22797674da98987585df87e6cf11ea5eb561ea908a3a7b85f451d5c5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.NativeFactorization",
+      "name": "Overfull.NativeTerminal.exists_uniform_native_residual_factorization",
+      "source_path": "Overfull/NativeTerminal/NativeFactorization.lean",
+      "source_sha256": "fe133211b48696c8fc940e36e421e42d42f0c41d6c5fc61d67a03dca120f8583"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreFactorization",
+      "name": "Overfull.NativeTerminal.exists_uniform_shore_coloring",
+      "source_path": "Overfull/NativeTerminal/ShoreFactorization.lean",
+      "source_sha256": "349ad511138f99647bee467e4601e569f3941637e241e14b3a8593b210a2dc06"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreFactorization",
+      "name": "Overfull.NativeTerminal.exists_uniform_shore_coloring._proof_1_1",
+      "source_path": "Overfull/NativeTerminal/ShoreFactorization.lean",
+      "source_sha256": "349ad511138f99647bee467e4601e569f3941637e241e14b3a8593b210a2dc06"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreFactorization",
+      "name": "Overfull.NativeTerminal.exists_uniform_shore_coloring._proof_1_3",
+      "source_path": "Overfull/NativeTerminal/ShoreFactorization.lean",
+      "source_sha256": "349ad511138f99647bee467e4601e569f3941637e241e14b3a8593b210a2dc06"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreFactorization",
+      "name": "Overfull.NativeTerminal.exists_uniform_shore_coloring._simp_1_2",
+      "source_path": "Overfull/NativeTerminal/ShoreFactorization.lean",
+      "source_sha256": "349ad511138f99647bee467e4601e569f3941637e241e14b3a8593b210a2dc06"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreFactorization",
+      "name": "Overfull.NativeTerminal.exists_uniform_shore_coloring_of_star_incidence",
+      "source_path": "Overfull/NativeTerminal/ShoreFactorization.lean",
+      "source_sha256": "349ad511138f99647bee467e4601e569f3941637e241e14b3a8593b210a2dc06"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.TerminalParameters",
+      "name": "Overfull.NativeTerminal.exists_uniform_terminal_parameters",
+      "source_path": "Overfull/NativeTerminal/TerminalParameters.lean",
+      "source_sha256": "9566212de0baa3de831709cc1579cdbb679eceb8a4d933b157a15bb38c8896bb"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.TerminalParameters",
+      "name": "Overfull.NativeTerminal.exists_uniform_terminal_parameters._proof_1_1",
+      "source_path": "Overfull/NativeTerminal/TerminalParameters.lean",
+      "source_sha256": "9566212de0baa3de831709cc1579cdbb679eceb8a4d933b157a15bb38c8896bb"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.TerminalParameters",
+      "name": "Overfull.NativeTerminal.exists_uniform_terminal_parameters._proof_1_2",
+      "source_path": "Overfull/NativeTerminal/TerminalParameters.lean",
+      "source_sha256": "9566212de0baa3de831709cc1579cdbb679eceb8a4d933b157a15bb38c8896bb"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.TerminalParameters",
+      "name": "Overfull.NativeTerminal.exists_uniform_terminal_parameters._proof_1_3",
+      "source_path": "Overfull/NativeTerminal/TerminalParameters.lean",
+      "source_sha256": "9566212de0baa3de831709cc1579cdbb679eceb8a4d933b157a15bb38c8896bb"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.Factorization",
+      "name": "Overfull.NativeTerminal.exists_uniform_two_shore_factorization",
+      "source_path": "Overfull/NativeTerminal/Factorization.lean",
+      "source_sha256": "ad4e6d1a9480e81b5555b29952f07f3c98e40ea475977b33bbb00abdc88fa2d0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.externalCopies.eq_1",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.externalCopies_eq_joining_exceptional",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.externalCopies_eq_joining_exceptional._simp_1_1",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.externalCopies_eq_joining_exceptional._simp_1_2",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.externalCopies_eq_joining_exceptional._simp_1_3",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.externalCopies_eq_joining_exceptional._simp_1_4",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.externalCopies_eq_joining_exceptional._simp_1_5",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.externalCopies_residual",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.external_of_incident_outside",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.NativeGeometry",
+      "name": "Overfull.NativeTerminal.first_assigned_cut_subset_external",
+      "source_path": "Overfull/NativeTerminal/NativeGeometry.lean",
+      "source_sha256": "84fbd28c5ed999ec4679488760d64feff1e9861543dad4d98255bad82d3862d7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedColoringToRestriction._proof_1",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedColoringToRetained._proof_1",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCore._proof_1",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCoreEdgeMap._proof_1",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCoreEdgeMap._proof_2",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCoreEdgeMap_val",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCoreEquiv._proof_1",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCoreEquiv._proof_2",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCoreEquiv._proof_3",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCoreEquiv._proof_4",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCoreEquiv._proof_5",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCoreEquiv._proof_6",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCoreEquiv._proof_7",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCoreEquiv._proof_8",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCoreEquiv_symm_val",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCoreEquiv_val",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedCoreVertices_card",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedCoreVertices_compl_card",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCore_degree",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inducedCore_robust",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost._proof_1",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost._proof_2",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost._proof_3",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost._simp_1",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost.eq_1",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost_degree_of_cut_empty",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost_edge_map",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost_incident",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost_incident._simp_1",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost_incident._simp_1_2",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost_incident._simp_1_3",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost_independent_exterior",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost_independent_exterior._simp_1_1",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost_independent_exterior._simp_1_2",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedHost_regular",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedIncidenceEquiv._proof_1",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedIncidenceEquiv._proof_2",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedIncidenceEquiv._proof_3",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedIncidenceEquiv._proof_4",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedIncidenceEquiv._proof_5",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedIncidenceEquiv._proof_6",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedIncidenceEquiv._proof_7",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedIncidenceEquiv._proof_8",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.inducedIncidenceEquiv._simp_1",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inl_mem_contractedCoreVertices",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inl_mem_contractedCoreVertices._simp_1",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.inl_mem_contractedCoreVertices._simp_1_2",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.internal_of_incident_of_cut_empty",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.mem_externalCopies",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.mem_externalCopies._simp_1",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ColoringGlue",
+      "name": "Overfull.NativeTerminal.no_overlap_of_closed_shore",
+      "source_path": "Overfull/NativeTerminal/ColoringGlue.lean",
+      "source_sha256": "9e1630206ec0b3b91ba9f80bdf558786d5cd83237b1fa30d4ee89db2a21e0437"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.NativeGeometry",
+      "name": "Overfull.NativeTerminal.pair_assigned_cut_subset_external",
+      "source_path": "Overfull/NativeTerminal/NativeGeometry.lean",
+      "source_sha256": "84fbd28c5ed999ec4679488760d64feff1e9861543dad4d98255bad82d3862d7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.prefixIndex._proof_1",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.prefixIndex_eq",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.prefixIndex_mem",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.prefixLabel_injective",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.prefixLabel_ne_residualLabel",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.prefixLabel_ne_residualLabel._proof_1_1",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.reassembledColorClass_prefix",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.reassembledColorClass_prefix._simp_1_1",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.reassembledColorClass_prefix._simp_1_2",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.reassembledColorClass_residual",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.reassembledColorClass_residual._simp_1_1",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.reassembledColorClass_residual._simp_1_2",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.reassembledColorClass_residual._simp_1_3",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.reassembledColoring._proof_1",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.reassembledColoring.congr_simp",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.reassembledColoring.eq_1",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.reassembledColoring_prefix",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.reassembledColoring_residual",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.residualLabel_injective",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "name": "Overfull.NativeTerminal.residualLabel_injective._proof_1_1",
+      "source_path": "Overfull/NativeTerminal/Reassembly.lean",
+      "source_sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.NativeGeometry",
+      "name": "Overfull.NativeTerminal.residual_assigned_exterior_independent",
+      "source_path": "Overfull/NativeTerminal/NativeGeometry.lean",
+      "source_sha256": "84fbd28c5ed999ec4679488760d64feff1e9861543dad4d98255bad82d3862d7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.NativeGeometry",
+      "name": "Overfull.NativeTerminal.residual_assigned_star_incidence",
+      "source_path": "Overfull/NativeTerminal/NativeGeometry.lean",
+      "source_sha256": "84fbd28c5ed999ec4679488760d64feff1e9861543dad4d98255bad82d3862d7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.NativeGeometry",
+      "name": "Overfull.NativeTerminal.residual_first_cutSize",
+      "source_path": "Overfull/NativeTerminal/NativeGeometry.lean",
+      "source_sha256": "84fbd28c5ed999ec4679488760d64feff1e9861543dad4d98255bad82d3862d7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.NativeGeometry",
+      "name": "Overfull.NativeTerminal.residual_geometry",
+      "source_path": "Overfull/NativeTerminal/NativeGeometry.lean",
+      "source_sha256": "84fbd28c5ed999ec4679488760d64feff1e9861543dad4d98255bad82d3862d7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.NativeGeometry",
+      "name": "Overfull.NativeTerminal.residual_pair_cut_empty",
+      "source_path": "Overfull/NativeTerminal/NativeGeometry.lean",
+      "source_sha256": "84fbd28c5ed999ec4679488760d64feff1e9861543dad4d98255bad82d3862d7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.NativeGeometry",
+      "name": "Overfull.NativeTerminal.residual_second_cutSize",
+      "source_path": "Overfull/NativeTerminal/NativeGeometry.lean",
+      "source_sha256": "84fbd28c5ed999ec4679488760d64feff1e9861543dad4d98255bad82d3862d7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.NativeGeometry",
+      "name": "Overfull.NativeTerminal.residual_shore_cuts_eq",
+      "source_path": "Overfull/NativeTerminal/NativeGeometry.lean",
+      "source_sha256": "84fbd28c5ed999ec4679488760d64feff1e9861543dad4d98255bad82d3862d7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.retainedInternalEquiv._proof_1",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.retainedInternalEquiv._proof_2",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.retainedInternalEquiv._proof_3",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.retainedInternalEquiv._proof_4",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.retainedInternalEquiv._proof_5",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "name": "Overfull.NativeTerminal.retainedInternalEquiv._proof_6",
+      "source_path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "source_sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PairColoring",
+      "name": "Overfull.NativeTerminal.retained_pair_colorable",
+      "source_path": "Overfull/NativeTerminal/PairColoring.lean",
+      "source_sha256": "6f16b5a28677e04d86f2cc7c100b9a92f303095600916c315b91ca645578d52f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PairColoring",
+      "name": "Overfull.NativeTerminal.retained_pair_colorable._simp_1_1",
+      "source_path": "Overfull/NativeTerminal/PairColoring.lean",
+      "source_sha256": "6f16b5a28677e04d86f2cc7c100b9a92f303095600916c315b91ca645578d52f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.PairColoring",
+      "name": "Overfull.NativeTerminal.retained_pair_colorable._simp_1_2",
+      "source_path": "Overfull/NativeTerminal/PairColoring.lean",
+      "source_sha256": "6f16b5a28677e04d86f2cc7c100b9a92f303095600916c315b91ca645578d52f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.NativeGeometry",
+      "name": "Overfull.NativeTerminal.second_assigned_cut_subset_external",
+      "source_path": "Overfull/NativeTerminal/NativeGeometry.lean",
+      "source_sha256": "84fbd28c5ed999ec4679488760d64feff1e9861543dad4d98255bad82d3862d7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreFactorization",
+      "name": "Overfull.NativeTerminal.shore_geometry_of_star_incidence",
+      "source_path": "Overfull/NativeTerminal/ShoreFactorization.lean",
+      "source_sha256": "349ad511138f99647bee467e4601e569f3941637e241e14b3a8593b210a2dc06"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.TerminalParameters",
+      "name": "Overfull.NativeTerminal.terminal_core_error",
+      "source_path": "Overfull/NativeTerminal/TerminalParameters.lean",
+      "source_sha256": "9566212de0baa3de831709cc1579cdbb679eceb8a4d933b157a15bb38c8896bb"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.TerminalParameters",
+      "name": "Overfull.NativeTerminal.terminal_robust_range",
+      "source_path": "Overfull/NativeTerminal/TerminalParameters.lean",
+      "source_sha256": "9566212de0baa3de831709cc1579cdbb679eceb8a4d933b157a15bb38c8896bb"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.twiceResidualEmbedding._proof_1",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.twiceResidualEmbedding._proof_2",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.twiceResidual_external_image",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.twiceResidual_external_image._simp_1_1",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.twiceResidual_external_image._simp_1_2",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.twiceResidual_external_image._simp_1_3",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.twiceResidual_external_image._simp_1_4",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "name": "Overfull.NativeTerminal.twiceResidual_external_image._simp_1_5",
+      "source_path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "source_sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.vertexMap_mem_contractedCoreVertices",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "name": "Overfull.NativeTerminal.vertexMap_mem_contractedCoreVertices._simp_1",
+      "source_path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "source_sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "name": "Overfull.NativeTerminal.whole_shore_cut_subset_external",
+      "source_path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "source_sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.BoundedInput",
+      "name": "Overfull.bounded_input_factorization",
+      "source_path": "Overfull/NativeTerminal/BoundedInput.lean",
+      "source_sha256": "feb995a3d83bcf5862502d1dafae2509368064a46b74a1d3a7895e147d7fbc20"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.BoundedInput",
+      "name": "Overfull.bounded_input_one_factorization",
+      "source_path": "Overfull/NativeTerminal/BoundedInput.lean",
+      "source_sha256": "feb995a3d83bcf5862502d1dafae2509368064a46b74a1d3a7895e147d7fbc20"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.TwoCore",
+      "name": "Overfull.two_core_two_exception_factorization",
+      "source_path": "Overfull/NativeTerminal/TwoCore.lean",
+      "source_sha256": "a07e1b9d6e4a9107db7d75ad369199021bd957c07b05722faa1ddb1d5e77e12a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.TwoCore",
+      "name": "Overfull.two_core_two_exception_factorization._proof_1_1",
+      "source_path": "Overfull/NativeTerminal/TwoCore.lean",
+      "source_sha256": "a07e1b9d6e4a9107db7d75ad369199021bd957c07b05722faa1ddb1d5e77e12a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.NativeTerminal.TwoCore",
+      "name": "Overfull.two_core_two_exception_one_factorization",
+      "source_path": "Overfull/NativeTerminal/TwoCore.lean",
+      "source_sha256": "a07e1b9d6e4a9107db7d75ad369199021bd957c07b05722faa1ddb1d5e77e12a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.NativeTerminal.ShoreFactorization",
+      "name": "_private.Overfull.NativeTerminal.ShoreFactorization.0.Overfull.NativeTerminal.robust_decidableEq_transport",
+      "source_path": "Overfull/NativeTerminal/ShoreFactorization.lean",
+      "source_sha256": "349ad511138f99647bee467e4601e569f3941637e241e14b3a8593b210a2dc06"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "old": "COMPLETED_NUMBERED_ASSERTION_COUNT = 48\n",
+    "new": "COMPLETED_NUMBERED_ASSERTION_COUNT = 49\n"
+  },
+  {
+    "old": "                          (\"three_core_terminal\", \"three-core-terminal-source.json\")):\n",
+    "new": "                          (\"three_core_terminal\", \"three-core-terminal-source.json\"),\n                          (\"global_factorization\", \"global-factorization-source.json\")):\n"
+  },
+  {
+    "old": "\n    # Every first-party mathematical file must be included in the library build.\n",
+    "new": "\n    global_source, _, global_public = extension_maps[\"global_factorization\"]\n    if (global_source[\"kind\"] != \"numbered_assertion_closure_with_supporting_continuations\"\n            or global_source[\"numbered_assertions_completed\"] != 1\n            or global_source[\"manuscript_number\"] != \"3.1\"\n            or global_source[\"manuscript_label\"] != \"single:lem:coloring\"\n            or global_source[\"statement_sha256\"] != \"e367990020005abeac5226b4f90e96728cafec20b584b7db4d442fda779af0fe\"\n            or global_source[\"public_theorems\"] != [\n                \"Overfull.single_core_coloring\", \"Overfull.two_core_nonregular_factorization\",\n                \"Overfull.three_core_regular_factorization\", \"Overfull.three_core_regular_one_factorization\"]\n            or not set(global_source[\"public_theorems\"]) <= set(global_public)\n            or global_source[\"main_theorem_verified\"] is not False):\n        raise SystemExit(\"The continuation must identify the exact complete single-core Lemma 3.1.\")\n\n    # Every first-party mathematical file must be included in the library build.\n"
+  },
+  {
+    "old": "                    \"three_core_terminal\": \"three-core-terminal\"}[key]\n",
+    "new": "                    \"three_core_terminal\": \"three-core-terminal\",\n                    \"global_factorization\": \"global-factorization\"}[key]\n"
+  },
+  {
+    "old": "        \"checkpoint_reconstruction\": {\n",
+    "new": "        \"global_factorization_declaration_map\": extension_evidence[\"global_factorization\"],\n        \"checkpoint_reconstruction\": {\n"
+  }
+]

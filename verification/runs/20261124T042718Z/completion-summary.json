@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "complete_verification_and_preservation_passed",
+  "attempt": "full-01",
+  "actual_command": [
+    "python3",
+    "scripts/verify.py"
+  ],
+  "actual_exit_code": 0,
+  "finished_at_utc": "2026-11-24T05:08:16.395083+00:00",
+  "elapsed_seconds": 1075.5597089500006,
+  "strict_build_jobs": 3835,
+  "numbered_assertions_complete": 49,
+  "numbered_assertions_total": 69,
+  "only_promoted_assertion": "3.1",
+  "main_theorem_verified": false,
+  "new_source_modules": 34,
+  "new_public_proofs": 140,
+  "audited_declarations": 14055,
+  "new_audited_declarations": 380,
+  "completed_result_mappings": 2536,
+  "frozen_input_count": 779,
+  "source_count": 664,
+  "other_input_count": 115,
+  "observed_transitive_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "development_attempt_count": 55,
+  "development_status_counts": {
+    "failed": 39,
+    "passed": 16
+  },
+  "development_evidence_files": 1258,
+  "inputs_unchanged": true,
+  "controls_unchanged": true,
+  "all_previous_declarations_owners_axiom_sets_preserved": true,
+  "all_previous_completed_result_mappings_preserved": true,
+  "all_previous_source_declaration_maps_preserved": true,
+  "all_other_68_numbered_records_identical": true,
+  "all_69_statement_identities_identical": true,
+  "baseline_commit": "14978e4dec2bce94f63953df7b1bdd54f61c3e6c",
+  "baseline_tree": "c16767d2e47032ac8e28fd6f18a2bfe4b0ea4767",
+  "receipt_sha256": "a2bd3d6597c8471299ff25cb7f524bed0a20c802ddc2befea7d9894e48e8d308",
+  "preservation_sha256": "1e98043dae91a83acbd5b788d8dd3a5e9fb779d75626e6101f51c5b8511046e4",
+  "results_sha256": "fbbcbf7a07fa5f482a530fd4f7484ec90c8188cd4f7b7bc14871be60ac55b184",
+  "publication_status": "Recorded separately by exact-tree and both-branch readbacks."
+}

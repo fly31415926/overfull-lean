@@ -1,0 +1,25 @@
+✖ [3122/3123] Building Overfull.CompatibleCircuits.FourAdmissibleTemplates (14s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/CompatibleCircuits/FourAdmissibleTemplates.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourAdmissibleTemplates.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourAdmissibleTemplates.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourAdmissibleTemplates.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourAdmissibleTemplates.setup.json --json
+error: Overfull/CompatibleCircuits/FourAdmissibleTemplates.lean:47:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Equiv.ofBijective', which is 'noncomputable'
+error: Overfull/CompatibleCircuits/FourAdmissibleTemplates.lean:87:2: Type mismatch
+  Multigraph.isCircuit_parallel_pair (graph 0) (pairEdge_ne ?m.22 ?m.23 ?m.24) (pairEdge_parallel ?m.22 ?m.23 ?m.24)
+has type
+  (graph 0).IsCircuit {pairEdge ?m.22 ?m.23 ?m.24 0, pairEdge ?m.22 ?m.23 ?m.24 1}
+but is expected to have type
+  (graph 0).IsCircuit (disconnectedPart choice i)
+error: Overfull/CompatibleCircuits/FourAdmissibleTemplates.lean:158:37: Unknown identifier `id_comp`
+error: Overfull/CompatibleCircuits/FourAdmissibleTemplates.lean:158:4: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/CompatibleCircuits/FourAdmissibleTemplates.lean:128:18: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/CompatibleCircuits/FourAdmissibleTemplates.lean:163:11: Unknown identifier `disconnectedPartition`
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourAdmissibleTemplates
+error: build failed

@@ -1,0 +1,31 @@
+✖ [3197/3198] Building Overfull.TerminalFourOdd.Decomposition (2.4s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/TerminalFourOdd/Decomposition.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/Decomposition.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/Decomposition.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/Decomposition.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/Decomposition.setup.json --json
+warning: Overfull/TerminalFourOdd/Decomposition.lean:26:0: automatically included section variable(s) unused in theorem `Overfull.TerminalFourOdd.PrimaryProfile.cut_one_or_three`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+error: Overfull/TerminalFourOdd/Decomposition.lean:104:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  P.parts.biUnion id
+in the target expression
+  image Subtype.val (P.parts.biUnion id) = joiningCopies G label
+
+case refine_5
+V : Type u_1
+E : Type u_2
+inst✝¹ : Fintype V
+inst✝ : Fintype E
+G : Multigraph V E
+label : V → Fin 4
+h : ℕ
+P : Decomposition (joiningGraph G label) (joiningQuotient G label).edgeLabelPair univ h
+lift : Finset { x // x ∈ joiningCopies G label } → Finset E := fun M => image Subtype.val M
+hinj : Function.Injective lift
+hfamilies : image lift P.primary ∪ image lift (P.parts \ P.primary) = image lift P.parts
+hmem : ∀ {M : Finset E}, M ∈ image lift P.primary ∪ image lift (P.parts \ P.primary) → ∃ N ∈ P.parts, lift N = M
+⊢ image Subtype.val (P.parts.biUnion id) = joiningCopies G label
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.TerminalFourOdd.Decomposition
+error: build failed

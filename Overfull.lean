@@ -280,6 +280,9 @@ import Overfull.NativeTerminal.ShoreHost
 import Overfull.NativeTerminal.TerminalParameters
 import Overfull.NativeTerminal.TwoCore
 import Overfull.Terminal.ThreeCore
+import Overfull.AuxiliarySimple.SingleCore
+import Overfull.CompatibleCircuits.FourAdmissibleRegular
+import Overfull.TerminalFourOdd.Theorem
 
 /-!
 # Partial formalization of the overfull manuscript

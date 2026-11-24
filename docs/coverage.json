@@ -8,8 +8,8 @@
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
-  "fully_verified_numbered_assertion_count": 48,
-  "scope": "Uniform terminal factorization for a simple regular graph of even order with no overfull set and exactly three disjoint covering robust core parts. Fixed positive ambient degree and part-order densities and robust parameters precede a common positive core-error tolerance and order threshold. Joining palettes, completed perfect-matching prefixes, residual cores, the simultaneous contraction of the two odd parts, and compatible leaf colorings are constructed from the original host hypotheses. The conclusion is a coloring and an exact partition of all original edge copies into the degree number of perfect matchings. This proves only the three-core subcase of Proposition 4.16; the four-core cases, full Proposition 4.16, and the main theorem remain unproved. Numbered coverage stays 48 of 69. Complete Corollary 4.6 and all preceding verified results remain available and unchanged. All 69 numbered assertion records and statement identities are preserved.",
+  "fully_verified_numbered_assertion_count": 49,
+  "scope": "Complete Lemma 3.1 for an arbitrary finite simple graph with actual maximum degree at least one quarter of its order, no maximum-degree-overfull set, a spanning ordinary robust core on at least one quarter of the vertices, and the literal combined degree-error/exceptional-cover budget. Positive error tolerance and order threshold precede the host and all graph-dependent data. The proof derives nonnegative error, permits overlap in the displayed cover, and assumes neither regularity nor even order. Its conclusion is a proper coloring of the original simple graph with exactly its maximum-degree palette. The sufficient fixed robust range is 0 < nu <= tau <= 1/4096000. Supporting continuations prove three-core regular factorization, the original-host all-four-odd terminal subcase, and four-label compatible circuits of degree exactly four at every label. Coverage is 49 of 69; only Lemma 3.1 is promoted. All other 68 assertion records and all 69 statement identities are preserved. Full Proposition 4.16, full Theorem 4.17, the remaining global and bipartite inputs, and the main theorem remain unproved.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -5085,6 +5085,61 @@
       "manuscript_locations": [
         "three:prop:terminal"
       ]
+    },
+    {
+      "id": "single_core_coloring_full",
+      "kind": "graph_theoretic_result",
+      "description": "Complete Lemma 3.1 for an arbitrary finite simple graph with actual maximum degree at least one quarter of its order, no maximum-degree-overfull set, a spanning ordinary robust core on at least one quarter of the vertices, and the literal combined degree-error/exceptional-cover budget. Positive error tolerance and order threshold precede the host and all graph-dependent data. The proof derives nonnegative error, permits overlap in the displayed cover, and assumes neither regularity nor even order. Its conclusion is a proper coloring of the original simple graph with exactly its maximum-degree palette. The sufficient fixed robust range is 0 < nu <= tau <= 1/4096000.",
+      "lean_declarations": [
+        "Overfull.single_core_coloring",
+        "Overfull.one_core_nonregular_factorization",
+        "Overfull.two_core_nonregular_factorization"
+      ],
+      "scope_limit": "Complete pinned Lemma 3.1 only; the critical-graph corollaries, broader factorization assertions and main theorem remain unproved.",
+      "manuscript_locations": [
+        "single:lem:coloring"
+      ]
+    },
+    {
+      "id": "three_core_regular_composition",
+      "kind": "graph_theoretic_result",
+      "description": "Uniform regular factorization for an even-order simple graph with three disjoint robust cores, no overfull set, fixed positive degree and core-order densities, and a small linear exceptional budget. Constructs foreign-edge, absorption and frequent-pattern reductions, their actual residuals, terminal coloring and exact original-copy prefix restoration. The whole absorption tolerance function precedes its eventual finite exceptional bound.",
+      "lean_declarations": [
+        "Overfull.three_core_frequent_pattern_factorization",
+        "Overfull.three_core_frequent_pattern_one_factorization",
+        "Overfull.three_core_bounded_exception_factorization",
+        "Overfull.three_core_regular_factorization",
+        "Overfull.three_core_regular_one_factorization"
+      ],
+      "scope_limit": "Three-core regular subcase; full four-core Theorem 4.17 is not promoted.",
+      "manuscript_locations": [
+        "three:thm:regular-four"
+      ]
+    },
+    {
+      "id": "four_odd_terminal_factorization",
+      "kind": "graph_theoretic_result",
+      "description": "Uniform original-host one-factorization in the all-four-odd terminal case, from four odd disjoint covering robust cores, no overfull set, small core-degree error and actual forest-pair supplies. Constructs decomposition, selected completed prefix, residual selection dichotomy, singleton-rich or common-center coloring, and exact original-copy reassembly.",
+      "lean_declarations": [
+        "Overfull.four_odd_terminal_one_factorization"
+      ],
+      "scope_limit": "All-four-odd subcase with original forest-pair supplies; four-even and exactly-two-odd cases and full Proposition 4.16 remain unproved.",
+      "manuscript_locations": [
+        "three:prop:terminal"
+      ]
+    },
+    {
+      "id": "four_regular_admissible_circuits",
+      "kind": "graph_theoretic_result",
+      "description": "Actual-copy compatible circuit partitions for loopless multigraphs on four labels with degree exactly four at every label and original admissibility. Derives balanced local pair classes, complete finite template classification including disconnected graphs, and the actual-copy equivalence. A stronger local theorem needs only incidence-class size at most two.",
+      "lean_declarations": [
+        "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_regular",
+        "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_regular_local"
+      ],
+      "scope_limit": "Degree exactly four at all four labels; arbitrary admissible Eulerian four-label existence is still open.",
+      "manuscript_locations": [
+        "three:prop:terminal"
+      ]
     }
   ],
   "numbered_assertions": [
@@ -5743,10 +5798,16 @@
         1650
       ],
       "statement_sha256": "e367990020005abeac5226b4f90e96728cafec20b584b7db4d442fda779af0fe",
-      "full_assertion_verified": false,
-      "status": "not_formalized_here",
-      "checked_components": [],
-      "imported_statement": false
+      "full_assertion_verified": true,
+      "status": "fully_verified",
+      "checked_components": [
+        "single_core_coloring_full"
+      ],
+      "imported_statement": false,
+      "formalization_scope": "Complete Lemma 3.1 for an arbitrary finite simple graph with actual maximum degree at least one quarter of its order, no maximum-degree-overfull set, a spanning ordinary robust core on at least one quarter of the vertices, and the literal combined degree-error/exceptional-cover budget. Positive error tolerance and order threshold precede the host and all graph-dependent data. The proof derives nonnegative error, permits overlap in the displayed cover, and assumes neither regularity nor even order. Its conclusion is a proper coloring of the original simple graph with exactly its maximum-degree palette. The sufficient fixed robust range is 0 < nu <= tau <= 1/4096000.",
+      "lean_theorems": [
+        "Overfull.single_core_coloring"
+      ]
     },
     {
       "number": "3.2",

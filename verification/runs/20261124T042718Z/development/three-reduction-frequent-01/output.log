@@ -1,0 +1,42 @@
+✖ [3557/3557] Building Overfull.ThreeCoreReduction.Frequent (4.1s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/ThreeCoreReduction/Frequent.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/ThreeCoreReduction/Frequent.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/ThreeCoreReduction/Frequent.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/ThreeCoreReduction/Frequent.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/ThreeCoreReduction/Frequent.setup.json --json
+error: Overfull/ThreeCoreReduction/Frequent.lean:44:24: mod_cast has type
+  (0 : ℕ) < patternBound t
+but is expected to have type
+  (0 : ℝ) < B
+error: Overfull/ThreeCoreReduction/Frequent.lean:45:25: mod_cast has type
+  0 < patternBound t
+but is expected to have type
+  1 ≤ B
+warning: Overfull/ThreeCoreReduction/Frequent.lean:55:11: `mul_le_mul_right` has been deprecated: Use `mul_le_mul_iff_left₀` instead
+error: Overfull/ThreeCoreReduction/Frequent.lean:56:4: linarith failed to find a contradiction
+case h
+t : ℕ
+α ν τ : ℝ
+hα : 0 < α
+hα1 : α ≤ 1
+hν : 0 < ν
+hντ : ν ≤ τ
+hτ : τ ≤ α / (1000 * ↑(patternBound t))
+B : ℝ := ↑(patternBound t)
+hB : 0 < B
+hB1 : 1 ≤ B
+β : ℝ := α / (3 * B)
+hβ : 0 < β
+hβα : β ≤ α
+hβ1 : β ≤ 1
+hnum : τ * (1000 * B) ≤ α
+hβeq : β * (3 * B) = α
+a✝ : β * B < τ * 64 * B
+⊢ False
+failed
+error: Overfull/ThreeCoreReduction/Frequent.lean:109:4: Type mismatch: After simplification, term
+  c
+ has type
+  (Multigraph.ofSimpleGraph R.G).EdgeColoring R.h
+but is expected to have type
+  (Multigraph.ofSimpleGraph (afterDeletions G R.N R.rounds)).EdgeColoring R.h
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.ThreeCoreReduction.Frequent
+error: build failed

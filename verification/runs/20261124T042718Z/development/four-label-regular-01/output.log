@@ -1,0 +1,25 @@
+✖ [3122/3124] Building Overfull.CompatibleCircuits.FourAdmissibleTemplates (31s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/CompatibleCircuits/FourAdmissibleTemplates.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourAdmissibleTemplates.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourAdmissibleTemplates.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourAdmissibleTemplates.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourAdmissibleTemplates.setup.json --json
+error: Overfull/CompatibleCircuits/FourAdmissibleTemplates.lean:89:2: Type mismatch
+  Multigraph.isCircuit_parallel_pair (graph 0) (pairEdge_ne i.1 q i.2) (pairEdge_parallel i.1 q i.2)
+has type
+  (graph 0).IsCircuit {pairEdge i.1 q i.2 0, pairEdge i.1 q i.2 1}
+but is expected to have type
+  (graph 0).IsCircuit (disconnectedPart choice i)
+error: Overfull/CompatibleCircuits/FourAdmissibleTemplates.lean:162:4: Type mismatch: After simplification, term
+  hh
+ has type
+  (univ.biUnion fun i =>
+      pairPart i.1 (if i.1 = 0 then different (choice 0) (choice 1) else different (choice 2) (choice 3)) i.2) =
+    univ
+but is expected to have type
+  (image
+          (fun i =>
+            pairPart i.1 (if i.1 = 0 then different (choice 0) (choice 1) else different (choice 2) (choice 3)) i.2)
+          univ).biUnion
+      id =
+    univ
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourAdmissibleTemplates
+error: build failed

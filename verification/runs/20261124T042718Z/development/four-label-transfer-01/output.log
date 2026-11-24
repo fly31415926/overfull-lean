@@ -1,0 +1,108 @@
+✖ [3118/3118] Building Overfull.CompatibleCircuits.FourAdmissibleTransfer (2.2s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourAdmissibleTransfer.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourAdmissibleTransfer.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourAdmissibleTransfer.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourAdmissibleTransfer.setup.json --json
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:18:33: Unknown identifier `hedge`
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:18:21: Type mismatch: After simplification, term
+  hv
+ has type
+  v ∈ edge.{u_1, u_3} H (ψ e)
+but is expected to have type
+  v ∈ edge.{u_1, u_2} G e
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:20:57: Unknown identifier `hedge`
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:20:45: Type mismatch: After simplification, term
+  hv
+ has type
+  v ∈ edge.{u_1, u_2} G e
+but is expected to have type
+  v ∈ edge.{u_1, u_3} H (ψ e)
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:20:16: Application type mismatch: The argument
+  mem_map.mpr (Exists.intro e ⟨he, rfl⟩)
+has type
+  ?m.98 e ∈ map ?m.98 C
+but is expected to have type
+  ∃ a ∈ C, ψ a = ψ e
+in the application
+  And.intro (mem_map.mpr (Exists.intro e ⟨he, rfl⟩))
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:24:35: Unknown identifier `hedge`
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:23:47: unsolved goals
+V : Type u_1
+E : Type u_2
+F : Type u_3
+G : Multigraph V E
+H : Multigraph V F
+ψ : E ↪ F
+C : Finset E
+v : V
+⊢ #(filter ((fun e => v ∈ H.edge e) ∘ ⇑ψ) C) = #({e ∈ C | v ∈ G.edge e})
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:31:30: Unknown identifier `hedge`
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:43:46: Unknown identifier `hedge`
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:45:51: Unknown identifier `hedge`
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:51:35: Unknown identifier `hedge`
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:54:32: Unknown identifier `hedge`
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:67:46: Unknown identifier `hedge`
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:67:34: Type mismatch: After simplification, term
+  hvf
+ has type
+  v ∈ edge.{u_1, u_3} H (ψ e)
+but is expected to have type
+  v ∈ edge.{u_1, u_2} G e
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:68:27: Unknown identifier `hedge`
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:68:15: Type mismatch: After simplification, term
+  hvf'
+ has type
+  v ∈ edge.{u_1, u_3} H (ψ e')
+but is expected to have type
+  v ∈ edge.{u_1, u_2} G e'
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:78:10: Function expected at
+  IsCircuit.map_copies G H ψ (P.circuit A hA)
+but this term has type
+  H.IsCircuit (map ψ A)
+
+Note: Expected a function because this term is being applied to the argument
+  hedge
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:82:53: Application type mismatch: The argument
+  classOf
+has type
+  V → F → K
+of sort `Type (max (max u_1 u_3) u_4)` but is expected to have type
+  V
+of sort `Type u_1` in the application
+  Compatible.map_copies G H ψ ?m.136 ?m.138 classOf
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:82:10: Application type mismatch: The argument
+  P.compatible A hA
+has type
+  G.Compatible (fun v e => classOf v (ψ e)) A
+but is expected to have type
+  G.Compatible (fun v e => ?m.136 v (ψ e)) ?m.137
+in the application
+  Compatible.map_copies G H ψ ?m.136 (P.compatible A hA)
+error: Overfull/CompatibleCircuits/FourAdmissibleTransfer.lean:90:8: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => (image (map ψ) P.parts).biUnion id = map ψ _a
+Error: Application type mismatch: The argument
+  P
+has type
+  G.CompatibleCircuitPartition (fun v e => classOf v (ψ e)) C
+but is expected to have type
+  G.CompatibleCircuitPartition (fun v e => classOf v (ψ e)) _a
+in the application
+  P.parts
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+V : Type u_1
+E : Type u_2
+F : Type u_3
+K : Type u_4
+G : Multigraph V E
+H : Multigraph V F
+ψ : E ↪ F
+hedge : ∀ (e : E), H.edge (ψ e) = G.edge e
+classOf : V → F → K
+C : Finset E
+P : G.CompatibleCircuitPartition (fun v e => classOf v (ψ e)) C
+⊢ (image (map ψ) P.parts).biUnion id = map ψ C
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourAdmissibleTransfer
+error: build failed

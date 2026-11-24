@@ -1,0 +1,20 @@
+✖ [3200/3200] Building Overfull.TerminalFourOdd.Selection (2.6s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/TerminalFourOdd/Selection.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/Selection.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourOdd/Selection.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/Selection.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/TerminalFourOdd/Selection.setup.json --json
+error: Overfull/TerminalFourOdd/Selection.lean:96:52: Application type mismatch: The argument
+  hM
+has type
+  M ∈ @sdiff (Finset (Finset E)) (@instSDiff (Finset E) fun a b => a.decidableEq b) R S
+but is expected to have type
+  M ∈ @sdiff (Finset (Finset E)) (@instSDiff (Finset E) fun a b => propDecidable (a = b)) R S
+in the application
+  hi hM
+error: Overfull/TerminalFourOdd/Selection.lean:110:4: Type mismatch: After simplification, term
+  hall i
+ has type
+  r ≤ #((R \ S) \ tripleParts G label R i)
+but is expected to have type
+  r ≤ #(singletonParts G label (R \ S) i)
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.TerminalFourOdd.Selection
+error: build failed

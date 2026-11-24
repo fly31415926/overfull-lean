@@ -1,0 +1,359 @@
+✔ [3611/3612] Built Overfull.AuxiliarySimple.Deficiency (2.6s)
+✖ [3612/3612] Building Overfull.AuxiliarySimple.OrdinaryTwo (15s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/AuxiliarySimple/OrdinaryTwo.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/AuxiliarySimple/OrdinaryTwo.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/AuxiliarySimple/OrdinaryTwo.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/AuxiliarySimple/OrdinaryTwo.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/AuxiliarySimple/OrdinaryTwo.setup.json --json
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:93:4: Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `List.Mem.casesOn` can only eliminate into `Prop`
+
+α ν τ : ℝ
+hα : 0 < α
+hα1 : α < 1
+hν : 0 < ν
+hντ : ν ≤ τ
+hτ : τ ≤ α / 512000
+hτpos : 0 < τ
+νC εC : ℝ
+hνC : 0 < νC
+hεC : 0 < εC
+nC : ℕ
+hcomplete :
+  ∀ (V E : Type u) [inst : Fintype V] [inst_1 : Fintype E] (G : Multigraph V E) (k : ℕ),
+    nC ≤ Fintype.card V →
+      (∀ (v : V), G.degree v ≤ k) →
+        α * ↑(Fintype.card V) ≤ ↑k →
+          k ≤ 2 * Fintype.card V →
+            ∑ v, ↑(k - G.degree v) ≤ εC * ↑(Fintype.card V) ^ 2 →
+              (∀ (S : Finset V), ¬G.IsOverfull k S) →
+                have m := auxiliaryOrder (Fintype.card V) k;
+                have b := ⌈(∑ v, ↑(k - G.degree v)) / ↑m⌉₊;
+                ∃ N H,
+                  have Gplus := graph G N H;
+                  (∀ (v : V ⊕ Fin m), Gplus.degree v = k) ∧
+                    Fintype.card (V ⊕ Fin m) % 2 = 0 ∧
+                      Gplus.internalEdges (univ.disjSum ∅) = map Function.Embedding.inl univ ∧
+                        Gplus.internalEdges (∅.disjSum univ) = map (auxiliaryEmbedding N H) univ ∧
+                          (∀ (e f : CompletionEdges N H),
+                              (∀ (a : E), e ≠ Sum.inl a) → Gplus.edge e = Gplus.edge f → e = f) ∧
+                            IsRobustExpander H νC τ ∧
+                              (∀ (z : Fin m), ↑k - ↑b ≤ ↑(H.degree z)) ∧
+                                ∀ (X : Finset (V ⊕ Fin m)), ¬Gplus.IsOverfull k X
+μ : ℝ := min ν νC
+hμ : 0 < μ
+hμτ : μ ≤ τ
+εR : ℝ
+hεR : 0 < εR
+nR : ℕ
+_hnR : 0 < nR
+hfactor :
+  ∀ (V : Type ?u.4049) [inst : Fintype V] (G : SimpleGraph V) (U : Fin 3 → Finset V)
+    (H : (i : Fin 3) → SimpleGraph { x // x ∈ U i }) (Z : Finset V) (k : ℕ) (a : ℝ),
+    nR ≤ Fintype.card V →
+      Even (Fintype.card V) →
+        (∀ (v : V), G.degree v = k) →
+          α / 2 * ↑(Fintype.card V) ≤ ↑k →
+            (∀ (X : Finset V), ¬IsOverfull G k X) →
+              (Pairwise fun i j => Disjoint (U i) (U j)) →
+                (∀ (i : Fin 3), Disjoint (U i) Z) →
+                  (∀ (v : V), v ∈ Z ∨ ∃ i, v ∈ U i) →
+                    (∀ (i : Fin 3), α / 2 * ↑(Fintype.card V) ≤ ↑(#(U i))) →
+                      (∀ (i : Fin 3), H i ≤ induce (↑(U i)) G) →
+                        (∀ (i : Fin 3), IsRobustExpander (H i) μ τ) →
+                          (∀ (i : Fin 3) (v : { x // x ∈ U i }), ↑k - a ≤ ↑((H i).degree v)) →
+                            0 ≤ a →
+                              a + ↑(#Z) + 1 ≤ εR * ↑(Fintype.card V) →
+                                Nonempty ((Multigraph.ofSimpleGraph G).EdgeColoring k)
+ε : ℝ := min εC εR
+hε : 0 < ε
+n₀ : ℕ := max 1 (max nC nR)
+hn₀ : 0 < n₀
+V : Type u
+inst✝ : Fintype V
+G : SimpleGraph V
+U : Fin 2 → Finset V
+H : (i : Fin 2) → SimpleGraph { x // x ∈ U i }
+Z : Finset V
+k : ℕ
+a : ℝ
+hn : n₀ ≤ Fintype.card V
+hk : k < Fintype.card V
+hdegree : ∀ (v : V), G.degree v ≤ k
+hdensity : α * ↑(Fintype.card V) ≤ ↑k
+hno : ∀ (X : Finset V), ¬IsOverfull G k X
+hdisjoint : Pairwise fun i j => Disjoint (U i) (U j)
+hUZ : ∀ (i : Fin 2), Disjoint (U i) Z
+hcover : ∀ (v : V), v ∈ Z ∨ ∃ i, v ∈ U i
+hsize : ∀ (i : Fin 2), α * ↑(Fintype.card V) ≤ ↑(#(U i))
+hembed : ∀ (i : Fin 2), H i ≤ induce (↑(U i)) G
+hrobust : ∀ (i : Fin 2), IsRobustExpander (H i) ν τ
+hcore : ∀ (i : Fin 2) (v : { x // x ∈ U i }), ↑k - a ≤ ↑((H i).degree v)
+ha : 0 ≤ a
+herror : a + ↑(#Z) + 1 ≤ ε * ↑(Fintype.card V)
+hnpos : 0 < Fintype.card V
+hnC : nC ≤ Fintype.card V
+hnR : nR ≤ Fintype.card V
+herrorC : a + ↑(#Z) + 1 ≤ εC * ↑(Fintype.card V)
+herrorR : a + ↑(#Z) + 1 ≤ εR * ↑(Fintype.card V)
+hdeficiency : ∑ v, ↑(k - G.degree v) ≤ εC * ↑(Fintype.card V) ^ 2
+hdegreeM : ∀ (v : V), (Multigraph.ofSimpleGraph G).degree v ≤ k
+hnoM : ∀ (X : Finset V), ¬(Multigraph.ofSimpleGraph G).IsOverfull k X
+hdeficiencyM : ∑ v, ↑(k - (Multigraph.ofSimpleGraph G).degree v) ≤ εC * ↑(Fintype.card V) ^ 2
+m : ℕ := auxiliaryOrder (Fintype.card V) k
+hm : m = Fintype.card V
+N : V → Finset (Fin (auxiliaryOrder (Fintype.card V) k))
+L : SimpleGraph (Fin (auxiliaryOrder (Fintype.card V) k))
+hregular : ∀ (v : V ⊕ Fin (auxiliaryOrder (Fintype.card V) k)), (graph (Multigraph.ofSimpleGraph G) N L).degree v = k
+heven : Fintype.card (V ⊕ Fin (auxiliaryOrder (Fintype.card V) k)) % 2 = 0
+_hOriginal : (graph (Multigraph.ofSimpleGraph G) N L).internalEdges (univ.disjSum ∅) = map Function.Embedding.inl univ
+_hAux : (graph (Multigraph.ofSimpleGraph G) N L).internalEdges (∅.disjSum univ) = map (auxiliaryEmbedding N L) univ
+_hAdded :
+  ∀ (e f : CompletionEdges N L),
+    (∀ (a : ↑G.edgeSet), e ≠ Sum.inl a) →
+      (graph (Multigraph.ofSimpleGraph G) N L).edge e = (graph (Multigraph.ofSimpleGraph G) N L).edge f → e = f
+hLrobust : IsRobustExpander L νC τ
+hLdegree :
+  ∀ (z : Fin (auxiliaryOrder (Fintype.card V) k)),
+    ↑k - ↑⌈(∑ v, ↑(k - (Multigraph.ofSimpleGraph G).degree v)) / ↑(auxiliaryOrder (Fintype.card V) k)⌉₊ ≤ ↑(L.degree z)
+hnoPlus :
+  ∀ (X : Finset (V ⊕ Fin (auxiliaryOrder (Fintype.card V) k))), ¬(graph (Multigraph.ofSimpleGraph G) N L).IsOverfull k X
+R : SimpleGraph (V ⊕ Fin (auxiliaryOrder (Fintype.card V) k)) := completion G N L
+P : Fin 3 → Finset (V ⊕ Fin m) :=
+  ![map Function.Embedding.inl (U 0), map Function.Embedding.inl (U 1), auxiliaryVertices V (Fin m)]
+i : Fin 3
+this✝ : i ∈ Fintype.elems
+a✝ : List (Fin 3)
+this : List.Mem i a✝
+⊢ List.finRange 3 = a✝ → this✝ ≍ this → SimpleGraph { x // x ∈ P i }
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:94:6: Type mismatch
+  mappedCore Function.Embedding.inl (U 0) (H 0)
+has type
+  SimpleGraph { x // x ∈ map Function.Embedding.inl (U 0) }
+but is expected to have type
+  SimpleGraph { x // x ∈ P i }
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:95:4: No goals to be solved
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:117:14: Unknown constant `Finset.disjoint_map_inl_map_inr.symm`
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:117:14: Unknown constant `Finset.disjoint_map_inl_map_inr.symm`
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:117:14: Unknown constant `Finset.disjoint_map_inl_map_inr.symm`
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:117:14: Unknown constant `Finset.disjoint_map_inl_map_inr.symm`
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:123:12: Unknown constant `Finset.disjoint_map_inl_map_inr.symm`
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:138:6: Type mismatch: After simplification, term
+  hsize 0
+ has type
+  α * ↑(Fintype.card V) ≤ ↑(#(U 0))
+but is expected to have type
+  α / 2 * (2 * ↑(Fintype.card V)) ≤
+    ↑(#(![map Function.Embedding.inl (U 0), map Function.Embedding.inl (U 1), auxiliaryVertices V (Fin m)] ⟨0, ⋯⟩))
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:139:6: Type mismatch: After simplification, term
+  hsize 1
+ has type
+  α * ↑(Fintype.card V) ≤ ↑(#(U 1))
+but is expected to have type
+  α / 2 * (2 * ↑(Fintype.card V)) ≤
+    ↑(#(![map Function.Embedding.inl (U 0), map Function.Embedding.inl (U 1), auxiliaryVertices V (Fin m)] ⟨1, ⋯⟩))
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:144:6: linarith failed to find a contradiction
+case «2».h
+α ν τ : ℝ
+hα : 0 < α
+hα1 : α < 1
+hν : 0 < ν
+hντ : ν ≤ τ
+hτ : τ ≤ α / 512000
+hτpos : 0 < τ
+νC εC : ℝ
+hνC : 0 < νC
+hεC : 0 < εC
+nC : ℕ
+hcomplete :
+  ∀ (V E : Type u) [inst : Fintype V] [inst_1 : Fintype E] (G : Multigraph V E) (k : ℕ),
+    nC ≤ Fintype.card V →
+      (∀ (v : V), G.degree v ≤ k) →
+        α * ↑(Fintype.card V) ≤ ↑k →
+          k ≤ 2 * Fintype.card V →
+            ∑ v, ↑(k - G.degree v) ≤ εC * ↑(Fintype.card V) ^ 2 →
+              (∀ (S : Finset V), ¬G.IsOverfull k S) →
+                have m := auxiliaryOrder (Fintype.card V) k;
+                have b := ⌈(∑ v, ↑(k - G.degree v)) / ↑m⌉₊;
+                ∃ N H,
+                  have Gplus := graph G N H;
+                  (∀ (v : V ⊕ Fin m), Gplus.degree v = k) ∧
+                    Fintype.card (V ⊕ Fin m) % 2 = 0 ∧
+                      Gplus.internalEdges (univ.disjSum ∅) = map Function.Embedding.inl univ ∧
+                        Gplus.internalEdges (∅.disjSum univ) = map (auxiliaryEmbedding N H) univ ∧
+                          (∀ (e f : CompletionEdges N H),
+                              (∀ (a : E), e ≠ Sum.inl a) → Gplus.edge e = Gplus.edge f → e = f) ∧
+                            IsRobustExpander H νC τ ∧
+                              (∀ (z : Fin m), ↑k - ↑b ≤ ↑(H.degree z)) ∧
+                                ∀ (X : Finset (V ⊕ Fin m)), ¬Gplus.IsOverfull k X
+μ : ℝ := min ν νC
+hμ : 0 < μ
+hμτ : μ ≤ τ
+εR : ℝ
+hεR : 0 < εR
+nR : ℕ
+_hnR : 0 < nR
+hfactor :
+  ∀ (V : Type ?u.4049) [inst : Fintype V] (G : SimpleGraph V) (U : Fin 3 → Finset V)
+    (H : (i : Fin 3) → SimpleGraph { x // x ∈ U i }) (Z : Finset V) (k : ℕ) (a : ℝ),
+    nR ≤ Fintype.card V →
+      Even (Fintype.card V) →
+        (∀ (v : V), G.degree v = k) →
+          α / 2 * ↑(Fintype.card V) ≤ ↑k →
+            (∀ (X : Finset V), ¬IsOverfull G k X) →
+              (Pairwise fun i j => Disjoint (U i) (U j)) →
+                (∀ (i : Fin 3), Disjoint (U i) Z) →
+                  (∀ (v : V), v ∈ Z ∨ ∃ i, v ∈ U i) →
+                    (∀ (i : Fin 3), α / 2 * ↑(Fintype.card V) ≤ ↑(#(U i))) →
+                      (∀ (i : Fin 3), H i ≤ induce (↑(U i)) G) →
+                        (∀ (i : Fin 3), IsRobustExpander (H i) μ τ) →
+                          (∀ (i : Fin 3) (v : { x // x ∈ U i }), ↑k - a ≤ ↑((H i).degree v)) →
+                            0 ≤ a →
+                              a + ↑(#Z) + 1 ≤ εR * ↑(Fintype.card V) →
+                                Nonempty ((Multigraph.ofSimpleGraph G).EdgeColoring k)
+ε : ℝ := min εC εR
+hε : 0 < ε
+n₀ : ℕ := max 1 (max nC nR)
+hn₀ : 0 < n₀
+V : Type u
+inst✝ : Fintype V
+G : SimpleGraph V
+U : Fin 2 → Finset V
+H : (i : Fin 2) → SimpleGraph { x // x ∈ U i }
+Z : Finset V
+k : ℕ
+a : ℝ
+hn : n₀ ≤ Fintype.card V
+hk : k < Fintype.card V
+hdegree : ∀ (v : V), G.degree v ≤ k
+hdensity : α * ↑(Fintype.card V) ≤ ↑k
+hno : ∀ (X : Finset V), ¬IsOverfull G k X
+hdisjoint : Pairwise fun i j => Disjoint (U i) (U j)
+hUZ : ∀ (i : Fin 2), Disjoint (U i) Z
+hcover : ∀ (v : V), v ∈ Z ∨ ∃ i, v ∈ U i
+hsize : ∀ (i : Fin 2), α * ↑(Fintype.card V) ≤ ↑(#(U i))
+hembed : ∀ (i : Fin 2), H i ≤ induce (↑(U i)) G
+hrobust : ∀ (i : Fin 2), IsRobustExpander (H i) ν τ
+hcore : ∀ (i : Fin 2) (v : { x // x ∈ U i }), ↑k - a ≤ ↑((H i).degree v)
+ha : 0 ≤ a
+herror : a + ↑(#Z) + 1 ≤ ε * ↑(Fintype.card V)
+hnpos : 0 < Fintype.card V
+hnC : nC ≤ Fintype.card V
+hnR : nR ≤ Fintype.card V
+herrorC : a + ↑(#Z) + 1 ≤ εC * ↑(Fintype.card V)
+herrorR : a + ↑(#Z) + 1 ≤ εR * ↑(Fintype.card V)
+hdeficiency : ∑ v, ↑(k - G.degree v) ≤ εC * ↑(Fintype.card V) ^ 2
+hdegreeM : ∀ (v : V), (Multigraph.ofSimpleGraph G).degree v ≤ k
+hnoM : ∀ (X : Finset V), ¬(Multigraph.ofSimpleGraph G).IsOverfull k X
+hdeficiencyM : ∑ v, ↑(k - (Multigraph.ofSimpleGraph G).degree v) ≤ εC * ↑(Fintype.card V) ^ 2
+m : ℕ := auxiliaryOrder (Fintype.card V) k
+hm : m = Fintype.card V
+N : V → Finset (Fin (auxiliaryOrder (Fintype.card V) k))
+L : SimpleGraph (Fin (auxiliaryOrder (Fintype.card V) k))
+hregular : ∀ (v : V ⊕ Fin (auxiliaryOrder (Fintype.card V) k)), (graph (Multigraph.ofSimpleGraph G) N L).degree v = k
+heven : Fintype.card (V ⊕ Fin (auxiliaryOrder (Fintype.card V) k)) % 2 = 0
+_hOriginal : (graph (Multigraph.ofSimpleGraph G) N L).internalEdges (univ.disjSum ∅) = map Function.Embedding.inl univ
+_hAux : (graph (Multigraph.ofSimpleGraph G) N L).internalEdges (∅.disjSum univ) = map (auxiliaryEmbedding N L) univ
+_hAdded :
+  ∀ (e f : CompletionEdges N L),
+    (∀ (a : ↑G.edgeSet), e ≠ Sum.inl a) →
+      (graph (Multigraph.ofSimpleGraph G) N L).edge e = (graph (Multigraph.ofSimpleGraph G) N L).edge f → e = f
+hLrobust : IsRobustExpander L νC τ
+hLdegree :
+  ∀ (z : Fin (auxiliaryOrder (Fintype.card V) k)),
+    ↑k - ↑⌈(∑ v, ↑(k - (Multigraph.ofSimpleGraph G).degree v)) / ↑(auxiliaryOrder (Fintype.card V) k)⌉₊ ≤ ↑(L.degree z)
+hnoPlus :
+  ∀ (X : Finset (V ⊕ Fin (auxiliaryOrder (Fintype.card V) k))), ¬(graph (Multigraph.ofSimpleGraph G) N L).IsOverfull k X
+R : SimpleGraph (V ⊕ Fin (auxiliaryOrder (Fintype.card V) k)) := completion G N L
+P : Fin 3 → Finset (V ⊕ Fin m) :=
+  ![map Function.Embedding.inl (U 0), map Function.Embedding.inl (U 1), auxiliaryVertices V (Fin m)]
+K : (i : Fin 3) → SimpleGraph { x // x ∈ P i } := fun i => sorry
+Z' : Finset (V ⊕ Fin m) := map Function.Embedding.inl Z
+a' : ℝ := a + ↑(#Z) + 1
+horder : Fintype.card (V ⊕ Fin m) = 2 * Fintype.card V
+horderR : ↑(Fintype.card (V ⊕ Fin m)) = 2 * ↑(Fintype.card V)
+hRregular : ∀ (v : V ⊕ Fin (auxiliaryOrder (Fintype.card V) k)), R.degree v = k
+hRno : ∀ (X : Finset (V ⊕ Fin m)), ¬IsOverfull R k X
+hPdisjoint : Pairwise fun i j => Disjoint (P i) (P j)
+hPZ : ∀ (i : Fin 3), Disjoint (P i) Z'
+hPcover : ∀ (v : V ⊕ Fin m), v ∈ Z' ∨ ∃ i, v ∈ P i
+hmR : ↑m = ↑(Fintype.card V)
+hN : α * ↑(Fintype.card V) ≤ 1 * ↑(Fintype.card V)
+a✝ :
+  ↑(#(![map Function.Embedding.inl (U 0), map Function.Embedding.inl (U 1), auxiliaryVertices V (Fin m)] ⟨2, ⋯⟩)) <
+    α / 2 * (2 * ↑(Fintype.card V))
+⊢ False
+failed
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:148:6: Type mismatch
+  completion_original_core G N L (U 0) (H 0) (hembed 0)
+has type
+  mappedCore Function.Embedding.inl (U 0) (H 0) ≤ induce (↑(map Function.Embedding.inl (U 0))) (completion G N L)
+but is expected to have type
+  K ((fun i => i) ⟨0, ⋯⟩) ≤ induce (↑(P ((fun i => i) ⟨0, ⋯⟩))) R
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:149:6: Type mismatch
+  completion_original_core G N L (U 1) (H 1) (hembed 1)
+has type
+  mappedCore Function.Embedding.inl (U 1) (H 1) ≤ induce (↑(map Function.Embedding.inl (U 1))) (completion G N L)
+but is expected to have type
+  K ((fun i => i) ⟨1, ⋯⟩) ≤ induce (↑(P ((fun i => i) ⟨1, ⋯⟩))) R
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:150:6: Type mismatch
+  completion_auxiliary_core G N L
+has type
+  auxiliaryCore L ≤ induce (↑(auxiliaryVertices V (Fin (auxiliaryOrder (Fintype.card V) k)))) (completion G N L)
+but is expected to have type
+  K ((fun i => i) ⟨2, ⋯⟩) ≤ induce (↑(P ((fun i => i) ⟨2, ⋯⟩))) R
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:154:12: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:158:4: (deterministic) timeout at `«tactic execution»`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:23:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+warning: Overfull/AuxiliarySimple/OrdinaryTwo.lean:142:20: This simp argument is unused:
+  Matrix.cons_val_two
+
+Hint: Omit it from the simp argument list.
+  simp only [P, M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵t̵w̵o̵,̵ ̵Matrix.cons_val_one, Matrix.cons_val_zero, auxiliaryVertices_card,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲Fintype.card_fin]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/AuxiliarySimple/OrdinaryTwo.lean:142:41: This simp argument is unused:
+  Matrix.cons_val_one
+
+Hint: Omit it from the simp argument list.
+  simp only [P, Matrix.cons_val_two, M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵o̵n̵e̵,̵ ̵Matrix.cons_val_zero, auxiliaryVertices_card,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲Fintype.card_fin]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/AuxiliarySimple/OrdinaryTwo.lean:142:62: This simp argument is unused:
+  Matrix.cons_val_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [P, Matrix.cons_val_two, Matrix.cons_val_one, M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵z̵e̵r̵o̵,̵auxiliaryVertices_card,
+          Fintype.card_fin]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/AuxiliarySimple/OrdinaryTwo.lean:143:8: This simp argument is unused:
+  auxiliaryVertices_card
+
+Hint: Omit it from the simp argument list.
+  simp only [P, Matrix.cons_val_two, Matrix.cons_val_one, Matrix.cons_val_zero,
+          a̵u̵x̵i̵l̵i̵a̵r̵y̵V̵e̵r̵t̵i̵c̵e̵s̵_̵c̵a̵r̵d̵,̵ ̵Fintype.card_fin]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Overfull/AuxiliarySimple/OrdinaryTwo.lean:143:32: This simp argument is unused:
+  Fintype.card_fin
+
+Hint: Omit it from the simp argument list.
+  simp only [P, Matrix.cons_val_two, Matrix.cons_val_one, Matrix.cons_val_zero,
+          auxiliaryVertices_card,̵ ̵F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵f̵i̵n̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.AuxiliarySimple.OrdinaryTwo
+error: build failed

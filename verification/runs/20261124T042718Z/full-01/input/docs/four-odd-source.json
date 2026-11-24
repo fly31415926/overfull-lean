@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "kind": "complete_assertion_source_mapping",
+  "base_commit": "46b6dc2c44c66a7a2c4ed9590690224bb2d10af4",
+  "manuscript_number": "4.15",
+  "manuscript_label": "three:lem:four-odd",
+  "pinned_manuscript": {
+    "filename": "Four_Robust_Component_Cases_2026-11-20.tex",
+    "sha256": "4605bdf3ee5b241a7b52dd59d08537fa0a439335cd6f119394cddd4609efffc1"
+  },
+  "statement_sha256": "95942bcc2f458912f740b61cecad49f74bcfe9e8679ec1a30e2819e039591eb0",
+  "inspected_statement": {
+    "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+    "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+    "sections": [
+      "three:lem:four-odd"
+    ],
+    "documentation": "four-odd-decomposition.md",
+    "numbered_inventory_rebased": false,
+    "statement_source_lines": [
+      3297,
+      3309
+    ],
+    "statement_sha256": "95942bcc2f458912f740b61cecad49f74bcfe9e8679ec1a30e2819e039591eb0",
+    "matches_pinned_statement_sha256": true,
+    "parameter_convention": "The fixed sufficient constant is 1/1000 for both ratios. The natural floor of a supplies the actual integer joining-degree bound. The ratio theorem assumes h>0; undivided variants cover h=0."
+  },
+  "scope": "Full Lemma 4.15 for finite loopless multigraphs, hence also simple graphs. All inputs refer to the original graph: h-regularity, no h-overfull set, four odd label fibers, actual joining degree at most real a, a prescribed perfect matching or three-edge star with at least r0 actual copies on every prescribed pair, and the manuscript forest-cut supply. The explicit sufficient conditions are a/h <= 1/1000 and (h-r0)/h <= 1/1000 for h>0. The output is an exact partition of the actual joining-copy subtype into actual matchings, exactly h with injective perfect-matching/star projection; every surplus projection is a two-edge circuit. The stronger undivided variants need only individual pair supplies and cover h=0. All quotient cuts/parities, finite selections and matching constructions are derived. This is a direct alternative proof; the general compatible-circuit theorem and terminal factorization are not claimed.",
+  "module_count": 17,
+  "modules": [
+    {
+      "module": "Overfull.FourOdd.Allocation",
+      "path": "Overfull/FourOdd/Allocation.lean",
+      "sha256": "a78fa2675f88dcbe285184b549aa29c59d4603c6e07a7196f09155471b530cac"
+    },
+    {
+      "module": "Overfull.FourOdd.Basic",
+      "path": "Overfull/FourOdd/Basic.lean",
+      "sha256": "55eaf4848022647937c1992aa8928b706c697330df8200c1c7ee3e5d0365dbf7"
+    },
+    {
+      "module": "Overfull.FourOdd.Capping",
+      "path": "Overfull/FourOdd/Capping.lean",
+      "sha256": "b9eb2308af3876f2d8bae07f546c968b0a0ffe23705989208f3ee2e1c704928a"
+    },
+    {
+      "module": "Overfull.FourOdd.CutBounds",
+      "path": "Overfull/FourOdd/CutBounds.lean",
+      "sha256": "3fb61155c933e445efb9f70356674ac90eacfee6879ea586a29556485d1dfbdc"
+    },
+    {
+      "module": "Overfull.FourOdd.Matching",
+      "path": "Overfull/FourOdd/Matching.lean",
+      "sha256": "c3bbb7c46a6723ec5cee409a64135248522a900cfba0688548b2d2c0dc6d3a99"
+    },
+    {
+      "module": "Overfull.FourOdd.MatchingPreprocessing",
+      "path": "Overfull/FourOdd/MatchingPreprocessing.lean",
+      "sha256": "167ebd0fa3777203bc5dd9d677266d9a7ecf651be49daf0e4de322756e4cb05b"
+    },
+    {
+      "module": "Overfull.FourOdd.MatchingShapes",
+      "path": "Overfull/FourOdd/MatchingShapes.lean",
+      "sha256": "5642d45140cfbbd3494113d27394c17f03982dd57dd024a779449b75137ca74d"
+    },
+    {
+      "module": "Overfull.FourOdd.MinorityPairing",
+      "path": "Overfull/FourOdd/MinorityPairing.lean",
+      "sha256": "bdefd51095146627049bc71296ad3902df9212700ec7f5c286868da13f0310de"
+    },
+    {
+      "module": "Overfull.FourOdd.OriginalGraph",
+      "path": "Overfull/FourOdd/OriginalGraph.lean",
+      "sha256": "3a2dccbe791169d4556be7e58e497db5a20a627d24acaf545fa071905cb03806"
+    },
+    {
+      "module": "Overfull.FourOdd.PairPools",
+      "path": "Overfull/FourOdd/PairPools.lean",
+      "sha256": "bbad4c4720b3ce9fc3f983541a5b5cf6472ebf72230152dcb4e0352a0967ed09"
+    },
+    {
+      "module": "Overfull.FourOdd.Pools",
+      "path": "Overfull/FourOdd/Pools.lean",
+      "sha256": "8823be42046d2a554dd5272a4fe33eb248469169d48e8e30856f692a263ba3a8"
+    },
+    {
+      "module": "Overfull.FourOdd.Quantitative",
+      "path": "Overfull/FourOdd/Quantitative.lean",
+      "sha256": "e2d91eea39e0df75d84c7ac07bdcd45689df7b672a0d748c47832c20ce7ab5b5"
+    },
+    {
+      "module": "Overfull.FourOdd.RelabelGraph",
+      "path": "Overfull/FourOdd/RelabelGraph.lean",
+      "sha256": "02cb85970c13f79f4261c4accb0ddb3cc4e5be2002260abe936b5dc8ab054d31"
+    },
+    {
+      "module": "Overfull.FourOdd.Relabeling",
+      "path": "Overfull/FourOdd/Relabeling.lean",
+      "sha256": "1671dbe66c2962e2e430f1e30d741c4a9c7dc2be6630617201de3f8265c67b9a"
+    },
+    {
+      "module": "Overfull.FourOdd.Star",
+      "path": "Overfull/FourOdd/Star.lean",
+      "sha256": "65f76163566cacc7e7c9bd37177ef596943b153a33d80b22a7221ad8e998ae6c"
+    },
+    {
+      "module": "Overfull.FourOdd.StarAssembly",
+      "path": "Overfull/FourOdd/StarAssembly.lean",
+      "sha256": "fb0d33868475a0320ff8bf35a91b40af484084b545e9d6b5279938a1d425d0cf"
+    },
+    {
+      "module": "Overfull.FourOdd.Theorem",
+      "path": "Overfull/FourOdd/Theorem.lean",
+      "sha256": "1945191892225b9e2ed5c96efc01f838d093759871ac7b63997ee1fe2213e08a"
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.FourOdd.four_odd_parts_decomposition",
+    "Overfull.FourOdd.four_odd_decomposition_real",
+    "Overfull.FourOdd.four_odd_decomposition_nat",
+    "Overfull.FourOdd.Decomposition.surplus_circuit",
+    "Overfull.FourOdd.exists_joining_decomposition",
+    "Overfull.FourOdd.exists_matching_decomposition",
+    "Overfull.FourOdd.exists_star_decomposition",
+    "Overfull.FourOdd.exists_matching_assembly",
+    "Overfull.FourOdd.exists_minorityPairing",
+    "Overfull.FourOdd.exists_cappedPools",
+    "Overfull.FourOdd.exists_singletons_and_pairs_on",
+    "Overfull.FourOdd.exists_capped_singletons_and_pairs_on",
+    "Overfull.FourOdd.joiningCut_pair_degree_le_half",
+    "Overfull.FourOdd.exists_canonical_relabeling"
+  ],
+  "complete_declaration_map": "../verification/four-odd-declarations.json",
+  "complete_axiom_log": "../verification/axioms.log",
+  "complete_build_log": "../verification/build.log",
+  "verification_report": "../verification/results.json",
+  "semantic_review": "four-odd-semantic-review.md",
+  "historical_source_recovery_preserved": "source-recovery.json"
+}

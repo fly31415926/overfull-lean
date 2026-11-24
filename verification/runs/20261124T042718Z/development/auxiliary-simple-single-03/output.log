@@ -1,0 +1,16 @@
+✖ [3612/3614] Building Overfull.AuxiliarySimple.OrdinaryTwo (56s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/AuxiliarySimple/OrdinaryTwo.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/AuxiliarySimple/OrdinaryTwo.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/AuxiliarySimple/OrdinaryTwo.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/AuxiliarySimple/OrdinaryTwo.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/AuxiliarySimple/OrdinaryTwo.setup.json --json
+error: Overfull/AuxiliarySimple/OrdinaryTwo.lean:163:8: Application type mismatch: The argument
+  IsRobustExpander.mono_parameter L hLrobust (min_le_right ?m.4163 νC)
+has type
+  @IsRobustExpander (Fin (auxiliaryOrder (Fintype.card V) k)) (Fin.fintype (auxiliaryOrder (Fintype.card V) k))
+    (instDecidableEqFin (auxiliaryOrder (Fintype.card V) k)) L (fun a b => propDecidable (L.Adj a b)) (min ?m.4163 νC) τ
+but is expected to have type
+  @IsRobustExpander (Fin (auxiliaryOrder (Fintype.card V) k)) (Fin.fintype (auxiliaryOrder (Fintype.card V) k))
+    (fun a b => propDecidable (a = b)) L (fun a b => propDecidable (L.Adj a b)) μ τ
+in the application
+  auxiliaryCore_robust L μ τ (IsRobustExpander.mono_parameter L hLrobust (min_le_right ?m.4163 νC))
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.AuxiliarySimple.OrdinaryTwo
+error: build failed

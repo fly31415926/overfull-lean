@@ -1,0 +1,382 @@
+--- a/Vizing/Aux/SetSet.lean
++++ b/Vizing/Aux/SetSet.lean
+@@ -31,7 +31,7 @@
+     · have := @Array.getElem_set_ne _ A i (by rw [h1]; exact i.isLt)
+         (A[i].set j a (by rw [h2]; exact j.isLt)) x (by rw [h1]; exact x.isLt)
+         (by exact Fin.val_ne_of_ne h)
+-      simp_all only [Fin.getElem_fin, Fin.is_lt]
++      simp_all only [Fin.getElem_fin]
+       exact h2 x
+ 
+ theorem set_set_spec1 (A : Array (Array α)) (h1 : A.size = n) (h2 : ∀ i : Fin n, A[i].size = n)
+--- a/Vizing/Aux/TakeUntil.lean
++++ b/Vizing/Aux/TakeUntil.lean
+@@ -38,7 +38,7 @@
+   · simp [takeUntil]
+     have aux : ∀ x ∈ A.takeWhile p, p x := by
+       rw [List.takeWhile_toArray]
+-      simp only [Array.mem_toArray]
++      simp only [List.mem_toArray]
+       intro x h
+       apply List.mem_takeWhile_imp at h
+       assumption
+--- a/Vizing/Aux/Upstream.lean
++++ b/Vizing/Aux/Upstream.lean
+@@ -43,7 +43,7 @@
+ 
+ theorem chain'_rel {α : Type u} {R : α → α → Prop}
+   {l : List α} {b : α}
+-  (h1 : List.Chain' R l) (h2 : b ∈ l) (h3 : l ≠ [])
++  (h1 : List.IsChain R l) (h2 : b ∈ l) (h3 : l ≠ [])
+   (h4 : l[0]'(List.length_pos_iff.mpr h3) ≠ b) : ∃ a ∈ l, R a b := by
+   rcases List.getElem_of_mem h2 with ⟨i, hlen, hi⟩
+   subst hi
+@@ -54,14 +54,14 @@
+   use l[i - 1]
+   constructor
+   · apply List.getElem_mem
+-  · apply List.chain'_iff_get.mp at h1
++  · apply List.isChain_iff_get.mp at h1
+     specialize h1 (i - 1) ?_
+-    · apply Nat.sub_lt_sub_right aux hlen
++    · omega
+     · simpa [List.get_eq_getElem, Nat.sub_add_cancel aux] using h1
+ 
+ theorem chain'_rel' {α : Type u} {R : α → α → Prop}
+   {l : List α} {a : α}
+-  (h1 : List.Chain' R l) (h2 : a ∈ l) (h3 : l ≠ [])
++  (h1 : List.IsChain R l) (h2 : a ∈ l) (h3 : l ≠ [])
+   (h4 : l.getLast h3 ≠ a) : ∃ b ∈ l, R a b := by
+   rcases List.getElem_of_mem h2 with ⟨i, hlen, hi⟩
+   subst hi
+@@ -74,22 +74,21 @@
+   use l[i + 1]
+   constructor
+   · apply List.getElem_mem
+-  · apply List.chain'_iff_get.mp at h1
+-    specialize h1 i this
++  · apply List.isChain_iff_get.mp at h1
++    specialize h1 i (by omega)
+     assumption
+ 
+ theorem chain'_rel_of_idx_consec {α : Type u} {R : α → α → Prop}
+   {l : List α} {i j : Nat} (hi : i < l.length) (hj : j < l.length)
+-  (h1 : List.Chain' R l) (h2 : j = i + 1) :
++  (h1 : List.IsChain R l) (h2 : j = i + 1) :
+   (R l[i] l[j]) := by
+   subst h2
+-  apply List.chain'_iff_get.mp h1
+-  exact Nat.lt_sub_of_add_lt hj
++  apply List.isChain_iff_get.mp h1
+ 
+ theorem chain'_mem_notMem_of_nodup_prefix_length_lt
+   {α : Type} {R : α → α → Prop}
+   {l l₁ : List α} (h1 : l₁ <+: l) (h2 : l₁.length < l.length) (h3 : l₁ ≠ [])
+-  (h4 : List.Chain' R l) (h5 : l.Nodup) :
++  (h4 : List.IsChain R l) (h5 : l.Nodup) :
+    l[l₁.length] ∉ l₁ ∧ R (l₁.getLast h3) l[l₁.length] := by
+   have aux := List.getLast_eq_getElem h3
+   repeat any_goals apply And.intro
+@@ -109,9 +108,9 @@
+ 
+ theorem chain'_prefix {α : Type u} {R S : α → α → Prop}
+   {l l₁ : List α} (h1 : l₁ <+: l) (h2 : ∀ a b, a ∈ l₁ ∧ b ∈ l₁ → R a b → S a b)
+-  (h3 : List.Chain' R l) : List.Chain' S l₁ := by
+-  have : List.Chain' R l₁ := List.Chain'.prefix h3 h1
+-  rw [List.chain'_iff_get] at ⊢ this
++  (h3 : List.IsChain R l) : List.IsChain S l₁ := by
++  have : List.IsChain R l₁ := List.IsChain.prefix h3 h1
++  rw [List.isChain_iff_get] at ⊢ this
+   intro i h
+   apply h2
+   · constructor <;> apply List.get_mem
+@@ -143,7 +142,7 @@
+     simp
+   have : A.count A[j] = (A.take j ++ A.drop j).count A[j] := by
+     congr
+-    simp_all [j.isLt, Array.extract_size]
++    simp_all [Array.extract_size]
+   rw [h2, this, Array.count_append]
+   linarith
+ 
+--- a/Vizing/EdgeColoring/SetColor.lean
++++ b/Vizing/EdgeColoring/SetColor.lean
+@@ -183,7 +183,7 @@
+     simp [symm] at this
+     apply this
+     · exact And.comm.mp (hpres)
+-    · simp [edgeColorValid] at hvalid ⊢
++    · simp at hvalid ⊢
+       intro h
+       exact And.comm.mp (hvalid h)
+     any_goals simp_all
+--- a/Vizing/EdgeColoring/SetColorLemmas.lean
++++ b/Vizing/EdgeColoring/SetColorLemmas.lean
+@@ -173,7 +173,7 @@
+   wlog h : u = e.1
+   specialize @this _ _ _ C (e.2, e.1) a d u (by simpa [present, And.comm] using hpres)
+     (by simpa [edgeColorValid, And.comm] using hvalid) (by assumption) (by rwa [color_symm])
+-    (by simp; tauto) (by simp_all [edge_not_self_loop hpres])
++    (by simp; tauto) (by simp_all)
+   rw [setEdgeColor_symm] at this; simpa using this
+   subst h
+   simp_all [incidentColorsOn, setEdgeColor]
+--- a/Vizing/Fan/Defs.lean
++++ b/Vizing/Fan/Defs.lean
+@@ -12,7 +12,7 @@
+   color C (x, f₂) ∈ freeColorsOn C f₁
+ 
+ def colorAx (F : Array (Vertex n)) (x : Vertex n) :=
+-  F.toList.Chain' (fan_prop C x)
++  F.toList.IsChain (fan_prop C x)
+ 
+ structure Fan (x y : Vertex n) where
+   val : Array (Vertex n)
+--- a/Vizing/Fan/Maximal.lean
++++ b/Vizing/Fan/Maximal.lean
+@@ -54,7 +54,7 @@
+     simp_all
+     apply ih
+     · exact hn z.prop
+-    · grw [List.erase_subset]; assumption
++    · exact fun _ ha => hn (List.mem_of_mem_erase ha)
+   · simp_all
+ 
+ theorem add_nonemptyAx (x y : Vertex n) (F : Array (Vertex n))
+@@ -113,9 +113,9 @@
+     simp_all only
+     apply ih
+     simp [colorAx] at ⊢ h
+-    apply List.Chain'.append
++    apply List.IsChain.append
+     · exact h
+-    · apply List.chain'_singleton
++    · apply List.isChain_singleton
+     · simp_all
+       intro w h
+       apply List.find?_some at hz
+@@ -138,6 +138,8 @@
+       use h, List.nodup_singleton z.val
+       specialize hdisjoint z.prop
+       simp_all
++      intro a ha heq
++      exact hdisjoint (heq ▸ ha)
+     · simp [List.Disjoint] at hdisjoint ⊢
+       intro a h
+       constructor
+--- a/Vizing/Fan/RotateFan.lean
++++ b/Vizing/Fan/RotateFan.lean
+@@ -32,7 +32,7 @@
+     exact F.firstElemAx
+   colorAx := by
+     simp [colorAx]
+-    apply List.Chain'.prefix
++    apply List.IsChain.prefix
+     exact F.colorAx
+     exact List.dropLast_prefix F.val.toList
+   nodupAx := by
+@@ -87,7 +87,7 @@
+     · intro a b ⟨h1, h2⟩ h3
+       simp_all
+       rwa [← aux1, ← aux2]
+-      any_goals simp_all [last, Array.getLast_toList]
++      any_goals simp_all [last]
+       · contrapose! h2
+         rwa [h2]
+       · intro h
+@@ -155,12 +155,12 @@
+   · simp [C']
+     apply color_invariant
+     constructor
+-    · simp only [ne_eq, Prod.mk.injEq, not_and, C']
++    · simp only [ne_eq, Prod.mk.injEq, not_and]
+       intro hu; subst hu
+       contrapose! h1
+       rw [last] at h1; rw [h1]
+       simp
+-    · simp only [ne_eq, Prod.mk.injEq, not_and, C']
++    · simp only [ne_eq, Prod.mk.injEq, not_and]
+       intro hu; subst hu
+       contrapose! h2
+       rw [last]
+--- a/Vizing/Fan/Subfan.lean
++++ b/Vizing/Fan/Subfan.lean
+@@ -68,7 +68,7 @@
+ --     exact F.firstElemAx
+ --   colorAx := by
+ --     simp [colorAx]
+---     apply List.Chain'.prefix (l := F.val.toList)
++--     apply List.IsChain.prefix (l := F.val.toList)
+ --     · exact F.colorAx
+ --     · simp [← List.isPrefixOf_iff_prefix, Array.isPrefixOf_toList]
+ --       apply takeUntil_prefix
+--- a/Vizing/Graph.lean
++++ b/Vizing/Graph.lean
+@@ -81,7 +81,7 @@
+     intro a b h _ _
+     exact E.reprGraphAx (a, b) h
+   symmAx := by
+-    simp [List.removeAll, List.mem_pair, Prod.eq_iff_fst_eq_snd_eq]
++    simp [List.removeAll, Prod.eq_iff_fst_eq_snd_eq]
+     intro a b
+     constructor
+     · intro ⟨h1, h2⟩
+--- a/Vizing/InversionGuarantee.lean
++++ b/Vizing/InversionGuarantee.lean
+@@ -62,14 +62,14 @@
+   {C' : EdgeColoring c G} {F : List (Vertex n)} (hF : F ≠ [])
+   (hF2 : F.Nodup)
+   (h1 : ∀ (a b : Vertex n), color C (a, b) = color C' (a, b))
+-  (h2 : List.Chain' (fun f₁ f₂ ↦ color C (x, f₂) ∈ freeColorsOn C f₁) F)
++  (h2 : List.IsChain (fun f₁ f₂ ↦ color C (x, f₂) ∈ freeColorsOn C f₁) F)
+   (h3 : ∀ z ∈ F, z ≠ F.head hF → (color C (x, z)).isSome) :
+-  List.Chain' (fun f₁ f₂ ↦ color C' (x, f₂) ∈ freeColorsOn C' f₁) F := by
++  List.IsChain (fun f₁ f₂ ↦ color C' (x, f₂) ∈ freeColorsOn C' f₁) F := by
+   rcases List.exists_cons_of_ne_nil hF with ⟨head, tail, hF⟩
+   by_cases htail : tail = []
+   · subst htail hF
+-    exact List.chain'_singleton head
+-  · rw [List.chain'_iff_get] at ⊢ h2
++    exact List.isChain_singleton head
++  · rw [List.isChain_iff_get] at ⊢ h2
+     simp at ⊢ h2
+     intro i h
+     specialize h2 i h
+@@ -207,10 +207,10 @@
+ 
+ 
+ theorem chain'_imp_of_mem {α : Type*} {R S : α → α → Prop}
+-     {l : List α} (h1 : ∀ a ∈ l, ∀ b ∈ l, R a b → S a b) (h2 : List.Chain' R l) :
+-    List.Chain' S l := by
+-    rw [List.Chain'.iff_mem] at ⊢ h2
+-    apply (List.Chain'.imp ?_)
++     {l : List α} (h1 : ∀ a ∈ l, ∀ b ∈ l, R a b → S a b) (h2 : List.IsChain R l) :
++    List.IsChain S l := by
++    rw [List.IsChain.iff_mem] at ⊢ h2
++    apply (List.IsChain.imp ?_)
+     · exact h2
+     · intro a b h
+       tauto
+@@ -258,7 +258,7 @@
+   have aux4 : F.val[j.val] ∈ P.val := by exact List.mem_of_getElem aux3
+   constructor
+   · apply freeColor_of_not_exists_and_isSome _ ha
+-    simp [isInverted, isInverted_notmem, isInverted_mem, aux1, pathEdges, color] at hC'
++    simp [isInverted, isInverted_notmem, isInverted_mem, pathEdges, color] at hC'
+     rcases hC' with ⟨hC', _⟩
+     have ha2 := not_exists_of_freeColor C ha1
+     contrapose! ha2
+@@ -278,13 +278,13 @@
+     omega
+   · have hcolor := F.colorAx
+     unfold colorAx fan_prop at ⊢ hcolor
+-    apply List.chain'_iff_get.mpr
++    apply List.isChain_iff_get.mpr
+     intro i hi
+     simp only [Array.length_toList, List.get_eq_getElem, Array.getElem_toList]
+     by_cases hij : i = j.val - 1
+     · subst hij
+       have : j.val - 1 + 1 = j := by omega
+-      simp [aux0, this]
++      simp [this]
+       have aux5 : color C' (x, F.val[j.val]) = b := by
+         have : (x, F.val[↑j]) ∈ pathEdges P := by
+           simp [pathEdges]
+@@ -335,11 +335,11 @@
+     tauto
+   · rw [colorAx]
+     unfold fan_prop
+-    have : List.Chain' (fun f₁ f₂ ↦ color C (x, f₂) ∈ freeColorsOn C f₁) (F.val.extract 0 ↑j).toList := by
++    have : List.IsChain (fun f₁ f₂ ↦ color C (x, f₂) ∈ freeColorsOn C f₁) (F.val.extract 0 ↑j).toList := by
+       have := F.colorAx
+       unfold colorAx fan_prop at this
+       simp_all
+-      exact List.Chain'.take this ↑j
++      exact List.IsChain.take this ↑j
+     apply chain'_imp_of_mem _ this
+     intro z hz w hw h
+     simp at hz hw
+--- a/Vizing/Path/AlternatingPred.lean
++++ b/Vizing/Path/AlternatingPred.lean
+@@ -137,14 +137,14 @@
+       split at h <;> simp_all
+       apply alternates_head h.right
+   · simp_all; omega
+-  · specialize ih (i - 1) (by simp_all +arith; omega)
++  · specialize ih (i - 1) (by simp_all +arith; omega) (by simp_all only [List.length_cons]; omega)
+     have : i - 1 + 1 = i := by omega
+     simp_rw [this] at ih
+     tauto
+ 
+ theorem chain'_of_alternates
+   {V C : Type*} {p : V → V → C} {a b : C} {L : List V} (h : alternates p a b L) :
+-  List.Chain' (fun x y ↦ p x y = a ∨ p x y = b) L := by
++  List.IsChain (fun x y ↦ p x y = a ∨ p x y = b) L := by
+   fun_induction alternates <;> simp_all
+   rename_i ih
+   simp_rw [or_comm] at ih
+--- a/Vizing/Path/Invert.lean
++++ b/Vizing/Path/Invert.lean
+@@ -13,17 +13,17 @@
+ 
+ include ha hb in
+ theorem edges_present (L : List (Vertex n))
+-  (colorAx : alternatesColor C L a b) : List.Chain' (fun v₁ v₂ ↦ present G (v₁, v₂)) L := by
++  (colorAx : alternatesColor C L a b) : List.IsChain (fun v₁ v₂ ↦ present G (v₁, v₂)) L := by
+   rw [alternatesColor] at colorAx
+   induction' L with head tail ih generalizing a b
+-  trivial
++  · exact List.isChain_nil
+   by_cases htail : tail = []
+   · simp [htail]
+   rcases List.exists_cons_of_ne_nil htail with ⟨v, vs, h⟩
+   subst h
+   rw [alternates.eq_def] at colorAx
+   simp at colorAx
+-  apply List.Chain'.cons_of_ne_nil htail
++  apply List.IsChain.cons_of_ne_nil htail
+   · apply @ih b a hb ha colorAx.right
+   apply C.representsEdgesAx
+   simp [color] at ⊢ colorAx
+@@ -155,7 +155,7 @@
+ def recolor (C : EdgeColoring c G) (a b : Color c) (ha : a.isSome) (hb : b.isSome)
+   (hne : a ≠ b)
+   (L : List (Vertex n)) (hnodup : L.Nodup)
+-  (h1 : List.Chain' (fun e₁ e₂ ↦ present G (e₁, e₂)) L)
++  (h1 : List.IsChain (fun e₁ e₂ ↦ present G (e₁, e₂)) L)
+   (h2 : ∀ v ∈ L.tail, a ∈ freeColorsOn C v)
+   (h3 : ∀ v ∈ L, b ∈ freeColorsOn C v)
+   : EdgeColoring c G :=
+@@ -187,12 +187,12 @@
+         rcases hv with hv | hv <;> (subst hv; tauto)
+     recolor (setEdgeColor C (p₁, p₂) b hpres hvalid)
+       b a hb ha (Ne.symm hne) (p₂ :: ps) (by simp at ⊢ hnodup; tauto)
+-      (by apply List.Chain'.tail at h1; simpa using h1)
++      (by apply List.IsChain.tail at h1; simpa using h1)
+       auxb auxa
+ 
+ theorem recolor_spec1 (hne : a ≠ b)
+   (L : List (Vertex n)) (hnodup : L.Nodup)
+-  (h1 : List.Chain' (fun e₁ e₂ ↦ present G (e₁, e₂)) L)
++  (h1 : List.IsChain (fun e₁ e₂ ↦ present G (e₁, e₂)) L)
+   (h2 : ∀ v ∈ L.tail, a ∈ freeColorsOn C v)
+   (h3 : ∀ v ∈ L, b ∈ freeColorsOn C v) :
+   ∀ e, e ∉ allAdjacentPairs L → color C e = color (recolor C a b ha hb hne L hnodup h1 h2 h3) e := by
+@@ -206,7 +206,7 @@
+ 
+ theorem recolor_spec2 (hne : a ≠ b)
+   (L : List (Vertex n)) (hnodup : L.Nodup)
+-  (h1 : List.Chain' (fun e₁ e₂ ↦ present G (e₁, e₂)) L)
++  (h1 : List.IsChain (fun e₁ e₂ ↦ present G (e₁, e₂)) L)
+   (h2 : ∀ v ∈ L.tail, a ∈ freeColorsOn C v)
+   (h3 : ∀ v ∈ L, b ∈ freeColorsOn C v) :
+   alternatesColor (recolor C a b ha hb hne L hnodup h1 h2 h3) L b a := by
+@@ -225,7 +225,7 @@
+ 
+ -- theorem recolor_spec3 (hne : a ≠ b)
+ --   (L : List (Vertex n)) (hnodup : L.Nodup) (hl : L ≠ [])
+---   (h1 : List.Chain' (fun e₁ e₂ ↦ present G (e₁, e₂)) L)
++--   (h1 : List.IsChain (fun e₁ e₂ ↦ present G (e₁, e₂)) L)
+ --   (h2 : ∀ v ∈ L.tail, a ∈ freeColorsOn C v)
+ --   (h3 : ∀ v ∈ L, b ∈ freeColorsOn C v)
+ --   (h4 : next a b L ∈ freeColorsOn C (L.getLast hl)) :

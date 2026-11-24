@@ -1,0 +1,2678 @@
+{
+  "definitions_checked": {
+    "AdmissibleOn": "For every vertex, class and shore: twice class-cut size <= cut size",
+    "Compatible": "No class occurs on two selected copies incident to one vertex",
+    "IsCircuit": "Nonempty; degree two on support; every nonempty proper support cut is nonempty",
+    "classCutOn": "Crossing copies incident to the tested vertex with its tested class",
+    "cutOn": "Actual copies with exactly one endpoint in the shore",
+    "degreeOn": "Number of selected incident actual copies"
+  },
+  "enumeration_scope": "All sixteen Fin 4 shores and all incidence classes present at each vertex; absent classes have count zero",
+  "evidence_kind": "finite exploratory Python diagnostic; not a Lean proof",
+  "examples": {
+    "A": {
+      "claim_tested": "A compatible split preserving every local bound need not preserve admissibility",
+      "original": {
+        "actual_copies": [
+          {
+            "copy": "01_0",
+            "endpoints": [
+              0,
+              1
+            ]
+          },
+          {
+            "copy": "01_1",
+            "endpoints": [
+              0,
+              1
+            ]
+          },
+          {
+            "copy": "02_0",
+            "endpoints": [
+              0,
+              2
+            ]
+          },
+          {
+            "copy": "02_1",
+            "endpoints": [
+              0,
+              2
+            ]
+          },
+          {
+            "copy": "03_0",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "03_1",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "03_2",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "03_3",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "13_0",
+            "endpoints": [
+              1,
+              3
+            ]
+          },
+          {
+            "copy": "13_1",
+            "endpoints": [
+              1,
+              3
+            ]
+          },
+          {
+            "copy": "23_0",
+            "endpoints": [
+              2,
+              3
+            ]
+          },
+          {
+            "copy": "23_1",
+            "endpoints": [
+              2,
+              3
+            ]
+          }
+        ],
+        "admissibility": {
+          "admissible": true,
+          "inequalities_checked": 336,
+          "minimum_slack_on_nontrivial_shores": 0,
+          "shores_enumerated": 16,
+          "violations": []
+        },
+        "all_degrees_even": true,
+        "degrees": [
+          8,
+          4,
+          4,
+          8
+        ],
+        "edge_copy_count": 12,
+        "local_bounds": {
+          "all_local_half_degree_bounds_hold": true,
+          "checks": [
+            {
+              "bound_holds": true,
+              "class": "singleton:0:01_0",
+              "class_size": 1,
+              "copies": [
+                "01_0"
+              ],
+              "degree": 8,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:01_1",
+              "class_size": 1,
+              "copies": [
+                "01_1"
+              ],
+              "degree": 8,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:02_0",
+              "class_size": 1,
+              "copies": [
+                "02_0"
+              ],
+              "degree": 8,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:02_1",
+              "class_size": 1,
+              "copies": [
+                "02_1"
+              ],
+              "degree": 8,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:03_0",
+              "class_size": 1,
+              "copies": [
+                "03_0"
+              ],
+              "degree": 8,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:03_1",
+              "class_size": 1,
+              "copies": [
+                "03_1"
+              ],
+              "degree": 8,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:03_2",
+              "class_size": 1,
+              "copies": [
+                "03_2"
+              ],
+              "degree": 8,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:03_3",
+              "class_size": 1,
+              "copies": [
+                "03_3"
+              ],
+              "degree": 8,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:01_0",
+              "class_size": 1,
+              "copies": [
+                "01_0"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:01_1",
+              "class_size": 1,
+              "copies": [
+                "01_1"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:13_0",
+              "class_size": 1,
+              "copies": [
+                "13_0"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:13_1",
+              "class_size": 1,
+              "copies": [
+                "13_1"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:02_0",
+              "class_size": 1,
+              "copies": [
+                "02_0"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:02_1",
+              "class_size": 1,
+              "copies": [
+                "02_1"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:23_0",
+              "class_size": 1,
+              "copies": [
+                "23_0"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:23_1",
+              "class_size": 1,
+              "copies": [
+                "23_1"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "A",
+              "class_size": 4,
+              "copies": [
+                "13_0",
+                "13_1",
+                "23_0",
+                "23_1"
+              ],
+              "degree": 8,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:03_0",
+              "class_size": 1,
+              "copies": [
+                "03_0"
+              ],
+              "degree": 8,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:03_1",
+              "class_size": 1,
+              "copies": [
+                "03_1"
+              ],
+              "degree": 8,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:03_2",
+              "class_size": 1,
+              "copies": [
+                "03_2"
+              ],
+              "degree": 8,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:03_3",
+              "class_size": 1,
+              "copies": [
+                "03_3"
+              ],
+              "degree": 8,
+              "vertex": 3
+            }
+          ]
+        },
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "specified_cut_after": {
+        "class": "A",
+        "class_cut_copies": [
+          "13_0",
+          "13_1",
+          "23_0",
+          "23_1"
+        ],
+        "class_cut_size": 4,
+        "cut_copies": [
+          "01_1",
+          "02_1",
+          "13_0",
+          "13_1",
+          "23_0",
+          "23_1"
+        ],
+        "cut_size": 6,
+        "inequality_holds": false,
+        "shore": [
+          0,
+          3
+        ],
+        "slack": -2,
+        "twice_class_cut_size": 8,
+        "vertex": 3
+      },
+      "specified_cut_before": {
+        "class": "A",
+        "class_cut_copies": [
+          "13_0",
+          "13_1",
+          "23_0",
+          "23_1"
+        ],
+        "class_cut_size": 4,
+        "cut_copies": [
+          "01_0",
+          "01_1",
+          "02_0",
+          "02_1",
+          "13_0",
+          "13_1",
+          "23_0",
+          "23_1"
+        ],
+        "cut_size": 8,
+        "inequality_holds": true,
+        "shore": [
+          0,
+          3
+        ],
+        "slack": 0,
+        "twice_class_cut_size": 8,
+        "vertex": 3
+      },
+      "split": {
+        "center": 0,
+        "endpoint_classes_inherited": true,
+        "new_copy": "12_split",
+        "new_endpoints": [
+          1,
+          2
+        ],
+        "removed_classes_at_center": [
+          "singleton:0:01_0",
+          "singleton:0:02_0"
+        ],
+        "removed_copies": [
+          "01_0",
+          "02_0"
+        ],
+        "removed_pair_has_distinct_classes_at_center": true
+      },
+      "split_graph": {
+        "actual_copies": [
+          {
+            "copy": "01_1",
+            "endpoints": [
+              0,
+              1
+            ]
+          },
+          {
+            "copy": "02_1",
+            "endpoints": [
+              0,
+              2
+            ]
+          },
+          {
+            "copy": "03_0",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "03_1",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "03_2",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "03_3",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "12_split",
+            "endpoints": [
+              1,
+              2
+            ]
+          },
+          {
+            "copy": "13_0",
+            "endpoints": [
+              1,
+              3
+            ]
+          },
+          {
+            "copy": "13_1",
+            "endpoints": [
+              1,
+              3
+            ]
+          },
+          {
+            "copy": "23_0",
+            "endpoints": [
+              2,
+              3
+            ]
+          },
+          {
+            "copy": "23_1",
+            "endpoints": [
+              2,
+              3
+            ]
+          }
+        ],
+        "admissibility": {
+          "admissible": false,
+          "inequalities_checked": 304,
+          "minimum_slack_on_nontrivial_shores": -2,
+          "shores_enumerated": 16,
+          "violations": [
+            {
+              "class": "A",
+              "class_cut_copies": [
+                "13_0",
+                "13_1",
+                "23_0",
+                "23_1"
+              ],
+              "class_cut_size": 4,
+              "cut_copies": [
+                "01_1",
+                "02_1",
+                "13_0",
+                "13_1",
+                "23_0",
+                "23_1"
+              ],
+              "cut_size": 6,
+              "inequality_holds": false,
+              "shore": [
+                1,
+                2
+              ],
+              "slack": -2,
+              "twice_class_cut_size": 8,
+              "vertex": 3
+            },
+            {
+              "class": "A",
+              "class_cut_copies": [
+                "13_0",
+                "13_1",
+                "23_0",
+                "23_1"
+              ],
+              "class_cut_size": 4,
+              "cut_copies": [
+                "01_1",
+                "02_1",
+                "13_0",
+                "13_1",
+                "23_0",
+                "23_1"
+              ],
+              "cut_size": 6,
+              "inequality_holds": false,
+              "shore": [
+                0,
+                3
+              ],
+              "slack": -2,
+              "twice_class_cut_size": 8,
+              "vertex": 3
+            }
+          ]
+        },
+        "all_degrees_even": true,
+        "degrees": [
+          6,
+          4,
+          4,
+          8
+        ],
+        "edge_copy_count": 11,
+        "local_bounds": {
+          "all_local_half_degree_bounds_hold": true,
+          "checks": [
+            {
+              "bound_holds": true,
+              "class": "singleton:0:01_1",
+              "class_size": 1,
+              "copies": [
+                "01_1"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:02_1",
+              "class_size": 1,
+              "copies": [
+                "02_1"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:03_0",
+              "class_size": 1,
+              "copies": [
+                "03_0"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:03_1",
+              "class_size": 1,
+              "copies": [
+                "03_1"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:03_2",
+              "class_size": 1,
+              "copies": [
+                "03_2"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:03_3",
+              "class_size": 1,
+              "copies": [
+                "03_3"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:01_0",
+              "class_size": 1,
+              "copies": [
+                "12_split"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:01_1",
+              "class_size": 1,
+              "copies": [
+                "01_1"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:13_0",
+              "class_size": 1,
+              "copies": [
+                "13_0"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:13_1",
+              "class_size": 1,
+              "copies": [
+                "13_1"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:02_0",
+              "class_size": 1,
+              "copies": [
+                "12_split"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:02_1",
+              "class_size": 1,
+              "copies": [
+                "02_1"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:23_0",
+              "class_size": 1,
+              "copies": [
+                "23_0"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:23_1",
+              "class_size": 1,
+              "copies": [
+                "23_1"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "A",
+              "class_size": 4,
+              "copies": [
+                "13_0",
+                "13_1",
+                "23_0",
+                "23_1"
+              ],
+              "degree": 8,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:03_0",
+              "class_size": 1,
+              "copies": [
+                "03_0"
+              ],
+              "degree": 8,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:03_1",
+              "class_size": 1,
+              "copies": [
+                "03_1"
+              ],
+              "degree": 8,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:03_2",
+              "class_size": 1,
+              "copies": [
+                "03_2"
+              ],
+              "degree": 8,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:03_3",
+              "class_size": 1,
+              "copies": [
+                "03_3"
+              ],
+              "degree": 8,
+              "vertex": 3
+            }
+          ]
+        },
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "B": {
+      "claim_tested": "Admissibility of a split does not guarantee partwise lifting of a supplied compatible partition",
+      "expanded_first_part": {
+        "circuit_partitions": [
+          {
+            "compatible_circuit_partition": false,
+            "covers_selected_copies": true,
+            "pairwise_disjoint": true,
+            "parts": [
+              {
+                "compatibility": {
+                  "compatible": false,
+                  "violations": [
+                    {
+                      "class": "A",
+                      "copies": [
+                        "e",
+                        "g"
+                      ],
+                      "vertex": 0
+                    }
+                  ]
+                },
+                "copies": [
+                  "e",
+                  "g"
+                ],
+                "is_circuit": true
+              },
+              {
+                "compatibility": {
+                  "compatible": false,
+                  "violations": [
+                    {
+                      "class": "B",
+                      "copies": [
+                        "f",
+                        "h"
+                      ],
+                      "vertex": 0
+                    }
+                  ]
+                },
+                "copies": [
+                  "f",
+                  "h"
+                ],
+                "is_circuit": true
+              }
+            ]
+          }
+        ],
+        "compatible_circuit_partition_count": 0,
+        "copies": [
+          "e",
+          "f",
+          "g",
+          "h"
+        ],
+        "degrees": [
+          4,
+          2,
+          2,
+          0
+        ],
+        "is_circuit": false,
+        "set_partitions_enumerated": 15
+      },
+      "original": {
+        "actual_copies": [
+          {
+            "copy": "e",
+            "endpoints": [
+              0,
+              1
+            ]
+          },
+          {
+            "copy": "f",
+            "endpoints": [
+              0,
+              2
+            ]
+          },
+          {
+            "copy": "g",
+            "endpoints": [
+              0,
+              1
+            ]
+          },
+          {
+            "copy": "h",
+            "endpoints": [
+              0,
+              2
+            ]
+          },
+          {
+            "copy": "p",
+            "endpoints": [
+              1,
+              2
+            ]
+          },
+          {
+            "copy": "q",
+            "endpoints": [
+              1,
+              2
+            ]
+          },
+          {
+            "copy": "r",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "s",
+            "endpoints": [
+              0,
+              3
+            ]
+          }
+        ],
+        "admissibility": {
+          "admissible": true,
+          "inequalities_checked": 224,
+          "minimum_slack_on_nontrivial_shores": 0,
+          "shores_enumerated": 16,
+          "violations": []
+        },
+        "all_degrees_even": true,
+        "degrees": [
+          6,
+          4,
+          4,
+          2
+        ],
+        "edge_copy_count": 8,
+        "local_bounds": {
+          "all_local_half_degree_bounds_hold": true,
+          "checks": [
+            {
+              "bound_holds": true,
+              "class": "A",
+              "class_size": 2,
+              "copies": [
+                "e",
+                "g"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "B",
+              "class_size": 2,
+              "copies": [
+                "f",
+                "h"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:r",
+              "class_size": 1,
+              "copies": [
+                "r"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:s",
+              "class_size": 1,
+              "copies": [
+                "s"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:e",
+              "class_size": 1,
+              "copies": [
+                "e"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:g",
+              "class_size": 1,
+              "copies": [
+                "g"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:p",
+              "class_size": 1,
+              "copies": [
+                "p"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:q",
+              "class_size": 1,
+              "copies": [
+                "q"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:f",
+              "class_size": 1,
+              "copies": [
+                "f"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:h",
+              "class_size": 1,
+              "copies": [
+                "h"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:p",
+              "class_size": 1,
+              "copies": [
+                "p"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:q",
+              "class_size": 1,
+              "copies": [
+                "q"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:r",
+              "class_size": 1,
+              "copies": [
+                "r"
+              ],
+              "degree": 2,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:s",
+              "class_size": 1,
+              "copies": [
+                "s"
+              ],
+              "degree": 2,
+              "vertex": 3
+            }
+          ]
+        },
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "original_compatible_partition_rearranging_parts": {
+        "compatible_circuit_partition": true,
+        "covers_selected_copies": true,
+        "pairwise_disjoint": true,
+        "parts": [
+          {
+            "compatibility": {
+              "compatible": true,
+              "violations": []
+            },
+            "copies": [
+              "e",
+              "f",
+              "p"
+            ],
+            "is_circuit": true
+          },
+          {
+            "compatibility": {
+              "compatible": true,
+              "violations": []
+            },
+            "copies": [
+              "g",
+              "h",
+              "q"
+            ],
+            "is_circuit": true
+          },
+          {
+            "compatibility": {
+              "compatible": true,
+              "violations": []
+            },
+            "copies": [
+              "r",
+              "s"
+            ],
+            "is_circuit": true
+          }
+        ]
+      },
+      "split": {
+        "center": 0,
+        "endpoint_classes_inherited": true,
+        "new_copy": "t",
+        "new_endpoints": [
+          1,
+          2
+        ],
+        "removed_classes_at_center": [
+          "A",
+          "B"
+        ],
+        "removed_copies": [
+          "e",
+          "f"
+        ],
+        "removed_pair_has_distinct_classes_at_center": true
+      },
+      "split_graph": {
+        "actual_copies": [
+          {
+            "copy": "g",
+            "endpoints": [
+              0,
+              1
+            ]
+          },
+          {
+            "copy": "h",
+            "endpoints": [
+              0,
+              2
+            ]
+          },
+          {
+            "copy": "p",
+            "endpoints": [
+              1,
+              2
+            ]
+          },
+          {
+            "copy": "q",
+            "endpoints": [
+              1,
+              2
+            ]
+          },
+          {
+            "copy": "r",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "s",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "t",
+            "endpoints": [
+              1,
+              2
+            ]
+          }
+        ],
+        "admissibility": {
+          "admissible": true,
+          "inequalities_checked": 224,
+          "minimum_slack_on_nontrivial_shores": 0,
+          "shores_enumerated": 16,
+          "violations": []
+        },
+        "all_degrees_even": true,
+        "degrees": [
+          4,
+          4,
+          4,
+          2
+        ],
+        "edge_copy_count": 7,
+        "local_bounds": {
+          "all_local_half_degree_bounds_hold": true,
+          "checks": [
+            {
+              "bound_holds": true,
+              "class": "A",
+              "class_size": 1,
+              "copies": [
+                "g"
+              ],
+              "degree": 4,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "B",
+              "class_size": 1,
+              "copies": [
+                "h"
+              ],
+              "degree": 4,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:r",
+              "class_size": 1,
+              "copies": [
+                "r"
+              ],
+              "degree": 4,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:s",
+              "class_size": 1,
+              "copies": [
+                "s"
+              ],
+              "degree": 4,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:e",
+              "class_size": 1,
+              "copies": [
+                "t"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:g",
+              "class_size": 1,
+              "copies": [
+                "g"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:p",
+              "class_size": 1,
+              "copies": [
+                "p"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:q",
+              "class_size": 1,
+              "copies": [
+                "q"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:f",
+              "class_size": 1,
+              "copies": [
+                "t"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:h",
+              "class_size": 1,
+              "copies": [
+                "h"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:p",
+              "class_size": 1,
+              "copies": [
+                "p"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:q",
+              "class_size": 1,
+              "copies": [
+                "q"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:r",
+              "class_size": 1,
+              "copies": [
+                "r"
+              ],
+              "degree": 2,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:s",
+              "class_size": 1,
+              "copies": [
+                "s"
+              ],
+              "degree": 2,
+              "vertex": 3
+            }
+          ]
+        },
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "split_partition": {
+        "compatible_circuit_partition": true,
+        "covers_selected_copies": true,
+        "pairwise_disjoint": true,
+        "parts": [
+          {
+            "compatibility": {
+              "compatible": true,
+              "violations": []
+            },
+            "copies": [
+              "g",
+              "h",
+              "t"
+            ],
+            "is_circuit": true
+          },
+          {
+            "compatibility": {
+              "compatible": true,
+              "violations": []
+            },
+            "copies": [
+              "p",
+              "q"
+            ],
+            "is_circuit": true
+          },
+          {
+            "compatibility": {
+              "compatible": true,
+              "violations": []
+            },
+            "copies": [
+              "r",
+              "s"
+            ],
+            "is_circuit": true
+          }
+        ]
+      }
+    },
+    "C": {
+      "actual_copy_subsets_enumerated": 512,
+      "claim_tested": "A mixed-degree admissible graph need not contain any spanning four-regular layer",
+      "explanation": "A loopless residual graph cannot have exactly one positive-degree vertex",
+      "forced_residual_degrees_if_layer_existed": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "original": {
+        "actual_copies": [
+          {
+            "copy": "01_0",
+            "endpoints": [
+              0,
+              1
+            ]
+          },
+          {
+            "copy": "01_1",
+            "endpoints": [
+              0,
+              1
+            ]
+          },
+          {
+            "copy": "02_0",
+            "endpoints": [
+              0,
+              2
+            ]
+          },
+          {
+            "copy": "02_1",
+            "endpoints": [
+              0,
+              2
+            ]
+          },
+          {
+            "copy": "03_0",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "03_1",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "12_0",
+            "endpoints": [
+              1,
+              2
+            ]
+          },
+          {
+            "copy": "13_0",
+            "endpoints": [
+              1,
+              3
+            ]
+          },
+          {
+            "copy": "23_0",
+            "endpoints": [
+              2,
+              3
+            ]
+          }
+        ],
+        "admissibility": {
+          "admissible": true,
+          "inequalities_checked": 288,
+          "minimum_slack_on_nontrivial_shores": 2,
+          "shores_enumerated": 16,
+          "violations": []
+        },
+        "all_degrees_even": true,
+        "degrees": [
+          6,
+          4,
+          4,
+          4
+        ],
+        "edge_copy_count": 9,
+        "local_bounds": {
+          "all_local_half_degree_bounds_hold": true,
+          "checks": [
+            {
+              "bound_holds": true,
+              "class": "singleton:0:01_0",
+              "class_size": 1,
+              "copies": [
+                "01_0"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:01_1",
+              "class_size": 1,
+              "copies": [
+                "01_1"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:02_0",
+              "class_size": 1,
+              "copies": [
+                "02_0"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:02_1",
+              "class_size": 1,
+              "copies": [
+                "02_1"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:03_0",
+              "class_size": 1,
+              "copies": [
+                "03_0"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:03_1",
+              "class_size": 1,
+              "copies": [
+                "03_1"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:01_0",
+              "class_size": 1,
+              "copies": [
+                "01_0"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:01_1",
+              "class_size": 1,
+              "copies": [
+                "01_1"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:12_0",
+              "class_size": 1,
+              "copies": [
+                "12_0"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:13_0",
+              "class_size": 1,
+              "copies": [
+                "13_0"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:02_0",
+              "class_size": 1,
+              "copies": [
+                "02_0"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:02_1",
+              "class_size": 1,
+              "copies": [
+                "02_1"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:12_0",
+              "class_size": 1,
+              "copies": [
+                "12_0"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:23_0",
+              "class_size": 1,
+              "copies": [
+                "23_0"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:03_0",
+              "class_size": 1,
+              "copies": [
+                "03_0"
+              ],
+              "degree": 4,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:03_1",
+              "class_size": 1,
+              "copies": [
+                "03_1"
+              ],
+              "degree": 4,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:13_0",
+              "class_size": 1,
+              "copies": [
+                "13_0"
+              ],
+              "degree": 4,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:23_0",
+              "class_size": 1,
+              "copies": [
+                "23_0"
+              ],
+              "degree": 4,
+              "vertex": 3
+            }
+          ]
+        },
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "spanning_four_regular_subgraphs": []
+    },
+    "D": {
+      "actual_copy_subsets_enumerated": 256,
+      "claim_tested": "An admissible four-regular graph need not have a compatible spanning two-factor",
+      "compatible_circuit_partition": {
+        "compatible_circuit_partition": true,
+        "covers_selected_copies": true,
+        "pairwise_disjoint": true,
+        "parts": [
+          {
+            "compatibility": {
+              "compatible": true,
+              "violations": []
+            },
+            "copies": [
+              "01a",
+              "02",
+              "12"
+            ],
+            "is_circuit": true
+          },
+          {
+            "compatibility": {
+              "compatible": true,
+              "violations": []
+            },
+            "copies": [
+              "01b",
+              "03",
+              "13"
+            ],
+            "is_circuit": true
+          },
+          {
+            "compatibility": {
+              "compatible": true,
+              "violations": []
+            },
+            "copies": [
+              "23a",
+              "23b"
+            ],
+            "is_circuit": true
+          }
+        ]
+      },
+      "compatible_spanning_two_factor_count": 0,
+      "original": {
+        "actual_copies": [
+          {
+            "copy": "01a",
+            "endpoints": [
+              0,
+              1
+            ]
+          },
+          {
+            "copy": "01b",
+            "endpoints": [
+              0,
+              1
+            ]
+          },
+          {
+            "copy": "02",
+            "endpoints": [
+              0,
+              2
+            ]
+          },
+          {
+            "copy": "03",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "12",
+            "endpoints": [
+              1,
+              2
+            ]
+          },
+          {
+            "copy": "13",
+            "endpoints": [
+              1,
+              3
+            ]
+          },
+          {
+            "copy": "23a",
+            "endpoints": [
+              2,
+              3
+            ]
+          },
+          {
+            "copy": "23b",
+            "endpoints": [
+              2,
+              3
+            ]
+          }
+        ],
+        "admissibility": {
+          "admissible": true,
+          "inequalities_checked": 128,
+          "minimum_slack_on_nontrivial_shores": 0,
+          "shores_enumerated": 16,
+          "violations": []
+        },
+        "all_degrees_even": true,
+        "degrees": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "edge_copy_count": 8,
+        "local_bounds": {
+          "all_local_half_degree_bounds_hold": true,
+          "checks": [
+            {
+              "bound_holds": true,
+              "class": "class_0",
+              "class_size": 2,
+              "copies": [
+                "01a",
+                "01b"
+              ],
+              "degree": 4,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "class_1",
+              "class_size": 2,
+              "copies": [
+                "02",
+                "03"
+              ],
+              "degree": 4,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "class_0",
+              "class_size": 2,
+              "copies": [
+                "01a",
+                "01b"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "class_1",
+              "class_size": 2,
+              "copies": [
+                "12",
+                "13"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "class_0",
+              "class_size": 2,
+              "copies": [
+                "02",
+                "23a"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "class_1",
+              "class_size": 2,
+              "copies": [
+                "12",
+                "23b"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "class_0",
+              "class_size": 2,
+              "copies": [
+                "03",
+                "23a"
+              ],
+              "degree": 4,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "class_1",
+              "class_size": 2,
+              "copies": [
+                "13",
+                "23b"
+              ],
+              "degree": 4,
+              "vertex": 3
+            }
+          ]
+        },
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "spanning_two_factor_count": 10,
+      "spanning_two_factors": [
+        {
+          "compatibility": {
+            "compatible": false,
+            "violations": [
+              {
+                "class": "class_0",
+                "copies": [
+                  "01a",
+                  "01b"
+                ],
+                "vertex": 0
+              },
+              {
+                "class": "class_0",
+                "copies": [
+                  "01a",
+                  "01b"
+                ],
+                "vertex": 1
+              }
+            ]
+          },
+          "copies": [
+            "01a",
+            "01b",
+            "23a",
+            "23b"
+          ]
+        },
+        {
+          "compatibility": {
+            "compatible": false,
+            "violations": [
+              {
+                "class": "class_0",
+                "copies": [
+                  "02",
+                  "23a"
+                ],
+                "vertex": 2
+              }
+            ]
+          },
+          "copies": [
+            "01a",
+            "02",
+            "13",
+            "23a"
+          ]
+        },
+        {
+          "compatibility": {
+            "compatible": false,
+            "violations": [
+              {
+                "class": "class_1",
+                "copies": [
+                  "13",
+                  "23b"
+                ],
+                "vertex": 3
+              }
+            ]
+          },
+          "copies": [
+            "01a",
+            "02",
+            "13",
+            "23b"
+          ]
+        },
+        {
+          "compatibility": {
+            "compatible": false,
+            "violations": [
+              {
+                "class": "class_0",
+                "copies": [
+                  "03",
+                  "23a"
+                ],
+                "vertex": 3
+              }
+            ]
+          },
+          "copies": [
+            "01a",
+            "03",
+            "12",
+            "23a"
+          ]
+        },
+        {
+          "compatibility": {
+            "compatible": false,
+            "violations": [
+              {
+                "class": "class_1",
+                "copies": [
+                  "12",
+                  "23b"
+                ],
+                "vertex": 2
+              }
+            ]
+          },
+          "copies": [
+            "01a",
+            "03",
+            "12",
+            "23b"
+          ]
+        },
+        {
+          "compatibility": {
+            "compatible": false,
+            "violations": [
+              {
+                "class": "class_0",
+                "copies": [
+                  "02",
+                  "23a"
+                ],
+                "vertex": 2
+              }
+            ]
+          },
+          "copies": [
+            "01b",
+            "02",
+            "13",
+            "23a"
+          ]
+        },
+        {
+          "compatibility": {
+            "compatible": false,
+            "violations": [
+              {
+                "class": "class_1",
+                "copies": [
+                  "13",
+                  "23b"
+                ],
+                "vertex": 3
+              }
+            ]
+          },
+          "copies": [
+            "01b",
+            "02",
+            "13",
+            "23b"
+          ]
+        },
+        {
+          "compatibility": {
+            "compatible": false,
+            "violations": [
+              {
+                "class": "class_0",
+                "copies": [
+                  "03",
+                  "23a"
+                ],
+                "vertex": 3
+              }
+            ]
+          },
+          "copies": [
+            "01b",
+            "03",
+            "12",
+            "23a"
+          ]
+        },
+        {
+          "compatibility": {
+            "compatible": false,
+            "violations": [
+              {
+                "class": "class_1",
+                "copies": [
+                  "12",
+                  "23b"
+                ],
+                "vertex": 2
+              }
+            ]
+          },
+          "copies": [
+            "01b",
+            "03",
+            "12",
+            "23b"
+          ]
+        },
+        {
+          "compatibility": {
+            "compatible": false,
+            "violations": [
+              {
+                "class": "class_1",
+                "copies": [
+                  "02",
+                  "03"
+                ],
+                "vertex": 0
+              },
+              {
+                "class": "class_1",
+                "copies": [
+                  "12",
+                  "13"
+                ],
+                "vertex": 1
+              }
+            ]
+          },
+          "copies": [
+            "02",
+            "03",
+            "12",
+            "13"
+          ]
+        }
+      ]
+    },
+    "E": {
+      "claim_tested": "Safe circuit deletion must track slack-two inequalities as well as tight ones",
+      "deleted_circuit": {
+        "compatibility": {
+          "compatible": true,
+          "violations": []
+        },
+        "copies": [
+          "01_1",
+          "03_1",
+          "12_0",
+          "23_0"
+        ],
+        "is_circuit": true
+      },
+      "exact_deletion_correction": {
+        "inequality_holds": false,
+        "left_2a_plus_d": 8,
+        "right_delta_plus_2b": 6
+      },
+      "original": {
+        "actual_copies": [
+          {
+            "copy": "01_0",
+            "endpoints": [
+              0,
+              1
+            ]
+          },
+          {
+            "copy": "01_1",
+            "endpoints": [
+              0,
+              1
+            ]
+          },
+          {
+            "copy": "02_0",
+            "endpoints": [
+              0,
+              2
+            ]
+          },
+          {
+            "copy": "02_1",
+            "endpoints": [
+              0,
+              2
+            ]
+          },
+          {
+            "copy": "03_0",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "03_1",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "12_0",
+            "endpoints": [
+              1,
+              2
+            ]
+          },
+          {
+            "copy": "13_0",
+            "endpoints": [
+              1,
+              3
+            ]
+          },
+          {
+            "copy": "23_0",
+            "endpoints": [
+              2,
+              3
+            ]
+          }
+        ],
+        "admissibility": {
+          "admissible": true,
+          "inequalities_checked": 272,
+          "minimum_slack_on_nontrivial_shores": 2,
+          "shores_enumerated": 16,
+          "violations": []
+        },
+        "all_degrees_even": true,
+        "degrees": [
+          6,
+          4,
+          4,
+          4
+        ],
+        "edge_copy_count": 9,
+        "local_bounds": {
+          "all_local_half_degree_bounds_hold": true,
+          "checks": [
+            {
+              "bound_holds": true,
+              "class": "A",
+              "class_size": 2,
+              "copies": [
+                "01_0",
+                "03_0"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:01_1",
+              "class_size": 1,
+              "copies": [
+                "01_1"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:02_0",
+              "class_size": 1,
+              "copies": [
+                "02_0"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:02_1",
+              "class_size": 1,
+              "copies": [
+                "02_1"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:03_1",
+              "class_size": 1,
+              "copies": [
+                "03_1"
+              ],
+              "degree": 6,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:01_0",
+              "class_size": 1,
+              "copies": [
+                "01_0"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:01_1",
+              "class_size": 1,
+              "copies": [
+                "01_1"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:12_0",
+              "class_size": 1,
+              "copies": [
+                "12_0"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:13_0",
+              "class_size": 1,
+              "copies": [
+                "13_0"
+              ],
+              "degree": 4,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:02_0",
+              "class_size": 1,
+              "copies": [
+                "02_0"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:02_1",
+              "class_size": 1,
+              "copies": [
+                "02_1"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:12_0",
+              "class_size": 1,
+              "copies": [
+                "12_0"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:23_0",
+              "class_size": 1,
+              "copies": [
+                "23_0"
+              ],
+              "degree": 4,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:03_0",
+              "class_size": 1,
+              "copies": [
+                "03_0"
+              ],
+              "degree": 4,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:03_1",
+              "class_size": 1,
+              "copies": [
+                "03_1"
+              ],
+              "degree": 4,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:13_0",
+              "class_size": 1,
+              "copies": [
+                "13_0"
+              ],
+              "degree": 4,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:23_0",
+              "class_size": 1,
+              "copies": [
+                "23_0"
+              ],
+              "degree": 4,
+              "vertex": 3
+            }
+          ]
+        },
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "residual": {
+        "actual_copies": [
+          {
+            "copy": "01_0",
+            "endpoints": [
+              0,
+              1
+            ]
+          },
+          {
+            "copy": "02_0",
+            "endpoints": [
+              0,
+              2
+            ]
+          },
+          {
+            "copy": "02_1",
+            "endpoints": [
+              0,
+              2
+            ]
+          },
+          {
+            "copy": "03_0",
+            "endpoints": [
+              0,
+              3
+            ]
+          },
+          {
+            "copy": "13_0",
+            "endpoints": [
+              1,
+              3
+            ]
+          }
+        ],
+        "admissibility": {
+          "admissible": false,
+          "inequalities_checked": 144,
+          "minimum_slack_on_nontrivial_shores": -2,
+          "shores_enumerated": 16,
+          "violations": [
+            {
+              "class": "A",
+              "class_cut_copies": [
+                "01_0",
+                "03_0"
+              ],
+              "class_cut_size": 2,
+              "cut_copies": [
+                "01_0",
+                "03_0"
+              ],
+              "cut_size": 2,
+              "inequality_holds": false,
+              "shore": [
+                0,
+                2
+              ],
+              "slack": -2,
+              "twice_class_cut_size": 4,
+              "vertex": 0
+            },
+            {
+              "class": "A",
+              "class_cut_copies": [
+                "01_0",
+                "03_0"
+              ],
+              "class_cut_size": 2,
+              "cut_copies": [
+                "01_0",
+                "03_0"
+              ],
+              "cut_size": 2,
+              "inequality_holds": false,
+              "shore": [
+                1,
+                3
+              ],
+              "slack": -2,
+              "twice_class_cut_size": 4,
+              "vertex": 0
+            }
+          ]
+        },
+        "all_degrees_even": true,
+        "degrees": [
+          4,
+          2,
+          2,
+          2
+        ],
+        "edge_copy_count": 5,
+        "local_bounds": {
+          "all_local_half_degree_bounds_hold": true,
+          "checks": [
+            {
+              "bound_holds": true,
+              "class": "A",
+              "class_size": 2,
+              "copies": [
+                "01_0",
+                "03_0"
+              ],
+              "degree": 4,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:02_0",
+              "class_size": 1,
+              "copies": [
+                "02_0"
+              ],
+              "degree": 4,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:0:02_1",
+              "class_size": 1,
+              "copies": [
+                "02_1"
+              ],
+              "degree": 4,
+              "vertex": 0
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:01_0",
+              "class_size": 1,
+              "copies": [
+                "01_0"
+              ],
+              "degree": 2,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:1:13_0",
+              "class_size": 1,
+              "copies": [
+                "13_0"
+              ],
+              "degree": 2,
+              "vertex": 1
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:02_0",
+              "class_size": 1,
+              "copies": [
+                "02_0"
+              ],
+              "degree": 2,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:2:02_1",
+              "class_size": 1,
+              "copies": [
+                "02_1"
+              ],
+              "degree": 2,
+              "vertex": 2
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:03_0",
+              "class_size": 1,
+              "copies": [
+                "03_0"
+              ],
+              "degree": 2,
+              "vertex": 3
+            },
+            {
+              "bound_holds": true,
+              "class": "singleton:3:13_0",
+              "class_size": 1,
+              "copies": [
+                "13_0"
+              ],
+              "degree": 2,
+              "vertex": 3
+            }
+          ]
+        },
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "specified_cut_after": {
+        "class": "A",
+        "class_cut_copies": [
+          "01_0",
+          "03_0"
+        ],
+        "class_cut_size": 2,
+        "cut_copies": [
+          "01_0",
+          "03_0"
+        ],
+        "cut_size": 2,
+        "inequality_holds": false,
+        "shore": [
+          0,
+          2
+        ],
+        "slack": -2,
+        "twice_class_cut_size": 4,
+        "vertex": 0
+      },
+      "specified_cut_before": {
+        "class": "A",
+        "class_cut_copies": [
+          "01_0",
+          "03_0"
+        ],
+        "class_cut_size": 2,
+        "cut_copies": [
+          "01_0",
+          "01_1",
+          "03_0",
+          "03_1",
+          "12_0",
+          "23_0"
+        ],
+        "cut_size": 6,
+        "inequality_holds": true,
+        "shore": [
+          0,
+          2
+        ],
+        "slack": 2,
+        "twice_class_cut_size": 4,
+        "vertex": 0
+      },
+      "specified_cut_deleted": {
+        "class": "A",
+        "class_cut_copies": [],
+        "class_cut_size": 0,
+        "cut_copies": [
+          "01_1",
+          "03_1",
+          "12_0",
+          "23_0"
+        ],
+        "cut_size": 4,
+        "inequality_holds": true,
+        "shore": [
+          0,
+          2
+        ],
+        "slack": 4,
+        "twice_class_cut_size": 0,
+        "vertex": 0
+      }
+    }
+  },
+  "lean_builds_performed": 0,
+  "numbered_assertions_closed": 0,
+  "status": "all expected diagnostic outcomes observed"
+}

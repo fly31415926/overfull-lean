@@ -1,0 +1,70 @@
+✖ [3123/3124] Building Overfull.CompatibleCircuits.FourAdmissibleClassification (4.2s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/CompatibleCircuits/FourAdmissibleClassification.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourAdmissibleClassification.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourAdmissibleClassification.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourAdmissibleClassification.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourAdmissibleClassification.setup.json --json
+error: Overfull/CompatibleCircuits/FourAdmissibleClassification.lean:71:13: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a ≥ 0
+  a + b ≤ 4
+  a + b + c ≤ 3
+where
+ a := ↑(#(bundle Q C ⟨4, ⋯⟩))
+ b := ↑(#(bundle Q C ⟨5, ⋯⟩))
+ c := ↑(#(bundle Q C 2))
+error: Overfull/CompatibleCircuits/FourAdmissibleClassification.lean:73:45: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a ≥ 0
+  a + b ≤ 4
+where
+ a := ↑(#(bundle Q C ⟨4, ⋯⟩))
+ b := ↑(#(bundle Q C ⟨5, ⋯⟩))
+ c := ↑(#(bundle Q C 2))
+ d := ↑(#(bundle Q C ⟨2, ⋯⟩))
+error: Overfull/CompatibleCircuits/FourAdmissibleClassification.lean:73:45: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  a ≥ 0
+  a ≥ 0
+  a + b ≤ 4
+where
+ a := ↑(#(bundle Q C ⟨4, ⋯⟩))
+ b := ↑(#(bundle Q C ⟨5, ⋯⟩))
+ c := ↑(#(bundle Q C 2))
+ d := ↑(#(bundle Q C ⟨3, ⋯⟩))
+error: Overfull/CompatibleCircuits/FourAdmissibleClassification.lean:73:45: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a ≥ 0
+  a - c ≥ 1
+  a + b ≤ 4
+where
+ a := ↑(#(bundle Q C ⟨4, ⋯⟩))
+ b := ↑(#(bundle Q C ⟨5, ⋯⟩))
+ c := ↑(#(bundle Q C ⟨4, ⋯⟩))
+error: Overfull/CompatibleCircuits/FourAdmissibleClassification.lean:73:45: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  b - c ≥ 1
+  a ≥ 0
+  a ≥ 0
+  a + b ≤ 4
+where
+ a := ↑(#(bundle Q C ⟨4, ⋯⟩))
+ b := ↑(#(bundle Q C ⟨5, ⋯⟩))
+ c := ↑(#(bundle Q C ⟨5, ⋯⟩))
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourAdmissibleClassification
+error: build failed

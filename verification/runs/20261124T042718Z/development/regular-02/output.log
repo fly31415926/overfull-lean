@@ -1,0 +1,185 @@
+✖ [3587/3587] Building Overfull.ThreeCoreReduction.Regular (5.5s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/5793769ed3f4/overfull-lean/Overfull/ThreeCoreReduction/Regular.lean -o /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/ThreeCoreReduction/Regular.olean -i /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/lib/lean/Overfull/ThreeCoreReduction/Regular.ilean -c /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/ThreeCoreReduction/Regular.c --setup /workspace/scratch/5793769ed3f4/overfull-lean/.lake/build/ir/Overfull/ThreeCoreReduction/Regular.setup.json --json
+error: Overfull/ThreeCoreReduction/Regular.lean:97:89: unsolved goals
+case h.e'_3.e_f
+α ν τ : ℝ
+hα : 0 < α
+hα1 : α ≤ 1
+hν : 0 < ν
+hντ : ν ≤ τ
+hτ : τ ≤ α / 256000
+hτpos : 0 < τ
+νF : ℝ
+hνF : 0 < νF
+hνFτ : νF ≤ τ / 2
+hforeign :
+  ∀ (η : ℝ),
+    0 < η →
+      ∃ ε,
+        0 < ε ∧
+          ∃ n₀,
+            ∀ (V : Type u) (I : Type) [inst : Fintype V] [inst_1 : Fintype I] [Nonempty I] (G : SimpleGraph V)
+              (U : I → Finset V) (H : (i : I) → SimpleGraph { x // x ∈ U i }) (Z : Finset V) (k : ℕ) (a : ℝ),
+              n₀ ≤ Fintype.card V →
+                Fintype.card I ≤ 4 →
+                  (∀ (v : V), G.degree v = k) →
+                    α * ↑(Fintype.card V) ≤ ↑k →
+                      (∀ (X : Finset V), ¬IsOverfull G k X) →
+                        (Pairwise fun i l => Disjoint (U i) (U l)) →
+                          (∀ (i : I), Disjoint (U i) Z) →
+                            (∀ (v : V), v ∈ Z ∨ ∃ i, v ∈ U i) →
+                              (∀ (i : I), α * ↑(Fintype.card V) ≤ ↑(#(U i))) →
+                                (∀ (i : I), H i ≤ induce (↑(U i)) G) →
+                                  (∀ (i : I) (x : { x // x ∈ U i }), ↑k - a ≤ ↑((H i).degree x)) →
+                                    (∀ (i : I), IsRobustExpander (H i) ν τ) →
+                                      0 ≤ a →
+                                        a + ↑(#Z) + 1 ≤ ε * ↑(Fintype.card V) →
+                                          ∃ R,
+                                            a + 3 + ↑(#R.Z) + 1 ≤ η * ↑R.h ∧
+                                              ∀ (i : I), α / 2 * ↑(Fintype.card V) ≤ ↑(#(R.U i))
+c : ℝ := ↑(256 * (classLoss + 6 + markedLimit))
+νA : ℝ
+hνA : 0 < νA
+habsorb :
+  ∀ (f : ℕ → ℝ),
+    (∀ (t : ℕ), 0 < f t) →
+      ∃ T ε,
+        0 < ε ∧
+          ∃ n₀,
+            ∀ (V : Type u) (I : Type) [inst : Fintype V] [inst_1 : Fintype I] (G : SimpleGraph V) (U : I → Finset V)
+              (H : (i : I) → SimpleGraph { x // x ∈ U i }) (Z : Finset V) (assignment : V → I) (h : ℕ) (a : ℝ),
+              n₀ ≤ Fintype.card V →
+                Fintype.card I ≤ 4 →
+                  (∀ (x : V), G.degree x = h) →
+                    α / 256 * ↑(Fintype.card V) ≤ ↑h →
+                      (∀ (X : Finset V), ¬IsOverfull G h X) →
+                        (Pairwise fun i j => Disjoint (U i) (U j)) →
+                          (∀ (i : I), Disjoint (U i) Z) →
+                            (∀ (x : V), x ∈ Z ∨ ∃ i, x ∈ U i) →
+                              (∀ (i : I), α / 256 * ↑(Fintype.card V) ≤ ↑(#(U i))) →
+                                (∀ (i : I), H i ≤ induce (↑(U i)) G) →
+                                  (∀ (i : I) (x : { x // x ∈ U i }), ↑h - a ≤ ↑((H i).degree x)) →
+                                    (∀ (i : I), IsRobustExpander (H i) νF (τ / 2)) →
+                                      0 ≤ a →
+                                        a + ↑(#Z) + 1 ≤ ε * ↑(Fintype.card V) →
+                                          ∑ z ∈ Z, ↑(#(originalForeignNeighbors G U assignment z)) ≤ c * ↑h →
+                                            Nonempty (AbsorptionResult G U Z h T f νA (2 * (τ / 2)))
+β : ℝ := α / 1024
+hβ : 0 < β
+hβ1 : β ≤ 1
+hτβ : τ ≤ β / 8
+εB : ℕ → ℝ
+hεB : ∀ (t : ℕ), 0 < εB t
+nB : ℕ → ℕ
+hnB : ∀ (t : ℕ), 0 < nB t
+hbounded :
+  ∀ (t : ℕ) (V : Type u) [inst : Fintype V] (G : SimpleGraph V) (U : Fin 3 → Finset V)
+    (H : (i : Fin 3) → SimpleGraph { x // x ∈ U i }) (Z : Finset V) (k : ℕ) (a : ℝ),
+    nB t ≤ Fintype.card V →
+      Even (Fintype.card V) →
+        (∀ (v : V), G.degree v = k) →
+          β * ↑(Fintype.card V) ≤ ↑k →
+            (∀ (X : Finset V), ¬IsOverfull G k X) →
+              (Pairwise fun i j => Disjoint (U i) (U j)) →
+                (∀ (i : Fin 3), Disjoint (U i) Z) →
+                  (∀ (v : V), v ∈ Z ∨ ∃ i, v ∈ U i) →
+                    #Z ≤ t →
+                      (∀ (i : Fin 3), β * ↑(Fintype.card V) ≤ ↑(#(U i))) →
+                        (∀ (i : Fin 3), H i ≤ induce (↑(U i)) G) →
+                          (∀ (i : Fin 3), IsRobustExpander (H i) νA τ) →
+                            (∀ (i : Fin 3) (v : { x // x ∈ U i }), ↑k - a ≤ ↑((H i).degree v)) →
+                              0 ≤ a →
+                                a ≤ εB t * ↑(Fintype.card V) → Nonempty ((Multigraph.ofSimpleGraph G).EdgeColoring k)
+f : ℕ → ℝ := fun t => min (1 / 4) (εB t / 2)
+hf : ∀ (t : ℕ), 0 < f t
+T : ℕ
+εA : ℝ
+hεA : 0 < εA
+nA : ℕ
+hconstructA :
+  ∀ (V : Type u) (I : Type) [inst : Fintype V] [inst_1 : Fintype I] (G : SimpleGraph V) (U : I → Finset V)
+    (H : (i : I) → SimpleGraph { x // x ∈ U i }) (Z : Finset V) (assignment : V → I) (h : ℕ) (a : ℝ),
+    nA ≤ Fintype.card V →
+      Fintype.card I ≤ 4 →
+        (∀ (x : V), G.degree x = h) →
+          α / 256 * ↑(Fintype.card V) ≤ ↑h →
+            (∀ (X : Finset V), ¬IsOverfull G h X) →
+              (Pairwise fun i j => Disjoint (U i) (U j)) →
+                (∀ (i : I), Disjoint (U i) Z) →
+                  (∀ (x : V), x ∈ Z ∨ ∃ i, x ∈ U i) →
+                    (∀ (i : I), α / 256 * ↑(Fintype.card V) ≤ ↑(#(U i))) →
+                      (∀ (i : I), H i ≤ induce (↑(U i)) G) →
+                        (∀ (i : I) (x : { x // x ∈ U i }), ↑h - a ≤ ↑((H i).degree x)) →
+                          (∀ (i : I), IsRobustExpander (H i) νF (τ / 2)) →
+                            0 ≤ a →
+                              a + ↑(#Z) + 1 ≤ εA * ↑(Fintype.card V) →
+                                ∑ z ∈ Z, ↑(#(originalForeignNeighbors G U assignment z)) ≤ c * ↑h →
+                                  Nonempty (AbsorptionResult G U Z h T f νA (2 * (τ / 2)))
+ε : ℝ
+hε : 0 < ε
+nF : ℕ
+hconstructF :
+  ∀ (V : Type u) (I : Type) [inst : Fintype V] [inst_1 : Fintype I] [Nonempty I] (G : SimpleGraph V) (U : I → Finset V)
+    (H : (i : I) → SimpleGraph { x // x ∈ U i }) (Z : Finset V) (k : ℕ) (a : ℝ),
+    nF ≤ Fintype.card V →
+      Fintype.card I ≤ 4 →
+        (∀ (v : V), G.degree v = k) →
+          α * ↑(Fintype.card V) ≤ ↑k →
+            (∀ (X : Finset V), ¬IsOverfull G k X) →
+              (Pairwise fun i l => Disjoint (U i) (U l)) →
+                (∀ (i : I), Disjoint (U i) Z) →
+                  (∀ (v : V), v ∈ Z ∨ ∃ i, v ∈ U i) →
+                    (∀ (i : I), α * ↑(Fintype.card V) ≤ ↑(#(U i))) →
+                      (∀ (i : I), H i ≤ induce (↑(U i)) G) →
+                        (∀ (i : I) (x : { x // x ∈ U i }), ↑k - a ≤ ↑((H i).degree x)) →
+                          (∀ (i : I), IsRobustExpander (H i) ν τ) →
+                            0 ≤ a →
+                              a + ↑(#Z) + 1 ≤ ε * ↑(Fintype.card V) →
+                                ∃ R,
+                                  a + 3 + ↑(#R.Z) + 1 ≤ εA / 2 * ↑R.h ∧
+                                    ∀ (i : I), α / 2 * ↑(Fintype.card V) ≤ ↑(#(R.U i))
+n₀ : ℕ := max 1 (max nF (max nA ((range (T + 1)).sup nB)))
+hn₀ : 0 < n₀
+V : Type u
+inst✝ : Fintype V
+G : SimpleGraph V
+U : Fin 3 → Finset V
+H : (i : Fin 3) → SimpleGraph { x // x ∈ U i }
+Z : Finset V
+k : ℕ
+a : ℝ
+hn : n₀ ≤ Fintype.card V
+heven : Even (Fintype.card V)
+hregular : ∀ (v : V), G.degree v = k
+hdensity : α * ↑(Fintype.card V) ≤ ↑k
+hno : ∀ (X : Finset V), ¬IsOverfull G k X
+hdisjoint : Pairwise fun i j => Disjoint (U i) (U j)
+hUZ : ∀ (i : Fin 3), Disjoint (U i) Z
+hcover : ∀ (v : V), v ∈ Z ∨ ∃ i, v ∈ U i
+hsize : ∀ (i : Fin 3), α * ↑(Fintype.card V) ≤ ↑(#(U i))
+hembed : ∀ (i : Fin 3), H i ≤ induce (↑(U i)) G
+hrobust : ∀ (i : Fin 3), IsRobustExpander (H i) ν τ
+hdegree : ∀ (i : Fin 3) (v : { x // x ∈ U i }), ↑k - a ≤ ↑((H i).degree v)
+ha : 0 ≤ a
+herror : a + ↑(#Z) + 1 ≤ ε * ↑(Fintype.card V)
+hnF : nF ≤ Fintype.card V
+hnA : nA ≤ Fintype.card V
+hnSup : (range (T + 1)).sup nB ≤ Fintype.card V
+hnpos : 0 < Fintype.card V
+v₀ : V
+F : ForeignProcess.ReductionResult G U Z k a νF (τ / 2)
+hFbudget : a + 3 + ↑(#F.Z) + 1 ≤ εA / 2 * ↑F.h
+hFsize : ∀ (i : Fin 3), α / 2 * ↑(Fintype.card V) ≤ ↑(#(F.U i))
+hFdensity : α / 256 * ↑(Fintype.card V) ≤ ↑F.h
+hFsizeA : ∀ (i : Fin 3), α / 256 * ↑(Fintype.card V) ≤ ↑(#(F.U i))
+hFn : ↑F.h ≤ ↑(Fintype.card V)
+hFbudgetA : a + 3 + ↑(#F.Z) + 1 ≤ εA * ↑(Fintype.card V)
+hh :
+  ↑(∑ v ∈ F.Z, #({w ∈ F.G.neighborFinset v | ∃ i, w ∈ F.U i ∧ i ≠ F.assign v})) ≤
+    ↑(256 * (classLoss + 6 + markedLimit) * F.h)
+⊢ (fun x => ↑(#({w ∈ F.G.neighborFinset x | ∃ i, w ∈ F.U i ∧ i ≠ F.assign x}))) = fun x =>
+    ↑(#({w ∈ F.G.neighborFinset x | ∃ i, w ∈ F.U i ∧ i ≠ F.assign x}))
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.ThreeCoreReduction.Regular
+error: build failed
