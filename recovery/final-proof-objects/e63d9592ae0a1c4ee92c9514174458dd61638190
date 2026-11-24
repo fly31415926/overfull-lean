@@ -1,0 +1,84 @@
+Starting complete verifier full-01, 855 fully snapshotted inputs
+{
+  "command": [
+    "python3",
+    "scripts/verify.py"
+  ],
+  "cwd": "/workspace/scratch/05b9e46fe96b/overfull-lean",
+  "attempt": "full-01",
+  "started_at_utc": "2026-11-24T21:56:44.304167+00:00",
+  "baseline_commit": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+  "baseline_tree": "087e26b5f004af1f9423a6f2b137d805f5991f1a",
+  "frozen_input_count": 855,
+  "control_sha256": {
+    "authorization.md": "b79441210af64c0c90e365d2afeaca4e7d525d46e9a742a8e7ad18331f990c56",
+    "baseline-remote-refs.json": "a13a3b2b0c2bc4347e9d0c030374c6f433b0a770f85ef7ec59bece50168ad4f9",
+    "check-preservation.py": "632bfbf6afb9b6017ba970831b583f8c94b8266fe282cabaf22209e6dcdfe428",
+    "development-index.json": "7056a573a21ea53fc93f8a2ca5f00291e8091b378b74903ca3e1089f2f3f4376",
+    "environment-cache-retry.py": "f27d060e95c4682abcea14258d150b04331fc09f5c479eb07f137aa9cd895388",
+    "environment-dependencies.json": "bcd78c6d6ae6ad09f47da807601aad9937d55a8311e5d60a1f7e1f69101a52e4",
+    "environment-setup.py": "0da564b3d8c547b34ade3ad7574d071468fabd1fd362b9ff8f9413e6596aa1b7",
+    "environment.json": "62d5370e6fdfc5c915a19c5419fad26a09996ade1d1f22a3a0bff2f5e81ddda4",
+    "independent-grouping-even-review.md": "676f4fa5dcb64e2c4cecc3d21b4d14d7b35887de9d4268f1a5974bd6d34baa78",
+    "independent-root-wrappers-review.md": "0849230de320b79c0de3f55b888c58392e57167e8cb12c7f4d663f0ab3b9ed97",
+    "independent-two-odd-review.md": "23b45ae23a931327427906c629b49b9a2089659e6b6e1d0e669050eebdef6730",
+    "independent-verification-review.md": "467b430f69dfa725b7648f8dffc72b9836df6a38543bd5fb76b2dddd0a6e2b38",
+    "index-development.py": "be59bf8ca4b5d795569c3133b60526e88ede9a9e425d946a0712d1e57f9a95ce",
+    "record-command.py": "4cd306acc3af48c380a773914403eca58c53acd93f30731721b7f9bd1c65924d",
+    "recovered-evidence-index.json": "c8fe6dc951e970a3ba87895cd9e9403d50b5a60865525b6ef27ebacdf58e740c",
+    "recovered-verifier-provenance.json": "ad6116d5edcc9c9b5f798898bcd7bdd30166640437d809a365daa0ee6dbb448b",
+    "recovery-provenance.json": "776baaaba0aeae68bbc2a6eb5e016ee4e6b019771e7530304a3c5e53987b92a0",
+    "root-added-imports.json": "0bb8e6b7f6bc47aa35de26f96448e3ebb6408aa633d1c1f542f9f3d08907eec8",
+    "run-verifier.py": "4ad343e1811b2e02dc274d6ed04596d3d625347a7dcad980dd0ad1d96dbd658e",
+    "source-statement-recovery.json": "d5c520c3a0ff186530831fc33d68ed3a83918016156f9f4121dec7dcf2dcccea",
+    "update-coverage.py": "fd4a482fccb6686755cf43c77581d942e7219ae41be476edc9d36b31d739d4c2",
+    "verification-scope.json": "f581c55acda3fe9ef8aeb665635f28b38bb7829ecd93deb5b65487df05bd4ad6",
+    "verifier-additions.json": "e7e72528642a6e3598a576f30b097ee8301c4c5777daf093ce1494e341576a28",
+    "verifier-registration.patch": "972d8e23574fad4aeb233cd35e44298549f25dbc10b8abc2cf26765487262c60"
+  },
+  "verifier_launched": true,
+  "preflight_passed": true,
+  "status": "passed",
+  "exit_code": 0,
+  "verifier_started_at_utc": "2026-11-24T21:56:44.583962+00:00",
+  "finished_at_utc": "2026-11-24T22:17:04.702791+00:00",
+  "elapsed_seconds": 1220.3986375660006,
+  "inputs_unchanged": true,
+  "controls_unchanged": true,
+  "changed_inputs": [],
+  "changed_controls": [],
+  "missing_principal_outputs": [],
+  "wrapper_errors": [],
+  "output_sha256": "e126a529c3a9a1c0113987abacb529bac13144db98f2082e054d816946789b6c",
+  "wrapper_exit_code": 0
+}
+eReserve.WeightedSafety","name":"Overfull.NativeReserve.familyMultiplicity_pos"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.MultigraphFanApplications","name":"Overfull.Multigraph.bounded_core_move_nat._proof_1_3"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.NativeStar.StarExtension","name":"Overfull.NativeStar.starExtended_cut_eq"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.Absorption.ForcingProcess","name":"Overfull.Absorption.ForcingSetup.core_degree"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.Patterns.Result","name":"Overfull.Patterns.FrequentPatternResult.degree_positive"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.FourCoreReduction.Frequent","name":"Overfull.coloring_from_covering_matchings._simp_1_2"}
+VERIFIED_DECLARATION {"axioms":["propext"],"module":"Overfull.BipartiteFactorization.AbsorberParameters","name":"Overfull.BipartiteFactorization.AbsorberParameters.Valid.systems_upper"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.AuxiliaryCompletion.BalancedIncidence","name":"Overfull.AuxiliaryCompletion.exists_balanced_incidences._proof_1_1"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.MatchingRepairLoad","name":"Overfull.MatchingRepairLoad.internalLoad_update_insert_le_capacity._proof_1_1"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.OrdinaryMatchingCompletion","name":"Overfull.OrdinaryMatchingCompletion.liftMatching_adj"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.FourOdd.PairPools","name":"_private.Overfull.FourOdd.PairPools.0.Overfull.FourOdd.image_subtype_compl"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.RandomReserveDegrees","name":"Overfull.RandomReserve.incidentCrossingEdges_card"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.BipartiteFactorization.BlockScoreMean","name":"Overfull.BipartiteFactorization.BlockScoreMean.exists_block_large_score"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.ExceptionalPalette.PairFree","name":"Overfull.NativeReserve.JoiningPalette.mem_freeColors._simp_1"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.TwoApexFactorization.Shores","name":"Overfull.TwoApexFactorization.shores_union"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Vizing.Path.Extend","name":"Path.extendPath._proof_8"}
+VERIFIED_DECLARATION {"axioms":["propext"],"module":"Overfull.Probability.SwapVariance","name":"Overfull.SwapVariance.weighted_slice_variance._simp_1_12"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.BipartiteFactorization.Capacity","name":"Overfull.BipartiteFactorization.CorrectionCapacity.exists_correction_subset"}
+VERIFIED_DECLARATION {"axioms":["Quot.sound","propext","Classical.choice"],"module":"Overfull.BipartiteFactorization.ReservedCore","name":"Overfull.BipartiteFactorization.ReservedCore.remainingHost_degree_core._proof_1_1"}
+VERIFIED_DECLARATION {"axioms":["propext"],"module":"Overfull.NativeStar.CommonPalette","name":"Overfull.NativeStar.mem_commonBundleColors._simp_1_2"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.Terminal.SimpleBridge","name":"Overfull.Terminal.residualEdgeEmbedding_secondEnd"}
+VERIFIED_DECLARATION {"axioms":["Quot.sound","propext","Classical.choice"],"module":"Overfull.AssignedParts.SignaturePools","name":"Overfull.AssignedParts.uses_exceptionCorePool_of_witness"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.Dense.BalanceRepair.Graph","name":"Overfull.Dense.BalanceRepair.arcOut_W"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.NativeReserve.CutSafety","name":"Overfull.NativeReserve.no_overfull_of_whole_cut_bounds._proof_1_1"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.RobustPartition.Counting","name":"Overfull.RobustPartition.cut_union_le_bad._simp_1_2"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.CompatibleCircuits.SmallKernelData","name":"_private.Overfull.CompatibleCircuits.SmallKernelData.0.Overfull.CompatibleCircuits.SmallKernel.witness_valid_vector._proof_264"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Vizing.EdgeColoring.Defs","name":"EdgeColoring.instDecidableEqEdgeColoring.decEq._proof_12"}
+OVERFULL_AXIOM_AUDIT_OK 14820
+Checked 14820 project declarations; full manuscript status: unverified.
+

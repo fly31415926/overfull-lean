@@ -1,0 +1,72 @@
+{
+  "baseline_commit": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+  "baseline_tree": "087e26b5f004af1f9423a6f2b137d805f5991f1a",
+  "previous_audited_declarations": 14627,
+  "previous_completed_result_mappings": 2777,
+  "previous_frozen_inputs": 826,
+  "coverage": {
+    "numbered_assertions": 69,
+    "previous_complete": 49,
+    "current_complete": 51,
+    "promoted_assertions": [
+      "4.16",
+      "4.17"
+    ],
+    "all_69_statement_identities_identical": true,
+    "all_unpromoted_records_identical": true,
+    "main_theorem_verified": false
+  },
+  "all_previous_mathematical_sources_and_audit_unchanged": true,
+  "verifier_changes_exactly_recorded": {
+    "exact_recorded_edit_count": 7,
+    "stock_kernel_audit_byte_identical": true
+  },
+  "new_module_count": 25,
+  "development_evidence": {
+    "attempt_count": 23,
+    "file_count": 579,
+    "status_counts": {
+      "passed": 8,
+      "failed": 13,
+      "interrupted": 2
+    },
+    "attempts_with_recorded_input_changes": [
+      "environment-cache-01",
+      "environment-cache-02",
+      "four-even-full-02",
+      "root-parity-transport-01",
+      "twoodd-full-02",
+      "twoodd-full-03"
+    ],
+    "attempts_with_unknown_input_change_status": [
+      "four-grouping-even-01",
+      "twoodd-cuts-01"
+    ],
+    "exact_inventory_hashes_and_sizes_preserved": true,
+    "interrupted_attempts_with_documented_recorder_identity_metadata_race": [
+      "four-grouping-even-01",
+      "twoodd-cuts-01"
+    ]
+  },
+  "recovered_evidence": {
+    "file_count": 38,
+    "exact_blob_count": 11,
+    "all_recovered_evidence_unchanged": true,
+    "historical_partial_evidence_does_not_substitute_for_new_full_run": true
+  },
+  "statement_evidence": {
+    "numbered_blocks": [
+      "4.13",
+      "4.16",
+      "4.17"
+    ],
+    "standing_notation_preserved": true,
+    "exact_pinned_numbered_block_hashes": {
+      "4.13": "557d62e4c4ab7c00ac7cc29fa403d80601a2b9851e7c7eb62cdeb4caa1d40c3b",
+      "4.16": "1ba102e379594ab72de4ba73cf41c88d9fbdadf1c132e2943b48da04e8c2cc1c",
+      "4.17": "b271893680e87b1c06c35172a138050dbf84009964eb618dce53c53ba595e322"
+    },
+    "normalizations_explicit_and_checked": true,
+    "whole_manuscript_identity_claimed": false
+  }
+}

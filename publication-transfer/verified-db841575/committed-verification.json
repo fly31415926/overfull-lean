@@ -1,0 +1,56 @@
+{
+  "terminal": {
+    "path": "verification/runs/20261124T213000Z/full-01/terminal.json",
+    "git_blob_sha1": "f3945e0d0f9ccf714c293f61e51e569245b83d9e",
+    "sha256": "a37d7c63a9c63d45a5dff5e149f7af506074ef3f29a8c30a5b3a36494055de35",
+    "bytes": 8043
+  },
+  "preservation": {
+    "path": "verification/runs/20261124T213000Z/preservation.json",
+    "git_blob_sha1": "91f095322661d3fa92f9aaed5381de8d485afe3b",
+    "sha256": "063ca29f4c71a5cd983d6f2c83b03c8597240f198ef82b771dbb83f35d9f387c",
+    "bytes": 3174
+  },
+  "results": {
+    "path": "verification/results.json",
+    "git_blob_sha1": "05dcb9fa57b9acddcbfcb76f516926cf12386dcb",
+    "sha256": "ea9bffe564b96ff00ce33caf29c3d097a33fea3f826a995597738cb3cbd67237",
+    "bytes": 3779925
+  },
+  "full_output_log": {
+    "path": "verification/runs/20261124T213000Z/full-01/output.log",
+    "git_blob_sha1": "6e5d234cff70e63d80565213b44bb40a83bfe505",
+    "sha256": "e126a529c3a9a1c0113987abacb529bac13144db98f2082e054d816946789b6c",
+    "bytes": 2765009
+  },
+  "frozen_inputs": {
+    "path": "verification/runs/20261124T213000Z/full-01/frozen-inputs.json",
+    "git_blob_sha1": "4522f9b1049906dc4199525d22ad3e78b4ae351d",
+    "sha256": "4a78932a2ce275f7ee5fca0e7375ee8ff3e334cbc1a18ee5fb3d192d6d5aaef2",
+    "bytes": 97014
+  },
+  "frozen_controls": {
+    "path": "verification/runs/20261124T213000Z/full-01/frozen-controls.json",
+    "git_blob_sha1": "3aaeea68ff5e830bc83c3ca530292eb06569ae68",
+    "sha256": "68380fbe471ff36c60d6c8cb4e1aab787bb88c5507bdded7d132c8b687c2f096",
+    "bytes": 2370
+  },
+  "counts": {
+    "tracked_files": 14692,
+    "frozen_inputs": 855,
+    "frozen_controls": 24,
+    "recorded_verifier_outputs": 26,
+    "audited_declarations": 14820,
+    "new_audited_declarations": 193,
+    "completed_result_mappings": 2840,
+    "public_theorem_count": 63,
+    "complete_numbered_assertions": 51,
+    "numbered_assertions": 69,
+    "main_theorem_verified": false
+  },
+  "full_verifier_exit_code": 0,
+  "full_wrapper_exit_code": 0,
+  "all_committed_frozen_inputs_controls_outputs_checked": true,
+  "all_commit_evidence_blob_ids_checked": true,
+  "source": "Exact committed Git objects"
+}

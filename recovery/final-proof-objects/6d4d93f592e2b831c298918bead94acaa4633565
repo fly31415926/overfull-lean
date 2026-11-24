@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "kind": "sha_only_github_tree_request_preparation",
+  "prepared_at_utc": "2026-11-24T22:05:05.617781+00:00",
+  "repository": "/workspace/scratch/05b9e46fe96b/overfull-lean",
+  "repository_full_name": "fly31415926/overfull-lean",
+  "base": {
+    "object_sha": "fdd71cf947f7ab8a72c38b438ffc49c044d55829",
+    "object_type": "commit",
+    "commit_sha": "fdd71cf947f7ab8a72c38b438ffc49c044d55829",
+    "tree_sha": "74c945e7549b0fc99bda7561d8adef0a429dfc4d"
+  },
+  "target": {
+    "object_sha": "1008c182a29dd6a86c1672236845ab357c2ceb7c",
+    "object_type": "commit",
+    "commit_sha": "1008c182a29dd6a86c1672236845ab357c2ceb7c",
+    "tree_sha": "fec02f947b26a5abed7a78bfd9cd242ce681081b"
+  },
+  "known_public_commit": {
+    "object_sha": "1008c182a29dd6a86c1672236845ab357c2ceb7c",
+    "object_type": "commit",
+    "commit_sha": "1008c182a29dd6a86c1672236845ab357c2ceb7c",
+    "tree_sha": "fec02f947b26a5abed7a78bfd9cd242ce681081b"
+  },
+  "publication_basis": "Caller-supplied already-fetched public commit and public base; this helper performs no remote check or request",
+  "connector_tool": "mcp__codex_apps__github_create_tree",
+  "limits": {
+    "entries_per_request": 100,
+    "json_bytes_per_request": 50000
+  },
+  "base_leaf_entry_count": 12988,
+  "target_leaf_entry_count": 12989,
+  "removed_path_count": 0,
+  "upserted_path_count": 1,
+  "changed_path_count": 1,
+  "changed_paths": [
+    "7a58ba65f8896c10c3761de961cfb303e6340e88"
+  ],
+  "target_unique_blob_count": 3001,
+  "all_target_blobs_in_known_public_or_base_tree": true,
+  "target_blobs_absent_from_base_but_in_known_public_tree": 1,
+  "workflow_changes": [],
+  "all_entry_modes_preserved": true,
+  "request_count": 1,
+  "batches": [
+    {
+      "batch": 1,
+      "phase": "upsert",
+      "base_tree_sha": "74c945e7549b0fc99bda7561d8adef0a429dfc4d",
+      "expected_tree_sha": "fec02f947b26a5abed7a78bfd9cd242ce681081b",
+      "entry_count": 1,
+      "request": {
+        "path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-1008/tree-0001.request.json",
+        "bytes": 319,
+        "sha256": "73da96fcfe465224afc5bc8ea3d7e4c1ce0c1c842524af33103b50d15da2ecdf"
+      },
+      "result_leaf_entry_count": 12989,
+      "independent_tree_encoding_matches_git_write_tree": true,
+      "private_index_sha256": "6c200ef0251f61b7351839ffbd1e40dda1d4737674b2ec54d11f7a124347e556",
+      "submission_rule": "Submit only after prior result matches its expected tree; require this result tree to equal expected_tree_sha",
+      "expected_receipt": {
+        "path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-1008/tree-0001.expected.json",
+        "bytes": 747,
+        "sha256": "57a22a6e2713420dc8849bc04cdb02ce23adb19802eb068ff1ec2866580d43d2"
+      }
+    }
+  ],
+  "final_expected_tree_sha": "fec02f947b26a5abed7a78bfd9cd242ce681081b",
+  "final_expected_tree_equals_exact_target": true,
+  "all_intermediate_trees_independently_encoded_and_native_checked": true,
+  "root_head_index_refs_unchanged": true,
+  "root_git_state": {
+    "head_commit": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+    "head_file_sha256": "924e2a0868373a0287368f6c15481b5e7e205c0ce65c17e3908231d6c0168c77",
+    "index_path": "/workspace/scratch/05b9e46fe96b/overfull-lean/.git/index",
+    "index_bytes": 2110302,
+    "index_sha256": "7350f401aab4580868dacc104dd50d00882fc92c018cca1ab0634426e1ea232d",
+    "all_refs_sha256": "b7b726fa0769971f4b4eaae6393055d4be9a7e70fcad88a31cf78ca30fef648d"
+  },
+  "private_index_removed_after_preparation": true,
+  "worktree_files_written": [],
+  "refs_written": [],
+  "remote_calls_performed": false,
+  "local_git_object_note": "git write-tree may add immutable local tree objects; all index changes use the external temporary index",
+  "helper_sha256": "20c57192aeccc5bdd310f43cd320744f5c03764db160d8524e8868dbc2d7a464",
+  "manifests": {
+    "base_tree": {
+      "path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-1008/base-tree.json",
+      "bytes": 2897566,
+      "sha256": "451c589330e01283ec7f3232a5d06377b4a51be51d2cca94609d9adedf1697e4"
+    },
+    "target_tree": {
+      "path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-1008/target-tree.json",
+      "bytes": 2897739,
+      "sha256": "593b56627285d2d5ae6a72fcd407fcfafc4753273f7f0eb5028bcf6ee02e6a87"
+    },
+    "known_public_tree": {
+      "path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-1008/known-public-tree.json",
+      "bytes": 2897739,
+      "sha256": "593b56627285d2d5ae6a72fcd407fcfafc4753273f7f0eb5028bcf6ee02e6a87"
+    },
+    "blob_availability": {
+      "path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-1008/blob-availability.json",
+      "bytes": 420214,
+      "sha256": "fa198d2d739771405eb4d67de1c17b92b462607694f5e164218f482c394475c9"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "genuine_native_archive_command",
+  "argv": [
+    "git",
+    "--no-pager",
+    "-C",
+    "/workspace/scratch/05b9e46fe96b/overfull-lean",
+    "bundle",
+    "verify",
+    "/workspace/scratch/05b9e46fe96b/recovery-20261124/verified-bundle-db841575/verified-db841575ca2c427e230387c1c95fa74bedb463d6.bundle"
+  ],
+  "cwd": "/workspace/scratch/05b9e46fe96b/overfull-lean",
+  "started_at_utc": "2026-11-24T22:22:41.178313+00:00",
+  "status": "passed",
+  "exit_code": 0,
+  "finished_at_utc": "2026-11-24T22:22:41.184633+00:00",
+  "duration_seconds": 0.006321237997326534,
+  "stdout": {
+    "path": "native-bundle-verify/stdout.log",
+    "bytes": 190,
+    "sha256": "837a079973dda8cb974fd41c7d9f331c9611ccf360853d838b50fd9ef0bedd0c"
+  },
+  "stderr": {
+    "path": "native-bundle-verify/stderr.log",
+    "bytes": 140,
+    "sha256": "47db0e02bf8eda16ef0eb1f679fc3a21800e37df0df4eb836b015eb28a1c2c9d"
+  }
+}

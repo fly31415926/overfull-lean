@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "kind": "genuine_immutable_repository_connector_upload_receipts",
+  "completed_at_utc": "2026-11-24T22:13:52.008953+00:00",
+  "repository_full_name": "fly31415926/overfull-lean",
+  "source_tree": "9aaf99be730815a01ac32c6a6089787451d7c9f0",
+  "selected_pre_audit_batches": [
+    3,
+    4
+  ],
+  "selected_blob_count": 63,
+  "uploaded_blob_count": 62,
+  "uploaded_bytes": 1064630,
+  "request_count": 15,
+  "successful_requests": 15,
+  "failed_requests": 0,
+  "retry_count": 0,
+  "temporary_trees_created": 6,
+  "individual_blob_calls": 9,
+  "all_planned_eligible_blobs_uploaded": true,
+  "all_returned_object_shas_exactly_match_expected": true,
+  "all_structured_request_contents_rehashed_against_original_blob_ids": true,
+  "maximum_tree_request_bytes": 49870,
+  "maximum_blob_request_bytes": 92980,
+  "held_for_separate_parent_managed_upload": [
+    {
+      "git_blob_sha1": "b107f2453d40856d4dab92d9a23c651e171ea37e",
+      "bytes": 876117,
+      "sha256": "c145c8046e3a333b773a36691651d6df566265d050dab1b7592fd5bdeb23af41",
+      "local_file": "/workspace/shared/overfull-publication-objects/b107f2453d40856d4dab92d9a23c651e171ea37e"
+    }
+  ],
+  "this_operation_created_commits": false,
+  "this_operation_updated_branch_refs": false,
+  "this_operation_installed_workflows": false,
+  "browser_used": false,
+  "credential_access_performed": false,
+  "evidence_format": "Exact prepared structured connector arguments and complete observed MCP CallToolResult objects; these are not raw HTTP wire responses.",
+  "scope_note": "Successful immutable object creation only. Parent will attach the objects to a recovery commit and establish reachability with native fetch and public readback.",
+  "operations": [
+    {
+      "number": 1,
+      "tool": "mcp__codex_apps__github_create_tree",
+      "returned_sha": "88a4858fc3c0df2c1cdf84ce919eb2f27f15215d",
+      "expected_sha": "88a4858fc3c0df2c1cdf84ce919eb2f27f15215d",
+      "uploaded_blob_count": 8,
+      "request_bytes": 47220,
+      "request_path": "request-0001.json",
+      "response_path": "response-0001.json",
+      "terminal_path": "operation-0001-terminal.json",
+      "status": "passed"
+    },
+    {
+      "number": 2,
+      "tool": "mcp__codex_apps__github_create_tree",
+      "returned_sha": "9c1583406dee60ff4e53518b76627bab4cf8fd4b",
+      "expected_sha": "9c1583406dee60ff4e53518b76627bab4cf8fd4b",
+      "uploaded_blob_count": 7,
+      "request_bytes": 48311,
+      "request_path": "request-0002.json",
+      "response_path": "response-0002.json",
+      "terminal_path": "operation-0002-terminal.json",
+      "status": "passed"
+    },
+    {
+      "number": 3,
+      "tool": "mcp__codex_apps__github_create_tree",
+      "returned_sha": "6fe3a8ee687ca89ef03e641855c1254db1bc0635",
+      "expected_sha": "6fe3a8ee687ca89ef03e641855c1254db1bc0635",
+      "uploaded_blob_count": 8,
+      "request_bytes": 49870,
+      "request_path": "request-0003.json",
+      "response_path": "response-0003.json",
+      "terminal_path": "operation-0003-terminal.json",
+      "status": "passed"
+    },
+    {
+      "number": 4,
+      "tool": "mcp__codex_apps__github_create_tree",
+      "returned_sha": "2f5d9a7706235debb0c4c496b84ad06939f7f24a",
+      "expected_sha": "2f5d9a7706235debb0c4c496b84ad06939f7f24a",
+      "uploaded_blob_count": 3,
+      "request_bytes": 49463,
+      "request_path": "request-0004.json",
+      "response_path": "response-0004.json",
+      "terminal_path": "operation-0004-terminal.json",
+      "status": "passed"
+    },
+    {
+      "number": 5,
+      "tool": "mcp__codex_apps__github_create_tree",
+      "returned_sha": "f78aec325b55849ebf7f9f55db31be48b5668ab5",
+      "expected_sha": "f78aec325b55849ebf7f9f55db31be48b5668ab5",
+      "uploaded_blob_count": 16,
+      "request_bytes": 48142,
+      "request_path": "request-0005.json",
+      "response_path": "response-0005.json",
+      "terminal_path": "operation-0005-terminal.json",
+      "status": "passed"
+    },
+    {
+      "number": 6,
+      "tool": "mcp__codex_apps__github_create_tree",
+      "returned_sha": "d13e03ca52c458e4dfb1fc4ee3c76ead8f985bdd",
+      "expected_sha": "d13e03ca52c458e4dfb1fc4ee3c76ead8f985bdd",
+      "uploaded_blob_count": 11,
+      "request_bytes": 45354,
+      "request_path": "request-0006.json",
+      "response_path": "response-0006.json",
+      "terminal_path": "operation-0006-terminal.json",
+      "status": "passed"
+    },
+    {
+      "number": 7,
+      "tool": "mcp__codex_apps__github_create_blob",
+      "returned_sha": "92cdfe5daec75d1f2a05b887d0e155f0f86be254",
+      "expected_sha": "92cdfe5daec75d1f2a05b887d0e155f0f86be254",
+      "uploaded_blob_count": 1,
+      "request_bytes": 90940,
+      "request_path": "request-0007.json",
+      "response_path": "response-0007.json",
+      "terminal_path": "operation-0007-terminal.json",
+      "status": "passed"
+    },
+    {
+      "number": 8,
+      "tool": "mcp__codex_apps__github_create_blob",
+      "returned_sha": "96de33d950d142efbde4379273e6429600149831",
+      "expected_sha": "96de33d950d142efbde4379273e6429600149831",
+      "uploaded_blob_count": 1,
+      "request_bytes": 86501,
+      "request_path": "request-0008.json",
+      "response_path": "response-0008.json",
+      "terminal_path": "operation-0008-terminal.json",
+      "status": "passed"
+    },
+    {
+      "number": 9,
+      "tool": "mcp__codex_apps__github_create_blob",
+      "returned_sha": "ae3d6794a14847e76337b4274c4ac5b80c9e120e",
+      "expected_sha": "ae3d6794a14847e76337b4274c4ac5b80c9e120e",
+      "uploaded_blob_count": 1,
+      "request_bytes": 92752,
+      "request_path": "request-0009.json",
+      "response_path": "response-0009.json",
+      "terminal_path": "operation-0009-terminal.json",
+      "status": "passed"
+    },
+    {
+      "number": 10,
+      "tool": "mcp__codex_apps__github_create_blob",
+      "returned_sha": "b5b602c38b55f543077080aef8bf52c2128e6c25",
+      "expected_sha": "b5b602c38b55f543077080aef8bf52c2128e6c25",
+      "uploaded_blob_count": 1,
+      "request_bytes": 92794,
+      "request_path": "request-0010.json",
+      "response_path": "response-0010.json",
+      "terminal_path": "operation-0010-terminal.json",
+      "status": "passed"
+    },
+    {
+      "number": 11,
+      "tool": "mcp__codex_apps__github_create_blob",
+      "returned_sha": "ce85698466eadc385f0af055c58d9d840ac5ab28",
+      "expected_sha": "ce85698466eadc385f0af055c58d9d840ac5ab28",
+      "uploaded_blob_count": 1,
+      "request_bytes": 92745,
+      "request_path": "request-0011.json",
+      "response_path": "response-0011.json",
+      "terminal_path": "operation-0011-terminal.json",
+      "status": "passed"
+    },
+    {
+      "number": 12,
+      "tool": "mcp__codex_apps__github_create_blob",
+      "returned_sha": "d6b7002d201aa762323f7fc40108f7f37e176f9c",
+      "expected_sha": "d6b7002d201aa762323f7fc40108f7f37e176f9c",
+      "uploaded_blob_count": 1,
+      "request_bytes": 92980,
+      "request_path": "request-0012.json",
+      "response_path": "response-0012.json",
+      "terminal_path": "operation-0012-terminal.json",
+      "status": "passed"
+    },
+    {
+      "number": 13,
+      "tool": "mcp__codex_apps__github_create_blob",
+      "returned_sha": "ef42763058dc83ae573dcaec74855c4875755758",
+      "expected_sha": "ef42763058dc83ae573dcaec74855c4875755758",
+      "uploaded_blob_count": 1,
+      "request_bytes": 92815,
+      "request_path": "request-0013.json",
+      "response_path": "response-0013.json",
+      "terminal_path": "operation-0013-terminal.json",
+      "status": "passed"
+    },
+    {
+      "number": 14,
+      "tool": "mcp__codex_apps__github_create_blob",
+      "returned_sha": "f2e84b58c82cfdcb9404cbd4f5894592b53d929c",
+      "expected_sha": "f2e84b58c82cfdcb9404cbd4f5894592b53d929c",
+      "uploaded_blob_count": 1,
+      "request_bytes": 92854,
+      "request_path": "request-0014.json",
+      "response_path": "response-0014.json",
+      "terminal_path": "operation-0014-terminal.json",
+      "status": "passed"
+    },
+    {
+      "number": 15,
+      "tool": "mcp__codex_apps__github_create_blob",
+      "returned_sha": "f7d8c57adc558de7cb4e91e4454fa4e56e6b52c9",
+      "expected_sha": "f7d8c57adc558de7cb4e91e4454fa4e56e6b52c9",
+      "uploaded_blob_count": 1,
+      "request_bytes": 92752,
+      "request_path": "request-0015.json",
+      "response_path": "response-0015.json",
+      "terminal_path": "operation-0015-terminal.json",
+      "status": "passed"
+    }
+  ],
+  "uploaded_inventory": {
+    "path": "uploaded-blobs.json",
+    "bytes": 20626,
+    "sha256": "8f151f748f2b45e585e9ef7caf9207bb42579383f606077fdb7b727b9af52bf4"
+  },
+  "evidence_index": {
+    "path": "evidence-index.json",
+    "bytes": 9763,
+    "sha256": "2737704e825000152972f10c02262acb749a4538a305b3fdfdd342fe2d1c48a1"
+  },
+  "plan_sha256": "cfc8a1a7450954c160a5ff2a7a4067dc6ea76f1844196cfb8871fec52103e685"
+}

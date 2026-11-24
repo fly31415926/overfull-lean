@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "kind": "genuine_compact_tree_helper_validation_receipts",
+  "helper_path": "verification/runs/20261124T213000Z/publication/prepare-tree-requests.py",
+  "helper_sha256": "20c57192aeccc5bdd310f43cd320744f5c03764db160d8524e8868dbc2d7a464",
+  "copied_genuine_receipts": [
+    {
+      "source_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-1008/manifest.json",
+      "bytes": 4902,
+      "sha256": "a03fac3d44ca4772a317a11be11af449c156a7a0b90ce0ad5eb39670db73d32f",
+      "publication_path": "verification/runs/20261124T213000Z/publication/tree-request-helper-validation/commit-addition/manifest.json"
+    },
+    {
+      "source_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-1008/tree-0001.expected.json",
+      "bytes": 747,
+      "sha256": "57a22a6e2713420dc8849bc04cdb02ce23adb19802eb068ff1ec2866580d43d2",
+      "publication_path": "verification/runs/20261124T213000Z/publication/tree-request-helper-validation/commit-addition/tree-0001.expected.json"
+    },
+    {
+      "source_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-1008/tree-0001.request.json",
+      "bytes": 319,
+      "sha256": "73da96fcfe465224afc5bc8ea3d7e4c1ce0c1c842524af33103b50d15da2ecdf",
+      "publication_path": "verification/runs/20261124T213000Z/publication/tree-request-helper-validation/commit-addition/tree-0001.request.json"
+    },
+    {
+      "source_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-removal/manifest.json",
+      "bytes": 4792,
+      "sha256": "4e89bbdeecdf2dccbbb1af29ff0ac6fe526414421a19d0cd5c5a5d577314d117",
+      "publication_path": "verification/runs/20261124T213000Z/publication/tree-request-helper-validation/tree-removal/manifest.json"
+    },
+    {
+      "source_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-removal/tree-0001.expected.json",
+      "bytes": 750,
+      "sha256": "9c5aea777c5bb9f15199f0a1b8f09f48f5c113f4dedeefcb2ffa5ae2ff8646af",
+      "publication_path": "verification/runs/20261124T213000Z/publication/tree-request-helper-validation/tree-removal/tree-0001.expected.json"
+    },
+    {
+      "source_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-removal/tree-0001.request.json",
+      "bytes": 281,
+      "sha256": "05f604b682ceae429621cbc673c977ae4f65e4894117861a01e7fdc0cf49b998",
+      "publication_path": "verification/runs/20261124T213000Z/publication/tree-request-helper-validation/tree-removal/tree-0001.request.json"
+    }
+  ],
+  "retained_external_derived_tree_inventories": [
+    {
+      "source_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-1008/base-tree.json",
+      "bytes": 2897566,
+      "sha256": "451c589330e01283ec7f3232a5d06377b4a51be51d2cca94609d9adedf1697e4"
+    },
+    {
+      "source_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-1008/blob-availability.json",
+      "bytes": 420214,
+      "sha256": "fa198d2d739771405eb4d67de1c17b92b462607694f5e164218f482c394475c9"
+    },
+    {
+      "source_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-1008/known-public-tree.json",
+      "bytes": 2897739,
+      "sha256": "593b56627285d2d5ae6a72fcd407fcfafc4753273f7f0eb5028bcf6ee02e6a87"
+    },
+    {
+      "source_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-1008/target-tree.json",
+      "bytes": 2897739,
+      "sha256": "593b56627285d2d5ae6a72fcd407fcfafc4753273f7f0eb5028bcf6ee02e6a87"
+    },
+    {
+      "source_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-removal/base-tree.json",
+      "bytes": 2897675,
+      "sha256": "52da83b2a3fcf87770e7efa8d5e89a25f761a487a8f5e67de7024d5c4c66d851"
+    },
+    {
+      "source_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-removal/blob-availability.json",
+      "bytes": 420073,
+      "sha256": "42f795a16025c4124a52527c0c0e9a7700320c6f3e2d1eeddc13bf6adf5a01c6"
+    },
+    {
+      "source_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-removal/known-public-tree.json",
+      "bytes": 2897739,
+      "sha256": "593b56627285d2d5ae6a72fcd407fcfafc4753273f7f0eb5028bcf6ee02e6a87"
+    },
+    {
+      "source_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/tree-helper-validation-removal/target-tree.json",
+      "bytes": 2897502,
+      "sha256": "d09431a52c8768dffe1f84c5ca05634d306fc2edc5a90ba5aeb2c17dc61165b1"
+    }
+  ],
+  "scope": "The genuine completed validation manifest, exact connector request, and expected-tree receipt are copied without alteration. Full derived flat-tree and blob-availability inventories remain at their original external paths; their exact hashes are recorded here and in each genuine manifest. They are reproducible from the named immutable Git trees. No validation was rerun or result invented for this copy."
+}
