@@ -1,0 +1,14 @@
+✔ [3527/3530] Built Overfull.ResidualPalette.FourJoiningGrouping (2.0s)
+✔ [3528/3530] Built Overfull.Terminal.FourPalette (40s)
+✖ [3529/3530] Building Overfull.TerminalFourEven.Prefix (2.7s)
+trace: .> LEAN_PATH=/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean /workspace/scratch/05b9e46fe96b/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/05b9e46fe96b/overfull-lean/Overfull/TerminalFourEven/Prefix.lean -o /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourEven/Prefix.olean -i /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/TerminalFourEven/Prefix.ilean -c /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourEven/Prefix.c --setup /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/TerminalFourEven/Prefix.setup.json --json
+error: Overfull/TerminalFourEven/Prefix.lean:65:65: Type mismatch
+  (bounds 0).density
+has type
+  α * ↑n / 2 ≤ ↑(h - prefixRounds h)
+but is expected to have type
+  α / 2 * ↑(Fintype.card V) ≤ ↑(h - r)
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.TerminalFourEven.Prefix
+error: build failed

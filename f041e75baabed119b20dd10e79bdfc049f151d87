@@ -1,0 +1,13 @@
+✔ [3703/3705] Built Overfull.FourCoreReduction.Frequent (3.3s)
+✔ [3704/3705] Built Overfull.FourCoreReduction.Bounded (3.2s)
+✖ [3705/3705] Building Overfull.FourCoreReduction.Regular (2.9s)
+trace: .> LEAN_PATH=/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean /workspace/scratch/05b9e46fe96b/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/05b9e46fe96b/overfull-lean/Overfull/FourCoreReduction/Regular.lean -o /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/FourCoreReduction/Regular.olean -i /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/lib/lean/Overfull/FourCoreReduction/Regular.ilean -c /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/FourCoreReduction/Regular.c --setup /workspace/scratch/05b9e46fe96b/overfull-lean/.lake/build/ir/Overfull/FourCoreReduction/Regular.setup.json --json
+error: Overfull/FourCoreReduction/Regular.lean:80:34: failed to synthesize
+  Nonempty I
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/FourCoreReduction/Regular.lean:80:9: Tactic `rcases` failed: `x✝ : ?m.769` is not an inductive datatype
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.FourCoreReduction.Regular
+error: build failed

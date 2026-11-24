@@ -1,0 +1,21 @@
+We first specify the notation used in the proof. All unions that
+describe partitions are disjoint. For a vertex $v$ and a set
+$X\subseteq V(G)$, let $N_G(v)$ be its set of distinct neighbors,
+and put $N_G(v,X)=N_G(v)\cap X$.
+We write $d_G(v,X)$ for the number of edges from $v$ to $X$,
+counted with multiplicity in a multigraph. For disjoint vertex
+sets $X,Y$, let $G[X,Y]$ be the subgraph with vertex set $X\cup Y$
+and all edges between $X$ and $Y$, and let $e_G(X,Y)$ be its
+number of edges. We write $\cut_G(X)$ for the edge
+cut of $X$. The definition of a $k$-overfull set applies to
+multigraphs as well. A \emph{completion} of $G$ is a loopless
+multigraph obtained by adding vertices and edge copies to $G$;
+in particular, every edge of $G$ remains as a separate edge copy.
+
+We use the standard hierarchy notation $x\ll y$ to mean that
+$x$ is chosen sufficiently small after $y$ has been fixed.
+When a statement requires a sufficiently small robust range, it
+holds for every sufficiently small $\tau>0$, depending on the
+specified density and integer bounds, and every $0<\nu\le\tau$.
+The error tolerance and the order threshold are chosen after
+these parameters. In the deductions below, we fix

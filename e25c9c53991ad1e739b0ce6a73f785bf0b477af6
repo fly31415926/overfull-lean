@@ -1,0 +1,180 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Action completed."
+    }
+  ],
+  "structuredContent": {
+    "api_tool_source": "files/read",
+    "results": [
+      {
+        "version_id": "9",
+        "name": "main.tex",
+        "mime_type": "text/x-tex",
+        "size_bytes": 312836,
+        "created_at": "2026-11-24T03:21:57.227640Z",
+        "modified_at": "2026-11-24T21:36:01.765116Z",
+        "file_provider": "native",
+        "library_file_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "ref_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "file_id": "file_000000007fc881f5a6f7b83b2278529c",
+        "surface": "library",
+        "requested_file_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "start_line": 324,
+        "end_line": 344,
+        "total_lines": 6646,
+        "has_more": true,
+        "pages": [],
+        "num_pages": 0,
+        "warnings": [],
+        "api_tool_source": "files/read",
+        "read_index": 0,
+        "mode": "full",
+        "include_text": true,
+        "include_images": false,
+        "requested_start_page": null,
+        "requested_end_page": null,
+        "next_start_line": 345,
+        "next_start_page": null,
+        "next_read": {
+          "ref_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+          "mode": "full",
+          "start_line": 345,
+          "max_lines": 21,
+          "include_images": false
+        },
+        "next_image_read": null,
+        "content": [
+          "We first specify the notation used in the proof. All unions that\ndescribe partitions are disjoint. For a vertex $v$ and a set\n$X\\subseteq V(G)$, let $N_G(v)$ be its set of distinct neighbors,\nand put $N_G(v,X)=N_G(v)\\cap X$.\nWe write $d_G(v,X)$ for the number of edges from $v$ to $X$,\ncounted with multiplicity in a multigraph. For disjoint vertex\nsets $X,Y$, let $G[X,Y]$ be the subgraph with vertex set $X\\cup Y$\nand all edges between $X$ and $Y$, and let $e_G(X,Y)$ be its\nnumber of edges. We write $\\cut_G(X)$ for the edge\ncut of $X$. The definition of a $k$-overfull set applies to\nmultigraphs as well. A \\emph{completion} of $G$ is a loopless\nmultigraph obtained by adding vertices and edge copies to $G$;\nin particular, every edge of $G$ remains as a separate edge copy.\n\nWe use the standard hierarchy notation $x\\ll y$ to mean that\n$x$ is chosen sufficiently small after $y$ has been fixed.\nWhen a statement requires a sufficiently small robust range, it\nholds for every sufficiently small $\\tau>0$, depending on the\nspecified density and integer bounds, and every $0<\\nu\\le\\tau$.\nThe error tolerance and the order threshold are chosen after\nthese parameters. In the deductions below, we fix"
+        ]
+      },
+      {
+        "version_id": "9",
+        "name": "main.tex",
+        "mime_type": "text/x-tex",
+        "size_bytes": 312836,
+        "created_at": "2026-11-24T03:21:57.227640Z",
+        "modified_at": "2026-11-24T21:36:01.765116Z",
+        "file_provider": "native",
+        "library_file_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "ref_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "file_id": "file_000000007fc881f5a6f7b83b2278529c",
+        "surface": "library",
+        "requested_file_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "start_line": 5615,
+        "end_line": 5636,
+        "total_lines": 6646,
+        "has_more": true,
+        "pages": [],
+        "num_pages": 0,
+        "warnings": [],
+        "api_tool_source": "files/read",
+        "read_index": 1,
+        "mode": "full",
+        "include_text": true,
+        "include_images": false,
+        "requested_start_page": null,
+        "requested_end_page": null,
+        "next_start_line": 5637,
+        "next_start_page": null,
+        "next_read": {
+          "ref_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+          "mode": "full",
+          "start_line": 5637,
+          "max_lines": 22,
+          "include_images": false
+        },
+        "next_image_read": null,
+        "content": [
+          "\\begin{lemma}\\label{three:lem:pattern}\nFix $t$ and a positive lower bound $\\alpha$ for the degree and core\norders relative to the graph order. Choose a robust range $\\sigma$\nsufficiently small relative to $\\alpha/b_4(t)$, and fix a positive\nrobust-neighborhood parameter at most $\\sigma$.\nFor sufficiently small core error and sufficiently large order, let\n$G$ be a simple $k$-regular graph with no $k$-overfull set,\n$q\\in\\{3,4\\}$ cores, and at most $t$ exceptional vertices. Then $G$ can\nbe reduced by perfect-matching deletions and absorptions to an\n$h$-regular graph $G'$ with no $h$-overfull set, covered by $q$ cores\n$A_1,\\ldots,A_q$, with arbitrarily small error relative to $h$.\nIf $q=4$ and all four $A_i$ are odd, there is a fixed perfect matching or\nthree-edge star $F_0$ on their labels and an integer $r_0$ such that\n$h-r_0$ is arbitrarily small relative to $h$ and\n\\begin{equation}\\label{three:eq:forest-supply}\n |\\cut_{G'}(\\bigcup_{i\\in I}A_i)|\n \\ge r_0|\\cut_{F_0}(I)|\\qquad(I\\subseteq\\{1,2,3,4\\}).\n\\end{equation}\nEvery pair of parts joined in $F_0$ has at least $r_0$ joining\nedges. The retained degree is a fixed positive fraction of the\ninitial degree.\n\\end{lemma}"
+        ]
+      },
+      {
+        "version_id": "9",
+        "name": "main.tex",
+        "mime_type": "text/x-tex",
+        "size_bytes": 312836,
+        "created_at": "2026-11-24T03:21:57.227640Z",
+        "modified_at": "2026-11-24T21:36:01.765116Z",
+        "file_provider": "native",
+        "library_file_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "ref_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "file_id": "file_000000007fc881f5a6f7b83b2278529c",
+        "surface": "library",
+        "requested_file_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "start_line": 5870,
+        "end_line": 5873,
+        "total_lines": 6646,
+        "has_more": true,
+        "pages": [],
+        "num_pages": 0,
+        "warnings": [],
+        "api_tool_source": "files/read",
+        "read_index": 2,
+        "mode": "full",
+        "include_text": true,
+        "include_images": false,
+        "requested_start_page": null,
+        "requested_end_page": null,
+        "next_start_line": 5874,
+        "next_start_page": null,
+        "next_read": {
+          "ref_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+          "mode": "full",
+          "start_line": 5874,
+          "max_lines": 4,
+          "include_images": false
+        },
+        "next_image_read": null,
+        "content": [
+          "fixed positive fraction.\n\n\\begin{proposition}\\label{three:prop:terminal}\nThe graph obtained in Lemma~\\ref{three:lem:pattern}, which is covered"
+        ]
+      },
+      {
+        "version_id": "9",
+        "name": "main.tex",
+        "mime_type": "text/x-tex",
+        "size_bytes": 312836,
+        "created_at": "2026-11-24T03:21:57.227640Z",
+        "modified_at": "2026-11-24T21:36:01.765116Z",
+        "file_provider": "native",
+        "library_file_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "ref_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "file_id": "file_000000007fc881f5a6f7b83b2278529c",
+        "surface": "library",
+        "requested_file_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+        "start_line": 5997,
+        "end_line": 6008,
+        "total_lines": 6646,
+        "has_more": true,
+        "pages": [],
+        "num_pages": 0,
+        "warnings": [],
+        "api_tool_source": "files/read",
+        "read_index": 3,
+        "mode": "full",
+        "include_text": true,
+        "include_images": false,
+        "requested_start_page": null,
+        "requested_end_page": null,
+        "next_start_line": 6009,
+        "next_start_page": null,
+        "next_read": {
+          "ref_id": "libfile_074f8ebbaa808191b5e635fa723b130a",
+          "mode": "full",
+          "start_line": 6009,
+          "max_lines": 12,
+          "include_images": false
+        },
+        "next_image_read": null,
+        "content": [
+          "case will follow from the two-core case.\n\n\\begin{theorem}\\label{three:thm:regular-four}\nFix a positive density bound $\\alpha$ and ordinary robust parameters\nwith sufficiently small range. For sufficiently small $\\eps>0$\nand large even $n$, let $R$ be a simple $k$-regular graph of order\n$n$ with no $k$-overfull set, where $k\\ge\\alpha n$ and\n\\[\n V(R)=U_1\\cup\\cdots\\cup U_q\\cup Z,\\qquad q\\in\\{3,4\\},\n \\qquad |U_i|\\ge\\alpha n.\n\\]\nIf the $U_i$ contain cores of error $a$ and"
+        ]
+      }
+    ],
+    "warnings": [],
+    "external_connectors_accessed": false
+  },
+  "isError": false
+}
