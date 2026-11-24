@@ -263,6 +263,22 @@ import Overfull.NativeWeighted.EvenNative
 import Overfull.NativeWeighted.NativePalette
 import Overfull.NativeWeighted.OddNative
 import Overfull.NativeWeighted.WeightedJoining
+import Overfull.NativeTerminal.BoundedInput
+import Overfull.NativeTerminal.ColoringGlue
+import Overfull.NativeTerminal.Factorization
+import Overfull.NativeTerminal.NativeCompletion
+import Overfull.NativeTerminal.NativeFactorization
+import Overfull.NativeTerminal.NativeGeometry
+import Overfull.NativeTerminal.PairColoring
+import Overfull.NativeTerminal.PrefixGeometry
+import Overfull.NativeTerminal.Reassembly
+import Overfull.NativeTerminal.ReserveGeometry
+import Overfull.NativeTerminal.ResidualGeometry
+import Overfull.NativeTerminal.ShoreCore
+import Overfull.NativeTerminal.ShoreFactorization
+import Overfull.NativeTerminal.ShoreHost
+import Overfull.NativeTerminal.TerminalParameters
+import Overfull.NativeTerminal.TwoCore
 
 /-!
 # Partial formalization of the overfull manuscript

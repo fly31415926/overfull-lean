@@ -1,0 +1,15 @@
+Overfull/External/PerfectBMatching.lean is adapted from:
+  https://github.com/shengtongz/lovasz-opus
+  Lovasz/BMatchingPolytope.lean
+  Commit: ee0085ddec79996279c7b52044659032e5cf8431
+  Original blob: 4f599760ac07c23714ef516e9bc5e07fd472856c
+
+Copyright (c) 2026 Shengtong Zhang. All rights reserved.
+Original authorship: Claude Opus 5.5 (AI agent), directed by Shengtong Zhang.
+License: Apache License 2.0; see LICENSE_BMATCHING.txt.
+
+Project adaptation: replace the unrelated Lovasz.Defs import with the
+required mathlib imports. The proof itself compiles without changes on
+the project's pinned Lean 4.24.0 toolchain.
+The attribution above records the upstream authors; it does not imply their
+review or endorsement of this overfull-conjecture project.

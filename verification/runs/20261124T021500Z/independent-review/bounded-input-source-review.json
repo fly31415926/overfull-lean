@@ -1,0 +1,34 @@
+{
+  "recorded_at_utc": "2026-11-24T02:22:41.702567+00:00",
+  "status": "semantic_source_review_passed_pending_strict_complete_verification",
+  "assertion": "4.6",
+  "statement_sha256": "86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26",
+  "statement_bytes": 443,
+  "exact_source_report": "verification/runs/20261122T235931Z/authorized-manuscript-recovery.md",
+  "exact_statement_sha256_independently_recomputed": true,
+  "sources_reviewed_sha256": {
+    "Overfull/NativeTerminal/BoundedInput.lean": "feb995a3d83bcf5862502d1dafae2509368064a46b74a1d3a7895e147d7fbc20",
+    "Overfull/NativeTerminal/TwoCore.lean": "a07e1b9d6e4a9107db7d75ad369199021bd957c07b05722faa1ddb1d5e77e12a",
+    "Overfull/FewExceptions/Factorization.lean": "4b0ac7e5f115f8acc442411873e688a20cc22b5de0b57a2205ecae193021f805",
+    "Overfull/NativeTerminal/Reassembly.lean": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250",
+    "Overfull/NativeTerminal/ColoringGlue.lean": "9e1630206ec0b3b91ba9f80bdf558786d5cd83237b1fa30d4ee89db2a21e0437"
+  },
+  "source_matches": {
+    "host": "Actual finite loopless k-regular multigraph with distinct original parallel copies.",
+    "order": "Sufficiently large even host order.",
+    "density": "Arbitrary fixed positive degree density alpha and core-order density beta; gamma=min(alpha,beta,1) is chosen independently of host data.",
+    "robust_range": "0<nu<=tau<=min(alpha,min(beta,1))/16 gives an explicit sufficiently small source range.",
+    "core": "Embedded simple robust spanning graph on each original core, minimum degree at least k-a.",
+    "error": "a+1<=epsilon*n, matching the source convention used in the parent fixed-pattern statement.",
+    "nonoverfull": "No k-overfull vertex set in the original host.",
+    "one_core": "At most three vertices outside its single robust core.",
+    "two_cores": "Disjoint original cores plus at most two exceptional vertices form a partition.",
+    "quantifier_order": "One common positive epsilon and one order threshold precede all graph types, host data, deficiency and either core alternative.",
+    "conclusion": "Exactly k original-copy perfect matchings, pairwise edge-disjoint and covering every copy; no full target coloring/factorization is an input."
+  },
+  "proof_routes": "One-core branch invokes its existing complete theorem. Two-core branch constructs reserve selection and first perfect matchings, applies the new actual terminal factorization, and reassembles twice. The common wrapper takes min of the error tolerances and max of the order thresholds.",
+  "promotion_condition": "Promote only after strict BoundedInput target compilation and then the genuine frozen full verifier, unchanged complete axiom audit and modified exact preservation checker all succeed. The semantic conclusion alone is not Lean verification.",
+  "independent_glue_review": "For each original incidence vertex, a containing shore proves local properness. Common retained copies of disjoint shores are actual shared cut copies; closed B has no overlaps. In the contracted case, both apex palettes are relabeled by the same bijection from the same original cut-copy type. The transfer equivalence preserves each copy, so agreement is constructed, not assumed.",
+  "reassembly_strict_receipt": "verification/runs/20261124T021500Z/development/reassembly-02/command.json",
+  "current_full_verification_claimed": false
+}

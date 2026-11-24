@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "verification"
 MATHLIB_REVISION = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
 NUMBERED_ASSERTION_COUNT = 69
-COMPLETED_NUMBERED_ASSERTION_COUNT = 47
+COMPLETED_NUMBERED_ASSERTION_COUNT = 48
 
 
 def run(arguments: list[str], log_name: str) -> str:
@@ -119,7 +119,8 @@ def main() -> None:
                           ("exceptional_palette", "exceptional-palette-source.json"),
                           ("weighted_palette", "weighted-palette-source.json"),
                           ("native_star", "native-star-source.json"),
-                          ("native_integration", "native-integration-source.json")):
+                          ("native_integration", "native-integration-source.json"),
+                          ("native_terminal", "native-terminal-source.json")):
         source = json.loads((ROOT / "docs" / filename).read_text())
         source_modules = {item["module"]: item for item in source["modules"]}
         if (len(source_modules) != source["module_count"]
@@ -178,6 +179,17 @@ def main() -> None:
 
     if extension_maps["native_integration"][0]["numbered_assertions_completed"] != 0:
         raise SystemExit("The native-integration continuation completes no numbered manuscript assertion.")
+
+    terminal_source, terminal_modules, terminal_public_modules = extension_maps["native_terminal"]
+    if (terminal_source["kind"] != "complete_assertion_source_mapping"
+            or terminal_source["manuscript_number"] != "4.6"
+            or terminal_source["manuscript_label"] != "three:lem:bounded-input"
+            or terminal_source["statement_sha256"] != "86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26"
+            or terminal_source["numbered_assertions_completed"] != 1
+            or terminal_source["public_theorems"] != [
+                "Overfull.bounded_input_factorization", "Overfull.bounded_input_one_factorization"]
+            or not set(terminal_source["public_theorems"]) <= set(terminal_public_modules)):
+        raise SystemExit("The terminal closure does not identify the exact complete Corollary 4.6.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1584,7 +1596,7 @@ def main() -> None:
         names = assertion.get("lean_theorems", [])
         if not names or not set(names) <= audited_names:
             raise SystemExit(f"A completed assertion lacks audited proof declarations: {assertion['number']}")
-    for number in ("2.24", "4.4", "4.5", "4.6", "4.16", "6.1", "6.2", "6.3"):
+    for number in ("2.24", "4.4", "4.5", "4.16", "6.1", "6.2", "6.3"):
         assertion = next(a for a in coverage["numbered_assertions"] if a["number"] == number)
         if assertion["full_assertion_verified"]:
             raise SystemExit(f"Assertion {number} is not completed by the registered supporting results.")
@@ -1593,6 +1605,15 @@ def main() -> None:
                          if a["number"] == source_assertion["number"])
         if assertion["statement_sha256"] != source_assertion["statement_sha256"]:
             raise SystemExit("The few-exception continuation differs from the pinned source statement.")
+    bounded_assertion = next(a for a in coverage["numbered_assertions"] if a["number"] == "4.6")
+    bounded_source_assertion = next(a for a in few_source["source_assertions"] if a["number"] == "4.6")
+    if (not bounded_assertion["full_assertion_verified"]
+            or bounded_assertion["status"] != "fully_verified"
+            or bounded_assertion.get("lean_theorems") != terminal_source["public_theorems"]
+            or not set(bounded_assertion["lean_theorems"]) <= audited_names
+            or bounded_assertion["statement_sha256"] != terminal_source["statement_sha256"]
+            or bounded_assertion["statement_sha256"] != bounded_source_assertion["statement_sha256"]):
+        raise SystemExit("Full bounded-input factorization is not mapped to the exact complete Corollary 4.6.")
     ordinary_assertion = next(a for a in coverage["numbered_assertions"] if a["number"] == "4.2")
     if (not ordinary_assertion["full_assertion_verified"]
             or not {"Overfull.ordinary_core_factorization", "Overfull.ordinary_core_one_factorization"}
@@ -1682,7 +1703,8 @@ def main() -> None:
                     "exceptional_palette": "exceptional-palette",
                     "weighted_palette": "weighted-palette",
                     "native_star": "native-star",
-                    "native_integration": "native-integration"}[key]
+                    "native_integration": "native-integration",
+                    "native_terminal": "native-terminal"}[key]
         map_path = OUTPUT / f"{basename}-declarations.json"
         map_path.write_text(json.dumps({
             "schema_version": 1,
@@ -1760,6 +1782,7 @@ def main() -> None:
         "weighted_palette_declaration_map": extension_evidence["weighted_palette"],
         "native_star_declaration_map": extension_evidence["native_star"],
         "native_integration_declaration_map": extension_evidence["native_integration"],
+        "native_terminal_declaration_map": extension_evidence["native_terminal"],
         "checkpoint_reconstruction": {
             "original_checkpoint": reconstruction["original_checkpoint"],
             "original_tree_reproduced": False,

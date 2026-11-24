@@ -1,0 +1,31 @@
+{
+  "recorded_at_utc": "2026-11-24T02:23:47.404079+00:00",
+  "kind": "reviewed_candidate_promotion_after_actual_strict_target_success",
+  "baseline": "f557ae03355f14a0441b37283f35186a95aca2d7",
+  "assertion": "4.6",
+  "statement_sha256": "86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26",
+  "strict_target_receipt": "verification/runs/20261124T021500Z/development/bounded-input-001/command.json",
+  "strict_target_receipt_sha256": "7fb5b1bbca0e407c0ecf643a1f2a6e0d22ac4be219de5052692a9c1861d97440",
+  "semantic_review_path": "verification/runs/20261124T021500Z/independent-review/bounded-input-source-review.json",
+  "semantic_review_sha256": "81e3975299ed2d025e07758e384c516f75beba6726f5316faf67443ba70dec44",
+  "changed_files": {
+    "docs/coverage.json": {
+      "before_sha256": "4ea8146bb3d419d57af0cfcf743d75fcb8886dbda0bc089f301c490a46c8b7eb",
+      "after_sha256": "a1ad7b629cd5bdddb0fa61dcf43be0607bbb13ff375682a180f5f59446a33f6e"
+    },
+    "docs/manuscript-source.json": {
+      "before_sha256": "875b84338e1fe04d74d4365d23dd9327904dbed6ffe4d01eecc5ff23d88c6969",
+      "after_sha256": "78897640fdfefbb0aca21d27de6c3fbcc7fbafae72d0255713ebaf0bbf5e3d3c"
+    },
+    "scripts/verify.py": {
+      "before_sha256": "8e2e97b6fc464d0d89b84468372af95972e3df14a6a928b67bc0a2a900e1668d",
+      "after_sha256": "53ce07c4b70d647cbef2b33267d4068e51ba6ee09da05dc76a127c24af30a00b"
+    },
+    "scripts/update_native_terminal_manifest.py": {
+      "before_sha256": "3ff9c57ec2f496e245efdb5ab0fb8ceb7019b925d2d5b10c16c8d6eed52b5cd0",
+      "after_sha256": "c15039a498da94d0645f40e1b9efcae43d22c4184e6eda2ae0408b7581e75a40"
+    }
+  },
+  "exact_verifier_edit_count": 7,
+  "complete_frozen_verifier_and_full_audit_run_by_this_script": false
+}

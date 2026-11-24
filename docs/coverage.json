@@ -8,8 +8,8 @@
   "main_theorem_verified": false,
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
-  "fully_verified_numbered_assertion_count": 47,
-  "scope": "Native weighted odd/even joining palettes derived from actual residual cores; complete paired and unpaired exceptional-copy assembly with exact selected reserve classes; original-core parity and whole-family load bounds; uniform completion of every nonprotected color, leaving a robust r/2-regular residual whose external copies are exactly the selected native reserve; and independent-exterior one-core factorization. These are supporting constructions; final protected-residual factorization and reassembly, full two-core Corollary 4.6, and the main theorem remain unproved. The unchanged assertion records retain 47 of 69 complete numbered assertions.",
+  "fully_verified_numbered_assertion_count": 48,
+  "scope": "Complete Corollary 4.6 for even regular multigraphs with no overfull set and either one robust core with at most three exceptional vertices or two robust cores with at most two exceptional vertices. Fixed positive degree and core-order densities and robust parameters precede one common positive core-error tolerance and order threshold. The conclusion constructs a coloring and an exact partition of all original edge copies into k perfect matchings. No representative matching, reserve, complementary coloring or residual factorization is assumed. Full fixed-pattern Lemma 4.4, five-exception Corollary 4.5, terminal Proposition 4.16 and the main theorem remain unproved. The current candidate has 48 of 69 complete numbered assertions; the full frozen verifier and axiom audit establish its verification status.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -5055,6 +5055,23 @@
         "three:lem:bounded-input, two-core assigned-part and joining stages",
         "two:short:fixed-pattern, supporting actual-copy assignment"
       ]
+    },
+    {
+      "id": "bounded_input_full",
+      "kind": "graph_theoretic_result",
+      "description": "Complete Corollary 4.6 for even regular multigraphs with no overfull set and either one robust core with at most three exceptional vertices or two robust cores with at most two exceptional vertices. Fixed positive degree and core-order densities and robust parameters precede one common positive core-error tolerance and order threshold. The conclusion constructs a coloring and an exact partition of all original edge copies into k perfect matchings. No representative matching, reserve, complementary coloring or residual factorization is assumed. Full fixed-pattern Lemma 4.4, five-exception Corollary 4.5, terminal Proposition 4.16 and the main theorem remain unproved.",
+      "lean_declarations": [
+        "Overfull.bounded_input_factorization",
+        "Overfull.bounded_input_one_factorization",
+        "Overfull.one_core_three_exception_factorization",
+        "Overfull.one_core_three_exception_one_factorization",
+        "Overfull.two_core_two_exception_factorization",
+        "Overfull.two_core_two_exception_one_factorization"
+      ],
+      "scope_limit": "Complete Corollary 4.6 under both source alternatives; the main theorem and the separate stronger five-exception and general terminal assertions remain unproved.",
+      "manuscript_locations": [
+        "three:lem:bounded-input"
+      ]
     }
   ],
   "numbered_assertions": [
@@ -5937,17 +5954,22 @@
         2608
       ],
       "statement_sha256": "86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26",
-      "full_assertion_verified": false,
-      "status": "checked_components_only",
+      "full_assertion_verified": true,
+      "status": "fully_verified",
       "checked_components": [
         "one_core_three_exceptions",
         "three_label_safe_deletion",
         "three_vertex_compatible_circuit_partition",
         "original_host_joining_decomposition",
-        "actual_assigned_parts_and_cuts"
+        "actual_assigned_parts_and_cuts",
+        "bounded_input_full"
       ],
       "imported_statement": false,
-      "formalization_scope": "Complete one-core branch; complete at-most-three compatible circuit and original-host joining stages; actual fixed-representative two-core assigned labels, original matching cuts and fiber parity, including optional single pair under at most two exceptions. Joining composes in a separate host with explicit regularity/non-overfull inputs. Heavy-pattern reserves, residual safety, source alignment, palettes, robust completion and final two-core factorization remain incomplete."
+      "formalization_scope": "Complete Corollary 4.6 for even regular multigraphs with no overfull set and either one robust core with at most three exceptional vertices or two robust cores with at most two exceptional vertices. Fixed positive degree and core-order densities and robust parameters precede one common positive core-error tolerance and order threshold. The conclusion constructs a coloring and an exact partition of all original edge copies into k perfect matchings. No representative matching, reserve, complementary coloring or residual factorization is assumed. Full fixed-pattern Lemma 4.4, five-exception Corollary 4.5, terminal Proposition 4.16 and the main theorem remain unproved.",
+      "lean_theorems": [
+        "Overfull.bounded_input_factorization",
+        "Overfull.bounded_input_one_factorization"
+      ]
     },
     {
       "number": "4.7",

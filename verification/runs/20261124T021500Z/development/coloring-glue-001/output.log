@@ -1,0 +1,52 @@
+✖ [3343/3343] Building Overfull.NativeTerminal.ColoringGlue (2.6s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/7dae4c9bb5a1/overfull-lean/Overfull/NativeTerminal/ColoringGlue.lean -o /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/lib/lean/Overfull/NativeTerminal/ColoringGlue.olean -i /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/lib/lean/Overfull/NativeTerminal/ColoringGlue.ilean -c /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/ir/Overfull/NativeTerminal/ColoringGlue.c --setup /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/ir/Overfull/NativeTerminal/ColoringGlue.setup.json --json
+error: Overfull/NativeTerminal/ColoringGlue.lean:97:4: Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `List.Mem.casesOn` can only eliminate into `Prop`
+
+V : Type u_1
+E : Type u_2
+C : Type u_4
+inst✝ : Fintype E
+G : Multigraph V E
+A₀ A₁ B : Finset V
+h01 : Disjoint A₀ A₁
+h0B : Disjoint A₀ B
+h1B : Disjoint A₁ B
+hcover : ∀ (v : V), v ∈ A₀ ∨ v ∈ A₁ ∨ v ∈ B
+hB : G.cutEdges B = ∅
+c₀ : (retainedGraph G A₀).PaletteColoring C
+c₁ : (retainedGraph G A₁).PaletteColoring C
+cB : (retainedGraph G B).PaletteColoring C
+hagrees :
+  ∀ (e : E) (h₀ : e ∈ G.cutEdges A₀) (h₁ : e ∈ G.cutEdges A₁),
+    c₀.color (boundaryLift G A₀ ⟨e, h₀⟩) = c₁.color (boundaryLift G A₁ ⟨e, h₁⟩)
+A : Fin 3 → Finset V := ![A₀, A₁, B]
+hA : ∀ (v : V), ∃ i, v ∈ A i
+i : Fin 3
+this✝ : i ∈ Fintype.elems
+a✝ : List (Fin 3)
+this : List.Mem i a✝
+⊢ List.finRange 3 = a✝ → this✝ ≍ this → (retainedGraph G (A i)).PaletteColoring C
+error: Overfull/NativeTerminal/ColoringGlue.lean:98:6: Type mismatch
+  c₀
+has type
+  (retainedGraph G A₀).PaletteColoring C
+but is expected to have type
+  (retainedGraph G (A i)).PaletteColoring C
+error: Overfull/NativeTerminal/ColoringGlue.lean:99:4: No goals to be solved
+error: Overfull/NativeTerminal/ColoringGlue.lean:109:6: Type mismatch
+  hagrees e he₀ he₁
+has type
+  c₀.color (boundaryLift G A₀ ⟨e, he₀⟩) = c₁.color (boundaryLift G A₁ ⟨e, he₁⟩)
+but is expected to have type
+  (c ((fun i => i) ⟨0, ⋯⟩)).color ⟨e, hi⟩ = (c ((fun i => i) ⟨1, ⋯⟩)).color ⟨e, hj⟩
+error: Overfull/NativeTerminal/ColoringGlue.lean:112:6: Type mismatch
+  Eq.symm (hagrees e he₀ he₁)
+has type
+  c₁.color (boundaryLift G A₁ ⟨e, he₁⟩) = c₀.color (boundaryLift G A₀ ⟨e, he₀⟩)
+but is expected to have type
+  (c ((fun i => i) ⟨1, ⋯⟩)).color ⟨e, hi⟩ = (c ((fun i => i) ⟨0, ⋯⟩)).color ⟨e, hj⟩
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeTerminal.ColoringGlue
+error: build failed

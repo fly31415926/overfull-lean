@@ -1,5 +1,54 @@
 # Lean formalization of the overfull manuscript
 
+## Current continuation: complete bounded-input Corollary 4.6
+
+**48 of the manuscript's 69 numbered assertions are complete.** The new
+`Overfull.bounded_input_one_factorization` proves the complete Corollary 4.6:
+an even-order regular multigraph with no overfull set has an exact
+one-factorization when it has either one robust core and at most three
+exceptional vertices, or two robust cores and at most two exceptional vertices,
+under the stated fixed linear density bounds and sufficiently small core error.
+One common error tolerance and order threshold are chosen before the host.
+
+The new two-core theorem constructs the native reserve, completes the
+nonprotected colors, colors the protected residual through its actual assigned
+shores, and reassembles both perfect-matching prefixes. Even shores are factored
+as components. Odd shores are contracted to an apex and their colorings are
+aligned on the same original crossing copies. The optional exceptional pair is
+colored as a separate component. Every parallel copy remains distinct.
+
+The principal original-host declarations are:
+
+- `Overfull.two_core_two_exception_factorization`
+- `Overfull.two_core_two_exception_one_factorization`
+- `Overfull.bounded_input_factorization`
+- `Overfull.bounded_input_one_factorization`
+
+The exact source statement and its SHA-256 are unchanged. The other 68 assertion
+records remain unchanged. **21 assertions remain incomplete, including the main
+theorem.** The general fixed-pattern lemma, the five-exception corollary, terminal
+three-core work, and the remaining global factorization inputs are not claimed
+by this result. Whole protected boundaries need not retain their previous
+colors during terminal factorization.
+
+The [source inventory](docs/native-terminal-source.json),
+[proof map](docs/native-terminal-verification.md),
+[semantic review](docs/native-terminal-semantic-review.md), and
+[continuation handoff](docs/continuation-handoff.md) describe the exact scope.
+The [current run](verification/runs/20261124T021500Z/) retains every genuine
+focused failure and success, the immutable full build/audit inputs and outputs,
+and strict preservation evidence. The final frozen verifier and supplementary
+report establish full-project verification; a focused pass alone does not.
+
+The preceding verified local chain `af8dca2 → d2e7b12 → f557ae0` was published
+with exactly identical Git trees as `a4b34a8 → 498d737 → 0f168ca`. Both public
+branches were independently read back at `0f168ca` before this continuation's
+full verification. Publication of the new continuation has its own separate
+commit/tree/branch readbacks.
+
+The historical checkpoint sections below retain the mathematical scope and
+verification status recorded at their respective dates.
+
 ## Latest continuation: native weighted assembly and bounded core completion
 
 The native construction now supplies weighted odd/even joining palettes with

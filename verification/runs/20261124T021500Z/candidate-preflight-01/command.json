@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python3",
+    "-c",
+    "import importlib.util,json,sys;sys.dont_write_bytecode=True;p='/workspace/scratch/7dae4c9bb5a1/overfull-lean/verification/runs/20261124T021500Z/run-verifier.py';s=importlib.util.spec_from_file_location('terminal_full_runner',p);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);r=m.baseline_preflight(m.current_inputs());print(json.dumps(r,indent=2))"
+  ],
+  "cwd": "/workspace/scratch/7dae4c9bb5a1/overfull-lean",
+  "started_at_utc": "2026-11-24T02:25:32.353374+00:00",
+  "finished_at_utc": "2026-11-24T02:25:33.965159+00:00",
+  "elapsed_seconds": 1.6118029229983222,
+  "exit_code": 0,
+  "status": "passed",
+  "kind": "candidate_identity_and_exact_promotion_preflight_only",
+  "lean_build_or_axiom_audit_executed": false,
+  "output_sha256": "7463402ada61f6ba14da0dd0b5ab31a9bba055effc9e7dd01abfc81d7cb6d4a5",
+  "runner_sha256": "aa5fa877d1c26e4d7c79b8944a340870493daf7f2bd675cf47fc8adfeed86577",
+  "checker_sha256": "f139e1e9aae14b00b12e936586f6e2005124c54814f3f2dbe47f2ad4fe969823"
+}

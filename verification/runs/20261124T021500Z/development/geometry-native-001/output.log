@@ -1,0 +1,8 @@
+⚠ [3335/3335] Built Overfull.NativeTerminal.NativeGeometry (2.5s)
+warning: Overfull/NativeTerminal/NativeGeometry.lean:93:0: automatically included section variable(s) unused in theorem `Overfull.NativeTerminal.residual_assigned_star_incidence`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (3335 jobs).

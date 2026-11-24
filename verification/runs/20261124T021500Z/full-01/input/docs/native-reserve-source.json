@@ -1,0 +1,1025 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "98c6b228a997fead863d05041f12799c93fac18b",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "scope": "Uniform original-host native two-core reserve completion: actual disjoint compressed reserves, rounded and protected native multiplicities, original-copy boundary realization, robust core completions, and an actual regular non-overfull residual retaining robust embedded cores. The surviving linear reserve and h-r margin are derived from original-host assumptions. Supporting progress toward Corollary 4.6; palette grouping, the full two-core factorization, and the main theorem remain incomplete.",
+  "review": "docs/native-reserve-semantic-review.md",
+  "proof_map": "docs/native-reserve-verification.md",
+  "recovery_provenance": "verification/runs/20261123T201422Z/recovery-provenance.md",
+  "authorized_manuscript_excerpts": "verification/runs/20261122T235931Z/authorized-manuscript-recovery.md",
+  "module_count": 24,
+  "public_theorem_count": 163,
+  "modules": [
+    {
+      "module": "Overfull.NativeReserve.AcceptedRealization",
+      "path": "Overfull/NativeReserve/AcceptedRealization.lean",
+      "sha256": "c566a01ed8c8fc1dcb61ba9082b2f9f44d3afe46503913bc05a5a5b36e8b805b",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.exists_accepted_family_avoiding_reserve",
+          "source_line": 32
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.BoundaryProperties",
+      "path": "Overfull/NativeReserve/BoundaryProperties.lean",
+      "sha256": "e906b097173d3670a61ff79ec2834ac2f50d03ed689dea4e70411fb33623ecf3",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.corePart_eq_of_exception_pool_counts",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.NativeReserve.boundary_signature_eq_of_pool_counts",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.NativeReserve.boundary_assignedLabel_eq_of_pool_counts",
+          "source_line": 50
+        },
+        {
+          "name": "Overfull.NativeReserve.boundary_whole_cut_eq_of_pool_counts",
+          "source_line": 63
+        },
+        {
+          "name": "Overfull.NativeReserve.realized_sample_boundary_properties",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.NativeReserve.accepted_family_boundary_properties",
+          "source_line": 107
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.CompletionConstruction",
+      "path": "Overfull/NativeReserve/CompletionConstruction.lean",
+      "sha256": "153d51f84b36e94af946ba9b45d9c63d37aaf39df3967d9e62338eeea90d77e6",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.exists_native_reserve_completion_parameters",
+          "source_line": 34
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.CompletionCuts",
+      "path": "Overfull/NativeReserve/CompletionCuts.lean",
+      "sha256": "973ecee46f95683603c9d429296e9ac8adcbae4774ec7e38371608bb39febd92",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.completed_surviving_whole_cut_eq",
+          "source_line": 19
+        },
+        {
+          "name": "Overfull.NativeReserve.completed_residual_whole_cutSize",
+          "source_line": 48
+        },
+        {
+          "name": "Overfull.NativeReserve.completed_whole_cut_certificates",
+          "source_line": 60
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.CompletionFootprints",
+      "path": "Overfull/NativeReserve/CompletionFootprints.lean",
+      "sha256": "c5db62a549316cb7fa5b999998b1857bfbb77c5bd6b106536a1378b03a69afe7",
+      "public_theorem_count": 9,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.mem_coreFootprint",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.NativeReserve.coreFootprint_card",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.NativeReserve.coreFootprint_compl_card",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.NativeReserve.coreFootprint_card_le_six",
+          "source_line": 36
+        },
+        {
+          "name": "Overfull.NativeReserve.coreFootprint_parity",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.NativeReserve.coreFootprint_load_eq",
+          "source_line": 49
+        },
+        {
+          "name": "Overfull.NativeReserve.boundary_disjoint_core",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.NativeReserve.coreFootprint_load_le_error",
+          "source_line": 67
+        },
+        {
+          "name": "Overfull.NativeReserve.coreFootprint_admissible",
+          "source_line": 88
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.CompletionGlue",
+      "path": "Overfull/NativeReserve/CompletionGlue.lean",
+      "sha256": "7e018e2d5fc64b86b74f19216c059f8bc2379f2751d1c707d5a0d95b710eaabc",
+      "public_theorem_count": 12,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.coreEdges_disjoint_of_vertices",
+          "source_line": 19
+        },
+        {
+          "name": "Overfull.NativeReserve.completedBoundary_contains",
+          "source_line": 31
+        },
+        {
+          "name": "Overfull.NativeReserve.completedBoundary_isMatching",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.NativeReserve.completedBoundary_isPerfectMatching",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.NativeReserve.completedBoundary_pairwiseDisjoint",
+          "source_line": 104
+        },
+        {
+          "name": "Overfull.NativeReserve.completedBoundary_avoids",
+          "source_line": 134
+        },
+        {
+          "name": "Overfull.NativeReserve.mem_coreMatchingCopies_of_embedded",
+          "source_line": 144
+        },
+        {
+          "name": "Overfull.NativeReserve.completedBoundary_core\u2080_copy_iff",
+          "source_line": 156
+        },
+        {
+          "name": "Overfull.NativeReserve.completedBoundary_core\u2081_copy_iff",
+          "source_line": 169
+        },
+        {
+          "name": "Overfull.NativeReserve.completedBoundary_added_internal",
+          "source_line": 184
+        },
+        {
+          "name": "Overfull.NativeReserve.completedBoundary_pool_eq",
+          "source_line": 198
+        },
+        {
+          "name": "Overfull.NativeReserve.glue_two_core_packings",
+          "source_line": 220
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.CompletionParameters",
+      "path": "Overfull/NativeReserve/CompletionParameters.lean",
+      "sha256": "088fc727be14da251efd2a3f3d3a100bb725a5a60280c017627d1783fa57b10e",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.packing_density_and_horizon",
+          "source_line": 15
+        },
+        {
+          "name": "Overfull.NativeReserve.completion_admissibility_budgets",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_completion_parameters",
+          "source_line": 33
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_completion_setup_parameters",
+          "source_line": 112
+        },
+        {
+          "name": "Overfull.NativeReserve.margin_of_degree_upper",
+          "source_line": 144
+        },
+        {
+          "name": "Overfull.NativeReserve.degree_le_twice_order",
+          "source_line": 153
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.Construction",
+      "path": "Overfull/NativeReserve/Construction.lean",
+      "sha256": "ffc97fd4bfc3be8f291954d6aefdf21c2418eaa5135e82990214546b6730678d",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.patternCopies_familyMultiplicity",
+          "source_line": 20
+        },
+        {
+          "name": "Overfull.NativeReserve.native_boundary_reserve_selection",
+          "source_line": 35
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.CorePacking",
+      "path": "Overfull/NativeReserve/CorePacking.lean",
+      "sha256": "f0df4c447821d47a1eac9bd292ffbb83c22e991ffee01c5a856aeadf44a9e9fe",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.pack_original_core",
+          "source_line": 17
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.CutSafety",
+      "path": "Overfull/NativeReserve/CutSafety.lean",
+      "sha256": "28ac51de4fba919653e7535a8b9d4912db5b37cc3e41c6dfd4a069cd59d7102f",
+      "public_theorem_count": 10,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.cut_toggle",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.NativeReserve.regular_odd_cut_lower",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.NativeReserve.toggle_safe_of_incidence",
+          "source_line": 53
+        },
+        {
+          "name": "Overfull.NativeReserve.whole_core_membership_iff",
+          "source_line": 63
+        },
+        {
+          "name": "Overfull.NativeReserve.whole_cut_core_incidence",
+          "source_line": 71
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_cutIncidence",
+          "source_line": 91
+        },
+        {
+          "name": "Overfull.NativeReserve.toggle_safe_of_preserved_cut",
+          "source_line": 121
+        },
+        {
+          "name": "Overfull.NativeReserve.no_overfull_of_whole_cut_bounds",
+          "source_line": 140
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_whole_toggles_safe",
+          "source_line": 176
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_no_overfull",
+          "source_line": 207
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.DenseSelection",
+      "path": "Overfull/NativeReserve/DenseSelection.lean",
+      "sha256": "ce3f878ca3e26fcd161cd87ef1f824253c80ab31b9ce15b71b2db653ddb38f03",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.denseMultiplicity_le",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.NativeReserve.denseMultiplicity_pos_pool",
+          "source_line": 33
+        },
+        {
+          "name": "Overfull.NativeReserve.dense_discard_bound",
+          "source_line": 45
+        },
+        {
+          "name": "Overfull.NativeReserve.dense_retainedDegree_bounds",
+          "source_line": 85
+        },
+        {
+          "name": "Overfull.NativeReserve.dense_prefix_pool_demand_reserved",
+          "source_line": 97
+        },
+        {
+          "name": "Overfull.NativeReserve.dense_prefix_pool_demand",
+          "source_line": 110
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.Greedy",
+      "path": "Overfull/NativeReserve/Greedy.lean",
+      "sha256": "d2786d6ef64821bf38900fcefe884cf0bfb1eeaa6df00d4e941d42dcb06f0586",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.poolCopies_specialEnds",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.NativeReserve.poolCopies_disjoint_core",
+          "source_line": 93
+        },
+        {
+          "name": "Overfull.NativeReserve.pool_core_incidence_le_error",
+          "source_line": 117
+        },
+        {
+          "name": "Overfull.NativeReserve.poolCopies_pairwiseDisjoint",
+          "source_line": 132
+        },
+        {
+          "name": "Overfull.NativeReserve.compressedBoundary_exists_pool",
+          "source_line": 186
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.NativeCutWeights",
+      "path": "Overfull/NativeReserve/NativeCutWeights.lean",
+      "sha256": "e61eea00516c3fe9b81986bffa284f14276d6e023f9e874e7a842a43acfdc315",
+      "public_theorem_count": 17,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.poolCutIndicator_le_one",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.NativeReserve.poolCopies_cut_uniform",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.NativeReserve.poolCutIndicator_eq_one_iff",
+          "source_line": 88
+        },
+        {
+          "name": "Overfull.NativeReserve.native_pool_cut_card",
+          "source_line": 104
+        },
+        {
+          "name": "Overfull.NativeReserve.native_cut_count_eq_sum_pools",
+          "source_line": 126
+        },
+        {
+          "name": "Overfull.NativeReserve.originalCores_disjoint",
+          "source_line": 158
+        },
+        {
+          "name": "Overfull.NativeReserve.originalCores_disjoint_exceptions",
+          "source_line": 163
+        },
+        {
+          "name": "Overfull.NativeReserve.originalCores_whole",
+          "source_line": 169
+        },
+        {
+          "name": "Overfull.NativeReserve.native_cut_count_eq_demand",
+          "source_line": 185
+        },
+        {
+          "name": "Overfull.NativeReserve.wholeCutDemand_at_sample",
+          "source_line": 199
+        },
+        {
+          "name": "Overfull.NativeReserve.wholeCutDemand_capacity",
+          "source_line": 212
+        },
+        {
+          "name": "Overfull.NativeReserve.even_uncovered_whole_union",
+          "source_line": 228
+        },
+        {
+          "name": "Overfull.NativeReserve.compressedBoundary_whole_cut_parity",
+          "source_line": 255
+        },
+        {
+          "name": "Overfull.NativeReserve.wholeCutDemand_odd_positive",
+          "source_line": 275
+        },
+        {
+          "name": "Overfull.NativeReserve.completed_native_cutOn_eq",
+          "source_line": 291
+        },
+        {
+          "name": "Overfull.NativeReserve.completed_native_cut_count_eq_demand",
+          "source_line": 315
+        },
+        {
+          "name": "Overfull.NativeReserve.native_residual_no_overfull",
+          "source_line": 332
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.PackingConstruction",
+      "path": "Overfull/NativeReserve/PackingConstruction.lean",
+      "sha256": "e6f2d1d4e6f7687b0bb6d7e4365f976e504c52917fd125f23ec886e0f536119a",
+      "public_theorem_count": 11,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.isMatching",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.pairwise_disjoint",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.card_le",
+          "source_line": 44
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.exceptional_degree",
+          "source_line": 47
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.retains_internal_pairs",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.assignedLabel",
+          "source_line": 55
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.uncovered_even",
+          "source_line": 64
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.crossing_card",
+          "source_line": 71
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_boundaryPacking",
+          "source_line": 86
+        },
+        {
+          "name": "Overfull.NativeReserve.linear_boundary_reserve_bounds",
+          "source_line": 100
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_linear_boundary_reserve",
+          "source_line": 110
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.ProtectedPacking",
+      "path": "Overfull/NativeReserve/ProtectedPacking.lean",
+      "sha256": "508e42545b7d9cd6c99586382f1d241a16e100856a0452c990d4faa3b2737848",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.exists_rounded_boundary_reserve",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.reserved_degree",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.reserved_card",
+          "source_line": 47
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.reserved_pool_card",
+          "source_line": 53
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.unreserved_pool_accounting",
+          "source_line": 68
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.unreserved_pool_lower",
+          "source_line": 79
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.ProtectedSelection",
+      "path": "Overfull/NativeReserve/ProtectedSelection.lean",
+      "sha256": "55c714bc777b3e66c3e64b2e8e3bb2e517b02f2ef3c65fdd586834f0806ce024",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.two_core_wholeUnions_card",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.NativeReserve.protectedMultiplicity_le_dense",
+          "source_line": 45
+        },
+        {
+          "name": "Overfull.NativeReserve.protectedMultiplicity_eq_accepted",
+          "source_line": 50
+        },
+        {
+          "name": "Overfull.NativeReserve.protectedMultiplicity_cut_zero",
+          "source_line": 59
+        },
+        {
+          "name": "Overfull.NativeReserve.protected_cut_discard_bound",
+          "source_line": 69
+        },
+        {
+          "name": "Overfull.NativeReserve.protected_retainedDegree_bounds",
+          "source_line": 119
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.Realization",
+      "path": "Overfull/NativeReserve/Realization.lean",
+      "sha256": "73763e6b7be126f22833c6c5c8607ceea03f6f28a93ec767cf92f1bc3d735fc1",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.mem_specialEnds",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.NativeReserve.mem_coreEnds",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.NativeReserve.coreEnds_card_le_two",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.NativeReserve.mem_chosenRound",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.NativeReserve.chosenRound_pairwiseDisjoint",
+          "source_line": 47
+        },
+        {
+          "name": "Overfull.NativeReserve.chosenRound_isMatching",
+          "source_line": 58
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.Residual",
+      "path": "Overfull/NativeReserve/Residual.lean",
+      "sha256": "ebc71049b3cfe6123cbba01359d5053ee461c99d4faee67a117777aa48fbfa8a",
+      "public_theorem_count": 11,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.mem_removedCopies",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.NativeReserve.removed_pool_card",
+          "source_line": 33
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_pool_accounting",
+          "source_line": 48
+        },
+        {
+          "name": "Overfull.NativeReserve.removed_degreeOn",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.NativeReserve.cutOn_eq_inter",
+          "source_line": 75
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_cutSize",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_cut_accounting",
+          "source_line": 90
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_degree_accounting",
+          "source_line": 98
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_regular",
+          "source_line": 116
+        },
+        {
+          "name": "Overfull.NativeReserve.family_card_le_degree",
+          "source_line": 125
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_cut_pool_unchanged",
+          "source_line": 135
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.RetainedCore",
+      "path": "Overfull/NativeReserve/RetainedCore.lean",
+      "sha256": "ce76266f7a6595c8c13b0c83ad55652e142e4307b988f5c2acdf6414e8daedd6",
+      "public_theorem_count": 7,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.packingCopy_survives_iff",
+          "source_line": 37
+        },
+        {
+          "name": "Overfull.NativeReserve.packingRemainderCore_graph",
+          "source_line": 60
+        },
+        {
+          "name": "Overfull.NativeReserve.packingRemainderCore_edgeMap_val",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.NativeReserve.packingRemainderCore_robust",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.NativeReserve.packingRemainderCore_degree_lower",
+          "source_line": 84
+        },
+        {
+          "name": "Overfull.NativeReserve.augmentInCore_removed_iff",
+          "source_line": 100
+        },
+        {
+          "name": "Overfull.NativeReserve.augmentInCoreRemainder_robust",
+          "source_line": 130
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.RoundedPools",
+      "path": "Overfull/NativeReserve/RoundedPools.lean",
+      "sha256": "1e85977d0d361bf97e4a1ef3982958d2a9c69088805b7252a7851e1a5ba2e100",
+      "public_theorem_count": 12,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.poolKind_card",
+          "source_line": 60
+        },
+        {
+          "name": "Overfull.NativeReserve.poolKind_card_le_six",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.NativeReserve.poolDemand_le_one",
+          "source_line": 71
+        },
+        {
+          "name": "Overfull.NativeReserve.crossingDemand_at_sample",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.NativeReserve.compressedBoundary_pool_usage",
+          "source_line": 113
+        },
+        {
+          "name": "Overfull.NativeReserve.compressedBoundary_pool_usage_at_sample",
+          "source_line": 142
+        },
+        {
+          "name": "Overfull.NativeReserve.internalDemand_weight_eq_pool",
+          "source_line": 150
+        },
+        {
+          "name": "Overfull.NativeReserve.exceptionDemand_weight_eq_pool",
+          "source_line": 156
+        },
+        {
+          "name": "Overfull.NativeReserve.poolDemand_weight_capacity",
+          "source_line": 165
+        },
+        {
+          "name": "Overfull.NativeReserve.signatureWeight_mul_poolDemand_le",
+          "source_line": 176
+        },
+        {
+          "name": "Overfull.NativeReserve.prefix_pool_demand_reserved",
+          "source_line": 186
+        },
+        {
+          "name": "Overfull.NativeReserve.prefix_pool_reserve",
+          "source_line": 206
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.Rounding",
+      "path": "Overfull/NativeReserve/Rounding.lean",
+      "sha256": "eadbcd19245523c23687446304d98e1961d69ad08ba114755fe6d3a891b74230",
+      "public_theorem_count": 10,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.reserveSize_le_third",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.NativeReserve.three_mul_reserveSize_le_weight",
+          "source_line": 35
+        },
+        {
+          "name": "Overfull.NativeReserve.reserveSize_le_weight",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.NativeReserve.multiplicity_le_scaled",
+          "source_line": 48
+        },
+        {
+          "name": "Overfull.NativeReserve.multiplicity_le_weight",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.NativeReserve.multiplicity_pos_witness",
+          "source_line": 62
+        },
+        {
+          "name": "Overfull.NativeReserve.prefix_signature_reserve",
+          "source_line": 70
+        },
+        {
+          "name": "Overfull.NativeReserve.accepted_retainedDegree_bounds",
+          "source_line": 86
+        },
+        {
+          "name": "Overfull.NativeReserve.retainedDegree_bounds",
+          "source_line": 103
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_rounded_signature_choice",
+          "source_line": 112
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.Schedule",
+      "path": "Overfull/NativeReserve/Schedule.lean",
+      "sha256": "c02b0c2e5b7420ab2a842131c6e6ce9fa0f2ec0746fb59e1b598bd2f94a372cc",
+      "public_theorem_count": 4,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.boundarySlots_round_card",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.NativeReserve.boundarySlots_pool_card",
+          "source_line": 27
+        },
+        {
+          "name": "Overfull.NativeReserve.boundarySlots_round_pool_card",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_family_avoiding_with_representative_pools",
+          "source_line": 49
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.WeightedPacking",
+      "path": "Overfull/NativeReserve/WeightedPacking.lean",
+      "sha256": "83930fb28d9ab46771f3372058a85c17486a00442ffef190bb79f8dfdb3a8494",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.exists_sample_avoiding",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_disjoint_selected_family",
+          "source_line": 44
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.WeightedSafety",
+      "path": "Overfull/NativeReserve/WeightedSafety.lean",
+      "sha256": "bad515485b63488105b3a003806b025dd077b16802fed153456ad8ab4704c513",
+      "public_theorem_count": 9,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.familyMultiplicity_sum",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.NativeReserve.familyMultiplicity_statistic",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.NativeReserve.familyMultiplicity_pos",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_pattern_pool_accounting",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_pattern_pool_lower",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_pattern_cut_accounting",
+          "source_line": 75
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_weighted_odd_cut",
+          "source_line": 90
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_proposed_cut_dichotomy",
+          "source_line": 114
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_no_overfull_of_pattern_counts",
+          "source_line": 146
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.NativeReserve.BoundaryPacking.assignedLabel",
+    "Overfull.NativeReserve.BoundaryPacking.card_le",
+    "Overfull.NativeReserve.BoundaryPacking.crossing_card",
+    "Overfull.NativeReserve.BoundaryPacking.exceptional_degree",
+    "Overfull.NativeReserve.BoundaryPacking.isMatching",
+    "Overfull.NativeReserve.BoundaryPacking.pairwise_disjoint",
+    "Overfull.NativeReserve.BoundaryPacking.reserved_card",
+    "Overfull.NativeReserve.BoundaryPacking.reserved_degree",
+    "Overfull.NativeReserve.BoundaryPacking.reserved_pool_card",
+    "Overfull.NativeReserve.BoundaryPacking.retains_internal_pairs",
+    "Overfull.NativeReserve.BoundaryPacking.uncovered_even",
+    "Overfull.NativeReserve.BoundaryPacking.unreserved_pool_accounting",
+    "Overfull.NativeReserve.BoundaryPacking.unreserved_pool_lower",
+    "Overfull.NativeReserve.accepted_family_boundary_properties",
+    "Overfull.NativeReserve.accepted_retainedDegree_bounds",
+    "Overfull.NativeReserve.augmentInCoreRemainder_robust",
+    "Overfull.NativeReserve.augmentInCore_removed_iff",
+    "Overfull.NativeReserve.boundarySlots_pool_card",
+    "Overfull.NativeReserve.boundarySlots_round_card",
+    "Overfull.NativeReserve.boundarySlots_round_pool_card",
+    "Overfull.NativeReserve.boundary_assignedLabel_eq_of_pool_counts",
+    "Overfull.NativeReserve.boundary_disjoint_core",
+    "Overfull.NativeReserve.boundary_signature_eq_of_pool_counts",
+    "Overfull.NativeReserve.boundary_whole_cut_eq_of_pool_counts",
+    "Overfull.NativeReserve.chosenRound_isMatching",
+    "Overfull.NativeReserve.chosenRound_pairwiseDisjoint",
+    "Overfull.NativeReserve.completedBoundary_added_internal",
+    "Overfull.NativeReserve.completedBoundary_avoids",
+    "Overfull.NativeReserve.completedBoundary_contains",
+    "Overfull.NativeReserve.completedBoundary_core\u2080_copy_iff",
+    "Overfull.NativeReserve.completedBoundary_core\u2081_copy_iff",
+    "Overfull.NativeReserve.completedBoundary_isMatching",
+    "Overfull.NativeReserve.completedBoundary_isPerfectMatching",
+    "Overfull.NativeReserve.completedBoundary_pairwiseDisjoint",
+    "Overfull.NativeReserve.completedBoundary_pool_eq",
+    "Overfull.NativeReserve.completed_native_cutOn_eq",
+    "Overfull.NativeReserve.completed_native_cut_count_eq_demand",
+    "Overfull.NativeReserve.completed_residual_whole_cutSize",
+    "Overfull.NativeReserve.completed_surviving_whole_cut_eq",
+    "Overfull.NativeReserve.completed_whole_cut_certificates",
+    "Overfull.NativeReserve.completion_admissibility_budgets",
+    "Overfull.NativeReserve.compressedBoundary_exists_pool",
+    "Overfull.NativeReserve.compressedBoundary_pool_usage",
+    "Overfull.NativeReserve.compressedBoundary_pool_usage_at_sample",
+    "Overfull.NativeReserve.compressedBoundary_whole_cut_parity",
+    "Overfull.NativeReserve.coreEdges_disjoint_of_vertices",
+    "Overfull.NativeReserve.coreEnds_card_le_two",
+    "Overfull.NativeReserve.coreFootprint_admissible",
+    "Overfull.NativeReserve.coreFootprint_card",
+    "Overfull.NativeReserve.coreFootprint_card_le_six",
+    "Overfull.NativeReserve.coreFootprint_compl_card",
+    "Overfull.NativeReserve.coreFootprint_load_eq",
+    "Overfull.NativeReserve.coreFootprint_load_le_error",
+    "Overfull.NativeReserve.coreFootprint_parity",
+    "Overfull.NativeReserve.corePart_eq_of_exception_pool_counts",
+    "Overfull.NativeReserve.crossingDemand_at_sample",
+    "Overfull.NativeReserve.cutOn_eq_inter",
+    "Overfull.NativeReserve.cut_toggle",
+    "Overfull.NativeReserve.degree_le_twice_order",
+    "Overfull.NativeReserve.denseMultiplicity_le",
+    "Overfull.NativeReserve.denseMultiplicity_pos_pool",
+    "Overfull.NativeReserve.dense_discard_bound",
+    "Overfull.NativeReserve.dense_prefix_pool_demand",
+    "Overfull.NativeReserve.dense_prefix_pool_demand_reserved",
+    "Overfull.NativeReserve.dense_retainedDegree_bounds",
+    "Overfull.NativeReserve.even_uncovered_whole_union",
+    "Overfull.NativeReserve.exceptionDemand_weight_eq_pool",
+    "Overfull.NativeReserve.exists_accepted_family_avoiding_reserve",
+    "Overfull.NativeReserve.exists_boundaryPacking",
+    "Overfull.NativeReserve.exists_completion_parameters",
+    "Overfull.NativeReserve.exists_completion_setup_parameters",
+    "Overfull.NativeReserve.exists_disjoint_selected_family",
+    "Overfull.NativeReserve.exists_family_avoiding_with_representative_pools",
+    "Overfull.NativeReserve.exists_linear_boundary_reserve",
+    "Overfull.NativeReserve.exists_native_reserve_completion_parameters",
+    "Overfull.NativeReserve.exists_rounded_boundary_reserve",
+    "Overfull.NativeReserve.exists_rounded_signature_choice",
+    "Overfull.NativeReserve.exists_sample_avoiding",
+    "Overfull.NativeReserve.familyMultiplicity_pos",
+    "Overfull.NativeReserve.familyMultiplicity_statistic",
+    "Overfull.NativeReserve.familyMultiplicity_sum",
+    "Overfull.NativeReserve.family_card_le_degree",
+    "Overfull.NativeReserve.glue_two_core_packings",
+    "Overfull.NativeReserve.internalDemand_weight_eq_pool",
+    "Overfull.NativeReserve.linear_boundary_reserve_bounds",
+    "Overfull.NativeReserve.margin_of_degree_upper",
+    "Overfull.NativeReserve.mem_chosenRound",
+    "Overfull.NativeReserve.mem_coreEnds",
+    "Overfull.NativeReserve.mem_coreFootprint",
+    "Overfull.NativeReserve.mem_coreMatchingCopies_of_embedded",
+    "Overfull.NativeReserve.mem_removedCopies",
+    "Overfull.NativeReserve.mem_specialEnds",
+    "Overfull.NativeReserve.multiplicity_le_scaled",
+    "Overfull.NativeReserve.multiplicity_le_weight",
+    "Overfull.NativeReserve.multiplicity_pos_witness",
+    "Overfull.NativeReserve.native_boundary_reserve_selection",
+    "Overfull.NativeReserve.native_cut_count_eq_demand",
+    "Overfull.NativeReserve.native_cut_count_eq_sum_pools",
+    "Overfull.NativeReserve.native_pool_cut_card",
+    "Overfull.NativeReserve.native_residual_no_overfull",
+    "Overfull.NativeReserve.no_overfull_of_whole_cut_bounds",
+    "Overfull.NativeReserve.originalCores_disjoint",
+    "Overfull.NativeReserve.originalCores_disjoint_exceptions",
+    "Overfull.NativeReserve.originalCores_whole",
+    "Overfull.NativeReserve.pack_original_core",
+    "Overfull.NativeReserve.packingCopy_survives_iff",
+    "Overfull.NativeReserve.packingRemainderCore_degree_lower",
+    "Overfull.NativeReserve.packingRemainderCore_edgeMap_val",
+    "Overfull.NativeReserve.packingRemainderCore_graph",
+    "Overfull.NativeReserve.packingRemainderCore_robust",
+    "Overfull.NativeReserve.packing_density_and_horizon",
+    "Overfull.NativeReserve.patternCopies_familyMultiplicity",
+    "Overfull.NativeReserve.poolCopies_cut_uniform",
+    "Overfull.NativeReserve.poolCopies_disjoint_core",
+    "Overfull.NativeReserve.poolCopies_pairwiseDisjoint",
+    "Overfull.NativeReserve.poolCopies_specialEnds",
+    "Overfull.NativeReserve.poolCutIndicator_eq_one_iff",
+    "Overfull.NativeReserve.poolCutIndicator_le_one",
+    "Overfull.NativeReserve.poolDemand_le_one",
+    "Overfull.NativeReserve.poolDemand_weight_capacity",
+    "Overfull.NativeReserve.poolKind_card",
+    "Overfull.NativeReserve.poolKind_card_le_six",
+    "Overfull.NativeReserve.pool_core_incidence_le_error",
+    "Overfull.NativeReserve.prefix_pool_demand_reserved",
+    "Overfull.NativeReserve.prefix_pool_reserve",
+    "Overfull.NativeReserve.prefix_signature_reserve",
+    "Overfull.NativeReserve.protectedMultiplicity_cut_zero",
+    "Overfull.NativeReserve.protectedMultiplicity_eq_accepted",
+    "Overfull.NativeReserve.protectedMultiplicity_le_dense",
+    "Overfull.NativeReserve.protected_cut_discard_bound",
+    "Overfull.NativeReserve.protected_retainedDegree_bounds",
+    "Overfull.NativeReserve.realized_sample_boundary_properties",
+    "Overfull.NativeReserve.regular_odd_cut_lower",
+    "Overfull.NativeReserve.removed_degreeOn",
+    "Overfull.NativeReserve.removed_pool_card",
+    "Overfull.NativeReserve.reserveSize_le_third",
+    "Overfull.NativeReserve.reserveSize_le_weight",
+    "Overfull.NativeReserve.residual_cutIncidence",
+    "Overfull.NativeReserve.residual_cutSize",
+    "Overfull.NativeReserve.residual_cut_accounting",
+    "Overfull.NativeReserve.residual_cut_pool_unchanged",
+    "Overfull.NativeReserve.residual_degree_accounting",
+    "Overfull.NativeReserve.residual_no_overfull",
+    "Overfull.NativeReserve.residual_no_overfull_of_pattern_counts",
+    "Overfull.NativeReserve.residual_pattern_cut_accounting",
+    "Overfull.NativeReserve.residual_pattern_pool_accounting",
+    "Overfull.NativeReserve.residual_pattern_pool_lower",
+    "Overfull.NativeReserve.residual_pool_accounting",
+    "Overfull.NativeReserve.residual_proposed_cut_dichotomy",
+    "Overfull.NativeReserve.residual_regular",
+    "Overfull.NativeReserve.residual_weighted_odd_cut",
+    "Overfull.NativeReserve.residual_whole_toggles_safe",
+    "Overfull.NativeReserve.retainedDegree_bounds",
+    "Overfull.NativeReserve.signatureWeight_mul_poolDemand_le",
+    "Overfull.NativeReserve.three_mul_reserveSize_le_weight",
+    "Overfull.NativeReserve.toggle_safe_of_incidence",
+    "Overfull.NativeReserve.toggle_safe_of_preserved_cut",
+    "Overfull.NativeReserve.two_core_wholeUnions_card",
+    "Overfull.NativeReserve.wholeCutDemand_at_sample",
+    "Overfull.NativeReserve.wholeCutDemand_capacity",
+    "Overfull.NativeReserve.wholeCutDemand_odd_positive",
+    "Overfull.NativeReserve.whole_core_membership_iff",
+    "Overfull.NativeReserve.whole_cut_core_incidence"
+  ]
+}

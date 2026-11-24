@@ -1,0 +1,50 @@
+{
+  "observed_at_utc": "2026-11-24T02:43:06.834897+00:00",
+  "supervisor_started_at_utc": "2026-11-24T02:25:50.542707+00:00",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-u",
+    "/workspace/scratch/7dae4c9bb5a1/overfull-lean/verification/runs/20261124T021500Z/run-verifier.py",
+    "full-01"
+  ],
+  "cwd": "/workspace/scratch/7dae4c9bb5a1/overfull-lean",
+  "attempt": "full-01",
+  "process_status": "completed",
+  "observed_return_code": 0,
+  "observed_child_pid": 5,
+  "started_at_utc": "2026-11-24T02:25:52.165845+00:00",
+  "status": "passed",
+  "exit_code": 0,
+  "candidate_input_hash_count": 716,
+  "finished_at_utc": "2026-11-24T02:43:06.522902+00:00",
+  "all_frozen_inputs_unchanged": true,
+  "fresh_stage_log_observations": {
+    "vizing-source.log": {
+      "bytes": 65,
+      "observed_final_line": [
+        "Vizing source verified: c4fc77be6af1a48a44351234120898ad3cf6b545"
+      ]
+    },
+    "lean-version.log": {
+      "bytes": 106,
+      "observed_final_line": [
+        "Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)"
+      ]
+    },
+    "build.log": {
+      "bytes": 80,
+      "observed_final_line": [
+        "Build completed successfully (3780 jobs)."
+      ]
+    },
+    "axioms.log": {
+      "bytes": 2466119,
+      "observed_final_line": [
+        "OVERFULL_AXIOM_AUDIT_OK 13366"
+      ]
+    }
+  },
+  "verifier_console_bytes": 2466442,
+  "actual_terminal_exit_code": 0,
+  "terminal_observed_at_utc": "2026-11-24T02:43:06.848370+00:00"
+}

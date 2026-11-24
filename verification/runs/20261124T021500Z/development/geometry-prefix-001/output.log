@@ -1,0 +1,54 @@
+⚠ [3377/3378] Built Overfull.NativeTerminal.NativeGeometry (2.3s)
+warning: Overfull/NativeTerminal/NativeGeometry.lean:109:0: automatically included section variable(s) unused in theorem `Overfull.NativeTerminal.residual_assigned_exterior_independent`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✖ [3378/3378] Building Overfull.NativeTerminal.PrefixGeometry (5.3s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/7dae4c9bb5a1/overfull-lean/Overfull/NativeTerminal/PrefixGeometry.lean -o /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/lib/lean/Overfull/NativeTerminal/PrefixGeometry.olean -i /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/lib/lean/Overfull/NativeTerminal/PrefixGeometry.ilean -c /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/ir/Overfull/NativeTerminal/PrefixGeometry.c --setup /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/ir/Overfull/NativeTerminal/PrefixGeometry.setup.json --json
+warning: Overfull/NativeTerminal/PrefixGeometry.lean:22:0: automatically included section variable(s) unused in theorem `Overfull.NativeTerminal.externalCopies_eq_joining_exceptional`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+error: Overfull/NativeTerminal/PrefixGeometry.lean:99:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  externalCopies (residualGraph ?G ?N ?T) ?U₀ ?U₁
+in the target expression
+  image (⇑(twiceResidualEmbedding G N T W S).map) (externalCopies (residualGraph (residualGraph G N T) W S) U₀ U₁) =
+    BoundaryPacking.selectedUnion Q q
+
+V : Type u_1
+E : Type u_2
+J : Type u_4
+K : Type u_5
+inst✝ : Fintype E
+G : Multigraph V E
+U₀ U₁ Z : Finset V
+M : Finset E
+hM : G.IsPerfectMatching M
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+r s : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+q : Fin s → Fin r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+W : K → Finset { e // e ∉ removedCopies N T }
+S : Finset K
+hrem :
+  image Subtype.val
+      (survivingCopies (removedCopies W S)
+        (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) ∪
+          exceptionalCopies (residualGraph G N T) univ Z)) =
+    univ.biUnion fun i => Q.residualBoundary N T (q i)
+⊢ image (⇑(twiceResidualEmbedding G N T W S).map) (externalCopies (residualGraph (residualGraph G N T) W S) U₀ U₁) =
+    BoundaryPacking.selectedUnion Q q
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeTerminal.PrefixGeometry
+error: build failed

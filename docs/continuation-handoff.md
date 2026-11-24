@@ -1,93 +1,124 @@
-# Continuation handoff: native integration and bounded completion
+# Continuation handoff: complete bounded-input factorization
 
-## Exact baseline and evidence
+## Completed assertion and exact baseline
 
-The verified local predecessor is `d2e7b1274d280ef6567cb2b562ec6e94eec2dda0`, exact tree `9850008a20bfd828d8ab9da4c5e8d1bf50240570`, containing
-2,752 committed files. Its unchanged full audit enumerated 12,951 declarations;
-the result has 2,063 completed-result mappings and 670 frozen source/input hashes.
-This run is `20261124T010000Z` in `/workspace/scratch/1368c254067d/overfull-lean`. The actual full command, immutable attempt
-logs, raw audit segments, all input snapshots and supplementary preservation
-report determine the new verification state. New audited counts must be read
-from those genuine results, never inferred from a focused pass or module count.
+This continuation completes **Corollary 4.6**, with both its one-core and
+two-core alternatives, and increases numbered coverage from 47/69 to **48/69**.
+Its original statement hash remains
+`86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26`.
+All 69 source statement hashes and all other 68 assertion records are unchanged.
+The main theorem and 20 other numbered assertions remain incomplete.
 
-The last observed public heads are recorded in `run.json`. Publication of the
-preceding local chain was blocked by the retained automatic review rejection.
-Standing user instructions authorize complete verified sources, private/generated
-declaration names, hashes and genuine diagnostics, but no publication workaround
-may evade that rejection. Actual later public commit/tree/branch readbacks belong
-in separate publication receipts. No branch promotion follows merely from a
-local verified checkpoint or an unreferenced object upload.
+The verified local predecessor is `f557ae03355f14a0441b37283f35186a95aca2d7`,
+exact tree `efe81e946e1ab2d97ac30c6f8103a4a773f3aa6d`, containing 4,321 files,
+13,170 audited declarations, 2,176 completed-result mappings and 696 frozen
+source/input hashes. This worktree is
+`/workspace/scratch/7dae4c9bb5a1/overfull-lean`; the run is
+`verification/runs/20261124T021500Z/`.
 
-## New formal constructions
+Before the new proof verification, the exact preceding local chain
+`af8dca2 → d2e7b12 → f557ae0` was recovered as identical public Git trees at
+`a4b34a84f14deaff118d34d0f0bd8a46be40fdcc →
+498d7378c6b5a2fe126f7dd2e20c3c5798248d20 →
+0f168ca9f2f8a82b6c00e1a7633ec035985b7209`.
+Both `main` and `verified-bipartite-continuation-2026-11-21` were advanced
+without force and independently read back at the last public commit. The
+genuine receipts are `baseline-publication-success.json`. Historical
+automatic-review rejections remain preserved; they are not a current blocker.
+New publication must separately record its exact tree and branch readbacks.
 
-Native weighted odd/even joining palettes derived from actual residual cores; complete paired and unpaired exceptional-copy assembly with exact selected reserve classes; original-core parity and whole-family load bounds; uniform completion of every nonprotected color, leaving a robust r/2-regular residual whose external copies are exactly the selected native reserve; and independent-exterior one-core factorization. These are supporting constructions; final protected-residual factorization and reassembly, full two-core Corollary 4.6, and the main theorem remain unproved.
+## Completed construction
 
-See `docs/native-integration-source.json` and the source-linked semantic review
-for the exact dynamic module inventory and theorem names. The construction now
-produces the native weighted joining palette and half-reserve prescriptions;
-all paired and zero/one/two unpaired exceptional completions; exact external copy
-coverage; old-core parity; uniform support estimates; actual full-family load
-from core deficits; and the selected/protected color and external-remainder
-partition. The universal native prefix theorem chooses `δ, θ, n₀` before the
-host and constructs all `h-r/2` nonprotected perfect matchings. It retains an
-exactly `r/2`-regular residual with robust embedded cores and exact equality of
-all surviving external copies with the selected native reserve union. The
-independent-exterior module constructs a complementary coloring and one-core
-factorization without a supplied complementary coloring or no-overfull condition.
-These conclusions follow from their displayed hypotheses. No terminal two-core
-coloring or full factorization is supplied as an assumed target.
+`Overfull.NativeTerminal.exists_uniform_native_remaining_factorization`
+constructs the entire native residual coloring. It applies the existing
+nonprotected-prefix construction, factors the actual protected residual from
+its exact selected-reserve image, and restores the removed perfect matchings.
 
-## Remaining integration and terminal theorem
+`Overfull.two_core_two_exception_factorization` constructs the reserve and
+first prefix from the original regular non-overfull host and its two robust
+embedded cores. The uniform reserve theorem fixes the surviving expansion
+parameter before the requested surplus tolerance. It then applies the native
+remaining factorization and restores the first prefix. Its companion
+`Overfull.two_core_two_exception_one_factorization` produces exactly the
+degree number of disjoint perfect matchings covering every original copy.
 
-Construct the terminal shore restrictions or contractions, prove their
-independent-exterior and robust-core hypotheses, align shared crossing-copy
-labels, and lift/combine the resulting actual matchings. Terminal recoloring
-need not preserve the selected reserve boundaries as whole color classes; the
-proved prefix preserves their copy union. The independent-exterior theorem supplies a one-core factorization
-ingredient, but it does not supply those two-core modeling and alignment steps.
-The proposed next route is recorded in
-`verification/runs/20261124T010000Z/independent-review/final-protected-route.md`;
-the independent prefix review records its exact source and focused status.
-Keep the selected native reserve union in the actual surviving edge-copy type.
-Then prove the terminal residual factorization and combine it with the already
-constructed prefix. Check exact theorem signatures before claiming the full
-manuscript conclusion.
+`Overfull.bounded_input_factorization` and
+`Overfull.bounded_input_one_factorization` combine the existing one-core and
+new two-core branches under one error tolerance and order threshold. They
+match the two alternatives in the source: one core with at most three exterior
+vertices, or two cores with at most two other vertices. No input coloring,
+reserve, perfect-matching representative, or residual factorization occurs
+in the public theorem's hypotheses.
 
-The full two-core Corollary 4.6, remaining five-exception/final-factorization
-obligations and the main theorem remain unproved. All 69 original assertion
-records and statement hashes remain unchanged; **47 are complete and 22 are
-incomplete**. Only the top-level coverage scope prose may change here.
+The exact residual external-copy image gives a terminal shore cut of size
+zero for even assigned shores and of size equal to the residual degree for
+odd assigned shores. Both shores see the same crossing copies. Assigned
+exceptions meet their own old core only. The optional exceptional pair is a
+closed component of order zero or two.
 
-## Numerical interface and key semantic constraints
+Even shores use actual vertex-and-edge restrictions. Odd shores contract the
+opposite shore to an apex. The smaller old core is embedded exactly, preserving
+degree and robustness. The independent-exterior theorem constructs each shore
+coloring. A common bijection on original crossing copies aligns both odd-shore
+palettes. Gluing proves properness at original vertices. Parallel copies are
+never identified.
 
-Use the actual `D=floor(max(a,h-r))` and `s=r/2`. From `h≥αn/30`, `D≤δn`,
-`δ≤α/3840`, `δ≤εα/720` and `n≥20/ε`, the new theorems prove `128D≤h`, positive
-gap `h-s-32D≥h/4`, capacity `L=(nD/2)/(h-s-32D)+1` and support `6L+4≤εn`.
-The available-color Hall budget remains restricted to its actual palette.
-Whole-family load, including protected colors, is separately bounded by the
-actual core deficit `a`; do not infer a generic global `D` bound from abstract
-reserve-extension data. The half-reserve prefix room uses the explicit rounding
-condition `n≥120/α` and reserve density `r≥αn/30`.
+The final factorization preserves every removed prefix class exactly, but may
+recolor selected reserve stars. It does not assert that each originally
+protected full boundary retains its old color. Corollary 4.6 does not require
+that stronger extension.
 
-## Verification and restart
+## Uniform numerical hierarchy
 
-Preserve the unchanged `Audit.lean`, every prior nonroot source, all previous
-declaration names/owners/axioms, all old mappings and all historical evidence.
-Use only the four reviewed additive verifier edits recorded in
-`verifier-additions.json`. Root imports must be appended after the complete old
-prefix. Regenerate the live source manifest only after the candidate is stable;
-the draft manifest is an inventory, not a verification result.
+The outer reserve range is `α/960`, below its `α/300` bound and the next
+prefix's `α/240` bound. Terminal range is `α/3840`; the prefix's returned
+expansion parameter is reduced to its minimum with that range. Density is
+`α/120`. The actual natural quotient `r/2` meets this density by the reserve
+bound `r≥αn/30` and `n≥120/α`. Shrinking host error below
+`ε_terminal*β` converts it to both core-order bounds; explicit ceiling
+thresholds make both cores sufficiently large. All choices precede the host.
 
-Run focused commands only through this run's `record-command.py`, retaining
-failed attempts faithfully. Use Lean 4.24.0 at
+The original-host proof derives `a≥0` from regularity and a nonempty embedded
+core, then uses `a+1` as the positive reserve deficit. The combined statement
+sets `γ=min α (min β 1)`, allows arbitrary positive fixed density bounds,
+and requires the explicit sufficiently small range `τ≤γ/16`.
+
+## Verification and publication
+
+Read `verification/results.json`, this run's `verification-command.json`,
+`preservation.json` and `final-report.md` for actual full-verification counts.
+A focused build alone is not a whole-project audit. Every genuine failed and
+successful development command remains preserved.
+
+The stock `Audit.lean`, all old nonroot proof sources, old declaration names,
+owners and axiom sets, prior completed mappings, and historical evidence are
+preserved. Only `propext`, `Classical.choice` and `Quot.sound` are permitted.
+The verifier registers the new maps and promotes only 4.6: count 48, an explicit
+positive theorem-and-statement-hash gate replacing its old incompleteness
+guard, with every other guard retained. The checker preserves all 69 statement
+identities and all 68 other assertion records. The manuscript-source metadata
+changes only its top-level completed count. Exact permitted deltas are recorded.
+
+Use Lean 4.24.0 at
 `/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin`
-and mathlib `f897ebcf72cd16f89ab4577d0c826cd14afaafc7`. The full command is
-`python3 -u verification/runs/20261124T010000Z/supervise-verifier.py full-01`.
-It stays attached to one observed child process and streams actual heartbeats
-every 30 seconds. Await its actual exit; do not infer process completion from
-a different tool namespace or stale session handle. Before launching, finish
-live docs/root/manifest and archive all focused evidence. Do not edit frozen
-inputs while the full verifier runs. After success, run the strict supplementary
-checker with a genuine command/output receipt, then the local-only packaging
-script. Publication is a distinct authorized action subject to the retained
-automatic-review decision and exact remote readback.
+with mathlib `f897ebcf72cd16f89ab4577d0c826cd14afaafc7`.
+Focused commands use `record-command.py UNIQUE-NAME lake build --wfail MODULE`.
+Run the complete verifier attached through
+`python3 -u verification/runs/20261124T021500Z/supervise-verifier.py full-01`;
+await its actual exit, then run `record-preservation.py` and local-only
+`package-verified.py`. Do not alter frozen inputs during a full run.
+Uploaded objects or a local commit do not establish branch publication.
+
+## Next mathematical work
+
+Corollary 4.6 is no longer unfinished. The broader fixed-pattern Lemma 4.4 and
+its five-exception Corollary 4.5 still need their full construction; the present
+native reserve geometry assumes at most two exceptions. General four-label
+compatible-circuit selection, terminal Proposition 4.16, remaining dense and
+bipartite factorization constructions, the critical average-degree input and
+the main theorem remain open in the formalization.
+
+The next continuation should inspect the latest remote handoff and coverage,
+then target a concrete missing assertion. Reuse the completed bounded-input
+theorem in the three-core terminal argument where its actual hypotheses can
+be derived. Never count a composition that supplies an unproved target input.

@@ -1,0 +1,22 @@
+{
+  "checked_at_utc": "2026-11-24T02:17:19.099398+00:00",
+  "kind": "infrastructure_setup_checks_not_lean_verification",
+  "baseline_commit": "f557ae03355f14a0441b37283f35186a95aca2d7",
+  "baseline_tree": "efe81e946e1ab2d97ac30c6f8103a4a773f3aa6d",
+  "baseline_tracked_file_count": 4321,
+  "baseline_audited_declaration_count": 13170,
+  "baseline_completed_result_mapping_count": 2176,
+  "baseline_frozen_input_count": 696,
+  "syntax_checked_scripts": [
+    "package-verified.py",
+    "prepare-docs.py",
+    "record-command.py",
+    "record-final.py",
+    "record-preservation.py",
+    "run-verifier.py",
+    "supervise-verifier.py"
+  ],
+  "four_exact_verifier_edits_apply_uniquely": true,
+  "live_verifier_changed": false,
+  "lean_build_or_audit_run": false
+}

@@ -1,0 +1,85 @@
+✖ [3331/3331] Building Overfull.NativeTerminal.ReserveGeometry (3.1s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/7dae4c9bb5a1/overfull-lean/Overfull/NativeTerminal/ReserveGeometry.lean -o /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/lib/lean/Overfull/NativeTerminal/ReserveGeometry.olean -i /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/lib/lean/Overfull/NativeTerminal/ReserveGeometry.ilean -c /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/ir/Overfull/NativeTerminal/ReserveGeometry.c --setup /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/ir/Overfull/NativeTerminal/ReserveGeometry.setup.json --json
+error: Overfull/NativeTerminal/ReserveGeometry.lean:25:22: unexpected token '\'; expected term
+error: Overfull/NativeTerminal/ReserveGeometry.lean:34:23: unexpected token '\'; expected term
+error: Overfull/NativeTerminal/ReserveGeometry.lean:50:61: Unknown identifier `hM`
+error: Overfull/NativeTerminal/ReserveGeometry.lean:51:4: Unknown identifier `h01`
+error: Overfull/NativeTerminal/ReserveGeometry.lean:51:8: Unknown identifier `h0Z`
+error: Overfull/NativeTerminal/ReserveGeometry.lean:51:12: Unknown identifier `h1Z`
+error: Overfull/NativeTerminal/ReserveGeometry.lean:51:16: Unknown identifier `hcover`
+error: Overfull/NativeTerminal/ReserveGeometry.lean:51:23: Unknown identifier `hZ`
+error: Overfull/NativeTerminal/ReserveGeometry.lean:59:6: Invalid rewrite argument: Expected an equality or iff proof or definition name, but `?m.66` is a value of type
+  ?m.65
+error: Overfull/NativeTerminal/ReserveGeometry.lean:67:39: Unknown identifier `hM`
+error: Overfull/NativeTerminal/ReserveGeometry.lean:66:52: unsolved goals
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+U₀ U₁ Z : Finset V
+M : Finset E
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+i : Fin r
+⊢ G.cutOn (Q.boundary i) (corePart G M Z U₀) = G.cutOn (Q.boundary i) (corePart G M Z U₁)
+error: Overfull/NativeTerminal/ReserveGeometry.lean:74:6: Invalid rewrite argument: Expected an equality or iff proof or definition name, but `?m.46` is a value of type
+  ?m.45
+error: Overfull/NativeTerminal/ReserveGeometry.lean:81:27: Unknown identifier `hM`
+error: Overfull/NativeTerminal/ReserveGeometry.lean:80:38: unsolved goals
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+U₀ U₁ Z : Finset V
+M : Finset E
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+i : Fin r
+⊢ #(G.cutOn (Q.boundary i) (corePart G M Z U₀)) = #(corePart G M Z U₀) % 2
+error: Overfull/NativeTerminal/ReserveGeometry.lean:88:32: unexpected token '\'; expected term
+error: Overfull/NativeTerminal/ReserveGeometry.lean:116:2: tauto failed to solve some goals.
+error: Overfull/NativeTerminal/ReserveGeometry.lean:116:2: unsolved goals
+case h.mp.inl.h.right
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+U₀ U₁ Z : Finset V
+M : Finset E
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+s : ℕ
+q : Fin s → Fin r
+A : Finset V
+e : E
+w✝ : Fin s
+h✝ : e ∈ Q.boundary (q w✝)
+left✝ : G.firstEnd e ∉ A
+right✝ : G.secondEnd e ∈ A
+⊢ (G.firstEnd e ∈ A) ≠ (G.secondEnd e ∈ A)
+
+case h.mp.inr.h.right
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+U₀ U₁ Z : Finset V
+M : Finset E
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+s : ℕ
+q : Fin s → Fin r
+A : Finset V
+e : E
+w✝ : Fin s
+h✝ : e ∈ Q.boundary (q w✝)
+left✝ : G.firstEnd e ∈ A
+right✝ : G.secondEnd e ∉ A
+⊢ (G.firstEnd e ∈ A) ≠ (G.secondEnd e ∈ A)
+error: Overfull/NativeTerminal/ReserveGeometry.lean:134:39: Unknown identifier `hM`
+error: Overfull/NativeTerminal/ReserveGeometry.lean:134:13: `simp` made no progress
+error: Overfull/NativeTerminal/ReserveGeometry.lean:144:29: Unknown identifier `hM`
+error: Overfull/NativeTerminal/ReserveGeometry.lean:144:4: `simp` made no progress
+error: Overfull/NativeTerminal/ReserveGeometry.lean:149:50: Unknown identifier `hM`
+error: Overfull/NativeTerminal/ReserveGeometry.lean:149:30: `simp` made no progress
+error: Overfull/NativeTerminal/ReserveGeometry.lean:155:32: unexpected token '\'; expected term
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeTerminal.ReserveGeometry
+error: build failed

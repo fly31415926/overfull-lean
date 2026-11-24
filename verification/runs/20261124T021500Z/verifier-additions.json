@@ -1,0 +1,30 @@
+[
+  {
+    "old": "                          (\"native_integration\", \"native-integration-source.json\")):\n",
+    "new": "                          (\"native_integration\", \"native-integration-source.json\"),\n                          (\"native_terminal\", \"native-terminal-source.json\")):\n"
+  },
+  {
+    "old": "    # Every first-party mathematical file must be included in the library build.\n",
+    "new": "    terminal_source, terminal_modules, terminal_public_modules = extension_maps[\"native_terminal\"]\n    if (terminal_source[\"kind\"] != \"complete_assertion_source_mapping\"\n            or terminal_source[\"manuscript_number\"] != \"4.6\"\n            or terminal_source[\"manuscript_label\"] != \"three:lem:bounded-input\"\n            or terminal_source[\"statement_sha256\"] != \"86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26\"\n            or terminal_source[\"numbered_assertions_completed\"] != 1\n            or terminal_source[\"public_theorems\"] != [\n                \"Overfull.bounded_input_factorization\", \"Overfull.bounded_input_one_factorization\"]\n            or not set(terminal_source[\"public_theorems\"]) <= set(terminal_public_modules)):\n        raise SystemExit(\"The terminal closure does not identify the exact complete Corollary 4.6.\")\n\n    # Every first-party mathematical file must be included in the library build.\n"
+  },
+  {
+    "old": "                    \"native_integration\": \"native-integration\"}[key]\n",
+    "new": "                    \"native_integration\": \"native-integration\",\n                    \"native_terminal\": \"native-terminal\"}[key]\n"
+  },
+  {
+    "old": "        \"native_integration_declaration_map\": extension_evidence[\"native_integration\"],\n",
+    "new": "        \"native_integration_declaration_map\": extension_evidence[\"native_integration\"],\n        \"native_terminal_declaration_map\": extension_evidence[\"native_terminal\"],\n"
+  },
+  {
+    "old": "COMPLETED_NUMBERED_ASSERTION_COUNT = 47\n",
+    "new": "COMPLETED_NUMBERED_ASSERTION_COUNT = 48\n"
+  },
+  {
+    "old": "    for number in (\"2.24\", \"4.4\", \"4.5\", \"4.6\", \"4.16\", \"6.1\", \"6.2\", \"6.3\"):\n",
+    "new": "    for number in (\"2.24\", \"4.4\", \"4.5\", \"4.16\", \"6.1\", \"6.2\", \"6.3\"):\n"
+  },
+  {
+    "old": "    ordinary_assertion = next(a for a in coverage[\"numbered_assertions\"] if a[\"number\"] == \"4.2\")\n",
+    "new": "    bounded_assertion = next(a for a in coverage[\"numbered_assertions\"] if a[\"number\"] == \"4.6\")\n    bounded_source_assertion = next(a for a in few_source[\"source_assertions\"] if a[\"number\"] == \"4.6\")\n    if (not bounded_assertion[\"full_assertion_verified\"]\n            or bounded_assertion[\"status\"] != \"fully_verified\"\n            or bounded_assertion.get(\"lean_theorems\") != terminal_source[\"public_theorems\"]\n            or not set(bounded_assertion[\"lean_theorems\"]) <= audited_names\n            or bounded_assertion[\"statement_sha256\"] != terminal_source[\"statement_sha256\"]\n            or bounded_assertion[\"statement_sha256\"] != bounded_source_assertion[\"statement_sha256\"]):\n        raise SystemExit(\"Full bounded-input factorization is not mapped to the exact complete Corollary 4.6.\")\n    ordinary_assertion = next(a for a in coverage[\"numbered_assertions\"] if a[\"number\"] == \"4.2\")\n"
+  }
+]

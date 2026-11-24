@@ -1,0 +1,796 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "numbered_assertions_completed": 0,
+  "manuscript_number": null,
+  "statement_sha256": null,
+  "module_count": 5,
+  "public_theorem_count": 41,
+  "verified_declaration_count": 73,
+  "includes_private_and_generated_proofs": true,
+  "proof_declaration_map": [
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.AssignedParts.exceptionCorePool.eq_1",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.AsymmetricHall",
+      "name": "Overfull.CircuitPatterns.exists_equiv_of_asymmetric_conflicts",
+      "source_path": "Overfull/WeightedPalette/AsymmetricHall.lean",
+      "source_sha256": "89f1818188bf9677304fa264dbf4ae0f2e22e8079353bf73630bace9dc3425ea"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.AsymmetricHall",
+      "name": "Overfull.CircuitPatterns.exists_equiv_of_asymmetric_conflicts._proof_1_1",
+      "source_path": "Overfull/WeightedPalette/AsymmetricHall.lean",
+      "source_sha256": "89f1818188bf9677304fa264dbf4ae0f2e22e8079353bf73630bace9dc3425ea"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.AsymmetricHall",
+      "name": "Overfull.CircuitPatterns.exists_equiv_of_asymmetric_conflicts._proof_1_2",
+      "source_path": "Overfull/WeightedPalette/AsymmetricHall.lean",
+      "source_sha256": "89f1818188bf9677304fa264dbf4ae0f2e22e8079353bf73630bace9dc3425ea"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.AsymmetricHall",
+      "name": "Overfull.CircuitPatterns.exists_star_equiv_of_conflict_bounds",
+      "source_path": "Overfull/WeightedPalette/AsymmetricHall.lean",
+      "source_sha256": "89f1818188bf9677304fa264dbf4ae0f2e22e8079353bf73630bace9dc3425ea"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.AsymmetricHall",
+      "name": "Overfull.CircuitPatterns.star_hall_margin",
+      "source_path": "Overfull/WeightedPalette/AsymmetricHall.lean",
+      "source_sha256": "89f1818188bf9677304fa264dbf4ae0f2e22e8079353bf73630bace9dc3425ea"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.AsymmetricHall",
+      "name": "Overfull.CircuitPatterns.star_hall_margin._proof_1_1",
+      "source_path": "Overfull/WeightedPalette/AsymmetricHall.lean",
+      "source_sha256": "89f1818188bf9677304fa264dbf4ae0f2e22e8079353bf73630bace9dc3425ea"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Extension",
+      "name": "Overfull.NativeReserve.exists_weighted_palette_extension",
+      "source_path": "Overfull/WeightedPalette/Extension.lean",
+      "source_sha256": "c01cbd4e88b1800b5d5cc495ba2e7348686972e9e633e7f7330e2d78e39411ac"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Extension",
+      "name": "Overfull.NativeReserve.exists_weighted_palette_extension._proof_1_1",
+      "source_path": "Overfull/WeightedPalette/Extension.lean",
+      "source_sha256": "c01cbd4e88b1800b5d5cc495ba2e7348686972e9e633e7f7330e2d78e39411ac"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Extension",
+      "name": "Overfull.NativeReserve.exists_weighted_palette_extension._proof_1_2",
+      "source_path": "Overfull/WeightedPalette/Extension.lean",
+      "source_sha256": "c01cbd4e88b1800b5d5cc495ba2e7348686972e9e633e7f7330e2d78e39411ac"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Extension",
+      "name": "Overfull.NativeReserve.exists_weighted_palette_extension._proof_1_5",
+      "source_path": "Overfull/WeightedPalette/Extension.lean",
+      "source_sha256": "c01cbd4e88b1800b5d5cc495ba2e7348686972e9e633e7f7330e2d78e39411ac"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Extension",
+      "name": "Overfull.NativeReserve.exists_weighted_palette_extension._proof_1_6",
+      "source_path": "Overfull/WeightedPalette/Extension.lean",
+      "source_sha256": "c01cbd4e88b1800b5d5cc495ba2e7348686972e9e633e7f7330e2d78e39411ac"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Extension",
+      "name": "Overfull.NativeReserve.exists_weighted_palette_extension._simp_1_3",
+      "source_path": "Overfull/WeightedPalette/Extension.lean",
+      "source_sha256": "c01cbd4e88b1800b5d5cc495ba2e7348686972e9e633e7f7330e2d78e39411ac"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Extension",
+      "name": "Overfull.NativeReserve.exists_weighted_palette_extension._simp_1_4",
+      "source_path": "Overfull/WeightedPalette/Extension.lean",
+      "source_sha256": "c01cbd4e88b1800b5d5cc495ba2e7348686972e9e633e7f7330e2d78e39411ac"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.mem_overloadedPalettes",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.mem_overloadedPalettes._simp_1",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.notMem_overloadedPalettes",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.notMem_overloadedPalettes._simp_1",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.overloadedPalettes.eq_1",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.overloadedPalettes_card_le",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.overloadedPalettes_card_le._proof_1_1",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.overloadedPalettes_card_le_of_subset",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.overloadedPalettes_card_le_thirteen",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.overloadedPalettes_mul_le",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.overloadedPalettes_mul_le._proof_1_1",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight.eq_1",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight_congr",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight_empty",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight_insert",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight_insert_update",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight_mono",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight_sum",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.paletteWeight_update_of_notMem",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_hall_bounds",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_hall_bounds._proof_1_1",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_item_bound",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_item_bound._proof_1_1",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_protected_gap",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_protected_gap._proof_1_1",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_protected_margin",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_protected_margin._proof_1_1",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_threshold",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Loads",
+      "name": "Overfull.NativeReserve.weighted_palette_threshold._proof_1_1",
+      "source_path": "Overfull/WeightedPalette/Loads.lean",
+      "source_sha256": "9581f824693839be24c8dbc880516d76019238412700253bc3704273fb0fa1b4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.exceptionCorePool_card_le_degree",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.exceptionCorePool_eq_edgesTo",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Grouping",
+      "name": "Overfull.WeightedPalette.exists_star_weighted_matching_grouping",
+      "source_path": "Overfull/WeightedPalette/Grouping.lean",
+      "source_sha256": "3f1d6ff5e30f6f3fd7b20274177b3c9376c0215dacbce3e01e33cc552b187944"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Grouping",
+      "name": "Overfull.WeightedPalette.exists_star_weighted_matching_grouping._proof_1_1",
+      "source_path": "Overfull/WeightedPalette/Grouping.lean",
+      "source_sha256": "3f1d6ff5e30f6f3fd7b20274177b3c9376c0215dacbce3e01e33cc552b187944"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.Grouping",
+      "name": "Overfull.WeightedPalette.exists_star_weighted_matching_grouping._proof_1_2",
+      "source_path": "Overfull/WeightedPalette/Grouping.lean",
+      "source_sha256": "3f1d6ff5e30f6f3fd7b20274177b3c9376c0215dacbce3e01e33cc552b187944"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.Grouping",
+      "name": "Overfull.WeightedPalette.groupedCopies_eq_seed_on_protected_color",
+      "source_path": "Overfull/WeightedPalette/Grouping.lean",
+      "source_sha256": "3f1d6ff5e30f6f3fd7b20274177b3c9376c0215dacbce3e01e33cc552b187944"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.mem_starBlockedCopies",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.mem_starBlockedCopies._simp_1",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.mem_starBlockedCopies._simp_1_2",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starBlockedCopies.eq_1",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starBlockedCopies_biUnion",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starBlockedCopies_eq_edgesTo",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starBlockedCopies_eq_edgesTo._simp_1_1",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starBlockedCopies_eq_edgesTo._simp_1_2",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starBlockedCopies_subset",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight.eq_1",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_biUnion_le",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_eq_sum_parallel",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_eq_sum_parallel._simp_1_2",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_eq_sum_parallel._simp_1_3",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_eq_sum_parallel._simp_1_4",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_groupedCopies_le",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_le_four_mul",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_le_inter_support_mul",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_le_six_mul",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.starWeight_le_support_mul",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.sum_starWeight_eq_sum_support_load",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.sum_starWeight_le_mul_degree_bound",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.sum_starWeight_le_of_degreeOn",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.WeightedPalette.StarWeights",
+      "name": "Overfull.WeightedPalette.sum_starWeight_le_of_support_load",
+      "source_path": "Overfull/WeightedPalette/StarWeights.lean",
+      "source_sha256": "d0e5473bdba64dc65c08bb83fad14d3f14b5549603f4c4bff31be91d0aa8ae2f"
+    }
+  ]
+}

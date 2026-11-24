@@ -1,0 +1,633 @@
+{
+  "schema_version": 1,
+  "kind": "complete_assertion_source_mapping",
+  "baseline_commit": "f557ae03355f14a0441b37283f35186a95aca2d7",
+  "baseline_tree": "efe81e946e1ab2d97ac30c6f8103a4a773f3aa6d",
+  "baseline_publication_status": "verified_local_predecessor_publication_separately_recorded",
+  "numbered_assertions_completed": 1,
+  "main_theorem_verified": false,
+  "scope": "Complete Corollary 4.6 for even regular multigraphs with no overfull set and either one robust core with at most three exceptional vertices or two robust cores with at most two exceptional vertices. Fixed positive degree and core-order densities and robust parameters precede one common positive core-error tolerance and order threshold. The conclusion constructs a coloring and an exact partition of all original edge copies into k perfect matchings. No representative matching, reserve, complementary coloring or residual factorization is assumed. Full fixed-pattern Lemma 4.4, five-exception Corollary 4.5, terminal Proposition 4.16 and the main theorem remain unproved.",
+  "manuscript_number": "4.6",
+  "manuscript_label": "three:lem:bounded-input",
+  "statement_sha256": "86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26",
+  "public_theorems": [
+    "Overfull.bounded_input_factorization",
+    "Overfull.bounded_input_one_factorization"
+  ],
+  "review": "docs/native-terminal-semantic-review.md",
+  "proof_map": "docs/native-terminal-verification.md",
+  "module_count": 16,
+  "public_theorem_count": 96,
+  "modules": [
+    {
+      "module": "Overfull.NativeTerminal.BoundedInput",
+      "path": "Overfull/NativeTerminal/BoundedInput.lean",
+      "sha256": "feb995a3d83bcf5862502d1dafae2509368064a46b74a1d3a7895e147d7fbc20",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.bounded_input_factorization",
+          "source_line": 20
+        },
+        {
+          "name": "Overfull.bounded_input_one_factorization",
+          "source_line": 74
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.ColoringGlue",
+      "path": "Overfull/NativeTerminal/ColoringGlue.lean",
+      "sha256": "9e1630206ec0b3b91ba9f80bdf558786d5cd83237b1fa30d4ee89db2a21e0437",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.exists_glued_retained_coloring",
+          "source_line": 21
+        },
+        {
+          "name": "Overfull.NativeTerminal.boundary_of_two_retained",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.NativeTerminal.no_overlap_of_closed_shore",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.NativeTerminal.exists_glued_three_shore_coloring",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.NativeTerminal.exists_glued_closed_shores_coloring",
+          "source_line": 123
+        },
+        {
+          "name": "Overfull.NativeTerminal.exists_glued_contracted_shores_coloring",
+          "source_line": 142
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.Factorization",
+      "path": "Overfull/NativeTerminal/Factorization.lean",
+      "sha256": "ad4e6d1a9480e81b5555b29952f07f3c98e40ea475977b33bbb00abdc88fa2d0",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.exists_uniform_two_shore_factorization",
+          "source_line": 23
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.NativeCompletion",
+      "path": "Overfull/NativeTerminal/NativeCompletion.lean",
+      "sha256": "e31750cc22797674da98987585df87e6cf11ea5eb561ea908a3a7b85f451d5c5",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.exists_uniform_native_remaining_factorization",
+          "source_line": 24
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.NativeFactorization",
+      "path": "Overfull/NativeTerminal/NativeFactorization.lean",
+      "sha256": "fe133211b48696c8fc940e36e421e42d42f0c41d6c5fc61d67a03dca120f8583",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.exists_uniform_native_image_factorization",
+          "source_line": 20
+        },
+        {
+          "name": "Overfull.NativeTerminal.exists_uniform_native_residual_factorization",
+          "source_line": 76
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.NativeGeometry",
+      "path": "Overfull/NativeTerminal/NativeGeometry.lean",
+      "sha256": "84fbd28c5ed999ec4679488760d64feff1e9861543dad4d98255bad82d3862d7",
+      "public_theorem_count": 10,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.first_assigned_cut_subset_external",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.NativeTerminal.second_assigned_cut_subset_external",
+          "source_line": 36
+        },
+        {
+          "name": "Overfull.NativeTerminal.pair_assigned_cut_subset_external",
+          "source_line": 45
+        },
+        {
+          "name": "Overfull.NativeTerminal.residual_first_cutSize",
+          "source_line": 59
+        },
+        {
+          "name": "Overfull.NativeTerminal.residual_shore_cuts_eq",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.NativeTerminal.residual_second_cutSize",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.NativeTerminal.residual_pair_cut_empty",
+          "source_line": 87
+        },
+        {
+          "name": "Overfull.NativeTerminal.residual_assigned_star_incidence",
+          "source_line": 94
+        },
+        {
+          "name": "Overfull.NativeTerminal.residual_assigned_exterior_independent",
+          "source_line": 110
+        },
+        {
+          "name": "Overfull.NativeTerminal.residual_geometry",
+          "source_line": 122
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.PairColoring",
+      "path": "Overfull/NativeTerminal/PairColoring.lean",
+      "sha256": "6f16b5a28677e04d86f2cc7c100b9a92f303095600916c315b91ca645578d52f",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.retained_pair_colorable",
+          "source_line": 21
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.PrefixGeometry",
+      "path": "Overfull/NativeTerminal/PrefixGeometry.lean",
+      "sha256": "022233b05fa156d5acea17a23f43d595d435f34ca03cc821018df440afaa8149",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.externalCopies_eq_joining_exceptional",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.NativeTerminal.externalCopies_residual",
+          "source_line": 64
+        },
+        {
+          "name": "Overfull.NativeTerminal.twiceResidual_external_image",
+          "source_line": 85
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.Reassembly",
+      "path": "Overfull/NativeTerminal/Reassembly.lean",
+      "sha256": "5bcfbdcb465a8c8af0756fa5d61421821464a17e2a800edd7f84406821be5250",
+      "public_theorem_count": 11,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.prefixLabel_injective",
+          "source_line": 27
+        },
+        {
+          "name": "Overfull.NativeTerminal.residualLabel_injective",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.NativeTerminal.prefixLabel_ne_residualLabel",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.NativeTerminal.prefixIndex_mem",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.NativeTerminal.prefixIndex_eq",
+          "source_line": 55
+        },
+        {
+          "name": "Overfull.NativeTerminal.reassembledColoring_prefix",
+          "source_line": 94
+        },
+        {
+          "name": "Overfull.NativeTerminal.reassembledColoring_residual",
+          "source_line": 105
+        },
+        {
+          "name": "Overfull.NativeTerminal.reassembledColorClass_prefix",
+          "source_line": 115
+        },
+        {
+          "name": "Overfull.NativeTerminal.reassembledColorClass_residual",
+          "source_line": 136
+        },
+        {
+          "name": "Overfull.NativeTerminal.exists_reassembled_coloring",
+          "source_line": 158
+        },
+        {
+          "name": "Overfull.NativeTerminal.exists_reassembled_one_factorization",
+          "source_line": 176
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.ReserveGeometry",
+      "path": "Overfull/NativeTerminal/ReserveGeometry.lean",
+      "sha256": "78a74c4ce651d4920cfbd107f900b9de408c5c347b04edf3a1144b971f8d8954",
+      "public_theorem_count": 15,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.corePart_sdiff_subset_exceptions",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.NativeTerminal.corePart_sdiff_card_le",
+          "source_line": 33
+        },
+        {
+          "name": "Overfull.NativeTerminal.BoundaryPacking.boundary_assigned_parts",
+          "source_line": 48
+        },
+        {
+          "name": "Overfull.NativeTerminal.BoundaryPacking.boundary_first_cut",
+          "source_line": 58
+        },
+        {
+          "name": "Overfull.NativeTerminal.BoundaryPacking.boundary_shore_cuts_eq",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.NativeTerminal.BoundaryPacking.boundary_pair_cut",
+          "source_line": 74
+        },
+        {
+          "name": "Overfull.NativeTerminal.BoundaryPacking.boundary_first_cut_card",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.NativeTerminal.BoundaryPacking.boundary_otherEnd_mem_core",
+          "source_line": 88
+        },
+        {
+          "name": "Overfull.NativeTerminal.BoundaryPacking.mem_selectedUnion",
+          "source_line": 109
+        },
+        {
+          "name": "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_cut",
+          "source_line": 114
+        },
+        {
+          "name": "Overfull.NativeTerminal.BoundaryPacking.selected_cuts_disjoint",
+          "source_line": 127
+        },
+        {
+          "name": "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_first_cut_card",
+          "source_line": 139
+        },
+        {
+          "name": "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_shore_cuts_eq",
+          "source_line": 150
+        },
+        {
+          "name": "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_pair_cut",
+          "source_line": 157
+        },
+        {
+          "name": "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_otherEnd_mem_core",
+          "source_line": 167
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.ResidualGeometry",
+      "path": "Overfull/NativeTerminal/ResidualGeometry.lean",
+      "sha256": "5c2ec18f8955d78ab8c4136ab7fd6350f62ff331a1a4e299c24d5600bb5b78e9",
+      "public_theorem_count": 12,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.CopyEmbedding.firstEnd",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.NativeTerminal.CopyEmbedding.secondEnd",
+          "source_line": 33
+        },
+        {
+          "name": "Overfull.NativeTerminal.CopyEmbedding.otherEnd",
+          "source_line": 37
+        },
+        {
+          "name": "Overfull.NativeTerminal.CopyEmbedding.incident",
+          "source_line": 40
+        },
+        {
+          "name": "Overfull.NativeTerminal.mem_externalCopies",
+          "source_line": 52
+        },
+        {
+          "name": "Overfull.NativeTerminal.CopyEmbedding.mem_cut_iff",
+          "source_line": 61
+        },
+        {
+          "name": "Overfull.NativeTerminal.CopyEmbedding.mem_external_iff",
+          "source_line": 65
+        },
+        {
+          "name": "Overfull.NativeTerminal.CopyEmbedding.cut_image_of_external_image",
+          "source_line": 70
+        },
+        {
+          "name": "Overfull.NativeTerminal.CopyEmbedding.cutSize_of_external_image",
+          "source_line": 91
+        },
+        {
+          "name": "Overfull.NativeTerminal.CopyEmbedding.cut_empty_of_external_image",
+          "source_line": 100
+        },
+        {
+          "name": "Overfull.NativeTerminal.whole_shore_cut_subset_external",
+          "source_line": 111
+        },
+        {
+          "name": "Overfull.NativeTerminal.external_of_incident_outside",
+          "source_line": 129
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.ShoreCore",
+      "path": "Overfull/NativeTerminal/ShoreCore.lean",
+      "sha256": "ea772797df6982976c25e0e7ea315fb15c30421afc4424ecb06efe183c5fd8b4",
+      "public_theorem_count": 16,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.inducedCoreEquiv_val",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.NativeTerminal.inducedCoreEquiv_symm_val",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.NativeTerminal.inducedCoreEdgeMap_val",
+          "source_line": 44
+        },
+        {
+          "name": "Overfull.NativeTerminal.inducedCore_degree",
+          "source_line": 62
+        },
+        {
+          "name": "Overfull.NativeTerminal.inducedCore_robust",
+          "source_line": 68
+        },
+        {
+          "name": "Overfull.NativeTerminal.inl_mem_contractedCoreVertices",
+          "source_line": 77
+        },
+        {
+          "name": "Overfull.NativeTerminal.apex_not_mem_contractedCoreVertices",
+          "source_line": 81
+        },
+        {
+          "name": "Overfull.NativeTerminal.vertexMap_mem_contractedCoreVertices",
+          "source_line": 85
+        },
+        {
+          "name": "Overfull.NativeTerminal.contractedCoreVertices_card",
+          "source_line": 89
+        },
+        {
+          "name": "Overfull.NativeTerminal.contractedCoreVertices_compl_card",
+          "source_line": 94
+        },
+        {
+          "name": "Overfull.NativeTerminal.contractedCoreEquiv_apply_val",
+          "source_line": 114
+        },
+        {
+          "name": "Overfull.NativeTerminal.contractedCoreEquiv_symm_map",
+          "source_line": 117
+        },
+        {
+          "name": "Overfull.NativeTerminal.contractedCoreEdgeMap_val",
+          "source_line": 134
+        },
+        {
+          "name": "Overfull.NativeTerminal.contractedCore_degree",
+          "source_line": 153
+        },
+        {
+          "name": "Overfull.NativeTerminal.contractedCore_robust",
+          "source_line": 160
+        },
+        {
+          "name": "Overfull.NativeTerminal.contractedHost_independent_exterior",
+          "source_line": 167
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.ShoreFactorization",
+      "path": "Overfull/NativeTerminal/ShoreFactorization.lean",
+      "sha256": "349ad511138f99647bee467e4601e569f3941637e241e14b3a8593b210a2dc06",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.shore_geometry_of_star_incidence",
+          "source_line": 27
+        },
+        {
+          "name": "Overfull.NativeTerminal.exists_uniform_shore_coloring",
+          "source_line": 53
+        },
+        {
+          "name": "Overfull.NativeTerminal.exists_uniform_shore_coloring_of_star_incidence",
+          "source_line": 119
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.ShoreHost",
+      "path": "Overfull/NativeTerminal/ShoreHost.lean",
+      "sha256": "7166fce2560f38c4f1dc556d96aa88d6e40a976d5130bbc4213ccd5c0fb5279b",
+      "public_theorem_count": 8,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.inducedHost_incident",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.NativeTerminal.inducedHost_edge_map",
+          "source_line": 37
+        },
+        {
+          "name": "Overfull.NativeTerminal.internal_of_incident_of_cut_empty",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.NativeTerminal.inducedHost_degree_of_cut_empty",
+          "source_line": 65
+        },
+        {
+          "name": "Overfull.NativeTerminal.inducedHost_regular",
+          "source_line": 71
+        },
+        {
+          "name": "Overfull.NativeTerminal.inducedCoreVertices_card",
+          "source_line": 117
+        },
+        {
+          "name": "Overfull.NativeTerminal.inducedCoreVertices_compl_card",
+          "source_line": 121
+        },
+        {
+          "name": "Overfull.NativeTerminal.inducedHost_independent_exterior",
+          "source_line": 124
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.TerminalParameters",
+      "path": "Overfull/NativeTerminal/TerminalParameters.lean",
+      "sha256": "9566212de0baa3de831709cc1579cdbb679eceb8a4d933b157a15bb38c8896bb",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.terminal_robust_range",
+          "source_line": 17
+        },
+        {
+          "name": "Overfull.NativeTerminal.terminal_core_error",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.NativeTerminal.exists_uniform_terminal_parameters",
+          "source_line": 35
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.TwoCore",
+      "path": "Overfull/NativeTerminal/TwoCore.lean",
+      "sha256": "a07e1b9d6e4a9107db7d75ad369199021bd957c07b05722faa1ddb1d5e77e12a",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.two_core_two_exception_factorization",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.two_core_two_exception_one_factorization",
+          "source_line": 89
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.NativeTerminal.BoundaryPacking.boundary_assigned_parts",
+    "Overfull.NativeTerminal.BoundaryPacking.boundary_first_cut",
+    "Overfull.NativeTerminal.BoundaryPacking.boundary_first_cut_card",
+    "Overfull.NativeTerminal.BoundaryPacking.boundary_otherEnd_mem_core",
+    "Overfull.NativeTerminal.BoundaryPacking.boundary_pair_cut",
+    "Overfull.NativeTerminal.BoundaryPacking.boundary_shore_cuts_eq",
+    "Overfull.NativeTerminal.BoundaryPacking.mem_selectedUnion",
+    "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_cut",
+    "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_first_cut_card",
+    "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_otherEnd_mem_core",
+    "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_pair_cut",
+    "Overfull.NativeTerminal.BoundaryPacking.selectedUnion_shore_cuts_eq",
+    "Overfull.NativeTerminal.BoundaryPacking.selected_cuts_disjoint",
+    "Overfull.NativeTerminal.CopyEmbedding.cutSize_of_external_image",
+    "Overfull.NativeTerminal.CopyEmbedding.cut_empty_of_external_image",
+    "Overfull.NativeTerminal.CopyEmbedding.cut_image_of_external_image",
+    "Overfull.NativeTerminal.CopyEmbedding.firstEnd",
+    "Overfull.NativeTerminal.CopyEmbedding.incident",
+    "Overfull.NativeTerminal.CopyEmbedding.mem_cut_iff",
+    "Overfull.NativeTerminal.CopyEmbedding.mem_external_iff",
+    "Overfull.NativeTerminal.CopyEmbedding.otherEnd",
+    "Overfull.NativeTerminal.CopyEmbedding.secondEnd",
+    "Overfull.NativeTerminal.apex_not_mem_contractedCoreVertices",
+    "Overfull.NativeTerminal.boundary_of_two_retained",
+    "Overfull.NativeTerminal.contractedCoreEdgeMap_val",
+    "Overfull.NativeTerminal.contractedCoreEquiv_apply_val",
+    "Overfull.NativeTerminal.contractedCoreEquiv_symm_map",
+    "Overfull.NativeTerminal.contractedCoreVertices_card",
+    "Overfull.NativeTerminal.contractedCoreVertices_compl_card",
+    "Overfull.NativeTerminal.contractedCore_degree",
+    "Overfull.NativeTerminal.contractedCore_robust",
+    "Overfull.NativeTerminal.contractedHost_independent_exterior",
+    "Overfull.NativeTerminal.corePart_sdiff_card_le",
+    "Overfull.NativeTerminal.corePart_sdiff_subset_exceptions",
+    "Overfull.NativeTerminal.exists_glued_closed_shores_coloring",
+    "Overfull.NativeTerminal.exists_glued_contracted_shores_coloring",
+    "Overfull.NativeTerminal.exists_glued_retained_coloring",
+    "Overfull.NativeTerminal.exists_glued_three_shore_coloring",
+    "Overfull.NativeTerminal.exists_reassembled_coloring",
+    "Overfull.NativeTerminal.exists_reassembled_one_factorization",
+    "Overfull.NativeTerminal.exists_uniform_native_image_factorization",
+    "Overfull.NativeTerminal.exists_uniform_native_remaining_factorization",
+    "Overfull.NativeTerminal.exists_uniform_native_residual_factorization",
+    "Overfull.NativeTerminal.exists_uniform_shore_coloring",
+    "Overfull.NativeTerminal.exists_uniform_shore_coloring_of_star_incidence",
+    "Overfull.NativeTerminal.exists_uniform_terminal_parameters",
+    "Overfull.NativeTerminal.exists_uniform_two_shore_factorization",
+    "Overfull.NativeTerminal.externalCopies_eq_joining_exceptional",
+    "Overfull.NativeTerminal.externalCopies_residual",
+    "Overfull.NativeTerminal.external_of_incident_outside",
+    "Overfull.NativeTerminal.first_assigned_cut_subset_external",
+    "Overfull.NativeTerminal.inducedCoreEdgeMap_val",
+    "Overfull.NativeTerminal.inducedCoreEquiv_symm_val",
+    "Overfull.NativeTerminal.inducedCoreEquiv_val",
+    "Overfull.NativeTerminal.inducedCoreVertices_card",
+    "Overfull.NativeTerminal.inducedCoreVertices_compl_card",
+    "Overfull.NativeTerminal.inducedCore_degree",
+    "Overfull.NativeTerminal.inducedCore_robust",
+    "Overfull.NativeTerminal.inducedHost_degree_of_cut_empty",
+    "Overfull.NativeTerminal.inducedHost_edge_map",
+    "Overfull.NativeTerminal.inducedHost_incident",
+    "Overfull.NativeTerminal.inducedHost_independent_exterior",
+    "Overfull.NativeTerminal.inducedHost_regular",
+    "Overfull.NativeTerminal.inl_mem_contractedCoreVertices",
+    "Overfull.NativeTerminal.internal_of_incident_of_cut_empty",
+    "Overfull.NativeTerminal.mem_externalCopies",
+    "Overfull.NativeTerminal.no_overlap_of_closed_shore",
+    "Overfull.NativeTerminal.pair_assigned_cut_subset_external",
+    "Overfull.NativeTerminal.prefixIndex_eq",
+    "Overfull.NativeTerminal.prefixIndex_mem",
+    "Overfull.NativeTerminal.prefixLabel_injective",
+    "Overfull.NativeTerminal.prefixLabel_ne_residualLabel",
+    "Overfull.NativeTerminal.reassembledColorClass_prefix",
+    "Overfull.NativeTerminal.reassembledColorClass_residual",
+    "Overfull.NativeTerminal.reassembledColoring_prefix",
+    "Overfull.NativeTerminal.reassembledColoring_residual",
+    "Overfull.NativeTerminal.residualLabel_injective",
+    "Overfull.NativeTerminal.residual_assigned_exterior_independent",
+    "Overfull.NativeTerminal.residual_assigned_star_incidence",
+    "Overfull.NativeTerminal.residual_first_cutSize",
+    "Overfull.NativeTerminal.residual_geometry",
+    "Overfull.NativeTerminal.residual_pair_cut_empty",
+    "Overfull.NativeTerminal.residual_second_cutSize",
+    "Overfull.NativeTerminal.residual_shore_cuts_eq",
+    "Overfull.NativeTerminal.retained_pair_colorable",
+    "Overfull.NativeTerminal.second_assigned_cut_subset_external",
+    "Overfull.NativeTerminal.shore_geometry_of_star_incidence",
+    "Overfull.NativeTerminal.terminal_core_error",
+    "Overfull.NativeTerminal.terminal_robust_range",
+    "Overfull.NativeTerminal.twiceResidual_external_image",
+    "Overfull.NativeTerminal.vertexMap_mem_contractedCoreVertices",
+    "Overfull.NativeTerminal.whole_shore_cut_subset_external",
+    "Overfull.bounded_input_factorization",
+    "Overfull.bounded_input_one_factorization",
+    "Overfull.two_core_two_exception_factorization",
+    "Overfull.two_core_two_exception_one_factorization"
+  ]
+}

@@ -1,0 +1,49 @@
+✔ [3440/3441] Built Overfull.NativeTerminal.TerminalParameters (2.8s)
+✖ [3441/3441] Building Overfull.NativeTerminal.ShoreFactorization (37s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/7dae4c9bb5a1/overfull-lean/Overfull/NativeTerminal/ShoreFactorization.lean -o /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/lib/lean/Overfull/NativeTerminal/ShoreFactorization.olean -i /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/lib/lean/Overfull/NativeTerminal/ShoreFactorization.ilean -c /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/ir/Overfull/NativeTerminal/ShoreFactorization.c --setup /workspace/scratch/7dae4c9bb5a1/overfull-lean/.lake/build/ir/Overfull/NativeTerminal/ShoreFactorization.setup.json --json
+error: Overfull/NativeTerminal/ShoreFactorization.lean:82:6: Application type mismatch: The argument
+  inducedCore_robust C hUA ν τ hrob
+has type
+  @IsRobustExpander { x // x ∈ inducedCoreVertices A U } (Finset.Subtype.fintype (inducedCoreVertices A U))
+    (fun a b =>
+      @Subtype.instDecidableEq { x // x ∈ A } (Membership.mem (inducedCoreVertices A U))
+        (fun a b => a.instDecidableEq b) a b)
+    (inducedCore C hUA).graph (fun a b => propDecidable ((inducedCore C hUA).graph.Adj a b)) ν τ
+but is expected to have type
+  @IsRobustExpander { x // x ∈ inducedCoreVertices A U } (Finset.Subtype.fintype (inducedCoreVertices A U))
+    (fun a b =>
+      @Subtype.instDecidableEq { x // x ∈ A } (Membership.mem (inducedCoreVertices A U))
+        (fun a b => propDecidable (a = b)) a b)
+    (inducedCore C hUA).graph (fun a b => propDecidable ((inducedCore C hUA).graph.Adj a b)) ν τ
+in the application
+  hfactor { x // x ∈ A } { x // x ∈ G.internalEdges A } (inducedHost G A) (inducedCoreVertices A U) (inducedCore C hUA)
+    k a ?m.265 ?m.266 ?m.267 (inducedHost_regular G A k hcut hregular) ?m.271 ?m.272 (inducedCore_robust C hUA ν τ hrob)
+error: Overfull/NativeTerminal/ShoreFactorization.lean:99:7: (deterministic) timeout at `whnf`, maximum number of heartbeats (800000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/NativeTerminal/ShoreFactorization.lean:92:10: (deterministic) timeout at `«tactic execution»`, maximum number of heartbeats (800000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/NativeTerminal/ShoreFactorization.lean:93:10: (deterministic) timeout at `«tactic execution»`, maximum number of heartbeats (800000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/NativeTerminal/ShoreFactorization.lean:95:10: (deterministic) timeout at `«tactic execution»`, maximum number of heartbeats (800000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/NativeTerminal/ShoreFactorization.lean:97:8: (deterministic) timeout at `«tactic execution»`, maximum number of heartbeats (800000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeTerminal.ShoreFactorization
+error: build failed
