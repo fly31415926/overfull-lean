@@ -1,0 +1,606 @@
+{
+  "repository_full_name": "fly31415926/overfull-lean",
+  "base_tree_sha": "b3363366151d79de46e15e1c055a4fe06621138d",
+  "tree_elements": [
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e017f4cb7d4a8de3d97b10544910039a69a2e44"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/CompatibleCircuits/ThreeVertexDeletion.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0dd7793493df90ca9f80dc11255029dfe1c57af"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/CompatibleCircuits/ThreeVertexFlow.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71f16c98b4d1da630565d316f7c07b0f23742173"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/CompatibleCircuits/TwoOddDecomposition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89c7b6f05c1451bce71cc60dba91b516651ffa69"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/CompatibleCircuits/TwoOddQuotient.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e06883f632adbb33b612e7856a3b0118657966bf"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0a147db14337fdc7bc445adab830bf6daa71c86"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b91a9ac9f534a5b1965130ae2e22b36862bc07bf"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7e85b53ff3946322be7d361daf293bf5060e0a5"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/CompatibleCircuits/Virtual.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cecd427882f2a7fb7e6d1036684fb48c4f109c4e"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/CompatibleCircuits/VirtualPartition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92d7fa9607bad2c42b65d8c49de8316a3742fad1"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Compression/Labels.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0354edb9427d0dd6d3d582c60793b5a042cb815e"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Compression/Matching.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f99899314a18d9c124d3993fb7d0a1e8b2392c34"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Compression/Parity.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4f0805d01b8699b625749939335eac3eee21c81"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Compression/SelectedEdges.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d32ab12166e03178ab9fcdaf5a8c05788fc5e5ee"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/CriticalMultigraph.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8feeccaf845cb43e36b94a6467a38780af5e5f8"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/CutCounting.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3805fb1f76b40c10919baf7a5689c186dd24ee2"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/BalanceRepair.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e686773803ef971814324a9c4583eea884af70df"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/BalanceRepair/Cancellation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "334bde33267fbb9a94cc94e85711907194b8e7ae"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/BalanceRepair/Graph.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "202689fb90999c59cfdcd110c4a3e1ecfe6f7494"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/BalanceRepair/Model.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3ff9c82785f8d51adb13ec7d0e225061121e166"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/BalanceRepair/Routing.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b11cfb6c4d3e69c9ec422afc9211b00abb0ecb4"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/BalanceRepairBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cd1a29a5105773d95b7045f766c281d594144e5"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/CycleAbsorber.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bfc95c33a1ad304faa59528adde71d724c25e48"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/Encoding.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "656841e944a2a2e189bb3a9519cc77c6563aec47"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/Encoding/Coloring.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cd77bf132c9863ee15af93119687b2246284178"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/Encoding/Counting.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2875d873492b8793c65d8d8394dc41914cff52c"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/Encoding/Decomposition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17c209cd47ccc3e29d35d6ad277478a43f4ed6d8"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/Encoding/Model.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a64b71fcaabe00857a2c4f343ed4a73d648e82c5"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/FiniteAbsorber.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38606cd7820b524b26b59b7ea37eaa4a4a8b2eeb"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/FiniteAbsorberAssembly.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13233d0887b2a4b1f5f45f95e9a860c817c15a6e"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/FiniteAbsorberCycles.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b133cdfe76c96766304db7c7779ee13683a2e4e0"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/FiniteAbsorberEmbedding.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "faf771b87cd835598609ced55028432cf7104222"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/FiniteAbsorberFamily.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "628ec9cde476dc55be9098b98954c16f76906ab4"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/FiniteAbsorberGadgets.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f0d9ae55589d59fd68fda3b3b5cb3027423e324"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/FiniteAbsorberRemainders.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f16a989de1d3d937ab260793c5f6eaf92dfa1140"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/FiniteAbsorberSubgraph.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f16c6a53404eae1f2cf5f4fed259a00d3ee13b62"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/FractionalTriangles.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28e03c773909ff4b1c93dcb2f63e5bff6b90fa40"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/GeometricCorrection.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8037747393e81da55d68f192dabccc54728dadbc"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/LinkFlows.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98981952abddfa2592e5cdb9cec574d2853c9e0d"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/LinkPacking/Candidates.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48c8c90ba44bb7385f8aef59db88d896051587bb"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/LinkPacking/Feasible.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8888dd4a9230c202921af91c52b28102c0498d8a"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/LinkPacking/History.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4eab1c70488265610602af26cb788fe790e8ff76"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/LinkPacking/Load.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a6b23029cfbf2ba07d324ac180bed91d724791a"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/LinkPacking/LocalProbability.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af07c43792629a05abbbc8e61a502f44425b7542"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/LinkPacking/Packing.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72463871a19fe93941c94bbe8eb693e30d8d917e"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/LinkPacking/Parameters.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50213ab76ee16e22089343cf831817f646f284da"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/LinkPacking/Theorem.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d62553c08f1d3e8b18af0ab5857b47c771ef8811"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/LinkPacking/Tripartite.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e63d0af475ccdbf06d3b1f4b01f82132094c01fb"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/Reserve.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "633fd023c67e9e18d854a126c1fd12cedbc9de84"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/Reserve/Estimates.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d75e6b6041a50a73232ecc9f4ff5766a0df43bf"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/Reserve/Flow.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09d0df6e0c52528af17fd9038f87f1d71ecadefe"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/Reserve/Graph.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ac292bac54bf066619a9707011ee236dde30aa1"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/SignedFlow.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a3e2464431f4aa5b2ce3d151e0c4d4aaef261eb"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/TriangleDecomposition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7875f5ddbb13b5b0c2f3bb8720a905fbe60c9862"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/TripartiteGraph.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e91d0ccdda847a7ea9e0edf163f9958a24f008d5"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/TripartiteTriangleBridge.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0756e3f3b13d534aa5f4e806064058b8b484944d"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Dense/UnequalFlow.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c73b5d9a161b63fd8fb89a19d701185389bb5221"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ExceptionalPalette/EvenBudget.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a744078dd4039c92c78f233512b4bf9683a3a54"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ExceptionalPalette/EvenColors.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b62741413f42362210c7d66f09f148a89747948f"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ExceptionalPalette/EvenNative.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e1a2c639bcfe99997c7e00381435e91d8fabd8a"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ExceptionalPalette/PairAssigned.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "040871fbe500bf10aff772e4fca271a845789005"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ExceptionalPalette/PairColoring.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4375829e1e45ddb4613ec2af7496004627850247"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ExceptionalPalette/PairExtension.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "161d2c609fe3329c79a287d0c0b9fc1fc7618b49"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ExceptionalPalette/PairFree.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "907f0405cb9e723a327349e825afdc9ab5fc3914"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e7fc1fc56fe115d809455ba2f0620679665d4b9"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "652f90558b34c50c082d2632731a1cfe5d198cf5"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ExceptionalPalette/ReserveNative.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13bd9003215287c48d48e3278afbbdb18b167e81"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/External/FiniteCirculation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecebcf762e7b413fa35d69966a7a0c73dbeb95a8"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/External/PerfectBMatching.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61a9a4b3b7a4b083719cc8d181c79004d743906d"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/FewExceptions/Complement.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe5af3cca967d42afceb10d4afd09a3eb9472627"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/FewExceptions/Factorization.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6b83ebf6ad0f90f1d7035f7dcabd9b494f2f31e"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForbiddenSetWitness.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40c3c02909b32e9eb365ddbca1a192def95a9762"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForceMatching.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1bc66bb24badfcf54990408182563026581a3b8"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForceMatching/Adaptive.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eba85f9cdf158a117da584cabe8f21318ce92e67"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForceMatching/Assembly.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "874de84d4c8c9a422cef51be0afb52ea90104427"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForceMatching/CoreCompletion.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "125044d6ae6b5a29a9d2224d720106db8fe1186a"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForceMatching/Cuts.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d79932083fde0b57c88a59b6b1f8779c721887eb"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForceMatching/Family.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fc41c790d49e4621d15430d79c2e9f346590f67"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForceMatching/Parameters.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9704ec325a6113e1e83c95d3c1804719fd7c3406"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForceMatching/Probability.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b4f076598278ca50415a43600d5e8982c89f9ed"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForceMatching/Residual.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5b65b0a9d8b9fd0305908d285a0d4d23abb2283"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForceMatching/SafeCompletion.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4a8fe3d376f50fa726a0f3a72a0837115b2186d"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/Adaptive.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e11a5036400b7ab98ba03f84d4485a6c49142d09"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/Assignment.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "750c27777e3c08b485b8310c11b828091ff0dc37"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/ColorClasses.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34ffee08e00ce719c704696868bc7aeb4e938848"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/Completion.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cf63fdeb940293acb1d4cfd7864d263685ffdfc"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/Concatenation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "648f769f8a0dee73b670aa5b943f40e58d238f6d"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/ConfiguredEpoch.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39c02a338f5e12c60df9edf5a41ded578fd58810"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/Epoch.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8983ae38d3ab67779171b98037eacef98ac51c7"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/EpochConclusion.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55c2f151cc38acd3c16f0f967d95de3329c435d7"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/EpochParameters.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25ed799080078b03e9b64e79432c67e596634d6e"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/EpochState.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aed89fea150945c387a59ccebd1a6e7ac52bd040"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/FinalCount.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9a2a3275d2a4fbd0d2d4635cb0426c4426e1b3d"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/GlobalParameters.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23f8d3fa2c5b687d46d2ae066e5c3c6453062408"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/Incidence.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45e9d729de7549fe46cbe802a8854ba41b3bed8b"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/Minority.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "688a8ff6b81cfa4c065d45538f098d8b8ee61b81"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/PackingSchedule.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "698d63732a6346b50189dae926490f3d10c0555c"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/Phase.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15a34cf2c1ea6ee8a85e6f6583e5f1224ed7a9f0"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/PhaseConclusion.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17865673af318d05c9d570af70d246b29e3a4490"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/ForeignEdges/PrefixParameters.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b445bb690c5e7b7e9dcb98445c29cb1fc82605e"
+    }
+  ]
+}

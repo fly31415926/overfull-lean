@@ -1,0 +1,35 @@
+{
+  "kind": "native_git_proof_readback",
+  "expected_commit": "33941c5eebe9fb470f7b0f2c4350b787bf04b5fe",
+  "started_at_utc": "2026-11-24T13:25:09.984646+00:00",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "fetch",
+        "--no-tags",
+        "origin",
+        "33941c5eebe9fb470f7b0f2c4350b787bf04b5fe"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.217532595999728,
+      "stdout": "",
+      "stderr": "From https://github.com/fly31415926/overfull-lean\n * branch            33941c5eebe9fb470f7b0f2c4350b787bf04b5fe -> FETCH_HEAD\n"
+    },
+    {
+      "command": [
+        "git",
+        "ls-remote",
+        "origin",
+        "refs/heads/main",
+        "refs/heads/verified-bipartite-continuation-2026-11-21"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.636558812000658,
+      "stdout": "33941c5eebe9fb470f7b0f2c4350b787bf04b5fe\trefs/heads/main\n33941c5eebe9fb470f7b0f2c4350b787bf04b5fe\trefs/heads/verified-bipartite-continuation-2026-11-21\n",
+      "stderr": ""
+    }
+  ],
+  "finished_at_utc": "2026-11-24T13:25:18.838757+00:00",
+  "passed": true
+}

@@ -1,0 +1,606 @@
+{
+  "repository_full_name": "fly31415926/overfull-lean",
+  "base_tree_sha": "1bdf0248dd3abf5d60873437eb84f12590df1f76",
+  "tree_elements": [
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/BoundedInput.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7449e10cdc5258325a88e3317b4b61243e940788"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/ColoringGlue.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38ae81c332f4b68356636596bc50611e900c566b"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/Factorization.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c31fb59e016e158c14535644d43181d160f51014"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/NativeCompletion.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7eddb63cc4c1044a8282e111045eca4bc05d0b4"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/NativeFactorization.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8b3ca8dfc4ffd8335bd72cadaeba45d2e4b2728"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/NativeGeometry.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75f9223cc75bba332cc697ceaacd0773f73a932a"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/PairColoring.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1365a1b965a95ae7ca486dd0b856ab4763a7cc35"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/PrefixGeometry.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6300a030e8762a3ff0fc49a313958644c7ba83c5"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/Reassembly.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b4f0c7e5e1ab850c562ddc3c3dd7507fd2cbb67"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/ReserveGeometry.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ec5542ba5d554ce1239c29ef74b653f268a862e"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/ResidualGeometry.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5d65a0673f4661580d01a87b209fbcae9139963"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/ShoreCore.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adf0f46c40e9224275c3aa73530a85a4caab112d"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/ShoreFactorization.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dcdfa3f95121040bf302b5de73c289011a750cd"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/ShoreHost.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8965db33b1d4f4ede62e662ebaa11560559d5b21"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/TerminalParameters.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbb527f4a29b8202f1a6e8bf73fe8d29b3465e8a"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeTerminal/TwoCore.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8d6d647f5f5ef57e164b2b2843065055789ce08"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeWeighted/CoreBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc67c7fccda587b3c295dcb707e56028231ede18"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeWeighted/EvenNative.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f32b9400b467a07ded1499b4de8be547bb04ae0"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeWeighted/NativePalette.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be5b815b7a3996090da709237735742d52350806"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeWeighted/OddNative.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adcf0fd9df35a4e68d95d1e571630c97381509d1"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/NativeWeighted/WeightedJoining.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1b9c34f7c5b9185562a5f58c57d4eb68b2db5c3"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OneCore/ApexChoices.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6471fdc4e9ae56566d2cf4288f446d00d18fa27"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OneCore/Complement.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b07be0b6acc7519d6d82730cd5b5390dc33eb6f"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OneCore/Cuts.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a57abdda9e1327da77a54c61d292c1f37a060a41"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OneCore/Factorization.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2403000b1ecc96810db8cc0eef3fffd02e016a56"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OneCore/MovedNeighbors.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b902cda2a04e44ba8b2191666623ad205f03195"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OneCore/NeighborPairing.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ea0995b5c6e234cddcc52c889174aad052f4918"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OneCore/Reduction.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b34d53d85e4989d0773ca2c91f6e1a4ced9fbb0"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OneCore/ResidualShores.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c6331a24771da3df6e4179fa471cb2dae4b6517"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6098f46a6872f7d1ad100c7812a17906533af88b"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/Assembly.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61b8a42b667193f6696d7fea099e369bbdd7e015"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/BoundedCutReserve.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbbe6c84b6bf4ee1dc6f41cfd5df9ffad8b28679"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/ColorRepair.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46f422f974a19ed40cf9225e75ac3d1c7994676b"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/CutReserve.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ade48ff2f8fac2f38450d2cc93d8ac421b5ce20"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/CutReserveBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b2bb6bf56b548fd7c3e9e2877576a4be88126d2"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/ExteriorSelection.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9f56a11ff2358f5f6cf05b7f485fac8b17c5c89"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08f00c5fd26f4fa0cb4fe73183b3c7d6527d74b3"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/FirstHalfBounded.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9683d326fb1f61e0f325e5686a0d075af3ded5b5"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/FirstHalfData.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aafb99958901ff17120713caf6887e14e3cbbba2"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/Full.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "042c1f79ed7724f7336d0cf651f86efed47e5df7"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/Geometry.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5754f5fb978c686136d4306025eeb5438e50fd2"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/MatchingBridge.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d906c9805bd7fd489f7f3c9f63bb26f8e5ab4a89"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/Palette.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "753272b025bc608b9397616a3bc84ed8add43423"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/Parity.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "686213342741f29e0dca12c0ce0539893055150c"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/Reduction.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc5fdc0edffd1d4983e2f2ce8f1e2c1318d017a9"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/ReductionBounded.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fb4be405e893bbd63a040216b46f72d665ebb3d"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/Residual.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d4eff794874a857b175fce39e7ac9733e4f2c9e"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/ResidualColoring.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "febe86e9e0b72772c05ff97368a0f9bd920f94bc"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/ResidualComplement.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1541e1df50d4add5921808eaf2e6f20eec6e48c5"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/ResidualCore.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5e31b7f38634fc2a8234741afcf199ee8be7a3a"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/ResidualGeometry.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a895c917255047be0774ca9f6a27ac59692b78a"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/ResidualInterface.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "272adbedff11ae4562b97b0d5c4fee8564b20036"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/ResidualInternal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "196b7c0cb7de227adfd98a63b08c776bf280ae31"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryFactorization/UniformColorRepair.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b8d9918804d03b53a7a4293973856a2d012893c"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryMatchingCompletion.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a1ddd86350bce9d69bb231338965db31c113946"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryPacking.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28d0e34615fe630fe3518a91a06d2af4ce42226d"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryPackingBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76b5e04b967f4ccb9f2d2fed0fc99206beeff6cf"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryPackingDeficiency.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70ad0b1f769bbb2e5d6cc8d6b9844910c87528f1"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryPackingInitial.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6187da3b1657409cc3acf29e0c369f8b2beb8b4"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryPackingParameters.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "505f87b857df7075edbd98372cb97421e1c08dcf"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryPackingPrefix.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0502b53f27e76e27a36bb47bc31417014237374"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryPackingRound.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c907839e4b20881753b31b5cb34653e343435b3"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryPackingStrategy.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9eaa5fd5a5822469f1e1d3148ef1b1a2166a0494"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryPackingWorking.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27b518f6df8e00e46d72aff849df670aa215cd13"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryRandomReserve.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05b1d65e763ad9b422ee3925e50445d88b2463f9"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryRandomReserveDegrees.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14994c7fe7fffa82a4384ce198400ae2a58206dc"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryRandomReserveSides.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40f0be60b97cd622e2f995593d74888bd7eacb9c"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OrdinaryRobustStability.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7ccbc2539aea87d424fd3db32b48b34425f7dc6"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/OverfullSubgraphs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "431f400a162c9a3ec1eb6450d39f195d97749564"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/PairedCut/BalancedFootprints.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3118ccfdf320603dff1bc9e238d611cab7441f02"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/PairedCut/FromClusters.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f662ce8aff9a635cdf7576a3bde567b4d51f934"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/PairedCut/Full.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7957751cbe4b76d06f85278fe9f791ef0f121e37"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/PairedCut/Labels.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44e6eaf311c4b679804b6f98d58433c20966ef66"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/PairedCut/Lifting.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec3aee42a119f5f039f9ecbbea562cab66fd6980"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/PairedCut/Matching.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f42d67ee3eabe6b4337369fc190507f3a76fbb08"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/PairedCut/Quantitative.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "229eca64dbb8afc09766e649d0225e19bb383386"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/PairedCut/QuantitativeSampling.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "543ec1c28636c20ce47cdd5acd0d622bf5fd178f"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/PairedCut/Regularity.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a38ab32ba2b6bac0dce1b912d399a7c8638fa23"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/PairedCut/Sampling.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a0f241f180c98334c110ed2955ac6d512b437a2"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/PairedCut/Sides.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e571d985e9ff07cf0d249ad9f9126fac967451a0"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/PairedCut/Uniform.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fea029a9c2fbe215bb473e0e4629d896f82b39f4"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/Absorption.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15adbdabfe4abd7788ad226d58d310223cbb7887"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/Assigned.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "580b6d93deee30e1b0c1cc19d048b69be0c0efbd"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/AssignedCuts.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c10bb3f4f2be831a34fd2f12868c002ac0480c8"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/BetweenSupply.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88eb4843ad7da5a9e7207af8be0f1b5389e24a05"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/Boundary.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "835cca24a041f101e43d47399874a7e12005c0d1"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/BoundaryRealization.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e6e2d9ecee5629374fec273457231e9f37980ae"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/Capacity.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5011073eaf8c2a8dc3a8d1b0922e71cebccb3a49"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/CompletedCuts.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98c6c2abfd5fe7adb408ac6d47878d9879cde888"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/Completion.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94c49b04e05b2fff90c39b0aa7cf3ecf79e8fa9a"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/Compression.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2285ac29ec6be4dc270b2f24fcef17e910009444"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/Cuts.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e29a6b5e53d883951e3c2010a35d26f1e1845809"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/Distribution.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6097c19204cdd9277c927e1ae323d99341d7786a"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/Encoding.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2e9b14059233beb77981dc75ba29d47c1642cf9"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/Forest.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2131d4e874aa601daa6866ab13b361b6326e6a8b"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/Frequent.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f03a6e89444ec39c6be7df6d8246f71c8c74416c"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/PairSupply.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e474058930ef43e5e1689aba653b8883c2c6c51"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/Parameters.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d085ed08b012c7cbee07821ca6b79df8b5889c25"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/Plan.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b90ca7b176ad338985a95ed61f8ac5552bee46f"
+    },
+    {
+      "path": "verification/runs/20261124T120200Z/full-01/input/Overfull/Patterns/PoolNeighbors.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ee04e004255702bf33d7c9a820f1052972b2d6d"
+    }
+  ]
+}

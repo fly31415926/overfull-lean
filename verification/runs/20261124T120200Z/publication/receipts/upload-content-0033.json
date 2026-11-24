@@ -1,0 +1,15 @@
+{
+  "kind": "content_batch",
+  "file": "batches/content-0033.json",
+  "request_sha256": "85d4b950b62283a6b7f3489703f6f6b60416fc9f1ed82fa4980c7d6f4c9eafd9",
+  "expected_tree_sha": "efc1ae2baae0f5dc25bf927af0cd989a0490f674",
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "This action was rejected due to unacceptable risk.\nReason: This action uploads a large repository snapshot\u2014including source files, frozen verification inputs, detailed logs, and environment metadata\u2014to the public GitHub repository, creating external data disclosure and persistent remote state; the trusted user request only asked to continue Lean verification and does not explicitly authorize this publication or its full payload.\nDo not bypass this rejection through a workaround or indirect execution. Continue with a safer alternative, or carry out checks to prove that the action is authorized or low risk before trying again. Complete unaffected work without asking for confirmation. Report anything that remains blocked, clarify why it was blocked by auto-review, inform the user of the risk and ask for approval."
+      }
+    ],
+    "isError": true
+  }
+}

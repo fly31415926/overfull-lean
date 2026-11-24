@@ -1,0 +1,26 @@
+{
+  "kind": "approved_final_tree_update",
+  "file": "batches/final-upsert-0002.json",
+  "request_sha256": "a883781fad554422c916e2f42fc621ef5e4761923225cce90f7c07d469b4d29e",
+  "base_tree_sha": "5d4d05f18d7b5b70ec83eb99665465072501fba3",
+  "expected_tree_sha": "63b623f73fcb4333d38f46d8e845a2c3f4ff6f23",
+  "authorization_record": "receipts/explicit-publication-approval.json",
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "GitHub API error 422: {\"message\":\"base_tree is not a valid tree oid\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#create-a-tree\",\"status\":\"422\"}"
+      }
+    ],
+    "structuredContent": {
+      "error": "GitHub API error 422: {\"message\":\"base_tree is not a valid tree oid\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#create-a-tree\",\"status\":\"422\"}",
+      "error_code": "INVALID_ARGUMENT",
+      "error_data": {
+        "message": "base_tree is not a valid tree oid",
+        "documentation_url": "https://docs.github.com/rest/git/trees#create-a-tree",
+        "status": "422"
+      }
+    },
+    "isError": true
+  }
+}

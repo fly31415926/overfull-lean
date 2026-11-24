@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "reason": "Recover from API422 timeout followed by invalid base_tree response; preserve original failures and GET readback.",
+  "starting_tree_sha": "b3363366151d79de46e15e1c055a4fe06621138d",
+  "target_tree_sha": "63b623f73fcb4333d38f46d8e845a2c3f4ff6f23",
+  "batches": [
+    {
+      "file": "transport/recovery-small-batches/upsert-0000.json",
+      "base_tree_sha": "b3363366151d79de46e15e1c055a4fe06621138d",
+      "expected_tree_sha": "a1f2cd141d60e04007f3d90cb62a855da7a7acc9",
+      "entries": 100,
+      "request_sha256": "52ee45b3d61b792b1dc295a16b1d9da8eeda108905552e31b6faef7b6e84f3ff"
+    },
+    {
+      "file": "transport/recovery-small-batches/upsert-0001.json",
+      "base_tree_sha": "a1f2cd141d60e04007f3d90cb62a855da7a7acc9",
+      "expected_tree_sha": "1bdf0248dd3abf5d60873437eb84f12590df1f76",
+      "entries": 100,
+      "request_sha256": "72388cc2739a91fcc2434bedcefa76bd0d6944d6c17093cc15e4fad06ad48179"
+    },
+    {
+      "file": "transport/recovery-small-batches/upsert-0002.json",
+      "base_tree_sha": "1bdf0248dd3abf5d60873437eb84f12590df1f76",
+      "expected_tree_sha": "a3c005dc0674b6320fa686efda8ebd593c56c7e1",
+      "entries": 100,
+      "request_sha256": "38aa7d8b848df783a17108c23587a16cb7c8bed3567aff688b504804140a6fc6"
+    },
+    {
+      "file": "transport/recovery-small-batches/upsert-0003.json",
+      "base_tree_sha": "a3c005dc0674b6320fa686efda8ebd593c56c7e1",
+      "expected_tree_sha": "d2c79a836e69611e0e7e25f5c8506db2c67e0cc8",
+      "entries": 100,
+      "request_sha256": "b2f4ed2b9670d76e9e983233e62448f0ba7ffb9ee507be23aab80b52b6ef5c77"
+    },
+    {
+      "file": "transport/recovery-small-batches/upsert-0004.json",
+      "base_tree_sha": "d2c79a836e69611e0e7e25f5c8506db2c67e0cc8",
+      "expected_tree_sha": "76d5efcdae68adbf9ade4f57e72244fddb338444",
+      "entries": 100,
+      "request_sha256": "1966c753234130ba6530d662747db0fb80a92985e9fc20032614ee73ad1fa3c0"
+    },
+    {
+      "file": "transport/recovery-small-batches/upsert-0005.json",
+      "base_tree_sha": "76d5efcdae68adbf9ade4f57e72244fddb338444",
+      "expected_tree_sha": "6e236f516c55afc0c639d82936703058699c90ab",
+      "entries": 100,
+      "request_sha256": "15b73c66d56c635f7c88670679978f5e375b4241a09bd42fe5f4a769678f5e97"
+    },
+    {
+      "file": "transport/recovery-small-batches/upsert-0006.json",
+      "base_tree_sha": "6e236f516c55afc0c639d82936703058699c90ab",
+      "expected_tree_sha": "d38c4ef712f5d62cf3225abeda9253f5ccb012a9",
+      "entries": 100,
+      "request_sha256": "96cf3af65069ad2751d98c4e7c8e27a2a1726cd24ee10db9a1f723aca91abeec"
+    },
+    {
+      "file": "transport/recovery-small-batches/upsert-0007.json",
+      "base_tree_sha": "d38c4ef712f5d62cf3225abeda9253f5ccb012a9",
+      "expected_tree_sha": "63b623f73fcb4333d38f46d8e845a2c3f4ff6f23",
+      "entries": 1,
+      "request_sha256": "0ee8626192a40b0f79f984cdc7f082abacddde3a7b8cbc9fb21460a83be4a529"
+    }
+  ]
+}
