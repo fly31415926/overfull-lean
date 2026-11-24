@@ -118,7 +118,8 @@ def main() -> None:
                           ("residual_palette", "residual-palette-source.json"),
                           ("exceptional_palette", "exceptional-palette-source.json"),
                           ("weighted_palette", "weighted-palette-source.json"),
-                          ("native_star", "native-star-source.json")):
+                          ("native_star", "native-star-source.json"),
+                          ("native_integration", "native-integration-source.json")):
         source = json.loads((ROOT / "docs" / filename).read_text())
         source_modules = {item["module"]: item for item in source["modules"]}
         if (len(source_modules) != source["module_count"]
@@ -174,6 +175,9 @@ def main() -> None:
 
     if extension_maps["native_star"][0]["numbered_assertions_completed"] != 0:
         raise SystemExit("The native-star continuation completes no numbered manuscript assertion.")
+
+    if extension_maps["native_integration"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The native-integration continuation completes no numbered manuscript assertion.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1677,7 +1681,8 @@ def main() -> None:
                     "residual_palette": "residual-palette",
                     "exceptional_palette": "exceptional-palette",
                     "weighted_palette": "weighted-palette",
-                    "native_star": "native-star"}[key]
+                    "native_star": "native-star",
+                    "native_integration": "native-integration"}[key]
         map_path = OUTPUT / f"{basename}-declarations.json"
         map_path.write_text(json.dumps({
             "schema_version": 1,
@@ -1754,6 +1759,7 @@ def main() -> None:
         "exceptional_palette_declaration_map": extension_evidence["exceptional_palette"],
         "weighted_palette_declaration_map": extension_evidence["weighted_palette"],
         "native_star_declaration_map": extension_evidence["native_star"],
+        "native_integration_declaration_map": extension_evidence["native_integration"],
         "checkpoint_reconstruction": {
             "original_checkpoint": reconstruction["original_checkpoint"],
             "original_tree_reproduced": False,

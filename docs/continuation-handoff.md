@@ -1,147 +1,93 @@
-# Continuation handoff: native reserve-star balance and actual star insertion
+# Continuation handoff: native integration and bounded completion
 
-## Verified local baseline and current checkpoint
+## Exact baseline and evidence
 
-The standing user instruction authorizes publishing every verified run,
-including complete source and declaration maps, private/generated Lean names,
-paths, hashes, and genuine diagnostics, to public `fly31415926/overfull-lean`
-on both `main` and `verified-bipartite-continuation-2026-11-21`. Do not request
-the same permission again. Preserve failed and unfinished attempts faithfully.
+The verified local predecessor is `d2e7b1274d280ef6567cb2b562ec6e94eec2dda0`, exact tree `9850008a20bfd828d8ab9da4c5e8d1bf50240570`, containing
+2,752 committed files. Its unchanged full audit enumerated 12,951 declarations;
+the result has 2,063 completed-result mappings and 670 frozen source/input hashes.
+This run is `20261124T010000Z` in `/workspace/scratch/1368c254067d/overfull-lean`. The actual full command, immutable attempt
+logs, raw audit segments, all input snapshots and supplementary preservation
+report determine the new verification state. New audited counts must be read
+from those genuine results, never inferred from a focused pass or module count.
 
-The preceding verified local checkpoint is `af8dca22ef67d66d0de3f6d89954d31f06a4d2fa`, exact tree `5ddefa9b77dfaf2d1cf09df1d7e2d4b541346a85`,
-with all 2,507 files. Its publication was blocked by automatic approval review at this run's input
-freeze. The last independently observed public head was `c28cec4`, which
-preserves the earlier `89678bc` and `1b5663a` checkpoints exactly. Later
-publication receipts must identify the actual remote commit, tree, both
-branch heads and all-file equality. A connected public reconstruction can
-have different commit metadata while reproducing the exact checked tree.
+The last observed public heads are recorded in `run.json`. Publication of the
+preceding local chain was blocked by the retained automatic review rejection.
+Standing user instructions authorize complete verified sources, private/generated
+declaration names, hashes and genuine diagnostics, but no publication workaround
+may evade that rejection. Actual later public commit/tree/branch readbacks belong
+in separate publication receipts. No branch promotion follows merely from a
+local verified checkpoint or an unreferenced object upload.
 
-This run is `20261123T235203Z` in
-`/workspace/scratch/0f64d20031b0/overfull-native-star`. Its full command receipt,
-frozen hashes, raw audit, preservation report and release manifest determine
-the actual verification and publication state. The baseline has 12,811 audited
-proof declarations and 1,979 completed-result mappings. No new count should be
-inferred from focused builds; the unchanged full audit enumerates it.
+## New formal constructions
 
-## Formal constructions added
+Native weighted odd/even joining palettes derived from actual residual cores; complete paired and unpaired exceptional-copy assembly with exact selected reserve classes; original-core parity and whole-family load bounds; uniform completion of every nonprotected color, leaving a robust r/2-regular residual whose external copies are exactly the selected native reserve; and independent-exterior one-core factorization. These are supporting constructions; final protected-residual factorization and reassembly, full two-core Corollary 4.6, and the main theorem remain unproved.
 
-The source map `docs/native-star-source.json` gives exact public names, source
-lines and hashes; `verification/native-star-declarations.json` is generated
-from the actual unchanged full audit and includes private/generated proofs.
+See `docs/native-integration-source.json` and the source-linked semantic review
+for the exact dynamic module inventory and theorem names. The construction now
+produces the native weighted joining palette and half-reserve prescriptions;
+all paired and zero/one/two unpaired exceptional completions; exact external copy
+coverage; old-core parity; uniform support estimates; actual full-family load
+from core deficits; and the selected/protected color and external-remainder
+partition. The universal native prefix theorem chooses `δ, θ, n₀` before the
+host and constructs all `h-r/2` nonprotected perfect matchings. It retains an
+exactly `r/2`-regular residual with robust embedded cores and exact equality of
+all surviving external copies with the selected native reserve union. The
+independent-exterior module constructs a complementary coloring and one-core
+factorization without a supplied complementary coloring or no-overfull condition.
+These conclusions follow from their displayed hypotheses. No terminal two-core
+coloring or full factorization is supplied as an assumed target.
 
-| Module | Formal contribution |
-| --- | --- |
-| `ReserveInjection` | Actual index-preserving injection from all native reserve boundaries to the residual assigned old-core pool; exactly one pool copy per boundary; exact selected-union counts. |
-| `IncidencePartition` | Disjoint joining/star/internal-exception incidence partition using original assignment labels on residual edges; exact degree equation and combined bound. |
-| `CommonPalette` | Common internal-bundle colors from combined endpoint budgets; exact remaining-copy/color arithmetic and Hall margin. |
-| `NativeBalance` | Instantiates reserve lower bounds, actual joining-used colors, protected reserve traces, native common bundle and selected-star cardinal balance. |
-| `StarChoice` | Derives actual endpoint-conflict bounds from available-color vertex loads and actual-copy star weights; obtains bijective matching-compatible star choice. |
-| `StarAccounting` | Exact colored actual-copy fibers; disjointness, matching, coverage and sequential increases `D → D+b`, `W → W+b`. |
-| `StarExtension` | Whole-class star insertion with exact copy coverage, matching/disjointness, untouched unavailable colors, internal-cut preservation and growth bounds. |
-| `TwoStars` | Sequential two-star construction using available-only budgets and actual old-core multiplicities. |
+## Remaining integration and terminal theorem
 
-For an unpaired signature `some σ`, write `S_z` for the actual old-core star
-pool, `j_z` for joining degree, and `t_z` for the same-label exceptional bundle.
-The native chain now proves
+Construct the terminal shore restrictions or contractions, prove their
+independent-exterior and robust-core hypotheses, align shared crossing-copy
+labels, and lift/combine the resulting actual matchings. Terminal recoloring
+need not preserve the selected reserve boundaries as whole color classes; the
+proved prefix preserves their copy union. The independent-exterior theorem supplies a one-core factorization
+ingredient, but it does not supply those two-core modeling and alignment steps.
+The proposed next route is recorded in
+`verification/runs/20261124T010000Z/independent-review/final-protected-route.md`;
+the independent prefix review records its exact source and focused status.
+Keep the selected native reserve union in the actual surviving edge-copy type.
+Then prove the terminal residual factorization and combine it with the already
+constructed prefix. Check exact theorem signatures before claiming the full
+manuscript conclusion.
 
-`j_z + |S_z| + t_z = h`, `r ≤ |S_z|`, hence `j_z + t_z ≤ h-r ≤ D`.
+The full two-core Corollary 4.6, remaining five-exception/final-factorization
+obligations and the main theorem remain unproved. All 69 original assertion
+records and statement hashes remain unchanged; **47 are complete and 22 are
+incomplete**. Only the top-level coverage scope prose may change here.
 
-The selected-reserve trace proves protected joining-freeness. Exactly `s`
-selected boundaries contribute `s` distinct star copies. If the actual
-internal bundle has been injectively colored outside protected and joining
-colors, its image has exactly `t_z` labels. The resulting actual sets satisfy
+## Numerical interface and key semantic constraints
 
-`|remaining star copies| = |remaining colors| = h-s-j_z-t_z ≥ h-s-D`.
+Use the actual `D=floor(max(a,h-r))` and `s=r/2`. From `h≥αn/30`, `D≤δn`,
+`δ≤α/3840`, `δ≤εα/720` and `n≥20/ε`, the new theorems prove `128D≤h`, positive
+gap `h-s-32D≥h/4`, capacity `L=(nD/2)/(h-s-32D)+1` and support `6L+4≤εn`.
+The available-color Hall budget remains restricted to its actual palette.
+Whole-family load, including protected colors, is separately bounded by the
+actual core deficit `a`; do not infer a generic global `D` bound from abstract
+reserve-extension data. The half-reserve prefix room uses the explicit rounding
+condition `n≥120/α` and reserve density `r≥αn/30`.
 
-`exists_native_common_bundle_coloring` supplies the mutual-bundle coloring
-when exactly two unpaired exceptions share an assigned label. It derives its
-budget from both combined degree bounds; it does not assume `t_z ≤ b`.
-Different assigned labels give an empty internal bundle, while their mutual
-copies belong to the already colored joining part.
+## Verification and restart
 
-## Remaining mathematical integration
+Preserve the unchanged `Audit.lean`, every prior nonroot source, all previous
+declaration names/owners/axioms, all old mappings and all historical evidence.
+Use only the four reviewed additive verifier edits recorded in
+`verifier-additions.json`. Root imports must be appended after the complete old
+prefix. Regenerate the live source manifest only after the candidate is stable;
+the draft manifest is an inventory, not a verification result.
 
-1. **Native weighted joining wrappers.** Instantiate
-   `WeightedPalette.exists_star_weighted_matching_grouping` with the actual
-   odd/even joining decomposition, original palette size `h`, selected reserve
-   primary seeds and protected colors. Odd seeds need their genuine injective
-   count-one certificate and weight `≤4b≤h/8`; even seeds are empty. Preserve
-   actual reserve joining traces and every cut-parity certificate. Do not
-   shrink the palette to `h-s` and reuse a threshold that was proved for `h`.
-
-2. **Compose the native classes before star insertion.** Add the common
-   internal bundle and exactly prescribed full reserve copies to the actual
-   weighted joining palette. Prove their matching, disjointness, free-center
-   conditions and exact copy partition. `NativeBalance` supplies the exact
-   remaining copy/color cardinalities once the real trace and bundle objects
-   are connected. Its conclusions do not themselves construct all these
-   classes or preserve every reserve prescription.
-
-3. **Keep row budgets restricted to available colors.** Full protected
-   reserve classes may raise the global old-core color load. The corrected
-   `exists_star_choice_on_available` and `exists_star_extension_on_available`
-   require the load only on the actual remaining palette `F`; its complement
-   includes all protected colors. On available colors the base is the weighted
-   joining class plus the exceptional bundle, which occupies no old-core
-   vertex. The first completed star then costs at most `b` at an old-core
-   vertex and blocks at most `b` second-star copies in a color. Establish this
-   restriction by equality of actual classes on `F`, not an unjustified global
-   `D` bound after protected insertion.
-
-4. **Instantiate the sequential extension.** Apply `TwoStars` to those exact
-   remaining pools and palettes. Transfer unavailable-color preservation to
-   the prescribed protected boundaries. Prove exceptional coverage in every
-   final color and retention of the assigned-fiber cut parities. The generic
-   extension theorems already derive actual matching/disjointness/coverage and
-   per-class copy/support growth, but the complete native wrapper remains.
-
-5. **Close quantitative old-core completion.** Derive piece capacity and
-   all support/load estimates uniformly from the manuscript parameters and
-   carry them through the previously formalized robustness statements. Then
-   perform actual robust matching completion and factorization. Current
-   supporting results do not prove these final conclusions.
-
-Useful existing numerical route: `b≤D`, `128D≤h`, `2s≤h`; weighted margin
-`h-s-32D≥h/4`; choose `L=(nD/2)/(h-s-32D)+1`. With `h≥αn/30`, the sufficient
-uniform choice `δ≤α/3840` supplies the large-palette hypothesis. The estimate
-`6L+4≤(360δ/α)n+10` suggests `δ≤εα/720` and `n≥20/ε` for a final `εn` support
-bound. These parameter suggestions must be connected to exact native inputs;
-they are not asserted as newly formalized whole-construction conclusions.
-
-**Numbered coverage stays 47 of 69.** Full two-core Corollary 4.6, the full
-five-exception and final robust-factorization obligations, and the main
-theorem remain unproved. The 69 original assertion records and statement
-hashes are unchanged; only the top-level coverage scope prose is updated.
-
-## Verification and restart procedure
-
-The new checker admits exactly four additive source-map/declaration-map
-extensions to `scripts/verify.py`. `Audit.lean` and every earlier nonroot
-mathematical source are byte-identical. Root imports are appended after the
-entire old import prefix, preserving old declaration ownership. All earlier
-declaration names, modules and axiom sets, earlier completed-result mappings,
-old source/provenance maps and historical evidence are checked for exact
-preservation.
-
-Every focused attempt is recorded under this run's `development/` with exact
-source snapshots, real commands, starts/finishes/exits and output. Failed
-attempts remain present. All full attempts have separate `full-NN` directories
-and frozen inputs; an unknown or interrupted result must never be promoted to
-a success. The successful full command and actual supplementary checker must
-both pass before committing or publishing this candidate.
-
-Use the pinned Lean 4.24.0 runtime at
+Run focused commands only through this run's `record-command.py`, retaining
+failed attempts faithfully. Use Lean 4.24.0 at
 `/workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin`
-and pinned mathlib `f897ebcf72cd16f89ab4577d0c826cd14afaafc7`.
-Share dependency packages only; use an independent project build cache in
-each new worktree. Run the long full verifier in one continuously awaited
-tool cell until its actual exit, with genuine heartbeat evidence and concise
-progress updates. Do not rely on a stale session handle or infer an exit
-from another tool's isolated process namespace.
-
-Publish the exact checked tree with the connected GitHub object/ref APIs,
-using expected-head, nonforce branch updates and independent public readback.
-Record local/public commit correspondence, exact tree and all-file equality.
-No new approval is needed under the user's standing authorization. Keep
-publication receipts separate from the already frozen verified candidate;
-include them as baseline evidence in the next continuation.
+and mathlib `f897ebcf72cd16f89ab4577d0c826cd14afaafc7`. The full command is
+`python3 -u verification/runs/20261124T010000Z/supervise-verifier.py full-01`.
+It stays attached to one observed child process and streams actual heartbeats
+every 30 seconds. Await its actual exit; do not infer process completion from
+a different tool namespace or stale session handle. Before launching, finish
+live docs/root/manifest and archive all focused evidence. Do not edit frozen
+inputs while the full verifier runs. After success, run the strict supplementary
+checker with a genuine command/output receipt, then the local-only packaging
+script. Publication is a distinct authorized action subject to the retained
+automatic-review decision and exact remote readback.

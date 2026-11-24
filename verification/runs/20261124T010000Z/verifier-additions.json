@@ -1,0 +1,18 @@
+[
+  {
+    "old": "                          (\"native_star\", \"native-star-source.json\")):\n",
+    "new": "                          (\"native_star\", \"native-star-source.json\"),\n                          (\"native_integration\", \"native-integration-source.json\")):\n"
+  },
+  {
+    "old": "    # Every first-party mathematical file must be included in the library build.\n",
+    "new": "    if extension_maps[\"native_integration\"][0][\"numbered_assertions_completed\"] != 0:\n        raise SystemExit(\"The native-integration continuation completes no numbered manuscript assertion.\")\n\n    # Every first-party mathematical file must be included in the library build.\n"
+  },
+  {
+    "old": "                    \"native_star\": \"native-star\"}[key]\n",
+    "new": "                    \"native_star\": \"native-star\",\n                    \"native_integration\": \"native-integration\"}[key]\n"
+  },
+  {
+    "old": "        \"native_star_declaration_map\": extension_evidence[\"native_star\"],\n",
+    "new": "        \"native_star_declaration_map\": extension_evidence[\"native_star\"],\n        \"native_integration_declaration_map\": extension_evidence[\"native_integration\"],\n"
+  }
+]

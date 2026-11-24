@@ -1,0 +1,186 @@
+✖ [3371/3371] Building Overfull.NativeCore.ExternalPalette (3.3s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/1368c254067d/overfull-lean/Overfull/NativeCore/ExternalPalette.lean -o /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeCore/ExternalPalette.olean -i /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeCore/ExternalPalette.ilean -c /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeCore/ExternalPalette.c --setup /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeCore/ExternalPalette.setup.json --json
+error: Overfull/NativeCore/ExternalPalette.lean:71:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  univ.biUnion F.classes
+in the target expression
+  e ∈ univ.biUnion F.classes
+
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+hZ : #Z ≤ 2
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+hp : p 2 = 0
+q : I → Fin r
+f : I → Fin h
+hq : Function.Injective q
+hf : Function.Injective f
+P : ReserveExtension C (fun i => Q.residualBoundary N T (q i)) f (#Z + 1)
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hL : 0 < L
+hweight : ∀ (z : { x // x ∈ Z }) (j : Fin h), starWeight (residualGraph G N T) (↑z) (U₀ ∪ U₁) (C.classes j) ≤ h / 8
+hparallel : ∀ z ∈ Z, ∀ v ∈ U₀ ∪ U₁, #((residualGraph G N T).parallelEdges z v) ≤ D
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+hcode : coarseSignature G M U₀ Z = none
+F : PairFiberCompletion C Z
+hpres : ∀ (i : I), F.classes (f i) = Q.residualBoundary N T (q i)
+j : Fin h
+e : { e // e ∉ removedCopies N T }
+he : e ∈ F.classes j
+hu : e ∈ univ.biUnion F.classes
+⊢ e ∈ joiningCopies H label ∪ exceptionalCopies H univ Z
+error: Overfull/NativeCore/ExternalPalette.lean:80:6: Tactic `apply` failed: could not unify the conclusion of `external_union_eq_of_saturation H label h F.classes Z
+  F.disjoint (fun z x => hregular z) F.covers`
+  @Finset.biUnion (Fin h) { e // e ∉ removedCopies N T } (fun a b => propDecidable (a = b)) univ F.classes =
+    joiningCopies H label ∪ exceptionalCopies H univ Z
+with the goal
+  @Finset.biUnion (Fin h) { e // e ∉ removedCopies N T } (fun a b => a.instDecidableEq b) univ F.classes =
+    joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) ∪ exceptionalCopies (residualGraph G N T) univ Z
+
+Note: The full type of `external_union_eq_of_saturation H label h F.classes Z F.disjoint (fun z x => hregular z)
+  F.covers` is
+  joiningCopies H label ⊆ univ.biUnion F.classes →
+    (∀ (j : Fin h), F.classes j ⊆ joiningCopies H label ∪ exceptionalCopies H univ Z) →
+      univ.biUnion F.classes = joiningCopies H label ∪ exceptionalCopies H univ Z
+
+case none
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+hZ : #Z ≤ 2
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+hp : p 2 = 0
+q : I → Fin r
+f : I → Fin h
+hq : Function.Injective q
+hf : Function.Injective f
+P : ReserveExtension C (fun i => Q.residualBoundary N T (q i)) f (#Z + 1)
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hL : 0 < L
+hweight : ∀ (z : { x // x ∈ Z }) (j : Fin h), starWeight (residualGraph G N T) (↑z) (U₀ ∪ U₁) (C.classes j) ≤ h / 8
+hparallel : ∀ z ∈ Z, ∀ v ∈ U₀ ∪ U₁, #((residualGraph G N T).parallelEdges z v) ≤ D
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+hcode : coarseSignature G M U₀ Z = none
+F : PairFiberCompletion C Z
+hpres : ∀ (i : I), F.classes (f i) = Q.residualBoundary N T (q i)
+hsub : ∀ (j : Fin h), F.classes j ⊆ joiningCopies H label ∪ exceptionalCopies H univ Z
+⊢ univ.biUnion F.classes =
+    joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) ∪ exceptionalCopies (residualGraph G N T) univ Z
+error: Overfull/NativeCore/ExternalPalette.lean:167:19: Application type mismatch: The argument
+  joining_exceptional_disjoint_core H label U₀ Z C₀ h0Z 0 hlabel₀
+has type
+  Disjoint
+    (@Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (joiningCopies H label)
+      (exceptionalCopies H univ Z))
+    (OneCore.coreEdges C₀)
+but is expected to have type
+  Disjoint
+    (@Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b)
+      (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z))
+      (exceptionalCopies (residualGraph G N T) univ Z))
+    (OneCore.coreEdges C₀)
+in the application
+  Disjoint.mono_left (hsub j) (joining_exceptional_disjoint_core H label U₀ Z C₀ h0Z 0 hlabel₀)
+error: Overfull/NativeCore/ExternalPalette.lean:169:19: Application type mismatch: The argument
+  joining_exceptional_disjoint_core H label U₁ Z C₁ h1Z 1 hlabel₁
+has type
+  Disjoint
+    (@Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (joiningCopies H label)
+      (exceptionalCopies H univ Z))
+    (OneCore.coreEdges C₁)
+but is expected to have type
+  Disjoint
+    (@Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b)
+      (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z))
+      (exceptionalCopies (residualGraph G N T) univ Z))
+    (OneCore.coreEdges C₁)
+in the application
+  Disjoint.mono_left (hsub j) (joining_exceptional_disjoint_core H label U₁ Z C₁ h1Z 1 hlabel₁)
+error: Overfull/NativeCore/ExternalPalette.lean:173:27: Application type mismatch: The argument
+  hsub
+has type
+  ∀ (j : Fin h),
+    F j ⊆
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b)
+        (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z))
+        (exceptionalCopies (residualGraph G N T) univ Z)
+but is expected to have type
+  ∀ (j : Fin h),
+    F j ⊆
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (joiningCopies H label)
+        (exceptionalCopies H univ Z)
+in the application
+  external_family_load_le_error H label U₀ Z C₀ h0Z 0 hlabel₀ h a hregular hcore₀ F hd hsub
+error: Overfull/NativeCore/ExternalPalette.lean:175:27: Application type mismatch: The argument
+  hsub
+has type
+  ∀ (j : Fin h),
+    F j ⊆
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b)
+        (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z))
+        (exceptionalCopies (residualGraph G N T) univ Z)
+but is expected to have type
+  ∀ (j : Fin h),
+    F j ⊆
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (joiningCopies H label)
+        (exceptionalCopies H univ Z)
+in the application
+  external_family_load_le_error H label U₁ Z C₁ h1Z 1 hlabel₁ h a hregular hcore₁ F hd hsub
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeCore.ExternalPalette
+error: build failed

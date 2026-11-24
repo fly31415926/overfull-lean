@@ -1,0 +1,16 @@
+✖ [3374/3374] Building Overfull.NativeCore.NativePrefix (69s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/1368c254067d/overfull-lean/Overfull/NativeCore/NativePrefix.lean -o /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeCore/NativePrefix.olean -i /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeCore/NativePrefix.ilean -c /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeCore/NativePrefix.c --setup /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeCore/NativePrefix.setup.json --json
+error: Overfull/NativeCore/NativePrefix.lean:197:4: (deterministic) timeout at `isDefEq`, maximum number of heartbeats (1200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/NativeCore/NativePrefix.lean:23:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (1200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeCore.NativePrefix
+error: build failed

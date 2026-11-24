@@ -1,0 +1,2890 @@
+{
+  "schema_version": 1,
+  "manuscript_number": "4.14",
+  "statement_sha256": "67baedd4ae2e0451a8842fd27ea0976f50db94c9054eacd2f5dd40ce2cfa21e3",
+  "module_count": 17,
+  "verified_declaration_count": 269,
+  "includes_private_and_generated_proofs": true,
+  "proof_declaration_map": [
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundaryExtension.Reduction",
+      "name": "Overfull.BoundaryExtension.extend_from_completed_triples",
+      "source_path": "Overfull/BoundaryExtension/Reduction.lean",
+      "source_sha256": "7c102b110d7a11b8239b6f14f3a1298ea96b1c71f9983a60a58d9362fd6eb3c6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_balancing_pairing",
+      "source_path": "Overfull/OneCore/NeighborPairing.lean",
+      "source_sha256": "f5f5d87bbd15c33e83e4827638dac771ec8aac99df3b29ff8caad8ec87de9eb0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_balancing_pairing._proof_1_1",
+      "source_path": "Overfull/OneCore/NeighborPairing.lean",
+      "source_sha256": "f5f5d87bbd15c33e83e4827638dac771ec8aac99df3b29ff8caad8ec87de9eb0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_balancing_pairing._proof_1_2",
+      "source_path": "Overfull/OneCore/NeighborPairing.lean",
+      "source_sha256": "f5f5d87bbd15c33e83e4827638dac771ec8aac99df3b29ff8caad8ec87de9eb0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_pairing_meeting_bound",
+      "source_path": "Overfull/OneCore/NeighborPairing.lean",
+      "source_sha256": "f5f5d87bbd15c33e83e4827638dac771ec8aac99df3b29ff8caad8ec87de9eb0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_pairing_with_internal_pairs",
+      "source_path": "Overfull/OneCore/NeighborPairing.lean",
+      "source_sha256": "f5f5d87bbd15c33e83e4827638dac771ec8aac99df3b29ff8caad8ec87de9eb0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_pairing_with_internal_pairs._proof_1_1",
+      "source_path": "Overfull/OneCore/NeighborPairing.lean",
+      "source_sha256": "f5f5d87bbd15c33e83e4827638dac771ec8aac99df3b29ff8caad8ec87de9eb0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_pairing_with_internal_pairs._proof_1_2",
+      "source_path": "Overfull/OneCore/NeighborPairing.lean",
+      "source_sha256": "f5f5d87bbd15c33e83e4827638dac771ec8aac99df3b29ff8caad8ec87de9eb0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_pairing_with_internal_pairs._proof_1_3",
+      "source_path": "Overfull/OneCore/NeighborPairing.lean",
+      "source_sha256": "f5f5d87bbd15c33e83e4827638dac771ec8aac99df3b29ff8caad8ec87de9eb0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.NeighborPairing",
+      "name": "Overfull.OneCore.NeighborPairing.exists_pairing_with_internal_pairs._proof_1_4",
+      "source_path": "Overfull/OneCore/NeighborPairing.lean",
+      "source_sha256": "f5f5d87bbd15c33e83e4827638dac771ec8aac99df3b29ff8caad8ec87de9eb0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ApexChoices",
+      "name": "Overfull.OneCore.apexSupply_residual_rows",
+      "source_path": "Overfull/OneCore/ApexChoices.lean",
+      "source_sha256": "f603fb89fb7ce1b337e44bc679f4a9cce118173e6467a2f2e6a296a66f66d298"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.comap_cutSidesEquiv_eq",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.cutSidesEquiv_leftShore",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.cutSidesEquiv_rightShore",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ApexChoices",
+      "name": "Overfull.OneCore.exists_apexSupply",
+      "source_path": "Overfull/OneCore/ApexChoices.lean",
+      "source_sha256": "f603fb89fb7ce1b337e44bc679f4a9cce118173e6467a2f2e6a296a66f66d298"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ApexChoices",
+      "name": "Overfull.OneCore.exists_apexSupply._proof_1_1",
+      "source_path": "Overfull/OneCore/ApexChoices.lean",
+      "source_sha256": "f603fb89fb7ce1b337e44bc679f4a9cce118173e6467a2f2e6a296a66f66d298"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ApexChoices",
+      "name": "Overfull.OneCore.exists_apexSupply._proof_1_2",
+      "source_path": "Overfull/OneCore/ApexChoices.lean",
+      "source_sha256": "f603fb89fb7ce1b337e44bc679f4a9cce118173e6467a2f2e6a296a66f66d298"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.Factorization",
+      "name": "Overfull.OneCore.exists_uniform_one_apex_factorization",
+      "source_path": "Overfull/OneCore/Factorization.lean",
+      "source_sha256": "af5235ffb7a8fbf6930fd248f0df44a6e21a853c6339b20b2ae8498607f37840"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.Reduction",
+      "name": "Overfull.OneCore.exists_uniform_two_apex_reduction",
+      "source_path": "Overfull/OneCore/Reduction.lean",
+      "source_sha256": "3578b3ec5b8b726ccd16870025e6fe484cc6f29617bb1fa947ce04f7a3dc6136"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.Reduction",
+      "name": "Overfull.OneCore.exists_uniform_two_apex_reduction._proof_1_1",
+      "source_path": "Overfull/OneCore/Reduction.lean",
+      "source_sha256": "3578b3ec5b8b726ccd16870025e6fe484cc6f29617bb1fa947ce04f7a3dc6136"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.Reduction",
+      "name": "Overfull.OneCore.exists_uniform_two_apex_reduction._proof_1_2",
+      "source_path": "Overfull/OneCore/Reduction.lean",
+      "source_sha256": "3578b3ec5b8b726ccd16870025e6fe484cc6f29617bb1fa947ce04f7a3dc6136"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.Reduction",
+      "name": "Overfull.OneCore.exists_uniform_two_apex_reduction._proof_1_3",
+      "source_path": "Overfull/OneCore/Reduction.lean",
+      "source_sha256": "3578b3ec5b8b726ccd16870025e6fe484cc6f29617bb1fa947ce04f7a3dc6136"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.Reduction",
+      "name": "Overfull.OneCore.exists_uniform_two_apex_reduction._proof_1_4",
+      "source_path": "Overfull/OneCore/Reduction.lean",
+      "source_sha256": "3578b3ec5b8b726ccd16870025e6fe484cc6f29617bb1fa947ce04f7a3dc6136"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.Reduction",
+      "name": "Overfull.OneCore.exists_uniform_two_apex_reduction._simp_1_6",
+      "source_path": "Overfull/OneCore/Reduction.lean",
+      "source_sha256": "3578b3ec5b8b726ccd16870025e6fe484cc6f29617bb1fa947ce04f7a3dc6136"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.mem_movedNeighbors",
+      "source_path": "Overfull/OneCore/MovedNeighbors.lean",
+      "source_sha256": "8256641c955095f29ae80cc3015ae39e019759349daa05207b5e8523c12056e3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.mem_movedNeighbors._simp_1",
+      "source_path": "Overfull/OneCore/MovedNeighbors.lean",
+      "source_sha256": "8256641c955095f29ae80cc3015ae39e019759349daa05207b5e8523c12056e3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.mem_movedNeighbors._simp_1_2",
+      "source_path": "Overfull/OneCore/MovedNeighbors.lean",
+      "source_sha256": "8256641c955095f29ae80cc3015ae39e019759349daa05207b5e8523c12056e3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.mem_movedNeighbors._simp_1_3",
+      "source_path": "Overfull/OneCore/MovedNeighbors.lean",
+      "source_sha256": "8256641c955095f29ae80cc3015ae39e019759349daa05207b5e8523c12056e3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.movedNeighbors.eq_1",
+      "source_path": "Overfull/OneCore/MovedNeighbors.lean",
+      "source_sha256": "8256641c955095f29ae80cc3015ae39e019759349daa05207b5e8523c12056e3"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.movedNeighbors_card",
+      "source_path": "Overfull/OneCore/MovedNeighbors.lean",
+      "source_sha256": "8256641c955095f29ae80cc3015ae39e019759349daa05207b5e8523c12056e3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.movedNeighbors_card._simp_1_1",
+      "source_path": "Overfull/OneCore/MovedNeighbors.lean",
+      "source_sha256": "8256641c955095f29ae80cc3015ae39e019759349daa05207b5e8523c12056e3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.movedNeighbors_shore_le",
+      "source_path": "Overfull/OneCore/MovedNeighbors.lean",
+      "source_sha256": "8256641c955095f29ae80cc3015ae39e019759349daa05207b5e8523c12056e3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "name": "Overfull.OneCore.movedNeighbors_shore_le._simp_1_1",
+      "source_path": "Overfull/OneCore/MovedNeighbors.lean",
+      "source_sha256": "8256641c955095f29ae80cc3015ae39e019759349daa05207b5e8523c12056e3"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShoreEquiv._proof_1",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShoreEquiv._proof_2",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShoreEquiv._proof_3",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShoreEquiv._proof_4",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShore_balance",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShore_bipartite",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShore_comap",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShore_left",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShore_right",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShore_robust",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.OneCore.residualShore_robust_of_reserve",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.BipartiteResidualData.completed_perfect",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.BipartiteResidualData.core_degree",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.BipartiteResidualData.density",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.BipartiteResidualData.error_nonneg",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.BipartiteResidualData.error_small",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.BipartiteResidualData.even",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.BipartiteResidualData.mk.inj",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.BipartiteResidualData.mk.injEq",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.BipartiteResidualData.mk.sizeOf_spec",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.BipartiteResidualData.preserves",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.BipartiteResidualData.regular",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.BipartiteResidualData.robust",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.CutReserveData.paletteSize.eq_1",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ApexChoices",
+      "name": "Overfull.OrdinaryFactorization.FirstHalfData.remaining_apex_supply",
+      "source_path": "Overfull/OneCore/ApexChoices.lean",
+      "source_sha256": "f603fb89fb7ce1b337e44bc679f4a9cce118173e6467a2f2e6a296a66f66d298"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.colorsOn_rows_disjoint",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.complement_apex_row_card",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.complete_bipartite_reduction",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.complete_bipartite_reduction._simp_1_2",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.complete_bipartite_reduction._simp_1_3",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_labels_preserving_rows",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_labels_preserving_rows._proof_1_1",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_labels_preserving_rows._proof_1_2",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_labels_with_range",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_two_row_labels",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_two_row_labels._proof_1_1",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_two_row_labels._simp_1_2",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_two_row_labels._simp_1_3",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.exists_two_row_labels._simp_1_4",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction._proof_1_1",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction._proof_1_2",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_choices",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_choices._proof_1_1",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_choices._proof_1_2",
+      "source_path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "source_sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half._proof_1_1",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half._proof_1_11",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half._proof_1_4",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half._simp_1_10",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half._simp_1_3",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half._simp_1_7",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half._simp_1_8",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half._simp_1_9",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._proof_1_10",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._proof_1_3",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._simp_1_2",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._simp_1_6",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._simp_1_7",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._simp_1_8",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices._simp_1_9",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.residualGraph.eq_1",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.residualGraph_apex_row_card",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.row_selected_colors_card",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.row_selected_colors_card._simp_1_2",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "name": "Overfull.OrdinaryFactorization.row_selected_colors_card._simp_1_3",
+      "source_path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "source_sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.ResidualShores",
+      "name": "Overfull.PairedCut.cutSidesEquiv.congr_simp",
+      "source_path": "Overfull/OneCore/ResidualShores.lean",
+      "source_sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.classes_disjoint",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.classes_isMatching",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.classes_isPerfectMatching",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.disjoint",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.edgeColorable",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.edgeColorable._proof_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.edgeColorable._proof_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.edgeColorable._proof_1_3",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.edgeColorable._proof_1_4",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.edgeColorable._simp_1_5",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.index._proof_1",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.index_mem",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.isMatching",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.mem_used",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.mem_used._simp_1",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.mem_used._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.mem_used._simp_1_3",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.mk.inj",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.mk.injEq",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.mk.sizeOf_spec",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.selected_used",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.used.eq_1",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.usedColoring._proof_1",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.used_degree",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.used_degree._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.used_degree._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.used_degree._simp_1_3",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.used_degree._simp_1_4",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.used_degree._simp_1_5",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.Completion.verts",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.apex_core_left",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.apex_core_right",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.apex_degree_left",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.apex_degree_right",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.core_complement",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.core_survives",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.degree_le_complement",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.internal_eq",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.internal_eq._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.internal_eq._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.mk.inj",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.mk.injEq",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.mk.sizeOf_spec",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.outside_card",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.outside_eq",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_bipartite",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_cross",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_exterior_cross",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_internal_eq",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_internal_eq._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_internal_eq._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_side",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_side._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.remaining_side._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.same_shore_left",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.same_shore_right",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.subset_complement",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.xy_card",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.Selection.xy_subset",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.apex_core_counts_eq",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.apex_core_counts_eq._proof_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.augmented_shore_compl",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.augmented_shore_compl._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.augmented_shore_compl._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.augmented_shore_compl._simp_1_3",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.augmented_shore_compl._simp_1_4",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.colorCopies.eq_1",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.colorCopies_disjoint",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.colorCopies_isMatching",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.colorCopies_subset",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.completionOfPacking._proof_1",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.completionOfPacking._proof_2",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.completionOfPacking._proof_3",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.core_copies_cross",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.core_copies_cross._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.degree_sums_of_crossing",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.degree_sums_of_crossing._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.exists_balanced_selection_coloring",
+      "source_path": "Overfull/TwoApexFactorization/Balance.lean",
+      "source_sha256": "848701e2afb9e65add2adc935fa56c2b7398d02a24fa0a0c9e84e40f4f933adf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.exists_balanced_selection_coloring._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Balance.lean",
+      "source_sha256": "848701e2afb9e65add2adc935fa56c2b7398d02a24fa0a0c9e84e40f4f933adf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.exists_balanced_selection_coloring._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Balance.lean",
+      "source_sha256": "848701e2afb9e65add2adc935fa56c2b7398d02a24fa0a0c9e84e40f4f933adf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.exists_selection",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.exists_selection._proof_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.exists_selection._proof_1_3",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.exists_selection._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.exists_selection._simp_1_4",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "Overfull.TwoApexFactorization.exists_selection._simp_1_5",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Packing",
+      "name": "Overfull.TwoApexFactorization.exists_uniform_selected_coloring",
+      "source_path": "Overfull/TwoApexFactorization/Packing.lean",
+      "source_sha256": "3d4e9d283c2a72a5c096c2a46763fec968d562de7144261fb1dabce6504159ee"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Packing",
+      "name": "Overfull.TwoApexFactorization.exists_uniform_selected_coloring._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Packing.lean",
+      "source_sha256": "3d4e9d283c2a72a5c096c2a46763fec968d562de7144261fb1dabce6504159ee"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Theorem",
+      "name": "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization",
+      "source_path": "Overfull/TwoApexFactorization/Theorem.lean",
+      "source_sha256": "f9893e26a750968ecfe07bf49b8e6e60a11e775ecbd74a2e2fee36ea206c4984"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Theorem",
+      "name": "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization._proof_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Theorem.lean",
+      "source_sha256": "f9893e26a750968ecfe07bf49b8e6e60a11e775ecbd74a2e2fee36ea206c4984"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Theorem",
+      "name": "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization._proof_1_4",
+      "source_path": "Overfull/TwoApexFactorization/Theorem.lean",
+      "source_sha256": "f9893e26a750968ecfe07bf49b8e6e60a11e775ecbd74a2e2fee36ea206c4984"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Theorem",
+      "name": "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Theorem.lean",
+      "source_sha256": "f9893e26a750968ecfe07bf49b8e6e60a11e775ecbd74a2e2fee36ea206c4984"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Theorem",
+      "name": "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization._simp_1_3",
+      "source_path": "Overfull/TwoApexFactorization/Theorem.lean",
+      "source_sha256": "f9893e26a750968ecfe07bf49b8e6e60a11e775ecbd74a2e2fee36ea206c4984"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.footprint.eq_1",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.footprint_card",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.footprint_card._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.footprint_card._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.footprint_iff_incident",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.internal_two_apices_bipartite",
+      "source_path": "Overfull/TwoApexFactorization/Balance.lean",
+      "source_sha256": "848701e2afb9e65add2adc935fa56c2b7398d02a24fa0a0c9e84e40f4f933adf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.internal_two_apices_bipartite._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Balance.lean",
+      "source_sha256": "848701e2afb9e65add2adc935fa56c2b7398d02a24fa0a0c9e84e40f4f933adf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.internal_two_apices_bipartite._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Balance.lean",
+      "source_sha256": "848701e2afb9e65add2adc935fa56c2b7398d02a24fa0a0c9e84e40f4f933adf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.leftEmbedding._proof_1",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.leftEmbedding.eq_1",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.leftShore.eq_1",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.leftShore_card",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.leftShore_subset",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.left_covered_card",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.left_covered_card._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.left_covered_card._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.left_covered_card._simp_1_3",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.left_covered_card._simp_1_5",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_colorCopies",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_colorCopies._simp_1",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_colorCopies._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_colorCopies._simp_1_3",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_colorCopies._simp_1_4",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_footprint",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_footprint._simp_1",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_footprint._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_footprint._simp_1_3",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.mem_leftShore",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.mem_leftShore._simp_1",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.mem_rightShore",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.mem_rightShore._simp_1",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_sideFootprint",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_sideFootprint._simp_1",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.mem_sideFootprint._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.rightEmbedding._proof_1",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.rightEmbedding.eq_1",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.rightShore.eq_1",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.rightShore_card",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.rightShore_subset",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.right_covered_card",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.right_covered_card._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.right_covered_card._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.right_covered_card._simp_1_3",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.right_covered_card._simp_1_5",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.selected_degree_sums",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.selected_degree_sums._proof_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.selected_degree_sums._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.selection_core_degree_sums",
+      "source_path": "Overfull/TwoApexFactorization/Balance.lean",
+      "source_sha256": "848701e2afb9e65add2adc935fa56c2b7398d02a24fa0a0c9e84e40f4f933adf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "name": "Overfull.TwoApexFactorization.selection_core_degree_sums._proof_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Balance.lean",
+      "source_sha256": "848701e2afb9e65add2adc935fa56c2b7398d02a24fa0a0c9e84e40f4f933adf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.shores_disjoint",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.shores_union",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.sideFootprint.eq_1",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.sideFootprint_card",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "Overfull.TwoApexFactorization.sideFootprint_load",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.side_edges_sum",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "name": "Overfull.TwoApexFactorization.side_edges_sum._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Shores.lean",
+      "source_sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundaryExtension.Full",
+      "name": "Overfull.boundary_extension",
+      "source_path": "Overfull/BoundaryExtension/Full.lean",
+      "source_sha256": "699c40739b67d47034d13c1d83a732d2b06de6576f38d052779238cefa0d5a54"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundaryExtension.Reduction",
+      "name": "Overfull.boundary_extension_reduction",
+      "source_path": "Overfull/BoundaryExtension/Reduction.lean",
+      "source_sha256": "7c102b110d7a11b8239b6f14f3a1298ea96b1c71f9983a60a58d9362fd6eb3c6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundaryExtension.Reduction",
+      "name": "Overfull.boundary_extension_reduction._proof_1_1",
+      "source_path": "Overfull/BoundaryExtension/Reduction.lean",
+      "source_sha256": "7c102b110d7a11b8239b6f14f3a1298ea96b1c71f9983a60a58d9362fd6eb3c6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OneCore.ApexChoices",
+      "name": "_private.Overfull.OneCore.ApexChoices.0.Overfull.OneCore.row_budget",
+      "source_path": "Overfull/OneCore/ApexChoices.lean",
+      "source_sha256": "f603fb89fb7ce1b337e44bc679f4a9cce118173e6467a2f2e6a296a66f66d298"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OneCore.Factorization",
+      "name": "_private.Overfull.OneCore.Factorization.0.Overfull.OneCore.bipartite_robust_change_instances",
+      "source_path": "Overfull/OneCore/Factorization.lean",
+      "source_sha256": "af5235ffb7a8fbf6930fd248f0df44a6e21a853c6339b20b2ae8498607f37840"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "name": "_private.Overfull.OrdinaryFactorization.FirstHalf.0.Overfull.OrdinaryFactorization.robust_expander_change_instance",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "source_sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "name": "_private.Overfull.TwoApexFactorization.Completion.0.Overfull.TwoApexFactorization.Completion.no_common",
+      "source_path": "Overfull/TwoApexFactorization/Completion.lean",
+      "source_sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.edgesTo_mono",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.four_piece_incidence",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.four_piece_incidence._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.four_piece_incidence._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.four_piece_to_core",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.four_piece_to_core._simp_1_1",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.four_piece_to_core._simp_1_2",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.internal_endpoint",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.internal_insert_subset",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.other_apex_not_incident",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.outside_edgesTo",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "name": "_private.Overfull.TwoApexFactorization.Selection.0.Overfull.TwoApexFactorization.parallel_symm",
+      "source_path": "Overfull/TwoApexFactorization/Selection.lean",
+      "source_sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    }
+  ]
+}

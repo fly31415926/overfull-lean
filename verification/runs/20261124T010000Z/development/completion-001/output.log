@@ -1,0 +1,12 @@
+✖ [3303/3303] Building Overfull.NativeCore.Completion (3.7s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/1368c254067d/overfull-lean/Overfull/NativeCore/Completion.lean -o /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeCore/Completion.olean -i /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeCore/Completion.ilean -c /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeCore/Completion.c --setup /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeCore/Completion.setup.json --json
+error: Overfull/NativeCore/Completion.lean:65:4: Type mismatch: After simplification, term
+  LE.le.trans (coreFootprint_load_le_error G C B hdisj hout k a hregular hdegree v) herror
+ has type
+  ↑(#{j | v ∈ coreFootprint G U (B j)}) ≤ ε * ↑(#U)
+but is expected to have type
+  ↑(#{j | v ∈ coreFootprint G U (B j)}) ≤ ε * ↑(#U)
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeCore.Completion
+error: build failed

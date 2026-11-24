@@ -1,0 +1,61 @@
+✖ [3337/3337] Building Overfull.NativeAssembly.Paired (4.1s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/1368c254067d/overfull-lean/Overfull/NativeAssembly/Paired.lean -o /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeAssembly/Paired.olean -i /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeAssembly/Paired.ilean -c /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeAssembly/Paired.c --setup /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeAssembly/Paired.setup.json --json
+error: Overfull/NativeAssembly/Paired.lean:123:9: Function expected at
+  ReserveExtension
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  C
+error: Overfull/NativeAssembly/Paired.lean:163:6: Type mismatch: After simplification, term
+  he'
+ has type
+  e ∈
+    joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ {x, y}) ∪
+      exceptionalCopies (residualGraph G N T) univ {x, y}
+but is expected to have type
+  e ∈ joiningCopies H label ∪ exceptionalCopies H univ {x, y}
+error: Overfull/NativeAssembly/Paired.lean:165:73: Application type mismatch: The argument
+  hs
+has type
+  Q.residualBoundary N T (q i) ⊆
+    @Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (joiningCopies H label)
+      (exceptionalCopies H univ {x, y})
+but is expected to have type
+  Q.residualBoundary N T (q i) ⊆
+    @Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b))
+      (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z))
+      (exceptionalCopies (residualGraph G N T) univ {x, y})
+in the application
+  reserved_pair_class C 2 x y hpairfiber (Q.residualBoundary N T (q i))
+    (BoundaryPacking.residualBoundary_matching Q N T (q i)) ⟨↑(g i), hgPair⟩ (hgR i) hs
+error: Overfull/NativeAssembly/Paired.lean:166:11: Application type mismatch: The argument
+  hh.left
+has type
+  Q.residualBoundary N T (q i) =
+    @Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (C.classes (f i)) {↑⟨↑(g i), hgPair⟩}
+but is expected to have type
+  Q.residualBoundary N T (q i) =
+    @Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (C.classes (f i)) {↑(g i)}
+in the application
+  And.intro hh.left
+error: Overfull/NativeAssembly/Paired.lean:185:17: Application type mismatch: The argument
+  Eq.symm (hRinfo i).left
+has type
+  @Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (C.classes (f i)) {↑(g i)} =
+    Q.residualBoundary N T (q i)
+but is expected to have type
+  @Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (C.classes (f i)) {↑(g i)} =
+    Q.residualBoundary N T (q i)
+in the application
+  Eq.trans hh (Eq.symm (hRinfo i).left)
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeAssembly.Paired
+error: build failed

@@ -1,0 +1,488 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "98c6b228a997fead863d05041f12799c93fac18b",
+  "native_reserve_source_checkpoint": "964027f1a74cd68149033dc74f87846cabdf2eae",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "scope": "Actual native residual joining-degree bounds; retained robustness chosen before requested surplus error; bounded matching palettes with exact original-copy coverage, per-class cut parity, whole-class footprint and vertex-load bounds; prescribed singleton primary joining copies and protected grouping. Supporting progress toward Corollary 4.6. Internal exceptional completion, final robust completion, full residual factorization and the main theorem remain incomplete.",
+  "review": "docs/residual-palette-semantic-review.md",
+  "proof_map": "docs/residual-palette-verification.md",
+  "module_count": 12,
+  "public_theorem_count": 75,
+  "modules": [
+    {
+      "module": "Overfull.ResidualPalette.JoiningBounds",
+      "path": "Overfull/ResidualPalette/JoiningBounds.lean",
+      "sha256": "ffb88acf6fd2bf4aa78d761bbf2cf5452ee8d377488a1245c4acf17f2ce77a93",
+      "public_theorem_count": 12,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.exceptional_selected_label_eq",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.NativeReserve.assignedLabel_on_core\u2080",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.NativeReserve.assignedLabel_on_core\u2081",
+          "source_line": 48
+        },
+        {
+          "name": "Overfull.NativeReserve.joiningCopies_disjoint_core",
+          "source_line": 61
+        },
+        {
+          "name": "Overfull.NativeReserve.joining_degree_le_core_error",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.NativeReserve.residual_joining_degree_add_reserved_le",
+          "source_line": 93
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.exceptional_label_eq",
+          "source_line": 139
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.reserved_exceptional_degree",
+          "source_line": 158
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.reserved_disjoint_removed",
+          "source_line": 167
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residual_exceptional_joining_degree",
+          "source_line": 177
+        },
+        {
+          "name": "Overfull.NativeReserve.native_residual_joining_degree_bounds",
+          "source_line": 204
+        },
+        {
+          "name": "Overfull.NativeReserve.natural_joining_degree_bound",
+          "source_line": 252
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.JoiningGrouping",
+      "path": "Overfull/ResidualPalette/JoiningGrouping.lean",
+      "sha256": "2faf0de462bc509e4112f555daa3a132703a0973ab922be98c699b8aa676188a",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.uncovered_even",
+          "source_line": 52
+        },
+        {
+          "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette",
+          "source_line": 71
+        },
+        {
+          "name": "Overfull.FourOdd.TwoOddJoiningDecomposition.exists_palette",
+          "source_line": 119
+        },
+        {
+          "name": "Overfull.AssignedParts.exists_assigned_joiningPalette_in_host",
+          "source_line": 215
+        },
+        {
+          "name": "Overfull.AssignedParts.assigned_joiningPalette_uncovered_even",
+          "source_line": 238
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.NativeProtectedPalette",
+      "path": "Overfull/ResidualPalette/NativeProtectedPalette.lean",
+      "sha256": "30bbfdd4b3eb1d3a40552cc999945c5bace9bd09038cb7f5e68a93d4d97c33d9",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.exists_native_protected_joiningPalette",
+          "source_line": 24
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.NativeReservedCrossings",
+      "path": "Overfull/ResidualPalette/NativeReservedCrossings.lean",
+      "sha256": "185029e1a02d75552b0013a95fbb1f23a8b119944db410958b5c73df186bbb6e",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.coreCrossing_endpoint_cases",
+          "source_line": 18
+        },
+        {
+          "name": "Overfull.NativeReserve.coreCrossing_assigned_label_pair",
+          "source_line": 35
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.crossing_card_one_of_odd",
+          "source_line": 54
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.exists_surviving_crossing_family",
+          "source_line": 67
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.exists_half_residual_crossing_reserve",
+          "source_line": 112
+        },
+        {
+          "name": "Overfull.NativeReserve.half_reserve_palette_room",
+          "source_line": 142
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.PaletteBudget",
+      "path": "Overfull/ResidualPalette/PaletteBudget.lean",
+      "sha256": "58346edddc1fedeea111af98f5a02115178f7b8e305200bbecbd98f20e381cba",
+      "public_theorem_count": 8,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.palette_margin_lower",
+          "source_line": 18
+        },
+        {
+          "name": "Overfull.NativeReserve.natural_palette_capacity",
+          "source_line": 35
+        },
+        {
+          "name": "Overfull.NativeReserve.palette_capacity_support_bound",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.NativeReserve.palette_capacity_support_small",
+          "source_line": 68
+        },
+        {
+          "name": "Overfull.NativeReserve.uniform_palette_capacity",
+          "source_line": 82
+        },
+        {
+          "name": "Overfull.NativeReserve.uniform_palette_capacity_support_small",
+          "source_line": 94
+        },
+        {
+          "name": "Overfull.NativeReserve.uniform_palette_budget",
+          "source_line": 106
+        },
+        {
+          "name": "Overfull.NativeReserve.groupedCopies_support_small",
+          "source_line": 125
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.PaletteGrouping",
+      "path": "Overfull/ResidualPalette/PaletteGrouping.lean",
+      "sha256": "b3234409b31258e3d9dc51924a5023c5e4af084137c0968466d98085f916cf62",
+      "public_theorem_count": 20,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.fullPalettes_mul_le",
+          "source_line": 27
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_available_palette",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_bounded_palette_extension",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.NativeReserve.pieceConflict_card_le",
+          "source_line": 163
+        },
+        {
+          "name": "Overfull.NativeReserve.mem_groupedCopies",
+          "source_line": 182
+        },
+        {
+          "name": "Overfull.NativeReserve.groupedCopies_isMatching",
+          "source_line": 188
+        },
+        {
+          "name": "Overfull.NativeReserve.groupedCopies_disjoint",
+          "source_line": 206
+        },
+        {
+          "name": "Overfull.NativeReserve.groupedCopies_cover",
+          "source_line": 221
+        },
+        {
+          "name": "Overfull.NativeReserve.groupedCopies_card_le",
+          "source_line": 229
+        },
+        {
+          "name": "Overfull.NativeReserve.groupedCopies_support_card_le",
+          "source_line": 240
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_bounded_matching_grouping",
+          "source_line": 250
+        },
+        {
+          "name": "Overfull.NativeReserve.piece_count_le_copy_count",
+          "source_line": 291
+        },
+        {
+          "name": "Overfull.NativeReserve.twice_piece_count_le_order_mul_degree",
+          "source_line": 302
+        },
+        {
+          "name": "Overfull.NativeReserve.primarySeed_injective",
+          "source_line": 326
+        },
+        {
+          "name": "Overfull.NativeReserve.primarySeed_extension_unique",
+          "source_line": 337
+        },
+        {
+          "name": "Overfull.NativeReserve.palette_capacity_of_incidence_budget",
+          "source_line": 356
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_matching_grouping_with_primary",
+          "source_line": 368
+        },
+        {
+          "name": "Overfull.NativeReserve.groupedCopies_subset",
+          "source_line": 397
+        },
+        {
+          "name": "Overfull.NativeReserve.groupedCopies_support_load_le",
+          "source_line": 406
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_matching_grouping",
+          "source_line": 417
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.PaletteParity",
+      "path": "Overfull/ResidualPalette/PaletteParity.lean",
+      "sha256": "9d8ef8bbad5283d5afc5d8eb0a0411f67657e6cbca83a425330b2b04c3a52e7f",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.cutOn_biUnion_card",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.NativeReserve.cutOn_biUnion_even",
+          "source_line": 31
+        },
+        {
+          "name": "Overfull.NativeReserve.cutOn_biUnion_mod_two_of_one_primary",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.FourOdd.liftJoiningParts_even_cut",
+          "source_line": 64
+        },
+        {
+          "name": "Overfull.FourOdd.exists_evenJoining_decomposition",
+          "source_line": 86
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.ProtectedBudget",
+      "path": "Overfull/ResidualPalette/ProtectedBudget.lean",
+      "sha256": "eae750e4b0b2455a847b76c68f7e966ecf194188374ddb97e2e50bead522b203",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.protected_palette_margin_lower",
+          "source_line": 16
+        },
+        {
+          "name": "Overfull.NativeReserve.protected_palette_capacity",
+          "source_line": 35
+        },
+        {
+          "name": "Overfull.NativeReserve.protected_capacity_support_bound",
+          "source_line": 47
+        },
+        {
+          "name": "Overfull.NativeReserve.protected_capacity_support_small",
+          "source_line": 73
+        },
+        {
+          "name": "Overfull.NativeReserve.uniform_protected_palette_budget",
+          "source_line": 88
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.ProtectedGrouping",
+      "path": "Overfull/ResidualPalette/ProtectedGrouping.lean",
+      "sha256": "bb8bb7dc994992b3c639fa2c2759ac90c44abb47d99f722c29e544f2ad075788",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.protectedPieceConflict_symm",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.NativeReserve.protectedPieceConflict_irrefl",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.NativeReserve.protectedPieceConflict_card_le",
+          "source_line": 49
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_protected_matching_grouping",
+          "source_line": 68
+        },
+        {
+          "name": "Overfull.NativeReserve.protected_palette_capacity_of_incidence_budget",
+          "source_line": 133
+        },
+        {
+          "name": "Overfull.FourOdd.TwoOddJoiningDecomposition.exists_protected_palette",
+          "source_line": 155
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.ReservedPrimary",
+      "path": "Overfull/ResidualPalette/ReservedPrimary.lean",
+      "sha256": "591c53ee1adff45f655ddaa06f3fefa0b979bd11ed64daebd69dbc2b0dfb9192",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.pair_copy_crosses",
+          "source_line": 19
+        },
+        {
+          "name": "Overfull.NativeReserve.original_virtual_pair_compatible",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_circuit_partition_with_reserved_pairs",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.NativeReserve.joining_endpoint_class_card_le",
+          "source_line": 172
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_twoOddJoining_decomposition_with_reserved_primary",
+          "source_line": 193
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.UniformCompletion",
+      "path": "Overfull/ResidualPalette/UniformCompletion.lean",
+      "sha256": "f7dd90052b368583d94b94c35b95555340f77c2cc8a04d4a3c12b362715924d3",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.exists_uniform_native_reserve_completion_parameters",
+          "source_line": 22
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.UniformJoining",
+      "path": "Overfull/ResidualPalette/UniformJoining.lean",
+      "sha256": "8c23e41c61cd68ef1275b740f4ddbe6865a3646df2037ab8c3ec88df9ee91844",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.exists_uniform_native_reserve_completion_with_small_joining",
+          "source_line": 20
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.AssignedParts.assigned_joiningPalette_uncovered_even",
+    "Overfull.AssignedParts.exists_assigned_joiningPalette_in_host",
+    "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette",
+    "Overfull.FourOdd.TwoOddJoiningDecomposition.exists_palette",
+    "Overfull.FourOdd.TwoOddJoiningDecomposition.exists_protected_palette",
+    "Overfull.FourOdd.exists_evenJoining_decomposition",
+    "Overfull.FourOdd.liftJoiningParts_even_cut",
+    "Overfull.NativeReserve.BoundaryPacking.crossing_card_one_of_odd",
+    "Overfull.NativeReserve.BoundaryPacking.exceptional_label_eq",
+    "Overfull.NativeReserve.BoundaryPacking.exists_half_residual_crossing_reserve",
+    "Overfull.NativeReserve.BoundaryPacking.exists_surviving_crossing_family",
+    "Overfull.NativeReserve.BoundaryPacking.reserved_disjoint_removed",
+    "Overfull.NativeReserve.BoundaryPacking.reserved_exceptional_degree",
+    "Overfull.NativeReserve.BoundaryPacking.residual_exceptional_joining_degree",
+    "Overfull.NativeReserve.JoiningPalette.uncovered_even",
+    "Overfull.NativeReserve.assignedLabel_on_core\u2080",
+    "Overfull.NativeReserve.assignedLabel_on_core\u2081",
+    "Overfull.NativeReserve.coreCrossing_assigned_label_pair",
+    "Overfull.NativeReserve.coreCrossing_endpoint_cases",
+    "Overfull.NativeReserve.cutOn_biUnion_card",
+    "Overfull.NativeReserve.cutOn_biUnion_even",
+    "Overfull.NativeReserve.cutOn_biUnion_mod_two_of_one_primary",
+    "Overfull.NativeReserve.exceptional_selected_label_eq",
+    "Overfull.NativeReserve.exists_available_palette",
+    "Overfull.NativeReserve.exists_bounded_matching_grouping",
+    "Overfull.NativeReserve.exists_bounded_palette_extension",
+    "Overfull.NativeReserve.exists_circuit_partition_with_reserved_pairs",
+    "Overfull.NativeReserve.exists_matching_grouping",
+    "Overfull.NativeReserve.exists_matching_grouping_with_primary",
+    "Overfull.NativeReserve.exists_native_protected_joiningPalette",
+    "Overfull.NativeReserve.exists_protected_matching_grouping",
+    "Overfull.NativeReserve.exists_twoOddJoining_decomposition_with_reserved_primary",
+    "Overfull.NativeReserve.exists_uniform_native_reserve_completion_parameters",
+    "Overfull.NativeReserve.exists_uniform_native_reserve_completion_with_small_joining",
+    "Overfull.NativeReserve.fullPalettes_mul_le",
+    "Overfull.NativeReserve.groupedCopies_card_le",
+    "Overfull.NativeReserve.groupedCopies_cover",
+    "Overfull.NativeReserve.groupedCopies_disjoint",
+    "Overfull.NativeReserve.groupedCopies_isMatching",
+    "Overfull.NativeReserve.groupedCopies_subset",
+    "Overfull.NativeReserve.groupedCopies_support_card_le",
+    "Overfull.NativeReserve.groupedCopies_support_load_le",
+    "Overfull.NativeReserve.groupedCopies_support_small",
+    "Overfull.NativeReserve.half_reserve_palette_room",
+    "Overfull.NativeReserve.joiningCopies_disjoint_core",
+    "Overfull.NativeReserve.joining_degree_le_core_error",
+    "Overfull.NativeReserve.joining_endpoint_class_card_le",
+    "Overfull.NativeReserve.mem_groupedCopies",
+    "Overfull.NativeReserve.native_residual_joining_degree_bounds",
+    "Overfull.NativeReserve.natural_joining_degree_bound",
+    "Overfull.NativeReserve.natural_palette_capacity",
+    "Overfull.NativeReserve.original_virtual_pair_compatible",
+    "Overfull.NativeReserve.pair_copy_crosses",
+    "Overfull.NativeReserve.palette_capacity_of_incidence_budget",
+    "Overfull.NativeReserve.palette_capacity_support_bound",
+    "Overfull.NativeReserve.palette_capacity_support_small",
+    "Overfull.NativeReserve.palette_margin_lower",
+    "Overfull.NativeReserve.pieceConflict_card_le",
+    "Overfull.NativeReserve.piece_count_le_copy_count",
+    "Overfull.NativeReserve.primarySeed_extension_unique",
+    "Overfull.NativeReserve.primarySeed_injective",
+    "Overfull.NativeReserve.protectedPieceConflict_card_le",
+    "Overfull.NativeReserve.protectedPieceConflict_irrefl",
+    "Overfull.NativeReserve.protectedPieceConflict_symm",
+    "Overfull.NativeReserve.protected_capacity_support_bound",
+    "Overfull.NativeReserve.protected_capacity_support_small",
+    "Overfull.NativeReserve.protected_palette_capacity",
+    "Overfull.NativeReserve.protected_palette_capacity_of_incidence_budget",
+    "Overfull.NativeReserve.protected_palette_margin_lower",
+    "Overfull.NativeReserve.residual_joining_degree_add_reserved_le",
+    "Overfull.NativeReserve.twice_piece_count_le_order_mul_degree",
+    "Overfull.NativeReserve.uniform_palette_budget",
+    "Overfull.NativeReserve.uniform_palette_capacity",
+    "Overfull.NativeReserve.uniform_palette_capacity_support_small",
+    "Overfull.NativeReserve.uniform_protected_palette_budget"
+  ]
+}

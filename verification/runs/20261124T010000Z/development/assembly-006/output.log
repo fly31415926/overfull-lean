@@ -1,0 +1,1490 @@
+✖ [3346/3346] Building Overfull.NativeAssembly.NativeTwoStars (7.5s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/1368c254067d/overfull-lean/Overfull/NativeAssembly/NativeTwoStars.lean -o /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeAssembly/NativeTwoStars.olean -i /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeAssembly/NativeTwoStars.ilean -c /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeAssembly/NativeTwoStars.c --setup /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeAssembly/NativeTwoStars.setup.json --json
+error: Overfull/NativeAssembly/NativeTwoStars.lean:78:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Q.residualBoundary N T (q i)
+in the target expression
+  R i ∩ joiningCopies H label = C.classes (f i)
+
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+q : I → Fin r
+f : I → Fin h
+hq : Function.Injective q
+hf : Function.Injective f
+P : ReserveExtension C (fun i => Q.residualBoundary N T (q i)) f (#Z + 1)
+z₀ z₁ : { x // x ∈ Z }
+hZ : Z = {↑z₀, ↑z₁}
+hxy : ↑z₀ ≠ ↑z₁
+hsame : assignedLabel G M U₀ U₁ Z ↑z₀ = assignedLabel G M U₀ U₁ Z ↑z₁
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+b : ℕ
+hb : b ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight₀ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hweight₁ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hparallel₀ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₀) v) ≤ b
+hparallel₁ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₁) v) ≤ b
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+R : I → Finset { e // e ∉ removedCopies N T } := fun i => Q.residualBoundary N T (q i)
+Ux : Finset V := if σ z₀ = 0 then U₀ else U₁
+Uy : Finset V := if σ z₁ = 0 then U₀ else U₁
+S₀ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₀) Ux
+S₁ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₁) Uy
+B : Finset { e // e ∉ removedCopies N T } := pairFiberCopies H ↑z₀ ↑z₁
+Qcol : Finset (Fin h) := image f univ
+hQcard : #Qcol = Fintype.card I
+i : I
+⊢ R i ∩ joiningCopies H label = C.classes (f i)
+error: Overfull/NativeAssembly/NativeTwoStars.lean:86:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+in the target expression
+  ∀ e ∈ B, label (H.firstEnd e) = label (H.secondEnd e)
+
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+q : I → Fin r
+f : I → Fin h
+hq : Function.Injective q
+hf : Function.Injective f
+P : ReserveExtension C (fun i => Q.residualBoundary N T (q i)) f (#Z + 1)
+z₀ z₁ : { x // x ∈ Z }
+hZ : Z = {↑z₀, ↑z₁}
+hxy : ↑z₀ ≠ ↑z₁
+hsame : assignedLabel G M U₀ U₁ Z ↑z₀ = assignedLabel G M U₀ U₁ Z ↑z₁
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+b : ℕ
+hb : b ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight₀ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hweight₁ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hparallel₀ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₀) v) ≤ b
+hparallel₁ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₁) v) ≤ b
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+R : I → Finset { e // e ∉ removedCopies N T } := fun i => Q.residualBoundary N T (q i)
+Ux : Finset V := if σ z₀ = 0 then U₀ else U₁
+Uy : Finset V := if σ z₁ = 0 then U₀ else U₁
+S₀ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₀) Ux
+S₁ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₁) Uy
+B : Finset { e // e ∉ removedCopies N T } := pairFiberCopies H ↑z₀ ↑z₁
+Qcol : Finset (Fin h) := image f univ
+hQcard : #Qcol = Fintype.card I
+htrace : ∀ (i : I), R i ∩ joiningCopies H label = C.classes (f i)
+hB₀ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₀ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+hB₁ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₁ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+c : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ } → Fin h
+hc : Function.Injective c
+hcolor :
+  ∀ (e : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ }),
+    c e ∉ Qcol ∧ c e ∉ joiningUsedColors C ↑z₀ ∧ c e ∉ joiningUsedColors C ↑z₁
+hBedge : ∀ e ∈ B, H.edge e = s(↑z₀, ↑z₁)
+⊢ ∀ e ∈ B, label (H.firstEnd e) = label (H.secondEnd e)
+error: Overfull/NativeAssembly/NativeTwoStars.lean:90:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+in the target expression
+  Disjoint B (R i)
+
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+q : I → Fin r
+f : I → Fin h
+hq : Function.Injective q
+hf : Function.Injective f
+P : ReserveExtension C (fun i => Q.residualBoundary N T (q i)) f (#Z + 1)
+z₀ z₁ : { x // x ∈ Z }
+hZ : Z = {↑z₀, ↑z₁}
+hxy : ↑z₀ ≠ ↑z₁
+hsame : assignedLabel G M U₀ U₁ Z ↑z₀ = assignedLabel G M U₀ U₁ Z ↑z₁
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+b : ℕ
+hb : b ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight₀ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hweight₁ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hparallel₀ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₀) v) ≤ b
+hparallel₁ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₁) v) ≤ b
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+R : I → Finset { e // e ∉ removedCopies N T } := fun i => Q.residualBoundary N T (q i)
+Ux : Finset V := if σ z₀ = 0 then U₀ else U₁
+Uy : Finset V := if σ z₁ = 0 then U₀ else U₁
+S₀ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₀) Ux
+S₁ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₁) Uy
+B : Finset { e // e ∉ removedCopies N T } := pairFiberCopies H ↑z₀ ↑z₁
+Qcol : Finset (Fin h) := image f univ
+hQcard : #Qcol = Fintype.card I
+htrace : ∀ (i : I), R i ∩ joiningCopies H label = C.classes (f i)
+hB₀ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₀ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+hB₁ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₁ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+c : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ } → Fin h
+hc : Function.Injective c
+hcolor :
+  ∀ (e : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ }),
+    c e ∉ Qcol ∧ c e ∉ joiningUsedColors C ↑z₀ ∧ c e ∉ joiningUsedColors C ↑z₁
+hBedge : ∀ e ∈ B, H.edge e = s(↑z₀, ↑z₁)
+hinternal : ∀ e ∈ B, label (H.firstEnd e) = label (H.secondEnd e)
+i : I
+⊢ Disjoint B (R i)
+error: Overfull/NativeAssembly/NativeTwoStars.lean:116:38: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+in the target expression
+  Disjoint S₀ B
+
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+q : I → Fin r
+f : I → Fin h
+hq : Function.Injective q
+hf : Function.Injective f
+P : ReserveExtension C (fun i => Q.residualBoundary N T (q i)) f (#Z + 1)
+z₀ z₁ : { x // x ∈ Z }
+hZ : Z = {↑z₀, ↑z₁}
+hxy : ↑z₀ ≠ ↑z₁
+hsame : assignedLabel G M U₀ U₁ Z ↑z₀ = assignedLabel G M U₀ U₁ Z ↑z₁
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+b : ℕ
+hb : b ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight₀ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hweight₁ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hparallel₀ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₀) v) ≤ b
+hparallel₁ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₁) v) ≤ b
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+R : I → Finset { e // e ∉ removedCopies N T } := fun i => Q.residualBoundary N T (q i)
+Ux : Finset V := if σ z₀ = 0 then U₀ else U₁
+Uy : Finset V := if σ z₁ = 0 then U₀ else U₁
+S₀ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₀) Ux
+S₁ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₁) Uy
+B : Finset { e // e ∉ removedCopies N T } := pairFiberCopies H ↑z₀ ↑z₁
+Qcol : Finset (Fin h) := image f univ
+hQcard : #Qcol = Fintype.card I
+htrace : ∀ (i : I), R i ∩ joiningCopies H label = C.classes (f i)
+hB₀ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₀ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+hB₁ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₁ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+c : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ } → Fin h
+hc : Function.Injective c
+hcolor :
+  ∀ (e : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ }),
+    c e ∉ Qcol ∧ c e ∉ joiningUsedColors C ↑z₀ ∧ c e ∉ joiningUsedColors C ↑z₁
+hBedge : ∀ e ∈ B, H.edge e = s(↑z₀, ↑z₁)
+hinternal : ∀ e ∈ B, label (H.firstEnd e) = label (H.secondEnd e)
+hBR : ∀ (i : I), Disjoint B (R i)
+A₀ : Finset { e // e ∉ removedCopies N T } := S₀ \ (univ.biUnion R ∩ S₀)
+A₁ : Finset { e // e ∉ removedCopies N T } := S₁ \ (univ.biUnion R ∩ S₁)
+F₀ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z₀) (image c univ)
+F₁ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z₁) (image c univ)
+Base : Fin h → Finset { e // e ∉ removedCopies N T } := bundleClasses P B c
+hbal₀ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z₀;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hbal₁ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z₁;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hcard₀ : #A₀ = #F₀
+hcard₁ : #A₁ = #F₁
+hlower₀ : h - Fintype.card I - D ≤ #A₀
+hlower₁ : h - Fintype.card I - D ≤ #A₁
+hS₀ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z₀ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z₀) (exceptionCorePool H (↑z₀) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z₀) (exceptionInternalPool H label Z ↑z₀) ∧
+      Disjoint (exceptionCorePool H (↑z₀) U) (exceptionInternalPool H label Z ↑z₀) ∧
+        joiningIncidenceCopies H label ↑z₀ ∪ exceptionCorePool H (↑z₀) U ∪ exceptionInternalPool H label Z ↑z₀ =
+          H.incidenceEdges ↑z₀
+hS₁ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z₁ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z₁) (exceptionCorePool H (↑z₁) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z₁) (exceptionInternalPool H label Z ↑z₁) ∧
+      Disjoint (exceptionCorePool H (↑z₁) U) (exceptionInternalPool H label Z ↑z₁) ∧
+        joiningIncidenceCopies H label ↑z₁ ∪ exceptionCorePool H (↑z₁) U ∪ exceptionInternalPool H label Z ↑z₁ =
+          H.incidenceEdges ↑z₁
+⊢ Disjoint S₀ B
+error: Overfull/NativeAssembly/NativeTwoStars.lean:117:38: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+in the target expression
+  Disjoint S₁ B
+
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+q : I → Fin r
+f : I → Fin h
+hq : Function.Injective q
+hf : Function.Injective f
+P : ReserveExtension C (fun i => Q.residualBoundary N T (q i)) f (#Z + 1)
+z₀ z₁ : { x // x ∈ Z }
+hZ : Z = {↑z₀, ↑z₁}
+hxy : ↑z₀ ≠ ↑z₁
+hsame : assignedLabel G M U₀ U₁ Z ↑z₀ = assignedLabel G M U₀ U₁ Z ↑z₁
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+b : ℕ
+hb : b ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight₀ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hweight₁ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hparallel₀ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₀) v) ≤ b
+hparallel₁ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₁) v) ≤ b
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+R : I → Finset { e // e ∉ removedCopies N T } := fun i => Q.residualBoundary N T (q i)
+Ux : Finset V := if σ z₀ = 0 then U₀ else U₁
+Uy : Finset V := if σ z₁ = 0 then U₀ else U₁
+S₀ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₀) Ux
+S₁ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₁) Uy
+B : Finset { e // e ∉ removedCopies N T } := pairFiberCopies H ↑z₀ ↑z₁
+Qcol : Finset (Fin h) := image f univ
+hQcard : #Qcol = Fintype.card I
+htrace : ∀ (i : I), R i ∩ joiningCopies H label = C.classes (f i)
+hB₀ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₀ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+hB₁ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₁ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+c : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ } → Fin h
+hc : Function.Injective c
+hcolor :
+  ∀ (e : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ }),
+    c e ∉ Qcol ∧ c e ∉ joiningUsedColors C ↑z₀ ∧ c e ∉ joiningUsedColors C ↑z₁
+hBedge : ∀ e ∈ B, H.edge e = s(↑z₀, ↑z₁)
+hinternal : ∀ e ∈ B, label (H.firstEnd e) = label (H.secondEnd e)
+hBR : ∀ (i : I), Disjoint B (R i)
+A₀ : Finset { e // e ∉ removedCopies N T } := S₀ \ (univ.biUnion R ∩ S₀)
+A₁ : Finset { e // e ∉ removedCopies N T } := S₁ \ (univ.biUnion R ∩ S₁)
+F₀ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z₀) (image c univ)
+F₁ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z₁) (image c univ)
+Base : Fin h → Finset { e // e ∉ removedCopies N T } := bundleClasses P B c
+hbal₀ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z₀;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hbal₁ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z₁;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hcard₀ : #A₀ = #F₀
+hcard₁ : #A₁ = #F₁
+hlower₀ : h - Fintype.card I - D ≤ #A₀
+hlower₁ : h - Fintype.card I - D ≤ #A₁
+hS₀ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z₀ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z₀) (exceptionCorePool H (↑z₀) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z₀) (exceptionInternalPool H label Z ↑z₀) ∧
+      Disjoint (exceptionCorePool H (↑z₀) U) (exceptionInternalPool H label Z ↑z₀) ∧
+        joiningIncidenceCopies H label ↑z₀ ∪ exceptionCorePool H (↑z₀) U ∪ exceptionInternalPool H label Z ↑z₀ =
+          H.incidenceEdges ↑z₀
+hS₁ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z₁ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z₁) (exceptionCorePool H (↑z₁) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z₁) (exceptionInternalPool H label Z ↑z₁) ∧
+      Disjoint (exceptionCorePool H (↑z₁) U) (exceptionInternalPool H label Z ↑z₁) ∧
+        joiningIncidenceCopies H label ↑z₁ ∪ exceptionCorePool H (↑z₁) U ∪ exceptionInternalPool H label Z ↑z₁ =
+          H.incidenceEdges ↑z₁
+hSB₀ : Disjoint S₀ B
+⊢ Disjoint S₁ B
+error: Overfull/NativeAssembly/NativeTwoStars.lean:131:6: Application type mismatch: The argument
+  remaining_star_disjoint_bundleClasses P B S₀ c
+    (native_star_disjoint_joining G hM U₀ U₁ Z h01 h0Z h1Z hcover σ hcode N T z₀) hSB₀
+has type
+  ∀ (j : Fin h), Disjoint (S₀ \ ((univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S₀)) (bundleClasses P B c j)
+but is expected to have type
+  ∀ (j : Fin h), Disjoint A₀ (Base j)
+in the application
+  exists_two_star_extension_on_available H Base (↑z₀) (↑z₁) Ux Uy A₀ A₁ F₀ F₁ D b (Fintype.card I) sdiff_subset
+    sdiff_subset hxy hyUx hxUy hcard₀ hcard₁ hlower₀ hlower₁ hb hD hs
+    (bundleClasses_matching P B c hc (↑z₀) (↑z₁) hBedge (fun e => (hcolor e).left) fun e => (hcolor e).right)
+    (bundleClasses_disjoint P B c hinternal hBR)
+    (remaining_star_disjoint_bundleClasses P B S₀ c
+      (native_star_disjoint_joining G hM U₀ U₁ Z h01 h0Z h1Z hcover σ hcode N T z₀) hSB₀)
+error: Overfull/NativeAssembly/NativeTwoStars.lean:163:8: unsolved goals
+case hincident.inl
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+q : I → Fin r
+f : I → Fin h
+hq : Function.Injective q
+hf : Function.Injective f
+P : ReserveExtension C (fun i => Q.residualBoundary N T (q i)) f (#Z + 1)
+z₁ : { x // x ∈ Z }
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+b : ℕ
+hb : b ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight₁ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hparallel₁ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₁) v) ≤ b
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+R : I → Finset { e // e ∉ removedCopies N T } := fun i => Q.residualBoundary N T (q i)
+Uy : Finset V := if σ z₁ = 0 then U₀ else U₁
+S₁ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₁) Uy
+Qcol : Finset (Fin h) := image f univ
+hQcard : #Qcol = Fintype.card I
+htrace : ∀ (i : I), R i ∩ joiningCopies H label = C.classes (f i)
+A₁ : Finset { e // e ∉ removedCopies N T } := S₁ \ (univ.biUnion R ∩ S₁)
+hlower₁ : h - Fintype.card I - D ≤ #A₁
+hS₁ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z₁ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z₁) (exceptionCorePool H (↑z₁) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z₁) (exceptionInternalPool H label Z ↑z₁) ∧
+      Disjoint (exceptionCorePool H (↑z₁) U) (exceptionInternalPool H label Z ↑z₁) ∧
+        joiningIncidenceCopies H label ↑z₁ ∪ exceptionCorePool H (↑z₁) U ∪ exceptionInternalPool H label Z ↑z₁ =
+          H.incidenceEdges ↑z₁
+hUyZ : Disjoint (if σ z₁ = 0 then U₀ else U₁) Z
+z✝ : { x // x ∈ Z }
+j : Fin h
+z : { x // x ∈ Z }
+e : { e // e ∉ removedCopies N T }
+hZ : Z = {↑z✝, ↑z₁}
+hxy : ↑z✝ ≠ ↑z₁
+hsame : assignedLabel G M U₀ U₁ Z ↑z✝ = assignedLabel G M U₀ U₁ Z ↑z₁
+hweight₀ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z✝) (if σ z✝ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hparallel₀ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z✝) v) ≤ b
+Ux : Finset V := if σ z✝ = 0 then U₀ else U₁
+S₀ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z✝) Ux
+B : Finset { e // e ∉ removedCopies N T } := pairFiberCopies H ↑z✝ ↑z₁
+hB₀ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z✝ =
+    pairFiberCopies (residualGraph G N T) ↑z✝ ↑z₁
+hB₁ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₁ =
+    pairFiberCopies (residualGraph G N T) ↑z✝ ↑z₁
+c : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z✝ ↑z₁ } → Fin h
+hc : Function.Injective c
+hcolor :
+  ∀ (e : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z✝ ↑z₁ }),
+    c e ∉ Qcol ∧ c e ∉ joiningUsedColors C ↑z✝ ∧ c e ∉ joiningUsedColors C ↑z₁
+hBedge : ∀ e ∈ B, H.edge e = s(↑z✝, ↑z₁)
+hinternal : ∀ e ∈ B, label (H.firstEnd e) = label (H.secondEnd e)
+hBR : ∀ (i : I), Disjoint B (R i)
+A₀ : Finset { e // e ∉ removedCopies N T } := S₀ \ (univ.biUnion R ∩ S₀)
+F₀ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z✝) (image c univ)
+F₁ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z₁) (image c univ)
+Base : Fin h → Finset { e // e ∉ removedCopies N T } := bundleClasses P B c
+hbal₀ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z✝) (if σ z✝ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z✝;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hbal₁ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z₁;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hcard₀ : #A₀ = #F₀
+hcard₁ : #A₁ = #F₁
+hlower₀ : h - Fintype.card I - D ≤ #A₀
+hS₀ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z✝ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z✝) (exceptionCorePool H (↑z✝) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z✝) (exceptionInternalPool H label Z ↑z✝) ∧
+      Disjoint (exceptionCorePool H (↑z✝) U) (exceptionInternalPool H label Z ↑z✝) ∧
+        joiningIncidenceCopies H label ↑z✝ ∪ exceptionCorePool H (↑z✝) U ∪ exceptionInternalPool H label Z ↑z✝ =
+          H.incidenceEdges ↑z✝
+hSB₀ : Disjoint S₀ B
+hSB₁ : Disjoint S₁ B
+hUxZ : Disjoint (if σ z✝ = 0 then U₀ else U₁) Z
+hyUx : ↑z₁ ∉ Ux
+hxUy : ↑z✝ ∉ Uy
+g₀ : { x // x ∈ A₀ } ≃ { x // x ∈ F₀ }
+g₁ : { x // x ∈ A₁ } ≃ { x // x ∈ F₁ }
+hm :
+  ∀ (j : Fin h),
+    H.IsMatching (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hd :
+  Pairwise fun i j =>
+    Disjoint (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) i)
+      (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hcov :
+  univ.biUnion (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ fun e => ↑(g₁ e)) =
+    univ.biUnion Base ∪ A₀ ∪ A₁
+hsub :
+  ∀ (j : Fin h), Base j ⊆ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j
+hsize :
+  ∀ (j : Fin h),
+    #(starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j) ≤ #(Base j) + 2
+hsupport :
+  ∀ (j : Fin h),
+    #(H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)) ≤
+      #(H.edgeSupport (Base j)) + 4
+houtside :
+  ∀ j ∉ F₀ ∪ F₁, starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j = Base j
+hcovers₀ :
+  ∀ j ∈ F₀,
+    ↑z✝ ∈ H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hcovers₁ :
+  ∀ j ∈ F₁,
+    ↑z₁ ∈ H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+left✝ :
+  ∀ (e : { x // x ∈ A₀ }),
+    ↑e ∈ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) ↑(g₀ e)
+right✝ :
+  ∀ (e : { x // x ∈ A₁ }),
+    ↑e ∈ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) ↑(g₁ e)
+C₁ : Fin h → Finset { e // e ∉ removedCopies N T } := starExtendedClasses Base A₀ fun e => ↑(g₀ e)
+C₂ : Fin h → Finset { e // e ∉ removedCopies N T } := starExtendedClasses C₁ A₁ fun e => ↑(g₁ e)
+hprotected : ∀ (i : I), C₂ (f i) = R i
+he : e ∈ B
+⊢ ↑z = ↑z✝ ∨ ↑z = ↑z₁
+error: Overfull/NativeAssembly/NativeTwoStars.lean:164:8: unsolved goals
+case hincident.inr
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+q : I → Fin r
+f : I → Fin h
+hq : Function.Injective q
+hf : Function.Injective f
+P : ReserveExtension C (fun i => Q.residualBoundary N T (q i)) f (#Z + 1)
+z₀ : { x // x ∈ Z }
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+b : ℕ
+hb : b ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight₀ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+R : I → Finset { e // e ∉ removedCopies N T } := fun i => Q.residualBoundary N T (q i)
+Ux : Finset V := if σ z₀ = 0 then U₀ else U₁
+S₀ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₀) Ux
+Qcol : Finset (Fin h) := image f univ
+hQcard : #Qcol = Fintype.card I
+htrace : ∀ (i : I), R i ∩ joiningCopies H label = C.classes (f i)
+A₀ : Finset { e // e ∉ removedCopies N T } := S₀ \ (univ.biUnion R ∩ S₀)
+hlower₀ : h - Fintype.card I - D ≤ #A₀
+hS₀ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z₀ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z₀) (exceptionCorePool H (↑z₀) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z₀) (exceptionInternalPool H label Z ↑z₀) ∧
+      Disjoint (exceptionCorePool H (↑z₀) U) (exceptionInternalPool H label Z ↑z₀) ∧
+        joiningIncidenceCopies H label ↑z₀ ∪ exceptionCorePool H (↑z₀) U ∪ exceptionInternalPool H label Z ↑z₀ =
+          H.incidenceEdges ↑z₀
+hUxZ : Disjoint (if σ z₀ = 0 then U₀ else U₁) Z
+z✝ : { x // x ∈ Z }
+j : Fin h
+z : { x // x ∈ Z }
+e : { e // e ∉ removedCopies N T }
+hZ : Z = {↑z₀, ↑z✝}
+hxy : ↑z₀ ≠ ↑z✝
+hsame : assignedLabel G M U₀ U₁ Z ↑z₀ = assignedLabel G M U₀ U₁ Z ↑z✝
+hweight₁ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z✝) (if σ z✝ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hparallel₀ : ∀ v ∈ if σ z✝ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₀) v) ≤ b
+hparallel₁ : ∀ v ∈ if σ z✝ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z✝) v) ≤ b
+Uy : Finset V := if σ z✝ = 0 then U₀ else U₁
+S₁ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z✝) Uy
+B : Finset { e // e ∉ removedCopies N T } := pairFiberCopies H ↑z₀ ↑z✝
+hB₀ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₀ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z✝
+hB₁ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z✝ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z✝
+c : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z✝ } → Fin h
+hc : Function.Injective c
+hcolor :
+  ∀ (e : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z✝ }),
+    c e ∉ Qcol ∧ c e ∉ joiningUsedColors C ↑z₀ ∧ c e ∉ joiningUsedColors C ↑z✝
+hBedge : ∀ e ∈ B, H.edge e = s(↑z₀, ↑z✝)
+hinternal : ∀ e ∈ B, label (H.firstEnd e) = label (H.secondEnd e)
+hBR : ∀ (i : I), Disjoint B (R i)
+A₁ : Finset { e // e ∉ removedCopies N T } := S₁ \ (univ.biUnion R ∩ S₁)
+F₀ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z₀) (image c univ)
+F₁ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z✝) (image c univ)
+Base : Fin h → Finset { e // e ∉ removedCopies N T } := bundleClasses P B c
+hbal₀ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z₀;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hbal₁ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z✝) (if σ z✝ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z✝;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hcard₀ : #A₀ = #F₀
+hcard₁ : #A₁ = #F₁
+hlower₁ : h - Fintype.card I - D ≤ #A₁
+hS₁ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z✝ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z✝) (exceptionCorePool H (↑z✝) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z✝) (exceptionInternalPool H label Z ↑z✝) ∧
+      Disjoint (exceptionCorePool H (↑z✝) U) (exceptionInternalPool H label Z ↑z✝) ∧
+        joiningIncidenceCopies H label ↑z✝ ∪ exceptionCorePool H (↑z✝) U ∪ exceptionInternalPool H label Z ↑z✝ =
+          H.incidenceEdges ↑z✝
+hSB₀ : Disjoint S₀ B
+hSB₁ : Disjoint S₁ B
+hUyZ : Disjoint (if σ z✝ = 0 then U₀ else U₁) Z
+hyUx : ↑z✝ ∉ Ux
+hxUy : ↑z₀ ∉ Uy
+g₀ : { x // x ∈ A₀ } ≃ { x // x ∈ F₀ }
+g₁ : { x // x ∈ A₁ } ≃ { x // x ∈ F₁ }
+hm :
+  ∀ (j : Fin h),
+    H.IsMatching (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hd :
+  Pairwise fun i j =>
+    Disjoint (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) i)
+      (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hcov :
+  univ.biUnion (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ fun e => ↑(g₁ e)) =
+    univ.biUnion Base ∪ A₀ ∪ A₁
+hsub :
+  ∀ (j : Fin h), Base j ⊆ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j
+hsize :
+  ∀ (j : Fin h),
+    #(starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j) ≤ #(Base j) + 2
+hsupport :
+  ∀ (j : Fin h),
+    #(H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)) ≤
+      #(H.edgeSupport (Base j)) + 4
+houtside :
+  ∀ j ∉ F₀ ∪ F₁, starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j = Base j
+hcovers₀ :
+  ∀ j ∈ F₀,
+    ↑z₀ ∈ H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hcovers₁ :
+  ∀ j ∈ F₁,
+    ↑z✝ ∈ H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+left✝ :
+  ∀ (e : { x // x ∈ A₀ }),
+    ↑e ∈ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) ↑(g₀ e)
+right✝ :
+  ∀ (e : { x // x ∈ A₁ }),
+    ↑e ∈ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) ↑(g₁ e)
+C₁ : Fin h → Finset { e // e ∉ removedCopies N T } := starExtendedClasses Base A₀ fun e => ↑(g₀ e)
+C₂ : Fin h → Finset { e // e ∉ removedCopies N T } := starExtendedClasses C₁ A₁ fun e => ↑(g₁ e)
+hprotected : ∀ (i : I), C₂ (f i) = R i
+he : e ∈ B
+⊢ ↑z = ↑z₀ ∨ ↑z = ↑z✝
+error: Overfull/NativeAssembly/NativeTwoStars.lean:168:50: Unknown identifier `z₀.val`
+error: Overfull/NativeAssembly/NativeTwoStars.lean:168:68: Unknown identifier `z₀`
+error: Overfull/NativeAssembly/NativeTwoStars.lean:172:50: Unknown identifier `z₁.val`
+error: Overfull/NativeAssembly/NativeTwoStars.lean:172:68: Unknown identifier `z₁`
+error: Overfull/NativeAssembly/NativeTwoStars.lean:183:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  H.cutOn (starExtendedClasses P.classes B c ?j) (labelShore label {?k})
+in the target expression
+  H.cutOn (Base j) (labelShore label {k}) = H.cutOn (C.classes j) (labelShore label {k})
+
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+q : I → Fin r
+f : I → Fin h
+hq : Function.Injective q
+hf : Function.Injective f
+P : ReserveExtension C (fun i => Q.residualBoundary N T (q i)) f (#Z + 1)
+z₀ z₁ : { x // x ∈ Z }
+hZ : Z = {↑z₀, ↑z₁}
+hxy : ↑z₀ ≠ ↑z₁
+hsame : assignedLabel G M U₀ U₁ Z ↑z₀ = assignedLabel G M U₀ U₁ Z ↑z₁
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+b : ℕ
+hb : b ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight₀ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hweight₁ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hparallel₀ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₀) v) ≤ b
+hparallel₁ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₁) v) ≤ b
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+R : I → Finset { e // e ∉ removedCopies N T } := fun i => Q.residualBoundary N T (q i)
+Ux : Finset V := if σ z₀ = 0 then U₀ else U₁
+Uy : Finset V := if σ z₁ = 0 then U₀ else U₁
+S₀ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₀) Ux
+S₁ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₁) Uy
+B : Finset { e // e ∉ removedCopies N T } := pairFiberCopies H ↑z₀ ↑z₁
+Qcol : Finset (Fin h) := image f univ
+hQcard : #Qcol = Fintype.card I
+htrace : ∀ (i : I), R i ∩ joiningCopies H label = C.classes (f i)
+hB₀ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₀ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+hB₁ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₁ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+c : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ } → Fin h
+hc : Function.Injective c
+hcolor :
+  ∀ (e : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ }),
+    c e ∉ Qcol ∧ c e ∉ joiningUsedColors C ↑z₀ ∧ c e ∉ joiningUsedColors C ↑z₁
+hBedge : ∀ e ∈ B, H.edge e = s(↑z₀, ↑z₁)
+hinternal : ∀ e ∈ B, label (H.firstEnd e) = label (H.secondEnd e)
+hBR : ∀ (i : I), Disjoint B (R i)
+A₀ : Finset { e // e ∉ removedCopies N T } := S₀ \ (univ.biUnion R ∩ S₀)
+A₁ : Finset { e // e ∉ removedCopies N T } := S₁ \ (univ.biUnion R ∩ S₁)
+F₀ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z₀) (image c univ)
+F₁ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z₁) (image c univ)
+Base : Fin h → Finset { e // e ∉ removedCopies N T } := bundleClasses P B c
+hbal₀ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z₀;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hbal₁ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z₁;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hcard₀ : #A₀ = #F₀
+hcard₁ : #A₁ = #F₁
+hlower₀ : h - Fintype.card I - D ≤ #A₀
+hlower₁ : h - Fintype.card I - D ≤ #A₁
+hS₀ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z₀ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z₀) (exceptionCorePool H (↑z₀) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z₀) (exceptionInternalPool H label Z ↑z₀) ∧
+      Disjoint (exceptionCorePool H (↑z₀) U) (exceptionInternalPool H label Z ↑z₀) ∧
+        joiningIncidenceCopies H label ↑z₀ ∪ exceptionCorePool H (↑z₀) U ∪ exceptionInternalPool H label Z ↑z₀ =
+          H.incidenceEdges ↑z₀
+hS₁ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z₁ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z₁) (exceptionCorePool H (↑z₁) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z₁) (exceptionInternalPool H label Z ↑z₁) ∧
+      Disjoint (exceptionCorePool H (↑z₁) U) (exceptionInternalPool H label Z ↑z₁) ∧
+        joiningIncidenceCopies H label ↑z₁ ∪ exceptionCorePool H (↑z₁) U ∪ exceptionInternalPool H label Z ↑z₁ =
+          H.incidenceEdges ↑z₁
+hSB₀ : Disjoint S₀ B
+hSB₁ : Disjoint S₁ B
+hUxZ : Disjoint (if σ z₀ = 0 then U₀ else U₁) Z
+hUyZ : Disjoint (if σ z₁ = 0 then U₀ else U₁) Z
+hyUx : ↑z₁ ∉ Ux
+hxUy : ↑z₀ ∉ Uy
+g₀ : { x // x ∈ A₀ } ≃ { x // x ∈ F₀ }
+g₁ : { x // x ∈ A₁ } ≃ { x // x ∈ F₁ }
+hm :
+  ∀ (j : Fin h),
+    H.IsMatching (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hd :
+  Pairwise fun i j =>
+    Disjoint (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) i)
+      (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hcov :
+  univ.biUnion (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ fun e => ↑(g₁ e)) =
+    univ.biUnion Base ∪ A₀ ∪ A₁
+hsub :
+  ∀ (j : Fin h), Base j ⊆ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j
+hsize :
+  ∀ (j : Fin h),
+    #(starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j) ≤ #(Base j) + 2
+hsupport :
+  ∀ (j : Fin h),
+    #(H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)) ≤
+      #(H.edgeSupport (Base j)) + 4
+houtside :
+  ∀ j ∉ F₀ ∪ F₁, starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j = Base j
+hcovers₀ :
+  ∀ j ∈ F₀,
+    ↑z₀ ∈ H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hcovers₁ :
+  ∀ j ∈ F₁,
+    ↑z₁ ∈ H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+left✝ :
+  ∀ (e : { x // x ∈ A₀ }),
+    ↑e ∈ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) ↑(g₀ e)
+right✝ :
+  ∀ (e : { x // x ∈ A₁ }),
+    ↑e ∈ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) ↑(g₁ e)
+C₁ : Fin h → Finset { e // e ∉ removedCopies N T } := starExtendedClasses Base A₀ fun e => ↑(g₀ e)
+C₂ : Fin h → Finset { e // e ∉ removedCopies N T } := starExtendedClasses C₁ A₁ fun e => ↑(g₁ e)
+hprotected : ∀ (i : I), C₂ (f i) = R i
+hcoverz : ∀ (z : { x // x ∈ Z }), z = z₀ ∨ z = z₁ → ∀ (j : Fin h), ↑z ∈ H.edgeSupport (C₂ j)
+j : Fin h
+k : Fin 3
+⊢ H.cutOn (Base j) (labelShore label {k}) = H.cutOn (C.classes j) (labelShore label {k})
+error: Overfull/NativeAssembly/NativeTwoStars.lean:186:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  univ.biUnion (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ fun e => ↑(g₁ e))
+in the target expression
+  univ.biUnion C₂ =
+    (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) ∪
+            univ.biUnion fun i => Q.residualBoundary N T (q i)) ∪
+          pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ ∪
+        exceptionCorePool (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁) ∪
+      exceptionCorePool (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁)
+
+case refine_1
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+q : I → Fin r
+f : I → Fin h
+hq : Function.Injective q
+hf : Function.Injective f
+P : ReserveExtension C (fun i => Q.residualBoundary N T (q i)) f (#Z + 1)
+z₀ z₁ : { x // x ∈ Z }
+hZ : Z = {↑z₀, ↑z₁}
+hxy : ↑z₀ ≠ ↑z₁
+hsame : assignedLabel G M U₀ U₁ Z ↑z₀ = assignedLabel G M U₀ U₁ Z ↑z₁
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+b : ℕ
+hb : b ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight₀ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hweight₁ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hparallel₀ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₀) v) ≤ b
+hparallel₁ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₁) v) ≤ b
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+R : I → Finset { e // e ∉ removedCopies N T } := fun i => Q.residualBoundary N T (q i)
+Ux : Finset V := if σ z₀ = 0 then U₀ else U₁
+Uy : Finset V := if σ z₁ = 0 then U₀ else U₁
+S₀ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₀) Ux
+S₁ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₁) Uy
+B : Finset { e // e ∉ removedCopies N T } := pairFiberCopies H ↑z₀ ↑z₁
+Qcol : Finset (Fin h) := image f univ
+hQcard : #Qcol = Fintype.card I
+htrace : ∀ (i : I), R i ∩ joiningCopies H label = C.classes (f i)
+hB₀ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₀ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+hB₁ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₁ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+c : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ } → Fin h
+hc : Function.Injective c
+hcolor :
+  ∀ (e : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ }),
+    c e ∉ Qcol ∧ c e ∉ joiningUsedColors C ↑z₀ ∧ c e ∉ joiningUsedColors C ↑z₁
+hBedge : ∀ e ∈ B, H.edge e = s(↑z₀, ↑z₁)
+hinternal : ∀ e ∈ B, label (H.firstEnd e) = label (H.secondEnd e)
+hBR : ∀ (i : I), Disjoint B (R i)
+A₀ : Finset { e // e ∉ removedCopies N T } := S₀ \ (univ.biUnion R ∩ S₀)
+A₁ : Finset { e // e ∉ removedCopies N T } := S₁ \ (univ.biUnion R ∩ S₁)
+F₀ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z₀) (image c univ)
+F₁ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z₁) (image c univ)
+Base : Fin h → Finset { e // e ∉ removedCopies N T } := bundleClasses P B c
+hbal₀ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z₀;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hbal₁ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z₁;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hcard₀ : #A₀ = #F₀
+hcard₁ : #A₁ = #F₁
+hlower₀ : h - Fintype.card I - D ≤ #A₀
+hlower₁ : h - Fintype.card I - D ≤ #A₁
+hS₀ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z₀ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z₀) (exceptionCorePool H (↑z₀) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z₀) (exceptionInternalPool H label Z ↑z₀) ∧
+      Disjoint (exceptionCorePool H (↑z₀) U) (exceptionInternalPool H label Z ↑z₀) ∧
+        joiningIncidenceCopies H label ↑z₀ ∪ exceptionCorePool H (↑z₀) U ∪ exceptionInternalPool H label Z ↑z₀ =
+          H.incidenceEdges ↑z₀
+hS₁ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z₁ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z₁) (exceptionCorePool H (↑z₁) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z₁) (exceptionInternalPool H label Z ↑z₁) ∧
+      Disjoint (exceptionCorePool H (↑z₁) U) (exceptionInternalPool H label Z ↑z₁) ∧
+        joiningIncidenceCopies H label ↑z₁ ∪ exceptionCorePool H (↑z₁) U ∪ exceptionInternalPool H label Z ↑z₁ =
+          H.incidenceEdges ↑z₁
+hSB₀ : Disjoint S₀ B
+hSB₁ : Disjoint S₁ B
+hUxZ : Disjoint (if σ z₀ = 0 then U₀ else U₁) Z
+hUyZ : Disjoint (if σ z₁ = 0 then U₀ else U₁) Z
+hyUx : ↑z₁ ∉ Ux
+hxUy : ↑z₀ ∉ Uy
+g₀ : { x // x ∈ A₀ } ≃ { x // x ∈ F₀ }
+g₁ : { x // x ∈ A₁ } ≃ { x // x ∈ F₁ }
+hm :
+  ∀ (j : Fin h),
+    H.IsMatching (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hd :
+  Pairwise fun i j =>
+    Disjoint (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) i)
+      (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hcov :
+  univ.biUnion (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ fun e => ↑(g₁ e)) =
+    univ.biUnion Base ∪ A₀ ∪ A₁
+hsub :
+  ∀ (j : Fin h), Base j ⊆ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j
+hsize :
+  ∀ (j : Fin h),
+    #(starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j) ≤ #(Base j) + 2
+hsupport :
+  ∀ (j : Fin h),
+    #(H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)) ≤
+      #(H.edgeSupport (Base j)) + 4
+houtside :
+  ∀ j ∉ F₀ ∪ F₁, starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j = Base j
+hcovers₀ :
+  ∀ j ∈ F₀,
+    ↑z₀ ∈ H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hcovers₁ :
+  ∀ j ∈ F₁,
+    ↑z₁ ∈ H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+left✝ :
+  ∀ (e : { x // x ∈ A₀ }),
+    ↑e ∈ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) ↑(g₀ e)
+right✝ :
+  ∀ (e : { x // x ∈ A₁ }),
+    ↑e ∈ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) ↑(g₁ e)
+C₁ : Fin h → Finset { e // e ∉ removedCopies N T } := starExtendedClasses Base A₀ fun e => ↑(g₀ e)
+C₂ : Fin h → Finset { e // e ∉ removedCopies N T } := starExtendedClasses C₁ A₁ fun e => ↑(g₁ e)
+hprotected : ∀ (i : I), C₂ (f i) = R i
+hcoverz : ∀ (z : { x // x ∈ Z }), z = z₀ ∨ z = z₁ → ∀ (j : Fin h), ↑z ∈ H.edgeSupport (C₂ j)
+hcut : ∀ (j : Fin h) (k : Fin 3), H.cutOn (C₂ j) (labelShore label {k}) = H.cutOn (C.classes j) (labelShore label {k})
+⊢ univ.biUnion C₂ =
+    (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) ∪
+            univ.biUnion fun i => Q.residualBoundary N T (q i)) ∪
+          pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ ∪
+        exceptionCorePool (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁) ∪
+      exceptionCorePool (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁)
+error: Overfull/NativeAssembly/NativeTwoStars.lean:207:10: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j
+in the target expression
+  #(C₂ j) ≤ max (3 * L) (#Z + 1) + 2
+
+case pos
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+q : I → Fin r
+f : I → Fin h
+hq : Function.Injective q
+hf : Function.Injective f
+P : ReserveExtension C (fun i => Q.residualBoundary N T (q i)) f (#Z + 1)
+z₀ z₁ : { x // x ∈ Z }
+hZ : Z = {↑z₀, ↑z₁}
+hxy : ↑z₀ ≠ ↑z₁
+hsame : assignedLabel G M U₀ U₁ Z ↑z₀ = assignedLabel G M U₀ U₁ Z ↑z₁
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+b : ℕ
+hb : b ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight₀ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hweight₁ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hparallel₀ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₀) v) ≤ b
+hparallel₁ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₁) v) ≤ b
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+R : I → Finset { e // e ∉ removedCopies N T } := fun i => Q.residualBoundary N T (q i)
+Ux : Finset V := if σ z₀ = 0 then U₀ else U₁
+Uy : Finset V := if σ z₁ = 0 then U₀ else U₁
+S₀ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₀) Ux
+S₁ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₁) Uy
+B : Finset { e // e ∉ removedCopies N T } := pairFiberCopies H ↑z₀ ↑z₁
+Qcol : Finset (Fin h) := image f univ
+hQcard : #Qcol = Fintype.card I
+htrace : ∀ (i : I), R i ∩ joiningCopies H label = C.classes (f i)
+hB₀ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₀ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+hB₁ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₁ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+c : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ } → Fin h
+hc : Function.Injective c
+hcolor :
+  ∀ (e : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ }),
+    c e ∉ Qcol ∧ c e ∉ joiningUsedColors C ↑z₀ ∧ c e ∉ joiningUsedColors C ↑z₁
+hBedge : ∀ e ∈ B, H.edge e = s(↑z₀, ↑z₁)
+hinternal : ∀ e ∈ B, label (H.firstEnd e) = label (H.secondEnd e)
+hBR : ∀ (i : I), Disjoint B (R i)
+A₀ : Finset { e // e ∉ removedCopies N T } := S₀ \ (univ.biUnion R ∩ S₀)
+A₁ : Finset { e // e ∉ removedCopies N T } := S₁ \ (univ.biUnion R ∩ S₁)
+F₀ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z₀) (image c univ)
+F₁ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z₁) (image c univ)
+Base : Fin h → Finset { e // e ∉ removedCopies N T } := bundleClasses P B c
+hbal₀ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z₀;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hbal₁ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z₁;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hcard₀ : #A₀ = #F₀
+hcard₁ : #A₁ = #F₁
+hlower₀ : h - Fintype.card I - D ≤ #A₀
+hlower₁ : h - Fintype.card I - D ≤ #A₁
+hS₀ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z₀ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z₀) (exceptionCorePool H (↑z₀) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z₀) (exceptionInternalPool H label Z ↑z₀) ∧
+      Disjoint (exceptionCorePool H (↑z₀) U) (exceptionInternalPool H label Z ↑z₀) ∧
+        joiningIncidenceCopies H label ↑z₀ ∪ exceptionCorePool H (↑z₀) U ∪ exceptionInternalPool H label Z ↑z₀ =
+          H.incidenceEdges ↑z₀
+hS₁ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z₁ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z₁) (exceptionCorePool H (↑z₁) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z₁) (exceptionInternalPool H label Z ↑z₁) ∧
+      Disjoint (exceptionCorePool H (↑z₁) U) (exceptionInternalPool H label Z ↑z₁) ∧
+        joiningIncidenceCopies H label ↑z₁ ∪ exceptionCorePool H (↑z₁) U ∪ exceptionInternalPool H label Z ↑z₁ =
+          H.incidenceEdges ↑z₁
+hSB₀ : Disjoint S₀ B
+hSB₁ : Disjoint S₁ B
+hUxZ : Disjoint (if σ z₀ = 0 then U₀ else U₁) Z
+hUyZ : Disjoint (if σ z₁ = 0 then U₀ else U₁) Z
+hyUx : ↑z₁ ∉ Ux
+hxUy : ↑z₀ ∉ Uy
+g₀ : { x // x ∈ A₀ } ≃ { x // x ∈ F₀ }
+g₁ : { x // x ∈ A₁ } ≃ { x // x ∈ F₁ }
+hm :
+  ∀ (j : Fin h),
+    H.IsMatching (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hd :
+  Pairwise fun i j =>
+    Disjoint (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) i)
+      (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hcov :
+  univ.biUnion (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ fun e => ↑(g₁ e)) =
+    univ.biUnion Base ∪ A₀ ∪ A₁
+hsub :
+  ∀ (j : Fin h), Base j ⊆ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j
+hsize :
+  ∀ (j : Fin h),
+    #(starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j) ≤ #(Base j) + 2
+hsupport :
+  ∀ (j : Fin h),
+    #(H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)) ≤
+      #(H.edgeSupport (Base j)) + 4
+houtside :
+  ∀ j ∉ F₀ ∪ F₁, starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j = Base j
+hcovers₀ :
+  ∀ j ∈ F₀,
+    ↑z₀ ∈ H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hcovers₁ :
+  ∀ j ∈ F₁,
+    ↑z₁ ∈ H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+left✝ :
+  ∀ (e : { x // x ∈ A₀ }),
+    ↑e ∈ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) ↑(g₀ e)
+right✝ :
+  ∀ (e : { x // x ∈ A₁ }),
+    ↑e ∈ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) ↑(g₁ e)
+C₁ : Fin h → Finset { e // e ∉ removedCopies N T } := starExtendedClasses Base A₀ fun e => ↑(g₀ e)
+C₂ : Fin h → Finset { e // e ∉ removedCopies N T } := starExtendedClasses C₁ A₁ fun e => ↑(g₁ e)
+hprotected : ∀ (i : I), C₂ (f i) = R i
+hcoverz : ∀ (z : { x // x ∈ Z }), z = z₀ ∨ z = z₁ → ∀ (j : Fin h), ↑z ∈ H.edgeSupport (C₂ j)
+hcut : ∀ (j : Fin h) (k : Fin 3), H.cutOn (C₂ j) (labelShore label {k}) = H.cutOn (C.classes j) (labelShore label {k})
+j : Fin h
+hjB : j ∈ image c univ
+hnot : j ∉ F₀ ∪ F₁
+⊢ #(C₂ j) ≤ max (3 * L) (#Z + 1) + 2
+error: Overfull/NativeAssembly/NativeTwoStars.lean:223:10: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j
+in the target expression
+  #((residualGraph G N T).edgeSupport (C₂ j)) ≤ 2 * max (3 * L) (#Z + 1) + 4
+
+case pos
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+Q : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+q : I → Fin r
+f : I → Fin h
+hq : Function.Injective q
+hf : Function.Injective f
+P : ReserveExtension C (fun i => Q.residualBoundary N T (q i)) f (#Z + 1)
+z₀ z₁ : { x // x ∈ Z }
+hZ : Z = {↑z₀, ↑z₁}
+hxy : ↑z₀ ≠ ↑z₁
+hsame : assignedLabel G M U₀ U₁ Z ↑z₀ = assignedLabel G M U₀ U₁ Z ↑z₁
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+b : ℕ
+hb : b ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight₀ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hweight₁ : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hparallel₀ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₀) v) ≤ b
+hparallel₁ : ∀ v ∈ if σ z₁ = 0 then U₀ else U₁, #((residualGraph G N T).parallelEdges (↑z₁) v) ≤ b
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+R : I → Finset { e // e ∉ removedCopies N T } := fun i => Q.residualBoundary N T (q i)
+Ux : Finset V := if σ z₀ = 0 then U₀ else U₁
+Uy : Finset V := if σ z₁ = 0 then U₀ else U₁
+S₀ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₀) Ux
+S₁ : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z₁) Uy
+B : Finset { e // e ∉ removedCopies N T } := pairFiberCopies H ↑z₀ ↑z₁
+Qcol : Finset (Fin h) := image f univ
+hQcard : #Qcol = Fintype.card I
+htrace : ∀ (i : I), R i ∩ joiningCopies H label = C.classes (f i)
+hB₀ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₀ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+hB₁ :
+  exceptionInternalPool (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) Z ↑z₁ =
+    pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁
+c : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ } → Fin h
+hc : Function.Injective c
+hcolor :
+  ∀ (e : { x // x ∈ pairFiberCopies (residualGraph G N T) ↑z₀ ↑z₁ }),
+    c e ∉ Qcol ∧ c e ∉ joiningUsedColors C ↑z₀ ∧ c e ∉ joiningUsedColors C ↑z₁
+hBedge : ∀ e ∈ B, H.edge e = s(↑z₀, ↑z₁)
+hinternal : ∀ e ∈ B, label (H.firstEnd e) = label (H.secondEnd e)
+hBR : ∀ (i : I), Disjoint B (R i)
+A₀ : Finset { e // e ∉ removedCopies N T } := S₀ \ (univ.biUnion R ∩ S₀)
+A₁ : Finset { e // e ∉ removedCopies N T } := S₁ \ (univ.biUnion R ∩ S₁)
+F₀ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z₀) (image c univ)
+F₁ : Finset (Fin h) := remainingStarColors Qcol (joiningUsedColors C ↑z₁) (image c univ)
+Base : Fin h → Finset { e // e ∉ removedCopies N T } := bundleClasses P B c
+hbal₀ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z₀) (if σ z₀ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z₀;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hbal₁ :
+  have S := exceptionCorePool (residualGraph G N T) (↑z₁) (if σ z₁ = 0 then U₀ else U₁);
+  have P := (univ.biUnion fun i => Q.residualBoundary N T (q i)) ∩ S;
+  have Qcol := image f univ;
+  have Jcol := joiningUsedColors C ↑z₁;
+  have Bcol := image c univ;
+  #P = #univ ∧
+    #Qcol = #univ ∧
+      #Bcol = #B ∧
+        #(S \ P) = h - #univ - #Jcol - #B ∧ #(S \ P) = #(remainingStarColors Qcol Jcol Bcol) ∧ h - #univ - D ≤ #(S \ P)
+hcard₀ : #A₀ = #F₀
+hcard₁ : #A₁ = #F₁
+hlower₀ : h - Fintype.card I - D ≤ #A₀
+hlower₁ : h - Fintype.card I - D ≤ #A₁
+hS₀ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z₀ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z₀) (exceptionCorePool H (↑z₀) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z₀) (exceptionInternalPool H label Z ↑z₀) ∧
+      Disjoint (exceptionCorePool H (↑z₀) U) (exceptionInternalPool H label Z ↑z₀) ∧
+        joiningIncidenceCopies H label ↑z₀ ∪ exceptionCorePool H (↑z₀) U ∪ exceptionInternalPool H label Z ↑z₀ =
+          H.incidenceEdges ↑z₀
+hS₁ :
+  have label := assignedLabel G M U₀ U₁ Z;
+  have U := if σ z₁ = 0 then U₀ else U₁;
+  Disjoint (joiningIncidenceCopies H label ↑z₁) (exceptionCorePool H (↑z₁) U) ∧
+    Disjoint (joiningIncidenceCopies H label ↑z₁) (exceptionInternalPool H label Z ↑z₁) ∧
+      Disjoint (exceptionCorePool H (↑z₁) U) (exceptionInternalPool H label Z ↑z₁) ∧
+        joiningIncidenceCopies H label ↑z₁ ∪ exceptionCorePool H (↑z₁) U ∪ exceptionInternalPool H label Z ↑z₁ =
+          H.incidenceEdges ↑z₁
+hSB₀ : Disjoint S₀ B
+hSB₁ : Disjoint S₁ B
+hUxZ : Disjoint (if σ z₀ = 0 then U₀ else U₁) Z
+hUyZ : Disjoint (if σ z₁ = 0 then U₀ else U₁) Z
+hyUx : ↑z₁ ∉ Ux
+hxUy : ↑z₀ ∉ Uy
+g₀ : { x // x ∈ A₀ } ≃ { x // x ∈ F₀ }
+g₁ : { x // x ∈ A₁ } ≃ { x // x ∈ F₁ }
+hm :
+  ∀ (j : Fin h),
+    H.IsMatching (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hd :
+  Pairwise fun i j =>
+    Disjoint (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) i)
+      (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hcov :
+  univ.biUnion (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ fun e => ↑(g₁ e)) =
+    univ.biUnion Base ∪ A₀ ∪ A₁
+hsub :
+  ∀ (j : Fin h), Base j ⊆ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j
+hsize :
+  ∀ (j : Fin h),
+    #(starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j) ≤ #(Base j) + 2
+hsupport :
+  ∀ (j : Fin h),
+    #(H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)) ≤
+      #(H.edgeSupport (Base j)) + 4
+houtside :
+  ∀ j ∉ F₀ ∪ F₁, starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j = Base j
+hcovers₀ :
+  ∀ j ∈ F₀,
+    ↑z₀ ∈ H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+hcovers₁ :
+  ∀ j ∈ F₁,
+    ↑z₁ ∈ H.edgeSupport (starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) j)
+left✝ :
+  ∀ (e : { x // x ∈ A₀ }),
+    ↑e ∈ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) ↑(g₀ e)
+right✝ :
+  ∀ (e : { x // x ∈ A₁ }),
+    ↑e ∈ starExtendedClasses (starExtendedClasses Base A₀ fun e => ↑(g₀ e)) A₁ (fun e => ↑(g₁ e)) ↑(g₁ e)
+C₁ : Fin h → Finset { e // e ∉ removedCopies N T } := starExtendedClasses Base A₀ fun e => ↑(g₀ e)
+C₂ : Fin h → Finset { e // e ∉ removedCopies N T } := starExtendedClasses C₁ A₁ fun e => ↑(g₁ e)
+hprotected : ∀ (i : I), C₂ (f i) = R i
+hcoverz : ∀ (z : { x // x ∈ Z }), z = z₀ ∨ z = z₁ → ∀ (j : Fin h), ↑z ∈ H.edgeSupport (C₂ j)
+hcut : ∀ (j : Fin h) (k : Fin 3), H.cutOn (C₂ j) (labelShore label {k}) = H.cutOn (C.classes j) (labelShore label {k})
+j : Fin h
+hjB : j ∈ image c univ
+hnot : j ∉ F₀ ∪ F₁
+⊢ #((residualGraph G N T).edgeSupport (C₂ j)) ≤ 2 * max (3 * L) (#Z + 1) + 4
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeAssembly.NativeTwoStars
+error: build failed

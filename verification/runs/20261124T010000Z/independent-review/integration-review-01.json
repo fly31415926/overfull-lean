@@ -1,0 +1,88 @@
+{
+  "recorded_at_utc": "2026-11-24T01:04:01.321002+00:00",
+  "kind": "read_only_mathematical_interface_review",
+  "reviewer_task": "publication_preflight",
+  "review_scope": "Current weighted joining/reserve, base bundle, native same-label assembly, parity, quantitative budget and robust core prefix source snapshots; pending module compilation is not certified by this review.",
+  "independent_status": "No mathematical counterexample or circular target-coloring assumption identified in reviewed interfaces; integration obligations below remain explicit.",
+  "pending_at_review": [
+    "NativeAssembly.NativeTwoStars had no completed focused receipt at review time.",
+    "NativeAssembly.OtherCases latest attempt othercases-003 was running; only the visible single-exception/no-bundle statements reviewed.",
+    "NativeCore.Incidence and NativeAssembly.SeparateStars appeared during review recording; their contents are not semantically certified by this first note."
+  ],
+  "findings": [
+    {
+      "severity": "validated",
+      "topic": "weighted native seeds",
+      "detail": "Original h is retained. Odd primary seeds are injective with one seed per color, primary size at most two, actual star weight at most4b, hence at mosth/8 from128D<=h,b<=D; all-even seeds are empty. Reserved singleton/empty joining traces are exact."
+    },
+    {
+      "severity": "validated",
+      "topic": "available-color accounting",
+      "detail": "Remaining palettes exclude protected, joining-used and bundle-used colors. On those labels bundleClasses equals the actual JoiningPalette class, so inherited D-load and h/8-weight estimates apply without a global protected-class D-load assumption."
+    },
+    {
+      "severity": "validated",
+      "topic": "same-label growth",
+      "detail": "A bundle-used color is outside both remaining star palettes, so receives no star. Every other color contains no bundle and gains at most two star copies. Therefore max(3L,|Z|+1)+2 copies and2max(3L,|Z|+1)+4 support are justified."
+    },
+    {
+      "severity": "integration_condition",
+      "topic": "uniform support instantiation",
+      "detail": "To reduce the native max support bound to6L+4, explicitly use|Z|<=2 and0<L. NativeCore.WeightedBudget proves the exact requested constants but does not itself establish this class inequality."
+    },
+    {
+      "severity": "validated",
+      "topic": "core load from actual host",
+      "detail": "For disjoint classes outside an embedded Core edge set, family support load is bounded by degree of their used union at the vertex. Complementary core degree equals h-d_core<=a, so coreFootprint_load_le_error gives global load<=a, including protected classes. This requires disjointness from the actual retained Core edge map, not merely a descriptive claim of being boundary copies."
+    },
+    {
+      "severity": "integration_condition",
+      "topic": "native multiplicities",
+      "detail": "Weighted native constructors assume actual exception-to-core parallel-copy bounds. They cannot be inferred from joining-only D bounds alone. With z outside U, all z-v copies lie outside coreEdges C, hence their number is at most the core-complement incidence a; a natural floor choice and monotonicity to D provide the needed b. NativeCore.Incidence is to supply this step."
+    },
+    {
+      "severity": "validated",
+      "topic": "core parity",
+      "detail": "Covering all exceptional vertices makes uncovered assigned corePart exactly the uncovered original core. Matching cut parity then gives even uncovered core orders using separate source/current edge-copy types."
+    },
+    {
+      "severity": "scope_limit",
+      "topic": "prefix versus factorization",
+      "detail": "Core completion constructs actual CorePacking objects and perfect matchings. Its q<=floor(h-gamma|U_i|) requirements leave a robust remainder and do not construct a full h-color factorization. The final prefix selection, preservation for the terminal phase, and terminal factorization remain to be instantiated."
+    },
+    {
+      "severity": "validated",
+      "topic": "uniform arithmetic",
+      "detail": "128*30=3840; gap>=h/4>=alpha*n/120. Twice-piece-count plus natural quotient gives support<=360delta*n/alpha+10, absorbed by delta<=epsilon*alpha/720 and n>=20/epsilon. Numerical load D+2b<=3delta*n is absorbed separately by delta<=epsilon/3."
+    }
+  ],
+  "source_sha256_at_review_recording": {
+    "Overfull/NativeAssembly/BaseClasses.lean": "76c33a03100751fedd4b13ca4f14dbaacefc73811527bb84277aec46d20eab83",
+    "Overfull/NativeAssembly/NativeBundles.lean": "e99c25e9f62c30e6d010b955bbeaed9f08911db5fcc628bb5b90d76475a2682a",
+    "Overfull/NativeAssembly/NativeTwoStars.lean": "8f05a6e5350ca42dee9c84e1f39b51051ff3d33df9a791735fad6c6767d65e83",
+    "Overfull/NativeAssembly/OtherCases.lean": "6e31480ebbca2487d15a0827649fc6197122f19ad05594ce45e94ecbf7db7af0",
+    "Overfull/NativeAssembly/SeparateStars.lean": "aa0383a85deb021c1f62d287d39301d7350033aa498fdb3342b1d18e7d7827f0",
+    "Overfull/NativeCore/Completion.lean": "0628b91bb2241b3b86393bb60e70f996689584bb6576b53d3df23fcc6c9a3b69",
+    "Overfull/NativeCore/Incidence.lean": "e53cc10c86a37a8266d48f4229f30442e898ec293288696bba59d0e20bd397e2",
+    "Overfull/NativeCore/Parity.lean": "91d969358710b9d0961b43df3818b6bfc6c61ce7dff2fa82b611d4ef5921443f",
+    "Overfull/NativeCore/WeightedBudget.lean": "5a6e857e24220ff8c55063a1bca06a2fadac09cfb2f067048ebd9736afba09a8",
+    "Overfull/NativeWeighted/EvenNative.lean": "f46f307cd15b2a2a2a64b4425314adbe78c5fea48260b8cad73a332be150ab8a",
+    "Overfull/NativeWeighted/NativePalette.lean": "46efbbbe7b816a3c20a13f780064f9a10df8f550e32e09fde6be0ae688861ad6",
+    "Overfull/NativeWeighted/OddNative.lean": "5580cbf191783b13785d5e855ce3a8cabbede16a3c022898f12dceea884f5ed0",
+    "Overfull/NativeWeighted/WeightedJoining.lean": "27246048dc6f71438601bd1c104fc7ab5716305a79a2f805c89b559223debe6a"
+  },
+  "files_read_for_semantic_review": [
+    "Overfull/NativeAssembly/BaseClasses.lean",
+    "Overfull/NativeAssembly/NativeBundles.lean",
+    "Overfull/NativeAssembly/NativeTwoStars.lean",
+    "Overfull/NativeAssembly/OtherCases.lean",
+    "Overfull/NativeCore/Completion.lean",
+    "Overfull/NativeCore/Parity.lean",
+    "Overfull/NativeCore/WeightedBudget.lean",
+    "Overfull/NativeWeighted/EvenNative.lean",
+    "Overfull/NativeWeighted/NativePalette.lean",
+    "Overfull/NativeWeighted/OddNative.lean",
+    "Overfull/NativeWeighted/WeightedJoining.lean"
+  ],
+  "concurrency_note": "Hashes identify the worktree snapshot at review recording. NativeTwoStars and OtherCases were under active development. Incidence and SeparateStars appeared after the semantic reads and their source contents were not reviewed in this first note."
+}

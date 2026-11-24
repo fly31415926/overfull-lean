@@ -1,0 +1,85 @@
+✖ [3346/3346] Building Overfull.NativeAssembly.OtherCases (12s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/1368c254067d/overfull-lean/Overfull/NativeAssembly/OtherCases.lean -o /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeAssembly/OtherCases.olean -i /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeAssembly/OtherCases.ilean -c /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeAssembly/OtherCases.c --setup /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeAssembly/OtherCases.setup.json --json
+error: Overfull/NativeAssembly/OtherCases.lean:203:8: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => exceptionInternalPool H label _a ↑z = ∅
+Error: Application type mismatch: The argument
+  z
+has type
+  { x // x ∈ Z }
+but is expected to have type
+  { x // x ∈ _a }
+in the application
+  ↑z
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+V : Type u_1
+E : Type u_2
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+J : Type u_5
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+R : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies R.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+z : { x // x ∈ Z }
+hZ : Z = {↑z}
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+q : I → Fin r
+hq : Function.Injective q
+f : I → Fin h
+hf : Function.Injective f
+htrace :
+  ∀ (i : I),
+    R.residualBoundary N T (q i) ∩ joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) = C.classes (f i)
+P : ReserveExtension C (fun i => R.residualBoundary N T (q i)) f (#Z + 1)
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z) (if σ z = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+U : Finset V := if σ z = 0 then U₀ else U₁
+S : Finset { e // e ∉ removedCopies N T } := exceptionCorePool H (↑z) U
+A : Finset { e // e ∉ removedCopies N T } := S \ ((univ.biUnion fun i => R.residualBoundary N T (q i)) ∩ S)
+F₀ : Finset (Fin h) := noBundleColors C f ↑z
+hA : A ⊆ exceptionCorePool H (↑z) U
+⊢ exceptionInternalPool H label Z ↑z = ∅
+error: Overfull/NativeAssembly/OtherCases.lean:208:4: Type mismatch
+  remaining_star_disjoint_reserve P S (native_star_disjoint_joining G hM U₀ U₁ Z h01 h0Z h1Z hcover σ hcode N T z)
+has type
+  ∀ (j : Fin h), Disjoint (S \ ((univ.biUnion fun i => R.residualBoundary N T (q i)) ∩ S)) (P.classes j)
+but is expected to have type
+  ∀ (j : Fin h), Disjoint A (P.classes j)
+error: Overfull/NativeAssembly/OtherCases.lean:228:21: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Overfull/NativeAssembly/OtherCases.lean:155:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeAssembly.OtherCases
+error: build failed

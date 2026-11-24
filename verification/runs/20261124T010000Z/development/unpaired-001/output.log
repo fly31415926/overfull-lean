@@ -1,0 +1,129 @@
+✖ [3353/3353] Building Overfull.NativeAssembly.Unpaired (2.0s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/1368c254067d/overfull-lean/Overfull/NativeAssembly/Unpaired.lean -o /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeAssembly/Unpaired.olean -i /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeAssembly/Unpaired.ilean -c /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeAssembly/Unpaired.c --setup /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeAssembly/Unpaired.setup.json --json
+error: Overfull/NativeAssembly/Unpaired.lean:56:74: unexpected token 'set_option'; expected 'lemma'
+error: Overfull/NativeAssembly/Unpaired.lean:97:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  R.residualBoundary N T (q i)
+in the target expression
+  B i ∩ joiningCopies H label = C.classes (f i)
+
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+hZ : #Z ≤ 2
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+R : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies R.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+q : I → Fin r
+hq : Function.Injective q
+f : I → Fin h
+hf : Function.Injective f
+P : ReserveExtension C (fun i => R.residualBoundary N T (q i)) f (#Z + 1)
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight : ∀ (z : { x // x ∈ Z }) (j : Fin h), starWeight (residualGraph G N T) (↑z) (U₀ ∪ U₁) (C.classes j) ≤ h / 8
+hparallel : ∀ z ∈ Z, ∀ v ∈ U₀ ∪ U₁, #((residualGraph G N T).parallelEdges z v) ≤ D
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+Ext : Finset { e // e ∉ removedCopies N T } := joiningCopies H label ∪ exceptionalCopies H univ Z
+B : I → Finset { e // e ∉ removedCopies N T } := fun i => R.residualBoundary N T (q i)
+i : I
+⊢ B i ∩ joiningCopies H label = C.classes (f i)
+error: Overfull/NativeAssembly/Unpaired.lean:175:2: Tactic `apply` failed: could not unify the conclusion of `external_union_eq_of_saturation H label h F Z hd
+  (fun z x => hregular z) hz`
+  @Finset.biUnion (Fin h) { e // e ∉ removedCopies N T } (fun a b => propDecidable (a = b)) univ F =
+    joiningCopies H label ∪ exceptionalCopies H univ Z
+with the goal
+  @Finset.biUnion (Fin h) { e // e ∉ removedCopies N T } (fun a b => a.instDecidableEq b) univ F =
+    joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) ∪ exceptionalCopies (residualGraph G N T) univ Z
+
+Note: The full type of `external_union_eq_of_saturation H label h F Z hd (fun z x => hregular z) hz` is
+  joiningCopies H label ⊆ univ.biUnion F →
+    (∀ (j : Fin h), F j ⊆ joiningCopies H label ∪ exceptionalCopies H univ Z) →
+      univ.biUnion F = joiningCopies H label ∪ exceptionalCopies H univ Z
+
+V : Type u_1
+E : Type u_2
+J : Type u_3
+I : Type u_4
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : Fintype I
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+hZ : #Z ≤ 2
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+R : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies R.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+q : I → Fin r
+hq : Function.Injective q
+f : I → Fin h
+hf : Function.Injective f
+P : ReserveExtension C (fun i => R.residualBoundary N T (q i)) f (#Z + 1)
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight : ∀ (z : { x // x ∈ Z }) (j : Fin h), starWeight (residualGraph G N T) (↑z) (U₀ ∪ U₁) (C.classes j) ≤ h / 8
+hparallel : ∀ z ∈ Z, ∀ v ∈ U₀ ∪ U₁, #((residualGraph G N T).parallelEdges z v) ≤ D
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+Ext : Finset { e // e ∉ removedCopies N T } := joiningCopies H label ∪ exceptionalCopies H univ Z
+B : I → Finset { e // e ∉ removedCopies N T } := fun i => R.residualBoundary N T (q i)
+htrace : ∀ (i : I), B i ∩ joiningCopies H label = C.classes (f i)
+hUsub : ∀ (z : { x // x ∈ Z }), (if σ z = 0 then U₀ else U₁) ⊆ U₀ ∪ U₁
+hweight' : ∀ (z : { x // x ∈ Z }) (j : Fin h), starWeight H (↑z) (if σ z = 0 then U₀ else U₁) (C.classes j) ≤ h / 8
+hRsub : univ.biUnion B ⊆ Ext
+hSsub : ∀ (z : { x // x ∈ Z }), exceptionCorePool H (↑z) (if σ z = 0 then U₀ else U₁) ⊆ Ext
+hFsub :
+  ∀ (F : Fin h → Finset { e // e ∉ removedCopies N T }) (S : Finset { e // e ∉ removedCopies N T }),
+    univ.biUnion F = S → S ⊆ Ext → ∀ (j : Fin h), F j ⊆ Ext
+F : Fin h → Finset { e // e ∉ removedCopies N T }
+hm : ∀ (j : Fin h), H.IsMatching (F j)
+hd : Pairwise fun i j => Disjoint (F i) (F j)
+hC : ∀ (j : Fin h), C.classes j ⊆ F j
+hpres : ∀ (i : I), F (f i) = B i
+hz : ∀ (j : Fin h), Z ⊆ H.edgeSupport (F j)
+hcuts : ∀ (j : Fin h) (i : Fin 3), H.cutOn (F j) (labelShore label {i}) = H.cutOn (C.classes j) (labelShore label {i})
+hcard : ∀ (j : Fin h), #(F j) ≤ max (3 * L) (#Z + 1) + 2
+hsupport : ∀ (j : Fin h), #(H.edgeSupport (F j)) ≤ 2 * max (3 * L) (#Z + 1) + 4
+hsub : ∀ (j : Fin h), F j ⊆ Ext
+⊢ univ.biUnion F =
+    joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) ∪ exceptionalCopies (residualGraph G N T) univ Z
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeAssembly.Unpaired
+error: build failed

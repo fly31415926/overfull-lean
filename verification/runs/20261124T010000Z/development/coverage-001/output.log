@@ -1,0 +1,30 @@
+✖ [3334/3334] Building Overfull.NativeCore.Coverage (2.4s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/1368c254067d/overfull-lean/Overfull/NativeCore/Coverage.lean -o /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeCore/Coverage.olean -i /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeCore/Coverage.ilean -c /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeCore/Coverage.c --setup /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeCore/Coverage.setup.json --json
+error: Overfull/NativeCore/Coverage.lean:45:82: unsolved goals
+case h
+V : Type u_1
+E : Type u_2
+inst✝ : Fintype E
+G : Multigraph V E
+h : ℕ
+B : Fin h → Finset E
+hdisj : Pairwise fun i j => Disjoint (B i) (B j)
+z : V
+hdegree : G.degree z = h
+hcover : ∀ (j : Fin h), z ∈ G.edgeSupport (B j)
+A : Finset E := univ.biUnion B
+hsub : ∀ (j : Fin h), B j ⊆ A
+hload : #{i | z ∈ G.edgeSupport (B i)} ≤ G.degreeOn A z
+j : Fin h
+⊢ ∃ e ∈ B j, z ∈ G.edge e
+warning: Overfull/NativeCore/Coverage.lean:47:10: This simp argument is unused:
+  hcover j
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵c̵o̵v̵e̵r̵ ̵j̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeCore.Coverage
+error: build failed

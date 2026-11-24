@@ -1,0 +1,42 @@
+✖ [3374/3374] Building Overfull.NativeCore.NativePrefix (62s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/1368c254067d/overfull-lean/Overfull/NativeCore/NativePrefix.lean -o /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeCore/NativePrefix.olean -i /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeCore/NativePrefix.ilean -c /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeCore/NativePrefix.c --setup /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeCore/NativePrefix.setup.json --json
+error: Overfull/NativeCore/NativePrefix.lean:192:4: Type mismatch: After simplification, term
+  hWreg
+ has type
+  ∀ (v : V),
+    @Multigraph.degree V { e // e ∉ removedCopies W univ } (residualGraph H W univ)
+        (@Subtype.fintype { e // e ∉ removedCopies N T } (fun e => e ∉ removedCopies W univ)
+          (fun a =>
+            @instDecidableNot (a ∈ removedCopies W univ)
+              (@decidableMem { e // e ∉ removedCopies N T } (fun a b => propDecidable (a = b)) a
+                (removedCopies W univ)))
+          (Subtype.fintype fun e => e ∉ removedCopies N T))
+        v =
+      r / 2
+but is expected to have type
+  ∀ (v : V),
+    @Multigraph.degree V { e // e ∉ removedCopies W univ } (residualGraph (residualGraph G N T) W univ)
+        (@Subtype.fintype { e // e ∉ removedCopies N T } (fun e => e ∉ removedCopies W univ)
+          (fun a =>
+            @instDecidableNot (a ∈ removedCopies W univ)
+              (@decidableMem { e // e ∉ removedCopies N T } (fun a b => a.instDecidableEq b) a (removedCopies W univ)))
+          (Subtype.fintype fun e => e ∉ removedCopies N T))
+        v =
+      r / 2
+error: Overfull/NativeCore/NativePrefix.lean:197:4: Type mismatch
+  hsurvive.left
+has type
+  survivingCopies (removedCopies W univ) X =
+    survivingCopies (removedCopies W univ)
+      (@Finset.biUnion (Fin (r / 2)) { e // e ∉ removedCopies N T } (fun a b => propDecidable (a = b)) univ R)
+but is expected to have type
+  survivingCopies (removedCopies W univ)
+      (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) ∪
+        exceptionalCopies (residualGraph G N T) univ Z) =
+    survivingCopies (removedCopies W univ)
+      (@Finset.biUnion (Fin (r / 2)) { e // e ∉ removedCopies N T } (fun a b => a.instDecidableEq b) univ fun i =>
+        Q.residualBoundary N T (q i))
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeCore.NativePrefix
+error: build failed

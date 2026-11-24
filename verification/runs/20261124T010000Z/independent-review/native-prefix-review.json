@@ -1,0 +1,127 @@
+{
+  "recorded_at_utc": "2026-11-24T01:16:31.853091+00:00",
+  "kind": "mathematical_interface_and_parameter_composition_review",
+  "reviewer_task": "inspect_next_target",
+  "primary_review_targets": [
+    "Overfull/NativeCore/NativePrefix.lean",
+    "Overfull/NativeWeighted/CoreBounds.lean"
+  ],
+  "supporting_sources_read": [
+    "Overfull/NativeCore/ExternalPalette.lean",
+    "Overfull/NativeCore/Completion.lean",
+    "Overfull/NativeCore/Incidence.lean",
+    "Overfull/NativeCore/PrefixSelection.lean"
+  ],
+  "review_independence": "NativePrefix, CoreBounds, ExternalPalette, Completion and Incidence were written by another agent. PrefixSelection was written by this reviewer and is included for exact source traceability, not claimed as independent review of the reviewer's own work.",
+  "semantic_result": "No semantic defect, circular target-coloring assumption, missing native class bound, or host-dependent uniform constant was identified in the reviewed statements and composition.",
+  "source_sha256_at_review_recording": {
+    "Overfull/NativeCore/NativePrefix.lean": "43e1cff9640b75c859d435c2505b50f3f89694db200f4ddd274bbc4379469c05",
+    "Overfull/NativeWeighted/CoreBounds.lean": "b3b17421a6ee396e72bd98830da3e5a096d04a77e429c03047a5eea58f3936bf",
+    "Overfull/NativeCore/ExternalPalette.lean": "498761dfa9b88b05707f2d7b9a22babb7649cb778bb8ce173aa28ec9faecae33",
+    "Overfull/NativeCore/Completion.lean": "0628b91bb2241b3b86393bb60e70f996689584bb6576b53d3df23fcc6c9a3b69",
+    "Overfull/NativeCore/Incidence.lean": "e53cc10c86a37a8266d48f4229f30442e898ec293288696bba59d0e20bd397e2",
+    "Overfull/NativeCore/PrefixSelection.lean": "82477088824bc26d4475a29339e7b0e9bdfc5df4541d9b89a9c177954affb41d"
+  },
+  "final_edits_reviewed": [
+    "NativePrefix adds theorem-local maxHeartbeats 1200000; the statement and mathematical assumptions are unchanged.",
+    "NativePrefix unfolds local A in the protected-union membership transport; this repairs elaboration without changing the set identity.",
+    "A private degree_fintype_independent helper identifies two Fintype structures using Subsingleton.elim; it changes no graph, incidence set, or numerical degree.",
+    "The final survivingCopies equality is transported by finite-set extensionality, mem_survivingCopies and mem_biUnion; the actual edge-copy subtype and exact protected union are unchanged."
+  ],
+  "findings": [
+    {
+      "topic": "uniform quantifiers",
+      "result": "validated",
+      "detail": "delta, theta and n0 are chosen from alpha, beta, nu, tau and sigma before all host types, graphs, reserve indices, core objects and deletion families."
+    },
+    {
+      "topic": "uniform constant composition",
+      "result": "validated",
+      "detail": "eta=epsilon*beta and |Ui|>=beta*n transfer both support<=eta*n and a<=eta*n to the required epsilon*|Ui| budgets. delta=min(eta,min(alpha/3840,eta*alpha/720)) is positive and simultaneously supplies the weighted density, support and core error inequalities."
+    },
+    {
+      "topic": "threshold and rounding",
+      "result": "validated",
+      "detail": "n0 dominates 1, ceil(20/eta), ceil(120/alpha), and ceil(m0/beta). The half-reserve lemma uses alpha*n/30<=r and n>=120/alpha to prove (alpha/120)*|Ui|<=floor(r/2), hence h-floor(r/2)<=floor(h-(alpha/120)*|Ui|). r<=h justifies the final exact identity h-(h-r/2)=r/2."
+    },
+    {
+      "topic": "core density and expansion parameters",
+      "result": "validated",
+      "detail": "The packing theorem uses alpha/30 and gamma=alpha/120. Since |Ui|<=n and alpha*n/30<=r<=h, its degree density holds. tau<=alpha/240 equals the required tau<=(alpha/30)/8."
+    },
+    {
+      "topic": "native weighted resources",
+      "result": "validated",
+      "detail": "CoreBounds derives D=floor(max(a,h-r)), joining degree and every exception-to-core parallel bound from the actual residual cores. The resource set is the actual subtype Z, with at most two elements. Weights on U0 union U1 control either assigned core by monotonicity. No star-weight or parallel-copy estimate is an unproved input to CoreBounds."
+    },
+    {
+      "topic": "palette size and local bounds",
+      "result": "validated",
+      "detail": "The original h-color palette is retained throughout grouping and exceptional insertion. Positive L and |Z|<=2 give max(3L,|Z|+1)=3L. The constructed full external classes have support<=6L+4; the uniform numerical budget converts this to eta*n."
+    },
+    {
+      "topic": "protected selection and actual copies",
+      "result": "validated",
+      "detail": "An injective protected f:Fin(r/2)->Fin h has a complement indexed injectively and exhaustively by Fin(h-r/2). Pairwise copy disjointness and exact prescriptions split the external union into nonprotected classes and original prescribed reserve classes."
+    },
+    {
+      "topic": "completion and residual identity",
+      "result": "validated",
+      "detail": "Each selected class is completed only with copies internal to U0 or U1. Constant original labels on each shore and shore/exceptions disjointness make those internal pools disjoint from the exterior. The exact external remainder therefore equals the reserve union on the actual first-residual copy type, with a second-residual survivingCopies equality and exact Subtype.val image."
+    },
+    {
+      "topic": "regularity and robust cores",
+      "result": "validated",
+      "detail": "The prefix consists of exactly h-r/2 pairwise disjoint actual perfect matchings, avoids every protected reserve copy, and leaves an r/2-regular graph with constructed robust embedded original-shore cores and the same additive degree error a."
+    }
+  ],
+  "semantic_caveats": [
+    "The result is a constructed partial factorization. It does not prove that the final r/2-regular reserve graph is colorable or has a full one-factorization.",
+    "The no-overfull assumption belongs to the input residual H and is not asserted for the final residual after W.",
+    "The exterior identity uses the frozen original assignment assignedLabel G M U0 U1 Z. A later proof must preserve that assignment or explicitly prove any replacement label equivalent; it cannot silently recompute the assignment from W or the final residual."
+  ],
+  "focused_compilation_observed": {
+    "command": [
+      "lake",
+      "build",
+      "--wfail",
+      "Overfull.NativeCore.NativePrefix"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "started_at_utc": "2026-11-24T01:15:57.588592+00:00",
+    "finished_at_utc": "2026-11-24T01:16:05.424714+00:00",
+    "elapsed_seconds": 7.853544896999665,
+    "inputs_changed_during_command": [],
+    "record": "verification/runs/20261124T010000Z/development/nativeprefix-004/command.json",
+    "jobs": 3374,
+    "reviewed_sources_match_recorded_input": {
+      "Overfull/NativeCore/NativePrefix.lean": true,
+      "Overfull/NativeWeighted/CoreBounds.lean": true,
+      "Overfull/NativeCore/ExternalPalette.lean": true,
+      "Overfull/NativeCore/Completion.lean": true,
+      "Overfull/NativeCore/Incidence.lean": true,
+      "Overfull/NativeCore/PrefixSelection.lean": true
+    }
+  },
+  "verification_scope": "This source review is separate from compiler verification and the final frozen full audit. A focused success is reported only if the recorder has status passed and exit_code 0; no full-audit success is claimed here.",
+  "initial_review_recorded_at_utc": "2026-11-24T01:13:38.314826+00:00",
+  "retained_development_attempts": [
+    {
+      "record": "verification/runs/20261124T010000Z/development/nativeprefix-001/command.json",
+      "status": "failed",
+      "exit_code": 1
+    },
+    {
+      "record": "verification/runs/20261124T010000Z/development/nativeprefix-002/command.json",
+      "status": "failed",
+      "exit_code": 1
+    },
+    {
+      "record": "verification/runs/20261124T010000Z/development/nativeprefix-003/command.json",
+      "status": "failed",
+      "exit_code": 1
+    }
+  ],
+  "source_freeze_note": "Root reported all Lean sources frozen after nativeprefix-004. The six hashes in this review match that successful recorded source snapshot."
+}

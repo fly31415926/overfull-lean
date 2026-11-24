@@ -1,0 +1,42 @@
+✖ [3353/3353] Building Overfull.NativeAssembly.Unpaired (3.7s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/1368c254067d/overfull-lean/Overfull/NativeAssembly/Unpaired.lean -o /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeAssembly/Unpaired.olean -i /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeAssembly/Unpaired.ilean -c /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeAssembly/Unpaired.c --setup /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeAssembly/Unpaired.setup.json --json
+error: Overfull/NativeAssembly/Unpaired.lean:99:4: Type mismatch
+  P.joining (f i)
+has type
+  @Inter.inter (Finset { e // e ∉ removedCopies N T })
+      (@instInter { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (P.classes (f i))
+      (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z)) =
+    C.classes (f i)
+but is expected to have type
+  @Inter.inter (Finset { e // e ∉ removedCopies N T })
+      (@instInter { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (P.classes (f i))
+      (joiningCopies H label) =
+    C.classes (f i)
+error: Overfull/NativeAssembly/Unpaired.lean:183:31: Application type mismatch: The argument
+  hjoining
+has type
+  joiningCopies H label ⊆ @Finset.biUnion (Fin h) { e // e ∉ removedCopies N T } (fun a b => a.instDecidableEq b) univ F
+but is expected to have type
+  joiningCopies H label ⊆
+    @Finset.biUnion (Fin h) { e // e ∉ removedCopies N T } (fun a b => propDecidable (a = b)) univ F
+in the application
+  external_union_eq_of_saturation H label h F Z hd (fun z x => hregular z) hz hjoining
+error: Overfull/NativeAssembly/Unpaired.lean:185:2: Type mismatch: After simplification, term
+  Finset.ext_iff.mp heq e
+ has type
+  (∃ a, e ∈ F a) ↔
+    e ∈
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (joiningCopies H label)
+        (exceptionalCopies H univ Z)
+but is expected to have type
+  (∃ a, e ∈ F a) ↔
+    e ∈
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b)
+        (joiningCopies (residualGraph G N T) (assignedLabel G M U₀ U₁ Z))
+        (exceptionalCopies (residualGraph G N T) univ Z)
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeAssembly.Unpaired
+error: build failed

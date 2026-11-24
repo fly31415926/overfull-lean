@@ -1,0 +1,34 @@
+{
+  "repository": "https://github.com/shengtongz/lovasz-opus",
+  "commit": "ee0085ddec79996279c7b52044659032e5cf8431",
+  "source_path": "Lovasz/Circulation.lean",
+  "original_git_blob": "0ab362cdd163365d6b0a947d86b99e96ab974513",
+  "original_sha256": "065b962668e4ecfe06ab43c52f130036830e183e67b17f9ec80b2e53004dc197",
+  "included_path": "Overfull/External/FiniteCirculation.lean",
+  "included_sha256": "6b0a28be60527d79e4769496d829d3ed227455de3fb4e76dbc20a1b3a512b368",
+  "license": "Apache-2.0",
+  "license_file": "LICENSE_BMATCHING.txt",
+  "attribution_file": "CIRCULATION_NOTICE.txt",
+  "changes": [
+    "Replace import Lovasz.Defs with the required mathlib imports and add the local provenance comment.",
+    "Use Lean 4.24/mathlib names: push_neg, if_neg, if_pos, and continuous_finset_sum.",
+    "Retain the mathematical statements and proofs; only import, API-name, comment, and whitespace changes are made."
+  ],
+  "tested_toolchain": "leanprover/lean4:v4.24.0",
+  "tested_mathlib_commit": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+  "used_theorem": "Lovasz.hoffman_circulation",
+  "graph_adapters": [
+    "Overfull/Dense/SignedFlow.lean",
+    "Overfull/Dense/UnequalFlow.lean"
+  ],
+  "manuscript_theorems": {
+    "dense:signed-flow": "Overfull.dense_signed_flow",
+    "dense:unequal-flow": "Overfull.dense_unequal_flow"
+  },
+  "scope": "The actual finite simple bipartite-graph applications are proved from crossing-degree hypotheses, including empty sides. The unequal-side proof also yields the stronger bound 2*theta/(2*c-1). These lemmas do not complete the manuscript's main theorem.",
+  "transitive_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

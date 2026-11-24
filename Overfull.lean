@@ -241,6 +241,28 @@ import Overfull.WeightedPalette.AsymmetricHall
 import Overfull.WeightedPalette.Grouping
 import Overfull.NativeStar.NativeBalance
 import Overfull.NativeStar.TwoStars
+import Overfull.NativeAssembly.BaseClasses
+import Overfull.NativeAssembly.NativeBundles
+import Overfull.NativeAssembly.NativeTwoStars
+import Overfull.NativeAssembly.OtherCases
+import Overfull.NativeAssembly.Paired
+import Overfull.NativeAssembly.SeparateStars
+import Overfull.NativeAssembly.Unpaired
+import Overfull.NativeAssembly.ZeroCase
+import Overfull.NativeCore.Completion
+import Overfull.NativeCore.Coverage
+import Overfull.NativeCore.ExternalPalette
+import Overfull.NativeCore.Incidence
+import Overfull.NativeCore.IndependentExterior
+import Overfull.NativeCore.NativePrefix
+import Overfull.NativeCore.Parity
+import Overfull.NativeCore.PrefixSelection
+import Overfull.NativeCore.WeightedBudget
+import Overfull.NativeWeighted.CoreBounds
+import Overfull.NativeWeighted.EvenNative
+import Overfull.NativeWeighted.NativePalette
+import Overfull.NativeWeighted.OddNative
+import Overfull.NativeWeighted.WeightedJoining
 
 /-!
 # Partial formalization of the overfull manuscript

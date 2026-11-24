@@ -1,0 +1,40 @@
+{
+  "observed_at_utc": "2026-11-24T01:15:47.126881+00:00",
+  "kind": "read_only_infrastructure_preflight_not_a_full_verification",
+  "full_verifier_launched": false,
+  "candidate_frozen": false,
+  "python_syntax_checked": [
+    "verification/runs/20261124T010000Z/package-verified.py",
+    "verification/runs/20261124T010000Z/prepare-docs.py",
+    "verification/runs/20261124T010000Z/record-command.py",
+    "verification/runs/20261124T010000Z/record-final.py",
+    "verification/runs/20261124T010000Z/record-preservation.py",
+    "verification/runs/20261124T010000Z/run-verifier.py",
+    "verification/runs/20261124T010000Z/supervise-verifier.py"
+  ],
+  "script_sha256": {
+    "verification/runs/20261124T010000Z/package-verified.py": "6769e0ac53117bf7890ff1ea0d266d9f9216f29b55c0f20c45683d4a948fd934",
+    "verification/runs/20261124T010000Z/prepare-docs.py": "32717e25b97daa09a675e1b27f2fe07490c45af5eef5ca48e8add059a7f7122a",
+    "verification/runs/20261124T010000Z/record-command.py": "24b7ccf8d48067c56556392c99eac64ff602f548e01c191c0df676bbdc5412c7",
+    "verification/runs/20261124T010000Z/record-final.py": "3db888a82044b285a6f22c07de1c0c817621801fdc39297eacce5b3a251b29f0",
+    "verification/runs/20261124T010000Z/record-preservation.py": "4f7fb3a859bcf49f0f9ec318264cedc0518f06a9849d87641c2406e6a9752d51",
+    "verification/runs/20261124T010000Z/run-verifier.py": "89d2d7317896bf61fc4b35301e1e3f80b450390bbb8647ffb2870d0c1cf9cd45",
+    "verification/runs/20261124T010000Z/supervise-verifier.py": "56806822ddac468fb88ee075d35dd6a12358f2b62905e379d36429bb399dea51"
+  },
+  "baseline_commit": "d2e7b1274d280ef6567cb2b562ec6e94eec2dda0",
+  "baseline_tree": "9850008a20bfd828d8ab9da4c5e8d1bf50240570",
+  "baseline_frozen_input_count": 670,
+  "all_baseline_frozen_hashes_match_committed_bytes": true,
+  "baseline_audited_declarations": 12951,
+  "baseline_completed_mappings": 2063,
+  "exact_four_additive_verifier_edits": true,
+  "stock_audit_byte_identical": true,
+  "completed_focused_receipts_and_snapshots_checked": 45,
+  "focused_command_status_counts": {
+    "passed": 18,
+    "failed": 27,
+    "interrupted": 0,
+    "incomplete": 0
+  },
+  "focused_attempts_without_recorded_exit_at_observation": []
+}

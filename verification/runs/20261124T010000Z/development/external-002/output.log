@@ -1,0 +1,80 @@
+✖ [3371/3371] Building Overfull.NativeCore.ExternalPalette (3.4s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/1368c254067d/overfull-lean/Overfull/NativeCore/ExternalPalette.lean -o /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeCore/ExternalPalette.olean -i /workspace/scratch/1368c254067d/overfull-lean/.lake/build/lib/lean/Overfull/NativeCore/ExternalPalette.ilean -c /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeCore/ExternalPalette.c --setup /workspace/scratch/1368c254067d/overfull-lean/.lake/build/ir/Overfull/NativeCore/ExternalPalette.setup.json --json
+error: Overfull/NativeCore/ExternalPalette.lean:87:41: Application type mismatch: The argument
+  hjoining
+has type
+  joiningCopies H label ⊆
+    @Finset.biUnion (Fin h) { e // e ∉ removedCopies N T } (fun a b => a.instDecidableEq b) univ F.classes
+but is expected to have type
+  joiningCopies H label ⊆
+    @Finset.biUnion (Fin h) { e // e ∉ removedCopies N T } (fun a b => propDecidable (a = b)) univ F.classes
+in the application
+  external_union_eq_of_saturation H label h F.classes Z F.disjoint (fun z x => hregular z) F.covers hjoining
+error: Overfull/NativeCore/ExternalPalette.lean:173:19: Application type mismatch: The argument
+  joining_exceptional_disjoint_core H label U₀ Z C₀ h0Z 0 hlabel₀
+has type
+  Disjoint
+    (@Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (joiningCopies H label)
+      (exceptionalCopies H univ Z))
+    (OneCore.coreEdges C₀)
+but is expected to have type
+  Disjoint
+    (@Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (joiningCopies H label)
+      (exceptionalCopies H univ Z))
+    (OneCore.coreEdges C₀)
+in the application
+  Disjoint.mono_left (hsub' j) (joining_exceptional_disjoint_core H label U₀ Z C₀ h0Z 0 hlabel₀)
+error: Overfull/NativeCore/ExternalPalette.lean:175:19: Application type mismatch: The argument
+  joining_exceptional_disjoint_core H label U₁ Z C₁ h1Z 1 hlabel₁
+has type
+  Disjoint
+    (@Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (joiningCopies H label)
+      (exceptionalCopies H univ Z))
+    (OneCore.coreEdges C₁)
+but is expected to have type
+  Disjoint
+    (@Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (joiningCopies H label)
+      (exceptionalCopies H univ Z))
+    (OneCore.coreEdges C₁)
+in the application
+  Disjoint.mono_left (hsub' j) (joining_exceptional_disjoint_core H label U₁ Z C₁ h1Z 1 hlabel₁)
+error: Overfull/NativeCore/ExternalPalette.lean:179:27: Application type mismatch: The argument
+  hsub'
+has type
+  ∀ (j : Fin h),
+    F j ⊆
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (joiningCopies H label)
+        (exceptionalCopies H univ Z)
+but is expected to have type
+  ∀ (j : Fin h),
+    F j ⊆
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (joiningCopies H label)
+        (exceptionalCopies H univ Z)
+in the application
+  external_family_load_le_error H label U₀ Z C₀ h0Z 0 hlabel₀ h a hregular hcore₀ F hd hsub'
+error: Overfull/NativeCore/ExternalPalette.lean:181:27: Application type mismatch: The argument
+  hsub'
+has type
+  ∀ (j : Fin h),
+    F j ⊆
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (joiningCopies H label)
+        (exceptionalCopies H univ Z)
+but is expected to have type
+  ∀ (j : Fin h),
+    F j ⊆
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (joiningCopies H label)
+        (exceptionalCopies H univ Z)
+in the application
+  external_family_load_le_error H label U₁ Z C₁ h1Z 1 hlabel₁ h a hregular hcore₁ F hd hsub'
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.NativeCore.ExternalPalette
+error: build failed

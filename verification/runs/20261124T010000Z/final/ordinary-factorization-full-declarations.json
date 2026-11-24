@@ -1,0 +1,1532 @@
+{
+  "schema_version": 1,
+  "kind": "complete_assertion_source_mapping",
+  "numbered_assertions_completed": 1,
+  "manuscript_number": "4.2",
+  "statement_sha256": "480b2fb39565bc86acf278addac00ca843da67be5638db6b4328af1ddf08ea97",
+  "module_count": 14,
+  "public_theorem_count": 57,
+  "verified_declaration_count": 142,
+  "includes_private_and_generated_proofs": true,
+  "proof_declaration_map": [
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.avoid",
+      "source_path": "Overfull/BoundedExterior/ReserveChoice.lean",
+      "source_sha256": "c984f58611b26534a0f795c2f14d81f8bae3d732966dc7f603dad97964216ad4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.balance",
+      "source_path": "Overfull/BoundedExterior/ReserveChoice.lean",
+      "source_sha256": "c984f58611b26534a0f795c2f14d81f8bae3d732966dc7f603dad97964216ad4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.cover",
+      "source_path": "Overfull/BoundedExterior/ReserveChoice.lean",
+      "source_sha256": "c984f58611b26534a0f795c2f14d81f8bae3d732966dc7f603dad97964216ad4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.crossing",
+      "source_path": "Overfull/BoundedExterior/ReserveChoice.lean",
+      "source_sha256": "c984f58611b26534a0f795c2f14d81f8bae3d732966dc7f603dad97964216ad4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.disjoint",
+      "source_path": "Overfull/BoundedExterior/ReserveChoice.lean",
+      "source_sha256": "c984f58611b26534a0f795c2f14d81f8bae3d732966dc7f603dad97964216ad4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.mk.inj",
+      "source_path": "Overfull/BoundedExterior/ReserveChoice.lean",
+      "source_sha256": "c984f58611b26534a0f795c2f14d81f8bae3d732966dc7f603dad97964216ad4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.mk.injEq",
+      "source_path": "Overfull/BoundedExterior/ReserveChoice.lean",
+      "source_sha256": "c984f58611b26534a0f795c2f14d81f8bae3d732966dc7f603dad97964216ad4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.mk.sizeOf_spec",
+      "source_path": "Overfull/BoundedExterior/ReserveChoice.lean",
+      "source_sha256": "c984f58611b26534a0f795c2f14d81f8bae3d732966dc7f603dad97964216ad4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.OriginalReserve.reserved_card",
+      "source_path": "Overfull/BoundedExterior/ReserveChoice.lean",
+      "source_sha256": "c984f58611b26534a0f795c2f14d81f8bae3d732966dc7f603dad97964216ad4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.augmented_shores_compl",
+      "source_path": "Overfull/BoundedExterior/Factorization.lean",
+      "source_sha256": "8754cbdd72f0de3ae547260bb13b835dfdbc16766b0af9eac2b53322aa16401f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.augmented_shores_compl._simp_1_1",
+      "source_path": "Overfull/BoundedExterior/Factorization.lean",
+      "source_sha256": "8754cbdd72f0de3ae547260bb13b835dfdbc16766b0af9eac2b53322aa16401f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.augmented_shores_compl._simp_1_2",
+      "source_path": "Overfull/BoundedExterior/Factorization.lean",
+      "source_sha256": "8754cbdd72f0de3ae547260bb13b835dfdbc16766b0af9eac2b53322aa16401f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "name": "Overfull.BoundedExterior.colorClass_isPerfectMatching",
+      "source_path": "Overfull/BoundedExterior/ColorFactorization.lean",
+      "source_sha256": "060b8935359d89ce7b65ff0e9a0235f979a8f36914e582a0087a5c455c6e6eef"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "name": "Overfull.BoundedExterior.colorClasses_pairwise_disjoint",
+      "source_path": "Overfull/BoundedExterior/ColorFactorization.lean",
+      "source_sha256": "060b8935359d89ce7b65ff0e9a0235f979a8f36914e582a0087a5c455c6e6eef"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "name": "Overfull.BoundedExterior.colorClasses_union",
+      "source_path": "Overfull/BoundedExterior/ColorFactorization.lean",
+      "source_sha256": "060b8935359d89ce7b65ff0e9a0235f979a8f36914e582a0087a5c455c6e6eef"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "name": "Overfull.BoundedExterior.colorClasses_union._simp_1_1",
+      "source_path": "Overfull/BoundedExterior/ColorFactorization.lean",
+      "source_sha256": "060b8935359d89ce7b65ff0e9a0235f979a8f36914e582a0087a5c455c6e6eef"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "name": "Overfull.BoundedExterior.colorClasses_union._simp_1_2",
+      "source_path": "Overfull/BoundedExterior/ColorFactorization.lean",
+      "source_sha256": "060b8935359d89ce7b65ff0e9a0235f979a8f36914e582a0087a5c455c6e6eef"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "name": "Overfull.BoundedExterior.colorClasses_union._simp_1_3",
+      "source_path": "Overfull/BoundedExterior/ColorFactorization.lean",
+      "source_sha256": "060b8935359d89ce7b65ff0e9a0235f979a8f36914e582a0087a5c455c6e6eef"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.coreComplement_exteriorClass_covers",
+      "source_path": "Overfull/BoundedExterior/ExteriorClasses.lean",
+      "source_sha256": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.coreComplement_exteriorClass_footprint_bounds",
+      "source_path": "Overfull/BoundedExterior/ExteriorClasses.lean",
+      "source_sha256": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.coreComplement_exteriorClass_split",
+      "source_path": "Overfull/BoundedExterior/ExteriorClasses.lean",
+      "source_sha256": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.coreFootprint.eq_1",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.coreFootprintSubtype.eq_1",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.coreFootprintSubtype_card",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.coreFootprintSubtype_inter_card",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.coreFootprintSubtype_map",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.coreFootprintSubtype_map._simp_1_1",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.coreFootprint_subset",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.core_copies_cross_augmented",
+      "source_path": "Overfull/BoundedExterior/Factorization.lean",
+      "source_sha256": "8754cbdd72f0de3ae547260bb13b835dfdbc16766b0af9eac2b53322aa16401f"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.core_copies_cross_augmented._simp_1_1",
+      "source_path": "Overfull/BoundedExterior/Factorization.lean",
+      "source_sha256": "8754cbdd72f0de3ae547260bb13b835dfdbc16766b0af9eac2b53322aa16401f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.exists_balanced_exterior_split",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.exists_balanced_exterior_split._proof_1_2",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.exists_balanced_exterior_split._simp_1_1",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.exists_balanced_exterior_split_subtype",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.exists_balanced_exterior_split_subtype._simp_1_1",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.exists_balanced_exterior_split_subtype._simp_1_2",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.exists_balanced_selected_coloring",
+      "source_path": "Overfull/BoundedExterior/Factorization.lean",
+      "source_sha256": "8754cbdd72f0de3ae547260bb13b835dfdbc16766b0af9eac2b53322aa16401f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.exists_labels_avoiding",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.exists_labels_avoiding._proof_1_1",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.exists_labels_avoiding_reserve",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "name": "Overfull.BoundedExterior.exists_oneFactorization_of_coloring",
+      "source_path": "Overfull/BoundedExterior/ColorFactorization.lean",
+      "source_sha256": "060b8935359d89ce7b65ff0e9a0235f979a8f36914e582a0087a5c455c6e6eef"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.exists_originalReserve",
+      "source_path": "Overfull/BoundedExterior/ReserveChoice.lean",
+      "source_sha256": "c984f58611b26534a0f795c2f14d81f8bae3d732966dc7f603dad97964216ad4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "name": "Overfull.BoundedExterior.exists_originalReserve._proof_1_1",
+      "source_path": "Overfull/BoundedExterior/ReserveChoice.lean",
+      "source_sha256": "c984f58611b26534a0f795c2f14d81f8bae3d732966dc7f603dad97964216ad4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.SelectedColoring",
+      "name": "Overfull.BoundedExterior.exists_selected_coloring",
+      "source_path": "Overfull/BoundedExterior/SelectedColoring.lean",
+      "source_sha256": "b135b6380e736adcc86b8a7bb948dd45d32f1f672bec41791dc56af530576451"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReservedColors",
+      "name": "Overfull.BoundedExterior.exists_uniform_factorization_of_reserved_colors",
+      "source_path": "Overfull/BoundedExterior/ReservedColors.lean",
+      "source_sha256": "00f622c56d40bc46337155b0749b47e12016ac85d31541efe8b778194b6ec481"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BoundedExterior.ReservedColors",
+      "name": "Overfull.BoundedExterior.exists_uniform_factorization_of_reserved_colors._simp_1_1",
+      "source_path": "Overfull/BoundedExterior/ReservedColors.lean",
+      "source_sha256": "00f622c56d40bc46337155b0749b47e12016ac85d31541efe8b778194b6ec481"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BoundedExterior.ReservedColors",
+      "name": "Overfull.BoundedExterior.exists_uniform_factorization_of_reserved_colors._simp_1_2",
+      "source_path": "Overfull/BoundedExterior/ReservedColors.lean",
+      "source_sha256": "00f622c56d40bc46337155b0749b47e12016ac85d31541efe8b778194b6ec481"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.exteriorClass.eq_1",
+      "source_path": "Overfull/BoundedExterior/ExteriorClasses.lean",
+      "source_sha256": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.exteriorClass_covers_outside",
+      "source_path": "Overfull/BoundedExterior/ExteriorClasses.lean",
+      "source_sha256": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.exteriorClass_isMatching",
+      "source_path": "Overfull/BoundedExterior/ExteriorClasses.lean",
+      "source_sha256": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.exteriorClass_subset_outside",
+      "source_path": "Overfull/BoundedExterior/ExteriorClasses.lean",
+      "source_sha256": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.exterior_partition_even",
+      "source_path": "Overfull/BoundedExterior/Factorization.lean",
+      "source_sha256": "8754cbdd72f0de3ae547260bb13b835dfdbc16766b0af9eac2b53322aa16401f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprintSubtype_bounds",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprint_bounds",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprint_bounds._proof_1_5",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprint_bounds._proof_1_6",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprint_bounds._simp_1_1",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprint_bounds._simp_1_2",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprint_bounds._simp_1_3",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.matching_footprint_bounds._simp_1_4",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.mem_coreFootprint",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.mem_coreFootprint._simp_1",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.mem_coreFootprint._simp_1_2",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.mem_coreFootprintSubtype",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.mem_coreFootprintSubtype._simp_1",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.mem_coreFootprintSubtype._simp_1_2",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "Overfull.BoundedExterior.mem_coreFootprintSubtype._simp_1_3",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.mem_exteriorClass",
+      "source_path": "Overfull/BoundedExterior/ExteriorClasses.lean",
+      "source_sha256": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.mem_exteriorClass._simp_1",
+      "source_path": "Overfull/BoundedExterior/ExteriorClasses.lean",
+      "source_sha256": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.mem_exteriorClass._simp_1_2",
+      "source_path": "Overfull/BoundedExterior/ExteriorClasses.lean",
+      "source_sha256": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.mem_exteriorClass._simp_1_3",
+      "source_path": "Overfull/BoundedExterior/ExteriorClasses.lean",
+      "source_sha256": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "name": "Overfull.BoundedExterior.mem_exteriorClass._simp_1_4",
+      "source_path": "Overfull/BoundedExterior/ExteriorClasses.lean",
+      "source_sha256": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.mem_residualReservedLabels",
+      "source_path": "Overfull/BoundedExterior/ResidualReserve.lean",
+      "source_sha256": "a9a9a8d742588e51537b9f8a3c59243864a28c3c7481ad24a37d88394bb3523b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.mem_residualReservedLabels._simp_1",
+      "source_path": "Overfull/BoundedExterior/ResidualReserve.lean",
+      "source_sha256": "a9a9a8d742588e51537b9f8a3c59243864a28c3c7481ad24a37d88394bb3523b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.mem_residualReservedLabels._simp_1_2",
+      "source_path": "Overfull/BoundedExterior/ResidualReserve.lean",
+      "source_sha256": "a9a9a8d742588e51537b9f8a3c59243864a28c3c7481ad24a37d88394bb3523b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.mem_residualReservedLabels._simp_1_3",
+      "source_path": "Overfull/BoundedExterior/ResidualReserve.lean",
+      "source_sha256": "a9a9a8d742588e51537b9f8a3c59243864a28c3c7481ad24a37d88394bb3523b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveCount_le_eighth",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveCount_lower_of_large",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveCount_lower_of_large._proof_1_1",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveCount_mul_le",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveCount_pos_of_large",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveCount_pos_of_large._proof_1_1",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveDenominator.eq_1",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveDenominator_factor",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveDenominator_factor._proof_1_1",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveDenominator_ge_eight",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveDenominator_ge_eight._proof_1_1",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "name": "Overfull.BoundedExterior.reserveDenominator_pos",
+      "source_path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "source_sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.residualReservedLabels.eq_1",
+      "source_path": "Overfull/BoundedExterior/ResidualReserve.lean",
+      "source_sha256": "a9a9a8d742588e51537b9f8a3c59243864a28c3c7481ad24a37d88394bb3523b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.residualReservedLabels_card",
+      "source_path": "Overfull/BoundedExterior/ResidualReserve.lean",
+      "source_sha256": "a9a9a8d742588e51537b9f8a3c59243864a28c3c7481ad24a37d88394bb3523b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.residualReservedLabels_crossing",
+      "source_path": "Overfull/BoundedExterior/ResidualReserve.lean",
+      "source_sha256": "a9a9a8d742588e51537b9f8a3c59243864a28c3c7481ad24a37d88394bb3523b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "name": "Overfull.BoundedExterior.residualReservedLabels_map",
+      "source_path": "Overfull/BoundedExterior/ResidualReserve.lean",
+      "source_sha256": "a9a9a8d742588e51537b9f8a3c59243864a28c3c7481ad24a37d88394bb3523b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.selected_core_degree_sums",
+      "source_path": "Overfull/BoundedExterior/Factorization.lean",
+      "source_sha256": "8754cbdd72f0de3ae547260bb13b835dfdbc16766b0af9eac2b53322aa16401f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.Factorization",
+      "name": "Overfull.BoundedExterior.selected_core_degree_sums._proof_1_1",
+      "source_path": "Overfull/BoundedExterior/Factorization.lean",
+      "source_sha256": "8754cbdd72f0de3ae547260bb13b835dfdbc16766b0af9eac2b53322aa16401f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.BoundedCutReserve",
+      "name": "Overfull.OrdinaryFactorization.exists_cut_reserve_of_two_robust_parameters_with_bounded_footprints",
+      "source_path": "Overfull/OrdinaryFactorization/BoundedCutReserve.lean",
+      "source_sha256": "a65dfcbdbe8199233603c8027740ca67dfdaa3d869bb709e9eface84a090e0d1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.BoundedCutReserve",
+      "name": "Overfull.OrdinaryFactorization.exists_cut_reserve_with_bounded_footprints",
+      "source_path": "Overfull/OrdinaryFactorization/BoundedCutReserve.lean",
+      "source_sha256": "a65dfcbdbe8199233603c8027740ca67dfdaa3d869bb709e9eface84a090e0d1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ReductionBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_bounded_footprints",
+      "source_path": "Overfull/OrdinaryFactorization/ReductionBounded.lean",
+      "source_sha256": "94d0afe7c2aa997749aa603ced7b5b10f696e0c6832d4509122903dfa0cb975b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ReductionBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_bounded_footprints._proof_1_1",
+      "source_path": "Overfull/OrdinaryFactorization/ReductionBounded.lean",
+      "source_sha256": "94d0afe7c2aa997749aa603ced7b5b10f696e0c6832d4509122903dfa0cb975b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.ReductionBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_bounded_footprints._proof_1_2",
+      "source_path": "Overfull/OrdinaryFactorization/ReductionBounded.lean",
+      "source_sha256": "94d0afe7c2aa997749aa603ced7b5b10f696e0c6832d4509122903dfa0cb975b"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalfBounded.lean",
+      "source_sha256": "36f8b20072f72d0f7d7ca2737d53e7e56ebaf334e046c52301808bed2486b6be"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints._proof_1_10",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalfBounded.lean",
+      "source_sha256": "36f8b20072f72d0f7d7ca2737d53e7e56ebaf334e046c52301808bed2486b6be"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints._proof_1_2",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalfBounded.lean",
+      "source_sha256": "36f8b20072f72d0f7d7ca2737d53e7e56ebaf334e046c52301808bed2486b6be"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints._simp_1_1",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalfBounded.lean",
+      "source_sha256": "36f8b20072f72d0f7d7ca2737d53e7e56ebaf334e046c52301808bed2486b6be"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints._simp_1_6",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalfBounded.lean",
+      "source_sha256": "36f8b20072f72d0f7d7ca2737d53e7e56ebaf334e046c52301808bed2486b6be"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints._simp_1_7",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalfBounded.lean",
+      "source_sha256": "36f8b20072f72d0f7d7ca2737d53e7e56ebaf334e046c52301808bed2486b6be"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints._simp_1_8",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalfBounded.lean",
+      "source_sha256": "36f8b20072f72d0f7d7ca2737d53e7e56ebaf334e046c52301808bed2486b6be"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints._simp_1_9",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalfBounded.lean",
+      "source_sha256": "36f8b20072f72d0f7d7ca2737d53e7e56ebaf334e046c52301808bed2486b6be"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_ordinary_core_factorization",
+      "source_path": "Overfull/OrdinaryFactorization/Full.lean",
+      "source_sha256": "898e84fee1c8301a2de7c2b03b10ee39d5f7b7f96f2f3cac2fc7ea788582604e"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_ordinary_core_factorization._proof_1_1",
+      "source_path": "Overfull/OrdinaryFactorization/Full.lean",
+      "source_sha256": "898e84fee1c8301a2de7c2b03b10ee39d5f7b7f96f2f3cac2fc7ea788582604e"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_ordinary_core_factorization._proof_1_2",
+      "source_path": "Overfull/OrdinaryFactorization/Full.lean",
+      "source_sha256": "898e84fee1c8301a2de7c2b03b10ee39d5f7b7f96f2f3cac2fc7ea788582604e"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "name": "Overfull.OrdinaryFactorization.exists_uniform_ordinary_core_factorization._simp_1_3",
+      "source_path": "Overfull/OrdinaryFactorization/Full.lean",
+      "source_sha256": "898e84fee1c8301a2de7c2b03b10ee39d5f7b7f96f2f3cac2fc7ea788582604e"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.balanced_footprint_probability",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.balanced_footprint_probability._proof_1_1",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.balanced_footprint_probability._proof_1_4",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.balanced_footprint_probability._simp_1_2",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.balanced_footprint_probability._simp_1_3",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_balanced_footprints_outside",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_orientation_balanced_footprints",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_orientation_balanced_footprints_of_error_bound",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints._simp_1_1",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints._simp_1_2",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints._simp_1_3",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints._simp_1_4",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints._simp_1_5",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints._simp_1_6",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints._simp_1_7",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters_balanced_footprints",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters_balanced_footprints._simp_1_1",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters_balanced_footprints._simp_1_2",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters_balanced_footprints._simp_1_3",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.orientation_error_lt_positive",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "name": "Overfull.PairedCut.paired_cut_quantitative_balanced_footprints",
+      "source_path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "source_sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "name": "Overfull.ordinary_core_factorization",
+      "source_path": "Overfull/OrdinaryFactorization/Full.lean",
+      "source_sha256": "898e84fee1c8301a2de7c2b03b10ee39d5f7b7f96f2f3cac2fc7ea788582604e"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "name": "Overfull.ordinary_core_one_factorization",
+      "source_path": "Overfull/OrdinaryFactorization/Full.lean",
+      "source_sha256": "898e84fee1c8301a2de7c2b03b10ee39d5f7b7f96f2f3cac2fc7ea788582604e"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "_private.Overfull.BoundedExterior.MatchingSplit.0.Overfull.BoundedExterior.ends_avoid",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "_private.Overfull.BoundedExterior.MatchingSplit.0.Overfull.BoundedExterior.ends_edge",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "_private.Overfull.BoundedExterior.MatchingSplit.0.Overfull.BoundedExterior.ends_ne",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "_private.Overfull.BoundedExterior.MatchingSplit.0.Overfull.BoundedExterior.left_incident",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "name": "_private.Overfull.BoundedExterior.MatchingSplit.0.Overfull.BoundedExterior.right_incident",
+      "source_path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "source_sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "name": "_private.Overfull.OrdinaryFactorization.FirstHalfBounded.0.Overfull.OrdinaryFactorization.bounded_robust_expander_change_instance",
+      "source_path": "Overfull/OrdinaryFactorization/FirstHalfBounded.lean",
+      "source_sha256": "36f8b20072f72d0f7d7ca2737d53e7e56ebaf334e046c52301808bed2486b6be"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "name": "_private.Overfull.OrdinaryFactorization.Full.0.Overfull.OrdinaryFactorization.bipartite_robust_change_bounded_instances",
+      "source_path": "Overfull/OrdinaryFactorization/Full.lean",
+      "source_sha256": "898e84fee1c8301a2de7c2b03b10ee39d5f7b7f96f2f3cac2fc7ea788582604e"
+    }
+  ]
+}
