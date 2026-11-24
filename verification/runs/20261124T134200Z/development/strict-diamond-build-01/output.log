@@ -1,0 +1,31 @@
+✔ [3151/3152] Built Overfull.CompatibleCircuits.FourStrictComplete (6.4s)
+✖ [3152/3152] Building Overfull.CompatibleCircuits.FourStrictDiamond (7.0s)
+trace: .> LEAN_PATH=/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean /workspace/scratch/77adbfc63087/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/77adbfc63087/overfull-lean/Overfull/CompatibleCircuits/FourStrictDiamond.lean -o /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourStrictDiamond.olean -i /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourStrictDiamond.ilean -c /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourStrictDiamond.c --setup /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourStrictDiamond.setup.json --json
+warning: Overfull/CompatibleCircuits/FourStrictDiamond.lean:29:10: `Finset.not_mem_empty` has been deprecated: Use `Finset.notMem_empty` instead
+warning: Overfull/CompatibleCircuits/FourStrictDiamond.lean:38:46: This simp argument is unused:
+  Sym2.eq_iff
+
+Hint: Omit it from the simp argument list.
+  simp_all ̵[̵S̵y̵m̵2̵.̵e̵q̵_̵i̵f̵f̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Overfull/CompatibleCircuits/FourStrictDiamond.lean:63:4: Application type mismatch: The argument
+  hi2
+has type
+  {e ∈ C | 2 ∈ Q.edge e} = Q.edgeBundleOn C 2 0 ∪ Q.edgeBundleOn C 2 1
+but is expected to have type
+  {e ∈ C | 2 ∈ Q.edge e} = Q.edgeBundleOn C 2 0 ∪ Q.edgeBundleOn C 2 1
+in the application
+  two_neighbor_bundle_structure Q classOf C hadmissible hpair ?m.155 ?m.156 ?m.157 ?m.158 ?m.159 hi2
+error: Overfull/CompatibleCircuits/FourStrictDiamond.lean:70:4: Application type mismatch: The argument
+  hi3
+has type
+  {e ∈ C | 3 ∈ Q.edge e} = Q.edgeBundleOn C 3 0 ∪ Q.edgeBundleOn C 3 1
+but is expected to have type
+  {e ∈ C | 3 ∈ Q.edge e} = Q.edgeBundleOn C 3 0 ∪ Q.edgeBundleOn C 3 1
+in the application
+  two_neighbor_bundle_structure Q classOf C hadmissible hpair ?m.210 ?m.211 ?m.212 ?m.213 ?m.214 hi3
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourStrictDiamond
+error: build failed

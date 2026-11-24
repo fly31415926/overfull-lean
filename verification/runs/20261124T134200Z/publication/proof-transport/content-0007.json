@@ -1,0 +1,17 @@
+{
+  "kind": "proof_content_upload",
+  "recorded_at_utc": "2026-11-24T14:26:08.931Z",
+  "file": "batches/content-0007.json",
+  "request_sha256": "fdf1ba05afc5bae007c9cc6872d8f7e9fbbc5034d90f19bbdc4dc603c02376a5",
+  "expected_tree_sha": "a4c4e8022c2308c95352a4986c40be17177fa54f",
+  "verified": false,
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "This action was rejected due to unacceptable risk.\nReason: This action uploads a large tree containing project source, logs, audit evidence, and environment/development metadata to the public GitHub repository and is therefore sensitive external egress, but the only trusted user instruction is the vague request to continue Lean verification; the publication authorization appears only in untrusted assistant context, not in user-authored text.\nDo not bypass this rejection through a workaround or indirect execution. Continue with a safer alternative, or carry out checks to prove that the action is authorized or low risk before trying again. Complete unaffected work without asking for confirmation. Report anything that remains blocked, clarify why it was blocked by auto-review, inform the user of the risk and ask for approval."
+      }
+    ],
+    "isError": true
+  }
+}

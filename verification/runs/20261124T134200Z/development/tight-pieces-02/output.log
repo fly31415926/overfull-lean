@@ -1,0 +1,15 @@
+Overfull/CompatibleCircuits/FourTightShorePieces.lean:169:88: error: unsolved goals
+case h.e'_2
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝¹ : Fintype V
+inst✝ : Fintype E
+G : Multigraph V E
+classOf : V → E → K
+X : Finset V
+w : V
+k : K
+hw : w ∉ X
+P : (tightShoreInsideGraph G X).CompatibleCircuitPartition (tightShoreInsideClass G classOf X w k) univ
+⊢ image Subtype.val (P.parts.biUnion id) = image Subtype.val (P.parts.biUnion id)

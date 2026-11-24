@@ -1,0 +1,15 @@
+Overfull/CompatibleCircuits/FourUniformCycle.lean:117:2: error: Type mismatch: After simplification, term
+  h v
+ has type
+  #{i | v ∈ pairs i} = 2
+but is expected to have type
+  #{e | v ∈ pairs e} = 2
+Overfull/CompatibleCircuits/FourUniformCycle.lean:146:55: error: Application type mismatch: The argument
+  hcard
+has type
+  ∀ (i : Fin 4), #({e ∈ C | Q.edge e = pairs i}) = m
+but is expected to have type
+  ∀ (i : Fin 4), #({e ∈ C | Q.edge e = graph.edge i}) = m
+in the application
+  exists_compatibleCircuitPartition_of_uniform_simple_template graph Q graph_isCircuit pairs_injective classOf C m
+    hcover hcard

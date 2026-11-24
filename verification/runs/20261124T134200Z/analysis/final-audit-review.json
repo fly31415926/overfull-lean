@@ -1,0 +1,1407 @@
+{
+  "schema_version": 1,
+  "reviewer": "tight_shore",
+  "status": "passed",
+  "checked_at_utc": "2026-11-24T14:22:26.421393+00:00",
+  "method": "Independent read-only hash recomputation and comparison of frozen raw kernel records with baseline git objects, manifests and receipts; no Lean command or control script rerun.",
+  "baseline_commit": "3991bb7eee091a329046073e0366daa84a603e5d",
+  "baseline_tree": "6424bf81123aa75b2254aea7eceff6260611f397",
+  "attempt": "full-01",
+  "receipt_sha256": "18f27dde12dd0388d9bdf2af4c34410ed20c625f50fcdc1fec022db543a56a0d",
+  "preservation_sha256": "adf1cb8b9acb301f8ddd0f52c1edc44ba3ec8d914e6d59172fb76e24fb554a5f",
+  "frozen_inputs": 826,
+  "frozen_controls": 17,
+  "recorded_outputs": 25,
+  "build_jobs": 3874,
+  "previous_audited_declarations": 14260,
+  "audited_declarations": 14627,
+  "new_audited_declarations": 367,
+  "previous_completed_result_mappings": 2609,
+  "completed_result_mappings": 2777,
+  "previous_declaration_maps_preserved": 19,
+  "new_modules": 28,
+  "public_proofs": 168,
+  "new_private_name_count": 0,
+  "new_nonpublic_kernel_proof_count": 199,
+  "project_modules": 702,
+  "external_audited_modules": 25,
+  "source_inputs": 703,
+  "other_inputs": 123,
+  "development_attempts": 81,
+  "development_files": 1252,
+  "development_status_counts": {
+    "failed": 41,
+    "passed": 40,
+    "interrupted": 0
+  },
+  "development_attempts_with_recorded_input_changes": [
+    "strict-complete-01",
+    "strict-cycle-02",
+    "strict-safe-selection-build-01",
+    "strict-support-build-01",
+    "strict-triangles-01",
+    "strict-triangles-build-01",
+    "support-classification-build-01",
+    "tight-contraction-03",
+    "tight-expansion-02",
+    "tight-inside-02",
+    "tight-outside-02",
+    "tight-outside-03",
+    "uniform-cycle-03",
+    "uniform-cycle-build-01"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "coverage": {
+    "complete": 49,
+    "total": 69,
+    "main_theorem_verified": false
+  },
+  "checks": [
+    {
+      "check": "terminal_and_command_receipts_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "successful_actual_verifier_and_wrapper",
+      "passed": true
+    },
+    {
+      "check": "finished_and_no_wrapper_errors",
+      "passed": true
+    },
+    {
+      "check": "recorded_unchanged_inputs_and_controls",
+      "passed": true
+    },
+    {
+      "check": "full_stdout_hash_matches_receipt",
+      "passed": true
+    },
+    {
+      "check": "preservation_receipt_bound_to_actual_command",
+      "passed": true
+    },
+    {
+      "check": "all_826_live_input_hashes_and_inventory_match",
+      "passed": true
+    },
+    {
+      "check": "all_826_archived_input_hashes_and_inventory_match",
+      "passed": true
+    },
+    {
+      "check": "results_reports_exact_frozen_input_inventory",
+      "passed": true
+    },
+    {
+      "check": "17_control_manifest_matches_terminal",
+      "passed": true
+    },
+    {
+      "check": "all_archived_control_bytes_and_inventory_match",
+      "passed": true
+    },
+    {
+      "check": "all_live_control_bytes_and_inventory_match",
+      "passed": true
+    },
+    {
+      "check": "25_unique_output_paths",
+      "passed": true
+    },
+    {
+      "check": "output_archive_inventory_exact",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/assigned-part-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/axioms.log",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/boundary-extension-full-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/build.log",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/exceptional-palette-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/few-exception-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/four-label-existence-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/four-label-reduction-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/four-odd-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/global-factorization-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/joining-circuit-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/lean-version.log",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/native-integration-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/native-pattern-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/native-reserve-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/native-star-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/native-terminal-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/ordinary-factorization-full-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/residual-factorization-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/residual-palette-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/results.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/three-core-terminal-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/three-label-circuit-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/vizing-source.log",
+      "passed": true
+    },
+    {
+      "check": "output_bytes:verification/weighted-palette-declarations.json",
+      "passed": true
+    },
+    {
+      "check": "raw_stdout_contains_actual_log:build.log",
+      "passed": true
+    },
+    {
+      "check": "raw_stdout_contains_actual_log:axioms.log",
+      "passed": true
+    },
+    {
+      "check": "raw_stdout_contains_actual_log:lean-version.log",
+      "passed": true
+    },
+    {
+      "check": "raw_stdout_contains_actual_log:vizing-source.log",
+      "passed": true
+    },
+    {
+      "check": "build_success_marker_and_warning_free",
+      "passed": true
+    },
+    {
+      "check": "unique_declaration_names_14627",
+      "passed": true
+    },
+    {
+      "check": "unique_declaration_names_14627",
+      "passed": true
+    },
+    {
+      "check": "unique_declaration_names_14260",
+      "passed": true
+    },
+    {
+      "check": "raw_audit_records_match_results",
+      "passed": true
+    },
+    {
+      "check": "single_actual_kernel_audit_success_marker",
+      "passed": true
+    },
+    {
+      "check": "all_declarations_use_only_allowed_axioms",
+      "passed": true
+    },
+    {
+      "check": "all_14260_previous_names_owners_axiom_sets_preserved",
+      "passed": true
+    },
+    {
+      "check": "367_new_audited_declarations",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:four_odd_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:four_odd_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:residual_factorization_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:residual_factorization_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:boundary_extension_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:boundary_extension_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:ordinary_factorization_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:ordinary_factorization_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:few_exception_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:few_exception_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:three_label_circuit_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:three_label_circuit_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:joining_circuit_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:joining_circuit_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:assigned_part_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:assigned_part_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:native_pattern_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:native_pattern_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:native_reserve_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:native_reserve_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:residual_palette_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:residual_palette_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:exceptional_palette_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:exceptional_palette_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:weighted_palette_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:weighted_palette_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:native_star_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:native_star_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:native_integration_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:native_integration_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:native_terminal_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:native_terminal_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:three_core_terminal_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:three_core_terminal_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:global_factorization_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:global_factorization_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_metadata:four_label_reduction_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "previous_source_map_bytes:four_label_reduction_declaration_map",
+      "passed": true
+    },
+    {
+      "check": "all_2609_previous_completed_mappings_preserved",
+      "passed": true
+    },
+    {
+      "check": "baseline_has_794_inputs",
+      "passed": true
+    },
+    {
+      "check": "all_prior_immutable_input_hashes_preserved",
+      "passed": true
+    },
+    {
+      "check": "all_old_mathematical_sources_and_audit_preserved",
+      "passed": true
+    },
+    {
+      "check": "stock_kernel_audit_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "root_exactly_two_additive_imports",
+      "passed": true
+    },
+    {
+      "check": "verifier_edit_additive_unique",
+      "passed": true
+    },
+    {
+      "check": "verifier_edit_additive_unique",
+      "passed": true
+    },
+    {
+      "check": "verifier_edit_additive_unique",
+      "passed": true
+    },
+    {
+      "check": "verifier_edit_additive_unique",
+      "passed": true
+    },
+    {
+      "check": "verifier_exactly_four_recorded_additions",
+      "passed": true
+    },
+    {
+      "check": "stock_verification_commands_preserved",
+      "passed": true
+    },
+    {
+      "check": "all_28_new_sources_exactly_manifested",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourCharacterization",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourExistence",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourJoiningComplete",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourNonlocalReduction",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourStrictCoarsening",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourStrictComplete",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourStrictCycle",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourStrictDiamond",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourStrictSafeSelection",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourStrictSelection",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourStrictSupport",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourStrictTriangles",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourSupportClassification",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourSupportReduction",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourTightShoreAssembly",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourTightShoreBlocks",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourTightShoreClosed",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourTightShoreCompletion",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourTightShoreContraction",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourTightShoreExpansion",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourTightShoreInside",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourTightShoreOutside",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourTightShoreOutsideGeometry",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourTightShorePairing",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourTightShorePieceGeometry",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourTightShorePieces",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourTightShoreRestriction",
+      "passed": true
+    },
+    {
+      "check": "manifest_source_identity:Overfull.CompatibleCircuits.FourUniformCycle",
+      "passed": true
+    },
+    {
+      "check": "unique_declaration_names_367",
+      "passed": true
+    },
+    {
+      "check": "new_map_covers_every_new_public_private_generated_proof",
+      "passed": true
+    },
+    {
+      "check": "new_map_source_paths_hashes_match_frozen",
+      "passed": true
+    },
+    {
+      "check": "new_map_includes_every_module",
+      "passed": true
+    },
+    {
+      "check": "168_public_proofs_complete_owned_and_audited",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourCharacterization",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourExistence",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourJoiningComplete",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourNonlocalReduction",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourStrictCoarsening",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourStrictComplete",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourStrictCycle",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourStrictDiamond",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourStrictSafeSelection",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourStrictSelection",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourStrictSupport",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourStrictTriangles",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourSupportClassification",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourSupportReduction",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourTightShoreAssembly",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourTightShoreBlocks",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourTightShoreClosed",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourTightShoreCompletion",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourTightShoreContraction",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourTightShoreExpansion",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourTightShoreInside",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourTightShoreOutside",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourTightShoreOutsideGeometry",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourTightShorePairing",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourTightShorePieceGeometry",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourTightShorePieces",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourTightShoreRestriction",
+      "passed": true
+    },
+    {
+      "check": "public_proof_source_lines:Overfull.CompatibleCircuits.FourUniformCycle",
+      "passed": true
+    },
+    {
+      "check": "168_new_completed_mappings_are_manifested_public_proofs",
+      "passed": true
+    },
+    {
+      "check": "new_result_map_hash_matches_archive",
+      "passed": true
+    },
+    {
+      "check": "702_project_modules_all_reachable_and_imported",
+      "passed": true
+    },
+    {
+      "check": "25_external_audited_modules_match",
+      "passed": true
+    },
+    {
+      "check": "coverage_and_manuscript_inventory_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "coverage_stays_49_of_69_main_false",
+      "passed": true
+    },
+    {
+      "check": "1252_development_files_exact_inventory",
+      "passed": true
+    },
+    {
+      "check": "all_development_hashes_and_sizes_match",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:four-characterization-build-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:four-characterization-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:four-characterization-build-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:four-characterization-build-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:four-existence-build-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:four-existence-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:four-joining-complete-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:four-joining-complete-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:four-nonlocal-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:four-nonlocal-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:four-nonlocal-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:four-nonlocal-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:four-nonlocal-03",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:four-nonlocal-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-coarsening-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-coarsening-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-coarsening-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-coarsening-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-coarsening-03",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-coarsening-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-coarsening-04",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-coarsening-04",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-complete-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-complete-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-complete-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-complete-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-complete-03",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-complete-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-cycle-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-cycle-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-cycle-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-cycle-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-cycle-03",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-cycle-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-cycle-04",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-cycle-04",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-cycle-build-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-cycle-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-diamond-build-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-diamond-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-diamond-build-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-diamond-build-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-diamond-build-03",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-diamond-build-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-safe-selection-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-safe-selection-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-safe-selection-build-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-safe-selection-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-selection-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-selection-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-selection-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-selection-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-selection-build-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-selection-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-support-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-support-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-support-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-support-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-support-build-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-support-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-triangles-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-triangles-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-triangles-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-triangles-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:strict-triangles-build-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:strict-triangles-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:support-classification-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:support-classification-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:support-classification-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:support-classification-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:support-classification-build-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:support-classification-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:support-reduction-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:support-reduction-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:support-reduction-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:support-reduction-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:support-reduction-build-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:support-reduction-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-assembly-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-assembly-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-assembly-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-assembly-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-blocks-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-blocks-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-closed-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-closed-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-closed-build-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-closed-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-completion-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-completion-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-completion-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-completion-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-completion-03",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-completion-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-contraction-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-contraction-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-contraction-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-contraction-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-contraction-03",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-contraction-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-contraction-04",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-contraction-04",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-contraction-05",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-contraction-05",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-contraction-06",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-contraction-06",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-contraction-07",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-contraction-07",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-contraction-08",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-contraction-08",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-contraction-09",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-contraction-09",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-expansion-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-expansion-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-expansion-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-expansion-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-inside-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-inside-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-inside-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-inside-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-inside-03",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-inside-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-inside-04",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-inside-04",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-inside-05",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-inside-05",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-inside-06",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-inside-06",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-outside-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-outside-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-outside-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-outside-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-outside-03",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-outside-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-outside-geometry-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-outside-geometry-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-outside-geometry-build-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-outside-geometry-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-pairing-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-pairing-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-pairing-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-pairing-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-piece-geometry-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-piece-geometry-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-piece-geometry-build-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-piece-geometry-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-pieces-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-pieces-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-pieces-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-pieces-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-pieces-03",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-pieces-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:tight-restriction-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:tight-restriction-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:uniform-cycle-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:uniform-cycle-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:uniform-cycle-02",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:uniform-cycle-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:uniform-cycle-03",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:uniform-cycle-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_focused_receipt:uniform-cycle-build-01",
+      "passed": true
+    },
+    {
+      "check": "focused_source_snapshots:uniform-cycle-build-01",
+      "passed": true
+    },
+    {
+      "check": "81_attempts_40_passed_41_failed_preserved",
+      "passed": true
+    }
+  ],
+  "findings": [],
+  "limitation": "This review certifies the inspected local frozen verification evidence and preservation comparisons; publication and remote branch identity require their own subsequent receipts."
+}

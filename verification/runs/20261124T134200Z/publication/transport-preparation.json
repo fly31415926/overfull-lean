@@ -1,0 +1,36 @@
+{
+  "recorded_at_utc": "2026-11-24T14:24:18.980717+00:00",
+  "receipts": [
+    {
+      "command": [
+        "python3",
+        "verification/runs/20261124T134200Z/publication/prepare.py",
+        "--repo",
+        "/workspace/scratch/77adbfc63087/overfull-lean",
+        "--target-tree",
+        "c691dabf252b6fe72005963c61ce4128962d7e66",
+        "--baseline-tree",
+        "6424bf81123aa75b2254aea7eceff6260611f397",
+        "--output-dir",
+        "/workspace/scratch/77adbfc63087/publication-20261124T134200Z-proof",
+        "--max-final-tree-entries",
+        "100",
+        "--chunk-bytes",
+        "60000"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"manifest\": \"/workspace/scratch/77adbfc63087/publication-20261124T134200Z-proof/manifest.json\",\n  \"baseline_tree_sha\": \"6424bf81123aa75b2254aea7eceff6260611f397\",\n  \"target_tree_sha\": \"c691dabf252b6fe72005963c61ce4128962d7e66\",\n  \"counts\": {\n    \"baseline_leaf_paths\": 10595,\n    \"target_leaf_paths\": 12787,\n    \"target_blob_paths\": 12787,\n    \"target_unique_blob_shas\": 2806,\n    \"baseline_unique_blob_shas\": 2534,\n    \"unique_new_blobs\": 272,\n    \"unique_reused_baseline_blobs\": 2534,\n    \"duplicate_target_blob_paths\": 9981,\n    \"new_blob_bytes\": 17583618,\n    \"changed_leaf_paths\": 2200,\n    \"deletion_entries\": 0,\n    \"upsert_entries\": 2200,\n    \"content_batches\": 86,\n    \"final_tree_batches\": 22,\n    \"chunked_blobs\": 6\n  },\n  \"verification\": {\n    \"baseline_inventory_reconstructs_tree\": true,\n    \"target_inventory_reconstructs_tree\": true,\n    \"final_plan_reconstructs_target_tree\": true,\n    \"every_extracted_blob_git_sha_verified\": true,\n    \"every_chunked_blob_roundtrip_verified\": true,\n    \"every_final_tree_batch_at_most_100_entries\": true\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "verification/runs/20261124T134200Z/publication/prepare-upload-index.py",
+        "/workspace/scratch/77adbfc63087/publication-20261124T134200Z-proof"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"target_tree_sha\": \"c691dabf252b6fe72005963c61ce4128962d7e66\",\n  \"baseline_tree_sha\": \"6424bf81123aa75b2254aea7eceff6260611f397\",\n  \"transport_baseline_tree_sha\": \"6424bf81123aa75b2254aea7eceff6260611f397\",\n  \"transport_baseline_commit_reference\": \"3991bb7eee091a329046073e0366daa84a603e5d\",\n  \"continuation_baseline_commit\": \"3991bb7eee091a329046073e0366daa84a603e5d\",\n  \"continuation_baseline_tree\": \"6424bf81123aa75b2254aea7eceff6260611f397\",\n  \"manifest_sha256\": \"a5d19323908fdc64245b134fb1b9714b655ba909e8fc342f7fd5df46170c38b4\",\n  \"counts\": {\n    \"baseline_leaf_paths\": 10595,\n    \"target_leaf_paths\": 12787,\n    \"target_blob_paths\": 12787,\n    \"target_unique_blob_shas\": 2806,\n    \"baseline_unique_blob_shas\": 2534,\n    \"unique_new_blobs\": 272,\n    \"unique_reused_baseline_blobs\": 2534,\n    \"duplicate_target_blob_paths\": 9981,\n    \"new_blob_bytes\": 17583618,\n    \"changed_leaf_paths\": 2200,\n    \"deletion_entries\": 0,\n    \"upsert_entries\": 2200,\n    \"content_batches\": 86,\n    \"final_tree_batches\": 22,\n    \"chunked_blobs\": 6\n  },\n  \"frozen_input_count\": 826,\n  \"frozen_control_count\": 17,\n  \"archived_output_count\": 25,\n  \"final_tree_entry_limit\": 100,\n  \"required_source_and_evidence_files\": 3003,\n  \"all_required_bytes_in_target_tree\": true,\n  \"full_verifier_and_wrapper_passed\": true\n}\n",
+      "stderr": ""
+    }
+  ]
+}

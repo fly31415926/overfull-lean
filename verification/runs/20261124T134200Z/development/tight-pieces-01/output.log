@@ -1,0 +1,53 @@
+✖ [3159/3159] Building Overfull.CompatibleCircuits.FourTightShorePieces (2.9s)
+trace: .> LEAN_PATH=/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean /workspace/scratch/77adbfc63087/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/77adbfc63087/overfull-lean/Overfull/CompatibleCircuits/FourTightShorePieces.lean -o /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourTightShorePieces.olean -i /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourTightShorePieces.ilean -c /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourTightShorePieces.c --setup /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourTightShorePieces.setup.json --json
+warning: Overfull/CompatibleCircuits/FourTightShorePieces.lean:59:0: automatically included section variable(s) unused in theorem `Overfull.FourOdd.tightShoreInside_piece_compatible`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+error: Overfull/CompatibleCircuits/FourTightShorePieces.lean:74:2: Type mismatch
+  IsCircuit.even_degreeOn (tightShoreInsideGraph G X) hD
+has type
+  ∀ (v : Option { x // x ∈ X }), Even ((tightShoreInsideGraph G X).degreeOn D v)
+but is expected to have type
+  Even ((tightShoreInsideGraph G X).degreeOn D (some ⟨x, hx⟩))
+error: Overfull/CompatibleCircuits/FourTightShorePieces.lean:164:52: unsolved goals
+case h
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝¹ : Fintype V
+inst✝ : Fintype E
+G : Multigraph V E
+classOf : V → E → K
+X : Finset V
+w : V
+k : K
+hw : w ∉ X
+P : (tightShoreInsideGraph G X).CompatibleCircuitPartition (tightShoreInsideClass G classOf X w k) univ
+e : E
+⊢ (∃ a ∈ P.parts, ∃ (x : ¬shoreCollapseLabel X (G.firstEnd e) = shoreCollapseLabel X (G.secondEnd e)), ⟨e, ⋯⟩ ∈ a) ↔
+    ∃ (x : ¬shoreCollapseLabel X (G.firstEnd e) = shoreCollapseLabel X (G.secondEnd e)), ∃ a ∈ P.parts, ⟨e, ⋯⟩ ∈ a
+error: Overfull/CompatibleCircuits/FourTightShorePieces.lean:168:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  P.parts.biUnion id
+in the target expression
+  image Subtype.val (P.parts.biUnion id) = image Subtype.val univ
+
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝¹ : Fintype V
+inst✝ : Fintype E
+G : Multigraph V E
+classOf : V → E → K
+X : Finset V
+w : V
+k : K
+hw : w ∉ X
+P : (tightShoreInsideGraph G X).CompatibleCircuitPartition (tightShoreInsideClass G classOf X w k) univ
+⊢ image Subtype.val (P.parts.biUnion id) = image Subtype.val univ
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourTightShorePieces
+error: build failed

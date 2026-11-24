@@ -1,0 +1,54 @@
+✖ [3134/3134] Building Overfull.CompatibleCircuits.FourNonlocalReduction (2.4s)
+trace: .> LEAN_PATH=/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean /workspace/scratch/77adbfc63087/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/77adbfc63087/overfull-lean/Overfull/CompatibleCircuits/FourNonlocalReduction.lean -o /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourNonlocalReduction.olean -i /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourNonlocalReduction.ilean -c /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourNonlocalReduction.c --setup /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourNonlocalReduction.setup.json --json
+error: Overfull/CompatibleCircuits/FourNonlocalReduction.lean:49:68: Application type mismatch: The argument
+  hvT
+has type
+  v ∉
+    @compl (Finset (Fin 4))
+      (@BooleanAlgebra.toHasCompl (Finset (Fin 4)) (@booleanAlgebra (Fin 4) (Fin.fintype 4) (instDecidableEqFin 4))) X
+but is expected to have type
+  v ∉
+    @compl (Finset (Fin 4))
+      (@BooleanAlgebra.toHasCompl (Finset (Fin 4))
+        (@booleanAlgebra (Fin 4) (Fin.fintype 4) fun a b => propDecidable (a = b)))
+      X
+in the application
+  fourLabel_nonlocal_shore_card_le_two hT hvT
+error: Overfull/CompatibleCircuits/FourNonlocalReduction.lean:50:15: Application type mismatch: The argument
+  hne
+has type
+  (@compl (Finset (Fin 4))
+      (@BooleanAlgebra.toHasCompl (Finset (Fin 4))
+        (@booleanAlgebra (Fin 4) (Fin.fintype 4) fun a b => propDecidable (a = b)))
+      X).Nonempty
+but is expected to have type
+  (@compl (Finset (Fin 4))
+      (@BooleanAlgebra.toHasCompl (Finset (Fin 4)) (@booleanAlgebra (Fin 4) (Fin.fintype 4) (instDecidableEqFin 4)))
+      X).Nonempty
+in the application
+  And.intro hne
+error: Overfull/CompatibleCircuits/FourNonlocalReduction.lean:50:20: Application type mismatch: The argument
+  hsmall
+has type
+  #(@compl (Finset (Fin 4))
+        (@BooleanAlgebra.toHasCompl (Finset (Fin 4))
+          (@booleanAlgebra (Fin 4) (Fin.fintype 4) fun a b => propDecidable (a = b)))
+        X) ≤
+    2
+but is expected to have type
+  #(@compl (Finset (Fin 4))
+        (@BooleanAlgebra.toHasCompl (Finset (Fin 4)) (@booleanAlgebra (Fin 4) (Fin.fintype 4) (instDecidableEqFin 4)))
+        X) ≤
+    2
+in the application
+  And.intro hsmall
+error: Overfull/CompatibleCircuits/FourNonlocalReduction.lean:51:9: Type mismatch: After simplification, term
+  htight
+ has type
+  2 * #(Q.classCutOn classOf C v k X) = #(Q.cutOn C X)
+but is expected to have type
+  2 * #(Q.classCutOn classOf C v k Xᶜ) = #(Q.cutOn C Xᶜ)
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourNonlocalReduction
+error: build failed

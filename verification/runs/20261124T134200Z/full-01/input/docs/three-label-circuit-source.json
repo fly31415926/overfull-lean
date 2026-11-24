@@ -1,0 +1,574 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "b5afb03a0f0613eedd0cb3310e06706942afe2e7",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "scope": "Compatible circuit selection and exact partition for finite loopless multigraphs on at most three vertices, under the original half-cut inequalities and even degrees. Actual edge-copy identities and arbitrary incidence-class types are preserved. This does not prove the four-label case, full Corollary 4.6, terminal Proposition 4.16, or the main theorem.",
+  "review": "docs/three-label-circuit-semantic-review.md",
+  "proof_map": "docs/three-label-circuit-verification.md",
+  "module_count": 11,
+  "public_theorem_count": 94,
+  "modules": [
+    {
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.CompatibleCircuits.exists_pair_distinct_both_coordinates",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.exists_distinct_classes_of_large_subset",
+          "source_line": 45
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.mem_one_of_two_distinct_tight_classes",
+          "source_line": 62
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.exists_localCoarsening",
+          "source_line": 100
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_large_subset",
+          "source_line": 158
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_large_subset",
+          "source_line": 171
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97",
+      "public_theorem_count": 25,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.mem_edgeBundleOn",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.Multigraph.edgeBundleOn_subset",
+          "source_line": 27
+        },
+        {
+          "name": "Overfull.Multigraph.edgeBundleOn_swap",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.Multigraph.edgeBundleOn_disjoint",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.Multigraph.cutOn_singleton",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.Multigraph.cutOn_singleton_card",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.Multigraph.classCutOn_singleton_self",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.Multigraph.incident_pair_iff_edge_eq",
+          "source_line": 64
+        },
+        {
+          "name": "Overfull.Multigraph.classCutOn_singleton_other",
+          "source_line": 77
+        },
+        {
+          "name": "Overfull.Multigraph.cutOn_compl",
+          "source_line": 86
+        },
+        {
+          "name": "Overfull.Multigraph.classCutOn_compl",
+          "source_line": 92
+        },
+        {
+          "name": "Overfull.Multigraph.AdmissibleOn.local_class_bound",
+          "source_line": 98
+        },
+        {
+          "name": "Overfull.Multigraph.AdmissibleOn.bundle_class_bound",
+          "source_line": 106
+        },
+        {
+          "name": "Overfull.Multigraph.shore_cases_of_card_le_three",
+          "source_line": 115
+        },
+        {
+          "name": "Overfull.Multigraph.admissibleOn_iff_singleton_cuts",
+          "source_line": 135
+        },
+        {
+          "name": "Overfull.Multigraph.admissibleOn_sdiff_iff_meets_tight_singletons",
+          "source_line": 165
+        },
+        {
+          "name": "Overfull.Multigraph.threeLabel_edge_cases",
+          "source_line": 191
+        },
+        {
+          "name": "Overfull.Multigraph.threeLabel_bundles_cover",
+          "source_line": 201
+        },
+        {
+          "name": "Overfull.Multigraph.threeLabel_incident_zero",
+          "source_line": 208
+        },
+        {
+          "name": "Overfull.Multigraph.threeLabel_incident_one",
+          "source_line": 215
+        },
+        {
+          "name": "Overfull.Multigraph.threeLabel_incident_two",
+          "source_line": 222
+        },
+        {
+          "name": "Overfull.Multigraph.threeLabel_degree_zero",
+          "source_line": 229
+        },
+        {
+          "name": "Overfull.Multigraph.threeLabel_degree_one",
+          "source_line": 241
+        },
+        {
+          "name": "Overfull.Multigraph.threeLabel_degree_two",
+          "source_line": 253
+        },
+        {
+          "name": "Overfull.Multigraph.threeLabel_bundle_parity",
+          "source_line": 266
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.CompatibleCircuits.exists_mem_ne_of_union_fiber_bound",
+          "source_line": 21
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.ne_of_monochromatic_union_fiber_bound",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles",
+          "source_line": 50
+        },
+        {
+          "name": "Overfull.Multigraph.isCircuit_triangle",
+          "source_line": 89
+        },
+        {
+          "name": "Overfull.Multigraph.compatible_triangle",
+          "source_line": 145
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatible_triangle_of_equal_bundles",
+          "source_line": 158
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles_of_monochromatic",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.Multigraph.threeLabel_equal_bundle_card",
+          "source_line": 77
+        },
+        {
+          "name": "Overfull.Multigraph.threeLabel_degree_of_equal_bundles",
+          "source_line": 99
+        },
+        {
+          "name": "Overfull.Multigraph.threeLabel_nonlocal_tight_eq_bundle_of_equal_bundles",
+          "source_line": 116
+        },
+        {
+          "name": "Overfull.Multigraph.classCutOn_nonempty_of_full_bundle",
+          "source_line": 130
+        },
+        {
+          "name": "Overfull.Multigraph.exists_safe_triangle_of_equal_bundles_of_nonlocal_tight",
+          "source_line": 148
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_equal_bundle",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_equal_bundles",
+          "source_line": 78
+        },
+        {
+          "name": "Overfull.Multigraph.compatible_parallel_pair",
+          "source_line": 114
+        },
+        {
+          "name": "Overfull.Multigraph.admissibleOn_sdiff_parallel_pair_of_no_nonlocal_tight",
+          "source_line": 126
+        },
+        {
+          "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_equal_bundles_no_nonlocal_tight",
+          "source_line": 164
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc",
+      "public_theorem_count": 7,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.CompatibleCircuits.fiber_card_union_of_disjoint",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.mem_one_of_two_classes_of_card_sum",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_dominant_bundle",
+          "source_line": 57
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.pair_meets_endpoint_tight_classes_of_crossing_nonlocal",
+          "source_line": 97
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.local_tight_of_second_endpoint_nonlocal_tight",
+          "source_line": 135
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_unequal_bundles",
+          "source_line": 152
+        },
+        {
+          "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_unequal_threeLabel_bundles",
+          "source_line": 221
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9",
+      "public_theorem_count": 12,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.renameVertices_incident",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.Multigraph.renameVertices_degreeOn",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.Multigraph.renameVertices_edgeSupport",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.Multigraph.renameVertices_cutOn",
+          "source_line": 49
+        },
+        {
+          "name": "Overfull.Multigraph.renameVertices_classCutOn",
+          "source_line": 62
+        },
+        {
+          "name": "Overfull.Multigraph.renameVertices_admissibleOn",
+          "source_line": 68
+        },
+        {
+          "name": "Overfull.Multigraph.renameVertices_compatible",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.Multigraph.IsCircuit.renameVertices",
+          "source_line": 93
+        },
+        {
+          "name": "Overfull.Multigraph.renameVertices_isCircuit",
+          "source_line": 116
+        },
+        {
+          "name": "Overfull.Multigraph.renameVertices_edgeBundleOn",
+          "source_line": 127
+        },
+        {
+          "name": "Overfull.Multigraph.renameVertices_edgeBundleOn_symm",
+          "source_line": 133
+        },
+        {
+          "name": "Overfull.Multigraph.exists_threeLabel_sorted_renaming",
+          "source_line": 139
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad",
+      "public_theorem_count": 4,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.CompatibleCircuitPartition.exists_safe_circuit",
+          "source_line": 97
+        },
+        {
+          "name": "Overfull.Multigraph.HasSafeCircuitSelection.mono",
+          "source_line": 117
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_safe_selection",
+          "source_line": 126
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_tight_class_selection",
+          "source_line": 153
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.ThreeLabel",
+      "path": "Overfull/CompatibleCircuits/ThreeLabel.lean",
+      "sha256": "ed577b2f2aa3bbb2773f84220dd444dade95175ebbb94e75e6f6e27a9c2c66f4",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.exists_safe_circuit_of_equal_threeLabel_bundles",
+          "source_line": 27
+        },
+        {
+          "name": "Overfull.Multigraph.exists_safe_circuit_of_sorted_threeLabel_bundles",
+          "source_line": 52
+        },
+        {
+          "name": "Overfull.Multigraph.exists_threeLabel_safe_circuit",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.Multigraph.exists_threeLabel_compatibleCircuitPartition",
+          "source_line": 103
+        },
+        {
+          "name": "Overfull.Multigraph.threeLabel_compatibleCircuitPartition_iff_admissible",
+          "source_line": 117
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e",
+      "public_theorem_count": 15,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.embedVertices_incident",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.Multigraph.embedVertices_incident_image",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.Multigraph.embedVertices_not_incident",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.Multigraph.embedIncidenceClasses_image",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.Multigraph.embedVertices_degreeOn",
+          "source_line": 59
+        },
+        {
+          "name": "Overfull.Multigraph.embedVertices_degreeOn_zero",
+          "source_line": 63
+        },
+        {
+          "name": "Overfull.Multigraph.embedVertices_even_degrees",
+          "source_line": 67
+        },
+        {
+          "name": "Overfull.Multigraph.embedVertices_edgeSupport",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.Multigraph.embedVertices_cutOn",
+          "source_line": 87
+        },
+        {
+          "name": "Overfull.Multigraph.embedVertices_cutOn_map",
+          "source_line": 101
+        },
+        {
+          "name": "Overfull.Multigraph.embedVertices_classCutOn_image",
+          "source_line": 109
+        },
+        {
+          "name": "Overfull.Multigraph.embedVertices_classCutOn_image_map",
+          "source_line": 116
+        },
+        {
+          "name": "Overfull.Multigraph.embedVertices_admissibleOn",
+          "source_line": 126
+        },
+        {
+          "name": "Overfull.Multigraph.embedVertices_compatible",
+          "source_line": 148
+        },
+        {
+          "name": "Overfull.Multigraph.IsCircuit.of_embedVertices",
+          "source_line": 162
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.AtMostThree",
+      "path": "Overfull/CompatibleCircuits/AtMostThree.lean",
+      "sha256": "49bb3ab27f07a40209fb3d818473276a7b0e83bdbb627324365b487143cee72e",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.exists_safe_circuit_of_card_le_three",
+          "source_line": 21
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_three",
+          "source_line": 40
+        },
+        {
+          "name": "Overfull.Multigraph.compatibleCircuitPartition_iff_admissible_of_card_le_three",
+          "source_line": 55
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_dominant_bundle",
+    "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_equal_bundle",
+    "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_large_subset",
+    "Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles",
+    "Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles_of_monochromatic",
+    "Overfull.CompatibleCircuits.exists_distinct_classes_of_large_subset",
+    "Overfull.CompatibleCircuits.exists_localCoarsening",
+    "Overfull.CompatibleCircuits.exists_mem_ne_of_union_fiber_bound",
+    "Overfull.CompatibleCircuits.exists_pair_distinct_both_coordinates",
+    "Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_equal_bundles",
+    "Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_large_subset",
+    "Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_unequal_bundles",
+    "Overfull.CompatibleCircuits.fiber_card_union_of_disjoint",
+    "Overfull.CompatibleCircuits.local_tight_of_second_endpoint_nonlocal_tight",
+    "Overfull.CompatibleCircuits.mem_one_of_two_classes_of_card_sum",
+    "Overfull.CompatibleCircuits.mem_one_of_two_distinct_tight_classes",
+    "Overfull.CompatibleCircuits.ne_of_monochromatic_union_fiber_bound",
+    "Overfull.CompatibleCircuits.pair_meets_endpoint_tight_classes_of_crossing_nonlocal",
+    "Overfull.Multigraph.AdmissibleOn.bundle_class_bound",
+    "Overfull.Multigraph.AdmissibleOn.local_class_bound",
+    "Overfull.Multigraph.CompatibleCircuitPartition.exists_safe_circuit",
+    "Overfull.Multigraph.HasSafeCircuitSelection.mono",
+    "Overfull.Multigraph.IsCircuit.of_embedVertices",
+    "Overfull.Multigraph.IsCircuit.renameVertices",
+    "Overfull.Multigraph.admissibleOn_iff_singleton_cuts",
+    "Overfull.Multigraph.admissibleOn_sdiff_iff_meets_tight_singletons",
+    "Overfull.Multigraph.admissibleOn_sdiff_parallel_pair_of_no_nonlocal_tight",
+    "Overfull.Multigraph.classCutOn_compl",
+    "Overfull.Multigraph.classCutOn_nonempty_of_full_bundle",
+    "Overfull.Multigraph.classCutOn_singleton_other",
+    "Overfull.Multigraph.classCutOn_singleton_self",
+    "Overfull.Multigraph.compatibleCircuitPartition_iff_admissible_of_card_le_three",
+    "Overfull.Multigraph.compatible_parallel_pair",
+    "Overfull.Multigraph.compatible_triangle",
+    "Overfull.Multigraph.cutOn_compl",
+    "Overfull.Multigraph.cutOn_singleton",
+    "Overfull.Multigraph.cutOn_singleton_card",
+    "Overfull.Multigraph.edgeBundleOn_disjoint",
+    "Overfull.Multigraph.edgeBundleOn_subset",
+    "Overfull.Multigraph.edgeBundleOn_swap",
+    "Overfull.Multigraph.embedIncidenceClasses_image",
+    "Overfull.Multigraph.embedVertices_admissibleOn",
+    "Overfull.Multigraph.embedVertices_classCutOn_image",
+    "Overfull.Multigraph.embedVertices_classCutOn_image_map",
+    "Overfull.Multigraph.embedVertices_compatible",
+    "Overfull.Multigraph.embedVertices_cutOn",
+    "Overfull.Multigraph.embedVertices_cutOn_map",
+    "Overfull.Multigraph.embedVertices_degreeOn",
+    "Overfull.Multigraph.embedVertices_degreeOn_zero",
+    "Overfull.Multigraph.embedVertices_edgeSupport",
+    "Overfull.Multigraph.embedVertices_even_degrees",
+    "Overfull.Multigraph.embedVertices_incident",
+    "Overfull.Multigraph.embedVertices_incident_image",
+    "Overfull.Multigraph.embedVertices_not_incident",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_three",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_safe_selection",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_tight_class_selection",
+    "Overfull.Multigraph.exists_compatible_triangle_of_equal_bundles",
+    "Overfull.Multigraph.exists_safe_circuit_of_card_le_three",
+    "Overfull.Multigraph.exists_safe_circuit_of_equal_threeLabel_bundles",
+    "Overfull.Multigraph.exists_safe_circuit_of_sorted_threeLabel_bundles",
+    "Overfull.Multigraph.exists_safe_parallel_pair_of_equal_bundles_no_nonlocal_tight",
+    "Overfull.Multigraph.exists_safe_parallel_pair_of_unequal_threeLabel_bundles",
+    "Overfull.Multigraph.exists_safe_triangle_of_equal_bundles_of_nonlocal_tight",
+    "Overfull.Multigraph.exists_threeLabel_compatibleCircuitPartition",
+    "Overfull.Multigraph.exists_threeLabel_safe_circuit",
+    "Overfull.Multigraph.exists_threeLabel_sorted_renaming",
+    "Overfull.Multigraph.incident_pair_iff_edge_eq",
+    "Overfull.Multigraph.isCircuit_triangle",
+    "Overfull.Multigraph.mem_edgeBundleOn",
+    "Overfull.Multigraph.renameVertices_admissibleOn",
+    "Overfull.Multigraph.renameVertices_classCutOn",
+    "Overfull.Multigraph.renameVertices_compatible",
+    "Overfull.Multigraph.renameVertices_cutOn",
+    "Overfull.Multigraph.renameVertices_degreeOn",
+    "Overfull.Multigraph.renameVertices_edgeBundleOn",
+    "Overfull.Multigraph.renameVertices_edgeBundleOn_symm",
+    "Overfull.Multigraph.renameVertices_edgeSupport",
+    "Overfull.Multigraph.renameVertices_incident",
+    "Overfull.Multigraph.renameVertices_isCircuit",
+    "Overfull.Multigraph.shore_cases_of_card_le_three",
+    "Overfull.Multigraph.threeLabel_bundle_parity",
+    "Overfull.Multigraph.threeLabel_bundles_cover",
+    "Overfull.Multigraph.threeLabel_compatibleCircuitPartition_iff_admissible",
+    "Overfull.Multigraph.threeLabel_degree_of_equal_bundles",
+    "Overfull.Multigraph.threeLabel_degree_one",
+    "Overfull.Multigraph.threeLabel_degree_two",
+    "Overfull.Multigraph.threeLabel_degree_zero",
+    "Overfull.Multigraph.threeLabel_edge_cases",
+    "Overfull.Multigraph.threeLabel_equal_bundle_card",
+    "Overfull.Multigraph.threeLabel_incident_one",
+    "Overfull.Multigraph.threeLabel_incident_two",
+    "Overfull.Multigraph.threeLabel_incident_zero",
+    "Overfull.Multigraph.threeLabel_nonlocal_tight_eq_bundle_of_equal_bundles"
+  ]
+}

@@ -123,6 +123,7 @@ def main() -> None:
                           ("native_terminal", "native-terminal-source.json"),
                           ("three_core_terminal", "three-core-terminal-source.json"),
                           ("four_label_reduction", "four-label-reduction-source.json"),
+                          ("four_label_existence", "four-label-existence-source.json"),
                           ("global_factorization", "global-factorization-source.json")):
         source = json.loads((ROOT / "docs" / filename).read_text())
         source_modules = {item["module"]: item for item in source["modules"]}
@@ -236,6 +237,21 @@ def main() -> None:
                 "Overfull.FourOdd.exists_fourTwoOddJoining_decomposition_of_small_even_cut"]
             or not set(four_label_source["public_theorems"]) <= set(four_label_public)):
         raise SystemExit("The four-label reduction completes no additional numbered assertion.")
+
+    four_existence_source, _, four_existence_public = extension_maps["four_label_existence"]
+    if (four_existence_source["kind"] != "supporting_continuation"
+            or four_existence_source["numbered_assertions_completed"] != 0
+            or four_existence_source["main_theorem_verified"] is not False
+            or four_existence_source["public_theorems"] != [
+                "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label",
+                "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_four",
+                "Overfull.Multigraph.exists_safe_short_circuit_of_four_strictNonlocal",
+                "Overfull.FourOdd.exists_compatibleCircuitPartition_of_tight_shore",
+                "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers",
+                "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_degree_bound",
+                "Overfull.FourOdd.exists_fourTwoOddJoining_decomposition"]
+            or not set(four_existence_source["public_theorems"]) <= set(four_existence_public)):
+        raise SystemExit("Four-label existence closes no additional numbered manuscript assertion.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1753,6 +1769,7 @@ def main() -> None:
                     "native_terminal": "native-terminal",
                     "three_core_terminal": "three-core-terminal",
                     "four_label_reduction": "four-label-reduction",
+                    "four_label_existence": "four-label-existence",
                     "global_factorization": "global-factorization"}[key]
         map_path = OUTPUT / f"{basename}-declarations.json"
         map_path.write_text(json.dumps({
@@ -1835,6 +1852,7 @@ def main() -> None:
         "three_core_terminal_declaration_map": extension_evidence["three_core_terminal"],
         "global_factorization_declaration_map": extension_evidence["global_factorization"],
         "four_label_reduction_declaration_map": extension_evidence["four_label_reduction"],
+        "four_label_existence_declaration_map": extension_evidence["four_label_existence"],
         "checkpoint_reconstruction": {
             "original_checkpoint": reconstruction["original_checkpoint"],
             "original_tree_reproduced": False,

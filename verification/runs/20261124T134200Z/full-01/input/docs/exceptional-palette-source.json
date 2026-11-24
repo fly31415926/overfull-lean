@@ -1,0 +1,493 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "1b5663a8fb472e42e698f4e09fcfc55497393815",
+  "baseline_tree": "ab2dd45502da57ea7dfb1db046a9efc9ab0cf067",
+  "baseline_publication_status": "blocked_by_automatic_approval_review",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "scope": "Internal exceptional-pair coloring with exact free palettes and prescribed actual copies; all-even joining palettes with prescribed empty reserve colors and uniform footprint bounds; extension of protected joining classes to surviving original reserve boundaries. These supporting constructions do not complete arbitrary exceptional-to-core incidences, final robust completion, full residual factorization, Corollary 4.6 or the main theorem.",
+  "review": "docs/exceptional-palette-semantic-review.md",
+  "proof_map": "docs/exceptional-palette-verification.md",
+  "module_count": 10,
+  "public_theorem_count": 79,
+  "modules": [
+    {
+      "module": "Overfull.ExceptionalPalette.EvenBudget",
+      "path": "Overfull/ExceptionalPalette/EvenBudget.lean",
+      "sha256": "5e00b808ae96da6ae07ad5c7fb24c1ee25c0ebe05de4f267e97535ae18acbdeb",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_small_palette_avoiding_colors",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.AssignedParts.exists_small_assigned_even_joiningPalette_avoiding_colors_in_host",
+          "source_line": 60
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ExceptionalPalette.EvenColors",
+      "path": "Overfull/ExceptionalPalette/EvenColors.lean",
+      "sha256": "590fcad5d58487986f856c5cebbcf397b15aca4326df2fe016e490c3a47141e2",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.AssignedParts.exists_assigned_even_joiningPalette_avoiding_colors_in_host",
+          "source_line": 128
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ExceptionalPalette.EvenNative",
+      "path": "Overfull/ExceptionalPalette/EvenNative.lean",
+      "sha256": "f0410f63afefad2912fb15de5118335cf99221051285f47abb277d025d3f4db3",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.exists_native_even_reserved_palette",
+          "source_line": 23
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ExceptionalPalette.PairAssigned",
+      "path": "Overfull/ExceptionalPalette/PairAssigned.lean",
+      "sha256": "5d42416c62cbc42a52c33754f7383d4d0aa9dbf8ada5997dc1a98c4c2c020920",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.PairFiberCompletion.prescribed_class",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.exists_pairFiber_completion",
+          "source_line": 52
+        },
+        {
+          "name": "Overfull.AssignedParts.exists_assigned_pair_completion",
+          "source_line": 100
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ExceptionalPalette.PairColoring",
+      "path": "Overfull/ExceptionalPalette/PairColoring.lean",
+      "sha256": "675ed3454a316f489560747357bab82103ee2e9ae32d74b7e991c7f7d215d869",
+      "public_theorem_count": 11,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.exists_pair_bijection",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.NativeReserve.mem_pairColorClass",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.NativeReserve.pairColorClass_subset",
+          "source_line": 52
+        },
+        {
+          "name": "Overfull.NativeReserve.pairColorClass_card_le_one",
+          "source_line": 60
+        },
+        {
+          "name": "Overfull.NativeReserve.pairColorClass_isMatching",
+          "source_line": 69
+        },
+        {
+          "name": "Overfull.NativeReserve.pairColorClass_support_subset",
+          "source_line": 75
+        },
+        {
+          "name": "Overfull.NativeReserve.pairColorClass_disjoint",
+          "source_line": 85
+        },
+        {
+          "name": "Overfull.NativeReserve.pairColorClass_cover",
+          "source_line": 97
+        },
+        {
+          "name": "Overfull.NativeReserve.pairColorClass_covers_free",
+          "source_line": 111
+        },
+        {
+          "name": "Overfull.NativeReserve.pairColorClass_contains_prescribed",
+          "source_line": 125
+        },
+        {
+          "name": "Overfull.NativeReserve.pairColorClass_eq_singleton",
+          "source_line": 131
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ExceptionalPalette.PairExtension",
+      "path": "Overfull/ExceptionalPalette/PairExtension.lean",
+      "sha256": "b10beda324c5708a03bd395472fbb76663a46c7c8777a9c5597e058d5ffaf88c",
+      "public_theorem_count": 15,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.classes_subset_joining",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.classes_subset_pairExtended",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_class_of_copy",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pairAdded_disjoint_support",
+          "source_line": 48
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_isMatching",
+          "source_line": 67
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_disjoint",
+          "source_line": 85
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cover",
+          "source_line": 105
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_covers_pair",
+          "source_line": 115
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_eq",
+          "source_line": 138
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_parity",
+          "source_line": 161
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_card_le",
+          "source_line": 170
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_support_card_le",
+          "source_line": 180
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_support_outside",
+          "source_line": 198
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pairExtended_outside_load_le",
+          "source_line": 217
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.exists_pair_extension",
+          "source_line": 232
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ExceptionalPalette.PairFree",
+      "path": "Overfull/ExceptionalPalette/PairFree.lean",
+      "sha256": "a8874b7a9c868b5138b0bb8c372309bb5a7caba7f49d67fd5b416648615e08ab",
+      "public_theorem_count": 10,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.mem_pairFiberCopies_iff",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.NativeReserve.pairFiberCopies_incident",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.mem_freeColors",
+          "source_line": 55
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.usedColors_card",
+          "source_line": 61
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.freeColors_card_add_degree",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pair_support_iff",
+          "source_line": 90
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_eq",
+          "source_line": 120
+        },
+        {
+          "name": "Overfull.NativeReserve.pairFiberCopies_eq_nonjoining_incidence",
+          "source_line": 130
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.pair_freeColors_card",
+          "source_line": 171
+        },
+        {
+          "name": "Overfull.NativeReserve.pairFiberCopies_disjoint_joining",
+          "source_line": 191
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ExceptionalPalette.ReserveCopies",
+      "path": "Overfull/ExceptionalPalette/ReserveCopies.lean",
+      "sha256": "528e5f01eb4089f63243f92ab0a2fae00b7249c86e2f2d3e794f56f28ad09a14",
+      "public_theorem_count": 18,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.mem_survivingCopies",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.NativeReserve.survivingCopies_image",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.NativeReserve.survivingCopies_card",
+          "source_line": 37
+        },
+        {
+          "name": "Overfull.NativeReserve.survivingCopies_disjoint",
+          "source_line": 44
+        },
+        {
+          "name": "Overfull.NativeReserve.survivingCopies_isMatching",
+          "source_line": 53
+        },
+        {
+          "name": "Overfull.NativeReserve.survivingCopies_support",
+          "source_line": 60
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.mem_residualBoundary",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.boundary_disjoint_removed",
+          "source_line": 86
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_image",
+          "source_line": 92
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_matching",
+          "source_line": 97
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_disjoint",
+          "source_line": 101
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_support",
+          "source_line": 105
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_card_le",
+          "source_line": 111
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_covers_exceptional",
+          "source_line": 117
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_uncovered_even",
+          "source_line": 123
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.boundary_joining_eq_crossing",
+          "source_line": 134
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_joining_singleton",
+          "source_line": 168
+        },
+        {
+          "name": "Overfull.NativeReserve.BoundaryPacking.residualBoundary_joining_empty",
+          "source_line": 204
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ExceptionalPalette.ReserveInsertion",
+      "path": "Overfull/ExceptionalPalette/ReserveInsertion.lean",
+      "sha256": "ce33c662913bf4b70c8a6fdf17de9aa488c4c077fd09db94e013ea6c6ea47e8a",
+      "public_theorem_count": 16,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.reserveClasses_at",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.NativeReserve.reserveClasses_other",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.NativeReserve.joiningPalette_class_subset",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.NativeReserve.reserveClasses_matching",
+          "source_line": 40
+        },
+        {
+          "name": "Overfull.NativeReserve.reserveClasses_joining",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.NativeReserve.reserveClasses_contains_original",
+          "source_line": 63
+        },
+        {
+          "name": "Overfull.NativeReserve.reserveClasses_disjoint",
+          "source_line": 71
+        },
+        {
+          "name": "Overfull.NativeReserve.reserveClasses_card_le",
+          "source_line": 106
+        },
+        {
+          "name": "Overfull.NativeReserve.reserveClasses_support_card_le",
+          "source_line": 116
+        },
+        {
+          "name": "Overfull.NativeReserve.cutOn_inter_joining",
+          "source_line": 123
+        },
+        {
+          "name": "Overfull.NativeReserve.reserveClasses_cut_eq",
+          "source_line": 137
+        },
+        {
+          "name": "Overfull.NativeReserve.reserveClasses_cut_parity",
+          "source_line": 149
+        },
+        {
+          "name": "Overfull.NativeReserve.reserveClasses_cover",
+          "source_line": 161
+        },
+        {
+          "name": "Overfull.NativeReserve.reserveClasses_added_copies",
+          "source_line": 187
+        },
+        {
+          "name": "Overfull.NativeReserve.reserveClasses_vertex_load_eq",
+          "source_line": 200
+        },
+        {
+          "name": "Overfull.NativeReserve.reserveClasses_vertex_load_le",
+          "source_line": 225
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ExceptionalPalette.ReserveNative",
+      "path": "Overfull/ExceptionalPalette/ReserveNative.lean",
+      "sha256": "0c824cd0f9b7cb6872ca58463a268d453d6f6104a1564c66f8639a313c9cefd4",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.exists_native_reserved_palette",
+          "source_line": 23
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.AssignedParts.exists_assigned_even_joiningPalette_avoiding_colors_in_host",
+    "Overfull.AssignedParts.exists_assigned_pair_completion",
+    "Overfull.AssignedParts.exists_small_assigned_even_joiningPalette_avoiding_colors_in_host",
+    "Overfull.FourOdd.EvenJoiningDecomposition.exists_palette_avoiding_colors",
+    "Overfull.FourOdd.EvenJoiningDecomposition.exists_small_palette_avoiding_colors",
+    "Overfull.NativeReserve.BoundaryPacking.boundary_disjoint_removed",
+    "Overfull.NativeReserve.BoundaryPacking.boundary_joining_eq_crossing",
+    "Overfull.NativeReserve.BoundaryPacking.mem_residualBoundary",
+    "Overfull.NativeReserve.BoundaryPacking.residualBoundary_card_le",
+    "Overfull.NativeReserve.BoundaryPacking.residualBoundary_covers_exceptional",
+    "Overfull.NativeReserve.BoundaryPacking.residualBoundary_disjoint",
+    "Overfull.NativeReserve.BoundaryPacking.residualBoundary_image",
+    "Overfull.NativeReserve.BoundaryPacking.residualBoundary_joining_empty",
+    "Overfull.NativeReserve.BoundaryPacking.residualBoundary_joining_singleton",
+    "Overfull.NativeReserve.BoundaryPacking.residualBoundary_matching",
+    "Overfull.NativeReserve.BoundaryPacking.residualBoundary_support",
+    "Overfull.NativeReserve.BoundaryPacking.residualBoundary_uncovered_even",
+    "Overfull.NativeReserve.JoiningPalette.classes_subset_joining",
+    "Overfull.NativeReserve.JoiningPalette.classes_subset_pairExtended",
+    "Overfull.NativeReserve.JoiningPalette.exists_pairFiber_completion",
+    "Overfull.NativeReserve.JoiningPalette.exists_pair_bijection",
+    "Overfull.NativeReserve.JoiningPalette.exists_pair_extension",
+    "Overfull.NativeReserve.JoiningPalette.freeColors_card_add_degree",
+    "Overfull.NativeReserve.JoiningPalette.mem_freeColors",
+    "Overfull.NativeReserve.JoiningPalette.pairAdded_disjoint_support",
+    "Overfull.NativeReserve.JoiningPalette.pairExtended_card_le",
+    "Overfull.NativeReserve.JoiningPalette.pairExtended_class_of_copy",
+    "Overfull.NativeReserve.JoiningPalette.pairExtended_cover",
+    "Overfull.NativeReserve.JoiningPalette.pairExtended_covers_pair",
+    "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_eq",
+    "Overfull.NativeReserve.JoiningPalette.pairExtended_cut_parity",
+    "Overfull.NativeReserve.JoiningPalette.pairExtended_disjoint",
+    "Overfull.NativeReserve.JoiningPalette.pairExtended_isMatching",
+    "Overfull.NativeReserve.JoiningPalette.pairExtended_outside_load_le",
+    "Overfull.NativeReserve.JoiningPalette.pairExtended_support_card_le",
+    "Overfull.NativeReserve.JoiningPalette.pairExtended_support_outside",
+    "Overfull.NativeReserve.JoiningPalette.pair_freeColors_card",
+    "Overfull.NativeReserve.JoiningPalette.pair_freeColors_eq",
+    "Overfull.NativeReserve.JoiningPalette.pair_support_iff",
+    "Overfull.NativeReserve.JoiningPalette.usedColors_card",
+    "Overfull.NativeReserve.PairFiberCompletion.prescribed_class",
+    "Overfull.NativeReserve.cutOn_inter_joining",
+    "Overfull.NativeReserve.exists_native_even_reserved_palette",
+    "Overfull.NativeReserve.exists_native_reserved_palette",
+    "Overfull.NativeReserve.joiningPalette_class_subset",
+    "Overfull.NativeReserve.mem_pairColorClass",
+    "Overfull.NativeReserve.mem_pairFiberCopies_iff",
+    "Overfull.NativeReserve.mem_survivingCopies",
+    "Overfull.NativeReserve.pairColorClass_card_le_one",
+    "Overfull.NativeReserve.pairColorClass_contains_prescribed",
+    "Overfull.NativeReserve.pairColorClass_cover",
+    "Overfull.NativeReserve.pairColorClass_covers_free",
+    "Overfull.NativeReserve.pairColorClass_disjoint",
+    "Overfull.NativeReserve.pairColorClass_eq_singleton",
+    "Overfull.NativeReserve.pairColorClass_isMatching",
+    "Overfull.NativeReserve.pairColorClass_subset",
+    "Overfull.NativeReserve.pairColorClass_support_subset",
+    "Overfull.NativeReserve.pairFiberCopies_disjoint_joining",
+    "Overfull.NativeReserve.pairFiberCopies_eq_nonjoining_incidence",
+    "Overfull.NativeReserve.pairFiberCopies_incident",
+    "Overfull.NativeReserve.reserveClasses_added_copies",
+    "Overfull.NativeReserve.reserveClasses_at",
+    "Overfull.NativeReserve.reserveClasses_card_le",
+    "Overfull.NativeReserve.reserveClasses_contains_original",
+    "Overfull.NativeReserve.reserveClasses_cover",
+    "Overfull.NativeReserve.reserveClasses_cut_eq",
+    "Overfull.NativeReserve.reserveClasses_cut_parity",
+    "Overfull.NativeReserve.reserveClasses_disjoint",
+    "Overfull.NativeReserve.reserveClasses_joining",
+    "Overfull.NativeReserve.reserveClasses_matching",
+    "Overfull.NativeReserve.reserveClasses_other",
+    "Overfull.NativeReserve.reserveClasses_support_card_le",
+    "Overfull.NativeReserve.reserveClasses_vertex_load_eq",
+    "Overfull.NativeReserve.reserveClasses_vertex_load_le",
+    "Overfull.NativeReserve.survivingCopies_card",
+    "Overfull.NativeReserve.survivingCopies_disjoint",
+    "Overfull.NativeReserve.survivingCopies_image",
+    "Overfull.NativeReserve.survivingCopies_isMatching",
+    "Overfull.NativeReserve.survivingCopies_support"
+  ]
+}

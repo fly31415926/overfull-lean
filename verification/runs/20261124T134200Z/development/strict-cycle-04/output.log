@@ -1,0 +1,6 @@
+Overfull/CompatibleCircuits/FourStrictCycle.lean:134:2: error: Type mismatch
+  StrictNonlocalOn.singleton_bound Q hstrict (of_decide_eq_true (id (Eq.refl true))) hvw k
+has type
+  2 * #(Q.classCutOn classOf C v k {w}) < Q.degreeOn C w
+but is expected to have type
+  2 * #(Q.classCutOn classOf C w k {v}) < Q.degreeOn C v

@@ -1,0 +1,12 @@
+Overfull/CompatibleCircuits/FourUniformCycle.lean:119:2: error: Type mismatch: After simplification, term
+  h v
+ has type
+  #{i | v ∈ pairs i} = 2
+but is expected to have type
+  #{e | v ∈ pairs e} = 2
+Overfull/CompatibleCircuits/FourUniformCycle.lean:150:4: error: Type mismatch: After simplification, term
+  hcard i
+ has type
+  #({e ∈ C | Q.edge e = pairs i}) = m
+but is expected to have type
+  #({e ∈ C | Q.edge e = pairs i}) = m

@@ -1,0 +1,23 @@
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:180:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ a ≤ 1
+  1 ≤ a ≤ 2
+where
+ a := ↑(#({e ∈ D | v ∈ G.edge e ∧ ¬classOf v e = k}))
+V : Type u_1
+E : Type u_2
+K : Type u_3
+G : Multigraph V E
+classOf : V → E → K
+v : V
+k : K
+D : Finset E
+hD : G.IsCircuit D
+hcomp : G.Compatible (coarsenTightClassAt classOf v k) D
+hv : v ∈ G.edgeSupport D
+htrue : #({e ∈ D | v ∈ G.edge e ∧ classOf v e = k}) ≤ 1
+hfalse : #({e ∈ D | v ∈ G.edge e ∧ ¬classOf v e = k}) ≤ 1
+hsum :
+  #({a ∈ D | v ∈ G.edge a ∧ classOf v a = k}) + #({a ∈ D | v ∈ G.edge a ∧ ¬classOf v a = k}) = #({e ∈ D | v ∈ G.edge e})
+hdegree : #({e ∈ D | v ∈ G.edge e}) = 2
+⊢ #({e ∈ D | v ∈ G.edge e ∧ classOf v e = k}) = 1 ∧ #({e ∈ D | v ∈ G.edge e ∧ classOf v e ≠ k}) = 1

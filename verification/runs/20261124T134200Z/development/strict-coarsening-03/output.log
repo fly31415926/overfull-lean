@@ -1,0 +1,16 @@
+✖ [3133/3133] Building Overfull.CompatibleCircuits.FourStrictCoarsening (2.4s)
+trace: .> LEAN_PATH=/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean /workspace/scratch/77adbfc63087/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/77adbfc63087/overfull-lean/Overfull/CompatibleCircuits/FourStrictCoarsening.lean -o /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourStrictCoarsening.olean -i /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourStrictCoarsening.ilean -c /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourStrictCoarsening.c --setup /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourStrictCoarsening.setup.json --json
+error: Overfull/CompatibleCircuits/FourStrictCoarsening.lean:110:46: unsolved goals
+case mpr
+V : Type u_1
+inst✝ : Fintype V
+v : V
+X : Finset V
+⊢ ((∃ y ∈ X, y ≠ v) ∧ ∃ x ∉ X, x ≠ v) → (∃ x ∉ X, x ≠ v) ∧ ∃ y ∈ X, y ≠ v
+error: Overfull/CompatibleCircuits/FourStrictCoarsening.lean:124:20: Unknown identifier `exists_notMem_of_card_lt_card`
+error: Overfull/CompatibleCircuits/FourStrictCoarsening.lean:124:9: Tactic `rcases` failed: `x✝ : ?m.47` is not an inductive datatype
+error: Overfull/CompatibleCircuits/FourStrictCoarsening.lean:156:2: No goals to be solved
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourStrictCoarsening
+error: build failed

@@ -1,0 +1,11 @@
+Overfull/CompatibleCircuits/FourStrictCycle.lean:51:44: error(lean.unknownIdentifier): Unknown identifier `v`
+Overfull/CompatibleCircuits/FourStrictCycle.lean:82:6: error: Application type mismatch: The argument
+  fourCycle_incident_copies Q C hcover v
+has type
+  {e ∈ C | v ∈ Q.edge e} = Q.edgeBundleOn C v (previous v) ∪ Q.edgeBundleOn C v (next v)
+but is expected to have type
+  {e ∈ C | v ∈ Q.edge e} = Q.edgeBundleOn C v (previous v) ∪ Q.edgeBundleOn C v (next v)
+in the application
+  two_neighbor_bundle_structure Q classOf C hadmissible hnone (previous_ne v) (next_ne v) (previous_ne_next v) ?m.133
+    ?m.134 (fourCycle_incident_copies Q C hcover v)
+Overfull/CompatibleCircuits/FourStrictCycle.lean:105:30: error(lean.unknownIdentifier): Unknown identifier `v`

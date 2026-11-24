@@ -1,0 +1,57 @@
+Overfull/CompatibleCircuits/FourTightShoreInside.lean:57:0: error: automatically included section variable(s) unused in theorem `Overfull.FourOdd.joiningCopies_shoreCollapseLabel`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Overfull/CompatibleCircuits/FourTightShoreInside.lean:99:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  #{e |
+      none ∈ (joiningQuotient G (shoreCollapseLabel X)).edge e ∧
+        joiningIncidenceClass G (shoreCollapseLabel X) classOf none e = (w, k)}
+in the target expression
+  2 *
+      #{e |
+          none ∈ (tightShoreInsideGraph G X).edge e ∧
+            joiningIncidenceClass G (shoreCollapseLabel X) classOf none e = (w, k)} =
+    (tightShoreInsideGraph G X).degreeOn univ none
+
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝¹ : Fintype V
+inst✝ : Fintype E
+G : Multigraph V E
+classOf : V → E → K
+X : Finset V
+w : V
+k : K
+hw : w ∉ X
+htight : 2 * #(G.classCutOn classOf univ w k X) = #(G.cutOn univ X)
+H : Multigraph (Option { x // x ∈ X }) { x // x ∈ joiningCopies G (shoreCollapseLabel X) } := tightShoreInsideGraph G X
+c : Option { x // x ∈ X } → { x // x ∈ joiningCopies G (shoreCollapseLabel X) } → V × K :=
+  joiningIncidenceClass G (shoreCollapseLabel X) classOf
+hclass :
+  #{e |
+        none ∈ (joiningQuotient G (shoreCollapseLabel X)).edge e ∧
+          joiningIncidenceClass G (shoreCollapseLabel X) classOf none e = (w, k)} =
+    #(G.classCutOn classOf univ w k X)
+hdegree : H.degreeOn univ none = #(G.cutOn univ X)
+⊢ 2 *
+      #{e |
+          none ∈ (tightShoreInsideGraph G X).edge e ∧
+            joiningIncidenceClass G (shoreCollapseLabel X) classOf none e = (w, k)} =
+    (tightShoreInsideGraph G X).degreeOn univ none
+Overfull/CompatibleCircuits/FourTightShoreInside.lean:112:2: error: Type mismatch
+  tightShoreInsideClass_local_tight G classOf X w k hw htight
+has type
+  2 *
+      #{e |
+          none ∈ (tightShoreInsideGraph G X).edge e ∧
+            joiningIncidenceClass G (shoreCollapseLabel X) classOf none e = (w, k)} =
+    (tightShoreInsideGraph G X).degreeOn univ none
+but is expected to have type
+  2 *
+      #{e |
+          none ∈ (tightShoreInsideGraph G X).edge e ∧
+            joiningIncidenceClass G (shoreCollapseLabel X) classOf none e = (w, k)} =
+    (tightShoreInsideGraph G X).degreeOn univ none

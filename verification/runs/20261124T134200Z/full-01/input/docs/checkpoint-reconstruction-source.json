@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "kind": "checkpoint_reconstruction_provenance",
+  "original_checkpoint": "cb05ef5f5b7ef5ada4e535e9dcc652eecaddc43e",
+  "original_tree": "e8a2de1dd1cf26d3454dd884ece6695a74a4780f",
+  "original_tree_reproduced": false,
+  "base_commit": "a825b24b0dd0ad6edd336388c740530bcfb38d99",
+  "base_tree": "b19c235f189e1939dac5a70e0a350de7ee65a2bd",
+  "authorization": "User explicitly requested recreation of missing files and publication to both target branches.",
+  "stock_audit_sha256": "76886fd9261a3a7b07660f9a434272c0347130a4013cf57da6e1761a34fc6603",
+  "recovered_original_sources": [
+    {
+      "path": "Overfull/OrdinaryFactorization/Parity.lean",
+      "sha256": "f231312af9aa6e9f08f4bd8faeeba81253bfec18ef37df83861898f136dde497"
+    },
+    {
+      "path": "Overfull/TerminalComplement/Coloring.lean",
+      "sha256": "3bc27990ca1eca84e7e762b4ab50ad214a73b0677947409623f3eb3b360b921e"
+    },
+    {
+      "path": "Overfull/TerminalComplement/Factorization.lean",
+      "sha256": "34975875d91cb0280ee10297d7b5eb0b86e352b4986c2cb0eb1803ef7c29d48f"
+    },
+    {
+      "path": "Overfull/FewExceptions/Complement.lean",
+      "sha256": "71683b81de811824352b8b631a6aaba748ca69ebf8340b603e97b99f0da6f976"
+    },
+    {
+      "path": "Overfull/FewExceptions/Factorization.lean",
+      "sha256": "4b0ac7e5f115f8acc442411873e688a20cc22b5de0b57a2205ecae193021f805"
+    },
+    {
+      "path": "Overfull/CompatibleCircuits/ThreeVertexDeletion.lean",
+      "sha256": "30feba2bb5342db61e6d9e0bb851a4df627902fb72814878c3fec40caf668774"
+    },
+    {
+      "path": "Overfull/OrdinaryFactorization/Full.lean",
+      "sha256": "898e84fee1c8301a2de7c2b03b10ee39d5f7b7f96f2f3cac2fc7ea788582604e"
+    },
+    {
+      "path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404"
+    },
+    {
+      "path": "Overfull/BoundedExterior/ColorFactorization.lean",
+      "sha256": "060b8935359d89ce7b65ff0e9a0235f979a8f36914e582a0087a5c455c6e6eef"
+    }
+  ],
+  "recreated_sources": [
+    {
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "path": "Overfull/BoundedExterior/ExteriorClasses.lean",
+      "sha256": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c"
+    },
+    {
+      "module": "Overfull.BoundedExterior.Factorization",
+      "path": "Overfull/BoundedExterior/Factorization.lean",
+      "sha256": "8754cbdd72f0de3ae547260bb13b835dfdbc16766b0af9eac2b53322aa16401f"
+    },
+    {
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "path": "Overfull/BoundedExterior/ReserveChoice.lean",
+      "sha256": "c984f58611b26534a0f795c2f14d81f8bae3d732966dc7f603dad97964216ad4"
+    },
+    {
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963"
+    },
+    {
+      "module": "Overfull.BoundedExterior.ReservedColors",
+      "path": "Overfull/BoundedExterior/ReservedColors.lean",
+      "sha256": "00f622c56d40bc46337155b0749b47e12016ac85d31541efe8b778194b6ec481"
+    },
+    {
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "path": "Overfull/BoundedExterior/ResidualReserve.lean",
+      "sha256": "a9a9a8d742588e51537b9f8a3c59243864a28c3c7481ad24a37d88394bb3523b"
+    },
+    {
+      "module": "Overfull.BoundedExterior.SelectedColoring",
+      "path": "Overfull/BoundedExterior/SelectedColoring.lean",
+      "sha256": "b135b6380e736adcc86b8a7bb948dd45d32f1f672bec41791dc56af530576451"
+    },
+    {
+      "module": "Overfull.OrdinaryFactorization.BoundedCutReserve",
+      "path": "Overfull/OrdinaryFactorization/BoundedCutReserve.lean",
+      "sha256": "a65dfcbdbe8199233603c8027740ca67dfdaa3d869bb709e9eface84a090e0d1"
+    },
+    {
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "path": "Overfull/OrdinaryFactorization/FirstHalfBounded.lean",
+      "sha256": "36f8b20072f72d0f7d7ca2737d53e7e56ebaf334e046c52301808bed2486b6be"
+    },
+    {
+      "module": "Overfull.OrdinaryFactorization.ReductionBounded",
+      "path": "Overfull/OrdinaryFactorization/ReductionBounded.lean",
+      "sha256": "94d0afe7c2aa997749aa603ced7b5b10f696e0c6832d4509122903dfa0cb975b"
+    },
+    {
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636"
+    }
+  ],
+  "original_recovery_commit": "b31fc3219f6c764d173509912eb84a364edcdbef",
+  "unverified_reconstruction_backup_commit": "363b1ad643bb3346f2882ee77e5af1ec84f8e8b5",
+  "verification_policy": "Fresh lake build --wfail and unchanged stock lake env lean Audit.lean. Original historical logs are recovery evidence, not verification evidence for recreated sources.",
+  "documentation": "checkpoint-reconstruction.md"
+}

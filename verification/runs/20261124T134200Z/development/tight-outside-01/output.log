@@ -1,0 +1,85 @@
+Overfull/CompatibleCircuits/FourTightShoreOutside.lean:36:40: error: Application type mismatch: The argument
+  G.firstEnd e
+has type
+  V
+of sort `Type u_1` but is expected to have type
+  Prop
+of sort `Type` in the application
+  @Iff.mp (G.firstEnd e)
+Overfull/CompatibleCircuits/FourTightShoreOutside.lean:31:49: error: unsolved goals
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+C : Finset E
+X T : Finset V
+hXT : Disjoint X T
+e : E
+a✝ : e ∈ C
+⊢ ((if (G.firstEnd e ∈ T ∪ X) ≠ (G.secondEnd e ∈ T ∪ X) then 1 else 0) +
+      2 * if (G.firstEnd e ∈ T) ≠ (G.secondEnd e ∈ T) ∧ (G.firstEnd e ∈ X ∨ G.secondEnd e ∈ X) then 1 else 0) =
+    (if (G.firstEnd e ∈ T) ≠ (G.secondEnd e ∈ T) then 1 else 0) +
+      if (G.firstEnd e ∈ X) ≠ (G.secondEnd e ∈ X) then 1 else 0
+Overfull/CompatibleCircuits/FourTightShoreOutside.lean:71:39: error(lean.unknownIdentifier): Unknown identifier `hb`
+Overfull/CompatibleCircuits/FourTightShoreOutside.lean:71:35: error(lean.unknownIdentifier): Unknown identifier `ha`
+Overfull/CompatibleCircuits/FourTightShoreOutside.lean:70:2: error: unsolved goals
+case pos.inl
+V : Type u_1
+E : Type u_2
+K : Type u_3
+G : Multigraph V E
+classOf : V → E → K
+C : Finset E
+v : V
+k : K
+X T : Finset V
+hvX : v ∉ X
+hvT : v ∉ T
+e : E
+hv : v ∈ G.edge e
+ha : G.firstEnd e = v
+⊢ (e ∈ C ∧ (G.secondEnd e ∉ T → G.secondEnd e ∈ X)) ∧ classOf v e = k ↔
+    (e ∈ C ∧ G.secondEnd e ∈ T) ∧ classOf v e = k ∨ (e ∈ C ∧ G.secondEnd e ∈ X) ∧ classOf v e = k
+
+case pos.inr
+V : Type u_1
+E : Type u_2
+K : Type u_3
+G : Multigraph V E
+classOf : V → E → K
+C : Finset E
+v : V
+k : K
+X T : Finset V
+hvX : v ∉ X
+hvT : v ∉ T
+e : E
+hv : v ∈ G.edge e
+hb : G.secondEnd e = v
+⊢ (e ∈ C ∧ (G.firstEnd e ∉ T → G.firstEnd e ∈ X)) ∧ classOf v e = k ↔
+    (e ∈ C ∧ G.firstEnd e ∈ T) ∧ classOf v e = k ∨ (e ∈ C ∧ G.firstEnd e ∈ X) ∧ classOf v e = k
+Overfull/CompatibleCircuits/FourTightShoreOutside.lean:71:57: error: This simp argument is unused:
+  or_and_right
+
+Hint: Omit it from the simp argument list.
+  simp [classCutOn, mem_cutOn, ha, hb, hvX, hvT, hv, o̵r̵_̵a̵n̵d̵_̵r̵i̵g̵h̵t̵,̵ ̵and_or_left]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/CompatibleCircuits/FourTightShoreOutside.lean:71:71: error: This simp argument is unused:
+  and_or_left
+
+Hint: Omit it from the simp argument list.
+  simp [classCutOn, mem_cutOn, ha, hb, hvX, hvT, hv, or_and_right,̵ ̵a̵n̵d̵_̵o̵r̵_̵l̵e̵f̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/CompatibleCircuits/FourTightShoreOutside.lean:114:0: error: automatically included section variable(s) unused in theorem `Overfull.FourOdd.shoreIntoLabel_not_mem`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Overfull/CompatibleCircuits/FourTightShoreOutside.lean:131:0: error: automatically included section variable(s) unused in theorem `Overfull.FourOdd.tightShoreOutsideClass_incident`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

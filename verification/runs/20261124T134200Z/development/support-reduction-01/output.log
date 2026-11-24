@@ -1,0 +1,15 @@
+Overfull/CompatibleCircuits/FourSupportReduction.lean:59:13: error: unsolved goals
+E : Type u_3
+Q : Multigraph (Fin 4) E
+C : Finset E
+S : Finset (Sym2 (Fin 4))
+σ : Equiv.Perm (Fin 4)
+hshape : image Q.edge C = renamed S σ
+⊢ image (Sym2.map ⇑(Equiv.symm σ) ∘ Sym2.map ⇑σ) S = S
+Overfull/CompatibleCircuits/FourSupportReduction.lean:59:35: error: This simp argument is unused:
+  Sym2.map_map
+
+Hint: Omit it from the simp argument list.
+  simp [image_image,̵ ̵S̵y̵m̵2̵.̵m̵a̵p̵_̵m̵a̵p̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,482 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "e2e5455b11d5b1691d0a974fd3c5f72e989ec5b8",
+  "baseline_tree": "9013f6d5c07676ba130d4bb794062d700bab6136",
+  "baseline_publication_status": "both_remote_branches_independently_verified",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "scope": "Constructs exact compatible circuit partitions for admissible Eulerian four-label multigraphs with any degree at most two, including arbitrary other even degrees. Combines this with the previous exact four-regular theorem to cover maximum degree at most four and at most eight actual copies. Proves that tight local coarsening preserves every global cut inequality, an elementary compatible-triangle bundle selector, exact slack-zero/slack-two deletion witnesses, and transports the constructed partitions to original-host even-fiber and two-odd-fiber joining matching families under explicit small-boundary hypotheses. All original copies remain distinct. General four-label existence, full Proposition 4.16, Theorem 4.17 and the main theorem remain incomplete. All 69 numbered assertion records and the 49 completed count are unchanged.",
+  "review": "docs/four-label-reduction-semantic-review.md",
+  "proof_map": "docs/four-label-reduction-verification.md",
+  "public_theorems": [
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_small_degree",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_degree_le_four",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_card_le_eight",
+    "Overfull.Multigraph.fourLabel_counterexample_degree_and_size",
+    "Overfull.Multigraph.fourLabel_admissibleOn_sdiff_iff_cut_witnesses",
+    "Overfull.Multigraph.exists_globally_admissible_localCoarsening",
+    "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers_small_cut",
+    "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers_bounded_cuts",
+    "Overfull.FourOdd.exists_fourTwoOddJoining_decomposition_of_small_even_cut"
+  ],
+  "module_count": 11,
+  "public_theorem_count": 73,
+  "modules": [
+    {
+      "module": "Overfull.CompatibleCircuits.FourBounded",
+      "path": "Overfull/CompatibleCircuits/FourBounded.lean",
+      "sha256": "d88388b19185af7e92fa10c9c1479bbc75d74ceea769d98ba77df792246599fc",
+      "public_theorem_count": 8,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.degreeOn_sum_univ",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_degree_le_four",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.Multigraph.fourLabel_low_degree_or_four_regular_of_card_le_eight",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_card_le_eight",
+          "source_line": 86
+        },
+        {
+          "name": "Overfull.Multigraph.fourLabel_counterexample_degree_and_size",
+          "source_line": 98
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_four_small_degree",
+          "source_line": 130
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_four_degree_le_four",
+          "source_line": 147
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_four_eight_copies",
+          "source_line": 168
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourBoundedJoining",
+      "path": "Overfull/CompatibleCircuits/FourBoundedJoining.lean",
+      "sha256": "ccefcf06474efc8459c35a3a3aa96992db23d79c1f696d1313a5677b92406964",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.liftJoiningParts_cut_zero_or_two",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers_small_cut",
+          "source_line": 68
+        },
+        {
+          "name": "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers_bounded_cuts",
+          "source_line": 87
+        },
+        {
+          "name": "Overfull.FourOdd.twoOddParts_card_le_of_card_le_four",
+          "source_line": 126
+        },
+        {
+          "name": "Overfull.FourOdd.exists_fourTwoOddJoining_decomposition_of_small_even_cut",
+          "source_line": 175
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourCutCriterion",
+      "path": "Overfull/CompatibleCircuits/FourCutCriterion.lean",
+      "sha256": "4764c2c6956b9261a53fc22c8b6db6e315e3baf9e0be786dfb1287208de7de05",
+      "public_theorem_count": 4,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.IsCircuit.cutOn_card_zero_two_four_of_card_le_four",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.Multigraph.admissibleOn_sdiff_iff_four_cut_witnesses",
+          "source_line": 35
+        },
+        {
+          "name": "Overfull.Multigraph.admissibleOn_sdiff_iff_tight_classes_of_small_circuit",
+          "source_line": 90
+        },
+        {
+          "name": "Overfull.Multigraph.fourLabel_admissibleOn_sdiff_iff_cut_witnesses",
+          "source_line": 123
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourDegreeTwo",
+      "path": "Overfull/CompatibleCircuits/FourDegreeTwo.lean",
+      "sha256": "e6b69828aa63be32f4bc38ef3d7029de499e1f2c6bed2e23694a99ce976fa61a",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.exists_other_endpoint",
+          "source_line": 20
+        },
+        {
+          "name": "Overfull.Multigraph.distinct_classes_at_degree_two",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_degree_two_path",
+          "source_line": 55
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_degree_two",
+          "source_line": 86
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_small_degree",
+          "source_line": 124
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourDegreeTwoLift",
+      "path": "Overfull/CompatibleCircuits/FourDegreeTwoLift.lean",
+      "sha256": "ae1e1cdad4c1058b1d269b274a97f1f1c37f09ec9d0b237db0f2cb69f83dee91",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.compatible_degree_two_expansion",
+          "source_line": 21
+        },
+        {
+          "name": "Overfull.Multigraph.even_degrees_degree_two_expansion",
+          "source_line": 102
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_degree_two_suppressed",
+          "source_line": 153
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourDegreeTwoParallel",
+      "path": "Overfull/CompatibleCircuits/FourDegreeTwoParallel.lean",
+      "sha256": "fc25edfd1f9de81b62ed5aca3dca51a467cdb582308ba6e5fa15e25a8c595d0f",
+      "public_theorem_count": 7,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.mem_cutOn_of_edge_eq",
+          "source_line": 13
+        },
+        {
+          "name": "Overfull.Multigraph.mem_moveShore_of_ne",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.Multigraph.mem_moveShore_self",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.Multigraph.cutOn_moveShore_of_not_incident",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.Multigraph.admissibleOn_delete_degree_two_parallel",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.Multigraph.compatible_degree_two_parallel",
+          "source_line": 86
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_degree_two_parallel",
+          "source_line": 125
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourDegreeTwoReassembly",
+      "path": "Overfull/CompatibleCircuits/FourDegreeTwoReassembly.lean",
+      "sha256": "dab7faa627b57f918f4097f0de308aa0f2000cad991a91301779791186cd1231",
+      "public_theorem_count": 4,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.edgeSupport_congrOn",
+          "source_line": 13
+        },
+        {
+          "name": "Overfull.Multigraph.degreeOn_congrOn",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.Multigraph.cutOn_congrOn",
+          "source_line": 31
+        },
+        {
+          "name": "Overfull.Multigraph.IsCircuit.congrOn",
+          "source_line": 38
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourDegreeTwoSupport",
+      "path": "Overfull/CompatibleCircuits/FourDegreeTwoSupport.lean",
+      "sha256": "c3415a549357a4edfd5722f0ab56017296d7e2ee7940aa334dd7f231ece788fd",
+      "public_theorem_count": 8,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.IsCircuit.embedVertices",
+          "source_line": 19
+        },
+        {
+          "name": "Overfull.Multigraph.selectedSupportGraph_embedded_edge",
+          "source_line": 78
+        },
+        {
+          "name": "Overfull.Multigraph.selectedSupportGraph_incident",
+          "source_line": 84
+        },
+        {
+          "name": "Overfull.Multigraph.selectedSupportGraph_degree",
+          "source_line": 90
+        },
+        {
+          "name": "Overfull.Multigraph.selectedSupportGraph_cut",
+          "source_line": 101
+        },
+        {
+          "name": "Overfull.Multigraph.selectedSupportGraph_admissible",
+          "source_line": 114
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_support_card_le_three",
+          "source_line": 135
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_degree_zero",
+          "source_line": 171
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourDegreeTwoSuppression",
+      "path": "Overfull/CompatibleCircuits/FourDegreeTwoSuppression.lean",
+      "sha256": "5a28587bee8faf2880767b361bcabba0e83af7b86a7907818ca9d447639936c8",
+      "public_theorem_count": 13,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.suppressionGraph_edge_self",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.Multigraph.suppressionGraph_edge_of_ne",
+          "source_line": 36
+        },
+        {
+          "name": "Overfull.Multigraph.suppressionClass_at_changed",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.Multigraph.suppressionClass_of_copy_ne",
+          "source_line": 45
+        },
+        {
+          "name": "Overfull.Multigraph.suppressionClass_of_vertex_ne",
+          "source_line": 50
+        },
+        {
+          "name": "Overfull.Multigraph.suppressionGraph_mem_cut_of_copy_ne",
+          "source_line": 55
+        },
+        {
+          "name": "Overfull.Multigraph.suppressionGraph_cutOn",
+          "source_line": 63
+        },
+        {
+          "name": "Overfull.Multigraph.suppressionGraph_swap_cutOn",
+          "source_line": 96
+        },
+        {
+          "name": "Overfull.Multigraph.suppressionGraph_classCutOn_of_ne",
+          "source_line": 131
+        },
+        {
+          "name": "Overfull.Multigraph.suppressionGraph_swap_classCutOn",
+          "source_line": 151
+        },
+        {
+          "name": "Overfull.Multigraph.suppressionGraph_degreeOn_zero",
+          "source_line": 193
+        },
+        {
+          "name": "Overfull.Multigraph.suppressionGraph_degreeOn_of_ne",
+          "source_line": 211
+        },
+        {
+          "name": "Overfull.Multigraph.suppressionGraph_admissibleOn",
+          "source_line": 229
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourGlobalCoarsening",
+      "path": "Overfull/CompatibleCircuits/FourGlobalCoarsening.lean",
+      "sha256": "d6afd67ac679674e01817d1ca5ad585993fedca366b6c0262c06fa0f1d3b229d",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.cutOn_toggle_card",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.Multigraph.classCutOn_card_add_toggle_card",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.Multigraph.complement_class_cut_bound_of_local_tight",
+          "source_line": 63
+        },
+        {
+          "name": "Overfull.Multigraph.admissibleOn_localCoarsening",
+          "source_line": 83
+        },
+        {
+          "name": "Overfull.Multigraph.Compatible.of_localCoarsening",
+          "source_line": 105
+        },
+        {
+          "name": "Overfull.Multigraph.exists_globally_admissible_localCoarsening",
+          "source_line": 130
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourTriangleSelection",
+      "path": "Overfull/CompatibleCircuits/FourTriangleSelection.lean",
+      "sha256": "bd621c4e2e86c6a16001e60e34e9d61d643c4f9050d8ce1a77db2e16057086c7",
+      "public_theorem_count": 10,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.CompatibleCircuits.CommonClassOn.symm",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.not_commonClassOn_symm",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.exists_distinct_of_not_monochromatic",
+          "source_line": 33
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.monochromatic_coordinate_of_no_pair",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.exists_different_from_constant_of_no_common_class",
+          "source_line": 54
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.exists_distinct_between_of_no_common_class",
+          "source_line": 64
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.exists_compatible_triple_of_cyclic_monochromatic_bundles",
+          "source_line": 79
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.exists_compatible_triple_of_transitive_monochromatic_bundles",
+          "source_line": 106
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.exists_compatible_triple_of_no_monochromatic_corner",
+          "source_line": 139
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.monochromatic_corner_of_no_compatible_triple",
+          "source_line": 188
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.CompatibleCircuits.CommonClassOn.symm",
+    "Overfull.CompatibleCircuits.exists_compatible_triple_of_cyclic_monochromatic_bundles",
+    "Overfull.CompatibleCircuits.exists_compatible_triple_of_no_monochromatic_corner",
+    "Overfull.CompatibleCircuits.exists_compatible_triple_of_transitive_monochromatic_bundles",
+    "Overfull.CompatibleCircuits.exists_different_from_constant_of_no_common_class",
+    "Overfull.CompatibleCircuits.exists_distinct_between_of_no_common_class",
+    "Overfull.CompatibleCircuits.exists_distinct_of_not_monochromatic",
+    "Overfull.CompatibleCircuits.monochromatic_coordinate_of_no_pair",
+    "Overfull.CompatibleCircuits.monochromatic_corner_of_no_compatible_triple",
+    "Overfull.CompatibleCircuits.not_commonClassOn_symm",
+    "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers_bounded_cuts",
+    "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers_small_cut",
+    "Overfull.FourOdd.exists_fourTwoOddJoining_decomposition_of_small_even_cut",
+    "Overfull.FourOdd.liftJoiningParts_cut_zero_or_two",
+    "Overfull.FourOdd.twoOddParts_card_le_of_card_le_four",
+    "Overfull.Multigraph.Compatible.of_localCoarsening",
+    "Overfull.Multigraph.IsCircuit.congrOn",
+    "Overfull.Multigraph.IsCircuit.cutOn_card_zero_two_four_of_card_le_four",
+    "Overfull.Multigraph.IsCircuit.embedVertices",
+    "Overfull.Multigraph.admissibleOn_delete_degree_two_parallel",
+    "Overfull.Multigraph.admissibleOn_localCoarsening",
+    "Overfull.Multigraph.admissibleOn_sdiff_iff_four_cut_witnesses",
+    "Overfull.Multigraph.admissibleOn_sdiff_iff_tight_classes_of_small_circuit",
+    "Overfull.Multigraph.classCutOn_card_add_toggle_card",
+    "Overfull.Multigraph.compatible_degree_two_expansion",
+    "Overfull.Multigraph.compatible_degree_two_parallel",
+    "Overfull.Multigraph.complement_class_cut_bound_of_local_tight",
+    "Overfull.Multigraph.cutOn_congrOn",
+    "Overfull.Multigraph.cutOn_moveShore_of_not_incident",
+    "Overfull.Multigraph.cutOn_toggle_card",
+    "Overfull.Multigraph.degreeOn_congrOn",
+    "Overfull.Multigraph.degreeOn_sum_univ",
+    "Overfull.Multigraph.distinct_classes_at_degree_two",
+    "Overfull.Multigraph.edgeSupport_congrOn",
+    "Overfull.Multigraph.even_degrees_degree_two_expansion",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_four_degree_le_four",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_four_eight_copies",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_four_small_degree",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_degree_two_suppressed",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_card_le_eight",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_degree_le_four",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_degree_two",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_degree_two_parallel",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_degree_two_path",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_degree_zero",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label_small_degree",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_support_card_le_three",
+    "Overfull.Multigraph.exists_globally_admissible_localCoarsening",
+    "Overfull.Multigraph.exists_other_endpoint",
+    "Overfull.Multigraph.fourLabel_admissibleOn_sdiff_iff_cut_witnesses",
+    "Overfull.Multigraph.fourLabel_counterexample_degree_and_size",
+    "Overfull.Multigraph.fourLabel_low_degree_or_four_regular_of_card_le_eight",
+    "Overfull.Multigraph.mem_cutOn_of_edge_eq",
+    "Overfull.Multigraph.mem_moveShore_of_ne",
+    "Overfull.Multigraph.mem_moveShore_self",
+    "Overfull.Multigraph.selectedSupportGraph_admissible",
+    "Overfull.Multigraph.selectedSupportGraph_cut",
+    "Overfull.Multigraph.selectedSupportGraph_degree",
+    "Overfull.Multigraph.selectedSupportGraph_embedded_edge",
+    "Overfull.Multigraph.selectedSupportGraph_incident",
+    "Overfull.Multigraph.suppressionClass_at_changed",
+    "Overfull.Multigraph.suppressionClass_of_copy_ne",
+    "Overfull.Multigraph.suppressionClass_of_vertex_ne",
+    "Overfull.Multigraph.suppressionGraph_admissibleOn",
+    "Overfull.Multigraph.suppressionGraph_classCutOn_of_ne",
+    "Overfull.Multigraph.suppressionGraph_cutOn",
+    "Overfull.Multigraph.suppressionGraph_degreeOn_of_ne",
+    "Overfull.Multigraph.suppressionGraph_degreeOn_zero",
+    "Overfull.Multigraph.suppressionGraph_edge_of_ne",
+    "Overfull.Multigraph.suppressionGraph_edge_self",
+    "Overfull.Multigraph.suppressionGraph_mem_cut_of_copy_ne",
+    "Overfull.Multigraph.suppressionGraph_swap_classCutOn",
+    "Overfull.Multigraph.suppressionGraph_swap_cutOn"
+  ]
+}

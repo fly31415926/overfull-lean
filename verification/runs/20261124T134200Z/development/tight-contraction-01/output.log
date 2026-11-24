@@ -1,0 +1,36 @@
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:47:4: error: Type mismatch: After simplification, term
+  hk
+ has type
+  classOf ((joiningGraph G label).endpointClass label i e) ↑e = k
+but is expected to have type
+  classOf v ↑e = k
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:66:33: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I inst✝ i ((joiningQuotient G label).edge a))
+      (instDecidableEqProd (joiningIncidenceClass G label classOf i a) (v, k))
+inferred
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I (fun a b => propDecidable (a = b)) i ((joiningQuotient G label).edge a))
+      (propDecidable (joiningIncidenceClass G label classOf i a = (v, k)))
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:77:30: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I inst✝ i ((joiningQuotient G label).edge a))
+      (instDecidableEqProd (joiningIncidenceClass G label classOf i a) (v, k))
+inferred
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I (fun a b => propDecidable (a = b)) i ((joiningQuotient G label).edge a))
+      (propDecidable (joiningIncidenceClass G label classOf i a = (v, k)))
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:84:30: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I inst✝ i ((joiningQuotient G label).edge a))
+      (instDecidableEqProd (joiningIncidenceClass G label classOf i a) (v, k))
+inferred
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I (fun a b => propDecidable (a = b)) i ((joiningQuotient G label).edge a))
+      (propDecidable (joiningIncidenceClass G label classOf i a = (v, k)))

@@ -1,0 +1,36 @@
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:31:0: error: automatically included section variable(s) unused in theorem `Overfull.FourOdd.joiningIncidenceClass_incident_iff`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:70:33: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I inst✝ i ((joiningQuotient G label).edge a))
+      (instDecidableEqProd (joiningIncidenceClass G label classOf i a) (v, k))
+inferred
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I (fun a b => propDecidable (a = b)) i ((joiningQuotient G label).edge a))
+      (propDecidable (joiningIncidenceClass G label classOf i a = (v, k)))
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:81:30: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I inst✝ i ((joiningQuotient G label).edge a))
+      (instDecidableEqProd (joiningIncidenceClass G label classOf i a) (v, k))
+inferred
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I (fun a b => propDecidable (a = b)) i ((joiningQuotient G label).edge a))
+      (propDecidable (joiningIncidenceClass G label classOf i a = (v, k)))
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:88:30: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I inst✝ i ((joiningQuotient G label).edge a))
+      (instDecidableEqProd (joiningIncidenceClass G label classOf i a) (v, k))
+inferred
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I (fun a b => propDecidable (a = b)) i ((joiningQuotient G label).edge a))
+      (propDecidable (joiningIncidenceClass G label classOf i a = (v, k)))

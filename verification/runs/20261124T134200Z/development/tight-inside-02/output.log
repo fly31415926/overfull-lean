@@ -1,0 +1,34 @@
+✖ [3158/3158] Building Overfull.CompatibleCircuits.FourTightShoreInside (6.4s)
+trace: .> LEAN_PATH=/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean /workspace/scratch/77adbfc63087/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/77adbfc63087/overfull-lean/Overfull/CompatibleCircuits/FourTightShoreInside.lean -o /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourTightShoreInside.olean -i /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourTightShoreInside.ilean -c /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourTightShoreInside.c --setup /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourTightShoreInside.setup.json --json
+error: Overfull/CompatibleCircuits/FourTightShoreInside.lean:101:2: Type mismatch: After simplification, term
+  Eq.trans h (Eq.symm hdegree)
+ has type
+  2 *
+      #{e |
+          none ∈ (joiningQuotient G (shoreCollapseLabel X)).edge e ∧
+            joiningIncidenceClass G (shoreCollapseLabel X) classOf none e = (w, k)} =
+    (joiningQuotient G (shoreCollapseLabel X)).degreeOn univ none
+but is expected to have type
+  2 *
+      #{e |
+          none ∈ (joiningQuotient G (shoreCollapseLabel X)).edge e ∧
+            joiningIncidenceClass G (shoreCollapseLabel X) classOf none e = (w, k)} =
+    (joiningQuotient G (shoreCollapseLabel X)).degreeOn univ none
+error: Overfull/CompatibleCircuits/FourTightShoreInside.lean:114:2: Type mismatch
+  tightShoreInsideClass_local_tight G classOf X w k hw htight
+has type
+  2 *
+      #{e |
+          none ∈ (tightShoreInsideGraph G X).edge e ∧
+            joiningIncidenceClass G (shoreCollapseLabel X) classOf none e = (w, k)} =
+    (tightShoreInsideGraph G X).degreeOn univ none
+but is expected to have type
+  2 *
+      #{e |
+          none ∈ (tightShoreInsideGraph G X).edge e ∧
+            joiningIncidenceClass G (shoreCollapseLabel X) classOf none e = (w, k)} =
+    (tightShoreInsideGraph G X).degreeOn univ none
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourTightShoreInside
+error: build failed

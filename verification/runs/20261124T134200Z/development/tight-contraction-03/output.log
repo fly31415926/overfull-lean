@@ -1,0 +1,87 @@
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:31:0: error: automatically included section variable(s) unused in theorem `Overfull.FourOdd.joiningIncidenceClass_incident_iff`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:70:33: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I inst✝ i ((joiningQuotient G label).edge a))
+      (instDecidableEqProd (joiningIncidenceClass G label classOf i a) (v, k))
+inferred
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I (fun a b => propDecidable (a = b)) i ((joiningQuotient G label).edge a))
+      (propDecidable (joiningIncidenceClass G label classOf i a = (v, k)))
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:81:30: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I inst✝ i ((joiningQuotient G label).edge a))
+      (instDecidableEqProd (joiningIncidenceClass G label classOf i a) (v, k))
+inferred
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I (fun a b => propDecidable (a = b)) i ((joiningQuotient G label).edge a))
+      (propDecidable (joiningIncidenceClass G label classOf i a = (v, k)))
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:88:30: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I inst✝ i ((joiningQuotient G label).edge a))
+      (instDecidableEqProd (joiningIncidenceClass G label classOf i a) (v, k))
+inferred
+  fun a =>
+    @instDecidableAnd (i ∈ (joiningQuotient G label).edge a) (joiningIncidenceClass G label classOf i a = (v, k))
+      (@Sym2.Mem.decidable I (fun a b => propDecidable (a = b)) i ((joiningQuotient G label).edge a))
+      (propDecidable (joiningIncidenceClass G label classOf i a = (v, k)))
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:173:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ b ≤ 1
+  0 ≤ a ≤ 1
+where
+ a := ↑(#({e ∈ D |
+      v ∈ G.edge e ∧ (if True then Sum.inr (decide (classOf v e = k)) else Sum.inl (classOf v e)) = Sum.inr true}))
+ b := ↑(#({e ∈ D |
+      v ∈ G.edge e ∧ (if True then Sum.inr (decide (classOf v e = k)) else Sum.inl (classOf v e)) = Sum.inr false}))
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:166:33: error: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵a̵r̵s̵e̵n̵T̵i̵g̵h̵t̵C̵l̵a̵s̵s̵A̵t̵,̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵S̵u̵m̵.̵i̵n̵r̵.̵i̵n̵j̵E̵q̵,̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵t̵r̵u̵e̵_̵e̵q̵]̵[̲c̲o̲a̲r̲s̲e̲n̲T̲i̲g̲h̲t̲C̲l̲a̲s̲s̲A̲t̲,̲ ̲S̲u̲m̲.̲i̲n̲r̲.̲i̲n̲j̲E̲q̲,̲ ̲d̲e̲c̲i̲d̲e̲_̲e̲q̲_̲t̲r̲u̲e̲_̲e̲q̲]̲ at htrue
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:166:44: error: This simp argument is unused:
+  Sum.inr.injEq
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵a̵r̵s̵e̵n̵T̵i̵g̵h̵t̵C̵l̵a̵s̵s̵A̵t̵,̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵S̵u̵m̵.̵i̵n̵r̵.̵i̵n̵j̵E̵q̵,̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵t̵r̵u̵e̵_̵e̵q̵]̵[̲c̲o̲a̲r̲s̲e̲n̲T̲i̲g̲h̲t̲C̲l̲a̲s̲s̲A̲t̲,̲ ̲i̲f̲_̲p̲o̲s̲ ̲r̲f̲l̲,̲ ̲d̲e̲c̲i̲d̲e̲_̲e̲q̲_̲t̲r̲u̲e̲_̲e̲q̲]̲ at htrue
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:166:58: error: This simp argument is unused:
+  decide_eq_true_eq
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵a̵r̵s̵e̵n̵T̵i̵g̵h̵t̵C̵l̵a̵s̵s̵A̵t̵,̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵S̵u̵m̵.̵i̵n̵r̵.̵i̵n̵j̵E̵q̵,̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵t̵r̵u̵e̵_̵e̵q̵]̵[̲c̲o̲a̲r̲s̲e̲n̲T̲i̲g̲h̲t̲C̲l̲a̲s̲s̲A̲t̲,̲ ̲i̲f̲_̲p̲o̲s̲ ̲r̲f̲l̲,̲ ̲S̲u̲m̲.̲i̲n̲r̲.̲i̲n̲j̲E̲q̲]̲ at htrue
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:167:33: error: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵a̵r̵s̵e̵n̵T̵i̵g̵h̵t̵C̵l̵a̵s̵s̵A̵t̵,̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵S̵u̵m̵.̵i̵n̵r̵.̵i̵n̵j̵E̵q̵,̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵f̵a̵l̵s̵e̵_̵i̵f̵f̵_̵n̵o̵t̵]̵[̲c̲o̲a̲r̲s̲e̲n̲T̲i̲g̲h̲t̲C̲l̲a̲s̲s̲A̲t̲,̲ ̲S̲u̲m̲.̲i̲n̲r̲.̲i̲n̲j̲E̲q̲,̲ ̲d̲e̲c̲i̲d̲e̲_̲e̲q̲_̲f̲a̲l̲s̲e̲_̲i̲f̲f̲_̲n̲o̲t̲]̲ at hfalse
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:167:44: error: This simp argument is unused:
+  Sum.inr.injEq
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵a̵r̵s̵e̵n̵T̵i̵g̵h̵t̵C̵l̵a̵s̵s̵A̵t̵,̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵S̵u̵m̵.̵i̵n̵r̵.̵i̵n̵j̵E̵q̵,̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵f̵a̵l̵s̵e̵_̵i̵f̵f̵_̵n̵o̵t̵]̵[̲c̲o̲a̲r̲s̲e̲n̲T̲i̲g̲h̲t̲C̲l̲a̲s̲s̲A̲t̲,̲ ̲i̲f̲_̲p̲o̲s̲ ̲r̲f̲l̲,̲ ̲d̲e̲c̲i̲d̲e̲_̲e̲q̲_̲f̲a̲l̲s̲e̲_̲i̲f̲f̲_̲n̲o̲t̲]̲ at hfalse
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/CompatibleCircuits/FourTightShoreContraction.lean:167:58: error: This simp argument is unused:
+  decide_eq_false_iff_not
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵a̵r̵s̵e̵n̵T̵i̵g̵h̵t̵C̵l̵a̵s̵s̵A̵t̵,̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵S̵u̵m̵.̵i̵n̵r̵.̵i̵n̵j̵E̵q̵,̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵f̵a̵l̵s̵e̵_̵i̵f̵f̵_̵n̵o̵t̵]̵[̲c̲o̲a̲r̲s̲e̲n̲T̲i̲g̲h̲t̲C̲l̲a̲s̲s̲A̲t̲,̲ ̲i̲f̲_̲p̲o̲s̲ ̲r̲f̲l̲,̲ ̲S̲u̲m̲.̲i̲n̲r̲.̲i̲n̲j̲E̲q̲]̲ at hfalse
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

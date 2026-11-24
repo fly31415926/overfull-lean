@@ -1,0 +1,760 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "numbered_assertions_completed": 0,
+  "manuscript_number": null,
+  "statement_sha256": null,
+  "module_count": 5,
+  "public_theorem_count": 43,
+  "verified_declaration_count": 69,
+  "includes_private_and_generated_proofs": true,
+  "proof_declaration_map": [
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.assignedExceptions.eq_1",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.assignedLabel_fibers",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.JoiningConstruction",
+      "name": "Overfull.AssignedParts.assignedLabel_joining_decomposition",
+      "source_path": "Overfull/AssignedParts/JoiningConstruction.lean",
+      "source_sha256": "dd070d578403598115b359cf4649fa2f8a786cd8e189eee43123d9ceace54ed1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.JoiningConstruction",
+      "name": "Overfull.AssignedParts.assignedLabel_joining_decomposition_in_host",
+      "source_path": "Overfull/AssignedParts/JoiningConstruction.lean",
+      "source_sha256": "dd070d578403598115b359cf4649fa2f8a786cd8e189eee43123d9ceace54ed1"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.assignedLabel_parity",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.MatchedCuts",
+      "name": "Overfull.AssignedParts.assignedLabel_parity_eq_core_crossing",
+      "source_path": "Overfull/AssignedParts/MatchedCuts.lean",
+      "source_sha256": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.corePart.eq_1",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.MatchedCuts",
+      "name": "Overfull.AssignedParts.corePart_card_parity",
+      "source_path": "Overfull/AssignedParts/MatchedCuts.lean",
+      "source_sha256": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.MatchedCuts",
+      "name": "Overfull.AssignedParts.corePart_cutOn_eq_core_crossings",
+      "source_path": "Overfull/AssignedParts/MatchedCuts.lean",
+      "source_sha256": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.MatchedCuts",
+      "name": "Overfull.AssignedParts.corePart_cutOn_eq_core_crossings._simp_1_1",
+      "source_path": "Overfull/AssignedParts/MatchedCuts.lean",
+      "source_sha256": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.MatchedCuts",
+      "name": "Overfull.AssignedParts.corePart_cutOn_eq_core_crossings._simp_1_2",
+      "source_path": "Overfull/AssignedParts/MatchedCuts.lean",
+      "source_sha256": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.corePart_pairPart_disjoint",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.coreParts_cover",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.MatchedCuts",
+      "name": "Overfull.AssignedParts.coreParts_cutOn_eq",
+      "source_path": "Overfull/AssignedParts/MatchedCuts.lean",
+      "source_sha256": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.coreParts_disjoint",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.PairFiberParity",
+      "name": "Overfull.AssignedParts.core_fiber_parity_eq_of_even_total_and_pair",
+      "source_path": "Overfull/AssignedParts/PairFiberParity.lean",
+      "source_sha256": "b3ff00c53a3f30c5ae8cd6d451f937b4a9318ca05c02ccf9ce427e5b26ff4686"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.PairFiberParity",
+      "name": "Overfull.AssignedParts.core_fiber_parity_eq_of_even_total_and_pair._proof_1_1",
+      "source_path": "Overfull/AssignedParts/PairFiberParity.lean",
+      "source_sha256": "b3ff00c53a3f30c5ae8cd6d451f937b4a9318ca05c02ccf9ce427e5b26ff4686"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.core_subset_corePart",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.exceptional_corePart_iff",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.exists_two_core_assigned_labels",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.PairFiberParity",
+      "name": "Overfull.AssignedParts.fiber_card_sum_three",
+      "source_path": "Overfull/AssignedParts/PairFiberParity.lean",
+      "source_sha256": "b3ff00c53a3f30c5ae8cd6d451f937b4a9318ca05c02ccf9ce427e5b26ff4686"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.PairFiberParity",
+      "name": "Overfull.AssignedParts.fiber_parity_cases_of_even_total_and_pair",
+      "source_path": "Overfull/AssignedParts/PairFiberParity.lean",
+      "source_sha256": "b3ff00c53a3f30c5ae8cd6d451f937b4a9318ca05c02ccf9ce427e5b26ff4686"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.PairFiberParity",
+      "name": "Overfull.AssignedParts.fiber_parity_cases_of_even_total_and_pair._proof_1_1",
+      "source_path": "Overfull/AssignedParts/PairFiberParity.lean",
+      "source_sha256": "b3ff00c53a3f30c5ae8cd6d451f937b4a9318ca05c02ccf9ce427e5b26ff4686"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.MatchedCuts",
+      "name": "Overfull.AssignedParts.firstEnd_mem_corePart_iff",
+      "source_path": "Overfull/AssignedParts/MatchedCuts.lean",
+      "source_sha256": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.internalOn_card_le_one",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.internalOn_card_le_one._proof_1_1",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts._proof_1",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts.eq_1",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts_eq_one_iff",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts_eq_two_iff",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts_eq_zero_iff",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts_fiber_one",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts_fiber_one._simp_1_1",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts_fiber_one._simp_1_2",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts_fiber_one._simp_1_3",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts_fiber_two",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts_fiber_two._simp_1_1",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts_fiber_two._simp_1_2",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts_fiber_two._simp_1_3",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts_fiber_zero",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts_fiber_zero._simp_1_1",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.ThreePartLabels",
+      "name": "Overfull.AssignedParts.labelOfThreeParts_fibers",
+      "source_path": "Overfull/AssignedParts/ThreePartLabels.lean",
+      "source_sha256": "3044f55c9fb8a86e797ece4487996e7b57ca41a7bd67284312b5080c9292a8f0"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.mem_assignedExceptions",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.mem_assignedExceptions._simp_1",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.mem_corePart",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.mem_corePart._simp_1",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.pairPart_card",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.pairPart_card_eq_zero_or_two",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.pairPart_card_eq_zero_or_two._proof_1_1",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.pairPart_card_even",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.MatchedCuts",
+      "name": "Overfull.AssignedParts.pairPart_cutOn_eq_empty",
+      "source_path": "Overfull/AssignedParts/MatchedCuts.lean",
+      "source_sha256": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.pairPart_subset",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.MatchedCuts",
+      "name": "Overfull.AssignedParts.perfectMatching_shore_card_parity",
+      "source_path": "Overfull/AssignedParts/MatchedCuts.lean",
+      "source_sha256": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.MatchedCuts",
+      "name": "Overfull.AssignedParts.perfectMatching_shore_card_parity._proof_1_1",
+      "source_path": "Overfull/AssignedParts/MatchedCuts.lean",
+      "source_sha256": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.MatchedCuts",
+      "name": "Overfull.AssignedParts.secondEnd_mem_corePart_iff",
+      "source_path": "Overfull/AssignedParts/MatchedCuts.lean",
+      "source_sha256": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.AssignedParts.unpaired_exception_represented",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.Multigraph.IsMatching.edgeSupport_card",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.Multigraph.IsMatching.edgeSupport_card._proof_1_1",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.Multigraph.IsMatching.edgeSupport_card._proof_1_2",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.Multigraph.IsMatching.internalOn",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.Multigraph.IsPerfectMatching.edgeSupport_eq_univ",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.Multigraph.IsPerfectMatching.edgeSupport_eq_univ._simp_1_1",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.Multigraph.IsPerfectMatching.edgeSupport_eq_univ._simp_1_2",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.Multigraph.IsPerfectMatching.even_card",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.Multigraph.edgeSupport_internalOn_subset",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.Multigraph.mem_internalOn_of_incident_otherEnd",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.MatchedCuts",
+      "name": "Overfull.Multigraph.otherEnd.eq_1",
+      "source_path": "Overfull/AssignedParts/MatchedCuts.lean",
+      "source_sha256": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.AssignedParts.Basic",
+      "name": "Overfull.Multigraph.otherEnd_mem_of_mem_internalOn",
+      "source_path": "Overfull/AssignedParts/Basic.lean",
+      "source_sha256": "033a7aebbe8903f2ad647f32d3d8e85dea58a3ddbf5fad12c7b91140fe446d12"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.AssignedParts.MatchedCuts",
+      "name": "_private.Overfull.AssignedParts.MatchedCuts.0.Overfull.AssignedParts.assigned_cut_iff_core_crossing",
+      "source_path": "Overfull/AssignedParts/MatchedCuts.lean",
+      "source_sha256": "500175e757628c5d53393f6a199db06050188374294ea58ee43d04d903ddc766"
+    }
+  ]
+}

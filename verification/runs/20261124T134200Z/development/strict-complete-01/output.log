@@ -1,0 +1,203 @@
+Overfull/CompatibleCircuits/FourStrictComplete.lean:18:36: error: unused variable `hb`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Overfull/CompatibleCircuits/FourStrictComplete.lean:52:78: error: unsolved goals
+E : Type u_1
+Q : Multigraph (Fin 4) E
+C : Finset E
+X : Finset (Fin 4)
+hlocal :
+  ∀ (x y : Fin 4) (Y : Finset (Fin 4)),
+    x ≠ y →
+      (if (x ∈ Y) ≠ (y ∈ Y) then 1 else 0) =
+        ∑ i, if #((FourRegular.pairs i).toFinset ∩ Y) = 1 ∧ s(x, y) = FourRegular.pairs i then 1 else 0
+⊢ (∑ a ∈ C, if (Q.firstEnd a ∈ X) ≠ (Q.secondEnd a ∈ X) then 1 else 0) =
+    ∑ e ∈ C, if (Q.firstEnd e ∈ X) ≠ (Q.secondEnd e ∈ X) then 1 else 0
+Overfull/CompatibleCircuits/FourStrictComplete.lean:88:12: error: Type mismatch: After simplification, term
+  h0
+ has type
+  Q.degreeOn C 0 = #({e ∈ C | Q.edge e = s(0, 1)}) + (#({e ∈ C | Q.edge e = s(0, 2)}) + #({e ∈ C | Q.edge e = s(0, 3)}))
+but is expected to have type
+  Q.degreeOn C 0 = #({e ∈ C | Q.edge e = s(0, 1)}) + (#({e ∈ C | Q.edge e = s(0, 2)}) + #({e ∈ C | Q.edge e = s(0, 3)}))
+Overfull/CompatibleCircuits/FourStrictComplete.lean:89:7: error: Type mismatch: After simplification, term
+  h1
+ has type
+  Q.degreeOn C 1 = #({e ∈ C | Q.edge e = s(0, 1)}) + (#({e ∈ C | Q.edge e = s(1, 2)}) + #({e ∈ C | Q.edge e = s(1, 3)}))
+but is expected to have type
+  Q.degreeOn C 1 = #({e ∈ C | Q.edge e = s(0, 1)}) + (#({e ∈ C | Q.edge e = s(1, 2)}) + #({e ∈ C | Q.edge e = s(1, 3)}))
+Overfull/CompatibleCircuits/FourStrictComplete.lean:90:7: error: Type mismatch: After simplification, term
+  h2
+ has type
+  Q.degreeOn C 2 = #({e ∈ C | Q.edge e = s(0, 2)}) + (#({e ∈ C | Q.edge e = s(1, 2)}) + #({e ∈ C | Q.edge e = s(2, 3)}))
+but is expected to have type
+  Q.degreeOn C 2 = #({e ∈ C | Q.edge e = s(0, 2)}) + (#({e ∈ C | Q.edge e = s(1, 2)}) + #({e ∈ C | Q.edge e = s(2, 3)}))
+Overfull/CompatibleCircuits/FourStrictComplete.lean:91:7: error: Type mismatch: After simplification, term
+  h3
+ has type
+  Q.degreeOn C 3 = #({e ∈ C | Q.edge e = s(0, 3)}) + (#({e ∈ C | Q.edge e = s(1, 3)}) + #({e ∈ C | Q.edge e = s(2, 3)}))
+but is expected to have type
+  Q.degreeOn C 3 = #({e ∈ C | Q.edge e = s(0, 3)}) + (#({e ∈ C | Q.edge e = s(1, 3)}) + #({e ∈ C | Q.edge e = s(2, 3)}))
+Overfull/CompatibleCircuits/FourStrictComplete.lean:108:4: error(lean.unknownIdentifier): Unknown constant `Sym2.toFinset_mk`
+Overfull/CompatibleCircuits/FourStrictComplete.lean:109:12: error: Type mismatch: After simplification, term
+  h01
+ has type
+  #(Q.cutOn C {0, 1}) =
+    #({e ∈ C | Q.edge e = s(0, 2)}) +
+      (#({e ∈ C | Q.edge e = s(0, 3)}) + (#({e ∈ C | Q.edge e = s(1, 2)}) + #({e ∈ C | Q.edge e = s(1, 3)})))
+but is expected to have type
+  #(Q.cutOn C {0, 1}) =
+    #({e ∈ C | Q.edge e = s(0, 2)}) +
+      (#({e ∈ C | Q.edge e = s(0, 3)}) + (#({e ∈ C | Q.edge e = s(1, 2)}) + #({e ∈ C | Q.edge e = s(1, 3)})))
+Overfull/CompatibleCircuits/FourStrictComplete.lean:110:7: error: Type mismatch: After simplification, term
+  h02
+ has type
+  #(Q.cutOn C {0, 2}) =
+    #({e ∈ C | Q.edge e = s(0, 1)}) +
+      (#({e ∈ C | Q.edge e = s(0, 3)}) + (#({e ∈ C | Q.edge e = s(1, 2)}) + #({e ∈ C | Q.edge e = s(2, 3)})))
+but is expected to have type
+  #(Q.cutOn C {0, 2}) =
+    #({e ∈ C | Q.edge e = s(0, 1)}) +
+      (#({e ∈ C | Q.edge e = s(0, 3)}) + (#({e ∈ C | Q.edge e = s(1, 2)}) + #({e ∈ C | Q.edge e = s(2, 3)})))
+Overfull/CompatibleCircuits/FourStrictComplete.lean:111:7: error: Type mismatch: After simplification, term
+  h03
+ has type
+  #(Q.cutOn C {0, 3}) =
+    #({e ∈ C | Q.edge e = s(0, 1)}) +
+      (#({e ∈ C | Q.edge e = s(0, 2)}) + (#({e ∈ C | Q.edge e = s(1, 3)}) + #({e ∈ C | Q.edge e = s(2, 3)})))
+but is expected to have type
+  #(Q.cutOn C {0, 3}) =
+    #({e ∈ C | Q.edge e = s(0, 1)}) +
+      (#({e ∈ C | Q.edge e = s(0, 2)}) + (#({e ∈ C | Q.edge e = s(1, 3)}) + #({e ∈ C | Q.edge e = s(2, 3)})))
+Overfull/CompatibleCircuits/FourStrictComplete.lean:137:15: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Q.cutOn ?C ?Xᶜ
+in the target expression
+  #(Q.cutOn C {0, 3}ᶜ) = a + b + e + f
+
+E : Type u_1
+K : Type u_2
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+hadmissible : Q.AdmissibleOn classOf C
+hstrict : Q.StrictNonlocalOn classOf C
+h01 : (Q.edgeBundleOn C 0 1).Nonempty
+h02 : (Q.edgeBundleOn C 0 2).Nonempty
+h03 : (Q.edgeBundleOn C 0 3).Nonempty
+h12 : (Q.edgeBundleOn C 1 2).Nonempty
+h13 : (Q.edgeBundleOn C 1 3).Nonempty
+h23 : (Q.edgeBundleOn C 2 3).Nonempty
+hnone : ¬∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ #D ≤ 3
+a : ℕ := #(Q.edgeBundleOn C 0 1)
+b : ℕ := #(Q.edgeBundleOn C 0 2)
+c : ℕ := #(Q.edgeBundleOn C 0 3)
+d : ℕ := #(Q.edgeBundleOn C 1 2)
+e : ℕ := #(Q.edgeBundleOn C 1 3)
+f : ℕ := #(Q.edgeBundleOn C 2 3)
+hd0 : Q.degreeOn C 0 = #(Q.edgeBundleOn C 0 1) + #(Q.edgeBundleOn C 0 2) + #(Q.edgeBundleOn C 0 3)
+hd1 : Q.degreeOn C 1 = #(Q.edgeBundleOn C 0 1) + #(Q.edgeBundleOn C 1 2) + #(Q.edgeBundleOn C 1 3)
+hd2 : Q.degreeOn C 2 = #(Q.edgeBundleOn C 0 2) + #(Q.edgeBundleOn C 1 2) + #(Q.edgeBundleOn C 2 3)
+hd3 : Q.degreeOn C 3 = #(Q.edgeBundleOn C 0 3) + #(Q.edgeBundleOn C 1 3) + #(Q.edgeBundleOn C 2 3)
+hc01 :
+  #(Q.cutOn C {0, 1}) =
+    #(Q.edgeBundleOn C 0 2) + #(Q.edgeBundleOn C 0 3) + #(Q.edgeBundleOn C 1 2) + #(Q.edgeBundleOn C 1 3)
+hc02 :
+  #(Q.cutOn C {0, 2}) =
+    #(Q.edgeBundleOn C 0 1) + #(Q.edgeBundleOn C 0 3) + #(Q.edgeBundleOn C 1 2) + #(Q.edgeBundleOn C 2 3)
+hc03 :
+  #(Q.cutOn C {0, 3}) =
+    #(Q.edgeBundleOn C 0 1) + #(Q.edgeBundleOn C 0 2) + #(Q.edgeBundleOn C 1 3) + #(Q.edgeBundleOn C 2 3)
+hcomp : {1, 2} = {0, 3}ᶜ
+⊢ #(Q.cutOn C {0, 3}ᶜ) = a + b + e + f
+Overfull/CompatibleCircuits/FourStrictComplete.lean:141:15: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Q.cutOn ?C ?Xᶜ
+in the target expression
+  #(Q.cutOn C {0, 2}ᶜ) = a + c + d + f
+
+E : Type u_1
+K : Type u_2
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+hadmissible : Q.AdmissibleOn classOf C
+hstrict : Q.StrictNonlocalOn classOf C
+h01 : (Q.edgeBundleOn C 0 1).Nonempty
+h02 : (Q.edgeBundleOn C 0 2).Nonempty
+h03 : (Q.edgeBundleOn C 0 3).Nonempty
+h12 : (Q.edgeBundleOn C 1 2).Nonempty
+h13 : (Q.edgeBundleOn C 1 3).Nonempty
+h23 : (Q.edgeBundleOn C 2 3).Nonempty
+hnone : ¬∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ #D ≤ 3
+a : ℕ := #(Q.edgeBundleOn C 0 1)
+b : ℕ := #(Q.edgeBundleOn C 0 2)
+c : ℕ := #(Q.edgeBundleOn C 0 3)
+d : ℕ := #(Q.edgeBundleOn C 1 2)
+e : ℕ := #(Q.edgeBundleOn C 1 3)
+f : ℕ := #(Q.edgeBundleOn C 2 3)
+hd0 : Q.degreeOn C 0 = #(Q.edgeBundleOn C 0 1) + #(Q.edgeBundleOn C 0 2) + #(Q.edgeBundleOn C 0 3)
+hd1 : Q.degreeOn C 1 = #(Q.edgeBundleOn C 0 1) + #(Q.edgeBundleOn C 1 2) + #(Q.edgeBundleOn C 1 3)
+hd2 : Q.degreeOn C 2 = #(Q.edgeBundleOn C 0 2) + #(Q.edgeBundleOn C 1 2) + #(Q.edgeBundleOn C 2 3)
+hd3 : Q.degreeOn C 3 = #(Q.edgeBundleOn C 0 3) + #(Q.edgeBundleOn C 1 3) + #(Q.edgeBundleOn C 2 3)
+hc01 :
+  #(Q.cutOn C {0, 1}) =
+    #(Q.edgeBundleOn C 0 2) + #(Q.edgeBundleOn C 0 3) + #(Q.edgeBundleOn C 1 2) + #(Q.edgeBundleOn C 1 3)
+hc02 :
+  #(Q.cutOn C {0, 2}) =
+    #(Q.edgeBundleOn C 0 1) + #(Q.edgeBundleOn C 0 3) + #(Q.edgeBundleOn C 1 2) + #(Q.edgeBundleOn C 2 3)
+hc03 :
+  #(Q.cutOn C {0, 3}) =
+    #(Q.edgeBundleOn C 0 1) + #(Q.edgeBundleOn C 0 2) + #(Q.edgeBundleOn C 1 3) + #(Q.edgeBundleOn C 2 3)
+hc12 : #(Q.cutOn C {1, 2}) = a + b + e + f
+hcomp : {1, 3} = {0, 2}ᶜ
+⊢ #(Q.cutOn C {0, 2}ᶜ) = a + c + d + f
+Overfull/CompatibleCircuits/FourStrictComplete.lean:145:15: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Q.cutOn ?C ?Xᶜ
+in the target expression
+  #(Q.cutOn C {0, 1}ᶜ) = b + c + d + e
+
+E : Type u_1
+K : Type u_2
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+hadmissible : Q.AdmissibleOn classOf C
+hstrict : Q.StrictNonlocalOn classOf C
+h01 : (Q.edgeBundleOn C 0 1).Nonempty
+h02 : (Q.edgeBundleOn C 0 2).Nonempty
+h03 : (Q.edgeBundleOn C 0 3).Nonempty
+h12 : (Q.edgeBundleOn C 1 2).Nonempty
+h13 : (Q.edgeBundleOn C 1 3).Nonempty
+h23 : (Q.edgeBundleOn C 2 3).Nonempty
+hnone : ¬∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ #D ≤ 3
+a : ℕ := #(Q.edgeBundleOn C 0 1)
+b : ℕ := #(Q.edgeBundleOn C 0 2)
+c : ℕ := #(Q.edgeBundleOn C 0 3)
+d : ℕ := #(Q.edgeBundleOn C 1 2)
+e : ℕ := #(Q.edgeBundleOn C 1 3)
+f : ℕ := #(Q.edgeBundleOn C 2 3)
+hd0 : Q.degreeOn C 0 = #(Q.edgeBundleOn C 0 1) + #(Q.edgeBundleOn C 0 2) + #(Q.edgeBundleOn C 0 3)
+hd1 : Q.degreeOn C 1 = #(Q.edgeBundleOn C 0 1) + #(Q.edgeBundleOn C 1 2) + #(Q.edgeBundleOn C 1 3)
+hd2 : Q.degreeOn C 2 = #(Q.edgeBundleOn C 0 2) + #(Q.edgeBundleOn C 1 2) + #(Q.edgeBundleOn C 2 3)
+hd3 : Q.degreeOn C 3 = #(Q.edgeBundleOn C 0 3) + #(Q.edgeBundleOn C 1 3) + #(Q.edgeBundleOn C 2 3)
+hc01 :
+  #(Q.cutOn C {0, 1}) =
+    #(Q.edgeBundleOn C 0 2) + #(Q.edgeBundleOn C 0 3) + #(Q.edgeBundleOn C 1 2) + #(Q.edgeBundleOn C 1 3)
+hc02 :
+  #(Q.cutOn C {0, 2}) =
+    #(Q.edgeBundleOn C 0 1) + #(Q.edgeBundleOn C 0 3) + #(Q.edgeBundleOn C 1 2) + #(Q.edgeBundleOn C 2 3)
+hc03 :
+  #(Q.cutOn C {0, 3}) =
+    #(Q.edgeBundleOn C 0 1) + #(Q.edgeBundleOn C 0 2) + #(Q.edgeBundleOn C 1 3) + #(Q.edgeBundleOn C 2 3)
+hc12 : #(Q.cutOn C {1, 2}) = a + b + e + f
+hc13 : #(Q.cutOn C {1, 3}) = a + c + d + f
+hcomp : {2, 3} = {0, 1}ᶜ
+⊢ #(Q.cutOn C {0, 1}ᶜ) = b + c + d + e
+Overfull/CompatibleCircuits/FourStrictComplete.lean:157:6: error: Tactic `decide` failed for proposition
+  ∀ (v u w : Fin 4), v ≠ u → v ≠ w → u ≠ w → NonlocalShore v {u, w}
+because its `Decidable` instance
+  Nat.decidableForallFin fun v => ∀ (u w : Fin 4), v ≠ u → v ≠ w → u ≠ w → NonlocalShore v {u, w}
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `_root_.decEq`, `decidable_of_decidable_of_iff`, `decidable_of_iff`, `forall_prop_decidable`, `instDecidableEqFin`, `instDecidableEqNat`, `instDecidableNot`, `propDecidable`, `Nat.decEq`, `Nat.decidableBallLT`, and `Nat.decidableForallFin`, reduction got stuck at the `Decidable` instance
+  choice ⋯
+
+Hint: Reduction got stuck on `choice`, which indicates that a `Decidable` instance is defined using classical reasoning, proving an instance exists rather than giving a concrete construction. The `decide` tactic works by evaluating a decision procedure via reduction, and it cannot make progress with such instances. This can occur due to the `open scoped Classical` command, which enables the instance `propDecidable`.

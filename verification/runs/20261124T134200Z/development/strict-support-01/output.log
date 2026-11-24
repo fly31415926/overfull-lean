@@ -1,0 +1,44 @@
+Overfull/CompatibleCircuits/FourStrictSupport.lean:158:4: error: `simp` made no progress
+Overfull/CompatibleCircuits/FourStrictSupport.lean:175:17: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 0
+  a ≥ 0
+  a - b ≤ -1
+where
+ a := ↑(#(G.edgeBundleOn C v w))
+ b := ↑(#(G.edgeBundleOn C v ?m.242))
+Overfull/CompatibleCircuits/FourStrictSupport.lean:180:4: error: Tactic `apply` failed: could not unify the conclusion of `@filter_congr_decidable`
+  filter ?p ?s = filter ?p ?s
+with the goal
+  {e ∈ C | v ∈ G.edge e ∧ classOf v e = k} = {e ∈ C | v ∈ G.edge e}
+
+Note: The full type of `@filter_congr_decidable` is
+  ∀ {α : Type ?u.4777} (s : Finset α) (p : α → Prop) (h : DecidablePred p) [inst : DecidablePred p],
+    filter p s = filter p s
+
+V : Type u_1
+E : Type u_2
+K : Type u_3
+G : Multigraph V E
+classOf : V → E → K
+C : Finset E
+hadmissible : G.AdmissibleOn classOf C
+hnone : ¬∃ D ⊆ C, G.IsCircuit D ∧ G.Compatible classOf D ∧ #D = 2
+v u w : V
+hvu : v ≠ u
+hvw : v ≠ w
+huw : u ≠ w
+hB : (G.edgeBundleOn C v u).Nonempty
+hD : (G.edgeBundleOn C v w).Nonempty
+hinc : {e ∈ C | v ∈ G.edge e} = G.edgeBundleOn C v u ∪ G.edgeBundleOn C v w
+hstrictu : ∀ (k : K), 2 * #(G.classCutOn classOf C u k {v}) < G.degreeOn C v
+hstrictw : ∀ (k : K), 2 * #(G.classCutOn classOf C w k {v}) < G.degreeOn C v
+hdis : Disjoint (G.edgeBundleOn C v u) (G.edgeBundleOn C v w)
+hdegree : G.degreeOn C v = #(G.edgeBundleOn C v u) + #(G.edgeBundleOn C v w)
+hequal : #(G.edgeBundleOn C v u) = #(G.edgeBundleOn C v w)
+k : K
+hk : ∀ e ∈ G.edgeBundleOn C v u, classOf v e = k
+l : K
+hl : ∀ e ∈ G.edgeBundleOn C v w, classOf v e = l
+hkl : k = l
+⊢ {e ∈ C | v ∈ G.edge e ∧ classOf v e = k} = {e ∈ C | v ∈ G.edge e}

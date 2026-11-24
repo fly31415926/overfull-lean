@@ -1,0 +1,85 @@
+Overfull/CompatibleCircuits/FourStrictSelection.lean:51:63: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  image Q.edge C
+in the target expression
+  s(u, v) ∈ image Q.edge C
+
+E : Type u_2
+K : Type u_3
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+hadmissible : Q.AdmissibleOn classOf C
+hstrict : Q.StrictNonlocalOn classOf C
+hshape : image Q.edge C = square
+hnone : ¬∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ #D = 2
+u v : Fin 4
+huv : s(u, v) ∈ square
+⊢ s(u, v) ∈ image Q.edge C
+Overfull/CompatibleCircuits/FourStrictSelection.lean:59:4: error: No goals to be solved
+Overfull/CompatibleCircuits/FourStrictSelection.lean:64:4: error: No goals to be solved
+Overfull/CompatibleCircuits/FourStrictSelection.lean:129:65: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  image R.edge C
+in the target expression
+  s(u, v) ∈ image R.edge C
+
+E : Type u_2
+K : Type u_3
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+hC : C.Nonempty
+hadmissible : Q.AdmissibleOn classOf C
+hstrict : Q.StrictNonlocalOn classOf C
+hshort : ¬∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ #D ≤ 3
+hnone : ¬∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ #D = 2
+i : Fin 6
+hi : image Q.edge C = renamed diamond (diamondPermutation i)
+σ : Equiv.Perm (Fin 4) := diamondPermutation i
+R : Multigraph (Fin 4) E := Q.renameVertices (Equiv.symm σ)
+classes : Fin 4 → E → K := fun v e => classOf (σ v) e
+hshape : image R.edge C = diamond
+u v : Fin 4
+huv : s(u, v) ∈ diamond
+⊢ s(u, v) ∈ image R.edge C
+Overfull/CompatibleCircuits/FourStrictSelection.lean:131:61: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  image R.edge C
+in the target expression
+  s(2, 3) ∉ image R.edge C
+
+E : Type u_2
+K : Type u_3
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+hC : C.Nonempty
+hadmissible : Q.AdmissibleOn classOf C
+hstrict : Q.StrictNonlocalOn classOf C
+hshort : ¬∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ #D ≤ 3
+hnone : ¬∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ #D = 2
+i : Fin 6
+hi : image Q.edge C = renamed diamond (diamondPermutation i)
+σ : Equiv.Perm (Fin 4) := diamondPermutation i
+R : Multigraph (Fin 4) E := Q.renameVertices (Equiv.symm σ)
+classes : Fin 4 → E → K := fun v e => classOf (σ v) e
+hshape : image R.edge C = diamond
+hpositive : ∀ (u v : Fin 4), s(u, v) ∈ diamond → (R.edgeBundleOn C u v).Nonempty
+⊢ s(2, 3) ∉ image R.edge C
+Overfull/CompatibleCircuits/FourStrictSelection.lean:143:65: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  image Q.edge C
+in the target expression
+  s(u, v) ∈ image Q.edge C
+
+E : Type u_2
+K : Type u_3
+Q : Multigraph (Fin 4) E
+classOf : Fin 4 → E → K
+C : Finset E
+hC : C.Nonempty
+hadmissible : Q.AdmissibleOn classOf C
+hstrict : Q.StrictNonlocalOn classOf C
+hshort : ¬∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ #D ≤ 3
+hnone : ¬∃ D ⊆ C, Q.IsCircuit D ∧ Q.Compatible classOf D ∧ #D = 2
+hi : image Q.edge C = complete
+u v : Fin 4
+huv : s(u, v) ∈ complete
+⊢ s(u, v) ∈ image Q.edge C

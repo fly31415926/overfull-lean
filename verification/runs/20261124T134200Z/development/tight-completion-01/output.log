@@ -1,0 +1,23 @@
+✖ [3169/3169] Building Overfull.CompatibleCircuits.FourTightShoreCompletion (2.2s)
+trace: .> LEAN_PATH=/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean /workspace/scratch/77adbfc63087/toolchain/lean-4.24.0-linux/bin/lean /workspace/scratch/77adbfc63087/overfull-lean/Overfull/CompatibleCircuits/FourTightShoreCompletion.lean -o /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourTightShoreCompletion.olean -i /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/lib/lean/Overfull/CompatibleCircuits/FourTightShoreCompletion.ilean -c /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourTightShoreCompletion.c --setup /workspace/scratch/77adbfc63087/overfull-lean/.lake/build/ir/Overfull/CompatibleCircuits/FourTightShoreCompletion.setup.json --json
+error: Overfull/CompatibleCircuits/FourTightShoreCompletion.lean:57:16: don't know how to synthesize implicit argument `w`
+  @outside_copy_of_not_touch V E inst✝ G X ?m.233 e ht
+context:
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝ : Fintype E
+G : Multigraph V E
+classOf : V → E → K
+X : Finset V
+w : V
+k : K
+P : TightShorePieces G classOf X w k
+e : E
+ht : ¬(G.firstEnd e ∈ X ∨ G.secondEnd e ∈ X)
+⊢ V
+error: Overfull/CompatibleCircuits/FourTightShoreCompletion.lean:57:9: failed to infer `have` declaration type
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.CompatibleCircuits.FourTightShoreCompletion
+error: build failed

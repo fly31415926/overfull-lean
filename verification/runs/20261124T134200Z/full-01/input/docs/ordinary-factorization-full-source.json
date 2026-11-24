@@ -1,0 +1,460 @@
+{
+  "schema_version": 1,
+  "kind": "complete_assertion_source_mapping",
+  "status": "source_mapped_and_semantically_reviewed",
+  "base_commit": "a825b24b0dd0ad6edd336388c740530bcfb38d99",
+  "reconstruction_of": "cb05ef5f5b7ef5ada4e535e9dcc652eecaddc43e",
+  "original_tree_reproduced": false,
+  "date": "2026-11-22",
+  "manuscript_number": "4.2",
+  "manuscript_label": "two:lem:ordinary-special",
+  "numbered_assertions_completed": 1,
+  "statement_sha256": "480b2fb39565bc86acf278addac00ca843da67be5638db6b4328af1ddf08ea97",
+  "pinned_manuscript": {
+    "filename": "Four_Robust_Component_Cases_2026-11-20.tex",
+    "sha256": "4605bdf3ee5b241a7b52dd59d08537fa0a439335cd6f119394cddd4609efffc1",
+    "statement_source_lines": [
+      2207,
+      2220
+    ]
+  },
+  "public_theorems": [
+    "Overfull.ordinary_core_factorization",
+    "Overfull.ordinary_core_one_factorization"
+  ],
+  "scope": "Full ordinary-core Lemma 4.2 under the unchanged recovered public theorem statements: even regular host, sufficiently large even ordinary robust core, bounded exterior, small core deficit, and a coloring of the actual core complement. Output is a coloring and an exact partition of all original copies into k perfect matchings. All uniform constants precede the host. General bipartite factorization and the main theorem remain incomplete.",
+  "module_count": 14,
+  "public_theorem_count": 57,
+  "modules": [
+    {
+      "module": "Overfull.BoundedExterior.ColorFactorization",
+      "path": "Overfull/BoundedExterior/ColorFactorization.lean",
+      "sha256": "060b8935359d89ce7b65ff0e9a0235f979a8f36914e582a0087a5c455c6e6eef",
+      "provenance": "recovered_original_bytes",
+      "public_theorem_count": 4,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BoundedExterior.colorClass_isPerfectMatching",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.BoundedExterior.colorClasses_pairwise_disjoint",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.BoundedExterior.colorClasses_union",
+          "source_line": 40
+        },
+        {
+          "name": "Overfull.BoundedExterior.exists_oneFactorization_of_coloring",
+          "source_line": 49
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BoundedExterior.ExteriorClasses",
+      "path": "Overfull/BoundedExterior/ExteriorClasses.lean",
+      "sha256": "2e6638190d44191a7bfab0456176c2471d1fd1572eb8f59d836055a374dbff3c",
+      "provenance": "recreated",
+      "public_theorem_count": 7,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BoundedExterior.mem_exteriorClass",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.BoundedExterior.exteriorClass_subset_outside",
+          "source_line": 35
+        },
+        {
+          "name": "Overfull.BoundedExterior.exteriorClass_isMatching",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.BoundedExterior.exteriorClass_covers_outside",
+          "source_line": 50
+        },
+        {
+          "name": "Overfull.BoundedExterior.coreComplement_exteriorClass_covers",
+          "source_line": 65
+        },
+        {
+          "name": "Overfull.BoundedExterior.coreComplement_exteriorClass_footprint_bounds",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.BoundedExterior.coreComplement_exteriorClass_split",
+          "source_line": 86
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BoundedExterior.Factorization",
+      "path": "Overfull/BoundedExterior/Factorization.lean",
+      "sha256": "8754cbdd72f0de3ae547260bb13b835dfdbc16766b0af9eac2b53322aa16401f",
+      "provenance": "recreated",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BoundedExterior.augmented_shores_compl",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.BoundedExterior.exterior_partition_even",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.BoundedExterior.selected_core_degree_sums",
+          "source_line": 44
+        },
+        {
+          "name": "Overfull.BoundedExterior.exists_balanced_selected_coloring",
+          "source_line": 82
+        },
+        {
+          "name": "Overfull.BoundedExterior.core_copies_cross_augmented",
+          "source_line": 112
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BoundedExterior.MatchingSplit",
+      "path": "Overfull/BoundedExterior/MatchingSplit.lean",
+      "sha256": "88173df1b3aebbb0bbc5f2ca5f27ce3bae0053bbedb62815a036f17f767af404",
+      "provenance": "recovered_original_bytes",
+      "public_theorem_count": 10,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BoundedExterior.mem_coreFootprint",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.BoundedExterior.coreFootprint_subset",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.BoundedExterior.mem_coreFootprintSubtype",
+          "source_line": 36
+        },
+        {
+          "name": "Overfull.BoundedExterior.coreFootprintSubtype_map",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.BoundedExterior.coreFootprintSubtype_card",
+          "source_line": 53
+        },
+        {
+          "name": "Overfull.BoundedExterior.coreFootprintSubtype_inter_card",
+          "source_line": 57
+        },
+        {
+          "name": "Overfull.BoundedExterior.matching_footprint_bounds",
+          "source_line": 68
+        },
+        {
+          "name": "Overfull.BoundedExterior.exists_balanced_exterior_split",
+          "source_line": 192
+        },
+        {
+          "name": "Overfull.BoundedExterior.matching_footprintSubtype_bounds",
+          "source_line": 294
+        },
+        {
+          "name": "Overfull.BoundedExterior.exists_balanced_exterior_split_subtype",
+          "source_line": 304
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BoundedExterior.ReserveChoice",
+      "path": "Overfull/BoundedExterior/ReserveChoice.lean",
+      "sha256": "c984f58611b26534a0f795c2f14d81f8bae3d732966dc7f603dad97964216ad4",
+      "provenance": "recreated",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BoundedExterior.exists_originalReserve",
+          "source_line": 40
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BoundedExterior.ReserveLabels",
+      "path": "Overfull/BoundedExterior/ReserveLabels.lean",
+      "sha256": "938859d094cc5e675b9dc15ee8467aa88e07ab1d9e47bc6d453abd498e964963",
+      "provenance": "recreated",
+      "public_theorem_count": 9,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BoundedExterior.reserveDenominator_pos",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.BoundedExterior.reserveDenominator_ge_eight",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.BoundedExterior.reserveDenominator_factor",
+          "source_line": 31
+        },
+        {
+          "name": "Overfull.BoundedExterior.reserveCount_mul_le",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.BoundedExterior.reserveCount_le_eighth",
+          "source_line": 45
+        },
+        {
+          "name": "Overfull.BoundedExterior.reserveCount_pos_of_large",
+          "source_line": 50
+        },
+        {
+          "name": "Overfull.BoundedExterior.reserveCount_lower_of_large",
+          "source_line": 57
+        },
+        {
+          "name": "Overfull.BoundedExterior.exists_labels_avoiding",
+          "source_line": 73
+        },
+        {
+          "name": "Overfull.BoundedExterior.exists_labels_avoiding_reserve",
+          "source_line": 90
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BoundedExterior.ReservedColors",
+      "path": "Overfull/BoundedExterior/ReservedColors.lean",
+      "sha256": "00f622c56d40bc46337155b0749b47e12016ac85d31541efe8b778194b6ec481",
+      "provenance": "recreated",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BoundedExterior.exists_uniform_factorization_of_reserved_colors",
+          "source_line": 23
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BoundedExterior.ResidualReserve",
+      "path": "Overfull/BoundedExterior/ResidualReserve.lean",
+      "sha256": "a9a9a8d742588e51537b9f8a3c59243864a28c3c7481ad24a37d88394bb3523b",
+      "provenance": "recreated",
+      "public_theorem_count": 4,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BoundedExterior.mem_residualReservedLabels",
+          "source_line": 27
+        },
+        {
+          "name": "Overfull.BoundedExterior.residualReservedLabels_map",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.BoundedExterior.residualReservedLabels_card",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.BoundedExterior.residualReservedLabels_crossing",
+          "source_line": 58
+        }
+      ]
+    },
+    {
+      "module": "Overfull.BoundedExterior.SelectedColoring",
+      "path": "Overfull/BoundedExterior/SelectedColoring.lean",
+      "sha256": "b135b6380e736adcc86b8a7bb948dd45d32f1f672bec41791dc56af530576451",
+      "provenance": "recreated",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.BoundedExterior.exists_selected_coloring",
+          "source_line": 27
+        }
+      ]
+    },
+    {
+      "module": "Overfull.OrdinaryFactorization.BoundedCutReserve",
+      "path": "Overfull/OrdinaryFactorization/BoundedCutReserve.lean",
+      "sha256": "a65dfcbdbe8199233603c8027740ca67dfdaa3d869bb709e9eface84a090e0d1",
+      "provenance": "recreated",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.OrdinaryFactorization.exists_cut_reserve_of_two_robust_parameters_with_bounded_footprints",
+          "source_line": 21
+        },
+        {
+          "name": "Overfull.OrdinaryFactorization.exists_cut_reserve_with_bounded_footprints",
+          "source_line": 100
+        }
+      ]
+    },
+    {
+      "module": "Overfull.OrdinaryFactorization.FirstHalfBounded",
+      "path": "Overfull/OrdinaryFactorization/FirstHalfBounded.lean",
+      "sha256": "36f8b20072f72d0f7d7ca2737d53e7e56ebaf334e046c52301808bed2486b6be",
+      "provenance": "recreated",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints",
+          "source_line": 38
+        }
+      ]
+    },
+    {
+      "module": "Overfull.OrdinaryFactorization.Full",
+      "path": "Overfull/OrdinaryFactorization/Full.lean",
+      "sha256": "898e84fee1c8301a2de7c2b03b10ee39d5f7b7f96f2f3cac2fc7ea788582604e",
+      "provenance": "recovered_original_bytes",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.OrdinaryFactorization.exists_uniform_ordinary_core_factorization",
+          "source_line": 40
+        },
+        {
+          "name": "Overfull.ordinary_core_factorization",
+          "source_line": 214
+        },
+        {
+          "name": "Overfull.ordinary_core_one_factorization",
+          "source_line": 241
+        }
+      ]
+    },
+    {
+      "module": "Overfull.OrdinaryFactorization.ReductionBounded",
+      "path": "Overfull/OrdinaryFactorization/ReductionBounded.lean",
+      "sha256": "94d0afe7c2aa997749aa603ced7b5b10f696e0c6832d4509122903dfa0cb975b",
+      "provenance": "recreated",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_bounded_footprints",
+          "source_line": 25
+        }
+      ]
+    },
+    {
+      "module": "Overfull.PairedCut.BalancedFootprints",
+      "path": "Overfull/PairedCut/BalancedFootprints.lean",
+      "sha256": "0f285eb78fb2c4f2880c40da22f2c387325fea36ae598bff1bbdff271f702636",
+      "provenance": "recreated",
+      "public_theorem_count": 8,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.PairedCut.balanced_footprint_probability",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.PairedCut.exists_balanced_footprints_outside",
+          "source_line": 71
+        },
+        {
+          "name": "Overfull.PairedCut.orientation_error_lt_positive",
+          "source_line": 164
+        },
+        {
+          "name": "Overfull.PairedCut.exists_orientation_balanced_footprints_of_error_bound",
+          "source_line": 192
+        },
+        {
+          "name": "Overfull.PairedCut.exists_orientation_balanced_footprints",
+          "source_line": 279
+        },
+        {
+          "name": "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints",
+          "source_line": 342
+        },
+        {
+          "name": "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters_balanced_footprints",
+          "source_line": 432
+        },
+        {
+          "name": "Overfull.PairedCut.paired_cut_quantitative_balanced_footprints",
+          "source_line": 491
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.BoundedExterior.augmented_shores_compl",
+    "Overfull.BoundedExterior.colorClass_isPerfectMatching",
+    "Overfull.BoundedExterior.colorClasses_pairwise_disjoint",
+    "Overfull.BoundedExterior.colorClasses_union",
+    "Overfull.BoundedExterior.coreComplement_exteriorClass_covers",
+    "Overfull.BoundedExterior.coreComplement_exteriorClass_footprint_bounds",
+    "Overfull.BoundedExterior.coreComplement_exteriorClass_split",
+    "Overfull.BoundedExterior.coreFootprintSubtype_card",
+    "Overfull.BoundedExterior.coreFootprintSubtype_inter_card",
+    "Overfull.BoundedExterior.coreFootprintSubtype_map",
+    "Overfull.BoundedExterior.coreFootprint_subset",
+    "Overfull.BoundedExterior.core_copies_cross_augmented",
+    "Overfull.BoundedExterior.exists_balanced_exterior_split",
+    "Overfull.BoundedExterior.exists_balanced_exterior_split_subtype",
+    "Overfull.BoundedExterior.exists_balanced_selected_coloring",
+    "Overfull.BoundedExterior.exists_labels_avoiding",
+    "Overfull.BoundedExterior.exists_labels_avoiding_reserve",
+    "Overfull.BoundedExterior.exists_oneFactorization_of_coloring",
+    "Overfull.BoundedExterior.exists_originalReserve",
+    "Overfull.BoundedExterior.exists_selected_coloring",
+    "Overfull.BoundedExterior.exists_uniform_factorization_of_reserved_colors",
+    "Overfull.BoundedExterior.exteriorClass_covers_outside",
+    "Overfull.BoundedExterior.exteriorClass_isMatching",
+    "Overfull.BoundedExterior.exteriorClass_subset_outside",
+    "Overfull.BoundedExterior.exterior_partition_even",
+    "Overfull.BoundedExterior.matching_footprintSubtype_bounds",
+    "Overfull.BoundedExterior.matching_footprint_bounds",
+    "Overfull.BoundedExterior.mem_coreFootprint",
+    "Overfull.BoundedExterior.mem_coreFootprintSubtype",
+    "Overfull.BoundedExterior.mem_exteriorClass",
+    "Overfull.BoundedExterior.mem_residualReservedLabels",
+    "Overfull.BoundedExterior.reserveCount_le_eighth",
+    "Overfull.BoundedExterior.reserveCount_lower_of_large",
+    "Overfull.BoundedExterior.reserveCount_mul_le",
+    "Overfull.BoundedExterior.reserveCount_pos_of_large",
+    "Overfull.BoundedExterior.reserveDenominator_factor",
+    "Overfull.BoundedExterior.reserveDenominator_ge_eight",
+    "Overfull.BoundedExterior.reserveDenominator_pos",
+    "Overfull.BoundedExterior.residualReservedLabels_card",
+    "Overfull.BoundedExterior.residualReservedLabels_crossing",
+    "Overfull.BoundedExterior.residualReservedLabels_map",
+    "Overfull.BoundedExterior.selected_core_degree_sums",
+    "Overfull.OrdinaryFactorization.exists_cut_reserve_of_two_robust_parameters_with_bounded_footprints",
+    "Overfull.OrdinaryFactorization.exists_cut_reserve_with_bounded_footprints",
+    "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_bounded_footprints",
+    "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_bounded_footprints",
+    "Overfull.OrdinaryFactorization.exists_uniform_ordinary_core_factorization",
+    "Overfull.PairedCut.balanced_footprint_probability",
+    "Overfull.PairedCut.exists_balanced_footprints_outside",
+    "Overfull.PairedCut.exists_orientation_balanced_footprints",
+    "Overfull.PairedCut.exists_orientation_balanced_footprints_of_error_bound",
+    "Overfull.PairedCut.exists_prescribed_pair_cut_balanced_footprints",
+    "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters_balanced_footprints",
+    "Overfull.PairedCut.orientation_error_lt_positive",
+    "Overfull.PairedCut.paired_cut_quantitative_balanced_footprints",
+    "Overfull.ordinary_core_factorization",
+    "Overfull.ordinary_core_one_factorization"
+  ],
+  "complete_declaration_map": "../verification/ordinary-factorization-full-declarations.json",
+  "complete_axiom_log": "../verification/axioms.log",
+  "complete_build_log": "../verification/build.log",
+  "verification_report": "../verification/results.json",
+  "semantic_review": "ordinary-factorization-full-semantic-review.md",
+  "reconstruction_provenance": "checkpoint-reconstruction-source.json",
+  "unrelated_assertions_not_claimed": [
+    "1.1",
+    "2.24",
+    "4.4",
+    "4.5",
+    "4.6",
+    "4.16",
+    "6.1",
+    "6.2",
+    "6.3"
+  ]
+}

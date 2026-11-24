@@ -1,0 +1,1091 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "3991bb7eee091a329046073e0366daa84a603e5d",
+  "baseline_tree": "6424bf81123aa75b2254aea7eceff6260611f397",
+  "baseline_publication_status": "both_remote_branches_independently_verified",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "scope": "Complete compatible-circuit existence on at most four labels from only the original global half-cut inequalities and even selected degrees. No bounded multiplicity, bounded degree, connectedness, pre-existing partition or selector is assumed. Tight nonlocal shores are normalized, inside and outside partitions are constructed from the proved three-label theorem, and every original copy is restored through disjoint blocks and saved closed pieces. Strict nonlocal inputs have a constructed safely removable pair or triangle; induction uses arbitrary admissible even residuals. Arbitrary selected copy sets and finite label types of size at most four are covered. Original-host applications construct unrestricted even-fiber and two-odd-fiber joining decompositions with exact footprints, including the even-regular half-joining-degree interface. The full four-core terminal Proposition 4.16, Theorem 4.17 and main theorem are not asserted. All 69 numbered records and the 49 completed count remain unchanged.",
+  "review": "docs/four-label-existence-semantic-review.md",
+  "proof_map": "docs/four-label-existence-verification.md",
+  "public_theorems": [
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_four",
+    "Overfull.Multigraph.exists_safe_short_circuit_of_four_strictNonlocal",
+    "Overfull.FourOdd.exists_compatibleCircuitPartition_of_tight_shore",
+    "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers",
+    "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_degree_bound",
+    "Overfull.FourOdd.exists_fourTwoOddJoining_decomposition"
+  ],
+  "module_count": 28,
+  "public_theorem_count": 168,
+  "modules": [
+    {
+      "module": "Overfull.CompatibleCircuits.FourCharacterization",
+      "path": "Overfull/CompatibleCircuits/FourCharacterization.lean",
+      "sha256": "6a832b965756a005e5a1df9ab93f8c221ecc830b82b5dbcc12dfb17220724636",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.CompatibleCircuitPartition.even_degrees",
+          "source_line": 21
+        },
+        {
+          "name": "Overfull.Multigraph.compatibleCircuitPartition_iff_admissible_and_even_of_card_le_four",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.Multigraph.fourLabel_compatibleCircuitPartition_iff_admissible_and_even",
+          "source_line": 51
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourExistence",
+      "path": "Overfull/CompatibleCircuits/FourExistence.lean",
+      "sha256": "e03d30e032bbc00f212529405c8d3aad5804578d4fe49fb0c18e014d22cad028",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_selected_tight_shore",
+          "source_line": 31
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label",
+          "source_line": 59
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_four",
+          "source_line": 86
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourJoiningComplete",
+      "path": "Overfull/CompatibleCircuits/FourJoiningComplete.lean",
+      "sha256": "a7733333226233c4f8f6aecd459ee1358873b85120a91e59243065207b0a280c",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers",
+          "source_line": 27
+        },
+        {
+          "name": "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_degree_bound",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.FourOdd.exists_fourTwoOddJoining_decomposition",
+          "source_line": 56
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourNonlocalReduction",
+      "path": "Overfull/CompatibleCircuits/FourNonlocalReduction.lean",
+      "sha256": "f7d06e58f836e3cd3155d6f8917681b70f2aa5e29bafabc2a85e49bfd80aea96",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.fourLabel_nonlocal_shore_card_le_two",
+          "source_line": 19
+        },
+        {
+          "name": "Overfull.Multigraph.fourLabel_tight_shore_normalization",
+          "source_line": 40
+        },
+        {
+          "name": "Overfull.Multigraph.exists_small_tight_shore_of_not_four_strictNonlocal",
+          "source_line": 66
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourStrictCoarsening",
+      "path": "Overfull/CompatibleCircuits/FourStrictCoarsening.lean",
+      "sha256": "321806b885cd897d19343938ba02fd1e92ce46ebca80f2217fd4e3a2604420ef",
+      "public_theorem_count": 11,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.nonlocalShore_toggle_iff",
+          "source_line": 36
+        },
+        {
+          "name": "Overfull.Multigraph.complement_class_cut_strict_of_local_tight",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.Multigraph.strictNonlocalOn_localCoarsening",
+          "source_line": 72
+        },
+        {
+          "name": "Overfull.Multigraph.exists_strict_globally_admissible_localCoarsening",
+          "source_line": 99
+        },
+        {
+          "name": "Overfull.Multigraph.nonlocalShore_compl_iff",
+          "source_line": 109
+        },
+        {
+          "name": "Overfull.Multigraph.nonlocalShore_singleton",
+          "source_line": 120
+        },
+        {
+          "name": "Overfull.Multigraph.StrictNonlocalOn.singleton_bound",
+          "source_line": 137
+        },
+        {
+          "name": "Overfull.Multigraph.strictNonlocalOn_iff_no_tight_nonlocal",
+          "source_line": 147
+        },
+        {
+          "name": "Overfull.Multigraph.singleton_or_compl_of_not_nonlocal",
+          "source_line": 164
+        },
+        {
+          "name": "Overfull.Multigraph.IsCircuit.meets_local_tight_of_localCoarsening",
+          "source_line": 194
+        },
+        {
+          "name": "Overfull.Multigraph.admissibleOn_sdiff_of_strict_nonlocal_small_coarse_circuit",
+          "source_line": 225
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourStrictComplete",
+      "path": "Overfull/CompatibleCircuits/FourStrictComplete.lean",
+      "sha256": "0098a934ca7aa574fda68f7c88706b95e7ddbd906819562ee97a43719701fb22",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.CompatibleCircuits.four_positive_triangle_corner_bounds_false",
+          "source_line": 17
+        },
+        {
+          "name": "Overfull.Multigraph.fourLabel_cut_bundle_sum",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.Multigraph.fourLabel_bundle_eq_named",
+          "source_line": 75
+        },
+        {
+          "name": "Overfull.Multigraph.fourLabel_degree_bundle_counts",
+          "source_line": 82
+        },
+        {
+          "name": "Overfull.Multigraph.fourLabel_two_shore_bundle_counts",
+          "source_line": 114
+        },
+        {
+          "name": "Overfull.Multigraph.exists_short_compatible_circuit_of_four_complete_support",
+          "source_line": 147
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourStrictCycle",
+      "path": "Overfull/CompatibleCircuits/FourStrictCycle.lean",
+      "sha256": "9cf3434078dbd203922d0ee9347beff7660ed889c4d8d8b96a4ecd3836f0b605",
+      "public_theorem_count": 9,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.CompatibleCircuits.UniformCycle.previous_ne",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.UniformCycle.next_ne",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.UniformCycle.previous_ne_next",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.UniformCycle.pair_previous",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.UniformCycle.pair_next",
+          "source_line": 27
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.UniformCycle.incident_pair_iff",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.Multigraph.fourCycle_incident_copies",
+          "source_line": 40
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_strict_four_cycle",
+          "source_line": 58
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_strictNonlocal_four_cycle",
+          "source_line": 122
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourStrictDiamond",
+      "path": "Overfull/CompatibleCircuits/FourStrictDiamond.lean",
+      "sha256": "12fe4c095e096c550e42b487ff0ba21aec9460cb648183cd1dd9115e9b9fdcc9",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.fourLabel_diamond_incidence",
+          "source_line": 19
+        },
+        {
+          "name": "Overfull.Multigraph.exists_short_compatible_circuit_of_four_diamond_support",
+          "source_line": 42
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourStrictSafeSelection",
+      "path": "Overfull/CompatibleCircuits/FourStrictSafeSelection.lean",
+      "sha256": "f6a8a9841e2e00d44a57cfa20b8a1102845ba62625b88bf2569d5be1a67d8960",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.exists_safe_short_circuit_of_four_strictNonlocal",
+          "source_line": 21
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourStrictSelection",
+      "path": "Overfull/CompatibleCircuits/FourStrictSelection.lean",
+      "sha256": "351c956aae1298546204474bbe12b1fb0876f3cb109520266a6033e3b796f5f4",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.edgeBundleOn_nonempty_iff_mem_image",
+          "source_line": 21
+        },
+        {
+          "name": "Overfull.Multigraph.edgeBundleOn_eq_empty_of_not_mem_image",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.Multigraph.strictNonlocal_square_support_has_pair",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.Multigraph.exists_short_compatible_circuit_of_four_strictNonlocal",
+          "source_line": 97
+        },
+        {
+          "name": "Overfull.Multigraph.short_compatible_circuit_or_partition_of_four_strictNonlocal",
+          "source_line": 159
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourStrictSupport",
+      "path": "Overfull/CompatibleCircuits/FourStrictSupport.lean",
+      "sha256": "6df81cbfcd56569d4d6e4b299233ab88569839b8e48c868e185929b25c725740",
+      "public_theorem_count": 7,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.compatible_parallel_pair_of_endpoint_classes",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.Multigraph.bundle_monochromatic_of_no_compatible_pair",
+          "source_line": 45
+        },
+        {
+          "name": "Overfull.Multigraph.monochromatic_bundle_local_bound",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.Multigraph.no_single_bundle_incidence_of_no_compatible_pair",
+          "source_line": 82
+        },
+        {
+          "name": "Overfull.Multigraph.dominant_bundle_not_monochromatic_at_other",
+          "source_line": 105
+        },
+        {
+          "name": "Overfull.Multigraph.two_bundle_dominant_is_tight",
+          "source_line": 118
+        },
+        {
+          "name": "Overfull.Multigraph.two_neighbor_bundle_structure",
+          "source_line": 140
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourStrictTriangles",
+      "path": "Overfull/CompatibleCircuits/FourStrictTriangles.lean",
+      "sha256": "fbe05b8ab181dc558f4700947e617f6987274fccc1551d65c33401c63e25ea73",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.cutOn_mem_of_endpoints",
+          "source_line": 19
+        },
+        {
+          "name": "Overfull.Multigraph.isCircuit_triangle_of_distinct_vertices",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.Multigraph.compatible_triangle_of_endpoint_classes",
+          "source_line": 89
+        },
+        {
+          "name": "Overfull.Multigraph.triangle_common_corner_of_no_short_circuit",
+          "source_line": 106
+        },
+        {
+          "name": "Overfull.Multigraph.common_corner_local_bound",
+          "source_line": 141
+        },
+        {
+          "name": "Overfull.Multigraph.common_corner_strict_cut_bound",
+          "source_line": 173
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourSupportClassification",
+      "path": "Overfull/CompatibleCircuits/FourSupportClassification.lean",
+      "sha256": "27b7a34db9d5803af55c90a7779309e86ba1046b4597cb675ae56455227efc99",
+      "public_theorem_count": 4,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.CompatibleCircuits.FourSupport.classify_min_degree_two",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.Multigraph.StrictNonlocalOn.four_degree_pos",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.Multigraph.StrictNonlocalOn.four_support_degree_ge_two",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.Multigraph.StrictNonlocalOn.four_support_classification",
+          "source_line": 110
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourSupportReduction",
+      "path": "Overfull/CompatibleCircuits/FourSupportReduction.lean",
+      "sha256": "796fb64d76b8d23e4c5a88abb16a4f77e2e2871292d8cd857b8bc3982125f6e1",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.StrictNonlocalOn.renameVertices",
+          "source_line": 18
+        },
+        {
+          "name": "Overfull.Multigraph.renameVertices_support_of_shape",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_strictNonlocal_square_support",
+          "source_line": 63
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourTightShoreAssembly",
+      "path": "Overfull/CompatibleCircuits/FourTightShoreAssembly.lean",
+      "sha256": "4da0de1bfb78e9a88c4b8a4089439ba1e5580c0f66e12a4902342a9d5f2395e2",
+      "public_theorem_count": 7,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outside_copies_eq_of_mem",
+          "source_line": 31
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outsideBlock_disjoint",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outsideBlock_compatible",
+          "source_line": 70
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outsideBlock_inner_even",
+          "source_line": 79
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outsideBlock_outer_degree",
+          "source_line": 95
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outsideBlock_outer_incidence_class",
+          "source_line": 108
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outsideBlock_common_class",
+          "source_line": 123
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourTightShoreBlocks",
+      "path": "Overfull/CompatibleCircuits/FourTightShoreBlocks.lean",
+      "sha256": "4ca81d126902b3891067ed916bbf7173dfae0b1a08cbbbd317d9fe250466ae1c",
+      "public_theorem_count": 8,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.exists_part_of_touch",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outsideBlock_contains_self",
+          "source_line": 41
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outsideBlock_eq_of_mem",
+          "source_line": 49
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outsideBlock_eq_singleton_of_no_touch",
+          "source_line": 60
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outsideBlock_cases",
+          "source_line": 71
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.mem_closedParts",
+          "source_line": 86
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outsideBlock_nonempty",
+          "source_line": 93
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.closedPart_disjoint_outsideBlock",
+          "source_line": 98
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourTightShoreClosed",
+      "path": "Overfull/CompatibleCircuits/FourTightShoreClosed.lean",
+      "sha256": "4b9b2407f8e57b2c4786dfe8ba277777574e6351d7faaed797748b57823350fc",
+      "public_theorem_count": 7,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.outside_endpoint_eq_anchor_of_not_joining",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.closedPart_outside_incidence_eq_anchor",
+          "source_line": 48
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.closedPart_anchor_degree",
+          "source_line": 57
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.closedPart_outside_degree_zero",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.closedPart_even_degrees",
+          "source_line": 92
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.exists_partition_closedPart",
+          "source_line": 121
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.exists_partition_closedParts",
+          "source_line": 129
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourTightShoreCompletion",
+      "path": "Overfull/CompatibleCircuits/FourTightShoreCompletion.lean",
+      "sha256": "10f4abd9d729b6a79992fb33347a5c3978d0208b20090a07e1b3b9b3eec239ed",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outside_copy_of_not_touch",
+          "source_line": 30
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outsideBlock_union_closedParts_cover",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outsideBlock_disjoint_closedParts",
+          "source_line": 65
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.exists_partition_of_outside_partition",
+          "source_line": 88
+        },
+        {
+          "name": "Overfull.FourOdd.exists_compatibleCircuitPartition_of_tight_shore",
+          "source_line": 102
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourTightShoreContraction",
+      "path": "Overfull/CompatibleCircuits/FourTightShoreContraction.lean",
+      "sha256": "bc7c56c21f411f457d21e2df7e30583743bd5959e23ae179cafda0e3899e53b4",
+      "public_theorem_count": 9,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.joiningIncidenceClass_incident_iff",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.FourOdd.joiningIncidenceClass_classCutOn_image",
+          "source_line": 58
+        },
+        {
+          "name": "Overfull.FourOdd.joiningIncidenceClass_classCutOn_image_on",
+          "source_line": 99
+        },
+        {
+          "name": "Overfull.FourOdd.joiningIncidenceClass_admissible",
+          "source_line": 140
+        },
+        {
+          "name": "Overfull.FourOdd.joiningQuotient_even_degrees_of_even_degrees",
+          "source_line": 158
+        },
+        {
+          "name": "Overfull.Multigraph.admissibleOn_coarsenTightClassAt",
+          "source_line": 181
+        },
+        {
+          "name": "Overfull.Multigraph.IsCircuit.coarsenTightClassAt_counts",
+          "source_line": 203
+        },
+        {
+          "name": "Overfull.Multigraph.Compatible.of_coarsenTightClassAt",
+          "source_line": 232
+        },
+        {
+          "name": "Overfull.FourOdd.joiningIncidenceClass_compatible_image",
+          "source_line": 256
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourTightShoreExpansion",
+      "path": "Overfull/CompatibleCircuits/FourTightShoreExpansion.lean",
+      "sha256": "08650aa52d59801a1dd460c0b41da849cf9b66b7c975934ced2b7d89d580507b",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.degreeOn_biUnion_disjoint",
+          "source_line": 67
+        },
+        {
+          "name": "Overfull.Multigraph.CompatibleBlockExpansion.compatible_biUnion",
+          "source_line": 106
+        },
+        {
+          "name": "Overfull.Multigraph.CompatibleBlockExpansion.even_degrees_biUnion",
+          "source_line": 125
+        },
+        {
+          "name": "Overfull.Multigraph.CompatibleBlockExpansion.disjoint_biUnion",
+          "source_line": 145
+        },
+        {
+          "name": "Overfull.Multigraph.CompatibleBlockExpansion.exists_partition_biUnion",
+          "source_line": 168
+        },
+        {
+          "name": "Overfull.Multigraph.CompatibleBlockExpansion.exists_partition_of_partition",
+          "source_line": 179
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourTightShoreInside",
+      "path": "Overfull/CompatibleCircuits/FourTightShoreInside.lean",
+      "sha256": "2e08ca1609e6307ebe2cf45523b237486e1d8e08adec4ac1a7bdac67f954a384",
+      "public_theorem_count": 9,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.shoreCollapseLabel_eq_none",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.FourOdd.shoreCollapseLabel_eq_some",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.FourOdd.labelShore_shoreCollapseLabel_apex",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.FourOdd.labelShore_shoreCollapseLabel_inside",
+          "source_line": 50
+        },
+        {
+          "name": "Overfull.FourOdd.joiningCopies_shoreCollapseLabel",
+          "source_line": 58
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreInsideClass_local_tight",
+          "source_line": 81
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreInside_admissible",
+          "source_line": 109
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreInside_even_degrees",
+          "source_line": 124
+        },
+        {
+          "name": "Overfull.FourOdd.exists_tightShoreInside_partition",
+          "source_line": 131
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourTightShoreOutside",
+      "path": "Overfull/CompatibleCircuits/FourTightShoreOutside.lean",
+      "sha256": "f9efe2600330d277462848d8661aef6f3ddc21d47d7376acb3956ee93ba890a5",
+      "public_theorem_count": 13,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.cutOn_union_card_of_disjoint",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.Multigraph.classCutOn_disjoint_shores",
+          "source_line": 46
+        },
+        {
+          "name": "Overfull.Multigraph.classCutOn_union_of_outside",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.Multigraph.tight_shore_redirected_class_bound",
+          "source_line": 78
+        },
+        {
+          "name": "Overfull.FourOdd.shoreIntoLabel_not_mem",
+          "source_line": 117
+        },
+        {
+          "name": "Overfull.FourOdd.labelShore_shoreIntoLabel_disjoint",
+          "source_line": 121
+        },
+        {
+          "name": "Overfull.FourOdd.labelShore_shoreIntoLabel_anchor_not_mem",
+          "source_line": 129
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreOutsideClass_incident",
+          "source_line": 135
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreOutside_classCutOn_image_subset",
+          "source_line": 150
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreOutside_admissible",
+          "source_line": 185
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreOutside_even_degrees",
+          "source_line": 224
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreOutside_support_subset",
+          "source_line": 229
+        },
+        {
+          "name": "Overfull.FourOdd.exists_tightShoreOutside_partition",
+          "source_line": 243
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourTightShoreOutsideGeometry",
+      "path": "Overfull/CompatibleCircuits/FourTightShoreOutsideGeometry.lean",
+      "sha256": "9007aa2fb974d00218a4ec1c39bdd45961651172dbb4a1d0b50d1431afefeb37",
+      "public_theorem_count": 8,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.tightShoreOutside_touches_iff_boundary",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreOutside_touch_not_anchor",
+          "source_line": 36
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreOutside_incident_iff",
+          "source_line": 52
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreOutside_incidence_class_of_endpoint",
+          "source_line": 70
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreOutside_original_incidence",
+          "source_line": 86
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreOutside_redirected_incidence",
+          "source_line": 96
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreOutside_edge_of_not_touch",
+          "source_line": 114
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreOutside_boundary_endpoints",
+          "source_line": 125
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourTightShorePairing",
+      "path": "Overfull/CompatibleCircuits/FourTightShorePairing.lean",
+      "sha256": "b44b8b05eb4365597a1f7c234335a0cd54a61207dcef22de6f7ba9e739e19684",
+      "public_theorem_count": 8,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.copy_touches",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outside_incidence_in_cut",
+          "source_line": 36
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.degreeOn_outside_eq_cut",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.exists_boundary_pair",
+          "source_line": 65
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.boundary_pair_of_complement",
+          "source_line": 91
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.part_eq_of_common_copy",
+          "source_line": 103
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.even_degrees_of_boundary_empty",
+          "source_line": 109
+        },
+        {
+          "name": "Overfull.Multigraph.outside_incident_eq_of_cut",
+          "source_line": 127
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourTightShorePieceGeometry",
+      "path": "Overfull/CompatibleCircuits/FourTightShorePieceGeometry.lean",
+      "sha256": "a594c11090936420a789e6d0985062c8baa6eead6b060ed4673d069c97c9bb06",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outside_copy_in_complement",
+          "source_line": 29
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outside_degree_eq_indicator",
+          "source_line": 44
+        },
+        {
+          "name": "Overfull.FourOdd.TightShorePieces.outside_incidence_class",
+          "source_line": 79
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourTightShorePieces",
+      "path": "Overfull/CompatibleCircuits/FourTightShorePieces.lean",
+      "sha256": "ebeedf26c1d0bb7224ec95b7621b0c209245d0ed0a4d5baaa885908565738803",
+      "public_theorem_count": 7,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.tightShoreInside_degreeOn_inside",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreInside_degreeOn_apex",
+          "source_line": 33
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreInside_classCutOn_apex",
+          "source_line": 43
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreInside_piece_compatible",
+          "source_line": 60
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreInside_piece_even_inside",
+          "source_line": 70
+        },
+        {
+          "name": "Overfull.FourOdd.tightShoreInside_piece_boundary",
+          "source_line": 79
+        },
+        {
+          "name": "Overfull.FourOdd.exists_tightShorePieces",
+          "source_line": 178
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourTightShoreRestriction",
+      "path": "Overfull/CompatibleCircuits/FourTightShoreRestriction.lean",
+      "sha256": "23a43eec041bcf984a50f76080d6344018b3c4097bfb50378057694cdcad3e81",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.copyEmbedding_classCut",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.Multigraph.restrictEdges_univ_map",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.Multigraph.restrictEdges_degreeOn_univ",
+          "source_line": 40
+        },
+        {
+          "name": "Overfull.Multigraph.restrictEdges_cutOn_univ_card",
+          "source_line": 48
+        },
+        {
+          "name": "Overfull.Multigraph.restrictEdges_classCutOn_univ_card",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.Multigraph.restrictEdges_admissibleOn_univ_iff",
+          "source_line": 67
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.FourUniformCycle",
+      "path": "Overfull/CompatibleCircuits/FourUniformCycle.lean",
+      "sha256": "e6a0ceac0b05a583ccf888e08bec4f7091029a1f9d550476bf360d6b345b23b9",
+      "public_theorem_count": 6,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_uniform_simple_template",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.UniformCycle.pairs_injective",
+          "source_line": 107
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.UniformCycle.pairs_loopless",
+          "source_line": 109
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.UniformCycle.graph_degree",
+          "source_line": 115
+        },
+        {
+          "name": "Overfull.CompatibleCircuits.UniformCycle.graph_isCircuit",
+          "source_line": 123
+        },
+        {
+          "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_uniform_four_cycle",
+          "source_line": 141
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.CompatibleCircuits.FourSupport.classify_min_degree_two",
+    "Overfull.CompatibleCircuits.UniformCycle.graph_degree",
+    "Overfull.CompatibleCircuits.UniformCycle.graph_isCircuit",
+    "Overfull.CompatibleCircuits.UniformCycle.incident_pair_iff",
+    "Overfull.CompatibleCircuits.UniformCycle.next_ne",
+    "Overfull.CompatibleCircuits.UniformCycle.pair_next",
+    "Overfull.CompatibleCircuits.UniformCycle.pair_previous",
+    "Overfull.CompatibleCircuits.UniformCycle.pairs_injective",
+    "Overfull.CompatibleCircuits.UniformCycle.pairs_loopless",
+    "Overfull.CompatibleCircuits.UniformCycle.previous_ne",
+    "Overfull.CompatibleCircuits.UniformCycle.previous_ne_next",
+    "Overfull.CompatibleCircuits.four_positive_triangle_corner_bounds_false",
+    "Overfull.FourOdd.TightShorePieces.boundary_pair_of_complement",
+    "Overfull.FourOdd.TightShorePieces.closedPart_anchor_degree",
+    "Overfull.FourOdd.TightShorePieces.closedPart_disjoint_outsideBlock",
+    "Overfull.FourOdd.TightShorePieces.closedPart_even_degrees",
+    "Overfull.FourOdd.TightShorePieces.closedPart_outside_degree_zero",
+    "Overfull.FourOdd.TightShorePieces.closedPart_outside_incidence_eq_anchor",
+    "Overfull.FourOdd.TightShorePieces.copy_touches",
+    "Overfull.FourOdd.TightShorePieces.degreeOn_outside_eq_cut",
+    "Overfull.FourOdd.TightShorePieces.even_degrees_of_boundary_empty",
+    "Overfull.FourOdd.TightShorePieces.exists_boundary_pair",
+    "Overfull.FourOdd.TightShorePieces.exists_part_of_touch",
+    "Overfull.FourOdd.TightShorePieces.exists_partition_closedPart",
+    "Overfull.FourOdd.TightShorePieces.exists_partition_closedParts",
+    "Overfull.FourOdd.TightShorePieces.exists_partition_of_outside_partition",
+    "Overfull.FourOdd.TightShorePieces.mem_closedParts",
+    "Overfull.FourOdd.TightShorePieces.outsideBlock_cases",
+    "Overfull.FourOdd.TightShorePieces.outsideBlock_common_class",
+    "Overfull.FourOdd.TightShorePieces.outsideBlock_compatible",
+    "Overfull.FourOdd.TightShorePieces.outsideBlock_contains_self",
+    "Overfull.FourOdd.TightShorePieces.outsideBlock_disjoint",
+    "Overfull.FourOdd.TightShorePieces.outsideBlock_disjoint_closedParts",
+    "Overfull.FourOdd.TightShorePieces.outsideBlock_eq_of_mem",
+    "Overfull.FourOdd.TightShorePieces.outsideBlock_eq_singleton_of_no_touch",
+    "Overfull.FourOdd.TightShorePieces.outsideBlock_inner_even",
+    "Overfull.FourOdd.TightShorePieces.outsideBlock_nonempty",
+    "Overfull.FourOdd.TightShorePieces.outsideBlock_outer_degree",
+    "Overfull.FourOdd.TightShorePieces.outsideBlock_outer_incidence_class",
+    "Overfull.FourOdd.TightShorePieces.outsideBlock_union_closedParts_cover",
+    "Overfull.FourOdd.TightShorePieces.outside_copies_eq_of_mem",
+    "Overfull.FourOdd.TightShorePieces.outside_copy_in_complement",
+    "Overfull.FourOdd.TightShorePieces.outside_copy_of_not_touch",
+    "Overfull.FourOdd.TightShorePieces.outside_degree_eq_indicator",
+    "Overfull.FourOdd.TightShorePieces.outside_incidence_class",
+    "Overfull.FourOdd.TightShorePieces.outside_incidence_in_cut",
+    "Overfull.FourOdd.TightShorePieces.part_eq_of_common_copy",
+    "Overfull.FourOdd.exists_compatibleCircuitPartition_of_tight_shore",
+    "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_degree_bound",
+    "Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers",
+    "Overfull.FourOdd.exists_fourTwoOddJoining_decomposition",
+    "Overfull.FourOdd.exists_tightShoreInside_partition",
+    "Overfull.FourOdd.exists_tightShoreOutside_partition",
+    "Overfull.FourOdd.exists_tightShorePieces",
+    "Overfull.FourOdd.joiningCopies_shoreCollapseLabel",
+    "Overfull.FourOdd.joiningIncidenceClass_admissible",
+    "Overfull.FourOdd.joiningIncidenceClass_classCutOn_image",
+    "Overfull.FourOdd.joiningIncidenceClass_classCutOn_image_on",
+    "Overfull.FourOdd.joiningIncidenceClass_compatible_image",
+    "Overfull.FourOdd.joiningIncidenceClass_incident_iff",
+    "Overfull.FourOdd.joiningQuotient_even_degrees_of_even_degrees",
+    "Overfull.FourOdd.labelShore_shoreCollapseLabel_apex",
+    "Overfull.FourOdd.labelShore_shoreCollapseLabel_inside",
+    "Overfull.FourOdd.labelShore_shoreIntoLabel_anchor_not_mem",
+    "Overfull.FourOdd.labelShore_shoreIntoLabel_disjoint",
+    "Overfull.FourOdd.outside_endpoint_eq_anchor_of_not_joining",
+    "Overfull.FourOdd.shoreCollapseLabel_eq_none",
+    "Overfull.FourOdd.shoreCollapseLabel_eq_some",
+    "Overfull.FourOdd.shoreIntoLabel_not_mem",
+    "Overfull.FourOdd.tightShoreInsideClass_local_tight",
+    "Overfull.FourOdd.tightShoreInside_admissible",
+    "Overfull.FourOdd.tightShoreInside_classCutOn_apex",
+    "Overfull.FourOdd.tightShoreInside_degreeOn_apex",
+    "Overfull.FourOdd.tightShoreInside_degreeOn_inside",
+    "Overfull.FourOdd.tightShoreInside_even_degrees",
+    "Overfull.FourOdd.tightShoreInside_piece_boundary",
+    "Overfull.FourOdd.tightShoreInside_piece_compatible",
+    "Overfull.FourOdd.tightShoreInside_piece_even_inside",
+    "Overfull.FourOdd.tightShoreOutsideClass_incident",
+    "Overfull.FourOdd.tightShoreOutside_admissible",
+    "Overfull.FourOdd.tightShoreOutside_boundary_endpoints",
+    "Overfull.FourOdd.tightShoreOutside_classCutOn_image_subset",
+    "Overfull.FourOdd.tightShoreOutside_edge_of_not_touch",
+    "Overfull.FourOdd.tightShoreOutside_even_degrees",
+    "Overfull.FourOdd.tightShoreOutside_incidence_class_of_endpoint",
+    "Overfull.FourOdd.tightShoreOutside_incident_iff",
+    "Overfull.FourOdd.tightShoreOutside_original_incidence",
+    "Overfull.FourOdd.tightShoreOutside_redirected_incidence",
+    "Overfull.FourOdd.tightShoreOutside_support_subset",
+    "Overfull.FourOdd.tightShoreOutside_touch_not_anchor",
+    "Overfull.FourOdd.tightShoreOutside_touches_iff_boundary",
+    "Overfull.Multigraph.Compatible.of_coarsenTightClassAt",
+    "Overfull.Multigraph.CompatibleBlockExpansion.compatible_biUnion",
+    "Overfull.Multigraph.CompatibleBlockExpansion.disjoint_biUnion",
+    "Overfull.Multigraph.CompatibleBlockExpansion.even_degrees_biUnion",
+    "Overfull.Multigraph.CompatibleBlockExpansion.exists_partition_biUnion",
+    "Overfull.Multigraph.CompatibleBlockExpansion.exists_partition_of_partition",
+    "Overfull.Multigraph.CompatibleCircuitPartition.even_degrees",
+    "Overfull.Multigraph.IsCircuit.coarsenTightClassAt_counts",
+    "Overfull.Multigraph.IsCircuit.meets_local_tight_of_localCoarsening",
+    "Overfull.Multigraph.StrictNonlocalOn.four_degree_pos",
+    "Overfull.Multigraph.StrictNonlocalOn.four_support_classification",
+    "Overfull.Multigraph.StrictNonlocalOn.four_support_degree_ge_two",
+    "Overfull.Multigraph.StrictNonlocalOn.renameVertices",
+    "Overfull.Multigraph.StrictNonlocalOn.singleton_bound",
+    "Overfull.Multigraph.admissibleOn_coarsenTightClassAt",
+    "Overfull.Multigraph.admissibleOn_sdiff_of_strict_nonlocal_small_coarse_circuit",
+    "Overfull.Multigraph.bundle_monochromatic_of_no_compatible_pair",
+    "Overfull.Multigraph.classCutOn_disjoint_shores",
+    "Overfull.Multigraph.classCutOn_union_of_outside",
+    "Overfull.Multigraph.common_corner_local_bound",
+    "Overfull.Multigraph.common_corner_strict_cut_bound",
+    "Overfull.Multigraph.compatibleCircuitPartition_iff_admissible_and_even_of_card_le_four",
+    "Overfull.Multigraph.compatible_parallel_pair_of_endpoint_classes",
+    "Overfull.Multigraph.compatible_triangle_of_endpoint_classes",
+    "Overfull.Multigraph.complement_class_cut_strict_of_local_tight",
+    "Overfull.Multigraph.copyEmbedding_classCut",
+    "Overfull.Multigraph.cutOn_mem_of_endpoints",
+    "Overfull.Multigraph.cutOn_union_card_of_disjoint",
+    "Overfull.Multigraph.degreeOn_biUnion_disjoint",
+    "Overfull.Multigraph.dominant_bundle_not_monochromatic_at_other",
+    "Overfull.Multigraph.edgeBundleOn_eq_empty_of_not_mem_image",
+    "Overfull.Multigraph.edgeBundleOn_nonempty_iff_mem_image",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_four",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_selected_tight_shore",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_strictNonlocal_four_cycle",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_strictNonlocal_square_support",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_strict_four_cycle",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_uniform_four_cycle",
+    "Overfull.Multigraph.exists_compatibleCircuitPartition_of_uniform_simple_template",
+    "Overfull.Multigraph.exists_safe_short_circuit_of_four_strictNonlocal",
+    "Overfull.Multigraph.exists_short_compatible_circuit_of_four_complete_support",
+    "Overfull.Multigraph.exists_short_compatible_circuit_of_four_diamond_support",
+    "Overfull.Multigraph.exists_short_compatible_circuit_of_four_strictNonlocal",
+    "Overfull.Multigraph.exists_small_tight_shore_of_not_four_strictNonlocal",
+    "Overfull.Multigraph.exists_strict_globally_admissible_localCoarsening",
+    "Overfull.Multigraph.fourCycle_incident_copies",
+    "Overfull.Multigraph.fourLabel_bundle_eq_named",
+    "Overfull.Multigraph.fourLabel_compatibleCircuitPartition_iff_admissible_and_even",
+    "Overfull.Multigraph.fourLabel_cut_bundle_sum",
+    "Overfull.Multigraph.fourLabel_degree_bundle_counts",
+    "Overfull.Multigraph.fourLabel_diamond_incidence",
+    "Overfull.Multigraph.fourLabel_nonlocal_shore_card_le_two",
+    "Overfull.Multigraph.fourLabel_tight_shore_normalization",
+    "Overfull.Multigraph.fourLabel_two_shore_bundle_counts",
+    "Overfull.Multigraph.isCircuit_triangle_of_distinct_vertices",
+    "Overfull.Multigraph.monochromatic_bundle_local_bound",
+    "Overfull.Multigraph.no_single_bundle_incidence_of_no_compatible_pair",
+    "Overfull.Multigraph.nonlocalShore_compl_iff",
+    "Overfull.Multigraph.nonlocalShore_singleton",
+    "Overfull.Multigraph.nonlocalShore_toggle_iff",
+    "Overfull.Multigraph.outside_incident_eq_of_cut",
+    "Overfull.Multigraph.renameVertices_support_of_shape",
+    "Overfull.Multigraph.restrictEdges_admissibleOn_univ_iff",
+    "Overfull.Multigraph.restrictEdges_classCutOn_univ_card",
+    "Overfull.Multigraph.restrictEdges_cutOn_univ_card",
+    "Overfull.Multigraph.restrictEdges_degreeOn_univ",
+    "Overfull.Multigraph.restrictEdges_univ_map",
+    "Overfull.Multigraph.short_compatible_circuit_or_partition_of_four_strictNonlocal",
+    "Overfull.Multigraph.singleton_or_compl_of_not_nonlocal",
+    "Overfull.Multigraph.strictNonlocalOn_iff_no_tight_nonlocal",
+    "Overfull.Multigraph.strictNonlocalOn_localCoarsening",
+    "Overfull.Multigraph.strictNonlocal_square_support_has_pair",
+    "Overfull.Multigraph.tight_shore_redirected_class_bound",
+    "Overfull.Multigraph.triangle_common_corner_of_no_short_circuit",
+    "Overfull.Multigraph.two_bundle_dominant_is_tight",
+    "Overfull.Multigraph.two_neighbor_bundle_structure"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status": "verified_locally_publication_blocked",
+  "recorded_at_utc": "2026-11-24T14:29:08.736Z",
+  "repository": "fly31415926/overfull-lean",
+  "branches": [
+    "main",
+    "verified-bipartite-continuation-2026-11-21"
+  ],
+  "remote_commit": "3991bb7eee091a329046073e0366daa84a603e5d",
+  "remote_tree": "6424bf81123aa75b2254aea7eceff6260611f397",
+  "initially_prepared_proof_tree": "c691dabf252b6fe72005963c61ce4128962d7e66",
+  "complete_verifier_passed": true,
+  "preservation_passed": true,
+  "audited_declarations": 14627,
+  "new_audited_declarations": 367,
+  "numbered_coverage": {
+    "complete": 49,
+    "total": 69,
+    "main_theorem_verified": false
+  },
+  "attempted_content_batches": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "successful_content_batches": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6
+  ],
+  "automatic_approval_rejections": [
+    4,
+    7
+  ],
+  "remaining_content_batches_not_attempted": 78,
+  "large_blob_uploads_attempted": 0,
+  "final_repository_tree_updates_attempted": 0,
+  "public_commits_created": 0,
+  "branch_updates_attempted": 0,
+  "blocker": "Automatic approval review rejected public source/log/metadata egress because current user-authored authorization for this new snapshot was not established.",
+  "authorization_check": "Prior user approvals were retrieved. The latest explicit approval covers the preceding completed snapshot; no explicit standing authorization for future snapshots was found. No retry or alternative upload route was attempted after the rejection.",
+  "note": "Six temporary content trees were created before all results in the second concurrent batch were known. Both named branches remain unchanged. The complete verified sources and evidence are retained locally."
+}

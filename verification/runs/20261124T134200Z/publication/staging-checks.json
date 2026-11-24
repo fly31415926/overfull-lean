@@ -1,0 +1,34 @@
+{
+  "kind": "staging_whitespace_checks",
+  "recorded_at_utc": "2026-11-24T14:23:55.958782+00:00",
+  "note": "An initial staging wrapper aborted after git diff --cached --check found formatting in immutable frozen baseline snapshots and patch evidence. These subsequent direct checker executions preserve the genuine findings. Evidence bytes are intentionally unchanged; the live source/document/script check passes. This is not a Lean verification failure.",
+  "checks": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 2,
+      "stdout": "verification/runs/20261124T134200Z/full-01/control/verifier-registration.patch:16: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/LICENSE_BMATCHING.txt:203: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/BipartiteRange.lean:188: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/BoundaryExtension/BoundaryData.lean:179: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/BoundaryExtension/Reduction.lean:172: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/BoundaryExtension/Result.lean:52: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/BoundaryExtension/Triples.lean:93: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/CompatibleCircuits/SmallKernelData.lean:174: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/Dense/Encoding/Model.lean:151: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/Dense/SignedFlow.lean:414: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/Dense/TriangleDecomposition.lean:127: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/Dense/UnequalFlow.lean:159: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/External/FiniteCirculation.lean:262: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/External/PerfectBMatching.lean:1624: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/Konig.lean:208: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/Sharpness/WholeCliques.lean:385: trailing whitespace.\n+    Nat.zero_ne_add_one] \nverification/runs/20261124T134200Z/full-01/input/Overfull/TutteBerge.lean:96: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/Overfull/TutteBerge/Graph.lean:225: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/docs/sharpness.md:49: new blank line at EOF.\nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:10: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:26: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:44: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:61: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:71: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:81: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:101: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:128: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:132: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:144: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:246: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:247: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:310: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:321: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:357: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:366: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/full-01/input/patches/vizing-lean-4.24.patch:375: trailing whitespace.\n+ \nverification/runs/20261124T134200Z/verifier-registration.patch:16: trailing whitespace.\n+ \n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check",
+        "--",
+        "Overfull.lean",
+        "Overfull",
+        "docs",
+        "scripts"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

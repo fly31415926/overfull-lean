@@ -1,0 +1,17 @@
+Overfull/CompatibleCircuits/FourSupportClassification.lean:75:23: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a => @Sym2.Mem.decidable (Fin 4) (instDecidableEqFin 4) v (Q.edge a)
+inferred
+  fun a => @Sym2.Mem.decidable (Fin 4) (fun a b => propDecidable (a = b)) v (Q.edge a)
+Overfull/CompatibleCircuits/FourSupportClassification.lean:83:4: error: Type mismatch
+  card_le_one.mp ?m.198 ?m.223 ?m.224
+has type
+  ∀ b ∈ ?m.195, ?m.223 = b
+but is expected to have type
+  Q.edge f = Q.edge e
+Overfull/CompatibleCircuits/FourSupportClassification.lean:83:23: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 2
+  a ≥ 1
+where
+ a := ↑(Q.degreeOn C v)
+ b := ↑(#?m.195)

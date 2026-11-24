@@ -1,0 +1,18 @@
+[
+  {
+    "old": "                          (\"four_label_reduction\", \"four-label-reduction-source.json\"),\n",
+    "new": "                          (\"four_label_reduction\", \"four-label-reduction-source.json\"),\n                          (\"four_label_existence\", \"four-label-existence-source.json\"),\n"
+  },
+  {
+    "old": "    # Every first-party mathematical file must be included in the library build.\n",
+    "new": "    four_existence_source, _, four_existence_public = extension_maps[\"four_label_existence\"]\n    if (four_existence_source[\"kind\"] != \"supporting_continuation\"\n            or four_existence_source[\"numbered_assertions_completed\"] != 0\n            or four_existence_source[\"main_theorem_verified\"] is not False\n            or four_existence_source[\"public_theorems\"] != [\n                \"Overfull.Multigraph.exists_compatibleCircuitPartition_of_four_label\",\n                \"Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_four\",\n                \"Overfull.Multigraph.exists_safe_short_circuit_of_four_strictNonlocal\",\n                \"Overfull.FourOdd.exists_compatibleCircuitPartition_of_tight_shore\",\n                \"Overfull.FourOdd.exists_fourJoining_decomposition_of_even_fibers\",\n                \"Overfull.FourOdd.exists_fourJoining_decomposition_of_even_degree_bound\",\n                \"Overfull.FourOdd.exists_fourTwoOddJoining_decomposition\"]\n            or not set(four_existence_source[\"public_theorems\"]) <= set(four_existence_public)):\n        raise SystemExit(\"Four-label existence closes no additional numbered manuscript assertion.\")\n\n    # Every first-party mathematical file must be included in the library build.\n"
+  },
+  {
+    "old": "                    \"four_label_reduction\": \"four-label-reduction\",\n",
+    "new": "                    \"four_label_reduction\": \"four-label-reduction\",\n                    \"four_label_existence\": \"four-label-existence\",\n"
+  },
+  {
+    "old": "        \"four_label_reduction_declaration_map\": extension_evidence[\"four_label_reduction\"],\n",
+    "new": "        \"four_label_reduction_declaration_map\": extension_evidence[\"four_label_reduction\"],\n        \"four_label_existence_declaration_map\": extension_evidence[\"four_label_existence\"],\n"
+  }
+]

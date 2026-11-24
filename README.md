@@ -1,6 +1,47 @@
 # Lean formalization of the overfull manuscript
 
-## Current continuation: four-label low-degree and cut reductions
+## Current continuation: complete four-label compatible circuits
+
+**The unrestricted compatible-circuit theorem on at most four labels is now
+proved in Lean.** Every finite selected copy set in a loopless multigraph has
+an exact compatible-circuit partition precisely when its selected degrees are
+even and every original incidence class occupies at most half of every cut.
+Degrees and parallel multiplicities are unrestricted. No selector, partition,
+connectedness or finite ambient edge type is assumed.
+
+The construction handles strict nonlocal cuts by selecting a safe compatible
+pair or triangle. A tight nonlocal cut is handled by two constructed three-label
+partitions, followed by exact restoration of original blocks and saved closed
+pieces. The argument includes zero cuts and preserves every parallel copy.
+
+The complete theorem now supplies unrestricted original-host joining families
+for at most four even fibers and for exactly two odd fibers. The latter has
+exactly the regular degree many primary matching pieces, plus an even-footprint
+surplus family. These applications have no small-boundary assumption.
+
+**Coverage remains 49/69 numbered assertions.** Full Proposition 4.16, full
+Theorem 4.17 and the main theorem remain incomplete; the next task is the
+remaining four-core grouping, completed-prefix and residual factorization
+construction. The source theorem and the numbered manuscript inventory are
+reported separately.
+
+The [exact source inventory](docs/four-label-existence-source.json),
+[proof map](docs/four-label-existence-verification.md),
+[semantic review](docs/four-label-existence-semantic-review.md),
+[next target](docs/next-verification-target.md), and
+[handoff](docs/continuation-handoff.md) give the interfaces and remaining work.
+The [current run](verification/runs/20261124T134200Z/) retains genuine failed
+and successful attempts, frozen full verification inputs/outputs, complete
+public/private/generated declaration maps, preservation checks and publication
+receipts. Actual terminal receipts determine the final audit status.
+
+The verified baseline is public commit
+`3991bb7eee091a329046073e0366daa84a603e5d`, tree
+`6424bf81123aa75b2254aea7eceff6260611f397`. Every prior nonroot mathematical
+source, the axiom audit, all 69 numbered records and all prior declaration maps
+are preserved. The sections below describe historical checkpoint scopes.
+
+## Previous continuation: four-label low-degree and cut reductions
 
 **Coverage remains 49 of 69 numbered assertions.** This supporting continuation
 constructs compatible circuit partitions for admissible Eulerian multigraphs

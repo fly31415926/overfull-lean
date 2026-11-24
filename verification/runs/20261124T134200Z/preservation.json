@@ -1,0 +1,75 @@
+{
+  "baseline_commit": "3991bb7eee091a329046073e0366daa84a603e5d",
+  "baseline_tree": "6424bf81123aa75b2254aea7eceff6260611f397",
+  "previous_audited_declarations": 14260,
+  "previous_completed_result_mappings": 2609,
+  "previous_frozen_inputs": 794,
+  "coverage": {
+    "numbered_assertions": 69,
+    "previous_complete": 49,
+    "current_complete": 49,
+    "promoted_assertions": [],
+    "all_69_statement_identities_identical": true,
+    "all_unpromoted_records_identical": true,
+    "main_theorem_verified": false
+  },
+  "all_previous_mathematical_sources_and_audit_unchanged": true,
+  "verifier_changes_exactly_recorded": {
+    "exact_recorded_edit_count": 4,
+    "stock_kernel_audit_byte_identical": true
+  },
+  "new_module_count": 28,
+  "development_evidence": {
+    "attempt_count": 81,
+    "file_count": 1252,
+    "status_counts": {
+      "passed": 40,
+      "failed": 41,
+      "interrupted": 0
+    },
+    "attempts_with_recorded_input_changes": [
+      "strict-complete-01",
+      "strict-cycle-02",
+      "strict-safe-selection-build-01",
+      "strict-support-build-01",
+      "strict-triangles-01",
+      "strict-triangles-build-01",
+      "support-classification-build-01",
+      "tight-contraction-03",
+      "tight-expansion-02",
+      "tight-inside-02",
+      "tight-outside-02",
+      "tight-outside-03",
+      "uniform-cycle-03",
+      "uniform-cycle-build-01"
+    ],
+    "attempts_with_unknown_input_change_status": [],
+    "exact_inventory_hashes_and_sizes_preserved": true
+  },
+  "status": "passed",
+  "checked_at_utc": "2026-11-24T14:20:51.438970+00:00",
+  "full_verifier_attempt": "full-01",
+  "actual_full_verifier_exit": 0,
+  "audited_declarations": 14627,
+  "new_audited_declarations": 367,
+  "public_theorem_count": 168,
+  "frozen_input_count": 826,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_previous_declarations_owners_axiom_sets_preserved": true,
+  "all_previous_completed_result_mappings_preserved": true,
+  "all_previous_source_declaration_maps_preserved": true,
+  "execution_evidence": {
+    "principal_outputs_present": true,
+    "all_recorded_live_outputs_match_archive": true,
+    "raw_command_output_unchanged": true,
+    "terminal_receipt_identical": true,
+    "all_verification_controls_preserved": true,
+    "control_count": 17,
+    "recorded_output_count": 25
+  },
+  "genuine_command_receipt_sha256": "18f27dde12dd0388d9bdf2af4c34410ed20c625f50fcdc1fec022db543a56a0d"
+}

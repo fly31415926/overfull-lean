@@ -1,0 +1,46 @@
+Overfull/CompatibleCircuits/FourStrictTriangles.lean:95:73: error: unsolved goals
+case inr.inl.inl.inr
+V : Type u_1
+E : Type u_2
+K : Type u_3
+G : Multigraph V E
+classOf : V → E → K
+u v : V
+g : E
+a : V
+x y : E
+huv : ¬u = v
+hclass : classOf a x = classOf a y
+he : G.edge y = s(u, v)
+hv : ¬classOf v y = classOf v g
+hu : ¬classOf u y = classOf u x
+hay : a = u ∨ a = v
+huw : ¬u = a
+hvw : ¬v = a
+hg : G.edge g = s(v, a)
+hf : G.edge x = s(u, a)
+hw : ¬classOf a y = classOf a g
+⊢ x = y
+
+case inr.inr.inl.inr
+V : Type u_1
+E : Type u_2
+K : Type u_3
+G : Multigraph V E
+classOf : V → E → K
+u v : V
+f : E
+a : V
+x y : E
+huv : ¬u = v
+hclass : classOf a x = classOf a y
+he : G.edge y = s(u, v)
+hu : ¬classOf u y = classOf u f
+hv : ¬classOf v y = classOf v x
+hay : a = u ∨ a = v
+huw : ¬u = a
+hvw : ¬v = a
+hf : G.edge f = s(u, a)
+hg : G.edge x = s(v, a)
+hw : ¬classOf a f = classOf a y
+⊢ x = y
