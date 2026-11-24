@@ -1,0 +1,30 @@
+⚠ [3318/3412] Replaying Overfull.Terminal.PrefixCompletion
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/7dae4c9bb5a1/overfull-three-core/Overfull/Terminal/PrefixCompletion.lean -o /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean/Overfull/Terminal/PrefixCompletion.olean -i /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean/Overfull/Terminal/PrefixCompletion.ilean -c /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/ir/Overfull/Terminal/PrefixCompletion.c --setup /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/ir/Overfull/Terminal/PrefixCompletion.setup.json --json
+warning: Overfull/Terminal/PrefixCompletion.lean:76:0: automatically included section variable(s) unused in theorem `Overfull.Terminal.exists_prefix_completion`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✖ [3542/3545] Building Overfull.Terminal.RemainingProfile (2.6s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/7dae4c9bb5a1/overfull-three-core/Overfull/Terminal/RemainingProfile.lean -o /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean/Overfull/Terminal/RemainingProfile.olean -i /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean/Overfull/Terminal/RemainingProfile.ilean -c /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/ir/Overfull/Terminal/RemainingProfile.c --setup /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/ir/Overfull/Terminal/RemainingProfile.setup.json --json
+error: Overfull/Terminal/RemainingProfile.lean:90:19: Application type mismatch: The argument
+  threeCoreLabel_joining ?m.726 U hdisjoint hcover x y hxy
+has type
+  joiningCopies ?m.726 (threeCoreLabel U) =
+    @Union.union (Finset ?m.724) (@instUnion ?m.724 fun a b => propDecidable (a = b)) (Multigraph.cutEdges ?m.726 (U x))
+      (Multigraph.cutEdges ?m.726 (U y))
+but is expected to have type
+  joiningCopies (Multigraph.ofSimpleGraph (afterDeletions G P.completion.full P.rounds)) (threeCoreLabel U) =
+    @Union.union (Finset ↑(afterDeletions G P.completion.full P.rounds).edgeSet)
+      (@instUnion ↑(afterDeletions G P.completion.full P.rounds).edgeSet fun a_1 b => Subtype.instDecidableEq a_1 b)
+      ((Multigraph.ofSimpleGraph (afterDeletions G P.completion.full P.rounds)).cutEdges (U x))
+      ((Multigraph.ofSimpleGraph (afterDeletions G P.completion.full P.rounds)).cutEdges (U y))
+in the application
+  Eq.trans hh (threeCoreLabel_joining ?m.726 U hdisjoint hcover x y hxy)
+error: Lean exited with code 1
+✔ [3543/3545] Built Overfull.Terminal.OddFactorization (2.0s)
+Some required targets logged failures:
+- Overfull.Terminal.PrefixCompletion
+- Overfull.Terminal.RemainingProfile
+error: build failed

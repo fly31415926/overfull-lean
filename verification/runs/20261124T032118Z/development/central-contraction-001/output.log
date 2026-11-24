@@ -1,0 +1,34 @@
+✖ [3107/3107] Building Overfull.Terminal.Contraction (12s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/7dae4c9bb5a1/overfull-three-core/Overfull/Terminal/Contraction.lean -o /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean/Overfull/Terminal/Contraction.olean -i /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean/Overfull/Terminal/Contraction.ilean -c /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/ir/Overfull/Terminal/Contraction.c --setup /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/ir/Overfull/Terminal/Contraction.setup.json --json
+error: Overfull/Terminal/Contraction.lean:34:2: unsolved goals
+case neg
+V : Type u_1
+U A : Finset V
+v : V
+u : { x // x ∈ U }
+hv : v ∉ U
+hn : v ≠ ↑u
+⊢ ¬(if v ∈ A then Sum.inr 0 else Sum.inr 1) = Sum.inl u
+error: Overfull/Terminal/Contraction.lean:288:2: Type mismatch
+  RobustRealization.comap_equiv_degree C.graph (centralCoreEquiv U).symm u
+has type
+  @SimpleGraph.degree { x // x ∈ centralCoreVertices U } (SimpleGraph.comap (⇑(centralCoreEquiv U).symm) C.graph) u
+      (@SimpleGraph.neighborSetFintype { x // x ∈ centralCoreVertices U }
+        (SimpleGraph.comap (⇑(centralCoreEquiv U).symm) C.graph) (Finset.Subtype.fintype (centralCoreVertices U))
+        (fun a b => SimpleGraph.instDecidableComapAdj (⇑(centralCoreEquiv U).symm) C.graph a b) u) =
+    C.graph.degree ((centralCoreEquiv U).symm u)
+but is expected to have type
+  @SimpleGraph.degree { x // x ∈ centralCoreVertices U } (centralCore C A).graph u
+      (@SimpleGraph.neighborSetFintype { x // x ∈ centralCoreVertices U } (centralCore C A).graph
+        (Finset.Subtype.fintype (centralCoreVertices U)) (fun a b => propDecidable ((centralCore C A).graph.Adj a b))
+        u) =
+    C.graph.degree ((centralCoreEquiv U).symm u)
+error: Overfull/Terminal/Contraction.lean:294:8: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.Terminal.Contraction
+error: build failed

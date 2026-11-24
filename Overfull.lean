@@ -279,6 +279,7 @@ import Overfull.NativeTerminal.ShoreFactorization
 import Overfull.NativeTerminal.ShoreHost
 import Overfull.NativeTerminal.TerminalParameters
 import Overfull.NativeTerminal.TwoCore
+import Overfull.Terminal.ThreeCore
 
 /-!
 # Partial formalization of the overfull manuscript

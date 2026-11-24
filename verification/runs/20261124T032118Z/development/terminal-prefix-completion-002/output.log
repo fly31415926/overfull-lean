@@ -1,0 +1,85 @@
+✔ [3318/3319] Built Overfull.Terminal.Palette (43s)
+✖ [3319/3319] Building Overfull.Terminal.PrefixCompletion (3.8s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/7dae4c9bb5a1/overfull-three-core/Overfull/Terminal/PrefixCompletion.lean -o /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean/Overfull/Terminal/PrefixCompletion.olean -i /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean/Overfull/Terminal/PrefixCompletion.ilean -c /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/ir/Overfull/Terminal/PrefixCompletion.c --setup /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/ir/Overfull/Terminal/PrefixCompletion.setup.json --json
+warning: Overfull/Terminal/PrefixCompletion.lean:23:8: automatically included section variable(s) unused in theorem `Overfull.Terminal.PrefixPalette.simpleBoundary_lt`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Overfull/Terminal/PrefixCompletion.lean:47:0: automatically included section variable(s) unused in theorem `Overfull.Terminal.joining_not_internal`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+error: Overfull/Terminal/PrefixCompletion.lean:98:32: Application type mismatch: The argument
+  U i
+has type
+  Finset V
+of sort `Type u_1` but is expected to have type
+  Type u_3
+of sort `Type (u_3 + 1)` in the application
+  @EpochParameters.rule α γ τ ν P (U i)
+error: Overfull/Terminal/PrefixCompletion.lean:128:29: Unknown identifier `card_inter_le_left`
+error: Overfull/Terminal/PrefixCompletion.lean:89:85: unsolved goals
+case refine_1
+V : Type u_1
+I : Type u_2
+inst✝² : Fintype V
+inst✝¹ : Fintype I
+inst✝ : DecidableEq I
+α γ ν τ : ℝ
+P : EpochParameters α γ τ ν
+G : SimpleGraph V
+U : I → Finset V
+H : (i : I) → SimpleGraph { x // x ∈ U i }
+label : V → I
+hparts : ∀ (i : I), labelShore label {i} = U i
+hdisj : Pairwise fun i j => Disjoint (U i) (U j)
+hcover : ∀ (v : V), ∃ i, v ∈ U i
+hH : ∀ (i : I), H i ≤ induce (↑(U i)) G
+h r L : ℕ
+a : ℝ
+p : I → ℕ
+B : PrefixPalette (Multigraph.ofSimpleGraph G) label r L p
+hregular : ∀ (v : V), G.degree v = h
+hrobust : ∀ (i : I), IsRobustExpander (H i) ν τ
+hdegree : ∀ (i : I) (v : { x // x ∈ U i }), ↑h - a ≤ ↑((H i).degree v)
+hm : ∀ (i : I), P.order ≤ #(U i)
+hdensity : ∀ (i : I), α * ↑(#(U i)) ≤ ↑h
+ha : ∀ (i : I), a ≤ P.error * ↑(#(U i))
+hlimit : ∀ (i : I), r ≤ ⌊↑h - γ * ↑(#(U i))⌋₊
+hsize : ∀ (i : I), ↑(6 * L) ≤ P.error * ↑(#(U i))
+hparity : ∀ (i : I), #(U i) % 2 = p i
+hdegrees : ∀ (i : I) (v : { x // x ∈ U i }), |↑((H i).degree v) - ↑h| ≤ P.error * ↑(#(U i))
+⊢ I → Fintype sorry
+error: Overfull/Terminal/PrefixCompletion.lean:170:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  B.remaining.biUnion id
+in the target expression
+  joiningCopies (Multigraph.ofSimpleGraph G) label \
+      NativeReserve.removedCopies (matchingFamilyCopies G C.full r) univ =
+    B.remaining.biUnion id
+
+V : Type u_1
+I : Type u_2
+inst✝² : Fintype V
+inst✝¹ : Fintype I
+inst✝ : DecidableEq I
+G : SimpleGraph V
+U : I → Finset V
+H : (i : I) → SimpleGraph { x // x ∈ U i }
+label : V → I
+hparts : ∀ (i : I), labelShore label {i} = U i
+h r L : ℕ
+a θ σ : ℝ
+p : I → ℕ
+B : PrefixPalette (Multigraph.ofSimpleGraph G) label r L p
+C : BoundaryCompletion G U H (PrefixPalette.simpleBoundary G B) r h a θ σ
+⊢ joiningCopies (Multigraph.ofSimpleGraph G) label \
+      NativeReserve.removedCopies (matchingFamilyCopies G C.full r) univ =
+    B.remaining.biUnion id
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.Terminal.PrefixCompletion
+error: build failed

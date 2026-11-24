@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "kind": "complete_assertion_source_mapping",
+  "status": "strict_build_and_semantic_review_passed",
+  "base_commit": "a90d674d0d03f59895633a0f8d64f2b250fcb076",
+  "manuscript_number": "4.14",
+  "manuscript_label": "three:lem:boundary",
+  "pinned_manuscript": {
+    "filename": "Four_Robust_Component_Cases_2026-11-20.tex",
+    "sha256": "4605bdf3ee5b241a7b52dd59d08537fa0a439335cd6f119394cddd4609efffc1",
+    "statement_source_lines": [
+      3119,
+      3128
+    ]
+  },
+  "statement_sha256": "67baedd4ae2e0451a8842fd27ea0976f50db94c9054eacd2f5dd40ce2cfa21e3",
+  "inspected_statement": {
+    "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+    "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+    "sections": [
+      "three:lem:boundary"
+    ],
+    "statement_source_lines": [
+      3267,
+      3276
+    ],
+    "proof_source_lines": [
+      3277,
+      3292
+    ],
+    "statement_sha256": "67baedd4ae2e0451a8842fd27ea0976f50db94c9054eacd2f5dd40ce2cfa21e3",
+    "matches_pinned_statement_sha256": true,
+    "numbered_inventory_rebased": false,
+    "parameter_convention": "For fixed 0<alpha<=1, gamma>0, and 0<nu<=tau<=alpha/8, choose epsilon>0 and m0 before the host/core/coloring. Original core degrees equal d, embedded simple-core degrees are at least d-a, d>=alpha*|U|, 0<=a<=epsilon*|U|, odd |U|>=m0, singleton/triple boundary classes, and at least gamma*|U| singleton colors."
+  },
+  "scope": "Full prescribed boundary extension through the odd robust core, for original edge copies of a finite-edge loopless multigraph. The direct one-apex and two-apex construction replaces the source application of Corollary 4.6 without assuming full 4.6, Theorem 6.1, an absorber, a selected coloring, or a residual factorization. Output labels agree pointwise with every prescribed original boundary label. The strict module build and independent semantic reviews have passed; repository-wide verification and the completed inventory are recorded separately in verification/results.json.",
+  "module_count": 17,
+  "modules": [
+    {
+      "module": "Overfull.BoundaryExtension.Full",
+      "path": "Overfull/BoundaryExtension/Full.lean",
+      "sha256": "699c40739b67d47034d13c1d83a732d2b06de6576f38d052779238cefa0d5a54"
+    },
+    {
+      "module": "Overfull.BoundaryExtension.Reduction",
+      "path": "Overfull/BoundaryExtension/Reduction.lean",
+      "sha256": "7c102b110d7a11b8239b6f14f3a1298ea96b1c71f9983a60a58d9362fd6eb3c6"
+    },
+    {
+      "module": "Overfull.OneCore.ApexChoices",
+      "path": "Overfull/OneCore/ApexChoices.lean",
+      "sha256": "f603fb89fb7ce1b337e44bc679f4a9cce118173e6467a2f2e6a296a66f66d298"
+    },
+    {
+      "module": "Overfull.OneCore.Factorization",
+      "path": "Overfull/OneCore/Factorization.lean",
+      "sha256": "af5235ffb7a8fbf6930fd248f0df44a6e21a853c6339b20b2ae8498607f37840"
+    },
+    {
+      "module": "Overfull.OneCore.MovedNeighbors",
+      "path": "Overfull/OneCore/MovedNeighbors.lean",
+      "sha256": "8256641c955095f29ae80cc3015ae39e019759349daa05207b5e8523c12056e3"
+    },
+    {
+      "module": "Overfull.OneCore.NeighborPairing",
+      "path": "Overfull/OneCore/NeighborPairing.lean",
+      "sha256": "f5f5d87bbd15c33e83e4827638dac771ec8aac99df3b29ff8caad8ec87de9eb0"
+    },
+    {
+      "module": "Overfull.OneCore.Reduction",
+      "path": "Overfull/OneCore/Reduction.lean",
+      "sha256": "3578b3ec5b8b726ccd16870025e6fe484cc6f29617bb1fa947ce04f7a3dc6136"
+    },
+    {
+      "module": "Overfull.OneCore.ResidualShores",
+      "path": "Overfull/OneCore/ResidualShores.lean",
+      "sha256": "57e04da490f0198191658b75e9af5243d6b8ee90e1c2d272bd80ac35a066d28c"
+    },
+    {
+      "module": "Overfull.OrdinaryFactorization.ApexPalette",
+      "path": "Overfull/OrdinaryFactorization/ApexPalette.lean",
+      "sha256": "9d72457dfd52785b65eb9df958087bfa6b3854a23c5165185690f6abf3d2d206"
+    },
+    {
+      "module": "Overfull.OrdinaryFactorization.FirstHalf",
+      "path": "Overfull/OrdinaryFactorization/FirstHalf.lean",
+      "sha256": "f99c7f310be07d9f1579b06e154e9faa14d431cc470babb58c09f9842bcfa468"
+    },
+    {
+      "module": "Overfull.OrdinaryFactorization.Reduction",
+      "path": "Overfull/OrdinaryFactorization/Reduction.lean",
+      "sha256": "8174c8724e915efd448074c9838474ca12926db231963a76e2e5f67ff4edaa5a"
+    },
+    {
+      "module": "Overfull.TwoApexFactorization.Balance",
+      "path": "Overfull/TwoApexFactorization/Balance.lean",
+      "sha256": "848701e2afb9e65add2adc935fa56c2b7398d02a24fa0a0c9e84e40f4f933adf"
+    },
+    {
+      "module": "Overfull.TwoApexFactorization.Completion",
+      "path": "Overfull/TwoApexFactorization/Completion.lean",
+      "sha256": "6fbbf7df29616afd53c57b1f276884ff96e048c08f684b9e49bdc26c3a6a6759"
+    },
+    {
+      "module": "Overfull.TwoApexFactorization.Packing",
+      "path": "Overfull/TwoApexFactorization/Packing.lean",
+      "sha256": "3d4e9d283c2a72a5c096c2a46763fec968d562de7144261fb1dabce6504159ee"
+    },
+    {
+      "module": "Overfull.TwoApexFactorization.Selection",
+      "path": "Overfull/TwoApexFactorization/Selection.lean",
+      "sha256": "02742facb93e0c262b1217f0c272ac15a7befe1a2c04a858109cd3d39419325a"
+    },
+    {
+      "module": "Overfull.TwoApexFactorization.Shores",
+      "path": "Overfull/TwoApexFactorization/Shores.lean",
+      "sha256": "5b74ef61aa106dc681e0a828afab38c32319a2a769484745775f4162b42d2776"
+    },
+    {
+      "module": "Overfull.TwoApexFactorization.Theorem",
+      "path": "Overfull/TwoApexFactorization/Theorem.lean",
+      "sha256": "f9893e26a750968ecfe07bf49b8e6e60a11e775ecbd74a2e2fee36ea206c4984"
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.boundary_extension",
+    "Overfull.OneCore.exists_uniform_one_apex_factorization",
+    "Overfull.OneCore.exists_uniform_two_apex_reduction",
+    "Overfull.OneCore.NeighborPairing.exists_balancing_pairing",
+    "Overfull.OneCore.exists_apexSupply",
+    "Overfull.TwoApexFactorization.exists_selection",
+    "Overfull.TwoApexFactorization.exists_balanced_selection_coloring",
+    "Overfull.TwoApexFactorization.exists_uniform_selected_coloring",
+    "Overfull.TwoApexFactorization.Completion.edgeColorable",
+    "Overfull.OrdinaryFactorization.exists_uniform_first_half_with_choices",
+    "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction_with_choices",
+    "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization",
+    "Overfull.OneCore.residualShore_comap",
+    "Overfull.OneCore.residualShore_left",
+    "Overfull.OneCore.residualShore_right"
+  ],
+  "complete_axiom_log": "../verification/axioms.log",
+  "complete_build_log": "../verification/build.log",
+  "verification_report": "../verification/results.json",
+  "semantic_review": "boundary-extension-full-semantic-review.md",
+  "historical_source_recovery_preserved": "source-recovery.json",
+  "unrelated_assertions_not_claimed": [
+    "4.6",
+    "6.1"
+  ],
+  "additional_supporting_probability_module": {
+    "module": "Overfull.Probability.BernoulliDifferences",
+    "path": "Overfull/Probability/BernoulliDifferences.lean",
+    "sha256": "2d8cae29f49f30a5ad8152a87fe07f98c7fc884a312795a5800c72abf5d24449",
+    "part_of_boundary_extension_proof": false
+  },
+  "complete_declaration_map": "../verification/boundary-extension-full-declarations.json",
+  "targeted_build": {
+    "command": "lake build --wfail Overfull.BoundaryExtension.Full",
+    "result": "passed",
+    "jobs": 3344,
+    "warnings": 0
+  }
+}

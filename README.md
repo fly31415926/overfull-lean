@@ -1,6 +1,52 @@
 # Lean formalization of the overfull manuscript
 
-## Current continuation: complete bounded-input Corollary 4.6
+## Current continuation: uniform three-core terminal factorization
+
+The three-core terminal construction now reaches original-host coloring and
+one-factorization theorems:
+
+- `Overfull.three_core_terminal_factorization`
+- `Overfull.three_core_terminal_one_factorization`
+
+For fixed positive degree and part-size density and robust expansion parameters,
+one common positive error tolerance and order threshold are chosen before the
+host. An even-order regular simple graph with no overfull set and three disjoint
+covering robust core parts then has exactly the degree number of disjoint
+perfect matchings covering every original edge copy. The theorem constructs the
+joining palettes, completed prefix, residual cores, central and leaf colorings,
+and final restoration. No decomposition or residual coloring is assumed.
+
+The all-even residual is factored as closed components. With exactly two odd
+parts, their simultaneous contraction gives a central graph with one robust
+core and two apices. The surviving joining matchings prove its no-overfull
+condition. Complete bounded-input Corollary 4.6 supplies its coloring, and
+singleton boundary extension aligns both odd leaves on the same original copies.
+
+**Coverage remains 48 of 69 numbered assertions.** This is the three-core
+subcase of Proposition 4.16; the four-core cases and full proposition remain
+incomplete. There are still 21 unfinished assertions, including the main theorem.
+Every preceding numbered assertion record and statement hash is unchanged.
+
+The [source inventory](docs/three-core-terminal-source.json),
+[proof map](docs/three-core-terminal-verification.md),
+[semantic review](docs/three-core-terminal-semantic-review.md), and
+[handoff](docs/continuation-handoff.md) give the exact scope. The
+[current run](verification/runs/20261124T032118Z/) retains genuine successful
+and failed development checks. Its complete frozen verifier, unchanged axiom
+audit and supplementary preservation report establish the actual full-project
+result; focused checks alone do not.
+
+The exact published baseline is `0cf1c68c4daaeec9b879a03f1871eb64a0fa9640`,
+with tree `5d031253d02d0d0878422f8fbc367f04b812450c`. Both `main` and
+`verified-bipartite-continuation-2026-11-21` were independently read back at
+that commit before this round. It has the identical tree of the authorized
+local checkpoint `a7b16ddfcda8ba4247900795d1c9406036a2a9ef`, including its
+sources, mappings, snapshots and genuine logs. The new round's publication
+requires its own exact-tree and branch readbacks.
+
+The sections below retain earlier checkpoint scope and verification history.
+
+## Previous continuation: complete bounded-input Corollary 4.6
 
 **48 of the manuscript's 69 numbered assertions are complete.** The new
 `Overfull.bounded_input_one_factorization` proves the complete Corollary 4.6:

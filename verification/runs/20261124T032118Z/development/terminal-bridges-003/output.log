@@ -1,0 +1,24 @@
+✖ [3284/3285] Building Overfull.Terminal.ResidualPools (2.5s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/7dae4c9bb5a1/overfull-three-core/Overfull/Terminal/ResidualPools.lean -o /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean/Overfull/Terminal/ResidualPools.olean -i /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean/Overfull/Terminal/ResidualPools.ilean -c /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/ir/Overfull/Terminal/ResidualPools.c --setup /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/ir/Overfull/Terminal/ResidualPools.setup.json --json
+error: Overfull/Terminal/ResidualPools.lean:49:44: unsolved goals
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+N : ℕ → G.Subgraph
+q : ℕ
+A : Finset ↑G.edgeSet
+hsurvive : ∀ e ∈ A, e ∉ removedCopies (matchingFamilyCopies G N q) univ
+⊢ #(residualPool G N q (image (⇑(residualEdgeEmbedding G N q)) (residualPool G N q A))) = #(residualPool G N q A)
+error: Lean exited with code 1
+✖ [3285/3285] Building Overfull.Terminal.Reassembly (12s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/7dae4c9bb5a1/overfull-three-core/Overfull/Terminal/Reassembly.lean -o /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean/Overfull/Terminal/Reassembly.olean -i /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean/Overfull/Terminal/Reassembly.ilean -c /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/ir/Overfull/Terminal/Reassembly.c --setup /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/ir/Overfull/Terminal/Reassembly.setup.json --json
+error: Overfull/Terminal/Reassembly.lean:105:2: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.Terminal.ResidualPools
+- Overfull.Terminal.Reassembly
+error: build failed

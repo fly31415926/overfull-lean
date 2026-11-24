@@ -1,0 +1,1831 @@
+#!/usr/bin/env python3
+"""Build the formalized subset, audit its axioms, and record exact source hashes."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+from pathlib import Path
+import re
+import subprocess
+import sys
+
+
+ROOT = Path(__file__).resolve().parents[1]
+OUTPUT = ROOT / "verification"
+MATHLIB_REVISION = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
+NUMBERED_ASSERTION_COUNT = 69
+COMPLETED_NUMBERED_ASSERTION_COUNT = 48
+
+
+def run(arguments: list[str], log_name: str) -> str:
+    result = subprocess.run(
+        arguments, cwd=ROOT, text=True,
+        stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+    )
+    (OUTPUT / log_name).write_text(result.stdout, encoding="utf-8")
+    print(result.stdout, end="")
+    if result.returncode:
+        raise SystemExit(result.returncode)
+    return result.stdout
+
+
+def main() -> None:
+    OUTPUT.mkdir(exist_ok=True)
+    # Any failed check must invalidate a report from an earlier source version.
+    results_path = OUTPUT / "results.json"
+    results_path.unlink(missing_ok=True)
+    run([sys.executable, "scripts/setup_vizing.py"], "vizing-source.log")
+    manifest = json.loads((ROOT / "lake-manifest.json").read_text())
+    mathlib = next(p for p in manifest["packages"] if p["name"] == "mathlib")
+    if mathlib["rev"] != MATHLIB_REVISION:
+        raise SystemExit("The mathlib revision differs from the reviewed project revision.")
+    toolchain = (ROOT / "lean-toolchain").read_text().strip()
+    if toolchain != "leanprover/lean4:v4.24.0":
+        raise SystemExit("The Lean toolchain differs from the reviewed project toolchain.")
+
+    # Included external proofs must match their recorded source adaptations.
+    for provenance_name in ("bmatching-source.json", "circulation-source.json"):
+        provenance = json.loads((ROOT / "docs" / provenance_name).read_text())
+        included = ROOT / provenance["included_path"]
+        digest = hashlib.sha256(included.read_bytes()).hexdigest()
+        if digest != provenance["included_sha256"]:
+            raise SystemExit(f"Included external source differs from its provenance: {included.name}")
+        for key in ("license_file", "attribution_file"):
+            if not (ROOT / provenance[key]).is_file():
+                raise SystemExit(f"Missing external-source notice: {provenance[key]}")
+
+    # The completed four-odd assertion has an exact reviewed source manifest.
+    four_odd_source = json.loads((ROOT / "docs/four-odd-source.json").read_text())
+    four_odd_modules = {item["module"]: item for item in four_odd_source["modules"]}
+    if len(four_odd_modules) != four_odd_source["module_count"]:
+        raise SystemExit("The four-odd source module inventory is inconsistent.")
+    for item in four_odd_modules.values():
+        path = ROOT / item["path"]
+        if hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]:
+            raise SystemExit(f"Four-odd proof source differs from its reviewed manifest: {item['path']}")
+
+    # Supporting continuation: exact sources and every public proof are mapped.
+    residual_source = json.loads((ROOT / "docs/residual-factorization-source.json").read_text())
+    residual_modules = {item["module"]: item for item in residual_source["modules"]}
+    if len(residual_modules) != residual_source["module_count"]:
+        raise SystemExit("The residual-factorization module inventory is inconsistent.")
+    if residual_source["numbered_assertions_completed"] != 0:
+        raise SystemExit("The residual-factorization continuation does not complete a numbered assertion.")
+    for item in residual_modules.values():
+        path = ROOT / item["path"]
+        if hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]:
+            raise SystemExit(f"Residual-factorization source differs from its reviewed manifest: {item['path']}")
+    residual_public_names = {
+        entry["name"] for item in residual_modules.values()
+        for entry in item["public_proof_declarations"]
+    }
+    if (len(residual_public_names) != residual_source["public_theorem_count"]
+            or residual_public_names != set(residual_source["required_proof_declarations"])):
+        raise SystemExit("The residual-factorization public proof mapping is inconsistent.")
+
+    # Full prescribed boundary extension: exact reviewed sources and final proof.
+    boundary_source = json.loads((ROOT / "docs/boundary-extension-full-source.json").read_text())
+    boundary_modules = {item["module"]: item for item in boundary_source["modules"]}
+    if len(boundary_modules) != boundary_source["module_count"]:
+        raise SystemExit("The complete boundary-extension source inventory is inconsistent.")
+    for item in boundary_modules.values():
+        path = ROOT / item["path"]
+        if hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]:
+            raise SystemExit(f"Boundary-extension source differs from its reviewed manifest: {item['path']}")
+    probability_source = boundary_source["additional_supporting_probability_module"]
+    if hashlib.sha256((ROOT / probability_source["path"]).read_bytes()).hexdigest() != probability_source["sha256"]:
+        raise SystemExit("The supporting Bernoulli-differences source differs from its manifest.")
+
+    # Reconstructed closure of ordinary-core Lemma 4.2, plus the recovered
+    # supporting continuation, plus the three-label circuit construction.
+    # Source identity, public names, and actual
+    # audited modules are checked separately; no historical log is replayed.
+    reconstruction = json.loads((ROOT / "docs/checkpoint-reconstruction-source.json").read_text())
+    if hashlib.sha256((ROOT / "Audit.lean").read_bytes()).hexdigest() != reconstruction["stock_audit_sha256"]:
+        raise SystemExit("The stock transitive axiom audit has changed.")
+    for item in reconstruction["recovered_original_sources"]:
+        if hashlib.sha256((ROOT / item["path"]).read_bytes()).hexdigest() != item["sha256"]:
+            raise SystemExit(f"Recovered original source was modified: {item['path']}")
+    extension_maps = {}
+    for key, filename in (("ordinary", "ordinary-factorization-full-source.json"),
+                          ("few", "few-exception-source.json"),
+                          ("circuit", "three-label-circuit-source.json"),
+                          ("joining", "joining-circuit-source.json"),
+                          ("assigned", "assigned-part-source.json"),
+                          ("native_pattern", "native-pattern-source.json"),
+                          ("native_reserve", "native-reserve-source.json"),
+                          ("residual_palette", "residual-palette-source.json"),
+                          ("exceptional_palette", "exceptional-palette-source.json"),
+                          ("weighted_palette", "weighted-palette-source.json"),
+                          ("native_star", "native-star-source.json"),
+                          ("native_integration", "native-integration-source.json"),
+                          ("native_terminal", "native-terminal-source.json"),
+                          ("three_core_terminal", "three-core-terminal-source.json")):
+        source = json.loads((ROOT / "docs" / filename).read_text())
+        source_modules = {item["module"]: item for item in source["modules"]}
+        if (len(source_modules) != source["module_count"]
+                or len(source_modules) != len(source["modules"])):
+            raise SystemExit(f"Inconsistent {key} module inventory.")
+        public_modules = {}
+        for item in source_modules.values():
+            path = ROOT / item["path"]
+            if (".".join(path.relative_to(ROOT).with_suffix("").parts) != item["module"]
+                    or hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]):
+                raise SystemExit(f"Reviewed {key} source differs: {item['path']}")
+            names = [entry["name"] for entry in item["public_proof_declarations"]]
+            if len(names) != item["public_theorem_count"] or len(names) != len(set(names)):
+                raise SystemExit(f"Inconsistent public proof inventory: {item['module']}")
+            for name in names:
+                if name in public_modules:
+                    raise SystemExit(f"Duplicate mapped public proof: {name}")
+                public_modules[name] = item["module"]
+        if (len(public_modules) != source["public_theorem_count"]
+                or set(public_modules) != set(source["required_proof_declarations"])
+                or len(public_modules) != len(source["required_proof_declarations"])):
+            raise SystemExit(f"Inconsistent {key} public proof mapping.")
+        extension_maps[key] = (source, source_modules, public_modules)
+    ordinary_source, ordinary_modules, ordinary_public_modules = extension_maps["ordinary"]
+    few_source, few_modules, few_public_modules = extension_maps["few"]
+    if (ordinary_source["manuscript_number"] != "4.2"
+            or ordinary_source["statement_sha256"] != "480b2fb39565bc86acf278addac00ca843da67be5638db6b4328af1ddf08ea97"
+            or ordinary_source["numbered_assertions_completed"] != 1):
+        raise SystemExit("The ordinary closure does not identify the pinned complete Lemma 4.2.")
+    if few_source["numbered_assertions_completed"] != 0:
+        raise SystemExit("The few-exception continuation completes no additional numbered assertion.")
+    if extension_maps["circuit"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The three-label circuit result completes no numbered manuscript assertion.")
+    if extension_maps["joining"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The joining decomposition completes no numbered manuscript assertion.")
+    if extension_maps["assigned"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The assigned-part continuation completes no numbered manuscript assertion.")
+
+    if extension_maps["native_pattern"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The native-pattern continuation completes no numbered manuscript assertion.")
+
+    if extension_maps["native_reserve"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The native-reserve continuation completes no numbered manuscript assertion.")
+
+    if extension_maps["residual_palette"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The residual-palette continuation completes no numbered manuscript assertion.")
+
+    if extension_maps["exceptional_palette"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The exceptional-palette continuation completes no numbered manuscript assertion.")
+
+    if extension_maps["weighted_palette"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The weighted-palette continuation completes no numbered manuscript assertion.")
+
+    if extension_maps["native_star"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The native-star continuation completes no numbered manuscript assertion.")
+
+    if extension_maps["native_integration"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The native-integration continuation completes no numbered manuscript assertion.")
+
+    terminal_source, terminal_modules, terminal_public_modules = extension_maps["native_terminal"]
+    if (terminal_source["kind"] != "complete_assertion_source_mapping"
+            or terminal_source["manuscript_number"] != "4.6"
+            or terminal_source["manuscript_label"] != "three:lem:bounded-input"
+            or terminal_source["statement_sha256"] != "86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26"
+            or terminal_source["numbered_assertions_completed"] != 1
+            or terminal_source["public_theorems"] != [
+                "Overfull.bounded_input_factorization", "Overfull.bounded_input_one_factorization"]
+            or not set(terminal_source["public_theorems"]) <= set(terminal_public_modules)):
+        raise SystemExit("The terminal closure does not identify the exact complete Corollary 4.6.")
+
+    three_core_source, _, three_core_public = extension_maps["three_core_terminal"]
+    if (three_core_source["kind"] != "supporting_continuation"
+            or three_core_source["numbered_assertions_completed"] != 0
+            or three_core_source["manuscript_number"] != "4.16"
+            or three_core_source["manuscript_label"] != "three:prop:terminal"
+            or three_core_source["statement_sha256"] != "1ba102e379594ab72de4ba73cf41c88d9fbdadf1c132e2943b48da04e8c2cc1c"
+            or three_core_source["verified_subcase"] != "exactly_three_core_parts"
+            or three_core_source["public_theorems"] != [
+                "Overfull.three_core_terminal_factorization",
+                "Overfull.three_core_terminal_one_factorization"]
+            or not set(three_core_source["public_theorems"]) <= set(three_core_public)):
+        raise SystemExit("The three-core continuation must identify only its exact terminal subcase.")
+
+    # Every first-party mathematical file must be included in the library build.
+    modules = {"Overfull": ROOT / "Overfull.lean"}
+    modules.update({
+        ".".join(path.relative_to(ROOT).with_suffix("").parts): path
+        for path in (ROOT / "Overfull").rglob("*.lean")
+    })
+    reachable: set[str] = set()
+    pending = ["Overfull"]
+    while pending:
+        module = pending.pop()
+        if module in reachable:
+            continue
+        reachable.add(module)
+        imports = re.findall(r"^import\s+(\S+)", modules[module].read_text(), re.MULTILINE)
+        pending.extend(name for name in imports if name in modules and name not in reachable)
+    if missing := sorted(set(modules) - reachable):
+        raise SystemExit("Mathematical modules excluded from the build: " + ", ".join(missing))
+
+    version = run(["lake", "env", "lean", "--version"], "lean-version.log").strip()
+
+    # Check the actual source checkouts as well as the declared revision pins.
+    dependency_revisions = {}
+    for dependency in manifest["packages"]:
+        if dependency["type"] != "git":
+            continue
+        directory = ROOT / ".lake" / "packages" / dependency["name"]
+        actual = subprocess.check_output(
+            ["git", "-C", str(directory), "rev-parse", "HEAD"], text=True,
+        ).strip()
+        if actual != dependency["rev"]:
+            raise SystemExit(f"Dependency source is at the wrong revision: {dependency['name']}")
+        if subprocess.run(
+            ["git", "-C", str(directory), "diff", "--quiet", "HEAD", "--"],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+        ).returncode:
+            raise SystemExit(f"Dependency has modified tracked sources: {dependency['name']}")
+        dependency_revisions[dependency["name"]] = actual
+
+    run(["lake", "build", "--wfail"], "build.log")
+    audit = run(["lake", "env", "lean", "Audit.lean"], "axioms.log")
+    match = re.search(r"OVERFULL_AXIOM_AUDIT_OK (\d+)", audit)
+    declarations = [json.loads(line) for line in
+                    re.findall(r"VERIFIED_DECLARATION ([^\n]+)", audit)]
+    if not match or int(match.group(1)) != len(declarations):
+        raise SystemExit("The axiom audit did not return a complete declaration list.")
+    imported = set(re.findall(r"IMPORTED_PROJECT_MODULE (\S+)", audit))
+    external_imports = set(re.findall(r"IMPORTED_EXTERNAL_MODULE (\S+)", audit))
+    if imported != set(modules):
+        raise SystemExit("The modules actually imported by Lean differ from the source inventory.")
+
+    completed_results = {
+        "sharpness_proposition": "Overfull.sharpness_family",
+        "density_corollary": "Overfull.arbitrarily_large_class_two_graphs",
+        "robust_range_reduction": "Overfull.robust_range_reduction",
+        "bipartite_edge_deletion": "Overfull.IsBipartiteRobustExpander.after_edge_deletion_of_degree_bound",
+        "bipartite_vertex_deletion": "Overfull.IsBipartiteRobustExpander.after_vertex_deletion",
+        "cycle_absorber": "Overfull.Dense.CycleAbsorber.in_host",
+        "perfect_matching_distribution": "Overfull.FractionalMatching.exists_perfectMatching_distribution",
+        "vizing_bound": "Overfull.finite_vizing_bound",
+        "vizing_for_arbitrary_finite_graphs": "Overfull.vizing_finite",
+        "odd_cut_failure_bound": "Overfull.MatchingProbability.Distribution.odd_failure_probability",
+        "even_set_toggle_failure_bound": "Overfull.MatchingProbability.Distribution.even_toggles_failure_probability",
+        "family_cut_failure_bound": "Overfull.MatchingProbability.Distribution.family_failure_probability",
+        "overfull_subgraph_equivalence": "Overfull.no_overfull_iff_not_exists_same_degree_overfull_subgraph",
+        "hall_theorem": "Overfull.bipartite_hall_iff",
+        "hall_deficiency": "Overfull.bipartite_hall_defect",
+        "tutte_berge_formula": "Overfull.TutteBerge.tutte_berge_integer_maximum",
+        "maximum_matching_existence": "Overfull.TutteBerge.exists_maximum_matching",
+        "matching_polytope": "Overfull.Multigraph.matching_polytope",
+        "multigraph_saturating_matching_distribution": "Overfull.Multigraph.exists_uniform_matching_distribution",
+        "multigraph_perfect_matching_distribution": "Overfull.Multigraph.exists_perfectMatching_distribution",
+        "bipartite_augmenting_path": "Overfull.bipartite_robust_augmenting_path",
+        "multigraph_small_cut_lemma": "Overfull.SmallCuts.small_cut_lemma",
+        "dense_signed_flow": "Overfull.dense_signed_flow",
+        "dense_unequal_flow": "Overfull.dense_unequal_flow",
+        "bipartite_range_reduction": "Overfull.bipartite_robust_range_reduction",
+        "multigraph_odd_cut_failure_bound": "Overfull.MultigraphMatchingProbability.Distribution.odd_failure_probability",
+        "multigraph_even_set_toggle_failure_bound": "Overfull.MultigraphMatchingProbability.Distribution.even_toggles_failure_probability",
+        "multigraph_family_cut_failure_bound": "Overfull.MultigraphMatchingProbability.Distribution.family_failure_probability",
+        "multigraph_residual_cut": "Overfull.MultigraphMatchingProbability.cutFailure_iff_actual_cut",
+        "konig_multigraph_coloring": "Overfull.Multigraph.konig_edgeColoring_iff",
+        "geometric_correction_series": "Overfull.GeometricCorrection.exists_exact_correction",
+        "fractional_triangle_decomposition": "Overfull.dense_fractional_triangles",
+        "balanced_multigraph_coloring": "Overfull.Multigraph.balanced_edgeColoring",
+        "one_high_degree_coloring": "Overfull.Multigraph.edgeColoring_one_high",
+        "sparse_vertex_deletion_coloring": "Overfull.Multigraph.edgeColoring_sparse_vertex_deletion_real",
+        "minimal_noncolorable_edge_restriction": "Overfull.Multigraph.exists_kMinimal_subset",
+        "two_edge_fan_elementarity": "Overfull.Multigraph.IsKMinimal.two_edge_fan_elementary",
+        "critical_endpoint_degree_sum": "Overfull.Multigraph.IsKMinimal.endpoint_degree_sum",
+        "fan_low_degree_set": "Overfull.Multigraph.IsKMinimal.fan_low_degree_set_real",
+        "first_fan_core_exclusion": "Overfull.Multigraph.first_fan",
+        "bounded_core_move": "Overfull.Multigraph.bounded_core_move_full",
+        "balanced_robust_realization": "Overfull.balanced_robust_realization",
+        "random_bipartite_reserve": "Overfull.RandomReserve.bipartite_random_reserve",
+        "common_probability_chernoff": "Overfull.Bernoulli.chernoff",
+        "unequal_probability_chernoff": "Overfull.IndependentBernoulli.chernoff_of_independent_indicators",
+        "hypergeometric_chernoff": "Overfull.Hypergeometric.chernoff",
+        "actual_packing_degree_accounting": "Overfull.BipartitePackingAccounting.working_degree_bounds",
+        "disjoint_augmenting_paths": "Overfull.BipartitePathPacking.exists_disjoint_paths",
+        "matching_completion_through_reserve": "Overfull.BipartiteMatchingCompletion.exists_completion_in_graph",
+        "actual_packing_working_matching": "Overfull.BipartitePackingWorking.exists_large_matching_outside_reserve",
+        "packing_reserve_recurrence": "Overfull.BipartitePackingBounds.reserve_recurrence_bound",
+        "actual_adaptive_packing_round": "Overfull.BipartitePackingRound.exists_round",
+        "adaptive_packing_strategy": "Overfull.BipartitePackingStrategy.exists_strategy",
+        "adaptive_bipartite_packing": "Overfull.adaptive_bipartite_packing",
+        "prescribed_bipartite_packing": "Overfull.bipartite_matching_packing",
+        "bipartite_perfect_matching_packing": "Overfull.bipartite_perfect_matching_packing",
+        "almost_regular_robust_reserve": "Overfull.RandomReserve.exists_almost_regular_reserve",
+        "maximum_matching_preserving_coverage": "Overfull.MatchingExtension.exists_maximum_covering",
+        "maximum_matching_covering_small_set": "Overfull.MatchingExtension.exists_maximum_covering_small_set",
+        "bipartite_maximum_matching_deficiency": "Overfull.BipartitePackingDeficiency.maximum_matching_deficiency",
+        "bipartite_packing_matching_selection": "Overfull.BipartitePackingStep.exists_packing_matching",
+        "ordinary_random_reserve": "Overfull.OrdinaryRandomReserve.ordinary_random_reserve",
+        "ordinary_reserve_degree_control": "Overfull.OrdinaryRandomReserve.exists_reserve_with_degree_control",
+        "ordinary_almost_regular_reserve": "Overfull.OrdinaryRandomReserve.exists_almost_regular_reserve",
+        "ordinary_edge_and_vertex_deletion": "Overfull.IsRobustExpander.after_edge_and_vertex_deletion",
+        "ordinary_unused_reserve_robustness": "Overfull.OrdinaryPackingReserve.unused_reserve_robust",
+        "ordinary_residual_graph_robustness": "Overfull.OrdinaryPackingReserve.residual_graph_robust",
+        "ordinary_maximum_matching_deficiency": "Overfull.OrdinaryPackingDeficiency.maximum_matching_deficiency",
+        "ordinary_deficiency_scale": "Overfull.OrdinaryPackingDeficiency.deficiency_scale",
+        "ordinary_saturated_matching_selection": "Overfull.OrdinaryPackingDeficiency.exists_matching_covering_saturated_load",
+        "ordinary_actual_working_matching": "Overfull.OrdinaryPackingWorking.exists_large_matching_outside_reserve",
+        "prescribed_pair_cut_sampling": "Overfull.PairedCut.exists_prescribed_pair_cut",
+        "paired_cut_total_degree_loss": "Overfull.PairedCut.robust_after_total_degree_loss",
+        "paired_cut_robust_quotient": "Overfull.PairedCut.robust_quotient",
+        "paired_cut_regular_clusters": "Overfull.PairedCut.exists_robust_regular_clusters",
+        "paired_cut_robust_lifting": "Overfull.PairedCut.balanced_cluster_cut_expands",
+        "paired_cut_from_clusters": "Overfull.PairedCut.exists_prescribed_pair_cut_from_clusters",
+        "prescribed_pair_robust_cut": "Overfull.PairedCut.paired_cut",
+        "matching_pairing_even_uncovered": "Overfull.MatchingPairing.exists_pairing_of_even_uncovered",
+        "matching_pairing": "Overfull.MatchingPairing.exists_pairing",
+        "ordinary_initial_reserve": "Overfull.OrdinaryPackingInitial.exists_initial_reserve",
+        "ordinary_reserve_step_bound": "Overfull.OrdinaryPackingBounds.reserve_step_bound",
+        "ordinary_reserve_recurrence_bound": "Overfull.OrdinaryPackingBounds.reserve_recurrence_bound",
+        "ordinary_deficiency_total_bound": "Overfull.OrdinaryPackingBounds.deficiency_with_total_bound",
+        "ordinary_completion_budget": "Overfull.OrdinaryPackingBounds.completion_budget",
+        "ordinary_matching_completion": "Overfull.OrdinaryMatchingCompletion.exists_completion_of_balanced_cut",
+        "ordinary_matching_completion_outside_set": "Overfull.OrdinaryMatchingCompletion.exists_completion_outside_set",
+        "matching_preserving_robust_cut": "Overfull.PairedCut.exists_matching_cut",
+        "ordinary_packing_reserve_parameters": "Overfull.OrdinaryPackingParameters.reserve_parameters",
+        "ordinary_packing_error_parameter": "Overfull.OrdinaryPackingParameters.exists_error_parameter",
+        "actual_ordinary_packing_round": "Overfull.OrdinaryPackingRound.exists_round",
+        "ordinary_packing_strategy": "Overfull.OrdinaryPackingStrategy.exists_rule",
+        "adaptive_ordinary_packing": "Overfull.adaptive_ordinary_packing",
+        "balanced_core_extraction": "Overfull.BalancedCore.balanced_core_of_bipartite_outcome",
+        "matching_repair_released_degree": "Overfull.MatchingRepairAccounting.released_degree_le",
+        "matching_repair_released_union_degree": "Overfull.MatchingRepairAccounting.released_union_degree_le",
+        "matching_repair_internal_endpoint_bound": "Overfull.MatchingRepairLoad.actual_load_le_internal_add_endpoints",
+        "matching_repair_internal_capacity": "Overfull.MatchingRepairLoad.internalLoad_update_insert_matching",
+        "matching_repair_total_use": "Overfull.MatchingRepairLoad.total_actual_load_update_insert",
+        "matching_repair_saturation_bound": "Overfull.MatchingRepairLoad.saturated_internal_count_le_actual",
+        "matching_repair_error_parameter": "Overfull.MatchingRepairParameters.exists_error",
+        "matching_repair_order_threshold": "Overfull.MatchingRepairParameters.exists_order_threshold",
+        "matching_repair_actual_completion": "Overfull.MatchingRepairStep.exists_protected_completion",
+        "matching_repair_fresh_disjointness": "Overfull.MatchingRepairFamily.fresh_disjoint_union",
+        "matching_repair_family_update": "Overfull.MatchingRepairFamily.update_pairwise_disjoint",
+        "matching_repair_actual_load_bound": "Overfull.MatchingRepair.Invariant.load_le",
+        "matching_repair_internal_total_bound": "Overfull.MatchingRepair.Invariant.internal_total_le",
+        "matching_repair_actual_reserve_union": "Overfull.MatchingRepair.reserve_union_degree",
+        "reserve_repair": "Overfull.MatchingRepair.reserve_repair",
+        "balanced_auxiliary_neighbors": "Overfull.AuxiliaryCompletion.exists_auxiliary_neighbors",
+        "balanced_auxiliary_incidence_graph": "Overfull.AuxiliaryCompletion.exists_balanced_incidence_graph",
+        "auxiliary_singleton_incidence_bound": "Overfull.AuxiliaryCompletion.twice_incidence_card_le_deficiency_sum_add_one",
+        "auxiliary_core_cut_bound": "Overfull.AuxiliaryCompletion.core_cut_gt",
+        "auxiliary_original_edge_copies": "Overfull.AuxiliaryCompletion.internal_original_edges",
+        "auxiliary_added_edge_simplicity": "Overfull.AuxiliaryCompletion.added_edge_simple",
+        "auxiliary_odd_set_preservation": "Overfull.AuxiliaryCompletion.no_overfull",
+        "auxiliary_robust_core_construction": "Overfull.AuxiliaryCompletion.exists_auxiliary_core",
+        "robust_auxiliary_completion": "Overfull.robust_auxiliary_completion",
+        "dense_coloring_triangle_encoding": "Overfull.dense_encoding",
+        "finite_balanced_remainders": "Overfull.Dense.FiniteAbsorber.remainderCycles_exists",
+        "finite_remainder_absorber": "Overfull.Dense.FiniteAbsorber.finite_absorber_subgraph",
+        "six_pair_balanced_reserve": "Overfull.dense_reserve",
+        "dense_balance_repair_routing_bounds": "Overfull.Dense.BalanceRepairBounds.routing_bounds",
+        "dense_balance_repair_thresholds": "Overfull.Dense.BalanceRepairBounds.thresholds",
+        "dense_balance_repair_actual_paths": "Overfull.Dense.BalanceRepair.exists_routing_path",
+        "dense_balance_repair_graph_difference": "Overfull.Dense.BalanceRepair.eraseArcs_eq_sdiff",
+        "dense_balance_repair_actual_degree": "Overfull.Dense.BalanceRepair.selectArcs_degree",
+        "dense_balance_repair_local_balance": "Overfull.Dense.BalanceRepair.locallyBalanced_iff",
+        "dense_balance_repair_residual_routing": "Overfull.Dense.BalanceRepair.routingConditions_after_deletion",
+        "dense_balance_repair_cancellation_degree": "Overfull.Dense.BalanceRepair.CancellationState.deleted_degree_le",
+        "dense_balance_repair_saturated_count": "Overfull.Dense.BalanceRepair.CancellationState.saturated_card_bound",
+        "dense_balance_repair_finite_cancellation": "Overfull.Dense.BalanceRepair.exists_balanced_deletion",
+        "dense_balance_repair_positive_mass": "Overfull.Dense.BalanceRepair.positive_balance_sum_le",
+        "dense_balance_repair": "Overfull.dense_balance_repair",
+        "replacement_uniform_parameters": "Overfull.Replacement.exists_replacement_parameters",
+        "replacement_degree_identity": "Overfull.Replacement.graph_degree_identity",
+        "replacement_induced_edge_identity": "Overfull.Replacement.graph_internal_count_identity",
+        "replacement_actual_core_cut": "Overfull.Replacement.cut_core_le",
+        "replacement_small_shore_comparison": "Overfull.Replacement.regular_small_shore_comparison",
+        "replacement_overfull_preservation": "Overfull.Replacement.no_overfull_of_core_cuts",
+        "replacement_degree_loss": "Overfull.Replacement.core_degree_loss",
+        "replacement_core_robustness": "Overfull.Replacement.core_robust",
+        "robust_core_replacement": "Overfull.robust_core_replacement",
+        "forbidden_set_subfamily": "Overfull.ForbiddenSetWitness.exists_subfamily",
+        "forbidden_set_vertex_witness": "Overfull.ForbiddenSetWitness.exists_vertex_witness",
+        "six_family_connectivity_witness": "Overfull.ForbiddenSetWitness.exists_six_family_witness",
+        "prescribed_matching_short_paths": "Overfull.PrescribedMatching.short_path_avoiding",
+        "prescribed_matching_core_witness": "Overfull.PrescribedMatching.exists_core_connection_witness",
+        "prescribed_matching_component_bound": "Overfull.PrescribedMatching.component_card_le_cores_add_exceptional",
+        "prescribed_matching_core_attachment": "Overfull.PrescribedMatching.core_attachment_after_deletion",
+        "prescribed_matching_component_survival": "Overfull.PrescribedMatching.component_has_survivor",
+        "prescribed_matching_actual_connectivity": "Overfull.PrescribedMatching.reachable_reflection_of_witness",
+        "prescribed_matching_component_parity": "Overfull.PrescribedMatching.matching_component_inter_even",
+        "prescribed_matching_odd_component_transfer": "Overfull.PrescribedMatching.oddComponents_after_remaining_deletion",
+        "prescribed_matching_remaining_odd_bound": "Overfull.PrescribedMatching.remaining_odd_bound",
+        "prescribed_matching_tutte_completion": "Overfull.PrescribedMatching.complete_of_induced_odd_bounds",
+        "prescribed_matching_discard_bound": "Overfull.PrescribedMatching.avoidVertices_omitted_edges_le",
+        "prescribed_matching_covered_core_bound": "Overfull.PrescribedMatching.matching_covered_outside_le",
+        "prescribed_matching_actual_selection": "Overfull.PrescribedMatching.select_prescribed_matching",
+        "prescribed_matching_final_edge_difference": "Overfull.PrescribedMatching.omitted_edges_le_of_extension",
+        "prescribed_matching_witness_completion": "Overfull.PrescribedMatching.complete_avoiding_witness",
+        "prescribed_exceptional_core_matching": "Overfull.prescribed_exceptional_core_matching",
+        "compression_four_label_forest": "Overfull.Compression.four_label_parity_forest",
+        "compression_actual_parity_selection": "Overfull.Compression.exists_parity_subset",
+        "compression_endpoint_parity_forest": "Overfull.Compression.exists_endpoint_parity_forest",
+        "compression_selected_matching": "Overfull.Compression.exists_selected_matching",
+        "compression_selected_vertex_count": "Overfull.Compression.selectedMatching_verts_card",
+        "compression_core_cut_parity": "Overfull.Compression.selected_core_cut_parity",
+        "compressed_matching": "Overfull.Compression.exists_compressed_matching",
+        "force_core_perfect_matching_threshold": "Overfull.ForceMatching.exists_ordinary_perfect_matching_threshold",
+        "force_core_completion_parameters": "Overfull.ForceMatching.exists_core_completion_parameters",
+        "compressed_matching_completion": "Overfull.ForceMatching.exists_compressed_completion_parameters",
+        "force_residual_core_degree": "Overfull.ForceMatching.residualCore_degree_loss",
+        "force_residual_core_robustness": "Overfull.ForceMatching.residualCore_robust",
+        "force_whole_union_card": "Overfull.ForceMatching.wholeUnions_card_le",
+        "force_star_probability": "Overfull.ForceMatching.Distribution.star_hit_probability",
+        "safe_star_sampling": "Overfull.ForceMatching.exists_star_matching",
+        "compressed_cut_comparison": "Overfull.ForceMatching.completed_cut_comparison",
+        "force_toggle_cut_comparison": "Overfull.ForceMatching.toggle_cut_le_of_cut_subset",
+        "force_family_safety": "Overfull.ForceMatching.family_safe_after_completion",
+        "force_whole_union_classification": "Overfull.ForceMatching.classified_of_minority",
+        "force_residual_no_overfull": "Overfull.ForceMatching.residual_no_overfull",
+        "force_star_retention": "Overfull.ForceMatching.starHit_of_exceptional_retention",
+        "force_uniform_parameters": "Overfull.ForceMatching.uniform_order_threshold",
+        "safe_compressed_completion": "Overfull.ForceMatching.exists_safe_completion_parameters",
+        "force_exceptional_star": "Overfull.force_exceptional_star",
+        "safe_boundary_adjacency": "Overfull.SafePrescription.pair_mem_boundaryEdges",
+        "safe_boundary_edge_count": "Overfull.SafePrescription.boundaryEdges_card_bound",
+        "safe_actual_boundary_submatching": "Overfull.SafePrescription.exists_boundary_submatching",
+        "safe_prescription_finite_sampling": "Overfull.SafePrescription.exists_bounded_matching_for_family",
+        "safe_prescription_sampling_constants": "Overfull.SafePrescription.exists_bounded_matching",
+        "safe_prescription_sampled_boundary": "Overfull.SafePrescription.exists_sampled_boundary",
+        "safe_cut_incidence_degree": "Overfull.SafePrescription.cutGraph_degree",
+        "safe_core_boundary_degree": "Overfull.SafePrescription.cut_incident_core_bound",
+        "safe_exceptional_boundary_degree": "Overfull.SafePrescription.cut_incident_cluster_bound",
+        "safe_cluster_neighbor_count": "Overfull.SafePrescription.same_cluster_neighbors_lower",
+        "safe_clique_auxiliary_matching": "Overfull.SafePrescription.cliqueAux_has_perfect_matching",
+        "safe_retained_original_edges": "Overfull.SafePrescription.cliqueAux_original_edge",
+        "safe_retained_core_parity_transport": "Overfull.SafePrescription.uncovered_embed_union_card",
+        "safe_retained_partial_matching": "Overfull.SafePrescription.exists_retained_partial_matching",
+        "safe_family_cluster_membership": "Overfull.SafePrescription.family_same_label",
+        "safe_family_whole_cores": "Overfull.SafePrescription.family_whole_cores",
+        "safe_cluster_union_approximation": "Overfull.SafePrescription.cluster_union_approximation",
+        "safe_simultaneous_toggle_identity": "Overfull.SafePrescription.cut_symmDiff_identity",
+        "safe_simultaneous_toggle_bound": "Overfull.SafePrescription.cut_symmDiff_lower_bound",
+        "safe_small_cut_classification": "Overfull.SafePrescription.classified_small_cut",
+        "safe_robust_small_cut_classification": "Overfull.SafePrescription.classified_robust_small_cut",
+        "safe_exterior_matching_count": "Overfull.SafePrescription.exteriorEdges_card_le",
+        "safe_matching_cut_exterior_bound": "Overfull.SafePrescription.matching_cut_le_exterior_add_one",
+        "safe_original_cut_from_residual": "Overfull.SafePrescription.original_cut_lt_of_overfull",
+        "safe_residual_no_overfull": "Overfull.SafePrescription.residual_no_overfull_of_small_cut_classification",
+        "safe_prescription_uniform_parameters": "Overfull.SafePrescription.exists_prescription_parameters",
+        "safe_prescription": "Overfull.safe_prescription",
+        "ordinary_finite_prefix_rule": "Overfull.OrdinaryPackingStrategy.exists_prefix_rule",
+        "adaptive_ordinary_packing_prefix": "Overfull.adaptive_ordinary_packing_prefix",
+        "foreign_minority_card_bound": "Overfull.ForeignRefinement.minorityVertices_card_le",
+        "foreign_minority_core_subset": "Overfull.ForeignRefinement.minorityVertices_subset",
+        "foreign_surviving_core_membership": "Overfull.ForeignRefinement.surviving_core_membership",
+        "foreign_minority_deletion": "Overfull.ForeignRefinement.minority_shore_deletion",
+        "selected_host_matching_adapter": "Overfull.ForeignColoring.selectedMatching_isMatching_of_edge_copies",
+        "selected_host_matching_disjointness": "Overfull.ForeignColoring.selectedMatching_spanning_disjoint",
+        "host_color_class_membership": "Overfull.ForeignColoring.mem_hostColorClass",
+        "host_color_class_subset": "Overfull.ForeignColoring.hostColorClass_subset",
+        "host_color_class_matching": "Overfull.ForeignColoring.hostColorClass_isMatching",
+        "host_color_class_disjointness": "Overfull.ForeignColoring.hostColorClass_pairwise_disjoint",
+        "host_color_class_union": "Overfull.ForeignColoring.hostColorClass_union",
+        "selected_matching_graph_union": "Overfull.ForeignColoring.selectedMatching_edgeUnion",
+        "actual_host_color_classes": "Overfull.ForeignColoring.exists_color_classes",
+        "three_quarter_host_color_classes": "Overfull.ForeignColoring.exists_three_quarter_color_classes",
+    }
+    # Audited supporting components and the completed Proposition 4.10.
+    completed_results.update({
+        'foreign_assignment_1': 'Overfull.ForeignAssignment.exists_assignment_color_classes_of_cores',
+        'foreign_assignment_2': 'Overfull.ForeignAssignment.foreignGraph_subgraph_eq',
+        'foreign_assignment_3': 'Overfull.ForeignAssignment.foreignEdges_surviving',
+        'foreign_assignment_4': 'Overfull.ForeignAssignment.exterior_degree_le_error',
+        'foreign_refinement_1': 'Overfull.ForeignRefinement.exists_small_cut_refinement',
+        'foreign_refinement_2': 'Overfull.ForeignRefinement.exists_refinement_step',
+        'foreign_refinement_3': 'Overfull.ForeignRefinement.core_refinement_chain_length',
+        'foreign_refinement_4': 'Overfull.ForeignRefinement.encode_labels_fin_four',
+        'foreign_refinement_5': 'Overfull.ForeignRefinement.history_crossing_edges_le_six',
+        'foreign_refinement_6': 'Overfull.ForeignRefinement.heavyVertices_card_le',
+        'foreign_refinement_7': 'Overfull.ForeignRefinement.marking_leaves_represented_labels',
+        'foreign_refinement_8': 'Overfull.ForeignRefinement.survivingCore_restart',
+        'foreign_refinement_9': 'Overfull.ForeignRefinement.RefinementStep.marked_card_growth',
+        'foreign_refinement_10': 'Overfull.ForeignRefinement.RefinementStep.crossing_edges_bound',
+        'foreign_actual_incidence_1': 'Overfull.ForeignIncidence.footprintCount_add_core_degree_le',
+        'foreign_actual_incidence_2': 'Overfull.ForeignIncidence.footprintCount_le_real_error',
+        'foreign_actual_incidence_3': 'Overfull.ForeignIncidence.next_footprint_le_error',
+        'foreign_actual_incidence_4': 'Overfull.ForeignIncidence.remainingCore_degree_identity',
+        'foreign_actual_incidence_5': 'Overfull.ForeignIncidence.remainingCore_real_degree_bounds',
+        'foreign_actual_incidence_6': 'Overfull.ForeignIncidence.assembled_remainingCore_le_residual',
+        'foreign_actual_incidence_7': 'Overfull.ForeignIncidence.perfect_deletion_regular',
+        'foreign_actual_incidence_8': 'Overfull.ForeignIncidence.allowed_of_partial_prefix',
+        'foreign_safe_adaptive_completion_1': 'Overfull.prepare_safe_prescription',
+        'foreign_safe_adaptive_completion_2': 'Overfull.safe_prescription_of_core_matchings',
+        'foreign_safe_adaptive_completion_3': 'Overfull.ForeignCompletion.assemble_core_completions',
+        'foreign_safe_adaptive_completion_4': 'Overfull.ForeignRuleCompletion.exists_certified_core_rules',
+        'foreign_safe_adaptive_completion_5': 'Overfull.ForeignRuleCompletion.core_matching_from_certificate',
+        'foreign_safe_adaptive_completion_6': 'Overfull.ForeignRuleCompletion.assemble_from_certificates',
+        'foreign_safe_adaptive_completion_7': 'Overfull.ForeignRuleCompletion.safe_complete_from_certificates',
+        'foreign_fixed_rule_transcripts_1': 'Overfull.ForeignTranscript.run_eq_prefix',
+        'foreign_fixed_rule_transcripts_2': 'Overfull.adaptive_ordinary_packing_transcript',
+        'foreign_fixed_rule_transcripts_3': 'Overfull.ForeignRuleStep.step_of_certificate',
+        'foreign_fixed_rule_transcripts_4': 'Overfull.ForeignRuleStep.exists_step_rule',
+        'foreign_epoch_parameters_1': 'Overfull.ForeignPackingSchedule.exists_epoch_parameters',
+        'foreign_epoch_parameters_2': 'Overfull.ForeignPackingSchedule.exists_packing_schedule',
+        'foreign_epoch_parameters_3': 'Overfull.ForeignEpochParameters.color_horizon_le_packing_horizon',
+        'foreign_epoch_parameters_4': 'Overfull.ForeignEpochParameters.common_reserve',
+        'foreign_epoch_parameters_5': 'Overfull.ForeignEpochParameters.strict_safe_reserve',
+        'foreign_epoch_parameters_6': 'Overfull.ForeignEpochParameters.exists_uniform_epoch_parameters',
+        'foreign_phase_final_count_1': 'Overfull.ForeignPhase.currentClass_loss',
+        'foreign_phase_final_count_2': 'Overfull.ForeignPhase.complete_phase_card_le_of_prescribed_loss',
+        'foreign_phase_final_count_3': 'Overfull.ForeignPhase.four_phase_degree_reserve',
+        'foreign_phase_final_count_4': 'Overfull.ForeignPhase.complete_foreign_phase_card_le',
+        'foreign_phase_final_count_5': 'Overfull.ForeignPhase.exists_fresh_phase_data',
+        'foreign_phase_final_count_6': 'Overfull.ForeignAssignment.allForeignEdges_incidence_sum',
+        'foreign_phase_final_count_7': 'Overfull.ForeignAssignment.allForeignEdges_incidence_le',
+        'foreign_phase_final_count_8': 'Overfull.ForeignAssignment.final_foreign_incidence_bound',
+        'foreign_actual_concatenation_1': 'Overfull.ForeignConcatenation.appendEpoch_suffix',
+        'foreign_actual_concatenation_2': 'Overfull.ForeignConcatenation.appendEpoch_perfect',
+        'foreign_actual_concatenation_3': 'Overfull.ForeignConcatenation.appendEpoch_present',
+        'foreign_actual_concatenation_4': 'Overfull.ForeignConcatenation.appendEpoch_pairwise_disjoint',
+        'foreign_actual_concatenation_5': 'Overfull.ForeignConcatenation.concatenate_epochs',
+        'foreign_actual_concatenation_6': 'Overfull.ForeignConcatenation.epoch_degree_reserve',
+        'foreign_actual_concatenation_7': 'Overfull.ForeignConcatenation.within_epoch_degree_reserve',
+        'foreign_actual_concatenation_8': 'Overfull.ForeignConcatenation.actual_prefix_degree_reserve',
+        'foreign_actual_concatenation_9': 'Overfull.ForeignConcatenation.actual_prefix_four_epoch_reserve',
+        'foreign_recorded_history_1': 'Overfull.ForeignRefinement.CutHistory.edge_separated',
+        'foreign_recorded_history_2': 'Overfull.ForeignRefinement.CutHistory.crossing_card_le_six',
+        'foreign_recorded_history_3': 'Overfull.ForeignRefinement.RefinementHistory.length_le_three',
+        'foreign_recorded_history_4': 'Overfull.ForeignRefinement.RefinementHistory.length_lt_three_of_group_increase',
+        'foreign_recorded_history_5': 'Overfull.ForeignRefinement.RefinementHistory.crossing_card_le_six',
+        'foreign_recorded_history_6': 'Overfull.ForeignRefinement.RefinementHistory.append_recorded',
+        'foreign_recorded_history_7': 'Overfull.ForeignRefinement.RefinementHistory.append_shores',
+        'foreign_recorded_history_8': 'Overfull.ForeignRefinement.RefinementHistory.marked_card_le_nat',
+        'foreign_uniform_process_parameters_1': 'Overfull.ForeignEpochParameters.exists_safe_parameters',
+        'foreign_uniform_process_parameters_2': 'Overfull.ForeignEpochParameters.exists_restart_parameters',
+        'foreign_uniform_process_parameters_3': 'Overfull.ForeignEpochParameters.RestartParameters.safe_parameter_bounds',
+        'foreign_uniform_process_parameters_4': 'Overfull.ForeignEpochParameters.RestartParameters.uniform_initial_parameters',
+        'foreign_uniform_process_parameters_5': 'Overfull.ForeignEpochParameters.prefix_scalar_bounds',
+        'foreign_uniform_process_parameters_6': 'Overfull.ForeignEpochParameters.RestartParameters.exists_process_parameters',
+        'foreign_actual_epoch_state_1': 'Overfull.ForeignEpoch.valid_zero',
+        'foreign_actual_epoch_state_2': 'Overfull.ForeignEpoch.Valid.append',
+        'foreign_actual_epoch_state_3': 'Overfull.ForeignEpoch.Valid.allowed',
+        'foreign_actual_epoch_state_4': 'Overfull.ForeignEpoch.Valid.allowed_next',
+        'foreign_actual_epoch_state_5': 'Overfull.ForeignEpoch.Valid.graph_degree',
+        'foreign_actual_epoch_state_6': 'Overfull.ForeignEpoch.Valid.core_embed',
+        'foreign_actual_epoch_state_7': 'Overfull.ForeignEpoch.Valid.core_packing',
+        'foreign_actual_epoch_state_8': 'Overfull.ForeignEpoch.Valid.core_degree',
+        'foreign_actual_epoch_state_9': 'Overfull.ForeignEpoch.Transcript.currentCore_eq_remaining',
+        'foreign_constructed_epoch_1': 'Overfull.ForeignProcess.Entry.core_degree_upper',
+        'foreign_constructed_epoch_2': 'Overfull.ForeignProcess.Entry.exists_core_rules',
+        'foreign_constructed_epoch_3': 'Overfull.ForeignProcess.Entry.exists_fresh_epoch',
+        'foreign_constructed_epoch_4': 'Overfull.ForeignEpoch.Setup.degree_reserve',
+        'foreign_constructed_epoch_5': 'Overfull.ForeignEpoch.Setup.initial_packing_degrees',
+        'foreign_constructed_epoch_6': 'Overfull.ForeignEpoch.Setup.extend_no_trigger',
+        'foreign_constructed_epoch_7': 'Overfull.ForeignEpoch.Setup.finish_from_valid',
+        'foreign_constructed_epoch_8': 'Overfull.ForeignEpoch.Setup.exists_stopping_transcript',
+        'foreign_actual_process_refinement_1': 'Overfull.ForeignEpochParameters.RestartParameters.refine_current',
+        'foreign_actual_process_refinement_2': 'Overfull.ForeignEpochParameters.RestartParameters.refine_at_prefix',
+        'foreign_actual_process_refinement_3': 'Overfull.ForeignProcess.Entry.graph_le_original',
+        'foreign_actual_process_refinement_4': 'Overfull.ForeignProcess.Entry.marked_card_le',
+        'foreign_actual_process_refinement_5': 'Overfull.ForeignProcess.Entry.crossing_card_le',
+        'foreign_actual_process_refinement_6': 'Overfull.ForeignProcess.Entry.core_card_lower',
+        'foreign_actual_process_refinement_7': 'Overfull.ForeignProcess.Entry.labels_injective_at_three',
+        'foreign_actual_process_refinement_8': 'Overfull.ForeignProcess.Entry.no_trigger_at_three',
+        'foreign_actual_process_refinement_9': 'Overfull.ForeignProcess.Entry.refine_from_prefix',
+        'foreign_completed_epoch_result_1': 'Overfull.ForeignEpochParameters.RestartParameters.finalOutput_pos',
+        'foreign_completed_epoch_result_2': 'Overfull.ForeignEpochParameters.RestartParameters.finalOutput_le',
+        'foreign_completed_epoch_result_3': 'Overfull.ForeignEpochParameters.RestartParameters.finalOutput_le_range',
+        'foreign_completed_epoch_result_4': 'Overfull.ForeignEpoch.Valid.final_incidence_bound',
+        'foreign_completed_epoch_result_5': 'Overfull.ForeignEpoch.Valid.common_core_guarantees',
+        'foreign_completed_epoch_result_6': 'Overfull.ForeignProcess.ReductionResult.graph_le_original',
+        'foreign_completed_epoch_result_7': 'Overfull.ForeignProcess.ReductionResult.pairwise_disjoint',
+        'foreign_edge_reduction': 'Overfull.foreign_edge_reduction',
+        'foreign_edge_reduction_with_small_error': 'Overfull.foreign_edge_reduction_with_small_error',
+        'foreign_edge_reduction_3': 'Overfull.ForeignProcess.reduce_from_entry',
+        'foreign_edge_reduction_4': 'Overfull.ForeignProcess.final_error_of_initial_budget',
+        'foreign_edge_reduction_5': 'Overfull.ForeignProcess.final_core_size_of_initial_budget',
+    })
+    completed_results.update({
+        "absorption_threshold_selection_1": "Overfull.AbsorptionThresholds.bands_disjoint",
+        "absorption_threshold_selection_2": "Overfull.AbsorptionThresholds.total_band_mass_le",
+        "absorption_threshold_selection_3": "Overfull.AbsorptionThresholds.exists_light_band",
+        "absorption_threshold_selection_4": "Overfull.AbsorptionThresholds.absorption_card_bounds",
+        "absorption_uniform_parameters_1": "Overfull.AbsorptionThresholds.lowerEnvelope_pos",
+        "absorption_uniform_parameters_2": "Overfull.AbsorptionThresholds.lowerEnvelope_le",
+        "absorption_uniform_parameters_3": "Overfull.AbsorptionThresholds.exists_long_threshold_schedule",
+        "absorption_uniform_parameters_4": "Overfull.AbsorptionThresholds.uniform_final_error_actual_card",
+        "absorption_uniform_parameters_5": "Overfull.AbsorptionParameters.exists_uniform_phase_parameters",
+        "absorption_actual_core_enlargement_1": "Overfull.Absorption.robust_after_addition",
+        "absorption_actual_core_enlargement_2": "Overfull.Absorption.enlargedCore_degree_lower",
+        "absorption_actual_core_enlargement_3": "Overfull.Absorption.enlargedCore_robust",
+        "absorption_actual_core_enlargement_4": "Overfull.Absorption.enlargedSets_pairwise_disjoint",
+        "absorption_actual_core_enlargement_5": "Overfull.Absorption.enlargedSets_disjoint_remaining",
+        "absorption_actual_core_enlargement_6": "Overfull.Absorption.enlargedSets_cover",
+        "absorption_actual_core_enlargement_7": "Overfull.Absorption.enlargedGraphs_degree_lower",
+        "absorption_actual_core_enlargement_8": "Overfull.Absorption.enlargedGraphs_robust",
+        "absorption_forced_star_preparation_1": "Overfull.prepare_forced_star_of_bounds",
+        "absorption_forced_star_preparation_2": "Overfull.prepare_forced_star",
+        "absorption_actual_potential_1": "Overfull.Absorption.outsideStar_card",
+        "absorption_actual_potential_2": "Overfull.Absorption.forcingPotential_decreases",
+        "absorption_actual_potential_3": "Overfull.Absorption.outsideDegree_le_originalForeign_add",
+        "absorption_actual_potential_4": "Overfull.Absorption.forcingPotential_le_originalForeign_add",
+        "absorption_fixed_rule_forcing_1": "Overfull.Absorption.ForcingSetup.current_degree_bounds",
+        "absorption_fixed_rule_forcing_2": "Overfull.Absorption.ForcingSetup.extend",
+        "absorption_fixed_rule_forcing_3": "Overfull.Absorption.ForcingSetup.finish_from_valid",
+        "absorption_fixed_rule_forcing_4": "Overfull.Absorption.ForcingSetup.exists_terminal_transcript",
+        "absorption_actual_result_1": "Overfull.Absorption.enlargedGraphs_degree_lower_of_outside",
+        "absorption_actual_result_2": "Overfull.Absorption.retained_degree_three_quarters",
+        "absorption_actual_result_3": "Overfull.Absorption.AbsorptionResult.graph_le_original",
+        "absorption_actual_result_4": "Overfull.Absorption.AbsorptionResult.pairwise_disjoint",
+        "bounded_exceptional_absorption": "Overfull.bounded_exceptional_absorption",
+    })
+    completed_results.update({
+        "pattern_fixed_encoding_1": "Overfull.Compression.exists_compressed_matching_fixed_code",
+        "pattern_fixed_encoding_2": "Overfull.Patterns.exists_compressed_encoding",
+        "pattern_fixed_encoding_3": "Overfull.Patterns.card_pattern",
+        "pattern_fixed_encoding_4": "Overfull.Patterns.card_pattern_le",
+        "pattern_fixed_encoding_5": "Overfull.Patterns.exists_encoded_distribution",
+        "pattern_weighted_capacity_1": "Overfull.Patterns.EncodedDistribution.weight_sum",
+        "pattern_weighted_capacity_2": "Overfull.Patterns.EncodedDistribution.internal_pair_weight_le_one",
+        "pattern_weighted_capacity_3": "Overfull.Patterns.EncodedDistribution.pair_capacity",
+        "pattern_weighted_capacity_4": "Overfull.Patterns.EncodedDistribution.whole_cut_capacity_actual",
+        "pattern_weighted_capacity_5": "Overfull.Patterns.EncodedDistribution.positive_odd_cut",
+        "pattern_rounding_1": "Overfull.Patterns.EncodedDistribution.exists_frequent_reserve",
+        "pattern_rounding_2": "Overfull.Patterns.pair_cut_discard_bound",
+        "pattern_rounding_3": "Overfull.Patterns.EncodedDistribution.planned_residual_bounds",
+        "pattern_rounding_4": "Overfull.Patterns.EncodedDistribution.planned_pool_lower",
+        "pattern_rounding_5": "Overfull.Patterns.EncodedDistribution.planned_protected_zero",
+        "pattern_rounding_6": "Overfull.Patterns.EncodedDistribution.planned_pair_demand",
+        "pattern_actual_realization_1": "Overfull.Patterns.one_le_error_of_boundary",
+        "pattern_actual_realization_2": "Overfull.Patterns.realize_patterns",
+        "pattern_actual_realization_3": "Overfull.Patterns.scheduledPattern_total",
+        "pattern_actual_realization_4": "Overfull.Patterns.EncodedDistribution.exists_planned_realization",
+        "pattern_actual_realization_5": "Overfull.Patterns.RealizedPlan.prefix_count_le",
+        "pattern_fixed_completion_1": "Overfull.Patterns.fixed_boundary_allowed",
+        "pattern_fixed_completion_2": "Overfull.Patterns.completed_family_disjoint",
+        "pattern_fixed_completion_3": "Overfull.Patterns.exists_boundary_completion",
+        "pattern_prefix_safety_1": "Overfull.Patterns.afterDeletions_cut_accounting",
+        "pattern_prefix_safety_2": "Overfull.Patterns.afterDeletions_cut_unchanged",
+        "pattern_prefix_safety_3": "Overfull.Patterns.no_overfull_of_whole_cut_bounds",
+        "pattern_prefix_safety_4": "Overfull.Patterns.completed_pattern_whole_cut",
+        "pattern_prefix_safety_5": "Overfull.Patterns.EncodedDistribution.completed_prefix_safe",
+        "pattern_residual_supply_1": "Overfull.Patterns.completed_pattern_pool_reserved",
+        "pattern_residual_supply_2": "Overfull.Patterns.completed_pattern_cut_reserved",
+        "pattern_residual_supply_3": "Overfull.Patterns.reserved_pairs_give_neighbors",
+        "pattern_residual_supply_4": "Overfull.Patterns.absorb_all_with_reserved_neighbors",
+        "pattern_residual_supply_5": "Overfull.Patterns.Encodes.enlarged_four_odd_forest",
+        "pattern_residual_supply_6": "Overfull.Patterns.forest_supply_on_enlarged_parts",
+        "pattern_residual_supply_7": "Overfull.Patterns.reserved_forest_pair_enlarged",
+        "pattern_residual_supply_8": "Overfull.Patterns.assemble_frequent_pattern_result",
+        "pattern_uniform_parameters_1": "Overfull.Patterns.exists_pattern_scalar_parameters",
+        "pattern_uniform_parameters_2": "Overfull.Patterns.pattern_packing_horizon",
+        "pattern_uniform_parameters_3": "Overfull.Patterns.exists_frequent_pattern_parameters",
+        "frequent_boundary_patterns": "Overfull.frequent_boundary_patterns",
+    })
+    # Supporting components and the proved reduction do not complete Lemma 4.14.
+    completed_results.update({
+        "boundary_color_footprints_1": "Overfull.BoundaryExtension.BoundaryColoring.footprint_card",
+        "boundary_color_footprints_2": "Overfull.BoundaryExtension.BoundaryColoring.footprint_incidence_eq_degree",
+        "boundary_color_footprints_3": "Overfull.BoundaryExtension.BoundaryColoring.singletons_add_triples",
+        "boundary_color_footprints_4": "Overfull.BoundaryExtension.BoundaryColoring.triple_horizon",
+        "boundary_color_footprints_5": "Overfull.BoundaryExtension.BoundaryColoring.tripleLabel_range",
+        "boundary_triple_packing_1": "Overfull.BoundaryExtension.pack_fixed_forbidden_sets",
+        "boundary_triple_packing_2": "Overfull.BoundaryExtension.CorePacking.degree_identity",
+        "boundary_triple_packing_3": "Overfull.BoundaryExtension.boundary_degree_le_error",
+        "boundary_triple_packing_4": "Overfull.BoundaryExtension.exists_triple_core_packing",
+        "boundary_actual_residual_1": "Overfull.BoundaryExtension.completedColor_isMatching",
+        "boundary_actual_residual_2": "Overfull.BoundaryExtension.completedColor_covers_uniquely",
+        "boundary_actual_residual_3": "Overfull.BoundaryExtension.completedColor_boundary",
+        "boundary_actual_residual_4": "Overfull.BoundaryExtension.completedColor_disjoint",
+        "boundary_actual_residual_5": "Overfull.BoundaryExtension.remainingAmbient_degree_add",
+        "boundary_actual_residual_6": "Overfull.BoundaryExtension.remainingAmbient_regular",
+        "boundary_actual_residual_7": "Overfull.BoundaryExtension.coreCopy_survives_iff",
+        "boundary_actual_residual_8": "Overfull.BoundaryExtension.remainingEmbeddedCore_robust",
+        "boundary_actual_residual_9": "Overfull.BoundaryExtension.remainingEmbeddedCore_degree_lower",
+        "boundary_actual_residual_10": "Overfull.BoundaryExtension.completedTriples_boundary",
+        "boundary_apex_contraction_1": "Overfull.BoundaryExtension.contract_incident_of_original",
+        "boundary_apex_contraction_2": "Overfull.BoundaryExtension.incident_inl_iff",
+        "boundary_apex_contraction_3": "Overfull.BoundaryExtension.incident_apex_iff",
+        "boundary_apex_contraction_4": "Overfull.BoundaryExtension.degree_inl",
+        "boundary_apex_contraction_5": "Overfull.BoundaryExtension.degree_apex_eq_cutSize",
+        "boundary_apex_contraction_6": "Overfull.BoundaryExtension.contract_regular",
+        "boundary_apex_contraction_7": "Overfull.BoundaryExtension.even_contracted_order",
+        "boundary_apex_contraction_8": "Overfull.BoundaryExtension.contractCore_degree",
+        "boundary_apex_contraction_9": "Overfull.BoundaryExtension.contractCore_robust",
+        "one_exterior_odd_cuts_1": "Overfull.OneCore.odd_small_core_shore",
+        "one_exterior_odd_cuts_2": "Overfull.OneCore.odd_cuts_of_minority_bound",
+        "one_exterior_odd_cuts_3": "Overfull.OneCore.robust_one_exterior_no_overfull",
+        "one_exterior_odd_cuts_4": "Overfull.BoundaryExtension.exists_contraction_cut_threshold",
+        "boundary_surviving_singletons_1": "Overfull.BoundaryExtension.restrictedBoundary_mem_iff",
+        "boundary_surviving_singletons_2": "Overfull.BoundaryExtension.BoundaryColoring.residualLabel_not_mem_triples",
+        "boundary_surviving_singletons_3": "Overfull.BoundaryExtension.BoundaryColoring.residualLabel_injective",
+        "boundary_surviving_singletons_4": "Overfull.BoundaryExtension.BoundaryColoring.singletonBoundaryEquiv_val",
+        "boundary_surviving_singletons_5": "Overfull.BoundaryExtension.BoundaryColoring.residual_cutSize_eq_singletons",
+        "boundary_surviving_singletons_6": "Overfull.BoundaryExtension.BoundaryColoring.residual_cutSize_eq_sub",
+        "boundary_color_restoration_1": "Overfull.Multigraph.PaletteColoring.incidence_bijective",
+        "boundary_color_restoration_2": "Overfull.BoundaryExtension.restoreSingletonLabels_boundary",
+        "boundary_color_restoration_3": "Overfull.BoundaryExtension.restoreSingletonLabels_range",
+        "boundary_color_restoration_4": "Overfull.BoundaryExtension.exists_singleton_boundary_extension",
+        "boundary_color_restoration_5": "Overfull.BoundaryExtension.reassemble_deleted_colors",
+        "boundary_color_restoration_6": "Overfull.BoundaryExtension.extend_from_completed_triples",
+        "one_apex_even_core_complement_1": "Overfull.OneCore.complement_degree_add_core",
+        "one_apex_even_core_complement_2": "Overfull.OneCore.coreEdges_disjoint_cut",
+        "one_apex_even_core_complement_3": "Overfull.OneCore.one_apex_complement_colorable",
+        "one_apex_even_core_complement_4": "Overfull.OneCore.restrictCore_edges",
+        "one_apex_even_core_complement_5": "Overfull.OneCore.restrictCore_one_degree",
+        "one_apex_even_core_complement_6": "Overfull.OneCore.restrictCore_one_robust",
+        "one_apex_even_core_complement_7": "Overfull.OneCore.even_core_complement",
+        "boundary_extension_reduction_1": "Overfull.boundary_extension_reduction"
+})
+    # Supporting ordinary-core components; full Lemmas 4.2 and 4.14 remain open.
+    completed_results.update({
+        "bounded_forbidden_coloring_restrictionFiber_card": "Overfull.ColoringExtension.restrictionFiber_card",
+        "bounded_forbidden_coloring_permutations_mem_card_le_pow": "Overfull.ColoringExtension.permutations_mem_card_le_pow",
+        "bounded_forbidden_coloring_exists_sparse_conflicts": "Overfull.ColoringExtension.exists_sparse_conflicts",
+        "bounded_forbidden_coloring_repair_relabeling": "Overfull.ColoringExtension.repair_relabeling",
+        "bounded_forbidden_coloring_exists_avoiding_with_relabeling": "Overfull.ColoringExtension.exists_avoiding_with_relabeling",
+        "bounded_forbidden_coloring_exists_avoiding_coloring": "Overfull.ColoringExtension.exists_avoiding_coloring",
+        "bounded_forbidden_coloring_exists_uniform_coloring_bounds": "Overfull.ColoringExtension.exists_uniform_coloring_bounds",
+        "bounded_forbidden_coloring_exists_uniform_avoiding_coloring": "Overfull.ColoringExtension.exists_uniform_avoiding_coloring",
+        "bounded_forbidden_coloring_exists_initial_simple_coloring": "Overfull.ColoringExtension.exists_initial_simple_coloring",
+        "bounded_forbidden_coloring_exists_uniform_simple_avoiding": "Overfull.ColoringExtension.exists_uniform_simple_avoiding",
+        "constrained_color_balance_and_deficits_exists_transfer_two_component_avoiding": "Overfull.Multigraph.EdgeColoring.exists_transfer_two_component_avoiding",
+        "constrained_color_balance_and_deficits_exists_balanced_avoiding": "Overfull.Multigraph.EdgeColoring.exists_balanced_avoiding",
+        "constrained_color_balance_and_deficits_exists_equitable": "Overfull.Multigraph.EdgeColoring.exists_equitable",
+        "constrained_color_balance_and_deficits_uncovered_scaled_bound": "Overfull.Multigraph.EdgeColoring.uncovered_scaled_bound",
+        "constrained_color_balance_and_deficits_uncovered_incidence_eq_sub": "Overfull.Multigraph.EdgeColoring.uncovered_incidence_eq_sub",
+        "constrained_color_balance_and_deficits_repairVertices_scaled_bound": "Overfull.Multigraph.EdgeColoring.repairVertices_scaled_bound",
+        "constrained_color_balance_and_deficits_repairVertices_even": "Overfull.Multigraph.EdgeColoring.repairVertices_even",
+        "constrained_color_balance_and_deficits_exists_uniform_simple_balanced_avoiding": "Overfull.ColoringExtension.exists_uniform_simple_balanced_avoiding",
+        "constrained_color_balance_and_deficits_exists_uniform_near_perfect_coloring": "Overfull.ColoringExtension.exists_uniform_near_perfect_coloring",
+        "constrained_color_balance_and_deficits_exists_equitable_exterior": "Overfull.Multigraph.EdgeColoring.exists_equitable_exterior",
+        "constrained_color_balance_and_deficits_selectedFootprint_load_le_error": "Overfull.OrdinaryFactorization.selectedFootprint_load_le_error",
+        "constrained_color_balance_and_deficits_exists_equitable_selected_exterior": "Overfull.OrdinaryFactorization.exists_equitable_selected_exterior",
+        "quantitative_cut_and_reserve_exists_orientation_quantitative": "Overfull.PairedCut.exists_orientation_quantitative",
+        "quantitative_cut_and_reserve_paired_cut_quantitative": "Overfull.PairedCut.paired_cut_quantitative",
+        "quantitative_cut_and_reserve_exists_reserve_with_side_degree_control": "Overfull.OrdinaryRandomReserve.exists_reserve_with_side_degree_control",
+        "quantitative_cut_and_reserve_exists_reserve_with_balanced_side_degrees": "Overfull.OrdinaryRandomReserve.exists_reserve_with_balanced_side_degrees",
+        "quantitative_cut_and_reserve_internalLeftover_degree_add": "Overfull.OrdinaryFactorization.internalLeftover_degree_add",
+        "quantitative_cut_and_reserve_exists_cut_reserve": "Overfull.OrdinaryFactorization.exists_cut_reserve",
+        "quantitative_cut_and_reserve_internal_degree_spread": "Overfull.OrdinaryFactorization.CutReserveData.internal_degree_spread",
+        "quantitative_cut_and_reserve_paletteSize_bounds": "Overfull.OrdinaryFactorization.CutReserveData.paletteSize_bounds",
+        "ordinary_first_group_construction_colorMatching_edgeUnion": "Overfull.OrdinaryFactorization.colorMatching_edgeUnion",
+        "ordinary_first_group_construction_balanced_color_reserve_repair": "Overfull.OrdinaryFactorization.balanced_color_reserve_repair",
+        "ordinary_first_group_construction_exists_uniform_repaired_color_family": "Overfull.OrdinaryFactorization.exists_uniform_repaired_color_family",
+        "ordinary_first_group_construction_completedClass_isPerfectMatching": "Overfull.OrdinaryFactorization.completedClass_isPerfectMatching",
+        "ordinary_first_group_construction_completedClass_pairwiseDisjoint": "Overfull.OrdinaryFactorization.completedClass_pairwiseDisjoint",
+        "ordinary_first_group_construction_exists_uniform_first_half": "Overfull.OrdinaryFactorization.exists_uniform_first_half",
+        "ordinary_first_group_construction_remaining_regular": "Overfull.OrdinaryFactorization.FirstHalfData.remaining_regular",
+        "ordinary_first_group_construction_remaining_degree_lower": "Overfull.OrdinaryFactorization.FirstHalfData.remaining_degree_lower",
+        "ordinary_exact_residual_reconstruction_deleted_complement_range": "Overfull.OrdinaryFactorization.deleted_complement_range",
+        "ordinary_exact_residual_reconstruction_residualGraph_degree_add": "Overfull.OrdinaryFactorization.residualGraph_degree_add",
+        "ordinary_exact_residual_reconstruction_residualGraph_regular": "Overfull.OrdinaryFactorization.residualGraph_regular",
+        "ordinary_exact_residual_reconstruction_remainingColors_card": "Overfull.OrdinaryFactorization.remainingColors_card",
+        "ordinary_exact_residual_reconstruction_compressedResidualComplementColoring_restore": "Overfull.OrdinaryFactorization.compressedResidualComplementColoring_restore",
+        "ordinary_exact_residual_reconstruction_residualCrossing_degree_loss": "Overfull.OrdinaryFactorization.residualCrossing_degree_loss",
+        "ordinary_exact_residual_reconstruction_residualCrossing_robust": "Overfull.OrdinaryFactorization.residualCrossing_robust",
+        "ordinary_exact_residual_reconstruction_remainingInside_degree_le_order": "Overfull.OrdinaryFactorization.FirstHalfData.remainingInside_degree_le_order",
+        "ordinary_exact_residual_reconstruction_remainingInside_degree_le_half": "Overfull.OrdinaryFactorization.FirstHalfData.remainingInside_degree_le_half",
+        "ordinary_exact_residual_reconstruction_coreCopy_survives_iff": "Overfull.OrdinaryFactorization.coreCopy_survives_iff",
+        "ordinary_exact_residual_reconstruction_residualCrossingCore_graph": "Overfull.OrdinaryFactorization.residualCrossingCore_graph",
+        "ordinary_exact_residual_reconstruction_residualCrossingCore_edgeMap_val": "Overfull.OrdinaryFactorization.residualCrossingCore_edgeMap_val",
+        "ordinary_exact_residual_reconstruction_inheritedComplement_uncolored_internal": "Overfull.OrdinaryFactorization.inheritedComplement_uncolored_internal",
+        "ordinary_exact_residual_reconstruction_extend_restriction_coloring": "Overfull.OrdinaryFactorization.extend_restriction_coloring",
+        "ordinary_exact_residual_reconstruction_residualCrossingComplement_degree_le_error": "Overfull.OrdinaryFactorization.residualCrossingComplement_degree_le_error",
+        "ordinary_exact_residual_reconstruction_exists_residualCrossingComplement_coloring_preserving_original": "Overfull.OrdinaryFactorization.exists_residualCrossingComplement_coloring_preserving_original",
+        "ordinary_exact_residual_reconstruction_exists_coloring_of_residual": "Overfull.OrdinaryFactorization.exists_coloring_of_residual",
+        "ordinary_exact_residual_reconstruction_edgeColorable_of_residual": "Overfull.OrdinaryFactorization.edgeColorable_of_residual",
+        "ordinary_exact_residual_reconstruction_complete_bipartite_reduction": "Overfull.OrdinaryFactorization.complete_bipartite_reduction",
+        "ordinary_exact_residual_reconstruction_exists_uniform_bipartite_reduction": "Overfull.OrdinaryFactorization.exists_uniform_bipartite_reduction",
+        "ordinary_exact_residual_reconstruction_residual_robust_parameters": "Overfull.OrdinaryFactorization.residual_robust_parameters",
+        "ordinary_exact_residual_reconstruction_residualCrossingCore_bipartite": "Overfull.OrdinaryFactorization.residualCrossingCore_bipartite",
+        "ordinary_exact_residual_reconstruction_residualCrossingCore_sides_cover": "Overfull.OrdinaryFactorization.residualCrossingCore_sides_cover",
+        "ordinary_exact_residual_reconstruction_residualCrossingCore_side_card": "Overfull.OrdinaryFactorization.residualCrossingCore_side_card",
+        "ordinary_exact_residual_reconstruction_residualCutSides_bipartite": "Overfull.OrdinaryFactorization.residualCutSides_bipartite",
+        "ordinary_exact_residual_reconstruction_residualCutSides_balance": "Overfull.OrdinaryFactorization.residualCutSides_balance",
+        "ordinary_exact_residual_reconstruction_residualCutSides_robust_admissible": "Overfull.OrdinaryFactorization.residualCutSides_robust_admissible",
+    })
+    # Actual preparatory results for the Section 6 factorization.
+    completed_results.update({
+        "bipartite_reverse_robustness_1": "Overfull.leftNeighbors_swap",
+        "bipartite_reverse_robustness_2": "Overfull.sum_crossing_neighbors_between",
+        "bipartite_reverse_robustness_3": "Overfull.bipartite_reverse_incidence_bound",
+        "bipartite_reverse_robustness_4": "Overfull.IsBipartiteRobustExpander.reverse",
+        "bipartite_reverse_robustness_5": "Overfull.IsBipartiteRobustExpander.reverse_sq",
+        "bipartite_actual_exterior_1": "Overfull.BipartiteFactorization.core_copy_crosses",
+        "bipartite_actual_exterior_2": "Overfull.BipartiteFactorization.degree_sum_eq_copies_of_crossing",
+        "bipartite_actual_exterior_3": "Overfull.BipartiteFactorization.core_side_degree_sums",
+        "bipartite_actual_exterior_4": "Overfull.BipartiteFactorization.exterior_degree_outside",
+        "bipartite_actual_exterior_5": "Overfull.BipartiteFactorization.exterior_degree_le_error",
+        "bipartite_actual_exterior_6": "Overfull.BipartiteFactorization.exterior_side_degree_sums",
+        "bipartite_actual_exterior_7": "Overfull.BipartiteFactorization.exceptional_even",
+        "bipartite_actual_exterior_8": "Overfull.BipartiteFactorization.exists_balanced_exterior",
+        "bipartite_bounded_move_neighborhoods_1": "Overfull.BipartiteFactorization.neighborsIn_loss",
+        "bipartite_bounded_move_neighborhoods_2": "Overfull.BipartiteFactorization.repeated_incidence_mono",
+        "bipartite_bounded_move_neighborhoods_3": "Overfull.BipartiteFactorization.repeated_incidence_real_mono",
+        "bipartite_bounded_move_neighborhoods_4": "Overfull.BipartiteFactorization.edgesTo_card_le_of_parallel",
+        "bipartite_bounded_move_neighborhoods_5": "Overfull.BipartiteFactorization.edgesTo_loss",
+        "bipartite_bounded_move_neighborhoods_6": "Overfull.BipartiteFactorization.outside_parallel_le_complement",
+        "bipartite_bounded_move_neighborhoods_7": "Overfull.BipartiteFactorization.repeated_incidence_le_complement",
+        "bipartite_bounded_move_neighborhoods_8": "Overfull.BipartiteFactorization.moved_exceptional_card",
+        "bipartite_bounded_move_neighborhoods_9": "Overfull.BipartiteFactorization.moved_sides_balance",
+        "bipartite_bounded_move_neighborhoods_10": "Overfull.BipartiteFactorization.ordinaryPorts_after_move",
+        "bipartite_bounded_move_neighborhoods_11": "Overfull.BipartiteFactorization.bounded_move_with_ports",
+        "bipartite_bounded_move_neighborhoods_12": "Overfull.BipartiteFactorization.core_move_with_ports",
+        "bipartite_bounded_move_neighborhoods_13": "Overfull.BipartiteFactorization.exists_move_budgets",
+    })
+    # Finite localization constructions, without a full factorization assertion.
+    completed_results.update({
+        "bipartite_preferred_representatives_1": "Overfull.BipartiteFactorization.edgesTo_union",
+        "bipartite_preferred_representatives_2": "Overfull.BipartiteFactorization.edgesTo_disjoint",
+        "bipartite_preferred_representatives_3": "Overfull.BipartiteFactorization.edgesTo_union_card",
+        "bipartite_preferred_representatives_4": "Overfull.BipartiteFactorization.edgesTo_card_le_degree",
+        "bipartite_preferred_representatives_5": "Overfull.BipartiteFactorization.preferredSide_eq_left_or_right",
+        "bipartite_preferred_representatives_6": "Overfull.BipartiteFactorization.preferredSide_subset",
+        "bipartite_preferred_representatives_7": "Overfull.BipartiteFactorization.preferredSide_incidence_lower",
+        "bipartite_preferred_representatives_8": "Overfull.BipartiteFactorization.exists_representative_edges",
+        "bipartite_preferred_representatives_9": "Overfull.BipartiteFactorization.preferredSide_neighbors_lower",
+        "bipartite_preferred_representatives_10": "Overfull.BipartiteFactorization.exists_preferred_representatives",
+        "bipartite_preferred_representatives_11": "Overfull.BipartiteFactorization.ordinary_preferred_representatives",
+        "bipartite_palette_preparation_1": "Overfull.BipartiteFactorization.exists_empty_threshold_band",
+        "bipartite_palette_preparation_2": "Overfull.BipartiteFactorization.paletteThreshold_pos",
+        "bipartite_palette_preparation_3": "Overfull.BipartiteFactorization.paletteThreshold_antitone",
+        "bipartite_palette_preparation_4": "Overfull.BipartiteFactorization.paletteThreshold_succ",
+        "bipartite_palette_preparation_5": "Overfull.BipartiteFactorization.paletteThreshold_le_initial",
+        "bipartite_palette_preparation_6": "Overfull.BipartiteFactorization.exists_palette_threshold",
+        "bipartite_palette_preparation_7": "Overfull.BipartiteFactorization.colorsOn_card_le",
+        "bipartite_palette_preparation_8": "Overfull.BipartiteFactorization.core_colors_card",
+        "bipartite_palette_preparation_9": "Overfull.BipartiteFactorization.smallPool_card_lt",
+        "bipartite_palette_preparation_10": "Overfull.BipartiteFactorization.allowedColors_card_add_excluded",
+        "bipartite_palette_preparation_11": "Overfull.BipartiteFactorization.allowedColors_card_lower",
+        "bipartite_palette_preparation_12": "Overfull.BipartiteFactorization.excludedColors_card_le",
+        "bipartite_palette_preparation_13": "Overfull.BipartiteFactorization.excludedColors_small",
+        "bipartite_palette_preparation_14": "Overfull.BipartiteFactorization.low_core_color_excluded",
+        "bipartite_palette_preparation_15": "Overfull.BipartiteFactorization.small_pool_color_excluded",
+        "bipartite_palette_preparation_16": "Overfull.BipartiteFactorization.active_core_colors_retained",
+        "bipartite_palette_preparation_17": "Overfull.BipartiteFactorization.exists_allowed_palette_data",
+        "bipartite_correction_capacity_1": "Overfull.BipartiteFactorization.CorrectionCapacity.exists_capped_subset",
+        "bipartite_correction_capacity_2": "Overfull.BipartiteFactorization.CorrectionCapacity.card_le_capacity",
+        "bipartite_correction_capacity_3": "Overfull.BipartiteFactorization.CorrectionCapacity.exists_capped_subset_iff",
+        "bipartite_correction_capacity_4": "Overfull.BipartiteFactorization.CorrectionCapacity.score_le_capacity",
+        "bipartite_correction_capacity_5": "Overfull.BipartiteFactorization.CorrectionCapacity.sum_deleted_card_le",
+        "bipartite_correction_capacity_6": "Overfull.BipartiteFactorization.CorrectionCapacity.min_add_loss",
+        "bipartite_correction_capacity_7": "Overfull.BipartiteFactorization.CorrectionCapacity.score_after_deletion",
+        "bipartite_correction_capacity_8": "Overfull.BipartiteFactorization.CorrectionCapacity.exists_capped_subset_after_deletion",
+        "bipartite_correction_capacity_9": "Overfull.BipartiteFactorization.CorrectionCapacity.internal_rows_pairwise",
+        "bipartite_correction_capacity_10": "Overfull.BipartiteFactorization.CorrectionCapacity.internal_rows_union",
+        "bipartite_correction_capacity_11": "Overfull.BipartiteFactorization.CorrectionCapacity.internal_rows_capacity",
+        "bipartite_correction_capacity_12": "Overfull.BipartiteFactorization.CorrectionCapacity.exists_correction_subset",
+        "bipartite_correction_capacity_13": "Overfull.BipartiteFactorization.CorrectionCapacity.correction_score_le_capacity",
+        "bipartite_correction_capacity_14": "Overfull.BipartiteFactorization.CorrectionCapacity.correction_score_after_deletion",
+        "bipartite_correction_capacity_15": "Overfull.BipartiteFactorization.CorrectionCapacity.exists_correction_subset_after_deletion",
+        "bipartite_correction_capacity_16": "Overfull.BipartiteFactorization.correction_pools_disjoint",
+        "bipartite_correction_capacity_17": "Overfull.BipartiteFactorization.correction_pool_incidence",
+        "bipartite_correction_capacity_18": "Overfull.BipartiteFactorization.correction_selection_degree",
+        "bipartite_correction_capacity_19": "Overfull.BipartiteFactorization.exists_graph_correction_subset",
+        "bipartite_correction_capacity_20": "Overfull.BipartiteFactorization.exists_graph_correction_subset_after_deletion",
+        "bipartite_selected_graph_coloring_1": "Overfull.BipartiteFactorization.mem_inactiveExterior",
+        "bipartite_selected_graph_coloring_2": "Overfull.BipartiteFactorization.inactiveExterior_eq",
+        "bipartite_selected_graph_coloring_3": "Overfull.BipartiteFactorization.coloring_of_univ_restriction",
+        "bipartite_selected_graph_coloring_4": "Overfull.BipartiteFactorization.coloring_from_inactive_exterior_nat",
+        "bipartite_selected_graph_coloring_5": "Overfull.BipartiteFactorization.coloring_from_inactive_exterior",
+        "bipartite_selected_graph_coloring_6": "Overfull.BipartiteFactorization.exists_balanced_localized_coloring",
+    })
+    # Deterministic palette assembly; simultaneous sampling bounds remain explicit.
+    completed_results.update({
+        "bipartite_palette_rows_1": "Overfull.BipartiteFactorization.mem_paletteEdges",
+        "bipartite_palette_rows_2": "Overfull.BipartiteFactorization.paletteBase_subset",
+        "bipartite_palette_rows_3": "Overfull.BipartiteFactorization.compressedPaletteColoring_restore",
+        "bipartite_palette_rows_4": "Overfull.BipartiteFactorization.paletteBase_colorable",
+        "bipartite_palette_rows_5": "Overfull.BipartiteFactorization.palette_degree_eq_coveredColors",
+        "bipartite_palette_rows_6": "Overfull.BipartiteFactorization.palette_degree_of_degree_eq",
+        "bipartite_palette_rows_7": "Overfull.BipartiteFactorization.paletteBase_degree_add_core",
+        "bipartite_palette_rows_8": "Overfull.BipartiteFactorization.palette_row_eq",
+        "bipartite_palette_rows_9": "Overfull.BipartiteFactorization.palette_low_core_empty",
+        "bipartite_palette_rows_10": "Overfull.BipartiteFactorization.palette_low_row_zero",
+        "bipartite_palette_rows_11": "Overfull.BipartiteFactorization.palette_sum_degrees",
+        "bipartite_palette_rows_12": "Overfull.BipartiteFactorization.palette_side_degree_eq",
+        "bipartite_correction_imbalance_1": "Overfull.BipartiteFactorization.mem_betweenCopies",
+        "bipartite_correction_imbalance_2": "Overfull.BipartiteFactorization.betweenCopies_inter_card",
+        "bipartite_correction_imbalance_3": "Overfull.BipartiteFactorization.restricted_degree_sum",
+        "bipartite_correction_imbalance_4": "Overfull.BipartiteFactorization.retained_copy_active_ends",
+        "bipartite_correction_imbalance_5": "Overfull.BipartiteFactorization.correction_identity_at_copy",
+        "bipartite_correction_imbalance_6": "Overfull.BipartiteFactorization.correction_imbalance_identity",
+        "bipartite_correction_imbalance_7": "Overfull.BipartiteFactorization.balanced_correction_imbalance",
+        "bipartite_correction_imbalance_8": "Overfull.BipartiteFactorization.selected_degree_balance",
+        "bipartite_preferred_filling_1": "Overfull.BipartiteFactorization.PreferredSelection.outside_source",
+        "bipartite_preferred_filling_2": "Overfull.BipartiteFactorization.PreferredSelection.edgesTo_mono",
+        "bipartite_preferred_filling_3": "Overfull.BipartiteFactorization.PreferredSelection.internal_incident",
+        "bipartite_preferred_filling_4": "Overfull.BipartiteFactorization.PreferredSelection.pool_outside_incidence",
+        "bipartite_preferred_filling_5": "Overfull.BipartiteFactorization.PreferredSelection.pool_core_incidence",
+        "bipartite_preferred_filling_6": "Overfull.BipartiteFactorization.PreferredSelection.degree_union",
+        "bipartite_preferred_filling_7": "Overfull.BipartiteFactorization.PreferredSelection.degree_zero",
+        "bipartite_preferred_filling_8": "Overfull.BipartiteFactorization.PreferredSelection.internal_base_disjoint",
+        "bipartite_preferred_filling_9": "Overfull.BipartiteFactorization.PreferredSelection.exists_rows",
+        "bipartite_preferred_filling_10": "Overfull.BipartiteFactorization.PreferredSelection.rows_degree",
+        "bipartite_preferred_filling_11": "Overfull.BipartiteFactorization.PreferredSelection.exists_filled_exterior",
+        "bipartite_preferred_filling_12": "Overfull.BipartiteFactorization.PreferredSelection.row_disjoint_pool",
+        "bipartite_preferred_filling_13": "Overfull.BipartiteFactorization.PreferredSelection.pools_disjoint",
+        "bipartite_preferred_filling_14": "Overfull.BipartiteFactorization.exists_preferred_selected_graph",
+        "bipartite_palette_assembly_1": "Overfull.BipartiteFactorization.color_inactive_from_base",
+        "bipartite_palette_assembly_2": "Overfull.BipartiteFactorization.correctionPool_eq_subtype",
+        "bipartite_palette_assembly_3": "Overfull.BipartiteFactorization.exists_selected_palette",
+        "bipartite_palette_assembly_4": "Overfull.BipartiteFactorization.SelectedPalette.exists_localized_coloring",
+        "bipartite_palette_assembly_5": "Overfull.BipartiteFactorization.exists_localized_palette",
+        "bipartite_correction_capacity_21": "Overfull.BipartiteFactorization.exists_graph_correction_subset_after_pool_deletion",
+    })
+    # Both selected families and the exact residual, from original finite supplies.
+    completed_results.update({
+        "bipartite_oriented_palettes_1": "Overfull.BipartiteFactorization.exists_oriented_palette",
+        "bipartite_oriented_palettes_2": "Overfull.BipartiteFactorization.OrientedPalette.exists_localized_coloring",
+        "bipartite_oriented_palettes_3": "Overfull.BipartiteFactorization.OrientedPalette.localized_coloring",
+        "bipartite_oriented_palettes_4": "Overfull.BipartiteFactorization.LocalizedColoring.footprint_avoids",
+        "bipartite_palette_families_1": "Overfull.BipartiteFactorization.core_incidence_in_support",
+        "bipartite_palette_families_2": "Overfull.BipartiteFactorization.palette_supported_copies_disjoint",
+        "bipartite_palette_families_3": "Overfull.BipartiteFactorization.mem_familyCopies",
+        "bipartite_palette_families_4": "Overfull.BipartiteFactorization.familyCopies_inter",
+        "bipartite_palette_families_5": "Overfull.BipartiteFactorization.familyCopies_inter_card",
+        "bipartite_palette_families_6": "Overfull.BipartiteFactorization.familyCopies_degree",
+        "bipartite_palette_families_7": "Overfull.BipartiteFactorization.familyCopies_avoids",
+        "bipartite_palette_families_8": "Overfull.BipartiteFactorization.paletteEdges_family_union",
+        "bipartite_palette_families_9": "Overfull.BipartiteFactorization.paletteEdges_disjoint",
+        "bipartite_palette_families_10": "Overfull.BipartiteFactorization.paletteBase_family_union",
+        "bipartite_palette_families_11": "Overfull.BipartiteFactorization.familyCopies_side_degrees",
+        "bipartite_palette_families_12": "Overfull.BipartiteFactorization.OrientedPalette.copies_disjoint",
+        "bipartite_palette_families_13": "Overfull.BipartiteFactorization.exists_oriented_palette_family",
+        "bipartite_palette_families_14": "Overfull.BipartiteFactorization.OrientedPalette.family_base",
+        "bipartite_palette_families_15": "Overfull.BipartiteFactorization.OrientedPalette.family_exceptional_degree",
+        "bipartite_palette_families_16": "Overfull.BipartiteFactorization.OrientedPalette.family_exceptional_degree_palette_union",
+        "bipartite_palette_families_17": "Overfull.BipartiteFactorization.OrientedPalette.family_rows",
+        "bipartite_palette_families_18": "Overfull.BipartiteFactorization.OrientedPalette.family_rows_palette_union",
+        "bipartite_palette_families_19": "Overfull.BipartiteFactorization.OrientedPalette.family_core_row_le",
+        "bipartite_palette_families_20": "Overfull.BipartiteFactorization.OrientedPalette.family_positive_count",
+        "bipartite_palette_families_21": "Overfull.BipartiteFactorization.OrientedPalette.family_negative_count",
+        "bipartite_palette_families_22": "Overfull.BipartiteFactorization.OrientedPalette.family_side_degrees",
+        "bipartite_remaining_coloring_1": "Overfull.BipartiteFactorization.remaining_exceptional_degree",
+        "bipartite_remaining_coloring_2": "Overfull.BipartiteFactorization.remaining_side_degree_eq",
+        "bipartite_remaining_coloring_3": "Overfull.BipartiteFactorization.remaining_core_row_add",
+        "bipartite_remaining_coloring_4": "Overfull.BipartiteFactorization.remaining_core_row_lower",
+        "bipartite_remaining_coloring_5": "Overfull.BipartiteFactorization.remaining_inactive_color_mem",
+        "bipartite_remaining_coloring_6": "Overfull.BipartiteFactorization.remaining_inactive_colorable",
+        "bipartite_remaining_coloring_7": "Overfull.BipartiteFactorization.exists_balanced_remaining_coloring",
+        "bipartite_family_load_1": "Overfull.BipartiteFactorization.palette_family_low",
+        "bipartite_family_load_2": "Overfull.BipartiteFactorization.localized_family_load",
+        "bipartite_family_load_3": "Overfull.BipartiteFactorization.exists_family_and_remaining_colorings",
+        "bipartite_two_families_1": "Overfull.BipartiteFactorization.unused_row_after_deletion",
+        "bipartite_two_families_2": "Overfull.BipartiteFactorization.deleted_pool_union_bound",
+        "bipartite_two_families_3": "Overfull.BipartiteFactorization.correctionPool_mono",
+        "bipartite_two_families_4": "Overfull.BipartiteFactorization.ReservedPaletteConditions.after_deletion",
+        "bipartite_two_families_5": "Overfull.BipartiteFactorization.paletteBase_disjoint_family",
+        "bipartite_two_families_6": "Overfull.BipartiteFactorization.exists_two_palette_families",
+        "bipartite_two_families_7": "Overfull.BipartiteFactorization.TwoFamilyConditions.palettes_disjoint",
+        "bipartite_two_families_8": "Overfull.BipartiteFactorization.TwoFamilyConditions.palette_data",
+        "bipartite_two_families_9": "Overfull.BipartiteFactorization.TwoFamilyConditions.palette_card",
+        "bipartite_two_families_10": "Overfull.BipartiteFactorization.exists_colored_two_families",
+    })
+    # Finite sampling and actual palette/block score estimates.
+    completed_results.update({
+        "finite_weighted_sampling_1": "Overfull.FiniteProbability.mean_nonneg",
+        "finite_weighted_sampling_2": "Overfull.FiniteProbability.mean_mono",
+        "finite_weighted_sampling_3": "Overfull.FiniteProbability.mean_const",
+        "finite_weighted_sampling_4": "Overfull.FiniteProbability.mean_eq_const_of_support",
+        "finite_weighted_sampling_5": "Overfull.FiniteProbability.nonempty_of_sum_eq_one",
+        "finite_weighted_sampling_6": "Overfull.FiniteProbability.mean_add",
+        "finite_weighted_sampling_7": "Overfull.FiniteProbability.mean_sub",
+        "finite_weighted_sampling_8": "Overfull.FiniteProbability.mean_mul_left",
+        "finite_weighted_sampling_9": "Overfull.FiniteProbability.mean_sum",
+        "finite_weighted_sampling_10": "Overfull.FiniteProbability.mean_indicator",
+        "finite_weighted_sampling_11": "Overfull.FiniteProbability.variance_nonneg",
+        "finite_weighted_sampling_12": "Overfull.FiniteProbability.variance_eq_zero_of_support",
+        "finite_weighted_sampling_13": "Overfull.FiniteProbability.variance_const",
+        "finite_weighted_sampling_14": "Overfull.FiniteProbability.variance_eq_mean_sq_sub",
+        "finite_weighted_sampling_15": "Overfull.FiniteProbability.mean_sq_le",
+        "finite_weighted_sampling_16": "Overfull.FiniteProbability.chebyshev",
+        "finite_weighted_sampling_17": "Overfull.FiniteProbability.mean_equiv",
+        "finite_weighted_sampling_18": "Overfull.FiniteProbability.variance_equiv",
+        "finite_weighted_sampling_19": "Overfull.FiniteProbability.mean_comm",
+        "finite_weighted_sampling_20": "Overfull.FiniteProbability.mean_prod",
+        "finite_weighted_sampling_21": "Overfull.FiniteProbability.variance_prod",
+        "finite_weighted_sampling_22": "Overfull.FiniteProbability.variance_mean_le",
+        "finite_weighted_sampling_23": "Overfull.FiniteProbability.variance_prod_le",
+        "finite_weighted_sampling_24": "Overfull.Hypergeometric.variance_zero_sample",
+        "finite_weighted_sampling_25": "Overfull.Hypergeometric.variance_full_sample",
+        "finite_weighted_sampling_26": "Overfull.Hypergeometric.weightedSum_eq_indicators",
+        "finite_weighted_sampling_27": "Overfull.Hypergeometric.mean_member_indicator",
+        "finite_weighted_sampling_28": "Overfull.Hypergeometric.mean_weightedSum",
+        "finite_weighted_sampling_29": "Overfull.Hypergeometric.mean_pair_indicator_le",
+        "finite_weighted_sampling_30": "Overfull.Hypergeometric.weightedSum_sq",
+        "finite_weighted_sampling_31": "Overfull.Hypergeometric.mean_weightedSum_sq_le",
+        "finite_weighted_sampling_32": "Overfull.Hypergeometric.variance_weightedSum_le",
+        "finite_weighted_sampling_33": "Overfull.Hypergeometric.variance_weightedSum_le_max_mul_mean",
+        "finite_weighted_sampling_34": "Overfull.FiniteProbability.piWeight_nonneg",
+        "finite_weighted_sampling_35": "Overfull.FiniteProbability.sum_piWeight",
+        "finite_weighted_sampling_36": "Overfull.FiniteProbability.piWeight_cons",
+        "finite_weighted_sampling_37": "Overfull.FiniteProbability.variance_pi_fin_le",
+        "finite_weighted_sampling_38": "Overfull.FiniteProbability.variance_pi_le",
+        "disjoint_permutation_sampling_1": "Overfull.PermutationSampling.sample_card",
+        "disjoint_permutation_sampling_2": "Overfull.PermutationSampling.mem_sample",
+        "disjoint_permutation_sampling_3": "Overfull.PermutationSampling.sample_mul",
+        "disjoint_permutation_sampling_4": "Overfull.PermutationSampling.sample_injective",
+        "disjoint_permutation_sampling_5": "Overfull.PermutationSampling.sample_disjoint",
+        "disjoint_permutation_sampling_6": "Overfull.PermutationSampling.exists_sample_eq",
+        "disjoint_permutation_sampling_7": "Overfull.PermutationSampling.mem_fiber",
+        "disjoint_permutation_sampling_8": "Overfull.PermutationSampling.fiber_card_eq",
+        "disjoint_permutation_sampling_9": "Overfull.PermutationSampling.card_perm_eq_choose_mul_fiber",
+        "disjoint_permutation_sampling_10": "Overfull.PermutationSampling.weight_nonneg",
+        "disjoint_permutation_sampling_11": "Overfull.PermutationSampling.sum_weight",
+        "disjoint_permutation_sampling_12": "Overfull.PermutationSampling.probability_sample_eq",
+        "disjoint_permutation_sampling_13": "Overfull.PermutationSampling.expectation_sample",
+        "disjoint_permutation_sampling_14": "Overfull.PermutationSampling.probability_sample",
+        "disjoint_permutation_sampling_15": "Overfull.PermutationSampling.exists_positions",
+        "disjoint_permutation_sampling_16": "Overfull.PermutationSampling.exists_disjoint_samples",
+        "capped_sampling_mean_1": "Overfull.FiniteProbability.harmonic_le_cap",
+        "capped_sampling_mean_2": "Overfull.FiniteProbability.mean_sq_le_ratio_second_moment",
+        "capped_sampling_mean_3": "Overfull.FiniteProbability.capped_mean_lower_of_second_moment",
+        "capped_sampling_mean_4": "Overfull.FiniteProbability.capped_mean_lower_of_variance",
+        "capped_sampling_mean_5": "Overfull.FiniteProbability.correction_capped_mean_lower",
+        "capped_sampling_mean_6": "Overfull.FiniteProbability.lower_tail_of_mean_lower",
+        "capped_sampling_mean_7": "Overfull.FiniteProbability.correction_score_lower_tail",
+        "weighted_swap_variance_1": "Overfull.SwapVariance.sliceMean_congr",
+        "weighted_swap_variance_2": "Overfull.SwapVariance.sliceMean_const",
+        "weighted_swap_variance_3": "Overfull.SwapVariance.sliceMean_add",
+        "weighted_swap_variance_4": "Overfull.SwapVariance.sliceMean_sub",
+        "weighted_swap_variance_5": "Overfull.SwapVariance.sliceMean_const_mul",
+        "weighted_swap_variance_6": "Overfull.SwapVariance.sliceMean_mono",
+        "weighted_swap_variance_7": "Overfull.SwapVariance.sliceVariance_eq",
+        "weighted_swap_variance_8": "Overfull.SwapVariance.sliceMean_zero",
+        "weighted_swap_variance_9": "Overfull.SwapVariance.sliceMean_full",
+        "weighted_swap_variance_10": "Overfull.SwapVariance.sliceVariance_zero",
+        "weighted_swap_variance_11": "Overfull.SwapVariance.sliceVariance_full",
+        "weighted_swap_variance_12": "Overfull.SwapVariance.slice_sum_insert",
+        "weighted_swap_variance_13": "Overfull.SwapVariance.add_one_sum",
+        "weighted_swap_variance_14": "Overfull.SwapVariance.adjacent_slice_means",
+        "weighted_swap_variance_15": "Overfull.SwapVariance.sliceMean_insert",
+        "weighted_swap_variance_16": "Overfull.SwapVariance.sliceVariance_insert",
+        "weighted_swap_variance_17": "Overfull.SwapVariance.weighted_slice_variance",
+        "weighted_swap_variance_18": "Overfull.SwapVariance.hypergeometric_mean_eq",
+        "weighted_swap_variance_19": "Overfull.SwapVariance.hypergeometric_variance_eq",
+        "weighted_swap_variance_20": "Overfull.Hypergeometric.variance_of_swap",
+        "weighted_swap_variance_21": "Overfull.Hypergeometric.variance_of_swap_bounded",
+        "weighted_swap_variance_22": "Overfull.Hypergeometric.variance_product_of_swap",
+        "weighted_swap_variance_23": "Overfull.Hypergeometric.variance_product_of_swap_bounded",
+        "bipartite_palette_sampling_1": "Overfull.BipartiteFactorization.PaletteSampling.mem_liftPalette",
+        "bipartite_palette_sampling_2": "Overfull.BipartiteFactorization.PaletteSampling.liftPalette_subset",
+        "bipartite_palette_sampling_3": "Overfull.BipartiteFactorization.PaletteSampling.liftPalette_card",
+        "bipartite_palette_sampling_4": "Overfull.BipartiteFactorization.PaletteSampling.liftPalette_disjoint",
+        "bipartite_palette_sampling_5": "Overfull.BipartiteFactorization.PaletteSampling.liftPalette_univ",
+        "bipartite_palette_sampling_6": "Overfull.BipartiteFactorization.PaletteSampling.poolColorWeight_nonneg",
+        "bipartite_palette_sampling_7": "Overfull.BipartiteFactorization.PaletteSampling.palette_pool_card_eq_sum",
+        "bipartite_palette_sampling_8": "Overfull.BipartiteFactorization.PaletteSampling.poolDemand_eq_weightedSum",
+        "bipartite_palette_sampling_9": "Overfull.BipartiteFactorization.PaletteSampling.sum_allowed_pool_weights",
+        "bipartite_palette_sampling_10": "Overfull.BipartiteFactorization.PaletteSampling.mean_poolDemand",
+        "bipartite_palette_sampling_11": "Overfull.BipartiteFactorization.PaletteSampling.mean_poolDemand_le",
+        "bipartite_palette_sampling_12": "Overfull.BipartiteFactorization.PaletteSampling.variance_poolDemand_le_max_mul_mean",
+        "bipartite_palette_sampling_13": "Overfull.BipartiteFactorization.PaletteSampling.variance_poolDemand_le",
+        "bipartite_palette_sampling_14": "Overfull.BipartiteFactorization.PaletteSampling.probability_permuted_poolDemand",
+        "bipartite_palette_sampling_15": "Overfull.BipartiteFactorization.PaletteSampling.exists_disjoint_allowed_palettes",
+        "bipartite_block_score_1": "Overfull.BipartiteFactorization.BlockSampling.internalEdges_mono",
+        "bipartite_block_score_2": "Overfull.BipartiteFactorization.BlockSampling.parallelEdges_symm",
+        "bipartite_block_score_3": "Overfull.BipartiteFactorization.BlockSampling.sum_parallel_card",
+        "bipartite_block_score_4": "Overfull.BipartiteFactorization.BlockSampling.internal_degree_eq_edgesTo",
+        "bipartite_block_score_5": "Overfull.BipartiteFactorization.BlockSampling.internal_degree_sum",
+        "bipartite_block_score_6": "Overfull.BipartiteFactorization.BlockSampling.betweenCopies_symm",
+        "bipartite_block_score_7": "Overfull.BipartiteFactorization.BlockSampling.cross_degree_sum",
+        "bipartite_block_score_8": "Overfull.BipartiteFactorization.BlockSampling.correction_pool_card",
+        "bipartite_block_score_9": "Overfull.BipartiteFactorization.BlockSampling.vertexWeight_nonneg",
+        "bipartite_block_score_10": "Overfull.BipartiteFactorization.BlockSampling.vertexWeight_le",
+        "bipartite_block_score_11": "Overfull.BipartiteFactorization.BlockSampling.sum_vertexWeight_le",
+        "bipartite_block_score_12": "Overfull.BipartiteFactorization.BlockSampling.internalEdges_insert_card_le",
+        "bipartite_block_score_13": "Overfull.BipartiteFactorization.BlockSampling.edgesTo_insert",
+        "bipartite_block_score_14": "Overfull.BipartiteFactorization.BlockSampling.cappedScore_mono",
+        "bipartite_block_score_15": "Overfull.BipartiteFactorization.BlockSampling.cappedRow_insert_le",
+        "bipartite_block_score_16": "Overfull.BipartiteFactorization.BlockSampling.cappedScore_insert_le",
+        "bipartite_block_score_17": "Overfull.BipartiteFactorization.BlockSampling.cappedScore_swap_le",
+        "bipartite_block_score_18": "Overfull.BipartiteFactorization.BlockSampling.variance_cappedScore_le_weights",
+        "bipartite_block_score_19": "Overfull.BipartiteFactorization.BlockSampling.variance_cappedScore_le",
+        "bipartite_product_score_1": "Overfull.BipartiteFactorization.BlockProductSampling.mem_sampledBlock",
+        "bipartite_product_score_2": "Overfull.BipartiteFactorization.BlockProductSampling.sampledBlock_subset",
+        "bipartite_product_score_3": "Overfull.BipartiteFactorization.BlockProductSampling.sampledBlock_mem_part",
+        "bipartite_product_score_4": "Overfull.BipartiteFactorization.BlockProductSampling.sampledBlock_update_outside",
+        "bipartite_product_score_5": "Overfull.BipartiteFactorization.BlockProductSampling.sampledBlock_update",
+        "bipartite_product_score_6": "Overfull.BipartiteFactorization.BlockProductSampling.sampledBlock_update_swap",
+        "bipartite_product_score_7": "Overfull.BipartiteFactorization.BlockProductSampling.sum_part_weights",
+        "bipartite_product_score_8": "Overfull.BipartiteFactorization.BlockProductSampling.sum_part_weights_le",
+        "bipartite_product_score_9": "Overfull.BipartiteFactorization.BlockProductSampling.cappedScore_coordinate_swap",
+        "bipartite_product_score_10": "Overfull.BipartiteFactorization.BlockProductSampling.cappedScore_product_variance",
+    })
+    completed_results.update({
+        "finite_product_moments_1": "Overfull.FiniteProbability.mean_pi_product",
+        "finite_product_moments_2": "Overfull.FiniteProbability.mean_pi_coordinate",
+        "finite_product_moments_3": "Overfull.FiniteProbability.mean_pi_sum",
+        "finite_product_moments_4": "Overfull.FiniteProbability.mean_pi_mul_coordinates",
+        "finite_variance_translation_1": "Overfull.FiniteProbability.variance_add_const",
+        "finite_variance_translation_2": "Overfull.FiniteProbability.variance_const_add",
+        "finite_variance_translation_3": "Overfull.FiniteProbability.variance_pi_sum_le",
+        "partition_sample_membership_1": "Overfull.Hypergeometric.mean_pair_indicator_eq",
+        "partition_sample_membership_2": "Overfull.Hypergeometric.mean_pair_indicator_ge_half",
+        "partition_sample_membership_3": "Overfull.BipartiteFactorization.BlockProductSampling.mean_member_part",
+        "partition_sample_membership_4": "Overfull.BipartiteFactorization.BlockProductSampling.mean_pair_same_part",
+        "partition_sample_membership_5": "Overfull.BipartiteFactorization.BlockProductSampling.mean_pair_distinct_parts",
+        "partition_sample_membership_6": "Overfull.BipartiteFactorization.BlockProductSampling.mean_member_eq",
+        "partition_sample_membership_7": "Overfull.BipartiteFactorization.BlockProductSampling.mean_pair_ge_half",
+        "partition_sample_membership_8": "Overfull.BipartiteFactorization.BlockProductSampling.mean_internalEdges_ge",
+        "partition_row_moments_1": "Overfull.BipartiteFactorization.BlockRowMoments.sum_sampledBlock",
+        "partition_row_moments_2": "Overfull.BipartiteFactorization.BlockRowMoments.mean_partWeightedSum",
+        "partition_row_moments_3": "Overfull.BipartiteFactorization.BlockRowMoments.edgesTo_sampledBlock_eq_sum",
+        "partition_row_moments_4": "Overfull.BipartiteFactorization.BlockRowMoments.sum_part_parallel_card",
+        "partition_row_moments_5": "Overfull.BipartiteFactorization.BlockRowMoments.mean_edgesTo",
+        "partition_row_moments_6": "Overfull.BipartiteFactorization.BlockRowMoments.variance_edgesTo_le",
+        "partition_row_moments_7": "Overfull.BipartiteFactorization.BlockRowMoments.variance_edgesTo_le_of_degree",
+        "partition_row_moments_8": "Overfull.BipartiteFactorization.BlockRowMoments.capped_row_mean",
+        "partition_score_mean_1": "Overfull.BipartiteFactorization.BlockScoreMean.mean_cappedScore",
+        "partition_score_mean_2": "Overfull.BipartiteFactorization.BlockScoreMean.sum_rows_eq_cross",
+        "partition_score_mean_3": "Overfull.BipartiteFactorization.BlockScoreMean.cappedScore_mean_of_counts",
+        "partition_score_mean_4": "Overfull.BipartiteFactorization.BlockScoreMean.exists_support_not_of_probability_lt_one",
+        "partition_score_mean_5": "Overfull.BipartiteFactorization.BlockScoreMean.sample_card_of_weight_ne_zero",
+        "partition_score_mean_6": "Overfull.BipartiteFactorization.BlockScoreMean.cappedScore_product_mean",
+        "partition_score_mean_7": "Overfull.BipartiteFactorization.BlockScoreMean.cappedScore_product_lower_tail",
+        "partition_score_mean_8": "Overfull.BipartiteFactorization.BlockScoreMean.exists_block_large_score"
+})
+    completed_results.update({
+        "palette_pool_budgets_1": "Overfull.FiniteProbability.upper_tail_of_mean_upper",
+        "palette_pool_budgets_2": "Overfull.FiniteProbability.palette_pool_upper_tail",
+        "palette_pool_budgets_3": "Overfull.BipartiteFactorization.PaletteBudgets.allowed_card_pos",
+        "palette_pool_budgets_4": "Overfull.BipartiteFactorization.PaletteBudgets.allowed_fraction_lower",
+        "palette_pool_budgets_5": "Overfull.BipartiteFactorization.PaletteBudgets.allowed_fraction_le",
+        "palette_pool_budgets_6": "Overfull.BipartiteFactorization.PaletteBudgets.allowed_card_bound_of_retention",
+        "palette_pool_budgets_7": "Overfull.BipartiteFactorization.PaletteBudgets.mean_poolDemand_le_scaled",
+        "palette_pool_budgets_8": "Overfull.BipartiteFactorization.PaletteBudgets.variance_poolDemand_le_scaled",
+        "palette_pool_budgets_9": "Overfull.BipartiteFactorization.PaletteBudgets.poolDemand_upper_tail",
+        "palette_pool_budgets_10": "Overfull.BipartiteFactorization.PaletteBudgets.poolDemand_upper_tail_all",
+        "palette_row_tails_1": "Overfull.BipartiteFactorization.PaletteRowTails.lift_rowColors",
+        "palette_row_tails_2": "Overfull.BipartiteFactorization.PaletteRowTails.rowColors_card",
+        "palette_row_tails_3": "Overfull.BipartiteFactorization.PaletteRowTails.rowColors_card_le",
+        "palette_row_tails_4": "Overfull.BipartiteFactorization.PaletteRowTails.colorsOn_palette_inter",
+        "palette_row_tails_5": "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_card_eq_colors",
+        "palette_row_tails_6": "Overfull.BipartiteFactorization.PaletteRowTails.row_poolDemand_eq_count",
+        "palette_row_tails_7": "Overfull.BipartiteFactorization.PaletteRowTails.row_mean_lower",
+        "palette_row_tails_8": "Overfull.BipartiteFactorization.PaletteRowTails.row_mean_upper",
+        "palette_row_tails_9": "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_tail",
+        "palette_row_tails_10": "Overfull.BipartiteFactorization.PaletteRowTails.palette_row_tail_of_exclusions",
+        "simultaneous_palette_selection_1": "Overfull.BipartiteFactorization.SimultaneousPalettes.not_bad_iff_good",
+        "simultaneous_palette_selection_2": "Overfull.BipartiteFactorization.SimultaneousPalettes.probability_bad_le",
+        "simultaneous_palette_selection_3": "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes",
+        "simultaneous_palette_selection_4": "Overfull.BipartiteFactorization.SimultaneousPalettes.failureBudget_le_uniform",
+        "simultaneous_palette_selection_5": "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes_of_uniform_budget",
+        "simultaneous_palette_selection_6": "Overfull.BipartiteFactorization.SimultaneousPalettes.exists_simultaneous_palettes_of_exclusions",
+        "finite_product_pushforward_1": "Overfull.FiniteProbability.mean_map_of_fibers",
+        "finite_product_pushforward_2": "Overfull.FiniteProbability.probability_map_of_fibers",
+        "finite_product_pushforward_3": "Overfull.FiniteProbability.probability_pi_map_eq",
+        "finite_product_pushforward_4": "Overfull.FiniteProbability.mean_pi_map",
+        "finite_product_pushforward_5": "Overfull.FiniteProbability.probability_pi_map",
+        "shared_partition_permutations_1": "Overfull.PartitionPermutation.sample_card",
+        "shared_partition_permutations_2": "Overfull.PartitionPermutation.mem_sample",
+        "shared_partition_permutations_3": "Overfull.PartitionPermutation.sample_mono",
+        "shared_partition_permutations_4": "Overfull.PartitionPermutation.sample_disjoint",
+        "shared_partition_permutations_5": "Overfull.PartitionPermutation.sample_biUnion",
+        "shared_partition_permutations_6": "Overfull.PartitionPermutation.sample_univ",
+        "shared_partition_permutations_7": "Overfull.PartitionPermutation.weight_nonneg",
+        "shared_partition_permutations_8": "Overfull.PartitionPermutation.sum_weight",
+        "shared_partition_permutations_9": "Overfull.PartitionPermutation.probability_sample",
+        "shared_partition_permutations_10": "Overfull.PartitionPermutation.exists_good_images",
+        "shared_partition_permutations_11": "Overfull.PartitionPermutation.exists_positions",
+        "shared_partition_permutations_12": "Overfull.PartitionPermutation.exists_disjoint_samples",
+        "partition_concentration_1": "Overfull.PartitionConcentration.expectedCount_nonneg",
+        "partition_concentration_2": "Overfull.PartitionConcentration.exponential_moment_le",
+        "partition_concentration_3": "Overfull.PartitionConcentration.exponential_tail",
+        "partition_concentration_4": "Overfull.PartitionConcentration.chernoff_lower",
+        "partition_concentration_5": "Overfull.PartitionConcentration.half_mean_lower_tail",
+        "preferred_row_sampling_1": "Overfull.BipartiteFactorization.PreferredSampling.representative_count",
+        "preferred_row_sampling_2": "Overfull.BipartiteFactorization.PreferredSampling.sum_part_representatives",
+        "preferred_row_sampling_3": "Overfull.BipartiteFactorization.PreferredSampling.expected_representatives",
+        "preferred_row_sampling_4": "Overfull.BipartiteFactorization.PreferredSampling.representative_half_mean_lower_tail",
+        "preferred_row_sampling_5": "Overfull.BipartiteFactorization.PreferredSampling.representative_endpoints_lower_tail",
+        "preferred_row_sampling_6": "Overfull.BipartiteFactorization.PreferredSampling.special_preferred_lower_tail",
+        "preferred_row_sampling_7": "Overfull.BipartiteFactorization.PreferredSampling.representative_edges_count",
+        "preferred_row_sampling_8": "Overfull.BipartiteFactorization.PreferredSampling.representative_edges_lower_tail",
+        "block_selection_budgets_1": "Overfull.BipartiteFactorization.BlockSelectionBudget.not_bad_iff_goodBlock",
+        "block_selection_budgets_2": "Overfull.BipartiteFactorization.BlockSelectionBudget.probability_bad_le",
+        "block_selection_budgets_3": "Overfull.BipartiteFactorization.BlockSelectionBudget.exists_good_block",
+        "simultaneous_block_selection_1": "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_inter_part",
+        "simultaneous_block_selection_2": "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_inter_part_card",
+        "simultaneous_block_selection_3": "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_mono",
+        "simultaneous_block_selection_4": "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_disjoint",
+        "simultaneous_block_selection_5": "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_biUnion",
+        "simultaneous_block_selection_6": "Overfull.BipartiteFactorization.SimultaneousBlocks.sampledBlock_univ",
+        "simultaneous_block_selection_7": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_subset",
+        "simultaneous_block_selection_8": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_inter_part_card",
+        "simultaneous_block_selection_9": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_mono",
+        "simultaneous_block_selection_10": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_disjoint",
+        "simultaneous_block_selection_11": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_biUnion",
+        "simultaneous_block_selection_12": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlock_univ",
+        "simultaneous_block_selection_13": "Overfull.BipartiteFactorization.SimultaneousBlocks.permutedBlocks_realize",
+        "simultaneous_block_selection_14": "Overfull.BipartiteFactorization.SimultaneousBlocks.exists_good_permutations",
+        "simultaneous_block_selection_15": "Overfull.BipartiteFactorization.SimultaneousBlocks.exists_good_blocks",
+        "uniform_sampling_failure_budget_1": "Overfull.FiniteProbability.exists_uniform_failure_budget"
+    })
+    # Full tripartite link packing: all public proofs in the ten new modules.
+    completed_results.update({
+        "predictable_bernoulli_concentration_1": "Overfull.PredictableBernoulli.count_zero",
+        "predictable_bernoulli_concentration_2": "Overfull.PredictableBernoulli.count_snoc",
+        "predictable_bernoulli_concentration_3": "Overfull.PredictableBernoulli.choiceWeight_nonneg",
+        "predictable_bernoulli_concentration_4": "Overfull.PredictableBernoulli.sum_choiceWeight",
+        "predictable_bernoulli_concentration_5": "Overfull.PredictableBernoulli.weight_nonneg",
+        "predictable_bernoulli_concentration_6": "Overfull.PredictableBernoulli.sum_weight",
+        "predictable_bernoulli_concentration_7": "Overfull.PredictableBernoulli.weight_snoc",
+        "predictable_bernoulli_concentration_8": "Overfull.PredictableBernoulli.mean_snoc",
+        "predictable_bernoulli_concentration_9": "Overfull.PredictableBernoulli.local_exponential_moment_le",
+        "predictable_bernoulli_concentration_10": "Overfull.PredictableBernoulli.exponential_moment_le",
+        "predictable_bernoulli_concentration_11": "Overfull.PredictableBernoulli.exponential_upper_tail",
+        "predictable_bernoulli_concentration_12": "Overfull.PredictableBernoulli.upper_tail_of_budget_half",
+        "predictable_bernoulli_concentration_13": "Overfull.PredictableBernoulli.upper_tail_of_budget_half_add_one",
+        "dense_link_packing_candidates_1": "Overfull.DenseLinkPacking.dense_bipartite_bijection",
+        "dense_link_packing_candidates_2": "Overfull.DenseLinkPacking.subtype_neighbor_card",
+        "dense_link_packing_candidates_3": "Overfull.DenseLinkPacking.exists_matching_on_sides",
+        "dense_link_packing_candidates_4": "Overfull.DenseLinkPacking.cross_degree_after_deletion",
+        "dense_link_packing_candidates_5": "Overfull.DenseLinkPacking.liftOfLE_verts",
+        "dense_link_packing_candidates_6": "Overfull.DenseLinkPacking.liftOfLE_adj",
+        "dense_link_packing_candidates_7": "Overfull.DenseLinkPacking.liftOfLE_isMatching",
+        "dense_link_packing_candidates_8": "Overfull.DenseLinkPacking.exists_matching_on_sides_avoiding",
+        "dense_link_packing_candidates_9": "Overfull.DenseLinkPacking.exists_matching_candidates",
+        "dense_link_packing_candidates_10": "Overfull.DenseLinkPacking.harmfulCandidates_card_le",
+        "dense_link_packing_candidates_11": "Overfull.DenseLinkPacking.harmfulCandidates_card_le_sides",
+        "dense_link_packing_parameters_1": "Overfull.Dense.LinkPacking.Parameters.load_nonneg",
+        "dense_link_packing_parameters_2": "Overfull.Dense.LinkPacking.Parameters.load_pos",
+        "dense_link_packing_parameters_3": "Overfull.Dense.LinkPacking.Parameters.rpow_three_halves",
+        "dense_link_packing_parameters_4": "Overfull.Dense.LinkPacking.Parameters.load_eq_rpow",
+        "dense_link_packing_parameters_5": "Overfull.Dense.LinkPacking.Parameters.choices_pos",
+        "dense_link_packing_parameters_6": "Overfull.Dense.LinkPacking.Parameters.choices_lower",
+        "dense_link_packing_parameters_7": "Overfull.Dense.LinkPacking.Parameters.choices_upper",
+        "dense_link_packing_parameters_8": "Overfull.Dense.LinkPacking.Parameters.load_add_choices_le",
+        "dense_link_packing_parameters_9": "Overfull.Dense.LinkPacking.Parameters.rate_nonneg",
+        "dense_link_packing_parameters_10": "Overfull.Dense.LinkPacking.Parameters.rate_pos",
+        "dense_link_packing_parameters_11": "Overfull.Dense.LinkPacking.Parameters.rate_le_quarter",
+        "dense_link_packing_parameters_12": "Overfull.Dense.LinkPacking.Parameters.local_ratio_le",
+        "dense_link_packing_parameters_13": "Overfull.Dense.LinkPacking.Parameters.rate_incidence",
+        "dense_link_packing_parameters_14": "Overfull.Dense.LinkPacking.Parameters.quadratic_exp_decay_bound",
+        "dense_link_packing_parameters_15": "Overfull.Dense.LinkPacking.Parameters.exists_threshold",
+        "dense_link_packing_history_1": "Overfull.Dense.LinkPacking.candidates_spec",
+        "dense_link_packing_history_2": "Overfull.Dense.LinkPacking.candidates_of_not_exists",
+        "dense_link_packing_history_3": "Overfull.Dense.LinkPacking.candidates_matching",
+        "dense_link_packing_history_4": "Overfull.Dense.LinkPacking.candidates_verts_subset",
+        "dense_link_packing_history_5": "Overfull.Dense.LinkPacking.candidates_avoid",
+        "dense_link_packing_history_6": "Overfull.Dense.LinkPacking.candidates_disjoint",
+        "dense_link_packing_history_7": "Overfull.Dense.LinkPacking.history_snoc",
+        "dense_link_packing_history_8": "Overfull.Dense.LinkPacking.history_matching",
+        "dense_link_packing_history_9": "Overfull.Dense.LinkPacking.history_disjoint",
+        "dense_link_packing_local_probability_1": "Overfull.Dense.LinkPacking.hits_localMean_eq",
+        "dense_link_packing_local_probability_2": "Overfull.Dense.LinkPacking.hits_localMean_le_one",
+        "dense_link_packing_local_probability_3": "Overfull.Dense.LinkPacking.hits_localMean_eq_zero_of_not_mem",
+        "dense_link_packing_local_probability_4": "Overfull.Dense.LinkPacking.hits_harmful_card_le",
+        "dense_link_packing_local_probability_5": "Overfull.Dense.LinkPacking.hits_localMean_le",
+        "dense_link_packing_local_probability_6": "Overfull.Dense.LinkPacking.sum_hitsBound_le",
+        "dense_link_packing_local_probability_7": "Overfull.Dense.LinkPacking.hits_upper_tail",
+        "dense_link_packing_local_feasibility_1": "Overfull.Dense.LinkPacking.cross_degree_after_deletion_local",
+        "dense_link_packing_local_feasibility_2": "Overfull.Dense.LinkPacking.exists_candidateOK_of_local_load",
+        "dense_link_packing_local_feasibility_3": "Overfull.Dense.LinkPacking.exists_candidateOK_of_degree_81",
+        "dense_link_packing_load_accounting_1": "Overfull.Dense.LinkPacking.localLoad_bot",
+        "dense_link_packing_load_accounting_2": "Overfull.Dense.LinkPacking.localLoad_mono",
+        "dense_link_packing_load_accounting_3": "Overfull.Dense.LinkPacking.localLoad_sup",
+        "dense_link_packing_load_accounting_4": "Overfull.Dense.LinkPacking.localLoad_matching_indicator",
+        "dense_link_packing_load_accounting_5": "Overfull.Dense.LinkPacking.history_castSucc",
+        "dense_link_packing_load_accounting_6": "Overfull.Dense.LinkPacking.history_last",
+        "dense_link_packing_load_accounting_7": "Overfull.Dense.LinkPacking.used_history_zero",
+        "dense_link_packing_load_accounting_8": "Overfull.Dense.LinkPacking.used_history_succ",
+        "dense_link_packing_load_accounting_9": "Overfull.Dense.LinkPacking.used_history_init_le",
+        "dense_link_packing_load_accounting_10": "Overfull.Dense.LinkPacking.hits_count_eq_localLoad",
+        "dense_link_packing_load_accounting_11": "Overfull.Dense.LinkPacking.history_covers_of_localLoad",
+        "dense_link_packing_simultaneous_packing_1": "Overfull.Dense.LinkPacking.probability_badLoad_le",
+        "dense_link_packing_simultaneous_packing_2": "Overfull.Dense.LinkPacking.exists_bounded_history",
+        "dense_link_packing_simultaneous_packing_3": "Overfull.Dense.LinkPacking.exists_packing_of_budget",
+        "dense_link_packing_tripartite_geometry_1": "Overfull.DenseLinkPacking.TripartiteGeometry.mem_part",
+        "dense_link_packing_tripartite_geometry_2": "Overfull.DenseLinkPacking.TripartiteGeometry.parts_pairwise_disjoint",
+        "dense_link_packing_tripartite_geometry_3": "Overfull.DenseLinkPacking.TripartiteGeometry.parts_cover",
+        "dense_link_packing_tripartite_geometry_4": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_zero",
+        "dense_link_packing_tripartite_geometry_5": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_one",
+        "dense_link_packing_tripartite_geometry_6": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part_two",
+        "dense_link_packing_tripartite_geometry_7": "Overfull.DenseLinkPacking.TripartiteGeometry.card_part",
+        "dense_link_packing_tripartite_geometry_8": "Overfull.DenseLinkPacking.TripartiteGeometry.card_vertices",
+        "dense_link_packing_tripartite_geometry_9": "Overfull.DenseLinkPacking.TripartiteGeometry.not_adj_of_mem_part",
+        "dense_link_packing_tripartite_geometry_10": "Overfull.DenseLinkPacking.TripartiteGeometry.leftIndex_ne_omitted",
+        "dense_link_packing_tripartite_geometry_11": "Overfull.DenseLinkPacking.TripartiteGeometry.rightIndex_ne_omitted",
+        "dense_link_packing_tripartite_geometry_12": "Overfull.DenseLinkPacking.TripartiteGeometry.leftIndex_ne_rightIndex",
+        "dense_link_packing_tripartite_geometry_13": "Overfull.DenseLinkPacking.TripartiteGeometry.index_cases",
+        "dense_link_packing_tripartite_geometry_14": "Overfull.DenseLinkPacking.TripartiteGeometry.local_disjoint",
+        "dense_link_packing_tripartite_geometry_15": "Overfull.DenseLinkPacking.TripartiteGeometry.local_union",
+        "dense_link_packing_tripartite_geometry_16": "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_left",
+        "dense_link_packing_tripartite_geometry_17": "Overfull.DenseLinkPacking.TripartiteGeometry.neighbors_local_right",
+        "dense_link_packing_tripartite_geometry_18": "Overfull.DenseLinkPacking.TripartiteGeometry.induced_degree_eq",
+        "dense_link_packing_tripartite_geometry_19": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.card_Y",
+        "dense_link_packing_tripartite_geometry_20": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.degree_left",
+        "dense_link_packing_tripartite_geometry_21": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.degree_right",
+        "dense_link_packing_tripartite_geometry_22": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_left",
+        "dense_link_packing_tripartite_geometry_23": "Overfull.DenseLinkPacking.TripartiteGeometry.LocalSides.minDegree_le_right",
+        "dense_link_packing_1": "Overfull.Dense.LinkPacking.exists_tripartite_link_packing",
+    })
+    completed_results.update({
+        "robust_partition_conclusion_1": "Overfull.RobustPartition.rank_eq_weighted_count",
+        "robust_partition_conclusion_2": "Overfull.RobustPartition.valid_shore_degree_lower",
+        "robust_partition_conclusion_3": "Overfull.RobustPartition.valid_piece_cut_le",
+        "robust_partition_conclusion_4": "Overfull.RobustPartition.partition_conclusion_of_terminal",
+        "robust_partition_counting_1": "Overfull.RobustPartition.ecount_nonneg",
+        "robust_partition_counting_2": "Overfull.RobustPartition.cut_nonneg",
+        "robust_partition_counting_3": "Overfull.RobustPartition.bad_nonneg",
+        "robust_partition_counting_4": "Overfull.RobustPartition.ecount_symm",
+        "robust_partition_counting_5": "Overfull.RobustPartition.bad_symm",
+        "robust_partition_counting_6": "Overfull.RobustPartition.ecount_mono",
+        "robust_partition_counting_7": "Overfull.RobustPartition.ecount_le_mul_card",
+        "robust_partition_counting_8": "Overfull.RobustPartition.ecount_union_left_le",
+        "robust_partition_counting_9": "Overfull.RobustPartition.ecount_union_right_le",
+        "robust_partition_counting_10": "Overfull.RobustPartition.ecount_union_left",
+        "robust_partition_counting_11": "Overfull.RobustPartition.ecount_union_right",
+        "robust_partition_counting_12": "Overfull.RobustPartition.ecount_eq_sum",
+        "robust_partition_counting_13": "Overfull.RobustPartition.ecount_univ",
+        "robust_partition_counting_14": "Overfull.RobustPartition.ecount_add_compl",
+        "robust_partition_counting_15": "Overfull.RobustPartition.ecount_self",
+        "robust_partition_counting_16": "Overfull.RobustPartition.cut_eq_sum",
+        "robust_partition_counting_17": "Overfull.RobustPartition.cut_compl",
+        "robust_partition_counting_18": "Overfull.RobustPartition.cut_sdiff_le",
+        "robust_partition_counting_19": "Overfull.RobustPartition.cut_union_le_bad",
+        "robust_partition_counting_20": "Overfull.RobustPartition.ecount_off_left_le_bad",
+        "robust_partition_counting_21": "Overfull.RobustPartition.ecount_off_right_le_bad",
+        "robust_partition_counting_22": "Overfull.RobustPartition.bad_eq_internal_add_cut",
+        "robust_partition_counting_23": "Overfull.RobustPartition.internal_edges_add_cut_le_bad",
+        "robust_partition_counting_24": "Overfull.RobustPartition.min_degree_mul_card_le",
+        "robust_partition_counting_25": "Overfull.RobustPartition.ecount_le_max_degree_mul_card",
+        "robust_partition_counting_26": "Overfull.RobustPartition.card_lower_of_small_off",
+        "robust_partition_counting_27": "Overfull.RobustPartition.block_size_lower",
+        "robust_partition_counting_28": "Overfull.RobustPartition.bipartite_sizes_lower",
+        "robust_partition_counting_29": "Overfull.RobustPartition.internal_good_of_not_bad",
+        "robust_partition_counting_30": "Overfull.RobustPartition.bad_internal_degree_count",
+        "robust_partition_counting_31": "Overfull.RobustPartition.degree_gap_le_off",
+        "robust_partition_counting_32": "Overfull.RobustPartition.bipartite_imbalance",
+        "robust_partition_counting_33": "Overfull.RobustPartition.coarse_count_bound",
+        "robust_partition_counting_34": "Overfull.RobustPartition.sharp_count_estimate",
+        "robust_partition_finite_refinement_1": "Overfull.RobustPartition.exists_terminal_of_bounded_rank",
+        "robust_partition_induced_1": "Overfull.RobustPartition.mem_localRN",
+        "robust_partition_induced_2": "Overfull.RobustPartition.localRN_subset",
+        "robust_partition_induced_3": "Overfull.RobustPartition.induced_set_card",
+        "robust_partition_induced_4": "Overfull.RobustPartition.induced_degree_eq_local_count",
+        "robust_partition_induced_5": "Overfull.RobustPartition.induced_robustNeighbors_image",
+        "robust_partition_induced_6": "Overfull.RobustPartition.induced_robustNeighbors_card",
+        "robust_partition_induced_7": "Overfull.RobustPartition.induced_robust_iff",
+        "robust_partition_induced_8": "Overfull.RobustPartition.exists_bad_set_of_not_induced_robust",
+        "robust_partition_pieces_1": "Overfull.RobustPartition.unionList_nil",
+        "robust_partition_pieces_2": "Overfull.RobustPartition.unionList_cons",
+        "robust_partition_pieces_3": "Overfull.RobustPartition.unionList_append",
+        "robust_partition_pieces_4": "Overfull.RobustPartition.disjoint_unionList_right",
+        "robust_partition_pieces_5": "Overfull.RobustPartition.lower_mul_length_le_union_card",
+        "robust_partition_pieces_6": "Overfull.RobustPartition.pairwise_replace_shore",
+        "robust_partition_pieces_7": "Overfull.RobustPartition.unionList_replace_shore",
+        "robust_partition_pieces_8": "Overfull.RobustPartition.shoreList_append",
+        "robust_partition_pieces_9": "Overfull.RobustPartition.shoreList_cons",
+        "robust_partition_pieces_10": "Overfull.RobustPartition.shoreList_nil",
+        "robust_partition_pieces_11": "Overfull.RobustPartition.rank_append",
+        "robust_partition_pieces_12": "Overfull.RobustPartition.rank_ordinary_cons",
+        "robust_partition_pieces_13": "Overfull.RobustPartition.rank_bipartite_cons",
+        "robust_partition_pieces_14": "Overfull.RobustPartition.partition_replace_ordinary",
+        "robust_partition_pieces_15": "Overfull.RobustPartition.Piece.valid_mono",
+        "robust_partition_pieces_16": "Overfull.RobustPartition.valid_shore_lower",
+        "robust_partition_pieces_17": "Overfull.RobustPartition.valid_rank_bound",
+        "robust_partition_pieces_18": "Overfull.RobustPartition.valid_initial",
+        "robust_partition_refinement_1": "Overfull.RobustPartition.exists_terminal_partition",
+        "robust_partition_scales_1": "Overfull.RobustPartition.exists_scale_ladder",
+        "robust_partition_split_1": "Overfull.RobustPartition.split_of_nonexpanding_witness",
+        "robust_partition_split_2": "Overfull.RobustPartition.nonexpanding_block_split",
+        "robust_partition_theorem_1": "Overfull.RobustPartition.exists_uniform_partition",
+        "robust_partition_theorem_2": "Overfull.robust_partition",
+    })
+    # Public supporting results added in the uniform-localization continuation.
+    completed_results.update({
+        "continuation_BipartiteFactorization_BoundaryWeight_weight_nonneg": "Overfull.BipartiteFactorization.BoundaryWeight.weight_nonneg",
+        "continuation_BipartiteFactorization_BoundaryWeight_pool_incidence_sum_le": "Overfull.BipartiteFactorization.BoundaryWeight.pool_incidence_sum_le",
+        "continuation_BipartiteFactorization_BoundaryWeight_normalized_pool_sum_le_two": "Overfull.BipartiteFactorization.BoundaryWeight.normalized_pool_sum_le_two",
+        "continuation_BipartiteFactorization_BoundaryWeight_normalized_row_sum_le_one": "Overfull.BipartiteFactorization.BoundaryWeight.normalized_row_sum_le_one",
+        "continuation_BipartiteFactorization_BoundaryWeight_total_weight_le": "Overfull.BipartiteFactorization.BoundaryWeight.total_weight_le",
+        "continuation_BipartiteFactorization_BoundaryWeight_pool_contribution_le": "Overfull.BipartiteFactorization.BoundaryWeight.pool_contribution_le",
+        "continuation_BipartiteFactorization_BoundaryWeight_row_contribution_le": "Overfull.BipartiteFactorization.BoundaryWeight.row_contribution_le",
+        "continuation_BipartiteFactorization_BoundaryWeight_sum_weight_mono": "Overfull.BipartiteFactorization.BoundaryWeight.sum_weight_mono",
+        "continuation_BipartiteFactorization_BoundaryWeight_exists_light_cluster": "Overfull.BipartiteFactorization.BoundaryWeight.exists_light_cluster",
+        "continuation_BipartiteFactorization_BoundaryWeight_pool_boundary_loss_le_incidence": "Overfull.BipartiteFactorization.BoundaryWeight.pool_boundary_loss_le_incidence",
+        "continuation_BipartiteFactorization_BoundaryWeight_pool_boundary_loss": "Overfull.BipartiteFactorization.BoundaryWeight.pool_boundary_loss",
+        "continuation_BipartiteFactorization_BoundaryWeight_row_boundary_loss": "Overfull.BipartiteFactorization.BoundaryWeight.row_boundary_loss",
+        "continuation_BipartiteFactorization_SimultaneousBlocks_fineCoarseBlocks_of_realizes": "Overfull.BipartiteFactorization.SimultaneousBlocks.fineCoarseBlocks_of_realizes",
+        "continuation_BipartiteFactorization_UniformSelection_exists_uniform_fine_coarse_blocks": "Overfull.BipartiteFactorization.UniformSelection.exists_uniform_fine_coarse_blocks",
+        "continuation_BipartiteFactorization_IntegerSizes_evenPaletteSize_even": "Overfull.BipartiteFactorization.IntegerSizes.evenPaletteSize_even",
+        "continuation_BipartiteFactorization_IntegerSizes_evenPaletteSize_le": "Overfull.BipartiteFactorization.IntegerSizes.evenPaletteSize_le",
+        "continuation_BipartiteFactorization_IntegerSizes_evenPaletteSize_gt": "Overfull.BipartiteFactorization.IntegerSizes.evenPaletteSize_gt",
+        "continuation_BipartiteFactorization_IntegerSizes_evenPaletteSize_fraction": "Overfull.BipartiteFactorization.IntegerSizes.evenPaletteSize_fraction",
+        "continuation_BipartiteFactorization_IntegerSizes_exists_even_palette_threshold": "Overfull.BipartiteFactorization.IntegerSizes.exists_even_palette_threshold",
+        "continuation_BipartiteFactorization_IntegerSizes_sum_evenPaletteSize_le": "Overfull.BipartiteFactorization.IntegerSizes.sum_evenPaletteSize_le",
+        "continuation_BipartiteFactorization_IntegerSizes_exists_even_palette_sizes": "Overfull.BipartiteFactorization.IntegerSizes.exists_even_palette_sizes",
+        "continuation_BipartiteFactorization_IntegerSizes_exists_adjusted_cluster_size": "Overfull.BipartiteFactorization.IntegerSizes.exists_adjusted_cluster_size",
+        "continuation_BipartiteFactorization_LocalizationBounds_floor_cap_bounds": "Overfull.BipartiteFactorization.LocalizationBounds.floor_cap_bounds",
+        "continuation_BipartiteFactorization_LocalizationBounds_floor_cap_le_row": "Overfull.BipartiteFactorization.LocalizationBounds.floor_cap_le_row",
+        "continuation_BipartiteFactorization_LocalizationBounds_exists_uniform_floor_caps": "Overfull.BipartiteFactorization.LocalizationBounds.exists_uniform_floor_caps",
+        "continuation_BipartiteFactorization_LocalizationBounds_selection_weights": "Overfull.BipartiteFactorization.LocalizationBounds.selection_weights",
+        "continuation_BipartiteFactorization_LocalizationBounds_selection_weights_of_palette_bound": "Overfull.BipartiteFactorization.LocalizationBounds.selection_weights_of_palette_bound",
+        "continuation_BipartiteFactorization_LocalizationBounds_weighted_pool_loss": "Overfull.BipartiteFactorization.LocalizationBounds.weighted_pool_loss",
+        "continuation_BipartiteFactorization_LocalizationBounds_score_survives_pool_loss": "Overfull.BipartiteFactorization.LocalizationBounds.score_survives_pool_loss",
+        "continuation_BipartiteFactorization_LocalizationBounds_coarse_pool_loss": "Overfull.BipartiteFactorization.LocalizationBounds.coarse_pool_loss",
+        "continuation_BipartiteFactorization_LocalizationBounds_mem_boundaryCopies": "Overfull.BipartiteFactorization.LocalizationBounds.mem_boundaryCopies",
+        "continuation_BipartiteFactorization_LocalizationBounds_boundaryCopies_inter_row": "Overfull.BipartiteFactorization.LocalizationBounds.boundaryCopies_inter_row",
+        "continuation_BipartiteFactorization_LocalizationBounds_representative_boundary_loss": "Overfull.BipartiteFactorization.LocalizationBounds.representative_boundary_loss",
+        "continuation_BipartiteFactorization_LocalizationBounds_supply_card_le_remaining_add_losses": "Overfull.BipartiteFactorization.LocalizationBounds.supply_card_le_remaining_add_losses",
+        "continuation_BipartiteFactorization_LocalizationBounds_preferred_supply_after_losses": "Overfull.BipartiteFactorization.LocalizationBounds.preferred_supply_after_losses",
+        "continuation_BipartiteFactorization_LocalizationBounds_special_supply_after_boundary": "Overfull.BipartiteFactorization.LocalizationBounds.special_supply_after_boundary",
+        "continuation_BipartiteFactorization_LocalizationBounds_cappedScore_mono_caps": "Overfull.BipartiteFactorization.LocalizationBounds.cappedScore_mono_caps",
+        "continuation_BipartiteFactorization_LocalizationBounds_floor_score_le_palette_score": "Overfull.BipartiteFactorization.LocalizationBounds.floor_score_le_palette_score",
+        "continuation_BipartiteFactorization_LocalizationBounds_reserved_score_of_sampled_bounds": "Overfull.BipartiteFactorization.LocalizationBounds.reserved_score_of_sampled_bounds",
+        "continuation_BipartiteFactorization_LocalizationBounds_family_rowDemand_le": "Overfull.BipartiteFactorization.LocalizationBounds.family_rowDemand_le",
+        "continuation_BipartiteFactorization_LocalizationBounds_family_correctionDemand_le": "Overfull.BipartiteFactorization.LocalizationBounds.family_correctionDemand_le",
+        "continuation_BipartiteFactorization_LocalizationBounds_coarse_reserved_loss": "Overfull.BipartiteFactorization.LocalizationBounds.coarse_reserved_loss",
+        "continuation_BipartiteFactorization_LocalizationBounds_residual_coloring_reserves": "Overfull.BipartiteFactorization.LocalizationBounds.residual_coloring_reserves",
+        "continuation_BipartiteFactorization_PreferredBlocks_not_bad_iff_good": "Overfull.BipartiteFactorization.PreferredBlocks.not_bad_iff_good",
+        "continuation_BipartiteFactorization_PreferredBlocks_probability_bad_le": "Overfull.BipartiteFactorization.PreferredBlocks.probability_bad_le",
+        "continuation_BipartiteFactorization_PreferredBlocks_exists_preferred_blocks": "Overfull.BipartiteFactorization.PreferredBlocks.exists_preferred_blocks",
+        "continuation_BipartiteFactorization_PreferredBlocks_family_budget_le_scaled": "Overfull.BipartiteFactorization.PreferredBlocks.family_budget_le_scaled",
+        "continuation_BipartiteFactorization_PreferredBlocks_exists_uniform_preferred_budget": "Overfull.BipartiteFactorization.PreferredBlocks.exists_uniform_preferred_budget",
+        "continuation_BipartiteFactorization_PreferredBlocks_exists_uniform_preferred_blocks": "Overfull.BipartiteFactorization.PreferredBlocks.exists_uniform_preferred_blocks",
+        "continuation_BipartiteFactorization_UniformSelection_exists_uniform_rounded_palettes": "Overfull.BipartiteFactorization.UniformSelection.exists_uniform_rounded_palettes",
+        "continuation_BipartiteFactorization_preferred_row_reserve": "Overfull.BipartiteFactorization.preferred_row_reserve",
+        "continuation_BipartiteFactorization_exists_preferred_supply_from_row_kind": "Overfull.BipartiteFactorization.exists_preferred_supply_from_row_kind",
+        "continuation_BipartiteFactorization_paletteBase_avoids_boundary": "Overfull.BipartiteFactorization.paletteBase_avoids_boundary",
+        "continuation_BipartiteFactorization_PaletteGeometry_zero_correction_conditions": "Overfull.BipartiteFactorization.PaletteGeometry.zero_correction_conditions",
+        "continuation_BipartiteFactorization_exists_selected_palette_without_correction": "Overfull.BipartiteFactorization.exists_selected_palette_without_correction",
+        "continuation_BipartiteFactorization_reserved_palette_conditions_of_samples": "Overfull.BipartiteFactorization.reserved_palette_conditions_of_samples",
+        "continuation_BipartiteFactorization_sampled_coloring_reserves": "Overfull.BipartiteFactorization.sampled_coloring_reserves",
+        "continuation_BipartiteFactorization_exists_colored_sampled_palette": "Overfull.BipartiteFactorization.exists_colored_sampled_palette",
+        "continuation_BipartiteFactorization_UniformBudgets_block_budget_le_uniform": "Overfull.BipartiteFactorization.UniformBudgets.block_budget_le_uniform",
+        "continuation_BipartiteFactorization_UniformBudgets_palette_budget_le_scaled": "Overfull.BipartiteFactorization.UniformBudgets.palette_budget_le_scaled",
+        "continuation_BipartiteFactorization_UniformBudgets_block_budget_le_scaled": "Overfull.BipartiteFactorization.UniformBudgets.block_budget_le_scaled",
+        "continuation_BipartiteFactorization_UniformBudgets_palette_family_budget_le_scaled": "Overfull.BipartiteFactorization.UniformBudgets.palette_family_budget_le_scaled",
+        "continuation_BipartiteFactorization_UniformBudgets_block_family_budget_le_scaled": "Overfull.BipartiteFactorization.UniformBudgets.block_family_budget_le_scaled",
+        "continuation_BipartiteFactorization_UniformBudgets_exists_uniform_palette_budget": "Overfull.BipartiteFactorization.UniformBudgets.exists_uniform_palette_budget",
+        "continuation_BipartiteFactorization_UniformBudgets_exists_uniform_block_budget": "Overfull.BipartiteFactorization.UniformBudgets.exists_uniform_block_budget",
+        "continuation_BipartiteFactorization_UniformSelection_color_copy_bound": "Overfull.BipartiteFactorization.UniformSelection.color_copy_bound",
+        "continuation_BipartiteFactorization_UniformSelection_exists_uniform_palettes": "Overfull.BipartiteFactorization.UniformSelection.exists_uniform_palettes",
+        "continuation_BipartiteFactorization_UniformSelection_exists_uniform_blocks": "Overfull.BipartiteFactorization.UniformSelection.exists_uniform_blocks",
+        "continuation_PartitionPermutation_exists_equal_positions": "Overfull.PartitionPermutation.exists_equal_positions",
+        "continuation_PartitionPermutation_positionFraction_lower": "Overfull.PartitionPermutation.positionFraction_lower",
+        "continuation_PartitionPermutation_combined_coarse_union": "Overfull.PartitionPermutation.combined_coarse_union",
+        "continuation_PartitionPermutation_fine_subset_coarse": "Overfull.PartitionPermutation.fine_subset_coarse",
+        "continuation_PartitionPermutation_coarsePositions_disjoint": "Overfull.PartitionPermutation.coarsePositions_disjoint",
+        "continuation_PartitionPermutation_coarsePositions_cover": "Overfull.PartitionPermutation.coarsePositions_cover",
+        "continuation_PartitionPermutation_combined_fine_cover": "Overfull.PartitionPermutation.combined_fine_cover",
+        "continuation_PartitionPermutation_combined_coarse_cover": "Overfull.PartitionPermutation.combined_coarse_cover",
+        "continuation_PartitionPermutation_coarsePositions_card": "Overfull.PartitionPermutation.coarsePositions_card",
+        "continuation_PartitionPermutation_exists_uniform_fine_coarse_positions": "Overfull.PartitionPermutation.exists_uniform_fine_coarse_positions",
+        "continuation_RobustPartition_bad_le_twice_edge_error": "Overfull.RobustPartition.bad_le_twice_edge_error",
+        "continuation_RobustPartition_offBad_mul_threshold_le": "Overfull.RobustPartition.offBad_mul_threshold_le",
+        "continuation_RobustPartition_opposite_degree_of_not_offBad": "Overfull.RobustPartition.opposite_degree_of_not_offBad",
+        "continuation_RobustPartition_exists_opposite_degree_exceptional_set": "Overfull.RobustPartition.exists_opposite_degree_exceptional_set",
+        "continuation_RobustPartition_error_lt_sqrt": "Overfull.RobustPartition.error_lt_sqrt",
+        "continuation_RobustPartition_internal_neighbors_add_one_le": "Overfull.RobustPartition.internal_neighbors_add_one_le",
+        "continuation_RobustPartition_PartitionConclusion_ordinary_degree_size": "Overfull.RobustPartition.PartitionConclusion.ordinary_degree_size",
+        "continuation_RobustPartition_PartitionConclusion_bipartite_sizes": "Overfull.RobustPartition.PartitionConclusion.bipartite_sizes",
+        "continuation_RobustPartition_PartitionConclusion_bipartite_degree_exceptional_set": "Overfull.RobustPartition.PartitionConclusion.bipartite_degree_exceptional_set",
+        "continuation_RobustPartition_cubic_error_bounds": "Overfull.RobustPartition.cubic_error_bounds",
+        "continuation_RobustPartition_PartitionConclusion_weighted_count_lt_four": "Overfull.RobustPartition.PartitionConclusion.weighted_count_lt_four",
+        "continuation_RobustPartition_IsPartition_rank_pos": "Overfull.RobustPartition.IsPartition.rank_pos",
+        "continuation_RobustPartition_PartitionConclusion_five_cases": "Overfull.RobustPartition.PartitionConclusion.five_cases",
+        "continuation_RobustPartition_PartitionConclusion_ordinary_transferred_bounds": "Overfull.RobustPartition.PartitionConclusion.ordinary_transferred_bounds",
+        "continuation_RobustPartition_PartitionConclusion_bipartite_transferred_bounds": "Overfull.RobustPartition.PartitionConclusion.bipartite_transferred_bounds",
+        "continuation_RobustPartition_PartitionConclusion_shore_transferred_lower": "Overfull.RobustPartition.PartitionConclusion.shore_transferred_lower",
+        "continuation_RobustPartition_three_shore_card_upper": "Overfull.RobustPartition.three_shore_card_upper",
+        "continuation_RobustPartition_PartitionConclusion_three_shore_transferred_bounds": "Overfull.RobustPartition.PartitionConclusion.three_shore_transferred_bounds",
+        "continuation_RobustPartition_lowDegreeVertices_card_lt": "Overfull.RobustPartition.lowDegreeVertices_card_lt",
+        "continuation_RobustPartition_surviving_card_add_deleted": "Overfull.RobustPartition.surviving_card_add_deleted",
+        "continuation_RobustPartition_surviving_card_lower": "Overfull.RobustPartition.surviving_card_lower",
+        "continuation_RobustPartition_surviving_original_degree_lower": "Overfull.RobustPartition.surviving_original_degree_lower",
+        "continuation_RobustPartition_surviving_degree_bounds": "Overfull.RobustPartition.surviving_degree_bounds",
+        "continuation_RobustPartition_exists_deletion_scale": "Overfull.RobustPartition.exists_deletion_scale",
+        "continuation_RobustPartition_exists_uniform_small_deficiency_partition": "Overfull.RobustPartition.exists_uniform_small_deficiency_partition",
+        "continuation_RobustPartition_surviving_card_le": "Overfull.RobustPartition.surviving_card_le",
+        "continuation_RobustPartition_SmallDeficiencyPartition_ordinary_bounds": "Overfull.RobustPartition.SmallDeficiencyPartition.ordinary_bounds",
+        "continuation_RobustPartition_SmallDeficiencyPartition_bipartite_bounds": "Overfull.RobustPartition.SmallDeficiencyPartition.bipartite_bounds",
+        "continuation_RobustPartition_SmallDeficiencyPartition_three_shore_bounds": "Overfull.RobustPartition.SmallDeficiencyPartition.three_shore_bounds",
+        "continuation_RobustPartition_total_deficiency_lt_of_average_degree": "Overfull.RobustPartition.total_deficiency_lt_of_average_degree",
+        "continuation_RobustPartition_exists_uniform_partition_of_average_degree": "Overfull.RobustPartition.exists_uniform_partition_of_average_degree"
+})
+
+    # BEGIN RECOVERED MAIN CHECKED RESULTS
+    completed_results.update({
+        "pattern_fixed_compression": "Overfull.Compression.exists_compressed_matching_fixed_code",
+        "pattern_encoding": "Overfull.CircuitPatterns.exists_encoding",
+        "pattern_count": "Overfull.CircuitPatterns.card_pattern_le",
+        "pattern_distribution": "Overfull.CircuitPatterns.exists_encoded_distribution",
+        "pattern_pair_capacity": "Overfull.CircuitPatterns.EncodedDistribution.pair_capacity",
+        "pattern_cut_capacity": "Overfull.CircuitPatterns.EncodedDistribution.whole_union_capacity",
+        "pattern_positive_odd_cut": "Overfull.CircuitPatterns.EncodedDistribution.positive_odd_cut",
+        "pattern_selection": "Overfull.CircuitPatterns.exists_pattern_selection",
+        "pattern_copy_enumeration": "Overfull.CircuitPatterns.enumeratedPattern_count",
+        "pattern_actual_boundary_realization": "Overfull.CircuitPatterns.exists_realized_boundary_family_of_slack",
+        "pattern_boundary_completion": "Overfull.CircuitPatterns.exists_boundary_completion",
+        "pattern_selected_completion": "Overfull.CircuitPatterns.exists_completed_pattern_family",
+        "pattern_actual_boundary_counts": "Overfull.CircuitPatterns.CompletedPatternFamily.boundary_counts",
+        "pattern_even_cut_dichotomy": "Overfull.CircuitPatterns.proposed_cut_dichotomy",
+        "pattern_actual_residual_safety": "Overfull.CircuitPatterns.no_overfull_after_pattern_deletions",
+        "pattern_all_prefixes_safe": "Overfull.CircuitPatterns.BoundaryCompletion.safe_selected_prefixes",
+        "pattern_reserved_pool": "Overfull.CircuitPatterns.reserved_boundaryPool_card",
+        "pattern_reserved_neighbors": "Overfull.CircuitPatterns.survivingPool_exceptional_card_le_neighbors",
+        "pattern_reserved_joining_edges": "Overfull.CircuitPatterns.survivingPool_joining_card_le",
+        "pattern_forest_cut_supply": "Overfull.CircuitPatterns.forest_supply_of_pair_supply",
+        "pattern_core_assignment": "Overfull.CircuitPatterns.Encodes.exists_core_assignment",
+        "pattern_enlarged_parity": "Overfull.CircuitPatterns.Encodes.enlarged_part_parity",
+        "pattern_four_odd_forest": "Overfull.CircuitPatterns.Encodes.forestShape_of_four_odd_enlarged",
+        "pattern_odd_forest_classification": "Overfull.CircuitPatterns.odd_leafForest_classification",
+        "pattern_uniform_parameters": "Overfull.CircuitPatterns.exists_pattern_parameters",
+        "frequent_boundary_pattern": "Overfull.circuit_frequent_boundary_pattern",
+    })
+    # END RECOVERED MAIN CHECKED RESULTS
+
+    # The original-hypothesis theorem and its constructive branches are
+    # required explicitly; compiling supporting modules alone cannot pass.
+    completed_results.update({
+        "four_odd_complete_decomposition": "Overfull.FourOdd.four_odd_parts_decomposition",
+        "four_odd_complete_real_bound": "Overfull.FourOdd.four_odd_decomposition_real",
+        "four_odd_complete_integer_bound": "Overfull.FourOdd.four_odd_decomposition_nat",
+        "four_odd_actual_surplus_circuits": "Overfull.FourOdd.Decomposition.surplus_circuit",
+        "four_odd_complete_matching_case": "Overfull.FourOdd.exists_matching_decomposition",
+        "four_odd_complete_star_case": "Overfull.FourOdd.exists_star_decomposition",
+        "four_odd_arbitrary_label_forest": "Overfull.FourOdd.exists_joining_decomposition",
+    })
+
+    completed_results.update({
+        "boundary_extension_complete": "Overfull.boundary_extension",
+        "one_apex_complete_factorization": "Overfull.OneCore.exists_uniform_one_apex_factorization",
+        "two_apex_complete_factorization": "Overfull.TwoApexFactorization.exists_uniform_two_apex_factorization",
+        "one_apex_uniform_supplied_reduction": "Overfull.OneCore.exists_uniform_two_apex_reduction",
+        "bernoulli_variance_sensitive_bounded_differences": "Overfull.BernoulliDifferences.exponential_moment_le",
+        "bernoulli_two_sided_tail": "Overfull.BernoulliDifferences.two_sided_tail",
+    })
+
+    audited_names = {item["name"] for item in declarations}
+    # BEGIN RECOVERED MAIN PROOF PRESERVATION CHECK
+    recovered_source = json.loads((ROOT / "docs/source-recovery.json").read_text())
+    recovered_names = {item["destination_name"] for item in recovered_source["proof_declaration_map"]}
+    if missing := sorted(recovered_names - audited_names):
+        raise SystemExit("Recovered main proof declarations absent from the fresh audit: " + ", ".join(missing))
+    # END RECOVERED MAIN PROOF PRESERVATION CHECK
+    if missing := sorted(set(completed_results.values()) - audited_names):
+        raise SystemExit("Completed results absent from the axiom audit: " + ", ".join(missing))
+    if missing := sorted(set(four_odd_source["required_proof_declarations"]) - audited_names):
+        raise SystemExit("Four-odd mapped proof declarations absent from the audit: " + ", ".join(missing))
+    if missing := sorted(residual_public_names - audited_names):
+        raise SystemExit("Residual-factorization public proofs absent from the audit: " + ", ".join(missing))
+
+    if missing := sorted(set(boundary_source["required_proof_declarations"]) - audited_names):
+        raise SystemExit("Full boundary-extension mapped proofs absent from the audit: " + ", ".join(missing))
+
+    audited_modules = {item["name"]: item["module"] for item in declarations}
+    for key, (_source, _modules, public_modules) in extension_maps.items():
+        if missing := sorted(set(public_modules) - audited_names):
+            raise SystemExit(f"Mapped {key} public proofs absent from audit: " + ", ".join(missing))
+        if mismatched := sorted(name for name, module in public_modules.items()
+                                if audited_modules[name] != module):
+            raise SystemExit(f"Mapped {key} public proofs audited in unexpected modules: " + ", ".join(mismatched))
+        completed_results.update({f"{key}_closure_{i}": name
+                                  for i, name in enumerate(sorted(public_modules), 1)})
+
+    coverage = json.loads((ROOT / "docs/coverage.json").read_text())
+    if (coverage["numbered_assertion_count"] != NUMBERED_ASSERTION_COUNT
+            or len(coverage["numbered_assertions"]) != NUMBERED_ASSERTION_COUNT):
+        raise SystemExit("The manuscript assertion inventory is inconsistent.")
+    component_catalog = coverage["checked_component_catalog"]
+    component_ids = {component["id"] for component in component_catalog}
+    if len(component_ids) != len(component_catalog):
+        raise SystemExit("The checked component catalog has duplicate identifiers.")
+    for assertion in coverage["numbered_assertions"]:
+        if missing := sorted(set(assertion.get("checked_components", [])) - component_ids):
+            raise SystemExit(f"Assertion {assertion['number']} references missing components: {missing}")
+    for component in component_catalog:
+        if missing := sorted(set(component["lean_declarations"]) - audited_names):
+            raise SystemExit(
+                f"A checked component lacks audited declarations ({component['id']}): "
+                + ", ".join(missing)
+            )
+    completed_assertions = [a for a in coverage["numbered_assertions"]
+                            if a["full_assertion_verified"]]
+    if len(completed_assertions) != coverage["fully_verified_numbered_assertion_count"]:
+        raise SystemExit("The coverage assertion count is inconsistent.")
+    if len(completed_assertions) != COMPLETED_NUMBERED_ASSERTION_COUNT:
+        raise SystemExit("The completed assertion count differs from the reviewed scope.")
+    manuscript_source = json.loads((ROOT / "docs/manuscript-source.json").read_text())
+    if manuscript_source["fully_verified_numbered_assertions"] != len(completed_assertions):
+        raise SystemExit("The manuscript source record has an inconsistent completed count.")
+    for assertion in completed_assertions:
+        names = assertion.get("lean_theorems", [])
+        if not names or not set(names) <= audited_names:
+            raise SystemExit(f"A completed assertion lacks audited proof declarations: {assertion['number']}")
+    for number in ("2.24", "4.4", "4.5", "4.16", "6.1", "6.2", "6.3"):
+        assertion = next(a for a in coverage["numbered_assertions"] if a["number"] == number)
+        if assertion["full_assertion_verified"]:
+            raise SystemExit(f"Assertion {number} is not completed by the registered supporting results.")
+    for source_assertion in few_source["source_assertions"]:
+        assertion = next(a for a in coverage["numbered_assertions"]
+                         if a["number"] == source_assertion["number"])
+        if assertion["statement_sha256"] != source_assertion["statement_sha256"]:
+            raise SystemExit("The few-exception continuation differs from the pinned source statement.")
+    bounded_assertion = next(a for a in coverage["numbered_assertions"] if a["number"] == "4.6")
+    bounded_source_assertion = next(a for a in few_source["source_assertions"] if a["number"] == "4.6")
+    if (not bounded_assertion["full_assertion_verified"]
+            or bounded_assertion["status"] != "fully_verified"
+            or bounded_assertion.get("lean_theorems") != terminal_source["public_theorems"]
+            or not set(bounded_assertion["lean_theorems"]) <= audited_names
+            or bounded_assertion["statement_sha256"] != terminal_source["statement_sha256"]
+            or bounded_assertion["statement_sha256"] != bounded_source_assertion["statement_sha256"]):
+        raise SystemExit("Full bounded-input factorization is not mapped to the exact complete Corollary 4.6.")
+    ordinary_assertion = next(a for a in coverage["numbered_assertions"] if a["number"] == "4.2")
+    if (not ordinary_assertion["full_assertion_verified"]
+            or not {"Overfull.ordinary_core_factorization", "Overfull.ordinary_core_one_factorization"}
+                <= set(ordinary_assertion.get("lean_theorems", []))
+            or ordinary_assertion["statement_sha256"] != ordinary_source["statement_sha256"]):
+        raise SystemExit("Full ordinary factorization is not mapped to the complete pinned Lemma 4.2.")
+    boundary_assertion = next(a for a in coverage["numbered_assertions"] if a["number"] == "4.14")
+    if (not boundary_assertion["full_assertion_verified"]
+            or "Overfull.boundary_extension" not in boundary_assertion.get("lean_theorems", [])
+            or boundary_assertion["statement_sha256"] != boundary_source["statement_sha256"]):
+        raise SystemExit("The full boundary-extension proof is not mapped to the pinned complete assertion.")
+    if coverage["main_theorem_verified"]:
+        raise SystemExit("The main theorem is not proved by this version of the development.")
+
+    sources = [ROOT / "Overfull.lean", ROOT / "Audit.lean"]
+    sources += sorted((ROOT / "Overfull").rglob("*.lean"))
+    four_odd_declarations = [
+        {**item, "source_path": four_odd_modules[item["module"]]["path"],
+         "source_sha256": four_odd_modules[item["module"]]["sha256"]}
+        for item in sorted(declarations, key=lambda item: item["name"])
+        if item["module"] in four_odd_modules
+    ]
+    if {item["module"] for item in four_odd_declarations} != set(four_odd_modules):
+        raise SystemExit("The complete four-odd proof mapping omits a reviewed module.")
+    four_odd_map_path = OUTPUT / "four-odd-declarations.json"
+    four_odd_map_path.write_text(json.dumps({
+        "schema_version": 1,
+        "manuscript_number": "4.15",
+        "statement_sha256": four_odd_source["statement_sha256"],
+        "module_count": len(four_odd_modules),
+        "verified_declaration_count": len(four_odd_declarations),
+        "includes_private_and_generated_proofs": True,
+        "proof_declaration_map": four_odd_declarations,
+    }, indent=2) + "\n", encoding="utf-8")
+    residual_declarations = [
+        {**item, "source_path": residual_modules[item["module"]]["path"],
+         "source_sha256": residual_modules[item["module"]]["sha256"]}
+        for item in sorted(declarations, key=lambda item: item["name"])
+        if item["module"] in residual_modules
+    ]
+    if {item["module"] for item in residual_declarations} != set(residual_modules):
+        raise SystemExit("The residual-factorization proof mapping omits a reviewed module.")
+    residual_map_path = OUTPUT / "residual-factorization-declarations.json"
+    residual_map_path.write_text(json.dumps({
+        "schema_version": 1,
+        "kind": "supporting_continuation",
+        "numbered_assertions_completed": 0,
+        "module_count": len(residual_modules),
+        "public_theorem_count": len(residual_public_names),
+        "verified_declaration_count": len(residual_declarations),
+        "includes_private_and_generated_proofs": True,
+        "proof_declaration_map": residual_declarations,
+    }, indent=2) + "\n", encoding="utf-8")
+    boundary_declarations = [
+        {**item, "source_path": boundary_modules[item["module"]]["path"],
+         "source_sha256": boundary_modules[item["module"]]["sha256"]}
+        for item in sorted(declarations, key=lambda item: item["name"])
+        if item["module"] in boundary_modules
+    ]
+    if {item["module"] for item in boundary_declarations} != set(boundary_modules):
+        raise SystemExit("The complete boundary-extension proof mapping omits a reviewed module.")
+    boundary_map_path = OUTPUT / "boundary-extension-full-declarations.json"
+    boundary_map_path.write_text(json.dumps({
+        "schema_version": 1,
+        "manuscript_number": "4.14",
+        "statement_sha256": boundary_source["statement_sha256"],
+        "module_count": len(boundary_modules),
+        "verified_declaration_count": len(boundary_declarations),
+        "includes_private_and_generated_proofs": True,
+        "proof_declaration_map": boundary_declarations,
+    }, indent=2) + "\n", encoding="utf-8")
+    extension_evidence = {}
+    for key, (source, source_modules, public_modules) in extension_maps.items():
+        mapped = [
+            {**item, "source_path": source_modules[item["module"]]["path"],
+             "source_sha256": source_modules[item["module"]]["sha256"]}
+            for item in sorted(declarations, key=lambda item: item["name"])
+            if item["module"] in source_modules
+        ]
+        if {item["module"] for item in mapped} != set(source_modules):
+            raise SystemExit(f"The {key} declaration mapping omits a reviewed module.")
+        basename = {"ordinary": "ordinary-factorization-full", "few": "few-exception",
+                    "circuit": "three-label-circuit", "joining": "joining-circuit",
+                    "assigned": "assigned-part", "native_pattern": "native-pattern",
+                    "native_reserve": "native-reserve",
+                    "residual_palette": "residual-palette",
+                    "exceptional_palette": "exceptional-palette",
+                    "weighted_palette": "weighted-palette",
+                    "native_star": "native-star",
+                    "native_integration": "native-integration",
+                    "native_terminal": "native-terminal",
+                    "three_core_terminal": "three-core-terminal"}[key]
+        map_path = OUTPUT / f"{basename}-declarations.json"
+        map_path.write_text(json.dumps({
+            "schema_version": 1,
+            "kind": source["kind"],
+            "numbered_assertions_completed": source["numbered_assertions_completed"],
+            "manuscript_number": source.get("manuscript_number"),
+            "statement_sha256": source.get("statement_sha256"),
+            "module_count": len(source_modules),
+            "public_theorem_count": len(public_modules),
+            "verified_declaration_count": len(mapped),
+            "includes_private_and_generated_proofs": True,
+            "proof_declaration_map": mapped,
+        }, indent=2) + "\n", encoding="utf-8")
+        extension_evidence[key] = {
+            "path": str(map_path.relative_to(ROOT)),
+            "sha256": hashlib.sha256(map_path.read_bytes()).hexdigest(),
+            "module_count": len(source_modules),
+            "public_theorem_count": len(public_modules),
+            "verified_declaration_count": len(mapped),
+            "numbered_assertions_completed": source["numbered_assertions_completed"],
+        }
+    results = {
+        "status": "partial_formalization",
+        "main_theorem_verified": False,
+        "full_sharpness_proposition_verified": True,
+        "density_corollary_verified": True,
+        "completed_results": completed_results,
+        "lean_build_passed": True,
+        "axiom_audit_passed": True,
+        "lean_version": version,
+        "toolchain": toolchain,
+        "mathlib_revision": MATHLIB_REVISION,
+        "dependency_source_revisions": dependency_revisions,
+        "vizing_source": json.loads((ROOT / "docs/vizing-source.json").read_text()),
+        "matching_polytope_source": json.loads((ROOT / "docs/bmatching-source.json").read_text()),
+        "circulation_source": json.loads((ROOT / "docs/circulation-source.json").read_text()),
+        "allowed_logical_axioms": ["propext", "Classical.choice", "Quot.sound"],
+        "verified_declaration_count": len(declarations),
+        "declaration_count_includes_generated_support_lemmas": True,
+        "verified_declarations": sorted(declarations, key=lambda item: item["name"]),
+        "imported_project_modules": sorted(imported),
+        "audited_external_modules": sorted(external_imports),
+        "fully_verified_numbered_assertion_count": len(completed_assertions),
+        "fully_verified_numbered_assertions": [a["number"] for a in completed_assertions],
+        "four_odd_declaration_map": {
+            "path": str(four_odd_map_path.relative_to(ROOT)),
+            "sha256": hashlib.sha256(four_odd_map_path.read_bytes()).hexdigest(),
+            "verified_declaration_count": len(four_odd_declarations),
+            "module_count": len(four_odd_modules),
+        },
+        "residual_factorization_declaration_map": {
+            "path": str(residual_map_path.relative_to(ROOT)),
+            "sha256": hashlib.sha256(residual_map_path.read_bytes()).hexdigest(),
+            "verified_declaration_count": len(residual_declarations),
+            "public_theorem_count": len(residual_public_names),
+            "module_count": len(residual_modules),
+            "numbered_assertions_completed": 0,
+        },
+        "boundary_extension_declaration_map": {
+            "path": str(boundary_map_path.relative_to(ROOT)),
+            "sha256": hashlib.sha256(boundary_map_path.read_bytes()).hexdigest(),
+            "verified_declaration_count": len(boundary_declarations),
+            "module_count": len(boundary_modules),
+            "manuscript_number": "4.14",
+        },
+        "ordinary_factorization_declaration_map": extension_evidence["ordinary"],
+        "few_exception_declaration_map": extension_evidence["few"],
+        "three_label_circuit_declaration_map": extension_evidence["circuit"],
+        "joining_circuit_declaration_map": extension_evidence["joining"],
+        "assigned_part_declaration_map": extension_evidence["assigned"],
+        "native_pattern_declaration_map": extension_evidence["native_pattern"],
+        "native_reserve_declaration_map": extension_evidence["native_reserve"],
+        "residual_palette_declaration_map": extension_evidence["residual_palette"],
+        "exceptional_palette_declaration_map": extension_evidence["exceptional_palette"],
+        "weighted_palette_declaration_map": extension_evidence["weighted_palette"],
+        "native_star_declaration_map": extension_evidence["native_star"],
+        "native_integration_declaration_map": extension_evidence["native_integration"],
+        "native_terminal_declaration_map": extension_evidence["native_terminal"],
+        "three_core_terminal_declaration_map": extension_evidence["three_core_terminal"],
+        "checkpoint_reconstruction": {
+            "original_checkpoint": reconstruction["original_checkpoint"],
+            "original_tree_reproduced": False,
+            "recovered_original_source_count": len(reconstruction["recovered_original_sources"]),
+            "recreated_source_count": len(reconstruction["recreated_sources"]),
+            "fresh_build_and_audit": True,
+        },
+        "source_sha256": {
+            str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
+            for path in sources
+        },
+        "verification_input_sha256": {
+            str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
+            for path in sorted([
+                ROOT / "lean-toolchain", ROOT / "lakefile.toml", ROOT / "lake-manifest.json",
+                ROOT / "README.md", ROOT / ".github/workflows/lean.yml",
+                *(ROOT / "scripts").glob("*.py"), *(ROOT / "docs").glob("*.json"),
+                *(ROOT / "docs").glob("*.md"), *(ROOT / "patches").glob("*.patch"),
+                ROOT / "THIRD_PARTY_NOTICES.txt", ROOT / "CIRCULATION_NOTICE.txt",
+                ROOT / "LICENSE_BMATCHING.txt",
+            ])
+        },
+        "scope": coverage["scope"],
+    }
+    results_path.write_text(json.dumps(results, indent=2) + "\n", encoding="utf-8")
+    print(f"Checked {len(declarations)} project declarations; full manuscript status: unverified.")
+
+
+if __name__ == "__main__":
+    main()

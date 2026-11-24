@@ -1,0 +1,28 @@
+✔ [3503/3505] Built Overfull.Terminal.CentralMatchings (2.5s)
+✔ [3504/3505] Built Overfull.Terminal.OddGluing (2.8s)
+✖ [3505/3505] Building Overfull.Terminal.OddFactorization (28s)
+trace: .> LEAN_PATH=/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/5d2e6f7b5492/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean /workspace/scratch/5d2e6f7b5492/lean-runtime/lean-4.24.0-linux/bin/lean /workspace/scratch/7dae4c9bb5a1/overfull-three-core/Overfull/Terminal/OddFactorization.lean -o /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean/Overfull/Terminal/OddFactorization.olean -i /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/lib/lean/Overfull/Terminal/OddFactorization.ilean -c /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/ir/Overfull/Terminal/OddFactorization.c --setup /workspace/scratch/7dae4c9bb5a1/overfull-three-core/.lake/build/ir/Overfull/Terminal/OddFactorization.setup.json --json
+error: Overfull/Terminal/OddFactorization.lean:73:4: Application type mismatch: The argument
+  centralCore_robust C₀ A ν τ hrobU
+has type
+  @IsRobustExpander { x // x ∈ centralCoreVertices U } (Finset.Subtype.fintype (centralCoreVertices U))
+    (fun a b =>
+      @Subtype.instDecidableEq (CentralVertex U) (Membership.mem (centralCoreVertices U))
+        (fun a b => instDecidableEqSum a b) a b)
+    (centralCore C₀ A).graph (fun a b => centralCoreAdjDecidable C₀ A a b) ν τ
+but is expected to have type
+  @IsRobustExpander { x // x ∈ centralCoreVertices U } (Finset.Subtype.fintype (centralCoreVertices U))
+    (fun a b =>
+      @Subtype.instDecidableEq (CentralVertex U) (Membership.mem (centralCoreVertices U))
+        (fun a b => propDecidable (a = b)) a b)
+    (centralCore C₀ A).graph (fun a b => propDecidable ((centralCore C₀ A).graph.Adj a b)) ν τ
+in the application
+  hcentral (CentralVertex U) (CentralEdge G U A) (centralGraph G U A) (centralCoreVertices U) (centralCore C₀ A) k a
+    ?m.573 (central_even_order U hU) ?m.575
+    (central_regular G U A B k hUA hUB hAB hcover (fun v x => hregular v) hcutA hcutB) ?m.581
+    (centralCore_robust C₀ A ν τ hrobU)
+error: Overfull/Terminal/OddFactorization.lean:70:34: `simp` made no progress
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.Terminal.OddFactorization
+error: build failed

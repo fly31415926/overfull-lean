@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation_source_mapping",
+  "status": "source_mapped_and_semantically_reviewed",
+  "base_commit": "c3dfd8245022351bcb82f42833e8a17d1d60f207",
+  "date": "2026-11-22",
+  "numbered_assertions_completed": 0,
+  "fully_verified_numbered_assertion_count": 47,
+  "complete_source_branches": [
+    "4.6: one core and at most three exceptional vertices"
+  ],
+  "pinned_manuscript": {
+    "filename": "Four_Robust_Component_Cases_2026-11-20.tex",
+    "sha256": "4605bdf3ee5b241a7b52dd59d08537fa0a439335cd6f119394cddd4609efffc1"
+  },
+  "inspected_manuscript": {
+    "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+    "sha256": "ae6adf685e38637f2a1f18f83e63d0c3d92898b77749c9c8da795447c49ce064",
+    "numbered_inventory_rebased": false
+  },
+  "source_assertions": [
+    {
+      "number": "4.4",
+      "label": "two:short:fixed-pattern",
+      "statement_sha256": "653e8b0aa8fa12f4368816ce9d9ce8b9d84a49015bce07638fd9c49e94523c2b",
+      "pinned_statement_source_lines": [
+        2386,
+        2398
+      ],
+      "inspected_statement_source_lines": [
+        2534,
+        2546
+      ],
+      "matches_pinned_statement_sha256": true,
+      "full_assertion_verified": false,
+      "scope": "Terminal factorization stage under its constructed incidence hypotheses; preceding construction remains incomplete."
+    },
+    {
+      "number": "4.6",
+      "label": "three:lem:bounded-input",
+      "statement_sha256": "86700ed56e6cd9be513339e7c06b5af19d1d8cbe074fed3985ef21e5c9ad6e26",
+      "pinned_statement_source_lines": [
+        2600,
+        2608
+      ],
+      "inspected_statement_source_lines": [
+        2748,
+        2756
+      ],
+      "matches_pinned_statement_sha256": true,
+      "full_assertion_verified": false,
+      "scope": "Complete one-core branch; two-core branch remains incomplete."
+    }
+  ],
+  "module_count": 6,
+  "public_theorem_count": 27,
+  "modules": [
+    {
+      "module": "Overfull.OrdinaryFactorization.Parity",
+      "path": "Overfull/OrdinaryFactorization/Parity.lean",
+      "sha256": "f231312af9aa6e9f08f4bd8faeeba81253bfec18ef37df83861898f136dde497",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.OrdinaryFactorization.exists_even_core_move",
+          "source_line": 20
+        },
+        {
+          "name": "Overfull.OrdinaryFactorization.exists_uniform_factorization_any_core_parity",
+          "source_line": 35
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalComplement.Coloring",
+      "path": "Overfull/TerminalComplement/Coloring.lean",
+      "sha256": "3bc27990ca1eca84e7e762b4ab50ad214a73b0677947409623f3eb3b360b921e",
+      "public_theorem_count": 4,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalComplement.colorable_one_apex",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.TerminalComplement.core_colorable_one_apex",
+          "source_line": 63
+        },
+        {
+          "name": "Overfull.TerminalComplement.core_colorable",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.TerminalComplement.moved_core_colorable_one_apex",
+          "source_line": 89
+        }
+      ]
+    },
+    {
+      "module": "Overfull.TerminalComplement.Factorization",
+      "path": "Overfull/TerminalComplement/Factorization.lean",
+      "sha256": "34975875d91cb0280ee10297d7b5eb0b86e352b4986c2cb0eb1803ef7c29d48f",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.TerminalComplement.exists_uniform_terminal_factorization",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.TerminalComplement.exists_uniform_terminal_one_factorization",
+          "source_line": 64
+        }
+      ]
+    },
+    {
+      "module": "Overfull.FewExceptions.Complement",
+      "path": "Overfull/FewExceptions/Complement.lean",
+      "sha256": "71683b81de811824352b8b631a6aaba748ca69ebf8340b603e97b99f0da6f976",
+      "public_theorem_count": 11,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FewExceptions.internalAway_eq",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.FewExceptions.degreeAway_le_degree",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.FewExceptions.restriction_internal_card_le",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.FewExceptions.restriction_internal_away_card_le",
+          "source_line": 50
+        },
+        {
+          "name": "Overfull.FewExceptions.internal_incidence_eq_edgesTo",
+          "source_line": 65
+        },
+        {
+          "name": "Overfull.FewExceptions.degreeAway_le_internal_away_add",
+          "source_line": 79
+        },
+        {
+          "name": "Overfull.FewExceptions.internal_compl_eq_univ",
+          "source_line": 98
+        },
+        {
+          "name": "Overfull.FewExceptions.complement_colorable_of_exterior_edge_bound",
+          "source_line": 124
+        },
+        {
+          "name": "Overfull.FewExceptions.complement_colorable",
+          "source_line": 195
+        },
+        {
+          "name": "Overfull.FewExceptions.complement_colorable_real",
+          "source_line": 208
+        },
+        {
+          "name": "Overfull.FewExceptions.core_complement_colorable",
+          "source_line": 222
+        }
+      ]
+    },
+    {
+      "module": "Overfull.FewExceptions.Factorization",
+      "path": "Overfull/FewExceptions/Factorization.lean",
+      "sha256": "4b0ac7e5f115f8acc442411873e688a20cc22b5de0b57a2205ecae193021f805",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FewExceptions.exists_uniform_one_core_factorization",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.one_core_three_exception_factorization",
+          "source_line": 70
+        },
+        {
+          "name": "Overfull.one_core_three_exception_one_factorization",
+          "source_line": 104
+        }
+      ]
+    },
+    {
+      "module": "Overfull.CompatibleCircuits.ThreeVertexDeletion",
+      "path": "Overfull/CompatibleCircuits/ThreeVertexDeletion.lean",
+      "sha256": "30feba2bb5342db61e6d9e0bb851a4df627902fb72814878c3fec40caf668774",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.Multigraph.IsCircuit.cutOn_card_le_two_of_card_le_three",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.Multigraph.IsCircuit.cutOn_card_zero_or_two_of_card_le_three",
+          "source_line": 32
+        },
+        {
+          "name": "Overfull.Multigraph.admissibleOn_sdiff_iff_tight_cuts_of_card_le_three",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.Multigraph.admissibleOn_sdiff_iff_meets_tight_classes_of_card_le_three",
+          "source_line": 68
+        },
+        {
+          "name": "Overfull.Multigraph.threeLabel_admissibleOn_sdiff_iff_tight_classes",
+          "source_line": 93
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.FewExceptions.complement_colorable",
+    "Overfull.FewExceptions.complement_colorable_of_exterior_edge_bound",
+    "Overfull.FewExceptions.complement_colorable_real",
+    "Overfull.FewExceptions.core_complement_colorable",
+    "Overfull.FewExceptions.degreeAway_le_degree",
+    "Overfull.FewExceptions.degreeAway_le_internal_away_add",
+    "Overfull.FewExceptions.exists_uniform_one_core_factorization",
+    "Overfull.FewExceptions.internalAway_eq",
+    "Overfull.FewExceptions.internal_compl_eq_univ",
+    "Overfull.FewExceptions.internal_incidence_eq_edgesTo",
+    "Overfull.FewExceptions.restriction_internal_away_card_le",
+    "Overfull.FewExceptions.restriction_internal_card_le",
+    "Overfull.Multigraph.IsCircuit.cutOn_card_le_two_of_card_le_three",
+    "Overfull.Multigraph.IsCircuit.cutOn_card_zero_or_two_of_card_le_three",
+    "Overfull.Multigraph.admissibleOn_sdiff_iff_meets_tight_classes_of_card_le_three",
+    "Overfull.Multigraph.admissibleOn_sdiff_iff_tight_cuts_of_card_le_three",
+    "Overfull.Multigraph.threeLabel_admissibleOn_sdiff_iff_tight_classes",
+    "Overfull.OrdinaryFactorization.exists_even_core_move",
+    "Overfull.OrdinaryFactorization.exists_uniform_factorization_any_core_parity",
+    "Overfull.TerminalComplement.colorable_one_apex",
+    "Overfull.TerminalComplement.core_colorable",
+    "Overfull.TerminalComplement.core_colorable_one_apex",
+    "Overfull.TerminalComplement.exists_uniform_terminal_factorization",
+    "Overfull.TerminalComplement.exists_uniform_terminal_one_factorization",
+    "Overfull.TerminalComplement.moved_core_colorable_one_apex",
+    "Overfull.one_core_three_exception_factorization",
+    "Overfull.one_core_three_exception_one_factorization"
+  ],
+  "scope": "47 of 69 numbered manuscript assertions remain completely verified; 22, including the main theorem, remain incomplete. This continuation completes the one-core branch of Corollary 4.6 from its original regular non-overfull multigraph hypotheses with at most three exceptional vertices. It constructs the actual complement coloring, normalizes core parity, and partitions all original copies into k perfect matchings with every uniform parameter before the host. It also factors terminal one-core pieces with bounded exterior and an unrestricted possible apex under the proved incidence hypotheses, and proves an exact safe circuit-deletion criterion on at most three labels. The two-core branch of 4.6, full fixed-pattern Lemma 4.4, general compatible-circuit selection, terminal Proposition 4.16, general Section 6 factorization, critical average-degree input, and the main theorem remain incomplete. Full Lemmas 4.2 and 4.14 and all historical completed assertions, declarations, and source-recovery mappings are preserved. No additional numbered assertion is claimed.",
+  "verification_command": "python3 scripts/verify.py",
+  "semantic_review": "few-exception-semantic-review.md"
+}

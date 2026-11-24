@@ -1,0 +1,18 @@
+[
+  {
+    "old": "                          (\"native_terminal\", \"native-terminal-source.json\")):\n",
+    "new": "                          (\"native_terminal\", \"native-terminal-source.json\"),\n                          (\"three_core_terminal\", \"three-core-terminal-source.json\")):\n"
+  },
+  {
+    "old": "    # Every first-party mathematical file must be included in the library build.\n",
+    "new": "    three_core_source, _, three_core_public = extension_maps[\"three_core_terminal\"]\n    if (three_core_source[\"kind\"] != \"supporting_continuation\"\n            or three_core_source[\"numbered_assertions_completed\"] != 0\n            or three_core_source[\"manuscript_number\"] != \"4.16\"\n            or three_core_source[\"manuscript_label\"] != \"three:prop:terminal\"\n            or three_core_source[\"statement_sha256\"] != \"1ba102e379594ab72de4ba73cf41c88d9fbdadf1c132e2943b48da04e8c2cc1c\"\n            or three_core_source[\"verified_subcase\"] != \"exactly_three_core_parts\"\n            or three_core_source[\"public_theorems\"] != [\n                \"Overfull.three_core_terminal_factorization\",\n                \"Overfull.three_core_terminal_one_factorization\"]\n            or not set(three_core_source[\"public_theorems\"]) <= set(three_core_public)):\n        raise SystemExit(\"The three-core continuation must identify only its exact terminal subcase.\")\n\n    # Every first-party mathematical file must be included in the library build.\n"
+  },
+  {
+    "old": "                    \"native_terminal\": \"native-terminal\"}[key]\n",
+    "new": "                    \"native_terminal\": \"native-terminal\",\n                    \"three_core_terminal\": \"three-core-terminal\"}[key]\n"
+  },
+  {
+    "old": "        \"native_terminal_declaration_map\": extension_evidence[\"native_terminal\"],\n",
+    "new": "        \"native_terminal_declaration_map\": extension_evidence[\"native_terminal\"],\n        \"three_core_terminal_declaration_map\": extension_evidence[\"three_core_terminal\"],\n"
+  }
+]

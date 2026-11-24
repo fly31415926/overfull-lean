@@ -120,7 +120,8 @@ def main() -> None:
                           ("weighted_palette", "weighted-palette-source.json"),
                           ("native_star", "native-star-source.json"),
                           ("native_integration", "native-integration-source.json"),
-                          ("native_terminal", "native-terminal-source.json")):
+                          ("native_terminal", "native-terminal-source.json"),
+                          ("three_core_terminal", "three-core-terminal-source.json")):
         source = json.loads((ROOT / "docs" / filename).read_text())
         source_modules = {item["module"]: item for item in source["modules"]}
         if (len(source_modules) != source["module_count"]
@@ -190,6 +191,19 @@ def main() -> None:
                 "Overfull.bounded_input_factorization", "Overfull.bounded_input_one_factorization"]
             or not set(terminal_source["public_theorems"]) <= set(terminal_public_modules)):
         raise SystemExit("The terminal closure does not identify the exact complete Corollary 4.6.")
+
+    three_core_source, _, three_core_public = extension_maps["three_core_terminal"]
+    if (three_core_source["kind"] != "supporting_continuation"
+            or three_core_source["numbered_assertions_completed"] != 0
+            or three_core_source["manuscript_number"] != "4.16"
+            or three_core_source["manuscript_label"] != "three:prop:terminal"
+            or three_core_source["statement_sha256"] != "1ba102e379594ab72de4ba73cf41c88d9fbdadf1c132e2943b48da04e8c2cc1c"
+            or three_core_source["verified_subcase"] != "exactly_three_core_parts"
+            or three_core_source["public_theorems"] != [
+                "Overfull.three_core_terminal_factorization",
+                "Overfull.three_core_terminal_one_factorization"]
+            or not set(three_core_source["public_theorems"]) <= set(three_core_public)):
+        raise SystemExit("The three-core continuation must identify only its exact terminal subcase.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1704,7 +1718,8 @@ def main() -> None:
                     "weighted_palette": "weighted-palette",
                     "native_star": "native-star",
                     "native_integration": "native-integration",
-                    "native_terminal": "native-terminal"}[key]
+                    "native_terminal": "native-terminal",
+                    "three_core_terminal": "three-core-terminal"}[key]
         map_path = OUTPUT / f"{basename}-declarations.json"
         map_path.write_text(json.dumps({
             "schema_version": 1,
@@ -1783,6 +1798,7 @@ def main() -> None:
         "native_star_declaration_map": extension_evidence["native_star"],
         "native_integration_declaration_map": extension_evidence["native_integration"],
         "native_terminal_declaration_map": extension_evidence["native_terminal"],
+        "three_core_terminal_declaration_map": extension_evidence["three_core_terminal"],
         "checkpoint_reconstruction": {
             "original_checkpoint": reconstruction["original_checkpoint"],
             "original_tree_reproduced": False,
