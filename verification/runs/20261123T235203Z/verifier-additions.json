@@ -1,0 +1,18 @@
+[
+  {
+    "old": "                          (\"weighted_palette\", \"weighted-palette-source.json\")):\n",
+    "new": "                          (\"weighted_palette\", \"weighted-palette-source.json\"),\n                          (\"native_star\", \"native-star-source.json\")):\n"
+  },
+  {
+    "old": "    # Every first-party mathematical file must be included in the library build.\n",
+    "new": "    if extension_maps[\"native_star\"][0][\"numbered_assertions_completed\"] != 0:\n        raise SystemExit(\"The native-star continuation completes no numbered manuscript assertion.\")\n\n    # Every first-party mathematical file must be included in the library build.\n"
+  },
+  {
+    "old": "                    \"weighted_palette\": \"weighted-palette\"}[key]\n",
+    "new": "                    \"weighted_palette\": \"weighted-palette\",\n                    \"native_star\": \"native-star\"}[key]\n"
+  },
+  {
+    "old": "        \"weighted_palette_declaration_map\": extension_evidence[\"weighted_palette\"],\n",
+    "new": "        \"weighted_palette_declaration_map\": extension_evidence[\"weighted_palette\"],\n        \"native_star_declaration_map\": extension_evidence[\"native_star\"],\n"
+  }
+]

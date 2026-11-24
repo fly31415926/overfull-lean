@@ -1,0 +1,2293 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "numbered_assertions_completed": 0,
+  "manuscript_number": null,
+  "statement_sha256": null,
+  "module_count": 11,
+  "public_theorem_count": 94,
+  "verified_declaration_count": 213,
+  "includes_private_and_generated_proofs": true,
+  "proof_declaration_map": [
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.half_bound",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.identity_or_tight",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.meets_tight",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.mk.inj",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.mk.injEq",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.mk.sizeOf_spec",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_dominant_bundle",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_dominant_bundle._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_dominant_bundle._proof_1_2",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_dominant_bundle._proof_1_3",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_equal_bundle",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_equal_bundle._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_equal_bundle._proof_1_2",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_equal_bundle._proof_1_5",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_equal_bundle._simp_1_3",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_equal_bundle._simp_1_4",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.nonconstant_on_large_subset",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.LocalCoarsening.refines",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles._proof_1_2",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles._proof_1_3",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles._proof_1_4",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "name": "Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles_of_monochromatic",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "source_sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "name": "Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles_of_monochromatic._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "source_sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "name": "Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles_of_monochromatic._proof_1_2",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "source_sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.exists_distinct_classes_of_large_subset",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.exists_distinct_classes_of_large_subset._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.exists_distinct_classes_of_large_subset._proof_1_2",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.exists_localCoarsening",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.exists_localCoarsening._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.CompatibleCircuits.exists_mem_ne_of_union_fiber_bound",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.CompatibleCircuits.exists_mem_ne_of_union_fiber_bound._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.exists_pair_distinct_both_coordinates",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_equal_bundles",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_large_subset",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_unequal_bundles",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_unequal_bundles._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_unequal_bundles._proof_1_2",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_unequal_bundles._proof_1_3",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.exists_pair_meeting_tight_classes_of_unequal_bundles._proof_1_4",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.fiber_card_union_of_disjoint",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.local_tight_of_second_endpoint_nonlocal_tight",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.local_tight_of_second_endpoint_nonlocal_tight._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.mem_one_of_two_classes_of_card_sum",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.mem_one_of_two_distinct_tight_classes",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.LocalCoarsening",
+      "name": "Overfull.CompatibleCircuits.mem_one_of_two_distinct_tight_classes._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/LocalCoarsening.lean",
+      "source_sha256": "48b9b4060747a4f6d87128ab9253934ab6a84e68a865b77fd11f5af536caffcf"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.CompatibleCircuits.ne_of_monochromatic_union_fiber_bound",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.pair_meets_endpoint_tight_classes_of_crossing_nonlocal",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.pair_meets_endpoint_tight_classes_of_crossing_nonlocal._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.CompatibleCircuits.pair_meets_endpoint_tight_classes_of_crossing_nonlocal._proof_1_2",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.AdmissibleOn.bundle_class_bound",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.AdmissibleOn.local_class_bound",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.empty._proof_1",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.empty._proof_2",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.empty._proof_3",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.empty._proof_4",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.eraseCircuit._proof_1",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.eraseCircuit._proof_2",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.eraseCircuit._proof_3",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.eraseCircuit._proof_4",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.eraseCircuit._simp_1",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.eraseCircuit._simp_2",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.exists_safe_circuit",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.insertCircuit._proof_1",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.insertCircuit._proof_2",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.insertCircuit._proof_3",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.insertCircuit._proof_4",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.insertCircuit._proof_5",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.of_embedVertices._proof_1",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.of_embedVertices._proof_2",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.of_embedVertices._proof_3",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.CompatibleCircuitPartition.of_embedVertices._proof_4",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.HasSafeCircuitSelection.mono",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.IsCircuit.of_embedVertices",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.IsCircuit.renameVertices",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.admissibleOn_iff_singleton_cuts",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.admissibleOn_iff_singleton_cuts._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.admissibleOn_sdiff_iff_meets_tight_singletons",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.Multigraph.admissibleOn_sdiff_parallel_pair_of_no_nonlocal_tight",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.Multigraph.admissibleOn_sdiff_parallel_pair_of_no_nonlocal_tight._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.Multigraph.admissibleOn_sdiff_parallel_pair_of_no_nonlocal_tight._simp_1_2",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.classCutOn_compl",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "name": "Overfull.Multigraph.classCutOn_nonempty_of_full_bundle",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "source_sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.classCutOn_singleton_other",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.classCutOn_singleton_other._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.classCutOn_singleton_self",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.classCutOn_singleton_self._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.AtMostThree",
+      "name": "Overfull.Multigraph.compatibleCircuitPartition_iff_admissible_of_card_le_three",
+      "source_path": "Overfull/CompatibleCircuits/AtMostThree.lean",
+      "source_sha256": "49bb3ab27f07a40209fb3d818473276a7b0e83bdbb627324365b487143cee72e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.Multigraph.compatible_parallel_pair",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.Multigraph.compatible_parallel_pair._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.Multigraph.compatible_parallel_pair._simp_1_2",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.Multigraph.compatible_triangle",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.Multigraph.compatible_triangle._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.Multigraph.compatible_triangle._simp_1_2",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.cutOn_compl",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.cutOn_compl._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.cutOn_compl._simp_1_2",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.cutOn_compl._simp_1_3",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.cutOn_singleton",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.cutOn_singleton._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.cutOn_singleton._simp_1_2",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.cutOn_singleton._simp_1_3",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.cutOn_singleton_card",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.edgeBundleOn.eq_1",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.edgeBundleOn_disjoint",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.edgeBundleOn_subset",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.edgeBundleOn_swap",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedIncidenceClasses.eq_1",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedIncidenceClasses_image",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices._proof_1",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_admissibleOn",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_classCutOn_image",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_classCutOn_image_map",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_compatible",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_cutOn",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_cutOn._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_cutOn_map",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_degreeOn",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_degreeOn_zero",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_edgeSupport",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_edgeSupport._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_edgeSupport._simp_1_2",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_even_degrees",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_incident",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_incident._simp_1",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_incident_image",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_incident_image._simp_1",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexEmbedding",
+      "name": "Overfull.Multigraph.embedVertices_not_incident",
+      "source_path": "Overfull/CompatibleCircuits/VertexEmbedding.lean",
+      "source_sha256": "4e8a9600e9815e21e249b28c2f44567cd0d7b595c88db7df85250bfa0e52ef4e"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.AtMostThree",
+      "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_card_le_three",
+      "source_path": "Overfull/CompatibleCircuits/AtMostThree.lean",
+      "source_sha256": "49bb3ab27f07a40209fb3d818473276a7b0e83bdbb627324365b487143cee72e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_safe_selection",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_safe_selection._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.SafeSelectionInduction",
+      "name": "Overfull.Multigraph.exists_compatibleCircuitPartition_of_tight_class_selection",
+      "source_path": "Overfull/CompatibleCircuits/SafeSelectionInduction.lean",
+      "source_sha256": "6f1a3a38a84b9fd4c3c291d70e20850e525139b393d4484162a45271f2f665ad"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.Multigraph.exists_compatible_triangle_of_equal_bundles",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.Multigraph.exists_compatible_triangle_of_equal_bundles._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.Multigraph.exists_compatible_triangle_of_equal_bundles._simp_1_2",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.AtMostThree",
+      "name": "Overfull.Multigraph.exists_safe_circuit_of_card_le_three",
+      "source_path": "Overfull/CompatibleCircuits/AtMostThree.lean",
+      "source_sha256": "49bb3ab27f07a40209fb3d818473276a7b0e83bdbb627324365b487143cee72e"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabel",
+      "name": "Overfull.Multigraph.exists_safe_circuit_of_equal_threeLabel_bundles",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabel.lean",
+      "source_sha256": "ed577b2f2aa3bbb2773f84220dd444dade95175ebbb94e75e6f6e27a9c2c66f4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabel",
+      "name": "Overfull.Multigraph.exists_safe_circuit_of_sorted_threeLabel_bundles",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabel.lean",
+      "source_sha256": "ed577b2f2aa3bbb2773f84220dd444dade95175ebbb94e75e6f6e27a9c2c66f4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabel",
+      "name": "Overfull.Multigraph.exists_safe_circuit_of_sorted_threeLabel_bundles._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabel.lean",
+      "source_sha256": "ed577b2f2aa3bbb2773f84220dd444dade95175ebbb94e75e6f6e27a9c2c66f4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabel",
+      "name": "Overfull.Multigraph.exists_safe_circuit_of_sorted_threeLabel_bundles._proof_1_2",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabel.lean",
+      "source_sha256": "ed577b2f2aa3bbb2773f84220dd444dade95175ebbb94e75e6f6e27a9c2c66f4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabel",
+      "name": "Overfull.Multigraph.exists_safe_circuit_of_sorted_threeLabel_bundles._proof_1_3",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabel.lean",
+      "source_sha256": "ed577b2f2aa3bbb2773f84220dd444dade95175ebbb94e75e6f6e27a9c2c66f4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabel",
+      "name": "Overfull.Multigraph.exists_safe_circuit_of_sorted_threeLabel_bundles._proof_1_4",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabel.lean",
+      "source_sha256": "ed577b2f2aa3bbb2773f84220dd444dade95175ebbb94e75e6f6e27a9c2c66f4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabel",
+      "name": "Overfull.Multigraph.exists_safe_circuit_of_sorted_threeLabel_bundles._proof_1_5",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabel.lean",
+      "source_sha256": "ed577b2f2aa3bbb2773f84220dd444dade95175ebbb94e75e6f6e27a9c2c66f4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_equal_bundles_no_nonlocal_tight",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_equal_bundles_no_nonlocal_tight._proof_1_2",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_equal_bundles_no_nonlocal_tight._proof_1_3",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_equal_bundles_no_nonlocal_tight._proof_1_4",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_equal_bundles_no_nonlocal_tight._proof_1_5",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_equal_bundles_no_nonlocal_tight._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_equal_bundles_no_nonlocal_tight._simp_1_6",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundlePair",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_equal_bundles_no_nonlocal_tight._simp_1_7",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundlePair.lean",
+      "source_sha256": "bb3d45c00a40592d4299308d7089dd9f3f3942df085b7264d3a51912b9d37771"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_unequal_threeLabel_bundles",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_unequal_threeLabel_bundles._proof_1_5",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_unequal_threeLabel_bundles._proof_1_6",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_unequal_threeLabel_bundles._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_unequal_threeLabel_bundles._simp_1_2",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_unequal_threeLabel_bundles._simp_1_3",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.UnequalBundleSelection",
+      "name": "Overfull.Multigraph.exists_safe_parallel_pair_of_unequal_threeLabel_bundles._simp_1_4",
+      "source_path": "Overfull/CompatibleCircuits/UnequalBundleSelection.lean",
+      "source_sha256": "132ebea072a6962190b8810396f239266a965988d72fb01763f2a7483561eefc"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "name": "Overfull.Multigraph.exists_safe_triangle_of_equal_bundles_of_nonlocal_tight",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "source_sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "name": "Overfull.Multigraph.exists_safe_triangle_of_equal_bundles_of_nonlocal_tight._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "source_sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "name": "Overfull.Multigraph.exists_safe_triangle_of_equal_bundles_of_nonlocal_tight._simp_1_2",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "source_sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "name": "Overfull.Multigraph.exists_safe_triangle_of_equal_bundles_of_nonlocal_tight._simp_1_3",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "source_sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "name": "Overfull.Multigraph.exists_safe_triangle_of_equal_bundles_of_nonlocal_tight._simp_1_4",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "source_sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabel",
+      "name": "Overfull.Multigraph.exists_threeLabel_compatibleCircuitPartition",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabel.lean",
+      "source_sha256": "ed577b2f2aa3bbb2773f84220dd444dade95175ebbb94e75e6f6e27a9c2c66f4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabel",
+      "name": "Overfull.Multigraph.exists_threeLabel_safe_circuit",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabel.lean",
+      "source_sha256": "ed577b2f2aa3bbb2773f84220dd444dade95175ebbb94e75e6f6e27a9c2c66f4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.exists_threeLabel_sorted_renaming",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.incident_pair_iff_edge_eq",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.incident_pair_iff_edge_eq._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.incident_pair_iff_edge_eq._simp_1_2",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.Multigraph.isCircuit_triangle",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.Multigraph.isCircuit_triangle._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.Multigraph.isCircuit_triangle._simp_1_2",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSelection",
+      "name": "Overfull.Multigraph.isCircuit_triangle._simp_1_3",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSelection.lean",
+      "source_sha256": "1ad5bb0f7833180736d8bf764fd92f6f58830ea42f3c8f6ca9f4e091ff9b42af"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.mem_edgeBundleOn",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.mem_edgeBundleOn._simp_1",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices._proof_1",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices.eq_1",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_admissibleOn",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_classCutOn",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_compatible",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_cutOn",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_cutOn._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_degreeOn",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_edgeBundleOn",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_edgeBundleOn._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_edgeBundleOn._simp_1_3",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_edgeBundleOn_symm",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_edgeSupport",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_edgeSupport._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_edgeSupport._simp_1_2",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_incident",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_incident._simp_1",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.VertexRelabeling",
+      "name": "Overfull.Multigraph.renameVertices_isCircuit",
+      "source_path": "Overfull/CompatibleCircuits/VertexRelabeling.lean",
+      "source_sha256": "dbc640993ca2987c90eb79457a6712433553d76d7e9ea0365f26b4268cdabee9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.shore_cases_of_card_le_three",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.shore_cases_of_card_le_three._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.threeLabel_bundle_parity",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.threeLabel_bundle_parity._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.threeLabel_bundles_cover",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.threeLabel_bundles_cover._simp_1_1",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabel",
+      "name": "Overfull.Multigraph.threeLabel_compatibleCircuitPartition_iff_admissible",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabel.lean",
+      "source_sha256": "ed577b2f2aa3bbb2773f84220dd444dade95175ebbb94e75e6f6e27a9c2c66f4"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "name": "Overfull.Multigraph.threeLabel_degree_of_equal_bundles",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "source_sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "name": "Overfull.Multigraph.threeLabel_degree_of_equal_bundles._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "source_sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.threeLabel_degree_one",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.threeLabel_degree_two",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.threeLabel_degree_zero",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.threeLabel_edge_cases",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "name": "Overfull.Multigraph.threeLabel_equal_bundle_card",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "source_sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.threeLabel_incident_one",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.threeLabel_incident_two",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.ThreeLabelBundles",
+      "name": "Overfull.Multigraph.threeLabel_incident_zero",
+      "source_path": "Overfull/CompatibleCircuits/ThreeLabelBundles.lean",
+      "source_sha256": "43031263d6910df71a867f1e42caacf07456a782ddfba1ea2d2e4801e85b7a97"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "name": "Overfull.Multigraph.threeLabel_nonlocal_tight_eq_bundle_of_equal_bundles",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "source_sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f"
+    },
+    {
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "Classical.choice"
+      ],
+      "module": "Overfull.CompatibleCircuits.EqualBundleSafety",
+      "name": "Overfull.Multigraph.threeLabel_nonlocal_tight_eq_bundle_of_equal_bundles._proof_1_1",
+      "source_path": "Overfull/CompatibleCircuits/EqualBundleSafety.lean",
+      "source_sha256": "466b1c3da27fda20cb1ce53bc16d534badaf3a72e832181c61ca498ba12f7d3f"
+    }
+  ]
+}

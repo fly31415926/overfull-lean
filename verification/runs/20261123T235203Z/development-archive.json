@@ -1,0 +1,918 @@
+{
+  "kind": "genuine_development_evidence",
+  "file_count": 152,
+  "files": [
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-01/command.json",
+      "sha256": "23d7f785b6c034412db97124651f98539b96f1a8f8b157255fa87e944d353c6a",
+      "bytes": 66869
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-01/output.log",
+      "sha256": "e23b7f1c670695d6cc79f9282e885bb77f568be1e499c6afcf246294b87e1ab4",
+      "bytes": 1193
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-01/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-01/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "37f1a2bb23fffa3ca98dcad56289d145b24a6be36a784c67ac77496c918a36bf",
+      "bytes": 4582
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-02/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-02/command.json",
+      "sha256": "517a37016450ee124c1334005b8b219c0a63f54773a67e827a59bb23acd67251",
+      "bytes": 66868
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-02/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-02/output.log",
+      "sha256": "07e7b470a7b78b489f7ccda97ff6105dedbfad5988ca5fccbdd8e05e498a96dc",
+      "bytes": 375
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-02/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-02/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-02/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-02/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-02/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-02/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-02/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-02/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "70ec895ed33ce966058dea168babde11110a320a12c80b709642324bbc708adf",
+      "bytes": 4634
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-03/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-03/command.json",
+      "sha256": "4793b95d2064c708ea60055cbebf3ab0063edb70e250db5d7ee628668d36c146",
+      "bytes": 66870
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-03/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-03/output.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-03/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-03/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-03/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-03/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-03/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-03/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-03/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-03/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "32bde2e03505dde96cec12b9d14a94be86277a2c3053374ba3304246f0dd1cdf",
+      "bytes": 4746
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-available-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-available-01/command.json",
+      "sha256": "07960dd24aa367a3f27871b73897b369c7f6e12b94705b0244d22fd39fe47bec",
+      "bytes": 67556
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-available-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-available-01/output.log",
+      "sha256": "67137ec5acaf36a9d294a546a2fe91c7d2628a629cf8ce47cd0f07981a3b9045",
+      "bytes": 102
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-available-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-available-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-available-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-available-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-available-01/source/Overfull/NativeStar/NativeBalance.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-available-01/source/Overfull/NativeStar/NativeBalance.lean",
+      "sha256": "d358b54a4357990b840bb1ac2b532bd0308c91e08c18611edb3efe1d96e7d9f8",
+      "bytes": 12793
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-available-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-available-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-available-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-available-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "sha256": "e0b7aa80906e77186e677cba6dfaebeb61050bcf47cc71e36a645d4e6b4af4fb",
+      "bytes": 10720
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-available-01/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-available-01/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "7cc6ee673227a937cbaa2f674684083fb2bcd22d74433ffe76743df19b6429fa",
+      "bytes": 6904
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-available-01/source/Overfull/NativeStar/StarExtension.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-available-01/source/Overfull/NativeStar/StarExtension.lean",
+      "sha256": "a04af52f2466ba57cc0f1f6cfb9653b7e592ad7b6c872293005837d25f65060d",
+      "bytes": 7554
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-strict-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-strict-01/command.json",
+      "sha256": "257ef7d4477ea50ff66c5886c8652c0445b1c598d6c2679c7c8777ab9716b1ed",
+      "bytes": 66869
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-strict-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-strict-01/output.log",
+      "sha256": "622ef6ae9ef09e799c10f3536a9d9d9c5770d3002e0226484b5fdb6a04449a38",
+      "bytes": 102
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-strict-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-strict-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-strict-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-strict-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-strict-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-strict-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/choice-strict-01/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/choice-strict-01/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "32bde2e03505dde96cec12b9d14a94be86277a2c3053374ba3304246f0dd1cdf",
+      "bytes": 4746
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/common-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/common-01/command.json",
+      "sha256": "fb21c2d7035dfc8651911cae0ff0b1d3c1a80a325c8a4d86a708c601c336fe16",
+      "bytes": 66178
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/common-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/common-01/output.log",
+      "sha256": "f019fe73e9c7423f4455feef55e4a6ed4d945bfcfe4bdd09ab0cb185d8884f53",
+      "bytes": 985
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/common-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/common-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "1c06ed493f5928f639f955e1656bedce16094db8ad2ebded347a4420e3e0e81b",
+      "bytes": 6602
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/common-02/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/common-02/command.json",
+      "sha256": "c1dbeaf0ac62c51ad26f94f00abe6580140ef0751630b370295ed98a67950f23",
+      "bytes": 66178
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/common-02/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/common-02/output.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/common-02/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/common-02/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/common-strict-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/common-strict-01/command.json",
+      "sha256": "6a9d098bddd3e7116cc20bcf06abfab6baaf36b55e049e38b108d9a1f61e35c8",
+      "bytes": 66179
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/common-strict-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/common-strict-01/output.log",
+      "sha256": "7cd70b01ed0cf4054714aedb6745754e9e9b3214adeb6af8b26e5cb6d0afe042",
+      "bytes": 105
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/common-strict-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/common-strict-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-01/command.json",
+      "sha256": "5362686a8258da1dd044d29a5ec4f5d5b66c4301c7ba1dd063f4b9c22901faac",
+      "bytes": 67557
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-01/output.log",
+      "sha256": "6fb4e231e204a4c6a143e0aaf6dc2316e0b00773b42465e05ffb8bc588036346",
+      "bytes": 105
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-01/source/Overfull/NativeStar/NativeBalance.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-01/source/Overfull/NativeStar/NativeBalance.lean",
+      "sha256": "b6b69e27962fb8033922c50319612488ad71cb84c603f1e6207e9d4f6ff9f90a",
+      "bytes": 12492
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "sha256": "e0b7aa80906e77186e677cba6dfaebeb61050bcf47cc71e36a645d4e6b4af4fb",
+      "bytes": 10720
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-01/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-01/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "32bde2e03505dde96cec12b9d14a94be86277a2c3053374ba3304246f0dd1cdf",
+      "bytes": 4746
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-01/source/Overfull/NativeStar/StarExtension.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-01/source/Overfull/NativeStar/StarExtension.lean",
+      "sha256": "a04af52f2466ba57cc0f1f6cfb9653b7e592ad7b6c872293005837d25f65060d",
+      "bytes": 7554
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-available-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-available-01/command.json",
+      "sha256": "fc9b81b990162ccc33803e8e5ac6e4176b872eb4cdfc16e1f123a440dd893237",
+      "bytes": 67558
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-available-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-available-01/output.log",
+      "sha256": "11d8210f905a9e831d55f9b7e212a097699c53df1bf33ee01afae661b4567a39",
+      "bytes": 105
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-available-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-available-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-available-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-available-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-available-01/source/Overfull/NativeStar/NativeBalance.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-available-01/source/Overfull/NativeStar/NativeBalance.lean",
+      "sha256": "d358b54a4357990b840bb1ac2b532bd0308c91e08c18611edb3efe1d96e7d9f8",
+      "bytes": 12793
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-available-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-available-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-available-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-available-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "sha256": "e0b7aa80906e77186e677cba6dfaebeb61050bcf47cc71e36a645d4e6b4af4fb",
+      "bytes": 10720
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-available-01/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-available-01/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "7cc6ee673227a937cbaa2f674684083fb2bcd22d74433ffe76743df19b6429fa",
+      "bytes": 6904
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/extension-available-01/source/Overfull/NativeStar/StarExtension.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/extension-available-01/source/Overfull/NativeStar/StarExtension.lean",
+      "sha256": "9a8b0603d674615f7258599351b42c2aa1d5d86c5b520bd2b3bf6f11973a716e",
+      "bytes": 9971
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/incidence-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/incidence-01/command.json",
+      "sha256": "508b98f1875f9e8440843dbf66193b67443117679a4565863f10b9790858992d",
+      "bytes": 66656
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/incidence-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/incidence-01/output.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/incidence-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/incidence-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/incidence-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/incidence-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/incidence-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/incidence-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/incidence-build-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/incidence-build-01/command.json",
+      "sha256": "811f2f3cdacdb538fba3dea86535f7db6a3bb6e20afe8582df57a0b52955d3e0",
+      "bytes": 66655
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/incidence-build-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/incidence-build-01/output.log",
+      "sha256": "c767f09019faadc35423bfa6255b5f8a1e87817e74e2079dcd2287d40f276338",
+      "bytes": 110
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/incidence-build-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/incidence-build-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/incidence-build-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/incidence-build-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/incidence-build-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/incidence-build-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-01/command.json",
+      "sha256": "9f151133461fbd77e9ba2d8301da5d56caa50825279e347953928351d6fe376b",
+      "bytes": 67558
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-01/output.log",
+      "sha256": "a0e5eaafe979826d25e08542bc3b39483d5425e494f85483246309ff573f96a5",
+      "bytes": 4876
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-01/source/Overfull/NativeStar/NativeBalance.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-01/source/Overfull/NativeStar/NativeBalance.lean",
+      "sha256": "b6b69e27962fb8033922c50319612488ad71cb84c603f1e6207e9d4f6ff9f90a",
+      "bytes": 12492
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "sha256": "ed88781cbfae355b9d1053f1a280db6929fa54aea9e8b0dc187d881664583d0a",
+      "bytes": 10680
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-01/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-01/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "32bde2e03505dde96cec12b9d14a94be86277a2c3053374ba3304246f0dd1cdf",
+      "bytes": 4746
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-01/source/Overfull/NativeStar/StarExtension.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-01/source/Overfull/NativeStar/StarExtension.lean",
+      "sha256": "a04af52f2466ba57cc0f1f6cfb9653b7e592ad7b6c872293005837d25f65060d",
+      "bytes": 7554
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-02/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-02/command.json",
+      "sha256": "75f4138bf61ab6c3f35f576a0c642992b38cb8c8e73e15b8cd1c82e83715ccd5",
+      "bytes": 67559
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-02/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-02/output.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-02/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-02/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-02/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-02/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-02/source/Overfull/NativeStar/NativeBalance.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-02/source/Overfull/NativeStar/NativeBalance.lean",
+      "sha256": "d358b54a4357990b840bb1ac2b532bd0308c91e08c18611edb3efe1d96e7d9f8",
+      "bytes": 12793
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-02/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-02/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-02/source/Overfull/NativeStar/StarAccounting.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-02/source/Overfull/NativeStar/StarAccounting.lean",
+      "sha256": "e0b7aa80906e77186e677cba6dfaebeb61050bcf47cc71e36a645d4e6b4af4fb",
+      "bytes": 10720
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-02/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-02/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "32bde2e03505dde96cec12b9d14a94be86277a2c3053374ba3304246f0dd1cdf",
+      "bytes": 4746
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-02/source/Overfull/NativeStar/StarExtension.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-02/source/Overfull/NativeStar/StarExtension.lean",
+      "sha256": "a04af52f2466ba57cc0f1f6cfb9653b7e592ad7b6c872293005837d25f65060d",
+      "bytes": 7554
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-03/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-03/command.json",
+      "sha256": "ac1cff0d40d1c2d19d7925b9991cf07da918fe7b96db63e68227da055cae382c",
+      "bytes": 67556
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-03/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-03/output.log",
+      "sha256": "1102c892904d19395c3628c71b72fc2514ee8f907ad2b5013c4b0877136b82d5",
+      "bytes": 105
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-03/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-03/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-03/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-03/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-03/source/Overfull/NativeStar/NativeBalance.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-03/source/Overfull/NativeStar/NativeBalance.lean",
+      "sha256": "d358b54a4357990b840bb1ac2b532bd0308c91e08c18611edb3efe1d96e7d9f8",
+      "bytes": 12793
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-03/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-03/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-03/source/Overfull/NativeStar/StarAccounting.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-03/source/Overfull/NativeStar/StarAccounting.lean",
+      "sha256": "e0b7aa80906e77186e677cba6dfaebeb61050bcf47cc71e36a645d4e6b4af4fb",
+      "bytes": 10720
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-03/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-03/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "32bde2e03505dde96cec12b9d14a94be86277a2c3053374ba3304246f0dd1cdf",
+      "bytes": 4746
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/native-balance-03/source/Overfull/NativeStar/StarExtension.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/native-balance-03/source/Overfull/NativeStar/StarExtension.lean",
+      "sha256": "a04af52f2466ba57cc0f1f6cfb9653b7e592ad7b6c872293005837d25f65060d",
+      "bytes": 7554
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/reserve-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/reserve-01/command.json",
+      "sha256": "afcd216d92aab6df83005066ca9905983dd740ad888dcfb57e6d8202c452bfdd",
+      "bytes": 66415
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/reserve-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/reserve-01/output.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/reserve-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/reserve-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/reserve-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/reserve-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/reserve-02/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/reserve-02/command.json",
+      "sha256": "e7829aac60b4b69bf56b4d037d6038bd50231f6b556790e24392e2c1395d7fb1",
+      "bytes": 66653
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/reserve-02/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/reserve-02/output.log",
+      "sha256": "67a71cd2c6823a6b1262b2b6413ed1ad6589293372a2bea379eae3353837e940",
+      "bytes": 108
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/reserve-02/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/reserve-02/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/reserve-02/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/reserve-02/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/reserve-02/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/reserve-02/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-01/command.json",
+      "sha256": "7de52d066b1d292c16379ebc2ea2a3d284670d2a8d6c8c22b9146e9c15afd73c",
+      "bytes": 67103
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-01/output.log",
+      "sha256": "44124a12c86cba627c8bfbfc58822e2cb1cbfbd2570409c81cb6cf8b0e6c1726",
+      "bytes": 880
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "sha256": "ed88781cbfae355b9d1053f1a280db6929fa54aea9e8b0dc187d881664583d0a",
+      "bytes": 10680
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-01/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-01/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "32bde2e03505dde96cec12b9d14a94be86277a2c3053374ba3304246f0dd1cdf",
+      "bytes": 4746
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-build-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-build-01/command.json",
+      "sha256": "5bcdc85ed8d39ced071dbf0edab3a177c2a5eb1bdd71ad4757b9dee280176d9f",
+      "bytes": 67559
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-build-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-build-01/output.log",
+      "sha256": "372bee80982f2f1316baf6d68b52f1d294d2461663fb12df0ac6f0bc47e5ca69",
+      "bytes": 106
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-build-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-build-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-build-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-build-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-build-01/source/Overfull/NativeStar/NativeBalance.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-build-01/source/Overfull/NativeStar/NativeBalance.lean",
+      "sha256": "b6b69e27962fb8033922c50319612488ad71cb84c603f1e6207e9d4f6ff9f90a",
+      "bytes": 12492
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-build-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-build-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-build-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-build-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "sha256": "e0b7aa80906e77186e677cba6dfaebeb61050bcf47cc71e36a645d4e6b4af4fb",
+      "bytes": 10720
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-build-01/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-build-01/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "32bde2e03505dde96cec12b9d14a94be86277a2c3053374ba3304246f0dd1cdf",
+      "bytes": 4746
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/star-accounting-build-01/source/Overfull/NativeStar/StarExtension.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/star-accounting-build-01/source/Overfull/NativeStar/StarExtension.lean",
+      "sha256": "a04af52f2466ba57cc0f1f6cfb9653b7e592ad7b6c872293005837d25f65060d",
+      "bytes": 7554
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-01/command.json",
+      "sha256": "8cbd864259c39b3da3e64ce293510171fce11a7133bba4fb46a7c362c4e174ec",
+      "bytes": 67772
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-01/output.log",
+      "sha256": "6be11fc2ffabb2e7ea81fd98c8025e0d7f5ace63b46ac1bd288b77df3d238768",
+      "bytes": 1622
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/NativeBalance.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/NativeBalance.lean",
+      "sha256": "d358b54a4357990b840bb1ac2b532bd0308c91e08c18611edb3efe1d96e7d9f8",
+      "bytes": 12793
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "sha256": "e0b7aa80906e77186e677cba6dfaebeb61050bcf47cc71e36a645d4e6b4af4fb",
+      "bytes": 10720
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "7cc6ee673227a937cbaa2f674684083fb2bcd22d74433ffe76743df19b6429fa",
+      "bytes": 6904
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/StarExtension.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/StarExtension.lean",
+      "sha256": "9a8b0603d674615f7258599351b42c2aa1d5d86c5b520bd2b3bf6f11973a716e",
+      "bytes": 9971
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/TwoStars.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-01/source/Overfull/NativeStar/TwoStars.lean",
+      "sha256": "f75cadcaf96220ca3fa27de412e02ca6452f9e38d18238fdd366e654fa447d26",
+      "bytes": 9890
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-02/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-02/command.json",
+      "sha256": "d3e64d19476321a2c553340b6b965f2c2ad1802e4b6b583455c5313ca4991b7e",
+      "bytes": 67772
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-02/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-02/output.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/NativeBalance.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/NativeBalance.lean",
+      "sha256": "d358b54a4357990b840bb1ac2b532bd0308c91e08c18611edb3efe1d96e7d9f8",
+      "bytes": 12793
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/StarAccounting.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/StarAccounting.lean",
+      "sha256": "e0b7aa80906e77186e677cba6dfaebeb61050bcf47cc71e36a645d4e6b4af4fb",
+      "bytes": 10720
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "7cc6ee673227a937cbaa2f674684083fb2bcd22d74433ffe76743df19b6429fa",
+      "bytes": 6904
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/StarExtension.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/StarExtension.lean",
+      "sha256": "9a8b0603d674615f7258599351b42c2aa1d5d86c5b520bd2b3bf6f11973a716e",
+      "bytes": 9971
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/TwoStars.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-02/source/Overfull/NativeStar/TwoStars.lean",
+      "sha256": "a8fd371129726216c4df1e5f65f841ae233aff477e7422ceea32589f0b23d86d",
+      "bytes": 9952
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-build-01/command.json",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-build-01/command.json",
+      "sha256": "4dfcb19ff117d4bcacfd8f3813400ff61019f3dabd26ba4aa5fa2548947aa309",
+      "bytes": 67771
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-build-01/output.log",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-build-01/output.log",
+      "sha256": "795d8d67e53c335630670c1e1196d00649f3e6804b7a6e960676584deab0c4cf",
+      "bytes": 100
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/CommonPalette.lean",
+      "sha256": "ee8740cb65855a3654df71dee2517b01f7e4315e236828b6138c516a2b86acaf",
+      "bytes": 6586
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/IncidencePartition.lean",
+      "sha256": "e1e8e84a8e5c982de230137edea0ae8d6813cf7074194a48d83a3fe28f4948fa",
+      "bytes": 15176
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/NativeBalance.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/NativeBalance.lean",
+      "sha256": "d358b54a4357990b840bb1ac2b532bd0308c91e08c18611edb3efe1d96e7d9f8",
+      "bytes": 12793
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/ReserveInjection.lean",
+      "sha256": "f4e41178404a179fed082284157ea1636a6bc216a5ad1ae08ba3c4f9701402fc",
+      "bytes": 11493
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/StarAccounting.lean",
+      "sha256": "e0b7aa80906e77186e677cba6dfaebeb61050bcf47cc71e36a645d4e6b4af4fb",
+      "bytes": 10720
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/StarChoice.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/StarChoice.lean",
+      "sha256": "7cc6ee673227a937cbaa2f674684083fb2bcd22d74433ffe76743df19b6429fa",
+      "bytes": 6904
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/StarExtension.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/StarExtension.lean",
+      "sha256": "9a8b0603d674615f7258599351b42c2aa1d5d86c5b520bd2b3bf6f11973a716e",
+      "bytes": 9971
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/TwoStars.lean",
+      "recorded_at_path": "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/development/two-stars-build-01/source/Overfull/NativeStar/TwoStars.lean",
+      "sha256": "a8fd371129726216c4df1e5f65f841ae233aff477e7422ceea32589f0b23d86d",
+      "bytes": 9952
+    }
+  ]
+}

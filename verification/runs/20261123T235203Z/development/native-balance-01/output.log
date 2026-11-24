@@ -1,0 +1,100 @@
+Overfull/NativeStar/NativeBalance.lean:134:8: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => exceptionInternalPool H label _a ↑z₀ = pairFiberCopies H ↑z₀ ↑z₁
+Error: Application type mismatch: The argument
+  z₀
+has type
+  { x // x ∈ Z }
+but is expected to have type
+  { x // x ∈ _a }
+in the application
+  ↑z₀
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+V : Type u_1
+E : Type u_2
+J : Type u_3
+inst✝¹ : Fintype E
+inst✝ : Fintype V
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+R : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies R.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+z₀ z₁ : { x // x ∈ Z }
+hZ : Z = {↑z₀, ↑z₁}
+hsame : assignedLabel G M U₀ U₁ Z ↑z₀ = assignedLabel G M U₀ U₁ Z ↑z₁
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+hD : 4 * D ≤ h
+Q : Finset (Fin h)
+hQ : 2 * #Q ≤ h
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+⊢ exceptionInternalPool H label Z ↑z₀ = pairFiberCopies H ↑z₀ ↑z₁
+Overfull/NativeStar/NativeBalance.lean:140:8: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => exceptionInternalPool H label _a ↑z₁ = pairFiberCopies H ↑z₀ ↑z₁
+Error: Application type mismatch: The argument
+  z₁
+has type
+  { x // x ∈ Z }
+but is expected to have type
+  { x // x ∈ _a }
+in the application
+  ↑z₁
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+V : Type u_1
+E : Type u_2
+J : Type u_3
+inst✝¹ : Fintype E
+inst✝ : Fintype V
+G : Multigraph V E
+M : Finset E
+hM : G.IsPerfectMatching M
+U₀ U₁ Z : Finset V
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+σ : { x // x ∈ Z } → Fin 2
+hcode : coarseSignature G M U₀ Z = some σ
+r : ℕ
+R : BoundaryPacking G U₀ U₁ Z M r
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies R.boundary univ)
+h D L : ℕ
+p : Fin 3 → ℕ
+C : JoiningPalette (residualGraph G N T) (assignedLabel G M U₀ U₁ Z) h D L p
+z₀ z₁ : { x // x ∈ Z }
+hZ : Z = {↑z₀, ↑z₁}
+hsame : assignedLabel G M U₀ U₁ Z ↑z₀ = assignedLabel G M U₀ U₁ Z ↑z₁
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+herror : h - r ≤ D
+hD : 4 * D ≤ h
+Q : Finset (Fin h)
+hQ : 2 * #Q ≤ h
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 3 := assignedLabel G M U₀ U₁ Z
+hB₀ : exceptionInternalPool H label Z ↑z₀ = pairFiberCopies H ↑z₀ ↑z₁
+hswap : {↑z₀, ↑z₁} = {↑z₁, ↑z₀}
+⊢ exceptionInternalPool H label Z ↑z₁ = pairFiberCopies H ↑z₀ ↑z₁

@@ -1,0 +1,68 @@
+Overfull/NativeStar/TwoStars.lean:173:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  n ≥ 0
+  m ≥ 0
+  l ≥ 0
+  l - m ≥ -1
+  k ≥ 0
+  i ≥ 0
+  i - k ≥ -1
+  i - n ≤ -3
+  g ≥ 0
+  f ≥ 0
+  f - 2*g ≥ 0
+  e ≥ 0
+  d ≥ 0
+  d - e ≥ 0
+  d - f + g ≤ 0
+  128*d - f ≤ 0
+  c ≥ 0
+  c + d - f + g ≥ 0
+  a ≥ 0
+  a + d - f + g ≥ 0
+where
+ a := ↑(#F₀)
+ c := ↑(#F₁)
+ d := ↑D
+ e := ↑b
+ f := ↑h
+ g := ↑s
+ i := ↑(#(C j))
+ k := ↑(#(starExtendedClasses C A₀ (fun e => ↑(f₀ e)) j))
+ l := ↑(#(C₁ j))
+ m := ↑(#(starExtendedClasses C₁ A₁ (fun e => ↑(f₁ e)) j))
+ n := ↑(#(starExtendedClasses (starExtendedClasses C A₀ fun e => ↑(f₀ e)) A₁ (fun e => ↑(f₁ e)) j))
+Overfull/NativeStar/TwoStars.lean:177:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  n ≥ 0
+  m ≥ 0
+  l ≥ 0
+  l - m ≥ -2
+  k ≥ 0
+  i ≥ 0
+  i - k ≥ -2
+  i - n ≤ -5
+  g ≥ 0
+  f ≥ 0
+  f - 2*g ≥ 0
+  e ≥ 0
+  d ≥ 0
+  d - e ≥ 0
+  d - f + g ≤ 0
+  128*d - f ≤ 0
+  c ≥ 0
+  c + d - f + g ≥ 0
+  a ≥ 0
+  a + d - f + g ≥ 0
+where
+ a := ↑(#F₀)
+ c := ↑(#F₁)
+ d := ↑D
+ e := ↑b
+ f := ↑h
+ g := ↑s
+ i := ↑(#(G.edgeSupport (C j)))
+ k := ↑(#(G.edgeSupport (starExtendedClasses C A₀ (fun e => ↑(f₀ e)) j)))
+ l := ↑(#(G.edgeSupport (C₁ j)))
+ m := ↑(#(G.edgeSupport (starExtendedClasses C₁ A₁ (fun e => ↑(f₁ e)) j)))
+ n := ↑(#(G.edgeSupport (starExtendedClasses (starExtendedClasses C A₀ fun e => ↑(f₀ e)) A₁ (fun e => ↑(f₁ e)) j)))

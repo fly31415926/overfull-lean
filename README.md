@@ -6,7 +6,42 @@
 
 The source manuscript is *An Asymptotically Sharp Form of the Overfull Conjecture*, version `Four_Robust_Component_Cases_2026-11-20.tex`. Its exact filename and SHA256 are recorded in [`docs/manuscript-source.json`](docs/manuscript-source.json).
 
-## Latest continuation: weighted palettes and actual star-copy bounds
+## Latest continuation: native reserve-star balance and actual star insertion
+
+The native unpaired reserve now supplies distinct surviving actual copies in
+each assigned old-core star. Joining incidences, that star pool, and the
+same-label exceptional bundle form a disjoint partition of the residual
+degree. The resulting **combined** joining-plus-bundle bound is derived from
+the native reserve and regularity; no old-core multiplicity estimate is
+incorrectly imposed on the exceptional-to-exception bundle.
+
+The construction derives common colors for the internal bundle and the
+exact remaining-star/free-color balance after selected reserve prescriptions.
+Hall's theorem then assigns actual star copies to available colors from
+concrete endpoint loads and whole-class blocked-copy weights. Colored-star
+accounting proves the bounds needed for the second star. The sequential
+extension retains original copies and unavailable colors, derives matching
+and disjointness, covers both added star pools, and adds at most two copies
+and four support vertices per class.
+
+The Hall row count is restricted to the **available** colors. Protected
+reserve classes outside that set do not consume the row budget. The generic
+global-load versions are retained as consequences of this stronger form.
+
+These are supporting constructions. The complete native weighted odd/even
+seed wrappers and the final composition of all reserve prescriptions, parity,
+and robustness hypotheses remain to be supplied. **Coverage remains 47/69;
+full two-core Corollary 4.6 and the main theorem remain unproved.**
+
+See the [exact public proof inventory](docs/native-star-source.json),
+[verification map](docs/native-star-verification.md),
+[semantic review](docs/native-star-semantic-review.md),
+[continuation handoff](docs/continuation-handoff.md), and
+[genuine current-run evidence](verification/runs/20261123T235203Z/).
+The complete frozen verifier and preservation reports in that run are the
+authority for full verification; focused checks alone are not a full audit.
+
+## Previous continuation: weighted palettes and actual star-copy bounds
 
 Five new modules prove dynamic weighted palette extension and apply it to
 actual matching pieces, with **41 public theorem proofs**. The weights count
@@ -25,9 +60,10 @@ of the original pieces, matching and disjointness. Each class has at most
 `D`. The asymmetric Hall theorem permits different conflict bounds on the
 two sides and includes the equality and empty-side cases.
 
-Actual remaining-star/free-palette balance, sequential star insertion,
-native weighted parity/reserve wrappers, robust completion and the final
-factorization still require proofs. **Coverage remains 47/69; full
+This checkpoint left actual remaining-star balance and sequential star
+insertion open; the new stage above supplies their supporting constructions.
+Native weighted parity/reserve wrappers, robust completion and the final
+factorization remain separate obligations. **Coverage remains 47/69; full
 Corollary 4.6 and the main theorem remain unproved.**
 
 See the [proof map and exact public inventory](docs/weighted-palette-verification.md),
@@ -40,15 +76,14 @@ frozen-input, audit and preservation reports in that run determine global
 verification status; no new global audit count is inferred from those
 focused checks.
 
-The preceding exceptional-palette checkpoint is now published on both
-`main` and `verified-bipartite-continuation-2026-11-21` at
-[`c28cec4`](https://github.com/fly31415926/overfull-lean/commit/c28cec49522e1537452ee9fdc3b2baf3ca1cc3b2),
-with the exact tree of local checkpoint `89678bc`. Its public parent
-[`8c974c8`](https://github.com/fly31415926/overfull-lean/commit/8c974c8a5ca3f7b2fcf557bee596e264480b4b81)
-has the exact tree of `1b5663a`. The earlier publication blocker is resolved.
-This new weighted continuation starts from that public baseline; this
-documentation does not claim that the weighted continuation itself has
-been published.
+The complete weighted checkpoint `af8dca22ef67d66d0de3f6d89954d31f06a4d2fa` is the verified local baseline,
+with exact tree `5ddefa9b77dfaf2d1cf09df1d7e2d4b541346a85` and all 2,507 files. Publication was blocked by automatic approval review at
+this continuation's input freeze; later public commits and branch updates
+are established by separate publication receipts. Its 3,734-job strict build
+and unchanged audit of 12,811 proof
+declarations, including all complete private/generated maps and genuine logs,
+are retained in its run. The public parent `c28cec4` preserves `89678bc`, and
+that parent's predecessor `8c974c8` preserves `1b5663a`.
 
 ## Previous continuation: internal pair coloring and reserve palette extensions
 

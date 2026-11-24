@@ -1,0 +1,23 @@
+{
+  "observed_at_utc": "2026-11-24T00:53:51.791521+00:00",
+  "supervisor_started_at_utc": "2026-11-24T00:37:12.517617+00:00",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-u",
+    "/workspace/scratch/0f64d20031b0/overfull-native-star/verification/runs/20261123T235203Z/run-verifier.py",
+    "full-01"
+  ],
+  "cwd": "/workspace/scratch/0f64d20031b0/overfull-native-star",
+  "attempt": "full-01",
+  "process_status": "completed",
+  "observed_return_code": 0,
+  "started_at_utc": "2026-11-24T00:37:12.609191+00:00",
+  "status": "passed",
+  "exit_code": 0,
+  "candidate_input_hash_count": 670,
+  "finished_at_utc": "2026-11-24T00:53:50.837670+00:00",
+  "all_frozen_inputs_unchanged": true,
+  "fresh_strict_build_final_line": "Build completed successfully (3742 jobs).",
+  "actual_terminal_exit_code": 0,
+  "terminal_observed_at_utc": "2026-11-24T00:53:51.792448+00:00"
+}

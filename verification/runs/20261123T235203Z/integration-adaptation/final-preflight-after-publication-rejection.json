@@ -1,0 +1,34 @@
+{
+  "recorded_at_utc": "2026-11-24T00:36:45.900998+00:00",
+  "status": "integration_preflight_passed",
+  "baseline_local_verified_commit": "af8dca22ef67d66d0de3f6d89954d31f06a4d2fa",
+  "baseline_tree": "5ddefa9b77dfaf2d1cf09df1d7e2d4b541346a85",
+  "baseline_publication_status_at_input_freeze": "verified_local_publication_blocked_by_automatic_review_at_input_freeze",
+  "last_observed_public_commit_at_input_freeze": "c28cec49522e1537452ee9fdc3b2baf3ca1cc3b2",
+  "module_count": 8,
+  "public_theorem_count": 84,
+  "exact_additive_verifier_edits": 4,
+  "root_added_imports": [
+    "import Overfull.NativeStar.NativeBalance\n",
+    "import Overfull.NativeStar.TwoStars\n"
+  ],
+  "only_changed_baseline_paths": [
+    "Overfull.lean",
+    "README.md",
+    "docs/continuation-handoff.md",
+    "docs/coverage.json",
+    "scripts/verify.py"
+  ],
+  "all_69_assertion_records_unchanged": true,
+  "all_final_lean_sources_match_successful_strict_snapshot": true,
+  "python_source_sha256": {
+    "scripts/verify.py": "4cf32f32c8bdc31d816006eb065924616f3f09fe338330170256c004bb6c0f46",
+    "scripts/update_native_star_manifest.py": "1917bead8ad941ccb9ebe2b80b6eb294804be050b2727240c5eb5fd3aea58072",
+    "verification/runs/20261123T235203Z/run-verifier.py": "dbd78982231583b61622010a9b7a8778780929717c1374a7a1c9d283898d88d4",
+    "verification/runs/20261123T235203Z/record-final.py": "cc66c9a1d5ee609a349a79c834f017d592c8d6c74341a53f74e9ea8298bbb8bf",
+    "verification/runs/20261123T235203Z/package-verified.py": "ca83ef53cfc95ae9919564b7114414f1d532e485d9c6a175d5fdbe31fd0c5986",
+    "verification/runs/20261123T235203Z/prepare-integration.py": "b55ab5b322b3bb834bbaa8101ffc812a966a022983c2c7e8c7c080160c0a1fcd",
+    "verification/runs/20261123T235203Z/prepare-docs.py": "73876ab681f6f560f5e324667616eb6a4bef445a349e7c8fcc2660b43049e376"
+  },
+  "publication_note": "Automatic review rejection arrived before input freeze; current new metadata and documentation record it. Original pending-state preflight and genuine integration command remain retained."
+}

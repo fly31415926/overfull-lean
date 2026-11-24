@@ -1,0 +1,20 @@
+Overfull/NativeStar/StarChoice.lean:24:0: warning: automatically included section variable(s) unused in theorem `Overfull.NativeStar.star_row_conflicts_le`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Overfull/NativeStar/StarChoice.lean:50:0: warning: automatically included section variable(s) unused in theorem `Overfull.NativeStar.matching_union_star_singleton`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Overfull/NativeStar/StarChoice.lean:90:52: error: Application type mismatch: The argument
+  hrow
+has type
+  ∀ (e : { x // x ∈ A }), #{c | ¬Allowed e c} ≤ D + b
+but is expected to have type
+  ∀ (i : { x // x ∈ A }), #{j | ¬Allowed i j} ≤ D + b
+in the application
+  CircuitPatterns.exists_star_equiv_of_conflict_bounds Allowed h D b s hb hD hs ?m.250 ?m.251 hrow

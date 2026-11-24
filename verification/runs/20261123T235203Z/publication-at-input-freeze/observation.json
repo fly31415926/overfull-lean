@@ -1,0 +1,19 @@
+{
+  "recorded_at_utc": "2026-11-24T00:36:30.231335+00:00",
+  "status": "publication_blocked_by_automatic_approval_review",
+  "local_checkpoint": "af8dca22ef67d66d0de3f6d89954d31f06a4d2fa",
+  "last_observed_public_head": "c28cec49522e1537452ee9fdc3b2baf3ca1cc3b2",
+  "reason_reported_by_parent": "Automatic review recognizes authorization only for 1b5663a and 89678bc, not af8 metadata/logs. All further publication mutations stopped.",
+  "evidence": [
+    {
+      "path": "verification/runs/20261123T235203Z/publication-at-input-freeze/recovery-blocked-receipts.json",
+      "copied_from": "/workspace/scratch/0f64d20031b0/publication-weighted/recovery-blocked-receipts.json",
+      "sha256": "f561c023f7ed1f7b73737182cd2c476d14ee1c6129d973f50f78596d7896d222"
+    },
+    {
+      "path": "verification/runs/20261123T235203Z/publication-at-input-freeze/after-rejection-readback.json",
+      "copied_from": "/workspace/scratch/0f64d20031b0/publication-weighted/after-rejection-readback.json",
+      "sha256": "1bef7226be04d02b73bd2ac1ae4f9116541a9e9ccbddee1b6019c66380794ef3"
+    }
+  ]
+}

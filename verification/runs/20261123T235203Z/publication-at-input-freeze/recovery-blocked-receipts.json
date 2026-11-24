@@ -1,0 +1,24 @@
+{
+  "observed_at_utc": "2026-11-24 00:35:01 UTC",
+  "repository": "fly31415926/overfull-lean",
+  "checkpoint": "af8dca22ef67d66d0de3f6d89954d31f06a4d2fa",
+  "kind": "automatic_approval_review_rejection",
+  "rejected_groups": [
+    {
+      "group": 0,
+      "expected_tree": "5e6a43d3d4ef0abcc05c86288d1fe7c0b38c12ab",
+      "reason": "This action uploads substantial verification metadata and logs, including local paths, source hashes, and project-derived contents, to the public GitHub repository; although the user authorized publishing checkpoints 1b5663a and 89678bc, the planned payload is part of a newer af8/native-star publication and the transcript does not clearly authorize disclosing this exact sensitive-derived payload publicly."
+    },
+    {
+      "group": 2,
+      "expected_tree": "1673d21bb112c48988f1bd8ba243e986e6a810df",
+      "reason": "This creates public GitHub tree objects containing private-workspace verification logs, absolute paths, source and dependency hashes, and a failed-attempt record; the user explicitly authorized public disclosure for checkpoints 1b5663a and 89678bc, but not this newer Loads checkpoint payload, so the sensitive egress remains insufficiently authorized."
+    }
+  ],
+  "exact_review_instruction": "Do not bypass this rejection through a workaround or indirect execution. Continue with a safer alternative, or carry out checks to prove that the action is authorized or low risk before trying again. Complete unaffected work without asking for confirmation. Report anything that remains blocked, clarify why it was blocked by auto-review, inform the user of the risk and ask for approval.",
+  "successful_group": 1,
+  "successful_tree": "19c87db44643b2993aba015d419a557aef0ea4fb",
+  "branch_updates_attempted": false,
+  "commit_creation_attempted": false,
+  "status": "Further publication mutations stopped pending authorization evidence check."
+}

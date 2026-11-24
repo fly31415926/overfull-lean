@@ -1,0 +1,6 @@
+{
+  "recorded_at_utc": "2026-11-24T00:35:40.240719+00:00",
+  "observation": "The genuine prepare-docs stdout used baseline_public_commit as a mislabeled summary key for the actual local af8 baseline. The authoritative generated run, source mapper, checker, package, README and handoff already distinguish local baseline from pending public reconstruction. The summary-only key is corrected in the preparer; original stdout and exact executed source are retained.",
+  "executed_source_path": "verification/runs/20261123T235203Z/integration-01/source/prepare-docs.py",
+  "current_source_sha256": "73c36444e031c369bc1ec58fd7386204a39ea298367db89ddf6e7809fd9a2854"
+}

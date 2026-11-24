@@ -117,7 +117,8 @@ def main() -> None:
                           ("native_reserve", "native-reserve-source.json"),
                           ("residual_palette", "residual-palette-source.json"),
                           ("exceptional_palette", "exceptional-palette-source.json"),
-                          ("weighted_palette", "weighted-palette-source.json")):
+                          ("weighted_palette", "weighted-palette-source.json"),
+                          ("native_star", "native-star-source.json")):
         source = json.loads((ROOT / "docs" / filename).read_text())
         source_modules = {item["module"]: item for item in source["modules"]}
         if (len(source_modules) != source["module_count"]
@@ -170,6 +171,9 @@ def main() -> None:
 
     if extension_maps["weighted_palette"][0]["numbered_assertions_completed"] != 0:
         raise SystemExit("The weighted-palette continuation completes no numbered manuscript assertion.")
+
+    if extension_maps["native_star"][0]["numbered_assertions_completed"] != 0:
+        raise SystemExit("The native-star continuation completes no numbered manuscript assertion.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1672,7 +1676,8 @@ def main() -> None:
                     "native_reserve": "native-reserve",
                     "residual_palette": "residual-palette",
                     "exceptional_palette": "exceptional-palette",
-                    "weighted_palette": "weighted-palette"}[key]
+                    "weighted_palette": "weighted-palette",
+                    "native_star": "native-star"}[key]
         map_path = OUTPUT / f"{basename}-declarations.json"
         map_path.write_text(json.dumps({
             "schema_version": 1,
@@ -1748,6 +1753,7 @@ def main() -> None:
         "residual_palette_declaration_map": extension_evidence["residual_palette"],
         "exceptional_palette_declaration_map": extension_evidence["exceptional_palette"],
         "weighted_palette_declaration_map": extension_evidence["weighted_palette"],
+        "native_star_declaration_map": extension_evidence["native_star"],
         "checkpoint_reconstruction": {
             "original_checkpoint": reconstruction["original_checkpoint"],
             "original_tree_reproduced": False,

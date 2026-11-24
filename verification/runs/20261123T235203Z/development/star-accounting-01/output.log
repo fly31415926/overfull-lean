@@ -1,0 +1,12 @@
+Overfull/NativeStar/StarAccounting.lean:149:8: warning: automatically included section variable(s) unused in theorem `_private.Overfull.NativeStar.StarAccounting.0.Overfull.NativeStar.support_union`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Overfull/NativeStar/StarAccounting.lean:178:0: warning: automatically included section variable(s) unused in theorem `Overfull.NativeStar.coloredStarCopies_inter_support_card_le_one`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

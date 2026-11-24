@@ -1,0 +1,8 @@
+Overfull/NativeStar/StarChoice.lean:93:52: error: Application type mismatch: The argument
+  hrow
+has type
+  ∀ (e : { x // x ∈ A }), #{c | ¬Allowed e c} ≤ D + b
+but is expected to have type
+  ∀ (i : { x // x ∈ A }), #{j | ¬Allowed i j} ≤ D + b
+in the application
+  CircuitPatterns.exists_star_equiv_of_conflict_bounds Allowed h D b s hb hD hs ?m.250 ?m.251 hrow

@@ -1,0 +1,33 @@
+{
+  "recorded_at_utc": "2026-11-24T00:35:45.941232+00:00",
+  "status": "integration_preflight_passed",
+  "baseline_local_verified_commit": "af8dca22ef67d66d0de3f6d89954d31f06a4d2fa",
+  "baseline_tree": "5ddefa9b77dfaf2d1cf09df1d7e2d4b541346a85",
+  "baseline_publication_status_at_input_freeze": "verified_local_publication_pending_at_input_freeze",
+  "last_observed_public_commit_at_input_freeze": "c28cec49522e1537452ee9fdc3b2baf3ca1cc3b2",
+  "module_count": 8,
+  "public_theorem_count": 84,
+  "exact_additive_verifier_edits": 4,
+  "root_added_imports": [
+    "import Overfull.NativeStar.NativeBalance\n",
+    "import Overfull.NativeStar.TwoStars\n"
+  ],
+  "only_changed_baseline_paths": [
+    "Overfull.lean",
+    "README.md",
+    "docs/continuation-handoff.md",
+    "docs/coverage.json",
+    "scripts/verify.py"
+  ],
+  "all_69_assertion_records_unchanged": true,
+  "all_final_lean_sources_match_successful_strict_snapshot": true,
+  "python_source_sha256": {
+    "scripts/verify.py": "4cf32f32c8bdc31d816006eb065924616f3f09fe338330170256c004bb6c0f46",
+    "scripts/update_native_star_manifest.py": "f20fb3fad0df456c785c41faff878413699bb1ab17bcf0cac06f93434e70e613",
+    "verification/runs/20261123T235203Z/run-verifier.py": "dbd78982231583b61622010a9b7a8778780929717c1374a7a1c9d283898d88d4",
+    "verification/runs/20261123T235203Z/record-final.py": "e79cbc50d9dc26050e7c1792286ad960c5a37fdd0f3bf339879ce92f8c3e8892",
+    "verification/runs/20261123T235203Z/package-verified.py": "9df112e2228d024f46f35196729dd4c08f04356698bf8042ca0e761e0b4a025c",
+    "verification/runs/20261123T235203Z/prepare-integration.py": "ba970da13a9ea109eb4af40cfcfaa8e1366d3367025a876008aaf974a5837709",
+    "verification/runs/20261123T235203Z/prepare-docs.py": "73c36444e031c369bc1ec58fd7386204a39ea298367db89ddf6e7809fd9a2854"
+  }
+}

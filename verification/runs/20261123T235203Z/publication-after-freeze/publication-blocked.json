@@ -1,0 +1,31 @@
+{
+  "observed_at_utc": "2026-11-24T00:37:33.296Z",
+  "status": "blocked_by_automatic_approval_review",
+  "repository": "fly31415926/overfull-lean",
+  "verified_local_commit": "af8dca22ef67d66d0de3f6d89954d31f06a4d2fa",
+  "verified_exact_tree": "5ddefa9b77dfaf2d1cf09df1d7e2d4b541346a85",
+  "source_checkout_clean_and_unchanged": true,
+  "branches": [
+    {
+      "branch": "main",
+      "sha": "c28cec49522e1537452ee9fdc3b2baf3ca1cc3b2",
+      "isError": false
+    },
+    {
+      "branch": "verified-bipartite-continuation-2026-11-21",
+      "sha": "c28cec49522e1537452ee9fdc3b2baf3ca1cc3b2",
+      "isError": false
+    }
+  ],
+  "commit_created": false,
+  "branch_updates_attempted": false,
+  "confirmed_uploaded_new_blob_count": 19,
+  "confirmed_total_new_blob_count": 76,
+  "unreferenced_transport_trees_only": true,
+  "review_rejection_receipt": "recovery-blocked-receipts.json",
+  "authorization_evidence": "standing-automation-authorization-evidence.json",
+  "same_payload_reassessment_receipt": "recovery-small-00-authorization-reassessment.json",
+  "same_payload_reassessment_status": "rejected",
+  "scope_of_denial": "Public disclosure of the newer checkpoint's absolute workspace paths, source/dependency hashes and complete genuine verification metadata/logs; reviewer recognizes only the exact 1b5663a/89678bc authorization and rejects saved automation configuration as insufficient evidence for the newer payload.",
+  "next_action_required": "Complete unaffected local verification work. Request explicit user authorization for the exact new verified checkpoints and contents if publication is to proceed. Do not retry via a different encoding, transport, destination, or indirect mechanism."
+}
