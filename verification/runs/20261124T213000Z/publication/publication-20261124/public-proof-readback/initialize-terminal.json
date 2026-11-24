@@ -1,0 +1,31 @@
+{
+  "command": [
+    "git",
+    "init",
+    "--bare",
+    "--object-format=sha1",
+    "/workspace/scratch/05b9e46fe96b/recovery-20261124/public-proof-readback-02/isolated.git"
+  ],
+  "cwd": "/workspace/scratch/05b9e46fe96b/recovery-20261124/public-proof-readback-02",
+  "started_at_utc": "2026-11-24T23:16:40.441191+00:00",
+  "status": "completed",
+  "exit_code": 0,
+  "git_dir": null,
+  "git_no_replace_objects": "1",
+  "git_object_directory_present": false,
+  "git_alternate_object_directories_present": false,
+  "expected_exit_code": 0,
+  "finished_at_utc": "2026-11-24T23:16:40.444247+00:00",
+  "elapsed_seconds": 0.0029758219970972277,
+  "expected_exit_observed": true,
+  "stdout": {
+    "path": "initialize-stdout.log",
+    "bytes": 125,
+    "sha256": "ec405abdd4bc6a02b794d2e3df699c73e2395f2c981cace760ae7ff88c46fc12"
+  },
+  "stderr": {
+    "path": "initialize-stderr.log",
+    "bytes": 586,
+    "sha256": "3e70934f1909b0f5a846d62237fcc1509d733b9fb0321187024723dfc67176d3"
+  }
+}

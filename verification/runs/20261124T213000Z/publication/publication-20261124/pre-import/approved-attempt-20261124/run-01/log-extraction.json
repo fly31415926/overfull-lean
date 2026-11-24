@@ -1,0 +1,11 @@
+{
+  "job_id": 138841412903,
+  "run_id": 45506039249,
+  "complete_decoded_log_bytes": 21395,
+  "complete_decoded_log_sha256": "c84e7da3a934f2b9afd882018d08cdbbda49c0a8435e49d3ba6e49fbfe862b40",
+  "receipt_count": 1,
+  "raw_receipt_bytes": 7485,
+  "raw_receipt_sha256": "9dd75ac39dccd930b29173e0d9d51fe709f89a125055c2bb9bc519db8a76f9a8",
+  "actual_receipt_status": "failed",
+  "actual_receipt_error": "RuntimeError(\"Command failed with actual exit 1: ['git', '--no-replace-objects', '-c', 'core.hooksPath=/dev/null', '-c', 'protocol.allow=never', '-c', 'protocol.https.allow=always', 'push', '--no-follow-tags', 'origin', 'db841575ca2c427e230387c1c95fa74bedb463d6:refs/heads/publication-four-core-proof-2026-11-24-2130']\")"
+}

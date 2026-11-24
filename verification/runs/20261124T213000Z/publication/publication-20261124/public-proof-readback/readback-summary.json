@@ -1,0 +1,79 @@
+{
+  "kind": "independent_fresh_public_proof_readback",
+  "status": "passed",
+  "finished_at_utc": "2026-11-24T23:16:48.789735+00:00",
+  "proof_commit": "db841575ca2c427e230387c1c95fa74bedb463d6",
+  "tree": "a7e59e8303f670fab6c95348cd100acd1aaa5899",
+  "sole_parent": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+  "tracked_file_count": 14692,
+  "proof_absent_before_public_fetch": true,
+  "new_bare_repository_without_alternates": true,
+  "no_replace_objects": true,
+  "temporary_publishing_workflow_absent": true,
+  "validator_sha256": "cd197d99f6287468ecb053bbe6dd6a68eb754b42191988965bf82e78926739f1",
+  "validator_bytes_unchanged": true,
+  "snapshot_integrity_sha256": "d044ac187c1c630a34c185f36eb86e5b39b89be88c6f8bd10cbebddebeb99baa",
+  "frozen_input_count": 855,
+  "frozen_control_count": 24,
+  "archived_output_count": 26,
+  "nonpublication_run_file_count": 1563,
+  "explicit_digest_checks": 1810,
+  "unique_blobs_checked": 1031,
+  "unique_blob_bytes_checked": 24721568,
+  "all_published_and_frozen_bytes_match": true,
+  "all_nonpublication_run_files_match_working_evidence": true,
+  "audited_declarations": 14820,
+  "coverage": "51/69",
+  "main_theorem_verified": false,
+  "local_refs_unchanged": true,
+  "source_files_changed": false,
+  "remote_writes_performed": false,
+  "proof_tests_run": false,
+  "steps": [
+    {
+      "name": "initialize",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "name": "initial-refs",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "name": "proof-absent-before-fetch",
+      "exit_code": 128,
+      "expected_exit_code": 128
+    },
+    {
+      "name": "fetch",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "name": "proof-commit",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "name": "proof-tree",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "name": "proof-paths",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "name": "validator",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "name": "final-refs",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    }
+  ]
+}

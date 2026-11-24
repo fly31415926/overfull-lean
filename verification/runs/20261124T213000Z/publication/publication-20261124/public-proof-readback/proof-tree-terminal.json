@@ -1,0 +1,47 @@
+{
+  "command": [
+    "git",
+    "--no-replace-objects",
+    "-c",
+    "credential.helper=",
+    "-c",
+    "http.extraHeader=",
+    "-c",
+    "core.hooksPath=/dev/null",
+    "-c",
+    "protocol.allow=never",
+    "-c",
+    "protocol.https.allow=always",
+    "-c",
+    "fetch.writeCommitGraph=false",
+    "-c",
+    "maintenance.auto=0",
+    "-c",
+    "gc.auto=0",
+    "cat-file",
+    "tree",
+    "a7e59e8303f670fab6c95348cd100acd1aaa5899"
+  ],
+  "cwd": "/workspace/scratch/05b9e46fe96b/recovery-20261124/public-proof-readback-02",
+  "started_at_utc": "2026-11-24T23:16:47.649303+00:00",
+  "status": "completed",
+  "exit_code": 0,
+  "git_dir": "/workspace/scratch/05b9e46fe96b/recovery-20261124/public-proof-readback-02/isolated.git",
+  "git_no_replace_objects": "1",
+  "git_object_directory_present": false,
+  "git_alternate_object_directories_present": false,
+  "expected_exit_code": 0,
+  "finished_at_utc": "2026-11-24T23:16:47.651318+00:00",
+  "elapsed_seconds": 0.0019716630013135727,
+  "expected_exit_observed": true,
+  "stdout": {
+    "path": "proof-tree-stdout.log",
+    "bytes": 675,
+    "sha256": "84ef88f01677d49a7278d0022a334924cbd4d901f21a3955b4593dd23401c030"
+  },
+  "stderr": {
+    "path": "proof-tree-stderr.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

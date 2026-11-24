@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "kind": "genuine_public_only_proof_bundle_restoration",
+  "status": "passed",
+  "completed_at_utc": "2026-11-24T22:34:28.277530+00:00",
+  "public_repository_url": "https://github.com/fly31415926/overfull-lean.git",
+  "public_archive_commit": "c0c7c88e19a634f956027911beb11aa54e3d9674",
+  "public_archive_tree": "b6e2167823a62ed93a031ebc521b4523e91cd4ac",
+  "proof_commit": "db841575ca2c427e230387c1c95fa74bedb463d6",
+  "proof_tree": "a7e59e8303f670fab6c95348cd100acd1aaa5899",
+  "proof_parent": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+  "public_baseline_tree": "087e26b5f004af1f9423a6f2b137d805f5991f1a",
+  "public_archive_files_checked": 85,
+  "public_raw_proof_blobs_checked": 114,
+  "public_raw_proof_blob_bytes": 1702960,
+  "proof_tracked_files": 14692,
+  "bundle": {
+    "path": "restored-from-public.bundle",
+    "bytes": 2101917,
+    "sha256": "b28ad8fdf21678b583458683c58d04ce7cb823c9dc08b7932b988f22aa54d57e"
+  },
+  "baseline_fetch_receipt": {
+    "path": "baseline-fetch-terminal.json",
+    "bytes": 811,
+    "sha256": "cb89d46d0a69bfa9d318c1a878924ffb4bbe6ecc2be63e4d801592d312a975f5"
+  },
+  "expected_archive_inventory_sha256": "ac86bd670690cd1b6bdd3c7b3ef657cec7767f10dd8a98b9217b20e12f268e90",
+  "restorer_sha256": "5ad493e8afeffb426b1091e332b8148821226e129a99fdbeb34a0ac8d8f0af5b",
+  "readback_helper_sha256": "9f6fa0cfc953cf545aa64684f8589f2e12c9c98731d3109d9a7820f15db067f4",
+  "proof_absent_before_public_archive_fetch": true,
+  "proof_absent_before_bundle_import": true,
+  "all_85_public_files_match_exact_git_and_sha256_inventory": true,
+  "all_114_raw_proof_blobs_match_exact_attachment_paths_and_hashes": true,
+  "reassembled_from_public_parts_and_public_manifest_only": true,
+  "exact_commit_tree_and_sole_parent_reconstructed": true,
+  "complete_object_connectivity_passed": true,
+  "repository_has_no_object_alternates": true,
+  "local_prepared_bundle_or_parts_were_not_read": true,
+  "source_repository_access_performed": false,
+  "remote_refs_updated": false,
+  "workflows_installed_or_executed": false,
+  "lean_rebuild_performed": false,
+  "native_command_receipts": [
+    {
+      "path": "restoration-01/proof-absent-before-public-fetch/terminal.json",
+      "bytes": 1114,
+      "sha256": "36a3400074206b06d714b67666b99c88eb63b5ca541fa2e68f37409f1f279cc4"
+    },
+    {
+      "path": "restoration-01/public-archive-fetch/terminal.json",
+      "bytes": 1163,
+      "sha256": "8443267f86606d0f54355f79df2bd3234fdf1cebde09003d4fbc06e7ca37946b"
+    },
+    {
+      "path": "restoration-01/archive-commit-object/terminal.json",
+      "bytes": 1086,
+      "sha256": "bd9fc9d2ba668eef0255b94056452765a52d5e82122b28469b59ee7eab960f7f"
+    },
+    {
+      "path": "restoration-01/archive-tree-inventory/terminal.json",
+      "bytes": 1096,
+      "sha256": "78ebd0b28d5b711869733d860734f719a4869ee8e532c76b75a9fecd2278914c"
+    },
+    {
+      "path": "restoration-01/public-archive-blob-readback/terminal.json",
+      "bytes": 1242,
+      "sha256": "4ff55a42810561b92094fc8d2ead41c525e76f0ab06dc37295c1463ad775d7d4"
+    },
+    {
+      "path": "restoration-01/public-raw-proof-blob-readback/terminal.json",
+      "bytes": 1249,
+      "sha256": "d1a097fd7bc18921c39f39718b20bbb288f87205229af44e674e9f8fd365a177"
+    },
+    {
+      "path": "restoration-01/proof-absent-before-import/terminal.json",
+      "bytes": 1101,
+      "sha256": "9496978edae3bdea4259733bd716579bc8b7880e80acd34c478baf29bf74e26c"
+    },
+    {
+      "path": "restoration-01/public-parts-reassembly/terminal.json",
+      "bytes": 1465,
+      "sha256": "98c1e2ca748497d4c67a5e793a31e295fc7ead299bc2c0a47169130f6396e322"
+    },
+    {
+      "path": "restoration-01/isolated-public-bundle-import/terminal.json",
+      "bytes": 1201,
+      "sha256": "9c8dd427a4237b5f1afb2782c4d3d0fa8c8b9574aee0a9c32a0fdacd3ed5f531"
+    },
+    {
+      "path": "restoration-01/reconstructed-proof-commit/terminal.json",
+      "bytes": 1095,
+      "sha256": "8dec1075b2d7b178e025777a56cb19fdb7331bcc94cdcd5a545190b06716d5b6"
+    },
+    {
+      "path": "restoration-01/reconstructed-proof-tree/terminal.json",
+      "bytes": 1100,
+      "sha256": "6676e0260ad9a735f094b4f40a94585f80071d48355f6e244d27535e584ed724"
+    },
+    {
+      "path": "restoration-01/reconstructed-object-connectivity/terminal.json",
+      "bytes": 1158,
+      "sha256": "373d131cfb67b10e4f615994cf546c07116919977999aa49d15296f62207bde2"
+    }
+  ],
+  "scope": "Demonstrates exact proof recovery from public GitHub data. Does not assert requested branch promotion."
+}

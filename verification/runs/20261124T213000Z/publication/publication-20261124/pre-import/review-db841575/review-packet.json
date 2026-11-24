@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "inert_privileged_workflow_review_packet",
+  "prepared_at_utc": "2026-11-24T22:33:30.334944+00:00",
+  "authorization_status": "pending_explicit_user_approval",
+  "active_workflow_installed": false,
+  "publish_path_executed": false,
+  "repository": "fly31415926/overfull-lean",
+  "review_public_prefix": "publication-transfer/review-db841575",
+  "archive_public_prefix": "publication-transfer/verified-db841575",
+  "proposed_active_workflow_path": ".github/workflows/publish-verified-db841575.yml",
+  "workflow_text_sha256": "2b3d5bb04e9af2b086e06221a9687ae5323ab9306d40cb01f163db98a9945d7f",
+  "helper_sha256": "d3cbf3ef67e5020483dcb28fb57ae58d97bc2f1389d8ca51f79b8bf8a025b7c6",
+  "manifest_sha256": "7fac099d28d334ae8cb104dfd52a2e95533d40c515db310fbadb3cdc5949ec61",
+  "proof_commit": "db841575ca2c427e230387c1c95fa74bedb463d6",
+  "proof_tree": "a7e59e8303f670fab6c95348cd100acd1aaa5899",
+  "baseline_commit": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+  "baseline_tree": "087e26b5f004af1f9423a6f2b137d805f5991f1a",
+  "bundle_sha256": "b28ad8fdf21678b583458683c58d04ce7cb823c9dc08b7932b988f22aa54d57e",
+  "bundle_bytes": 2101917,
+  "part_count": 63,
+  "trigger_branch": "reconstruction-four-core-2026-11-24-2130",
+  "trigger_path": ".github/workflows/publish-verified-db841575.yml",
+  "token_scope": {
+    "top_level_permissions": {},
+    "job_permissions": {
+      "contents": "write"
+    }
+  },
+  "timeout_minutes": 10,
+  "only_ref_pushed": "refs/heads/publication-four-core-proof-2026-11-24-2130",
+  "later_ordinary_connector_publication_refs": [
+    "refs/heads/main",
+    "refs/heads/verified-bipartite-continuation-2026-11-21"
+  ],
+  "original_helper_sha256": "fd9fbe137dd79c48f902055a0f97d730eb44624c06f2943e88e85611de01ace9",
+  "original_workflow_text_sha256": "a35ebcc7b92ded28535fd3281cacc08250fbf898c30c32314761014263039a16",
+  "actual_denial_sha256": "1d184acb5761dc2a99cbaca140f0f09439f5c49e4f6a460aa52517d2d36d456d",
+  "offline_verification": {
+    "status": "passed",
+    "mode": "verify_only",
+    "exit_code": 0,
+    "network_calls_requested": false,
+    "proof_ref_published": false,
+    "source_head_index_refs_unchanged": true
+  }
+}

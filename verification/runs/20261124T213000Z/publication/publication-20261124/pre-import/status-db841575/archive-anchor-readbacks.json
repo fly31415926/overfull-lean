@@ -1,0 +1,118 @@
+{
+  "recorded_at_utc": "2026-11-24T22:33:42.107Z",
+  "archive_commit": "c0c7c88e19a634f956027911beb11aa54e3d9674",
+  "responses": [
+    {
+      "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/reconstruction-four-core-2026-11-24-2130",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "content": "{\"ref\":\"refs/heads/reconstruction-four-core-2026-11-24-2130\",\"node_id\":\"REF_kwDOV2rdltoAM3JlZnMvaGVhZHMvcmVjb25zdHJ1Y3Rpb24tZm91ci1jb3JlLTIwMjYtMTEtMjQtMjEzMA\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/reconstruction-four-core-2026-11-24-2130\",\"object\":{\"sha\":\"c0c7c88e19a634f956027911beb11aa54e3d9674\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/c0c7c88e19a634f956027911beb11aa54e3d9674\"}}",
+            "title": "reconstruction-four-core-2026-11-24-2130",
+            "modified_date": null,
+            "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/reconstruction-four-core-2026-11-24-2130",
+            "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/reconstruction-four-core-2026-11-24-2130",
+            "display_title": "reconstruction-four-core-2026-11-24-2130",
+            "structuredContent": {
+              "title": "reconstruction-four-core-2026-11-24-2130",
+              "content": "{\"ref\":\"refs/heads/reconstruction-four-core-2026-11-24-2130\",\"node_id\":\"REF_kwDOV2rdltoAM3JlZnMvaGVhZHMvcmVjb25zdHJ1Y3Rpb24tZm91ci1jb3JlLTIwMjYtMTEtMjQtMjEzMA\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/reconstruction-four-core-2026-11-24-2130\",\"object\":{\"sha\":\"c0c7c88e19a634f956027911beb11aa54e3d9674\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/c0c7c88e19a634f956027911beb11aa54e3d9674\"}}",
+              "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/reconstruction-four-core-2026-11-24-2130"
+            }
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/commits/c0c7c88e19a634f956027911beb11aa54e3d9674",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "content": "{\"sha\":\"c0c7c88e19a634f956027911beb11aa54e3d9674\",\"node_id\":\"C_kwDOV2rdltoAKGMwYzdjODhlMTlhNjM0Zjk1NjAyNzkxMWJlYjExYWE1NGUzZDk2NzQ\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/c0c7c88e19a634f956027911beb11aa54e3d9674\",\"html_url\":\"https://github.com/fly31415926/overfull-lean/commit/c0c7c88e19a634f956027911beb11aa54e3d9674\",\"author\":{\"name\":\"fly31415926\",\"email\":\"fly271828@gmail.com\",\"date\":\"2026-11-24T22:33:24Z\"},\"committer\":{\"name\":\"fly31415926\",\"email\":\"fly271828@gmail.com\",\"date\":\"2026-11-24T22:33:24Z\"},\"tree\":{\"sha\":\"b6e2167823a62ed93a031ebc521b4523e91cd4ac\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/trees/b6e2167823a62ed93a031ebc521b4523e91cd4ac\"},\"message\":\"Preserve verified reconstruction archive and exact proof objects [skip ci]\\n\\nArchive the complete verified reconstruction db841575ca2c427e230387c1c95fa74bedb463d6, tree a7e59e8303f670fab6c95348cd100acd1aaa5899, as 63 hash-checked Git bundle parts plus restoration metadata and actual native verification receipts. Attach 114 additional exact proof/evidence blobs.\\n\\nThe reconstructed proof passed 3,899 strict build jobs and audited 14,820 declarations, including 193 new declarations. Coverage is 51/69; the main theorem remains unverified. This recovery branch preserves data. The requested main and verified continuation refs are still pending exact proof-object publication.\",\"parents\":[{\"sha\":\"038384aa63af98e44670f96ceddf7f99e52b0f3e\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/038384aa63af98e44670f96ceddf7f99e52b0f3e\",\"html_url\":\"https://github.com/fly31415926/overfull-lean/commit/038384aa63af98e44670f96ceddf7f99e52b0f3e\"}],\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null,\"verified_at\":null}}",
+            "title": "c0c7c88e19a634f956027911beb11aa54e3d9674",
+            "modified_date": null,
+            "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/commits/c0c7c88e19a634f956027911beb11aa54e3d9674",
+            "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/commits/c0c7c88e19a634f956027911beb11aa54e3d9674",
+            "display_title": "c0c7c88e19a634f956027911beb11aa54e3d9674",
+            "structuredContent": {
+              "title": "c0c7c88e19a634f956027911beb11aa54e3d9674",
+              "content": "{\"sha\":\"c0c7c88e19a634f956027911beb11aa54e3d9674\",\"node_id\":\"C_kwDOV2rdltoAKGMwYzdjODhlMTlhNjM0Zjk1NjAyNzkxMWJlYjExYWE1NGUzZDk2NzQ\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/c0c7c88e19a634f956027911beb11aa54e3d9674\",\"html_url\":\"https://github.com/fly31415926/overfull-lean/commit/c0c7c88e19a634f956027911beb11aa54e3d9674\",\"author\":{\"name\":\"fly31415926\",\"email\":\"fly271828@gmail.com\",\"date\":\"2026-11-24T22:33:24Z\"},\"committer\":{\"name\":\"fly31415926\",\"email\":\"fly271828@gmail.com\",\"date\":\"2026-11-24T22:33:24Z\"},\"tree\":{\"sha\":\"b6e2167823a62ed93a031ebc521b4523e91cd4ac\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/trees/b6e2167823a62ed93a031ebc521b4523e91cd4ac\"},\"message\":\"Preserve verified reconstruction archive and exact proof objects [skip ci]\\n\\nArchive the complete verified reconstruction db841575ca2c427e230387c1c95fa74bedb463d6, tree a7e59e8303f670fab6c95348cd100acd1aaa5899, as 63 hash-checked Git bundle parts plus restoration metadata and actual native verification receipts. Attach 114 additional exact proof/evidence blobs.\\n\\nThe reconstructed proof passed 3,899 strict build jobs and audited 14,820 declarations, including 193 new declarations. Coverage is 51/69; the main theorem remains unverified. This recovery branch preserves data. The requested main and verified continuation refs are still pending exact proof-object publication.\",\"parents\":[{\"sha\":\"038384aa63af98e44670f96ceddf7f99e52b0f3e\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/038384aa63af98e44670f96ceddf7f99e52b0f3e\",\"html_url\":\"https://github.com/fly31415926/overfull-lean/commit/038384aa63af98e44670f96ceddf7f99e52b0f3e\"}],\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null,\"verified_at\":null}}",
+              "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/commits/c0c7c88e19a634f956027911beb11aa54e3d9674"
+            }
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/main",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "content": "{\"ref\":\"refs/heads/main\",\"node_id\":\"REF_kwDOV2rdlq9yZWZzL2hlYWRzL21haW4\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/main\",\"object\":{\"sha\":\"1c9404a454c99fe5c11ba8d774cb9c259f291f20\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/1c9404a454c99fe5c11ba8d774cb9c259f291f20\"}}",
+            "title": "main",
+            "modified_date": null,
+            "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/main",
+            "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/main",
+            "display_title": "main",
+            "structuredContent": {
+              "title": "main",
+              "content": "{\"ref\":\"refs/heads/main\",\"node_id\":\"REF_kwDOV2rdlq9yZWZzL2hlYWRzL21haW4\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/main\",\"object\":{\"sha\":\"1c9404a454c99fe5c11ba8d774cb9c259f291f20\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/1c9404a454c99fe5c11ba8d774cb9c259f291f20\"}}",
+              "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/main"
+            }
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/verified-bipartite-continuation-2026-11-21",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "content": "{\"ref\":\"refs/heads/verified-bipartite-continuation-2026-11-21\",\"node_id\":\"REF_kwDOV2rdltoANXJlZnMvaGVhZHMvdmVyaWZpZWQtYmlwYXJ0aXRlLWNvbnRpbnVhdGlvbi0yMDI2LTExLTIx\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/verified-bipartite-continuation-2026-11-21\",\"object\":{\"sha\":\"1c9404a454c99fe5c11ba8d774cb9c259f291f20\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/1c9404a454c99fe5c11ba8d774cb9c259f291f20\"}}",
+            "title": "verified-bipartite-continuation-2026-11-21",
+            "modified_date": null,
+            "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/verified-bipartite-continuation-2026-11-21",
+            "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/verified-bipartite-continuation-2026-11-21",
+            "display_title": "verified-bipartite-continuation-2026-11-21",
+            "structuredContent": {
+              "title": "verified-bipartite-continuation-2026-11-21",
+              "content": "{\"ref\":\"refs/heads/verified-bipartite-continuation-2026-11-21\",\"node_id\":\"REF_kwDOV2rdltoANXJlZnMvaGVhZHMvdmVyaWZpZWQtYmlwYXJ0aXRlLWNvbnRpbnVhdGlvbi0yMDI2LTExLTIx\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/verified-bipartite-continuation-2026-11-21\",\"object\":{\"sha\":\"1c9404a454c99fe5c11ba8d774cb9c259f291f20\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/1c9404a454c99fe5c11ba8d774cb9c259f291f20\"}}",
+              "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/verified-bipartite-continuation-2026-11-21"
+            }
+          },
+          "isError": false
+        }
+      }
+    }
+  ]
+}

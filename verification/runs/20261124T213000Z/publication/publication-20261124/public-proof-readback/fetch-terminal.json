@@ -1,0 +1,51 @@
+{
+  "command": [
+    "git",
+    "--no-replace-objects",
+    "-c",
+    "credential.helper=",
+    "-c",
+    "http.extraHeader=",
+    "-c",
+    "core.hooksPath=/dev/null",
+    "-c",
+    "protocol.allow=never",
+    "-c",
+    "protocol.https.allow=always",
+    "-c",
+    "fetch.writeCommitGraph=false",
+    "-c",
+    "maintenance.auto=0",
+    "-c",
+    "gc.auto=0",
+    "fetch",
+    "--no-tags",
+    "--no-write-fetch-head",
+    "--recurse-submodules=no",
+    "--no-auto-maintenance",
+    "https://github.com/fly31415926/overfull-lean.git",
+    "db841575ca2c427e230387c1c95fa74bedb463d6"
+  ],
+  "cwd": "/workspace/scratch/05b9e46fe96b/recovery-20261124/public-proof-readback-02",
+  "started_at_utc": "2026-11-24T23:16:40.448168+00:00",
+  "status": "completed",
+  "exit_code": 0,
+  "git_dir": "/workspace/scratch/05b9e46fe96b/recovery-20261124/public-proof-readback-02/isolated.git",
+  "git_no_replace_objects": "1",
+  "git_object_directory_present": false,
+  "git_alternate_object_directories_present": false,
+  "expected_exit_code": 0,
+  "finished_at_utc": "2026-11-24T23:16:47.646812+00:00",
+  "elapsed_seconds": 7.19859586900202,
+  "expected_exit_observed": true,
+  "stdout": {
+    "path": "fetch-stdout.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "fetch-stderr.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

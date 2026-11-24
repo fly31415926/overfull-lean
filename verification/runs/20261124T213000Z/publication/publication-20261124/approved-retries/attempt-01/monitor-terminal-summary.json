@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-24T23:16:08.181113+00:00",
+  "mode": "read_only_monitor",
+  "retry_number": 1,
+  "run_attempt": 2,
+  "run_id": 45506039249,
+  "job_id": 138849283319,
+  "activation_commit": "020bbd8d1ef2ccc17c933680cfdc5f25ad443a1b",
+  "workflow_path": ".github/workflows/publish-verified-db841575.yml",
+  "status": "passed",
+  "job_conclusion": "success",
+  "job_completed_at": "2026-11-24T23:15:31Z",
+  "complete_decoded_log_bytes": 22483,
+  "complete_decoded_log_sha256": "195e797b05484def7821bf99d72b2887e27563649048a10bc5142a38ad470613",
+  "raw_receipt_bytes": 8178,
+  "raw_receipt_sha256": "7f4c3c715abfc9da4fdf50420cc930824960bbff228ff52277fca1ceaab79193",
+  "actual_publication_receipt_status": "passed",
+  "archive_verified": true,
+  "proof_ref_push_attempted": true,
+  "proof_ref_push_completed": true,
+  "proof_ref_published": true,
+  "proof_commit": "db841575ca2c427e230387c1c95fa74bedb463d6",
+  "proof_tree": "a7e59e8303f670fab6c95348cd100acd1aaa5899",
+  "push_exit_code": 0,
+  "push_output": "remote: \nremote: Create a pull request for 'publication-four-core-proof-2026-11-24-2130' on GitHub by visiting:        \nremote:      https://github.com/fly31415926/overfull-lean/pull/new/publication-four-core-proof-2026-11-24-2130        \nremote: \nTo https://github.com/fly31415926/overfull-lean\n * [new branch]      db841575ca2c427e230387c1c95fa74bedb463d6 -> publication-four-core-proof-2026-11-24-2130\n",
+  "proof_ref_readback": {
+    "ref": "refs/heads/publication-four-core-proof-2026-11-24-2130",
+    "node_id": "REF_kwDOV2rdltoANnJlZnMvaGVhZHMvcHVibGljYXRpb24tZm91ci1jb3JlLXByb29mLTIwMjYtMTEtMjQtMjEzMA",
+    "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/publication-four-core-proof-2026-11-24-2130",
+    "object": {
+      "sha": "db841575ca2c427e230387c1c95fa74bedb463d6",
+      "type": "commit",
+      "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/commits/db841575ca2c427e230387c1c95fa74bedb463d6"
+    }
+  },
+  "branch_refs_before": {
+    "refs/heads/main": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+    "refs/heads/verified-bipartite-continuation-2026-11-21": "1c9404a454c99fe5c11ba8d774cb9c259f291f20"
+  },
+  "branch_refs_after": {
+    "refs/heads/main": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+    "refs/heads/publication-four-core-proof-2026-11-24-2130": "db841575ca2c427e230387c1c95fa74bedb463d6",
+    "refs/heads/verified-bipartite-continuation-2026-11-21": "1c9404a454c99fe5c11ba8d774cb9c259f291f20"
+  },
+  "source_publication_refs_unchanged": true,
+  "mutations_performed_by_monitor": false,
+  "reruns_requested_by_monitor": false
+}

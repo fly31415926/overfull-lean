@@ -1,0 +1,86 @@
+{
+  "recorded_at_utc": "2026-11-24T23:05:04.504Z",
+  "purpose": "Read-only check for already imported proof tree after failed push; no retry or workflow execution",
+  "responses": [
+    {
+      "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/trees/a7e59e8303f670fab6c95348cd100acd1aaa5899",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"404\"}"
+            }
+          ],
+          "structuredContent": {
+            "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"404\"}",
+            "error_code": "NOT_FOUND",
+            "error_data": {
+              "message": "Not Found",
+              "documentation_url": "https://docs.github.com/rest/git/trees#get-a-tree",
+              "status": "404"
+            }
+          },
+          "isError": true
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/reconstruction-four-core-2026-11-24-2130",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "content": "{\"ref\":\"refs/heads/reconstruction-four-core-2026-11-24-2130\",\"node_id\":\"REF_kwDOV2rdltoAM3JlZnMvaGVhZHMvcmVjb25zdHJ1Y3Rpb24tZm91ci1jb3JlLTIwMjYtMTEtMjQtMjEzMA\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/reconstruction-four-core-2026-11-24-2130\",\"object\":{\"sha\":\"bdbdb217bf3e1fb0724712fa141546e4c2ae00ff\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/bdbdb217bf3e1fb0724712fa141546e4c2ae00ff\"}}",
+            "title": "reconstruction-four-core-2026-11-24-2130",
+            "modified_date": null,
+            "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/reconstruction-four-core-2026-11-24-2130",
+            "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/reconstruction-four-core-2026-11-24-2130",
+            "display_title": "reconstruction-four-core-2026-11-24-2130",
+            "structuredContent": {
+              "title": "reconstruction-four-core-2026-11-24-2130",
+              "content": "{\"ref\":\"refs/heads/reconstruction-four-core-2026-11-24-2130\",\"node_id\":\"REF_kwDOV2rdltoAM3JlZnMvaGVhZHMvcmVjb25zdHJ1Y3Rpb24tZm91ci1jb3JlLTIwMjYtMTEtMjQtMjEzMA\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/reconstruction-four-core-2026-11-24-2130\",\"object\":{\"sha\":\"bdbdb217bf3e1fb0724712fa141546e4c2ae00ff\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/fly31415926/overfull-lean/git/commits/bdbdb217bf3e1fb0724712fa141546e4c2ae00ff\"}}",
+              "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/ref/heads/reconstruction-four-core-2026-11-24-2130"
+            }
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/matching-refs/heads/publication-four-core-proof-2026-11-24-2130",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "content": "[]",
+            "title": "publication-four-core-proof-2026-11-24-2130",
+            "modified_date": null,
+            "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/matching-refs/heads/publication-four-core-proof-2026-11-24-2130",
+            "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/matching-refs/heads/publication-four-core-proof-2026-11-24-2130",
+            "display_title": "publication-four-core-proof-2026-11-24-2130",
+            "structuredContent": {
+              "title": "publication-four-core-proof-2026-11-24-2130",
+              "content": "[]",
+              "display_url": "https://api.github.com/repos/fly31415926/overfull-lean/git/matching-refs/heads/publication-four-core-proof-2026-11-24-2130"
+            }
+          },
+          "isError": false
+        }
+      }
+    }
+  ]
+}

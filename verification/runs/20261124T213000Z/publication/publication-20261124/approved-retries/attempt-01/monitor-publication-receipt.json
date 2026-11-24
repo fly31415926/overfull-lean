@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "kind": "exact_verified_bundle_publication",
+  "mode": "publish",
+  "repository": "fly31415926/overfull-lean",
+  "proof_branch": "publication-four-core-proof-2026-11-24-2130",
+  "transfer_branch": "reconstruction-four-core-2026-11-24-2130",
+  "archive_prefix": "publication-transfer/verified-db841575",
+  "started_at_utc": "2026-11-24T23:15:25.122573+00:00",
+  "github_run_id": "45506039249",
+  "github_sha": "020bbd8d1ef2ccc17c933680cfdc5f25ad443a1b",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "--no-replace-objects",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "protocol.allow=never",
+        "rev-parse",
+        "1c9404a454c99fe5c11ba8d774cb9c259f291f20^{tree}"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.001838483000000224,
+      "output": "087e26b5f004af1f9423a6f2b137d805f5991f1a\n",
+      "output_sha256": "85b53244c51ed7f3507c5fec41098a3bad05a7607bc6638721af34c92666175c"
+    },
+    {
+      "argv": [
+        "git",
+        "--no-replace-objects",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "protocol.allow=never",
+        "bundle",
+        "verify",
+        "/tmp/overfull-reviewed-bundle-wvwhg_gi/proof.bundle"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.002871805999994592,
+      "output": "/tmp/overfull-reviewed-bundle-wvwhg_gi/proof.bundle is okay\nThe bundle contains this ref:\ndb841575ca2c427e230387c1c95fa74bedb463d6 HEAD\nThe bundle requires this ref:\n1c9404a454c99fe5c11ba8d774cb9c259f291f20 \nThe bundle uses this hash algorithm: sha1\n",
+      "output_sha256": "a59cb8ed4f2e99173af0e683e8c7c7e943a3f31ea3f9febab89ae2adfda8c997"
+    },
+    {
+      "argv": [
+        "git",
+        "--no-replace-objects",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "protocol.allow=never",
+        "bundle",
+        "list-heads",
+        "/tmp/overfull-reviewed-bundle-wvwhg_gi/proof.bundle"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.0009089489999993816,
+      "output": "db841575ca2c427e230387c1c95fa74bedb463d6 HEAD\n",
+      "output_sha256": "c6a39ec5716a13cfde81cbb6c1f8c3b1a07d02a500e0c9206393a333dd56955d"
+    },
+    {
+      "argv": [
+        "git",
+        "--no-replace-objects",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "protocol.allow=never",
+        "-c",
+        "protocol.file.allow=always",
+        "fetch",
+        "--no-write-fetch-head",
+        "--no-tags",
+        "--recurse-submodules=no",
+        "/tmp/overfull-reviewed-bundle-wvwhg_gi/proof.bundle",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.17904277099999888,
+      "output": "",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "git",
+        "--no-replace-objects",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "protocol.allow=never",
+        "rev-parse",
+        "db841575ca2c427e230387c1c95fa74bedb463d6^{tree}"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.0014121590000044648,
+      "output": "a7e59e8303f670fab6c95348cd100acd1aaa5899\n",
+      "output_sha256": "72ac947e5fd52676ff711975251e532ce0189a6c4ef2dedce27f57c44b4e34c4"
+    },
+    {
+      "argv": [
+        "git",
+        "--no-replace-objects",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "protocol.allow=never",
+        "show",
+        "-s",
+        "--format=%P",
+        "db841575ca2c427e230387c1c95fa74bedb463d6"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.002510258999997461,
+      "output": "1c9404a454c99fe5c11ba8d774cb9c259f291f20\n",
+      "output_sha256": "87d31e6e7eab066c730c4dd76bed41e585b78de028e4d328e09cf57ea75c95fb"
+    },
+    {
+      "argv": [
+        "git",
+        "--no-replace-objects",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "protocol.allow=never",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.0009209600000019691,
+      "output": "020bbd8d1ef2ccc17c933680cfdc5f25ad443a1b\n",
+      "output_sha256": "0838ef04033e29e4c52c1a198049e0037cc0de9f201794893a2ba3cc698663d4"
+    },
+    {
+      "argv": [
+        "git",
+        "--no-replace-objects",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "protocol.allow=never",
+        "-c",
+        "protocol.https.allow=always",
+        "ls-remote",
+        "--refs",
+        "origin",
+        "refs/heads/publication-four-core-proof-2026-11-24-2130",
+        "refs/heads/main",
+        "refs/heads/verified-bipartite-continuation-2026-11-21"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.21415441100000265,
+      "output": "1c9404a454c99fe5c11ba8d774cb9c259f291f20\trefs/heads/main\n1c9404a454c99fe5c11ba8d774cb9c259f291f20\trefs/heads/verified-bipartite-continuation-2026-11-21\n",
+      "output_sha256": "0f7dbae96f6d40d66baa6e478a6da14d36c861538639c03a9377e1b201ea4e80"
+    },
+    {
+      "argv": [
+        "git",
+        "--no-replace-objects",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "protocol.allow=never",
+        "-c",
+        "protocol.https.allow=always",
+        "push",
+        "--no-follow-tags",
+        "origin",
+        "db841575ca2c427e230387c1c95fa74bedb463d6:refs/heads/publication-four-core-proof-2026-11-24-2130"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.7291929269999926,
+      "output": "remote: \nremote: Create a pull request for 'publication-four-core-proof-2026-11-24-2130' on GitHub by visiting:        \nremote:      https://github.com/fly31415926/overfull-lean/pull/new/publication-four-core-proof-2026-11-24-2130        \nremote: \nTo https://github.com/fly31415926/overfull-lean\n * [new branch]      db841575ca2c427e230387c1c95fa74bedb463d6 -> publication-four-core-proof-2026-11-24-2130\n",
+      "output_sha256": "997565289162f89d267861c667756aa31dc1b7920a88c97bd283655ba44eab1c"
+    },
+    {
+      "argv": [
+        "git",
+        "--no-replace-objects",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "protocol.allow=never",
+        "-c",
+        "protocol.https.allow=always",
+        "ls-remote",
+        "--refs",
+        "origin",
+        "refs/heads/publication-four-core-proof-2026-11-24-2130",
+        "refs/heads/main",
+        "refs/heads/verified-bipartite-continuation-2026-11-21"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.32934385500000474,
+      "output": "1c9404a454c99fe5c11ba8d774cb9c259f291f20\trefs/heads/main\ndb841575ca2c427e230387c1c95fa74bedb463d6\trefs/heads/publication-four-core-proof-2026-11-24-2130\n1c9404a454c99fe5c11ba8d774cb9c259f291f20\trefs/heads/verified-bipartite-continuation-2026-11-21\n",
+      "output_sha256": "f7487e5dea7d58ce1fca0898faca046fbcfe25657117b94248ea0d83be6b7173"
+    }
+  ],
+  "evidence_reads": [
+    {
+      "path": "verification/runs/20261124T213000Z/full-01/terminal.json",
+      "bytes": 8043,
+      "sha256": "a37d7c63a9c63d45a5dff5e149f7af506074ef3f29a8c30a5b3a36494055de35",
+      "git_blob_sha1": "f3945e0d0f9ccf714c293f61e51e569245b83d9e"
+    },
+    {
+      "path": "verification/runs/20261124T213000Z/preservation.json",
+      "bytes": 3174,
+      "sha256": "063ca29f4c71a5cd983d6f2c83b03c8597240f198ef82b771dbb83f35d9f387c",
+      "git_blob_sha1": "91f095322661d3fa92f9aaed5381de8d485afe3b"
+    },
+    {
+      "path": "verification/results.json",
+      "bytes": 3779925,
+      "sha256": "ea9bffe564b96ff00ce33caf29c3d097a33fea3f826a995597738cb3cbd67237",
+      "git_blob_sha1": "05dcb9fa57b9acddcbfcb76f516926cf12386dcb"
+    },
+    {
+      "path": "verification/runs/20261124T213000Z/full-01/output.log",
+      "bytes": 2765009,
+      "sha256": "e126a529c3a9a1c0113987abacb529bac13144db98f2082e054d816946789b6c",
+      "git_blob_sha1": "6e5d234cff70e63d80565213b44bb40a83bfe505"
+    },
+    {
+      "path": "verification/runs/20261124T213000Z/full-01/frozen-inputs.json",
+      "bytes": 97014,
+      "sha256": "4a78932a2ce275f7ee5fca0e7375ee8ff3e334cbc1a18ee5fb3d192d6d5aaef2",
+      "git_blob_sha1": "4522f9b1049906dc4199525d22ad3e78b4ae351d"
+    },
+    {
+      "path": "verification/runs/20261124T213000Z/full-01/frozen-controls.json",
+      "bytes": 2370,
+      "sha256": "68380fbe471ff36c60d6c8cb4e1aab787bb88c5507bdded7d132c8b687c2f096",
+      "git_blob_sha1": "3aaeea68ff5e830bc83c3ca530292eb06569ae68"
+    },
+    {
+      "path": "verification/runs/20261124T213000Z/full-01/command.json",
+      "bytes": 8043,
+      "sha256": "a37d7c63a9c63d45a5dff5e149f7af506074ef3f29a8c30a5b3a36494055de35",
+      "git_blob_sha1": "f3945e0d0f9ccf714c293f61e51e569245b83d9e"
+    }
+  ],
+  "status": "passed",
+  "network_commands_requested": true,
+  "proof_ref_push_attempted": true,
+  "proof_ref_push_completed": true,
+  "proof_ref_published": true,
+  "requested_publication_branches_advanced": false,
+  "later_connector_publication_refs": [
+    "refs/heads/main",
+    "refs/heads/verified-bipartite-continuation-2026-11-21"
+  ],
+  "archive_verified": true,
+  "proof_commit": "db841575ca2c427e230387c1c95fa74bedb463d6",
+  "proof_tree": "a7e59e8303f670fab6c95348cd100acd1aaa5899",
+  "parent_commit": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+  "manifest_sha256": "7fac099d28d334ae8cb104dfd52a2e95533d40c515db310fbadb3cdc5949ec61",
+  "bundle_sha256": "b28ad8fdf21678b583458683c58d04ce7cb823c9dc08b7932b988f22aa54d57e",
+  "bundle_bytes": 2101917,
+  "part_count": 63,
+  "full_verifier_exit_code": 0,
+  "main_theorem_verified": false,
+  "branch_refs_before": {
+    "refs/heads/main": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+    "refs/heads/verified-bipartite-continuation-2026-11-21": "1c9404a454c99fe5c11ba8d774cb9c259f291f20"
+  },
+  "branch_refs_after": {
+    "refs/heads/main": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+    "refs/heads/publication-four-core-proof-2026-11-24-2130": "db841575ca2c427e230387c1c95fa74bedb463d6",
+    "refs/heads/verified-bipartite-continuation-2026-11-21": "1c9404a454c99fe5c11ba8d774cb9c259f291f20"
+  },
+  "source_publication_refs_unchanged": true,
+  "finished_at_utc": "2026-11-24T23:15:28.644808+00:00",
+  "elapsed_seconds": 3.5222558409999962
+}
