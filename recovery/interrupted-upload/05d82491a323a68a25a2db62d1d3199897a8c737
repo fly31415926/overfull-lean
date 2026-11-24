@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "genuine_native_publication_command",
+  "attempt": "native-preservation-01",
+  "command": [
+    "python3",
+    "verification/runs/20261124T173400Z/check-preservation.py",
+    "full-01"
+  ],
+  "cwd": "/workspace/scratch/05b9e46fe96b/overfull-lean",
+  "environment_overrides": {
+    "GIT_TERMINAL_PROMPT": "0"
+  },
+  "recorder_sha256": "c8e9f9809efdf7310e87a4f16de4e3e595a7e59e842595e1b4af839b060fde36",
+  "started_at_utc": "2026-11-24T18:20:37.321121+00:00",
+  "finished_at_utc": "2026-11-24T18:20:38.137681+00:00",
+  "elapsed_seconds": 0.8167142829988734,
+  "process_started": true,
+  "exit_code": 0,
+  "wrapper_exit_code": 0,
+  "status": "passed",
+  "output_sha256": "36e59499dcc69da5b5d2826ec04a3ed44a5b2ba4b2cd7764402678928d1048bf",
+  "received_signals": [],
+  "process_group_signals": [],
+  "wrapper_errors": [],
+  "pid": 3,
+  "output_bytes": 2787
+}
