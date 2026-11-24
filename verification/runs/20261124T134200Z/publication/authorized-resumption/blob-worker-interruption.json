@@ -1,0 +1,37 @@
+{
+  "kind": "large_blob_worker_interruption",
+  "recorded_at_utc": "2026-11-24T14:52:02.273146+00:00",
+  "worker": "/root/publish_large_blobs",
+  "approved_checkpoint": "2188bd1233aa66e32195e743ac8b32f97a2bbec2",
+  "assigned_orchestration_blob_indices": [
+    0,
+    1
+  ],
+  "assigned_orchestration_blob_shas": [
+    "3337b9ceba6d795d31e95e723d82e130a526a4d6",
+    "36a07bbe592a7127c284e622bcb4bf31c9c735f9"
+  ],
+  "orchestration_description": "Sequentially read ordered JSON chunks in groups of eight, assemble one blob, call create_blob, preserve its response, and only then proceed to the next blob.",
+  "exec_cell_id": "g5:3",
+  "initial_exec_observation": "Script running with cell ID g5:3",
+  "wait_observation": "aborted by user after 899.7s",
+  "resume_command": {
+    "cell_id": "g5:3",
+    "yield_time_ms": 1000,
+    "max_tokens": 2000
+  },
+  "resume_observation": "Script error: exec cell 3 not found",
+  "confirmed_api_response": null,
+  "confirmed_api_status": null,
+  "confirmed_blob_completions": [],
+  "observed_rejection": false,
+  "remote_execution_status": "unknown",
+  "not_started_by_this_worker_indices": [
+    2,
+    4
+  ],
+  "known_live_cell": false,
+  "orchestration_source": null,
+  "orchestration_source_omission_reason": "No source-byte artifact was saved before the interruption; the source is omitted rather than reconstructed.",
+  "note": "No create_blob response, success, rejection, or error was returned to this worker before interruption. The worker did not retry or start another upload after interruption. An absent response must not be represented as a passed or failed upload."
+}

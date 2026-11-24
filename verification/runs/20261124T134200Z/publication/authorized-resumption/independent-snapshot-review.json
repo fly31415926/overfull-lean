@@ -1,0 +1,532 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "reviewer": "tight_shore",
+  "checked_at_utc": "2026-11-24T14:34:41.282078+00:00",
+  "approved_commit": "2188bd1233aa66e32195e743ac8b32f97a2bbec2",
+  "approved_tree": "46dda25b581f227718eb3c32a6ee4e6d88d3116d",
+  "baseline_commit": "3991bb7eee091a329046073e0366daa84a603e5d",
+  "baseline_tree": "6424bf81123aa75b2254aea7eceff6260611f397",
+  "method": "Independent comparison of Git blob bytes at the approved commit against frozen manifests, actual raw command/kernel logs, prior git objects, preserved evidence, and the previously reviewed workspace. No Lean rerun, control-script rerun, index write, or Git ref mutation.",
+  "frozen_input_count": 826,
+  "frozen_control_count": 17,
+  "output_count": 25,
+  "nonpublication_run_file_count": 2149,
+  "checked_committed_path_count": 3000,
+  "checked_unique_blob_count": 1077,
+  "checked_path_git_object_map_sha256": "2324ef988b4e8349fd6d893ff9cd67269eb7c321ef406bbbe418cb28f4343124",
+  "build_jobs": 3874,
+  "audited_declarations": 14627,
+  "previous_audited_declarations_preserved": 14260,
+  "new_audited_declarations": 367,
+  "previous_completed_mappings_preserved": 2609,
+  "previous_declaration_maps_preserved": 19,
+  "new_module_count": 28,
+  "new_public_proof_count": 168,
+  "additional_kernel_proof_count": 199,
+  "development_attempt_count": 81,
+  "development_file_count": 1252,
+  "development_status_counts": {
+    "failed": 41,
+    "passed": 40
+  },
+  "terminal_receipt_sha256": "18f27dde12dd0388d9bdf2af4c34410ed20c625f50fcdc1fec022db543a56a0d",
+  "preservation_sha256": "adf1cb8b9acb301f8ddd0f52c1edc44ba3ec8d914e6d59172fb76e24fb554a5f",
+  "coverage": {
+    "complete": 49,
+    "total": 69,
+    "main_theorem_verified": false
+  },
+  "checks": [
+    {
+      "check": "head_is_exact_user_approved_commit",
+      "passed": true
+    },
+    {
+      "check": "approved_commit_tree_identity",
+      "passed": true
+    },
+    {
+      "check": "baseline_tree_identity",
+      "passed": true
+    },
+    {
+      "check": "approved_commit_parent_is_verified_baseline",
+      "passed": true
+    },
+    {
+      "check": "nonpublication_run_inventory_exact",
+      "passed": true
+    },
+    {
+      "check": "3000_relevant_paths_committed",
+      "passed": true
+    },
+    {
+      "check": "relevant_paths_are_regular_git_blobs",
+      "passed": true
+    },
+    {
+      "check": "all_requested_git_objects_read",
+      "passed": true
+    },
+    {
+      "check": "all_3000_committed_files_equal_reviewed_workspace_bytes",
+      "passed": true
+    },
+    {
+      "check": "all_826_committed_inputs_match_frozen_hashes",
+      "passed": true
+    },
+    {
+      "check": "all_17_committed_controls_match_frozen_hashes",
+      "passed": true
+    },
+    {
+      "check": "all_25_committed_outputs_match_hashes_and_sizes",
+      "passed": true
+    },
+    {
+      "check": "actual_finished_receipt_passed",
+      "passed": true
+    },
+    {
+      "check": "command_terminal_receipts_identical",
+      "passed": true
+    },
+    {
+      "check": "raw_full_output_hash_matches_receipt",
+      "passed": true
+    },
+    {
+      "check": "preservation_bound_to_genuine_receipt",
+      "passed": true
+    },
+    {
+      "check": "reported_inputs_equal_exact_frozen_inventory",
+      "passed": true
+    },
+    {
+      "check": "build_success_3874_jobs",
+      "passed": true
+    },
+    {
+      "check": "actual_build_and_audit_logs_retained_in_raw_stdout",
+      "passed": true
+    },
+    {
+      "check": "raw_kernel_records_exactly_14627_reported_proofs",
+      "passed": true
+    },
+    {
+      "check": "all_14260_baseline_names_owners_axioms_preserved",
+      "passed": true
+    },
+    {
+      "check": "only_three_standard_axioms",
+      "passed": true
+    },
+    {
+      "check": "all_2609_baseline_completed_mappings_preserved",
+      "passed": true
+    },
+    {
+      "check": "all_19_baseline_declaration_maps_preserved",
+      "passed": true
+    },
+    {
+      "check": "all_prior_immutable_inputs_preserved",
+      "passed": true
+    },
+    {
+      "check": "stock_kernel_audit_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "root_changes_only_recorded_imports",
+      "passed": true
+    },
+    {
+      "check": "additive_unique_verifier_edit",
+      "passed": true
+    },
+    {
+      "check": "additive_unique_verifier_edit",
+      "passed": true
+    },
+    {
+      "check": "additive_unique_verifier_edit",
+      "passed": true
+    },
+    {
+      "check": "additive_unique_verifier_edit",
+      "passed": true
+    },
+    {
+      "check": "verifier_only_four_recorded_additions",
+      "passed": true
+    },
+    {
+      "check": "28_new_module_sources_complete_and_exact",
+      "passed": true
+    },
+    {
+      "check": "367_new_proofs_all_mapped_by_module_ownership",
+      "passed": true
+    },
+    {
+      "check": "all_168_public_proofs_present_with_correct_owner",
+      "passed": true
+    },
+    {
+      "check": "all_new_map_source_identities_match",
+      "passed": true
+    },
+    {
+      "check": "coverage_inventory_and_statement_hashes_unchanged",
+      "passed": true
+    },
+    {
+      "check": "49_of_69_no_main_claim",
+      "passed": true
+    },
+    {
+      "check": "all_1252_development_files_committed_and_indexed",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:four-characterization-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:four-characterization-build-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:four-existence-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:four-joining-complete-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:four-nonlocal-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:four-nonlocal-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:four-nonlocal-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-coarsening-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-coarsening-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-coarsening-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-coarsening-04",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-complete-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-complete-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-complete-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-cycle-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-cycle-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-cycle-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-cycle-04",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-cycle-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-diamond-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-diamond-build-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-diamond-build-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-safe-selection-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-safe-selection-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-selection-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-selection-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-selection-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-support-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-support-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-support-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-triangles-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-triangles-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:strict-triangles-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:support-classification-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:support-classification-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:support-classification-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:support-reduction-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:support-reduction-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:support-reduction-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-assembly-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-assembly-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-blocks-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-closed-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-closed-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-completion-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-completion-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-completion-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-contraction-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-contraction-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-contraction-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-contraction-04",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-contraction-05",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-contraction-06",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-contraction-07",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-contraction-08",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-contraction-09",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-expansion-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-expansion-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-inside-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-inside-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-inside-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-inside-04",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-inside-05",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-inside-06",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-outside-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-outside-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-outside-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-outside-geometry-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-outside-geometry-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-pairing-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-pairing-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-piece-geometry-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-piece-geometry-build-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-pieces-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-pieces-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-pieces-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:tight-restriction-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:uniform-cycle-01",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:uniform-cycle-02",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:uniform-cycle-03",
+      "passed": true
+    },
+    {
+      "check": "genuine_development_receipt:uniform-cycle-build-01",
+      "passed": true
+    },
+    {
+      "check": "81_attempts_successes_and_failures_honestly_preserved",
+      "passed": true
+    },
+    {
+      "check": "prior_independent_audit_review_committed_intact",
+      "passed": true
+    }
+  ],
+  "findings": [],
+  "conclusion": "No blocker to publishing the exact approved commit/tree. Later review and publication receipts belong in a receipt-only follow-up; remote identity requires subsequent independent readback."
+}

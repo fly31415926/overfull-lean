@@ -1,55 +1,71 @@
-# Publication status: verified locally, blocked by approval review
+# Publication of the verified four-label checkpoint
 
-The complete frozen verifier and preservation gate passed. The independent
-final review passed 335 checks. The local proof has 14,627 audited declarations,
-including 367 new declarations across 28 new modules. Numbered coverage remains
-49/69, and the main theorem remains incomplete.
+The approved checkpoint's exact contents were published to both `main` and
+`verified-bipartite-continuation-2026-11-21` in the public repository
+`fly31415926/overfull-lean`.
 
-Public publication is not complete. Automatic approval review rejected two
-content uploads because it could not establish current user-authored permission
-for public egress of this new snapshot's source, logs, and metadata. The exact
-responses are preserved in `proof-transport/content-0004.json` and
-`proof-transport/content-0007.json`.
+| Identity | Value |
+| --- | --- |
+| Approved local checkpoint | `2188bd1233aa66e32195e743ac8b32f97a2bbec2` |
+| Public proof commit | `c8e1796c4315596e8f161a1b20216ed983be382e` |
+| Exact approved and public tree | `46dda25b581f227718eb3c32a6ee4e6d88d3116d` |
+| Direct baseline parent | `3991bb7eee091a329046073e0366daa84a603e5d` |
 
-The first four content batches succeeded. The next four were launched
-concurrently: batches 5 and 6 succeeded, and batches 4 and 7 were rejected.
-All four completed responses were collected and preserved before stopping.
-No further upload was attempted, no final repository tree was assembled,
-no public commit was created, and neither branch was advanced. Fresh API
-readbacks confirm both branches remain at `3991bb7eee091a329046073e0366daa84a603e5d`.
+The connected GitHub API creates its own commit metadata, so the public
+commit identifier differs from the approved local identifier. Their complete
+trees are identical: all 12,807 tracked paths, modes, and blob identities
+are preserved. The raw approved local commit object and its verified Git
+hash are retained under `authorized-resumption/approved-commit-object.txt`
+and `approved-commit-identity.json` in that directory.
 
-The earlier project approvals were retrieved through Personal Context. The
-latest explicit approval referred to the preceding snapshot; no explicit
-standing authorization for future snapshots was found. The frozen run-level
-authorization note preserves the pre-rejection understanding and is not fresh
-authorization. See `authorization-check.json` for the later correction.
-The rejection was not bypassed through another tool, endpoint, or recipient.
+## Verification and independent readback
 
-## Concrete verified snapshot
+The complete strict build passed 3,874 jobs. The unchanged kernel audit
+checked 14,627 declarations, including 367 new proofs across 28 modules.
+All 14,260 previous declaration names, owners, and axiom sets, 2,609 previous
+completed-result mappings, and 19 previous declaration maps are preserved.
+The allowed axioms remain `propext`, `Classical.choice`, and `Quot.sound`.
+Numbered coverage remains 49/69; the main theorem remains unverified.
 
-The initially prepared proof tree is
-`c691dabf252b6fe72005963c61ce4128962d7e66`, with 12,787 tracked paths.
-Its exporter and upload-index checks passed. The staged local checkpoint
-subsequently adds only publication records, including these actual rejection
-receipts and the blocked-status documentation. Its immutable mathematical
-inputs, controls, source maps, results, and full-run evidence are unchanged.
+Every one of the 87 content batches, nine large blobs, and 23 sequential
+final-tree batches has a genuine successful response with its expected
+hash. The final returned tree equals the approved tree above. The created
+commit's tree and parent were read back before either branch was advanced.
+Both branch updates used the inspected baseline head and `force: false`.
 
-The transport metadata records exact content hashes and the expected tree
-after every batch. Successful temporary content trees already materialize
-some Git blobs; they do not constitute a published branch checkpoint.
-The external transport cache can be regenerated with the included helpers.
+GitHub branch readbacks and a separate native Git fetch confirmed both
+branches at the public proof commit. The fetched-object integrity check
+verified all 826 frozen inputs, 17 controls, 25 archived outputs, and all
+2,149 nonpublication run files. It performed 1,736 explicit digest checks;
+all published and frozen bytes match. The exact receipts are under
+`authorized-resumption/`, especially `published-proof-integrity.json`,
+`native-proof-readback.json`, and `proof-publication-status.json`.
 
-## Resumption after explicit authorization
+## Authorization and retained execution history
 
-Refresh both remote heads. Prepare an export from the approved local commit's
-actual tree, preserving every source and evidence file. Retain the original
-rejections and successful responses. Do not overwrite original receipt files
-or represent a rejected upload as successful. Reuse already materialized blob
-objects when their expected hashes are confirmed.
+The user explicitly authorized checkpoint `2188bd1233aa66e32195e743ac8b32f97a2bbec2`
+and its publication receipts, all project sources and documentation,
+public/private/generated declaration maps, paths and hashes, frozen inputs
+and outputs, development artifacts, genuine successful and failed logs,
+and environment metadata, and both named branch updates.
 
-Require the complete returned tree to equal the approved local tree before
-creating a public commit. Advance both branches with the inspected expected
-head and without force, then independently fetch and check the published
-objects and both branch references. Archive publication receipts separately
-without modifying the frozen mathematical verification inputs.
+The earlier automatic-review rejections and partial-upload responses are
+preserved as historical evidence. The old `blocked-status.json` describes
+that earlier state; the successful authorized resumption is recorded
+separately and does not rewrite those events. An interrupted blob worker
+returned no confirmed API result, so its state remains recorded as unknown.
+Separate completed root uploads provide actual matching responses for all
+nine required large objects. No denied action was bypassed; publication
+resumed after the user's explicit authorization.
 
+## Receipt archive
+
+The publication-only follow-up archives the authorization, actual upload
+responses, exact intermediate tree hashes, commit and branch responses,
+GitHub and native-Git readbacks, and independent reviews. It changes only
+files beneath this publication directory and preserves every mathematical
+input and all frozen verification evidence.
+
+This archive records the completed proof publication. Its own final commit
+and branch readbacks are checked after the archive is published and reported
+separately; no receipt claims to contain its own future publication response.

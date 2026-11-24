@@ -1,0 +1,47 @@
+{
+  "recorded_at_utc": "2026-11-24T14:57:09.863234+00:00",
+  "receipts": [
+    {
+      "command": [
+        "git",
+        "fetch",
+        "origin",
+        "main",
+        "verified-bipartite-continuation-2026-11-21"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "From https://github.com/fly31415926/overfull-lean\n * branch            main       -> FETCH_HEAD\n * branch            verified-bipartite-continuation-2026-11-21 -> FETCH_HEAD\n   3991bb7..c8e1796  main       -> origin/main\n   3991bb7..c8e1796  verified-bipartite-continuation-2026-11-21 -> origin/verified-bipartite-continuation-2026-11-21\n"
+    },
+    {
+      "command": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "main",
+        "verified-bipartite-continuation-2026-11-21"
+      ],
+      "exit_code": 0,
+      "stdout": "c8e1796c4315596e8f161a1b20216ed983be382e\trefs/heads/main\nc8e1796c4315596e8f161a1b20216ed983be382e\trefs/heads/verified-bipartite-continuation-2026-11-21\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "verification/runs/20261124T134200Z/publication/verify-published-snapshot.py",
+        "--commit",
+        "c8e1796c4315596e8f161a1b20216ed983be382e",
+        "--tree",
+        "46dda25b581f227718eb3c32a6ee4e6d88d3116d",
+        "--parent",
+        "3991bb7eee091a329046073e0366daa84a603e5d",
+        "--output",
+        "verification/runs/20261124T134200Z/publication/authorized-resumption/published-proof-integrity.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"kind\": \"fetched_public_commit_integrity\",\n  \"verified_at_utc\": \"2026-11-24T14:57:09.847756+00:00\",\n  \"commit\": \"c8e1796c4315596e8f161a1b20216ed983be382e\",\n  \"tree\": \"46dda25b581f227718eb3c32a6ee4e6d88d3116d\",\n  \"parent\": \"3991bb7eee091a329046073e0366daa84a603e5d\",\n  \"tracked_file_count\": 12807,\n  \"continuation_baseline_commit\": \"3991bb7eee091a329046073e0366daa84a603e5d\",\n  \"continuation_baseline_tree\": \"6424bf81123aa75b2254aea7eceff6260611f397\",\n  \"frozen_input_count\": 826,\n  \"frozen_control_count\": 17,\n  \"archived_output_count\": 25,\n  \"nonpublication_run_file_count\": 2149,\n  \"explicit_digest_checks\": 1736,\n  \"unique_blob_bytes_checked\": 1077,\n  \"all_published_and_frozen_bytes_match\": true,\n  \"all_nonpublication_run_files_match_working_evidence\": true,\n  \"command_and_terminal_identical\": true,\n  \"full_verifier_exit_code\": 0,\n  \"full_wrapper_exit_code\": 0,\n  \"passed\": true\n}\n",
+      "stderr": ""
+    }
+  ]
+}

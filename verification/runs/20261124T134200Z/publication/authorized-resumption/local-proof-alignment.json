@@ -1,0 +1,33 @@
+{
+  "recorded_at_utc": "2026-11-24T14:58:45.332260+00:00",
+  "approved_local_commit": "2188bd1233aa66e32195e743ac8b32f97a2bbec2",
+  "retained_local_branch": "approved-local-2188bd1233aa66e3",
+  "public_proof_commit": "c8e1796c4315596e8f161a1b20216ed983be382e",
+  "identical_tree": "46dda25b581f227718eb3c32a6ee4e6d88d3116d",
+  "only_publication_files_modified": true,
+  "working_source_and_index_bytes_preserved": true,
+  "receipts": [
+    {
+      "command": [
+        "git",
+        "branch",
+        "approved-local-2188bd1233aa66e3",
+        "2188bd1233aa66e32195e743ac8b32f97a2bbec2"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "reset",
+        "--soft",
+        "c8e1796c4315596e8f161a1b20216ed983be382e"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

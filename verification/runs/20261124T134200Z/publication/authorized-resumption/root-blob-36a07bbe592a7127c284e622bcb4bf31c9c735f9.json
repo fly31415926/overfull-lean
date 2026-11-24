@@ -1,0 +1,25 @@
+{
+  "kind": "authorized_checkpoint_blob_upload",
+  "started_at_utc": "2026-11-24T14:52:00.152Z",
+  "recorded_at_utc": "2026-11-24T14:52:08.976Z",
+  "approved_local_commit": "2188bd1233aa66e32195e743ac8b32f97a2bbec2",
+  "expected_blob_sha": "36a07bbe592a7127c284e622bcb4bf31c9c735f9",
+  "bytes": 2714368,
+  "sha256": "0b1db33165015a8add4cf04700262d85ffd05235171eec663a15b4cfeb7d115a",
+  "encoding": "utf-8",
+  "chunk_count": 46,
+  "verified": true,
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "sha": "36a07bbe592a7127c284e622bcb4bf31c9c735f9"
+    },
+    "isError": false
+  },
+  "previous_worker_attempt": "Unconfirmed interrupted worker; no response or denial was observed. This separately recorded call supplies the actual confirmed result."
+}
