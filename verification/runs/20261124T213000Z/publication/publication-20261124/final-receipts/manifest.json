@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "lossless_publication_observation_archive",
+  "encoding": "base64-concatenated deterministic gzip tar",
+  "cutoff_at_utc": "2026-11-24T23:25:26.972028+00:00",
+  "canonical_commit": "dc2f17c481b9bbffbbc81296a95ba0f203487cd0",
+  "source_proof_commit": "db841575ca2c427e230387c1c95fa74bedb463d6",
+  "original_file_count": 65,
+  "original_bytes": 776437,
+  "inventory_path": "ARCHIVE_INVENTORY.json",
+  "inventory_sha256": "e900fab53525651238f3654c16b328ad60ca43aeca1338475b994b637771d640",
+  "gzip_bytes": 126018,
+  "gzip_sha256": "397c68ce04d08e4c2ee0926f6a7e9caca254039b84ba91c7d8d0c04cb2edd2a8",
+  "encoded_bytes": 168024,
+  "parts": [
+    {
+      "path": "part-0001.b64",
+      "bytes": 45000,
+      "sha256": "ddf2a133ecbf8caba93053e16f251af4596562ff5ff70e850ed202db87de6b37"
+    },
+    {
+      "path": "part-0002.b64",
+      "bytes": 45000,
+      "sha256": "784687111b2e03873c4d1735440e0167fe881802a0eabad55a103eddc5ded5dc"
+    },
+    {
+      "path": "part-0003.b64",
+      "bytes": 45000,
+      "sha256": "99e378b8ffd4db2aca36a3632117482a3064b902739e2e256bba707404d9f0c3"
+    },
+    {
+      "path": "part-0004.b64",
+      "bytes": 33024,
+      "sha256": "4d3e861da5f811b4df87e6dc87e50b1100e7a6811e9b057255686a1a704c6497"
+    }
+  ],
+  "observations": "Both requested branches were observed at canonical commit C before this receipt archive was attached. The attachment commit is a publication-only child of C; final live branch readbacks follow that attachment."
+}

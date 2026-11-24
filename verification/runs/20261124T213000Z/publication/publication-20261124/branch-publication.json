@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "observed_canonical_publication_branch_updates",
+  "observed_at_utc": "2026-11-24T23:24:32.331Z",
+  "repository": "fly31415926/overfull-lean",
+  "canonical_publication_commit": "dc2f17c481b9bbffbbc81296a95ba0f203487cd0",
+  "canonical_tree": "16784068380fd12c2ce1a18e28d1a1b5af27a7fa",
+  "source_proof_commit": "db841575ca2c427e230387c1c95fa74bedb463d6",
+  "previous_heads": {
+    "main": "1c9404a454c99fe5c11ba8d774cb9c259f291f20",
+    "verified-bipartite-continuation-2026-11-21": "1c9404a454c99fe5c11ba8d774cb9c259f291f20"
+  },
+  "observed_heads": {
+    "main": "dc2f17c481b9bbffbbc81296a95ba0f203487cd0",
+    "verified-bipartite-continuation-2026-11-21": "dc2f17c481b9bbffbbc81296a95ba0f203487cd0"
+  },
+  "both_requested_branches_confirmed": true,
+  "nonforce_expected_head_updates": true,
+  "source_and_frozen_verification_bytes_unchanged": true,
+  "active_temporary_publishing_workflow_absent": true,
+  "canonical_publication_readback": {
+    "recorded_at_utc": "2026-11-24T23:23:46.992625+00:00",
+    "status": "passed",
+    "commit": "dc2f17c481b9bbffbbc81296a95ba0f203487cd0",
+    "tree": "16784068380fd12c2ce1a18e28d1a1b5af27a7fa",
+    "parent": "db841575ca2c427e230387c1c95fa74bedb463d6",
+    "added_publication_files": 301,
+    "added_publication_bytes": 6990490,
+    "all_existing_proof_files_unchanged": true,
+    "active_temporary_workflow_absent": true,
+    "tracked_file_count": 14993,
+    "snapshot_validator_passed": true
+  },
+  "full_actual_receipts_archive": "final-receipts/manifest.json",
+  "archive_sha256": "397c68ce04d08e4c2ee0926f6a7e9caca254039b84ba91c7d8d0c04cb2edd2a8",
+  "receipt_attachment_parent": "dc2f17c481b9bbffbbc81296a95ba0f203487cd0",
+  "observation_scope": "These are genuine observed updates to C. The commit attaching this receipt is a later publication-only child of C; its final live heads are checked after the attachment."
+}
