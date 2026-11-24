@@ -1,0 +1,22 @@
+{
+  "run_id": 45506039022,
+  "job_id": 138841412866,
+  "workflow_path": ".github/workflows/lean.yml",
+  "activation_commit": "020bbd8d1ef2ccc17c933680cfdc5f25ad443a1b",
+  "bytes": 30174,
+  "sha256": "958745a2ef51344a97f6606b9bebf19102ee757e081302f7b4e477fcef50a3d8",
+  "error_lines": [
+    {
+      "line": 165,
+      "text": "2026-11-24T23:00:16.5614764Z Cache not found for input keys: lake-Linux-X64-6604f41dd91c3089283d3429cc26e25c0e6c8692cdf13a7d9168c4cfb2f3b546-05683d447c33e3b63075f27a890ea8e6853d827e6bbfa0f863688e523650f7cd-020bbd8d1ef2ccc17c933680cfdc5f25ad443a1b, lake-Linux-X64-6604f41dd91c3089283d3429cc26e25c0e6c8692cdf13a7d9168c4cfb2f3b546-05683d447c33e3b63075f27a890ea8e6853d827e6bbfa0f863688e523650f7cd"
+    },
+    {
+      "line": 206,
+      "text": "2026-11-24T23:00:16.8151781Z [warning]Path Validation Error: Path(s) specified in the action for caching do(es) not exist, hence no cache is being saved."
+    },
+    {
+      "line": 327,
+      "text": "2026-11-24T23:01:01.5083875Z ##[error]Process completed with exit code 1."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "kind": "canonical_pre_import_publication_history_preparation",
+  "prepared_at_utc": "2026-11-24T22:59:52.427819+00:00",
+  "source_commit": "7d6abf6a77fd484b2ba30d4b2ffd873fefab2ad4",
+  "source_tree": "5a480bf90e7da01eca2a6e7e0f3ecf8438a6b967",
+  "source_parents": [
+    "cde9356f8f764c1ebbf331c6025f2f9b62de298e"
+  ],
+  "source_fetched_at_utc": "2026-11-24T22:59:02.158841+00:00",
+  "source_prefix": "publication-transfer/",
+  "destination_prefix": "verification/runs/20261124T213000Z/publication/publication-20261124/pre-import/",
+  "historical_file_count": 170,
+  "historical_unique_blob_count": 166,
+  "historical_payload_bytes": 5651952,
+  "groups": {
+    "PUBLICATION_STATUS.md": 1,
+    "receipts-db841575": 64,
+    "review-db841575": 11,
+    "status-db841575": 9,
+    "verified-db841575": 85
+  },
+  "all_historical_blob_ids_and_modes_preserved": true,
+  "all_relative_suffixes_preserved": true,
+  "historical_content_bytes_modified": false,
+  "historical_attachments_use_existing_public_blob_ids": true,
+  "new_readme": {
+    "local_path": "/workspace/scratch/05b9e46fe96b/recovery-20261124/canonical-publication-history-01/README.md",
+    "destination_path": "verification/runs/20261124T213000Z/publication/publication-20261124/pre-import/README.md",
+    "bytes": 1134,
+    "sha256": "72cdd67766c03c6a7de8fbe445ade346906346746033764982d9578d46a129e7",
+    "git_blob_sha1": "5d850687996e5483e2a76a77a90f458f77fa8c30",
+    "remote_upload_performed": false
+  },
+  "files": [
+    {
+      "path": "fetch-terminal.json",
+      "bytes": 1026,
+      "sha256": "3a710bff8d9964a62e4cd3edb89ec36d0597d3a45e327bcf12cf6e2048b56e79"
+    },
+    {
+      "path": "source-commit-terminal.json",
+      "bytes": 844,
+      "sha256": "b9180b3367d806d6cd5693bf11e7f59f80310005b60acace859af0e10177bd43"
+    },
+    {
+      "path": "source-publication-tree-terminal.json",
+      "bytes": 920,
+      "sha256": "c8221f2ae99d5c93b37e9618869e7e1fe7c0012cbea6571802b93185014c24e7"
+    },
+    {
+      "path": "attachment-entries.json",
+      "bytes": 41099,
+      "sha256": "955fa0fc4d4570412e03eafc15b3509bbbcffa48e064c5f9e908064c83d44681"
+    },
+    {
+      "path": "readme-attachment.json",
+      "bytes": 1303,
+      "sha256": "ef14d6f43f3239b4f34b704639dc7aa3d1e9b29f9e49f83ca64785fa0fcfbcd3"
+    },
+    {
+      "path": "history-mapping.json",
+      "bytes": 78199,
+      "sha256": "0a897ba35249b9f3c684fe10919f68e0f5e60a4dee250a5fc0290a5905c8df4e"
+    }
+  ],
+  "source_repository_access_performed": false,
+  "commits_created": false,
+  "remote_refs_updated": false,
+  "proof_tests_run": false
+}

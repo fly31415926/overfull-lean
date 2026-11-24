@@ -1,0 +1,154 @@
+﻿2026-11-24T23:00:01.3304375Z Current runner version: '2.338.2'
+2026-11-24T23:00:01.3323172Z ##[group]Runner Image Provisioner
+2026-11-24T23:00:01.3323817Z Hosted Compute Agent
+2026-11-24T23:00:01.3324280Z Version: 20261111.635
+2026-11-24T23:00:01.3324725Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-24T23:00:01.3325336Z Build Date: 2026-11-11T01:49:01Z
+2026-11-24T23:00:01.3326137Z Worker ID: {b5d70f73-762d-4cb7-85c1-1da66cb4e686}
+2026-11-24T23:00:01.3326680Z Region: us-west-2
+2026-11-24T23:00:01.3327102Z Cloud: AWS
+2026-11-24T23:00:01.3327476Z ##[endgroup]
+2026-11-24T23:00:01.3328461Z ##[group]Operating System
+2026-11-24T23:00:01.3328913Z Ubuntu
+2026-11-24T23:00:01.3329296Z 26.04.1
+2026-11-24T23:00:01.3329669Z LTS
+2026-11-24T23:00:01.3330034Z ##[endgroup]
+2026-11-24T23:00:01.3330406Z ##[group]Runner Image
+2026-11-24T23:00:01.3330850Z Image: ubuntu-26.04
+2026-11-24T23:00:01.3331292Z Version: 20261116.88.1
+2026-11-24T23:00:01.3332187Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.88/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-24T23:00:01.3333260Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.88
+2026-11-24T23:00:01.3334013Z ##[endgroup]
+2026-11-24T23:00:01.3334778Z ##[group]GITHUB_TOKEN Permissions
+2026-11-24T23:00:01.3336895Z Contents: write
+2026-11-24T23:00:01.3337358Z Metadata: read
+2026-11-24T23:00:01.3337774Z ##[endgroup]
+2026-11-24T23:00:01.3339294Z Secret source: Actions
+2026-11-24T23:00:01.3340175Z Cache mode: write
+2026-11-24T23:00:01.3340657Z Prepare workflow directory
+2026-11-24T23:00:01.3567003Z Prepare all required actions
+2026-11-24T23:00:01.3602926Z Getting action download info
+2026-11-24T23:00:01.7327167Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-24T23:00:03.6903565Z Complete job name: publish-exact-proof
+2026-11-24T23:00:03.7621450Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-11-24T23:00:03.7623072Z with:
+2026-11-24T23:00:03.7623909Z   fetch-depth: 0
+2026-11-24T23:00:03.7624772Z   repository: fly31415926/overfull-lean
+2026-11-24T23:00:03.7632290Z   token: ***
+2026-11-24T23:00:03.7633129Z   ssh-strict: true
+2026-11-24T23:00:03.7633935Z   ssh-user: git
+2026-11-24T23:00:03.7634746Z   persist-credentials: true
+2026-11-24T23:00:03.7635798Z   clean: true
+2026-11-24T23:00:03.7636646Z   sparse-checkout-cone-mode: true
+2026-11-24T23:00:03.7637638Z   fetch-tags: false
+2026-11-24T23:00:03.7638456Z   show-progress: true
+2026-11-24T23:00:03.7639273Z   lfs: false
+2026-11-24T23:00:03.7640061Z   submodules: false
+2026-11-24T23:00:03.7640901Z   set-safe-directory: true
+2026-11-24T23:00:03.7641823Z   allow-unsafe-pr-checkout: false
+2026-11-24T23:00:03.7642957Z ##[endgroup]
+2026-11-24T23:00:07.8306603Z Syncing repository: fly31415926/overfull-lean
+2026-11-24T23:00:07.8308312Z ##[group]Getting Git version info
+2026-11-24T23:00:07.8308731Z Working directory is '/home/runner/work/overfull-lean/overfull-lean'
+2026-11-24T23:00:07.8309436Z [command]/usr/bin/git version
+2026-11-24T23:00:07.8313429Z git version 2.56.1
+2026-11-24T23:00:07.8314825Z ##[endgroup]
+2026-11-24T23:00:07.8321871Z Temporarily overriding HOME='/home/runner/work/_temp/3f496ef9-1f21-4038-9338-65c47e6205b5' before making global git config changes
+2026-11-24T23:00:07.8323228Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-24T23:00:07.8326531Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/overfull-lean/overfull-lean
+2026-11-24T23:00:07.8417470Z Deleting the contents of '/home/runner/work/overfull-lean/overfull-lean'
+2026-11-24T23:00:07.8423243Z ##[group]Initializing the repository
+2026-11-24T23:00:07.8426749Z [command]/usr/bin/git init /home/runner/work/overfull-lean/overfull-lean
+2026-11-24T23:00:07.9338475Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-24T23:00:07.9339166Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-24T23:00:07.9340022Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-24T23:00:07.9340456Z hint: call:
+2026-11-24T23:00:07.9340726Z hint:
+2026-11-24T23:00:07.9341152Z hint: 	git config --global init.defaultBranch <name>
+2026-11-24T23:00:07.9341614Z hint:
+2026-11-24T23:00:07.9341984Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-24T23:00:07.9342502Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-24T23:00:07.9342894Z hint:
+2026-11-24T23:00:07.9343155Z hint: 	git branch -m <name>
+2026-11-24T23:00:07.9343444Z hint:
+2026-11-24T23:00:07.9343795Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-24T23:00:07.9364356Z Initialized empty Git repository in /home/runner/work/overfull-lean/overfull-lean/.git/
+2026-11-24T23:00:07.9372645Z [command]/usr/bin/git remote add origin https://github.com/fly31415926/overfull-lean
+2026-11-24T23:00:07.9442371Z ##[endgroup]
+2026-11-24T23:00:07.9442899Z ##[group]Disabling automatic garbage collection
+2026-11-24T23:00:07.9444438Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-24T23:00:07.9466298Z ##[endgroup]
+2026-11-24T23:00:07.9466760Z ##[group]Setting up auth
+2026-11-24T23:00:07.9470945Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-24T23:00:07.9491532Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-24T23:00:08.2957325Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-24T23:00:08.2977822Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-24T23:00:08.3147743Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-24T23:00:08.3168451Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-24T23:00:08.3338236Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-24T23:00:08.3362671Z ##[endgroup]
+2026-11-24T23:00:08.3363043Z ##[group]Fetching the repository
+2026-11-24T23:00:08.3368594Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-11-24T23:00:12.1003431Z From https://github.com/fly31415926/overfull-lean
+2026-11-24T23:00:12.1004075Z  * [new branch]      boundary-schedule-sources-2026-11-23 -> origin/boundary-schedule-sources-2026-11-23
+2026-11-24T23:00:12.1004882Z  * [new branch]      compatible-circuits-2026-11-21 -> origin/compatible-circuits-2026-11-21
+2026-11-24T23:00:12.1005832Z  * [new branch]      continuation-attempt/20261122T235931Z -> origin/continuation-attempt/20261122T235931Z
+2026-11-24T23:00:12.1006568Z  * [new branch]      continuation-attempt/20261123T005647Z -> origin/continuation-attempt/20261123T005647Z
+2026-11-24T23:00:12.1007291Z  * [new branch]      continuation-attempt/20261123T010829Z -> origin/continuation-attempt/20261123T010829Z
+2026-11-24T23:00:12.1007952Z  * [new branch]      continuation-attempt/20261123T042619Z -> origin/continuation-attempt/20261123T042619Z
+2026-11-24T23:00:12.1008535Z  * [new branch]      continuation-attempt/20261123T045248Z -> origin/continuation-attempt/20261123T045248Z
+2026-11-24T23:00:12.1009038Z  * [new branch]      continuation-attempt/20261123T055027Z -> origin/continuation-attempt/20261123T055027Z
+2026-11-24T23:00:12.1009597Z  * [new branch]      continuation-attempt/20261123T113235Z -> origin/continuation-attempt/20261123T113235Z
+2026-11-24T23:00:12.1010123Z  * [new branch]      frequent-pattern-reduction-2026-11-21 -> origin/frequent-pattern-reduction-2026-11-21
+2026-11-24T23:00:12.1010726Z  * [new branch]      main       -> origin/main
+2026-11-24T23:00:12.1011185Z  * [new branch]      reconstruction-four-core-2026-11-24-2130 -> origin/reconstruction-four-core-2026-11-24-2130
+2026-11-24T23:00:12.1011765Z  * [new branch]      recovery/cb05ef5-original-files-2026-11-22 -> origin/recovery/cb05ef5-original-files-2026-11-22
+2026-11-24T23:00:12.1012316Z  * [new branch]      recovery/native-reserve-20261123 -> origin/recovery/native-reserve-20261123
+2026-11-24T23:00:12.1012829Z  * [new branch]      recovery/verified-75759f81b198 -> origin/recovery/verified-75759f81b198
+2026-11-24T23:00:12.1013342Z  * [new branch]      replacement-and-prescribed-matching -> origin/replacement-and-prescribed-matching
+2026-11-24T23:00:12.1013923Z  * [new branch]      safe-prescription-and-star -> origin/safe-prescription-and-star
+2026-11-24T23:00:12.1014589Z  * [new branch]      verified-bipartite-continuation-2026-11-21 -> origin/verified-bipartite-continuation-2026-11-21
+2026-11-24T23:00:12.1015131Z  * [new branch]      verify-assertion-45-2026-11-22 -> origin/verify-assertion-45-2026-11-22
+2026-11-24T23:00:12.1020910Z [command]/usr/bin/git branch --list --remote origin/reconstruction-four-core-2026-11-24-2130
+2026-11-24T23:00:12.1037287Z   origin/reconstruction-four-core-2026-11-24-2130
+2026-11-24T23:00:12.1042928Z [command]/usr/bin/git rev-parse refs/remotes/origin/reconstruction-four-core-2026-11-24-2130
+2026-11-24T23:00:12.1060361Z 020bbd8d1ef2ccc17c933680cfdc5f25ad443a1b
+2026-11-24T23:00:12.1063085Z ##[endgroup]
+2026-11-24T23:00:12.1063647Z ##[group]Determining the checkout info
+2026-11-24T23:00:12.1064218Z ##[endgroup]
+2026-11-24T23:00:12.1067988Z [command]/usr/bin/git sparse-checkout disable
+2026-11-24T23:00:12.1128776Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-24T23:00:12.1148247Z ##[group]Checking out the ref
+2026-11-24T23:00:12.1152261Z [command]/usr/bin/git checkout --progress --force -B reconstruction-four-core-2026-11-24-2130 refs/remotes/origin/reconstruction-four-core-2026-11-24-2130
+2026-11-24T23:00:12.7559266Z Switched to a new branch 'reconstruction-four-core-2026-11-24-2130'
+2026-11-24T23:00:12.7570531Z branch 'reconstruction-four-core-2026-11-24-2130' set up to track 'origin/reconstruction-four-core-2026-11-24-2130'.
+2026-11-24T23:00:12.7592714Z ##[endgroup]
+2026-11-24T23:00:12.7650116Z [command]/usr/bin/git log -1 --format=%H
+2026-11-24T23:00:12.7670702Z 020bbd8d1ef2ccc17c933680cfdc5f25ad443a1b
+2026-11-24T23:00:12.7832691Z ##[group]Run printf '%s\n' 'd3cbf3ef67e5020483dcb28fb57ae58d97bc2f1389d8ca51f79b8bf8a025b7c6  publication-transfer/review-db841575/publish_bundle.py' | sha256sum --check --strict
+2026-11-24T23:00:12.7833764Z [36;1mprintf '%s\n' 'd3cbf3ef67e5020483dcb28fb57ae58d97bc2f1389d8ca51f79b8bf8a025b7c6  publication-transfer/review-db841575/publish_bundle.py' | sha256sum --check --strict[0m
+2026-11-24T23:00:12.7857238Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-24T23:00:12.7857573Z ##[endgroup]
+2026-11-24T23:00:12.7946862Z publication-transfer/review-db841575/publish_bundle.py: OK
+2026-11-24T23:00:12.7980608Z ##[group]Run python3 publication-transfer/review-db841575/publish_bundle.py --publish
+2026-11-24T23:00:12.7981103Z [36;1mpython3 publication-transfer/review-db841575/publish_bundle.py --publish[0m
+2026-11-24T23:00:12.7997309Z shell: /usr/bin/bash -e {0}
+2026-11-24T23:00:12.7997616Z ##[endgroup]
+2026-11-24T23:00:15.0540025Z OVERFULL_PUBLICATION_RECEIPT={"schema_version":1,"kind":"exact_verified_bundle_publication","mode":"publish","repository":"fly31415926/overfull-lean","proof_branch":"publication-four-core-proof-2026-11-24-2130","transfer_branch":"reconstruction-four-core-2026-11-24-2130","archive_prefix":"publication-transfer/verified-db841575","started_at_utc":"2026-11-24T23:00:12.838270+00:00","github_run_id":"45506039249","github_sha":"020bbd8d1ef2ccc17c933680cfdc5f25ad443a1b","commands":[{"argv":["git","--no-replace-objects","-c","core.hooksPath=/dev/null","-c","protocol.allow=never","rev-parse","1c9404a454c99fe5c11ba8d774cb9c259f291f20^{tree}"],"exit_code":0,"elapsed_seconds":0.0014185309999987794,"output":"087e26b5f004af1f9423a6f2b137d805f5991f1a\n","output_sha256":"85b53244c51ed7f3507c5fec41098a3bad05a7607bc6638721af34c92666175c"},{"argv":["git","--no-replace-objects","-c","core.hooksPath=/dev/null","-c","protocol.allow=never","bundle","verify","/tmp/overfull-reviewed-bundle-_fhxha9z/proof.bundle"],"exit_code":0,"elapsed_seconds":0.002773113000003491,"output":"/tmp/overfull-reviewed-bundle-_fhxha9z/proof.bundle is okay\nThe bundle contains this ref:\ndb841575ca2c427e230387c1c95fa74bedb463d6 HEAD\nThe bundle requires this ref:\n1c9404a454c99fe5c11ba8d774cb9c259f291f20 \nThe bundle uses this hash algorithm: sha1\n","output_sha256":"b1bebf08a9cabd2a5f9df09c42fc44eb9fa70f23000a8f2934b3d320a7e97f79"},{"argv":["git","--no-replace-objects","-c","core.hooksPath=/dev/null","-c","protocol.allow=never","bundle","list-heads","/tmp/overfull-reviewed-bundle-_fhxha9z/proof.bundle"],"exit_code":0,"elapsed_seconds":0.0008454789999987611,"output":"db841575ca2c427e230387c1c95fa74bedb463d6 HEAD\n","output_sha256":"c6a39ec5716a13cfde81cbb6c1f8c3b1a07d02a500e0c9206393a333dd56955d"},{"argv":["git","--no-replace-objects","-c","core.hooksPath=/dev/null","-c","protocol.allow=never","-c","protocol.file.allow=always","fetch","--no-write-fetch-head","--no-tags","--recurse-submodules=no","/tmp/overfull-reviewed-bundle-_fhxha9z/proof.bundle","HEAD"],"exit_code":0,"elapsed_seconds":0.17495240899999942,"output":"","output_sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},{"argv":["git","--no-replace-objects","-c","core.hooksPath=/dev/null","-c","protocol.allow=never","rev-parse","db841575ca2c427e230387c1c95fa74bedb463d6^{tree}"],"exit_code":0,"elapsed_seconds":0.0012935860000027333,"output":"a7e59e8303f670fab6c95348cd100acd1aaa5899\n","output_sha256":"72ac947e5fd52676ff711975251e532ce0189a6c4ef2dedce27f57c44b4e34c4"},{"argv":["git","--no-replace-objects","-c","core.hooksPath=/dev/null","-c","protocol.allow=never","show","-s","--format=%P","db841575ca2c427e230387c1c95fa74bedb463d6"],"exit_code":0,"elapsed_seconds":0.0025098509999992302,"output":"1c9404a454c99fe5c11ba8d774cb9c259f291f20\n","output_sha256":"87d31e6e7eab066c730c4dd76bed41e585b78de028e4d328e09cf57ea75c95fb"},{"argv":["git","--no-replace-objects","-c","core.hooksPath=/dev/null","-c","protocol.allow=never","rev-parse","HEAD"],"exit_code":0,"elapsed_seconds":0.0008824759999939147,"output":"020bbd8d1ef2ccc17c933680cfdc5f25ad443a1b\n","output_sha256":"0838ef04033e29e4c52c1a198049e0037cc0de9f201794893a2ba3cc698663d4"},{"argv":["git","--no-replace-objects","-c","core.hooksPath=/dev/null","-c","protocol.allow=never","-c","protocol.https.allow=always","ls-remote","--refs","origin","refs/heads/publication-four-core-proof-2026-11-24-2130","refs/heads/main","refs/heads/verified-bipartite-continuation-2026-11-21"],"exit_code":0,"elapsed_seconds":0.19096152200000205,"output":"1c9404a454c99fe5c11ba8d774cb9c259f291f20\trefs/heads/main\n1c9404a454c99fe5c11ba8d774cb9c259f291f20\trefs/heads/verified-bipartite-continuation-2026-11-21\n","output_sha256":"0f7dbae96f6d40d66baa6e478a6da14d36c861538639c03a9377e1b201ea4e80"},{"argv":["git","--no-replace-objects","-c","core.hooksPath=/dev/null","-c","protocol.allow=never","-c","protocol.https.allow=always","push","--no-follow-tags","origin","db841575ca2c427e230387c1c95fa74bedb463d6:refs/heads/publication-four-core-proof-2026-11-24-2130"],"exit_code":1,"elapsed_seconds":1.7795755789999959,"output":"remote: Internal Server Error        \nremote: Request ID 44B1:140962:35258:64796:6B0616FD        \nremote: Time 2026-11-24T23:00:15Z\nTo https://github.com/fly31415926/overfull-lean\n ! [remote rejected] db841575ca2c427e230387c1c95fa74bedb463d6 -> publication-four-core-proof-2026-11-24-2130 (Internal Server Error)\nerror: failed to push some refs to 'https://github.com/fly31415926/overfull-lean'\n","output_sha256":"15732226ffc11a01adde6c78af230ab1f604f87449ddf8826716bf52e872ca19"}],"evidence_reads":[{"path":"verification/runs/20261124T213000Z/full-01/terminal.json","bytes":8043,"sha256":"a37d7c63a9c63d45a5dff5e149f7af506074ef3f29a8c30a5b3a36494055de35","git_blob_sha1":"f3945e0d0f9ccf714c293f61e51e569245b83d9e"},{"path":"verification/runs/20261124T213000Z/preservation.json","bytes":3174,"sha256":"063ca29f4c71a5cd983d6f2c83b03c8597240f198ef82b771dbb83f35d9f387c","git_blob_sha1":"91f095322661d3fa92f9aaed5381de8d485afe3b"},{"path":"verification/results.json","bytes":3779925,"sha256":"ea9bffe564b96ff00ce33caf29c3d097a33fea3f826a995597738cb3cbd67237","git_blob_sha1":"05dcb9fa57b9acddcbfcb76f516926cf12386dcb"},{"path":"verification/runs/20261124T213000Z/full-01/output.log","bytes":2765009,"sha256":"e126a529c3a9a1c0113987abacb529bac13144db98f2082e054d816946789b6c","git_blob_sha1":"6e5d234cff70e63d80565213b44bb40a83bfe505"},{"path":"verification/runs/20261124T213000Z/full-01/frozen-inputs.json","bytes":97014,"sha256":"4a78932a2ce275f7ee5fca0e7375ee8ff3e334cbc1a18ee5fb3d192d6d5aaef2","git_blob_sha1":"4522f9b1049906dc4199525d22ad3e78b4ae351d"},{"path":"verification/runs/20261124T213000Z/full-01/frozen-controls.json","bytes":2370,"sha256":"68380fbe471ff36c60d6c8cb4e1aab787bb88c5507bdded7d132c8b687c2f096","git_blob_sha1":"3aaeea68ff5e830bc83c3ca530292eb06569ae68"},{"path":"verification/runs/20261124T213000Z/full-01/command.json","bytes":8043,"sha256":"a37d7c63a9c63d45a5dff5e149f7af506074ef3f29a8c30a5b3a36494055de35","git_blob_sha1":"f3945e0d0f9ccf714c293f61e51e569245b83d9e"}],"status":"failed","network_commands_requested":true,"proof_ref_push_attempted":true,"proof_ref_push_completed":false,"proof_ref_published":false,"requested_publication_branches_advanced":false,"later_connector_publication_refs":["refs/heads/main","refs/heads/verified-bipartite-continuation-2026-11-21"],"archive_verified":true,"proof_commit":"db841575ca2c427e230387c1c95fa74bedb463d6","proof_tree":"a7e59e8303f670fab6c95348cd100acd1aaa5899","parent_commit":"1c9404a454c99fe5c11ba8d774cb9c259f291f20","manifest_sha256":"7fac099d28d334ae8cb104dfd52a2e95533d40c515db310fbadb3cdc5949ec61","bundle_sha256":"b28ad8fdf21678b583458683c58d04ce7cb823c9dc08b7932b988f22aa54d57e","bundle_bytes":2101917,"part_count":63,"full_verifier_exit_code":0,"main_theorem_verified":false,"branch_refs_before":{"refs/heads/main":"1c9404a454c99fe5c11ba8d774cb9c259f291f20","refs/heads/verified-bipartite-continuation-2026-11-21":"1c9404a454c99fe5c11ba8d774cb9c259f291f20"},"error":"RuntimeError(\"Command failed with actual exit 1: ['git', '--no-replace-objects', '-c', 'core.hooksPath=/dev/null', '-c', 'protocol.allow=never', '-c', 'protocol.https.allow=always', 'push', '--no-follow-tags', 'origin', 'db841575ca2c427e230387c1c95fa74bedb463d6:refs/heads/publication-four-core-proof-2026-11-24-2130']\")","finished_at_utc":"2026-11-24T23:00:15.051365+00:00","elapsed_seconds":2.2131159879999984}
+2026-11-24T23:00:15.0615379Z ##[error]Process completed with exit code 1.
+2026-11-24T23:00:15.0727918Z Post job cleanup.
+2026-11-24T23:00:15.1352960Z [command]/usr/bin/git version
+2026-11-24T23:00:15.1381028Z git version 2.56.1
+2026-11-24T23:00:15.1405816Z Temporarily overriding HOME='/home/runner/work/_temp/c792b258-7841-4bf4-bed6-57df65ceb573' before making global git config changes
+2026-11-24T23:00:15.1407043Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-24T23:00:15.1408022Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/overfull-lean/overfull-lean
+2026-11-24T23:00:15.1434035Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-24T23:00:15.1457013Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-24T23:00:15.1668749Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-24T23:00:15.1685391Z http.https://github.com/.extraheader
+2026-11-24T23:00:15.1689100Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-24T23:00:15.1711124Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-24T23:00:15.1905116Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-24T23:00:15.1933723Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-24T23:00:15.2214791Z Cleaning up orphan processes
+2026-11-24T23:00:15.2503294Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

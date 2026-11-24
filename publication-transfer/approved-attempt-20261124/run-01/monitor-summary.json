@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-24T23:02:04.109523+00:00",
+  "mode": "read_only_monitor",
+  "activation_commit": "020bbd8d1ef2ccc17c933680cfdc5f25ad443a1b",
+  "approved_publication_run": {
+    "id": 45506039249,
+    "job_id": 138841412903,
+    "workflow_path": ".github/workflows/publish-verified-db841575.yml",
+    "name": "Publish exact verified db841575 proof objects",
+    "status": "completed",
+    "conclusion": "failure",
+    "url": "https://github.com/fly31415926/overfull-lean/actions/runs/45506039249"
+  },
+  "actual_publication_receipt": {
+    "status": "failed",
+    "archive_verified": true,
+    "proof_commit": "db841575ca2c427e230387c1c95fa74bedb463d6",
+    "proof_tree": "a7e59e8303f670fab6c95348cd100acd1aaa5899",
+    "proof_ref_push_attempted": true,
+    "proof_ref_push_completed": false,
+    "proof_ref_published": false,
+    "push_exit_code": 1,
+    "push_output": "remote: Internal Server Error        \nremote: Request ID 44B1:140962:35258:64796:6B0616FD        \nremote: Time 2026-11-24T23:00:15Z\nTo https://github.com/fly31415926/overfull-lean\n ! [remote rejected] db841575ca2c427e230387c1c95fa74bedb463d6 -> publication-four-core-proof-2026-11-24-2130 (Internal Server Error)\nerror: failed to push some refs to 'https://github.com/fly31415926/overfull-lean'\n"
+  },
+  "proof_ref_readback": [],
+  "separate_lean_run": {
+    "run_id": 45506039022,
+    "job_id": 138841412866,
+    "workflow_path": ".github/workflows/lean.yml",
+    "head_sha": "020bbd8d1ef2ccc17c933680cfdc5f25ad443a1b",
+    "conclusion": "failure",
+    "reported_failure_line": "2026-11-24T23:01:01.5018227Z Mathematical modules excluded from the build: Overfull.FourCoreReduction.Bounded, Overfull.FourCoreReduction.Frequent, Overfull.FourCoreReduction.Regular, Overfull.ResidualPalette.FourJoiningGrouping, Overfull.ResidualPalette.FourPaletteGrouping, Overfull.Terminal.FourPalette, Overfull.TerminalFour.Parity, Overfull.TerminalFour.PatternTransport, Overfull.TerminalFour.Result, Overfull.TerminalFour.Theorem, Overfull.TerminalFourEven.Completed, Overfull.TerminalFourEven.Parameters, Overfull.TerminalFourEven.Prefix, Overfull.TerminalFourEven.PrefixResult, Overfull.TerminalFourEven.Theorem, Overfull.TerminalFourTwoOdd.CentralFactorization, Overfull.TerminalFourTwoOdd.CentralGeometry, Overfull.TerminalFourTwoOdd.CentralMatchings, Overfull.TerminalFourTwoOdd.CutCertificates, Overfull.TerminalFourTwoOdd.Prefix, Overfull.TerminalFourTwoOdd.PrefixResult, Overfull.TerminalFourTwoOdd.RemainingProfile, Overfull.TerminalFourTwoOdd.ResidualColoring",
+    "excluded_modules": [
+      "Overfull.FourCoreReduction.Bounded",
+      "Overfull.FourCoreReduction.Frequent",
+      "Overfull.FourCoreReduction.Regular",
+      "Overfull.ResidualPalette.FourJoiningGrouping",
+      "Overfull.ResidualPalette.FourPaletteGrouping",
+      "Overfull.Terminal.FourPalette",
+      "Overfull.TerminalFour.Parity",
+      "Overfull.TerminalFour.PatternTransport",
+      "Overfull.TerminalFour.Result",
+      "Overfull.TerminalFour.Theorem",
+      "Overfull.TerminalFourEven.Completed",
+      "Overfull.TerminalFourEven.Parameters",
+      "Overfull.TerminalFourEven.Prefix",
+      "Overfull.TerminalFourEven.PrefixResult",
+      "Overfull.TerminalFourEven.Theorem",
+      "Overfull.TerminalFourTwoOdd.CentralFactorization",
+      "Overfull.TerminalFourTwoOdd.CentralGeometry",
+      "Overfull.TerminalFourTwoOdd.CentralMatchings",
+      "Overfull.TerminalFourTwoOdd.CutCertificates",
+      "Overfull.TerminalFourTwoOdd.Prefix",
+      "Overfull.TerminalFourTwoOdd.PrefixResult",
+      "Overfull.TerminalFourTwoOdd.RemainingProfile",
+      "Overfull.TerminalFourTwoOdd.ResidualColoring"
+    ],
+    "excluded_module_count": 23,
+    "scope": "Existing Lean CI on the recovery activation tree; distinct from the approved object-publication job and the archived full-01 proof-tree audit."
+  },
+  "workflow_definition_metadata_endpoint": "Connector rejected the /actions/workflows/{workflow_id} read as an unlisted endpoint; the actual error response is preserved. Full run and job metadata were retrieved successfully.",
+  "reruns_requested": false,
+  "remote_writes_performed_by_monitor": false,
+  "evidence_files": [
+    {
+      "path": "job-138841412903-logs-response.json",
+      "bytes": 22484,
+      "sha256": "f6df1fb87ae1376ebe77227fccfb30fc4599c2f28380cf40d7b5b76698a7edca"
+    },
+    {
+      "path": "job-138841412903.log",
+      "bytes": 21395,
+      "sha256": "c84e7da3a934f2b9afd882018d08cdbbda49c0a8435e49d3ba6e49fbfe862b40"
+    },
+    {
+      "path": "jobs-metadata-0001.json",
+      "bytes": 5614,
+      "sha256": "2286fc0fd001050b9655b55fd409bcaf3484bb9308a671a67e000375215013f1"
+    },
+    {
+      "path": "log-extraction.json",
+      "bytes": 726,
+      "sha256": "17951fcd1bdc232263dca7f362ca720b7ed01aaec23d0decb3b572ba980d33cd"
+    },
+    {
+      "path": "monitor-start.json",
+      "bytes": 552,
+      "sha256": "9a83d9a3f766593768ac95c4aae73ef630c13f89e0cc85a94615a4a77bac3e2e"
+    },
+    {
+      "path": "poll-0001.json",
+      "bytes": 58622,
+      "sha256": "4f2d8c243b249ee1bca30284a44bb58ec3b58757cebbb40d525c86b3dbe44736"
+    },
+    {
+      "path": "poll-0002.json",
+      "bytes": 58665,
+      "sha256": "c7ab2c272467ec1e8e54a51efe8c25dcbf720be077afd527b68ed328862b1c2d"
+    },
+    {
+      "path": "proof-ref-readback.json",
+      "bytes": 1185,
+      "sha256": "63d162e3d89116d66140d89b008b17fbf5a06372b151c661d9287e21fbd30aa0"
+    },
+    {
+      "path": "publication-receipt.json",
+      "bytes": 9288,
+      "sha256": "d7c2ec45e8d3e7cf3bb7e633990d6ef61b08a71bd16a6e2df8ffd8c4928463f6"
+    },
+    {
+      "path": "publication-receipt.raw.json",
+      "bytes": 7485,
+      "sha256": "9dd75ac39dccd930b29173e0d9d51fe709f89a125055c2bb9bc519db8a76f9a8"
+    },
+    {
+      "path": "run-metadata-0001.json",
+      "bytes": 29700,
+      "sha256": "7df07338968856fbf0912ae46ec2dcd0578fb3c1ced670ecf38d09ad85f28f36"
+    },
+    {
+      "path": "separate-lean-failure.json",
+      "bytes": 2452,
+      "sha256": "0b9aa5f1cf8a34f4c98db38bbdaa8195efb0c0bb0427198f185bd813929ef8ad"
+    },
+    {
+      "path": "separate-lean-job-138841412866-logs-response.json",
+      "bytes": 30955,
+      "sha256": "20883ec8d8eaddb790874fc090281370b77a68adf0fcdabbb56f71ca6085a735"
+    },
+    {
+      "path": "separate-lean-job-138841412866.log",
+      "bytes": 30174,
+      "sha256": "958745a2ef51344a97f6606b9bebf19102ee757e081302f7b4e477fcef50a3d8"
+    },
+    {
+      "path": "separate-lean-jobs-metadata.json",
+      "bytes": 6352,
+      "sha256": "dfe221c20a5f9c6be04e892170e300e322b4c0ec18e188f4002df5661be49d5e"
+    },
+    {
+      "path": "separate-lean-log-extraction.json",
+      "bytes": 1056,
+      "sha256": "ae357d33f3caf83a9c01a6d47539e81ca17e7e48c921e346970f0a12540f8984"
+    },
+    {
+      "path": "workflow-metadata.json",
+      "bytes": 664,
+      "sha256": "6b60e2634661c3e0f64e293a09124a4dccaaa1ab4067a713e5fb6f81a34c7a80"
+    }
+  ]
+}

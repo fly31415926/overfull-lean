@@ -1,0 +1,12 @@
+{
+  "repository_full_name": "fly31415926/overfull-lean",
+  "base_tree_sha": "5a480bf90e7da01eca2a6e7e0f3ecf8438a6b967",
+  "tree_elements": [
+    {
+      "path": ".github/workflows/publish-verified-db841575.yml",
+      "mode": "100644",
+      "type": "blob",
+      "content": "# INERT REVIEW PROPOSAL. Install at the stated workflow path only after approval.\nname: Publish exact verified db841575 proof objects\n\non:\n  push:\n    branches: [reconstruction-four-core-2026-11-24-2130]\n    paths:\n      - .github/workflows/publish-verified-db841575.yml\n\npermissions: {}\n\njobs:\n  publish-exact-proof:\n    if: github.repository == 'fly31415926/overfull-lean' && github.ref == 'refs/heads/reconstruction-four-core-2026-11-24-2130'\n    runs-on: ubuntu-latest\n    timeout-minutes: 10\n    permissions:\n      contents: write\n    steps:\n      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262\n        with:\n          fetch-depth: 0\n      - name: Verify the exact reviewed publisher bytes\n        shell: bash\n        run: |\n          printf '%s\\n' 'd3cbf3ef67e5020483dcb28fb57ae58d97bc2f1389d8ca51f79b8bf8a025b7c6  publication-transfer/review-db841575/publish_bundle.py' | sha256sum --check --strict\n      - name: Verify fixed archive and publish only its exact proof ref\n        run: python3 publication-transfer/review-db841575/publish_bundle.py --publish\n"
+    }
+  ]
+}

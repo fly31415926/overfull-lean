@@ -1,0 +1,21 @@
+{
+  "request": {
+    "repository_full_name": "fly31415926/overfull-lean",
+    "parent_sha": "020bbd8d1ef2ccc17c933680cfdc5f25ad443a1b",
+    "tree_sha": "5a480bf90e7da01eca2a6e7e0f3ecf8438a6b967",
+    "message": "Remove temporary approved publishing workflow after its observed run [skip ci]\n\nThe exact approved job verified the fixed archive and committed proof evidence, then GitHub rejected its proof-ref push with an Internal Server Error. Preserve that failure and all actual job logs separately. Remove only the active publishing workflow, restoring the exact prior recovery data tree."
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "sha": "bdbdb217bf3e1fb0724712fa141546e4c2ae00ff"
+    },
+    "isError": false
+  },
+  "recorded_at_utc": "2026-11-24T23:02:23.444Z"
+}
