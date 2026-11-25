@@ -749,6 +749,8 @@ IMPORTED_PROJECT_MODULE Overfull.TerminalFour.Result
 IMPORTED_PROJECT_MODULE Overfull.FourCoreReduction.Frequent
 IMPORTED_PROJECT_MODULE Overfull.FourCoreReduction.Bounded
 IMPORTED_PROJECT_MODULE Overfull.FourCoreReduction.Regular
+IMPORTED_PROJECT_MODULE Overfull.AuxiliarySimple.OrdinaryThree
+IMPORTED_PROJECT_MODULE Overfull.OrdinaryCoreColoring
 IMPORTED_PROJECT_MODULE Overfull
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.OrdinaryRobustStability","name":"Overfull.OrdinaryPackingReserve.unused_reserve_robust"}
 VERIFIED_DECLARATION {"axioms":[],"module":"Overfull.Dense.CycleAbsorber","name":"Overfull.Dense.CycleAbsorber.Vertex.yAux.inj"}
@@ -5710,6 +5712,7 @@ VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"modu
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.Dense.FiniteAbsorberCycles","name":"Overfull.Dense.FiniteAbsorber.CyclePartition.positive"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.BipartiteFactorization.Palettes","name":"Overfull.BipartiteFactorization.core_colors_card"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.OrdinaryRandomReserveSides","name":"Overfull.OrdinaryRandomReserve.side_degree_deviation_from_target"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.AuxiliarySimple.OrdinaryThree","name":"Overfull.three_core_nonregular_factorization._proof_1_2"}
 VERIFIED_DECLARATION {"axioms":["Quot.sound","propext","Classical.choice"],"module":"Overfull.NativeReserve.Residual","name":"Overfull.NativeReserve.residual_degree_accounting"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.Absorption.Thresholds","name":"Overfull.AbsorptionThresholds.mem_low._simp_1"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Vizing.Main","name":"mkEdgeColoring._proof_1"}
@@ -7275,6 +7278,7 @@ VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"modu
 VERIFIED_DECLARATION {"axioms":["propext","Classical.choice","Quot.sound"],"module":"Overfull.Patterns.Parameters","name":"Overfull.Patterns.PatternScalarBounds.degree_large"}
 VERIFIED_DECLARATION {"axioms":["Quot.sound","propext","Classical.choice"],"module":"Overfull.CompatibleCircuits.Deletion","name":"Overfull.Multigraph.classCutOn_sdiff._simp_1_2"}
 VERIFIED_DECLARATION {"axioms":["Quot.sound","propext","Classical.choice"],"module":"Overfull.MultigraphGreedy","name":"Overfull.Multigraph.conflictingEdges.eq_1"}
+VERIFIED_DECLARATION {"axioms":["propext","Classical.choice","Quot.sound"],"module":"Overfull.AuxiliarySimple.OrdinaryThree","name":"Overfull.three_core_nonregular_factorization"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.NativeReserve.ProtectedPacking","name":"Overfull.NativeReserve.BoundaryPacking.reservedCopies.eq_1"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.CutCounting","name":"Overfull.no_overfull_iff_odd_deficiency"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.Terminal.PartLabels","name":"Overfull.Terminal.fiber_cut_empty_of_joining_empty"}
@@ -7976,6 +7980,7 @@ VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.Nativ
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.Terminal.PartLabels","name":"Overfull.Terminal.joiningCopies_three_eq_two_cuts._simp_1_1"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.TerminalFourTwoOdd.CentralMatchings","name":"Overfull.TerminalFourTwoOdd.central_not_internal_fiber"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.MultigraphMatchingProbability","name":"Overfull.MultigraphMatchingProbability.matching_odd_cut._proof_1_1"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.OrdinaryCoreColoring","name":"Overfull.ordinary_cores_coloring._proof_1_2"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.SafePrescription.Classification","name":"Overfull.SafePrescription.cluster_union_approximation._simp_1_2"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.CompatibleCircuits.EqualBundleSelection","name":"Overfull.CompatibleCircuits.exists_compatible_triple_of_equal_bundles._proof_1_4"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.Absorption.SecondAbsorption","name":"Overfull.Absorption.retained_degree_three_quarters._proof_1_1"}
@@ -8405,6 +8410,7 @@ VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"modu
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.FourOdd.Basic","name":"Overfull.FourOdd.Decomposition.ofPrimaryFamily._proof_1"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.ExceptionalPalette.PairExtension","name":"Overfull.NativeReserve.JoiningPalette.pairExtended_outside_load_le._simp_1_1"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.TerminalFourTwoOdd.CutCertificates","name":"Overfull.TerminalFourTwoOdd.whole_cut_covered"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.AuxiliarySimple.OrdinaryThree","name":"Overfull.three_core_nonregular_factorization._proof_1_3"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.CircuitPatterns.ReservedEdges","name":"Overfull.CircuitPatterns.mem_partPairEdges"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.External.PerfectBMatching","name":"Lovasz.BMatch.cF.eq_1"}
 VERIFIED_DECLARATION {"axioms":["Quot.sound","propext"],"module":"Overfull.Dense.FiniteAbsorberEmbedding","name":"Overfull.Dense.FiniteAbsorber.Placement.embedding.eq_1"}
@@ -9268,6 +9274,7 @@ VERIFIED_DECLARATION {"axioms":["propext"],"module":"Overfull.SparseColoring","n
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.RandomReserveDegrees","name":"Overfull.RandomReserve.degree_failure_probability._simp_1_2"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.Absorption.Result","name":"Overfull.Absorption.AbsorptionResult.pairwise_disjoint"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.OrdinaryMatchingCompletion","name":"Overfull.OrdinaryMatchingCompletion.restrictMatching_uncovered_card._simp_1_2"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.OrdinaryCoreColoring","name":"Overfull.ordinary_cores_coloring._proof_1_3"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.BipartiteAugment","name":"Overfull.BipartiteAugmentingPath.matching_edges_injective"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.BipartiteFactorization.Moves","name":"Overfull.BipartiteFactorization.core_move_with_ports"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.ResidualPalette.FourPaletteGrouping","name":"Overfull.NativeReserve.palette_capacity_of_incidence_budget_of_size"}
@@ -9617,6 +9624,7 @@ VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"modu
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.FourOdd.Star","name":"Overfull.FourOdd.exists_star_decomposition._proof_1_1"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.FourOdd.MatchingShapes","name":"Overfull.FourOdd.matching_left_ne_right"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.SafePrescription.Counting","name":"Overfull.SafePrescription.cut_incident_eq_neighbors"}
+VERIFIED_DECLARATION {"axioms":["propext","Classical.choice","Quot.sound"],"module":"Overfull.AuxiliarySimple.OrdinaryThree","name":"Overfull.three_core_coloring"}
 VERIFIED_DECLARATION {"axioms":["propext","Classical.choice","Quot.sound"],"module":"Overfull.Dense.FractionalTriangles","name":"Overfull.TripartiteGraph.spread_residual_bound._simp_1_6"}
 VERIFIED_DECLARATION {"axioms":["Quot.sound","propext","Classical.choice"],"module":"Overfull.MultigraphFanApplications","name":"Overfull.Multigraph.bounded_core_move_nat._proof_1_4"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.RobustPartition.LowDegree","name":"Overfull.RobustPartition.SmallDeficiencyPartition.max_degree_le"}
@@ -11435,6 +11443,7 @@ VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"modu
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.Patterns.BoundaryRealization","name":"Overfull.Patterns.boundaryArity.eq_1"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.FourOdd.PairPools","name":"Overfull.FourOdd.equitable_colorClass_card_two._proof_1_3"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.Patterns.Absorption","name":"Overfull.Patterns.Encodes.enlarged_part_parity"}
+VERIFIED_DECLARATION {"axioms":["propext","Classical.choice","Quot.sound"],"module":"Overfull.OrdinaryCoreColoring","name":"Overfull.ordinary_cores_coloring"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.Probability.PermutationSampling","name":"Overfull.PermutationSampling.sample.eq_1"}
 VERIFIED_DECLARATION {"axioms":["propext"],"module":"Overfull.Dense.CycleAbsorber","name":"Overfull.Dense.CycleAbsorber.defaultTriangle._proof_6"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.AssignedParts.NativeWeights","name":"Overfull.AssignedParts.NativeWeights.scaledWeight_marginal._simp_1_2"}
@@ -12983,6 +12992,7 @@ VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"modu
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.BoundaryExtension.Reassembly","name":"Overfull.BoundaryExtension.retainedResidualEdge_val"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.ExceptionalPalette.EvenColors","name":"Overfull.AssignedParts.exists_assigned_even_joiningPalette_avoiding_colors_in_host"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.AssignedParts.CompressionCuts","name":"Overfull.AssignedParts.core_cut_split._simp_1_2"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.OrdinaryCoreColoring","name":"Overfull.ordinary_cores_coloring._proof_1_1"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.CompatibleCircuits.QuotientCuts","name":"Overfull.FourOdd.joiningQuotient_degreeOn_eq_cut"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.OrdinaryPackingInitial","name":"Overfull.OrdinaryPackingInitial.nominal_degree_lt_twice_order"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.SafePrescription.Construction","name":"Overfull.SafePrescription.cliqueAux_cluster"}
@@ -14499,6 +14509,7 @@ VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"modu
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.Absorption.ForcingProcess","name":"Overfull.Absorption.ForcingSetup.range_nonneg"}
 VERIFIED_DECLARATION {"axioms":["Quot.sound","propext"],"module":"Overfull.CompatibleCircuits.VertexRelabeling","name":"Overfull.Multigraph.renameVertices_incident._simp_1"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.OrdinaryMatchingCompletion","name":"Overfull.OrdinaryMatchingCompletion.pushMatching_reserve_sum"}
+VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.AuxiliarySimple.OrdinaryThree","name":"Overfull.three_core_nonregular_factorization._proof_1_1"}
 VERIFIED_DECLARATION {"axioms":["propext","Classical.choice","Quot.sound"],"module":"Overfull.External.PerfectBMatching","name":"Lovasz.BMatch.cut_compl._simp_1_3"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.RobustPartition.Pieces","name":"Overfull.RobustPartition.valid_rank_bound"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Overfull.PrescribedMatching.ShortPaths","name":"Overfull.PrescribedMatching.coreLinkGraph_reachable._proof_1_1"}
@@ -15258,6 +15269,7 @@ VERIFIED_DECLARATION {"axioms":["Quot.sound","propext","Classical.choice"],"modu
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.Compression.SelectedEdges","name":"Overfull.Compression.exists_selected_matching"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.MultigraphFanApplications","name":"Overfull.Multigraph.internalEdges_iff_of_edge._simp_1_3"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.RandomReserve","name":"Overfull.RandomReserve.Relevant.congr_simp"}
+VERIFIED_DECLARATION {"axioms":["propext","Classical.choice","Quot.sound"],"module":"Overfull.OrdinaryCoreColoring","name":"Overfull.ordinary_cores_normalized_factorization"}
 VERIFIED_DECLARATION {"axioms":["propext"],"module":"Overfull.BipartiteFactorization.PreferredSampling","name":"_private.Overfull.BipartiteFactorization.PreferredSampling.0.Overfull.BipartiteFactorization.PreferredSampling.special_lower_tail_of_moments._simp_1_5"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.PairedCut.Sampling","name":"Overfull.PairedCut.cutGraph.eq_1"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.Patterns.RealizedPlan","name":"Overfull.Patterns.pairUse.congr_simp"}
@@ -15570,4 +15582,4 @@ VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"modu
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.RobustPartition.Counting","name":"Overfull.RobustPartition.cut_union_le_bad._simp_1_2"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound","Classical.choice"],"module":"Overfull.CompatibleCircuits.SmallKernelData","name":"_private.Overfull.CompatibleCircuits.SmallKernelData.0.Overfull.CompatibleCircuits.SmallKernel.witness_valid_vector._proof_264"}
 VERIFIED_DECLARATION {"axioms":["propext","Quot.sound"],"module":"Vizing.EdgeColoring.Defs","name":"EdgeColoring.instDecidableEqEdgeColoring.decEq._proof_12"}
-OVERFULL_AXIOM_AUDIT_OK 14820
+OVERFULL_AXIOM_AUDIT_OK 14830

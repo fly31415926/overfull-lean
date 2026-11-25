@@ -1,0 +1,54 @@
+{
+  "name": "importGraph",
+  "url": "https://github.com/leanprover-community/import-graph",
+  "rev": "d768126816be17600904726ca7976b185786e6b9",
+  "started": "2026-11-25T00:17:49.879980+00:00",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "init",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/importGraph"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/importGraph",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/leanprover-community/import-graph"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/importGraph",
+        "fetch",
+        "--depth",
+        "1",
+        "origin",
+        "d768126816be17600904726ca7976b185786e6b9"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/importGraph",
+        "checkout",
+        "--detach",
+        "FETCH_HEAD"
+      ],
+      "returncode": 0
+    }
+  ],
+  "returncode": 0,
+  "finished": "2026-11-25T00:17:54.451834+00:00"
+}

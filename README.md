@@ -1,6 +1,39 @@
 # Lean formalization of the overfull manuscript
 
-## Current reconstruction: full terminal and regular four-core closure
+## Current continuation: nonregular coloring with up to three ordinary cores
+
+`Overfull.ordinary_cores_coloring` constructs a proper coloring of the original
+simple graph from one, two, or three ordinary robust cores. One positive error
+tolerance and one order threshold work for every such core count. The endpoint
+permits any palette `k` at least the actual maximum degree, arbitrary positive
+density, arbitrary finite core labels, and the original budget
+`a+|Z|+1≤ε*n`. It derives nonnegative error and removes exceptional-set overlap
+internally. Its sufficient robust range is `0<ν≤τ≤min(α,1)/2048000`.
+
+The new three-core construction adds an actual fourth robust auxiliary core,
+applies the complete regular factorization theorem, and restricts the coloring
+to the original edges. The uniform endpoint combines this construction with
+the existing one-core and two-core results. The proved Vizing theorem handles
+`k≥n`. No coloring or completion is supplied as an input assumption.
+
+The [proof notes](docs/ordinary-core-coloring.md),
+[independent semantic review](docs/ordinary-core-coloring-semantic-review.md),
+and [source/declaration inventory](docs/ordinary-core-coloring-source.json)
+record the exact scope. [The current verification run](verification/runs/20261125T002000Z/)
+retains genuine build and audit results, failed and successful development
+attempts, frozen inputs and outputs, and preservation checks. Its terminal
+receipts establish the actual verification status; publication readbacks are
+recorded separately.
+
+The theorem matches the recovered current manuscript statement labelled
+`three:thm:main`. That statement differs from the older text pinned to the
+69-assertion inventory. The exact older text was not recovered, so **all 69
+pinned records and their 51 complete statuses remain unchanged**. The new
+current-source theorem is reported separately. The main theorem remains
+unverified. The baseline is public commit
+`ac05c3232425399af6c0f29e1f7d3ddc1037424d` on both requested branches.
+
+## Previous reconstruction: full terminal and regular four-core closure
 
 This continuation supplies complete endpoints for Proposition 4.16 and
 Theorem 4.17, including all parity cases with three or four ordinary robust

@@ -1,0 +1,54 @@
+{
+  "name": "batteries",
+  "url": "https://github.com/leanprover-community/batteries",
+  "rev": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+  "started": "2026-11-25T00:17:57.458351+00:00",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "init",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/batteries"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/batteries",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/leanprover-community/batteries"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/batteries",
+        "fetch",
+        "--depth",
+        "1",
+        "origin",
+        "8da40b72fece29b7d3fe3d768bac4c8910ce9bee"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/batteries",
+        "checkout",
+        "--detach",
+        "FETCH_HEAD"
+      ],
+      "returncode": 0
+    }
+  ],
+  "returncode": 0,
+  "finished": "2026-11-25T00:18:00.500787+00:00"
+}

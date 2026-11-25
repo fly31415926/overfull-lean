@@ -1,0 +1,19 @@
+{
+  "recorded_at_utc": "2026-11-25 01:09:32 UTC",
+  "command": [
+    "git",
+    "ls-remote",
+    "origin",
+    "refs/heads/main",
+    "refs/heads/verified-bipartite-continuation-2026-11-21"
+  ],
+  "result": {
+    "chunk_id": "0df4e7",
+    "wall_time_seconds": 0.00001972,
+    "exit_code": 0,
+    "original_token_count": 38,
+    "output": "ac05c3232425399af6c0f29e1f7d3ddc1037424d\trefs/heads/main\nac05c3232425399af6c0f29e1f7d3ddc1037424d\trefs/heads/verified-bipartite-continuation-2026-11-21\n"
+  },
+  "expected_baseline": "ac05c3232425399af6c0f29e1f7d3ddc1037424d",
+  "remote_mutations_succeeded": false
+}

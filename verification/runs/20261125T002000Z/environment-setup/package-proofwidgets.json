@@ -1,0 +1,54 @@
+{
+  "name": "proofwidgets",
+  "url": "https://github.com/leanprover-community/ProofWidgets4",
+  "rev": "556caed0eadb7901e068131d1be208dd907d07a2",
+  "started": "2026-11-25T00:17:49.894369+00:00",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "init",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/proofwidgets"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/proofwidgets",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/leanprover-community/ProofWidgets4"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/proofwidgets",
+        "fetch",
+        "--depth",
+        "1",
+        "origin",
+        "556caed0eadb7901e068131d1be208dd907d07a2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/proofwidgets",
+        "checkout",
+        "--detach",
+        "FETCH_HEAD"
+      ],
+      "returncode": 0
+    }
+  ],
+  "returncode": 0,
+  "finished": "2026-11-25T00:17:54.472250+00:00"
+}

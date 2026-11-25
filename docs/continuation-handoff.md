@@ -1,125 +1,98 @@
-# Continuation handoff: reconstructed four-core closure
+# Continuation handoff: current-source ordinary-core coloring
 
-## Exact scope and verification status
+## Authoritative starting state
 
-The reconstructed continuation targets exactly two additional numbered
-assertions, moving the public baseline's **49/69** inventory to **51/69** once
-the fresh strict build, complete axiom audit and preservation gate succeed.
-The main theorem remains unverified. All other 67 numbered records retain
-their exact baseline status; the joint closure leaves 18 incomplete assertions.
+Both requested branches, `main` and
+`verified-bipartite-continuation-2026-11-21`, were independently read at
+`ac05c3232425399af6c0f29e1f7d3ddc1037424d`, tree
+`8cfcdcc6cdd08b3209bc21b1823122bb141c330e`. The remote source was cloned
+successfully and used directly. The previous published full verification
+records 51 of 69 numbered assertions, including Proposition 4.16 and
+Theorem 4.17, and 14,820 audited declarations. No lost checkpoint is
+reconstructed in this continuation.
 
-| Assertion | Sole complete endpoint | Original objects factored |
-| --- | --- | --- |
-| Proposition 4.16 | `Overfull.frequent_pattern_result_one_factorization` | The actual `CircuitPatterns.FrequentPatternResult` for any finite core index type of cardinality three or four, in every parity case. |
-| Theorem 4.17 | `Overfull.regular_core_one_factorization` | The original even-order regular simple non-overfull graph with three or four robust cores and its exceptional set. |
+## New mathematical result
 
-Both endpoints return exactly the relevant degree number of pairwise disjoint
-perfect matchings covering every original edge of the graph being factored.
-Their positive tolerance and order threshold precede the host, its index type,
-partition, degree and error. The 4.17 endpoint retains the original linear
-budget `a + |Z| + 1 ≤ ε*n`, permits arbitrary positive density, derives
-nonnegative core error internally, and has the sufficient robust range
-`0 < ν ≤ τ ≤ min(α,1)/256000`.
+The new endpoint is `Overfull.ordinary_cores_coloring` in
+`Overfull/OrdinaryCoreColoring.lean`. It handles one, two, or three ordinary
+robust cores with a common positive tolerance and order threshold, arbitrary
+finite core labels, arbitrary positive density, and any palette `k` at least
+the maximum degree. Its sufficient range is
+`0<ν≤τ≤min(α,1)/2048000`. The original linear error/exceptional budget is
+`a+|Z|+1≤ε*n`.
 
-The [proof map](four-core-continuation-verification.md),
-[semantic review](four-core-continuation-semantic-review.md), and
-[exact source inventory](four-core-continuation-source.json) give the full
-statement and declaration scope. The actual receipts in
-[`verification/runs/20261124T213000Z/`](../verification/runs/20261124T213000Z/)
-determine successful verification. This handoff and a focused endpoint build
-alone do not establish a full-project pass or publication.
+`Overfull/AuxiliarySimple/OrdinaryThree.lean` constructs the actual auxiliary
+completion for three cores and `k<n`. Its order is exactly twice the original
+order. Its fourth core is the actual auxiliary graph, and it has no overfull
+set. The proved regular four-core endpoint constructs a coloring of this
+completion. Restriction retains the original edge copies and properness.
 
-## Constructed proof interfaces
+The uniform endpoint combines the one-, two-, and three-core constructions
+before it receives the graph. It derives error nonnegativity from the actual
+embedded degrees, removes overlap in the exceptional set, and transfers the
+actual finite labels. The `k≥n` case uses proved Vizing and palette enlargement.
+No original parity, regularity, supplied completion or supplied coloring is
+assumed.
 
-1. **Actual-copy grouping.** `ResidualPalette/FourPaletteGrouping` generalizes
-   grouping to pieces of size at most `s`, with conflict bound `2*s*D`.
-   At `s = 4`, the bounds are `8D`, `4L` copies and `8L` support vertices per
-   class. Prescribed seeds remain injective; matching, exact cover and vertex
-   load are retained. `FourJoiningGrouping` and `Terminal/FourPalette` use the
-   baseline's unrestricted four-label decompositions and construct the actual
-   short prefix, using the existing completion interface at capacity `2L`.
-2. **All-even terminal branch.** `TerminalFourEven` builds the labels,
-   decomposition and completed prefix from the original host. Every joining
-   copy is removed. The residual robust cores are closed, so the generic
-   closed-core theorem factors them and exact reassembly restores the prefix.
-3. **Exactly-two-odd terminal branch.** `TerminalFourTwoOdd` retains both even
-   cores and every joining copy between them while contracting the odd cores
-   to two apices. Actual exterior matchings prove the whole-cut and
-   one-vertex-toggle inequalities; small-cut geometry then proves the central
-   no-overfull condition. The bounded-input theorem constructs the central
-   coloring, and boundary alignment restores the odd leaves and prefix.
-4. **Full terminal output.** `TerminalFour` supplies exhaustive parity,
-   transports the actual stored four-label code and pair supplies, and combines
-   all branches with the existing three-core theorem. The frequent-pattern
-   endpoint derives even ambient order and all terminal budgets internally.
-5. **Original regular host.** `FourCoreReduction` constructs the foreign-edge,
-   bounded-absorption and frequent-pattern reductions and restores every
-   removed perfect matching. Its complete tolerance function is selected
-   before absorption chooses the finite exceptional bound; a finite maximum
-   then gives one original-host order threshold.
+## Source identity and inventory
 
-The public endpoints assume no joining decomposition, completed prefix,
-central no-overfull certificate, residual coloring or individual core coloring.
-The baseline's unrestricted compatible-circuit theorem, three-core theorem,
-all-four-odd theorem and prior factorization constructions are preserved.
+The exact recovered current statement `three:thm:main`, lines 474–487 of
+`Four_Robust_Component_Cases_2026-11-21.tex`, has statement SHA-256
+`43b21f5ea1e98772ee258c145ddb206ca37e72ffa34b7eb13de25739823509b3`.
+The complete retrieved source has SHA-256
+`ac5911d111a80a8a0230f093a3631e367fcf73b190cdc7a34d122df7eefdf6b7`.
+Its earlier notation explicitly makes partition unions disjoint.
 
-## Reconstruction provenance and evidence
+Pinned Theorem 1.2 instead has hash
+`9b5f67b17f74bda5e830dba24fcf319fb825981566e6282ece5ff73302ae07ac`.
+Its exact original statement was not recovered; the exact pinned Corollary 3.2
+was not recovered either. The current-source theorem is recorded separately.
+All 69 old numbered records, identities, and statuses remain identical,
+including 51 complete and 18 incomplete records. Do not report a new 52/69
+count or imply the new theorem was merely another audit rerun. It is a new
+mathematical theorem with a separately identified source.
 
-The independently read public baseline on both target branches is commit
-`1c9404a454c99fe5c11ba8d774cb9c259f291f20`, tree
-`087e26b5f004af1f9423a6f2b137d805f5991f1a`. It contains 49 complete numbered
-assertions, 14,627 audited proof declarations and 2,777 completed-result mappings.
-The present checkout is `/workspace/scratch/05b9e46fe96b/overfull-lean`.
+## Verification and preservation
 
-The previously reported local checkpoint
-`6e1c25d84920aacd6ac52e4b19032ad8c6a2ac7d`, its proof parent
-`496e1d25341087e332660afeb8fb35fa51bd1c4a`, and their old local run were not
-recovered. The new proof sources are reconstructed from the public baseline
-and recorded mathematical approach. They have their own bytes, hashes and
-genuine execution history. No old command log, declaration count, tree identity
-or publication receipt is synthesized.
+The actual run is `verification/runs/20261125T002000Z`. The source mapping,
+proof notes, and independent review are:
 
-The fresh run's `recovery-provenance.json` and `verification-scope.json`
-record this distinction and the exact two-assertion closure. Its development
-records preserve actual successful, failed and interrupted commands, including
-the distinction between an observed wrapper interruption and an unknown child
-exit. The final full gate freezes inputs and controls and requires them to be
-unchanged. The generated declaration map includes public, private and generated
-proof declarations. Exact-tree and both-branch readbacks establish publication
-separately from local verification.
+- `docs/ordinary-core-coloring-source.json`
+- `docs/ordinary-core-coloring.md`
+- `docs/ordinary-core-coloring-semantic-review.md`
 
-The preservation gate checks every previous nonroot mathematical source and
-the stock `Audit.lean`, every old declaration and module owner, all old axiom
-sets and declaration maps, all completed-result mappings, all 69 pinned
-statement identities, and all other 67 numbered assertion records. Allowed
-axioms remain exactly `propext`, `Classical.choice` and `Quot.sound`.
+Read the run's actual `full-*/terminal.json` and preservation receipt to
+establish a successful full build. The full gate executes the stock verifier
+with additive registration only, freezes all source inputs and controls,
+compares them after execution, and preserves full actual output. The allowed
+axioms remain `propext`, `Classical.choice`, and `Quot.sound`.
 
-## Next work
+The preservation check requires every previous nonroot mathematical source,
+the stock `Audit.lean`, every previous declaration with its module and axiom
+set, every prior completed-result mapping, every old declaration map, and all
+69 numbered records to remain unchanged. All new public, private, and
+generated proof declarations must belong to the two new modules and appear
+in the new declaration map. Publication is established only by the actual
+remote object and both-branch readbacks under `publication/`.
 
-First use the actual full-run and preservation receipts to settle this
-reconstruction's verified status; use the publication readbacks to settle its
-public status. Do not repeat the completed grouping or parity constructions
-unless a failed gate identifies a concrete defect.
+## Next mathematical work
 
-The next mathematical composition is the nonregular three-ordinary-core
-coloring construction, using an actual auxiliary completion and the four-core
-regular endpoint. The pinned Theorem 1.2 source identity still needs its own
-source recovery or an explicit, separately reviewed identity decision before
-any promotion. See [next-verification-target.md](next-verification-target.md).
-The other critical-graph, mixed-core, bipartite, dense, padding and main-theorem
-obligations retain their recorded unfinished status.
+The remaining native fixed-pattern construction for Lemma 4.4 and Corollary
+4.5 must allow two separate exceptional matching pairs. The current two-core
+native construction uses at most two exceptional vertices and hence at most
+one such pair. The five-exception source statement can have two pairs.
+Two robust core parts plus two pair parts need four distinct assigned labels,
+then simultaneous native reserves and original-copy terminal reassembly.
 
-## Resumption after the interrupted transfer
+The proved four-label circuit theorem and four-piece grouping can be used
+after that setup is constructed. The large regular four-core theorem does not
+replace it: exceptional pair parts have order two and the source host may be
+a multigraph. Do not close the five-exception statement by silently changing
+its exceptional bound to two.
 
-The first reconstructed local commit `d01ec0006621c0e90a0917169497073dad22c513`
-was not published as a complete commit. Its exact full source tree and raw
-full-run output were lost during the stalled large-blob transfer. Eleven exact
-objects were recovered from GitHub; the current run records their hashes and
-statuses. Its earlier Prefix snapshot is not represented as the final verified
-file. The present 25-module reconstruction receives a new audit and new counts.
-
-An explicitly unfinished recovery checkpoint was published on
-`reconstruction-four-core-2026-11-24-2130` to preserve the reconstruction while
-checks continue. It does not advance either requested verified publication
-branch. The publication receipts distinguish these intermediate data snapshots
-from the final verified proof and branch updates.
+The critical average-degree input, critical-case compositions, mixed and
+bipartite constructions, dense integral packing and absorption, padding,
+and main theorem retain their recorded unfinished status. Exact recovery of
+the older Theorem 1.2 and Corollary 3.2 statement identities remains a separate
+source task. Do not repeat the newly completed nonregular composition unless
+an actual failed verification gate identifies a defect.

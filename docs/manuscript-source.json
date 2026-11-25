@@ -2483,6 +2483,25 @@
         "Overfull.Multigraph.compatibleCircuitPartition_iff_admissible_of_card_le_three"
       ],
       "scope": "Compatible circuit selection and exact partition for finite loopless multigraphs on at most three vertices, under the original half-cut inequalities and even degrees. Actual edge-copy identities and arbitrary incidence-class types are preserved. This does not prove the four-label case, full Corollary 4.6, terminal Proposition 4.16, or the main theorem."
+    },
+    {
+      "file": "Overfull/OrdinaryCoreColoring.lean",
+      "supporting_files": [
+        "Overfull/AuxiliarySimple/OrdinaryThree.lean"
+      ],
+      "lean_declarations": [
+        "Overfull.three_core_nonregular_factorization",
+        "Overfull.three_core_coloring",
+        "Overfull.ordinary_cores_normalized_factorization",
+        "Overfull.ordinary_cores_coloring"
+      ],
+      "manuscript_locations": [
+        "current November 21 source, three:thm:main"
+      ],
+      "scope": "Actual nonregular three-core completion and a common one/two/three-core coloring theorem for arbitrary finite core labels and every palette k at least the maximum degree. The exact current-source theorem is recorded separately from pinned Theorem 1.2; no numbered status changes.",
+      "current_source_statement_sha256": "43b21f5ea1e98772ee258c145ddb206ca37e72ffa34b7eb13de25739823509b3",
+      "pinned_numbered_inventory_rebased": false,
+      "source_manifest": "docs/ordinary-core-coloring-source.json"
     }
   ],
   "continuation_source_reviews": [

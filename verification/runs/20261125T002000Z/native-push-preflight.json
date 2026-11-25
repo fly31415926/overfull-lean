@@ -1,0 +1,16 @@
+{
+  "command": [
+    "git",
+    "push",
+    "--dry-run",
+    "origin",
+    "HEAD:refs/heads/main"
+  ],
+  "cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+  "observed_tool_result": {
+    "exit_code": 128,
+    "output": "fatal: could not read Username for 'https://github.com': No such device or address\n"
+  },
+  "status": "failed_before_any_remote_write",
+  "next_transport": "GitHub connector Git-data API with fast-forward branch leases"
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "ac05c3232425399af6c0f29e1f7d3ddc1037424d",
+  "baseline_tree": "8cfcdcc6cdd08b3209bc21b1823122bb141c330e",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "public_theorems": [
+    "Overfull.ordinary_cores_coloring"
+  ],
+  "current_manuscript_statement": {
+    "filename": "Four_Robust_Component_Cases_2026-11-21.tex",
+    "whole_source_sha256": "ac5911d111a80a8a0230f093a3631e367fcf73b190cdc7a34d122df7eefdf6b7",
+    "manuscript_label": "three:thm:main",
+    "statement_source_lines": [
+      474,
+      487
+    ],
+    "statement_sha256": "43b21f5ea1e98772ee258c145ddb206ca37e72ffa34b7eb13de25739823509b3",
+    "excerpt_path": "verification/runs/20261125T002000Z/current-ordinary-theorem.tex",
+    "pinned_statement_sha256": "9b5f67b17f74bda5e830dba24fcf319fb825981566e6282ece5ff73302ae07ac",
+    "matches_pinned_statement": false,
+    "normalization": "none; begin/end theorem block, no terminal line feed",
+    "pinned_numbered_inventory_rebased": false
+  },
+  "scope": "Construct actual original-host nonregular three-core coloring by adding a fourth robust core, factoring the actual regular completion, and restricting the coloring. Combine this with the existing one- and two-core constructions with one positive tolerance and order threshold. The public current-source endpoint allows one to three cores with arbitrary finite labels, arbitrary positive density, and every palette k at least the actual maximum degree. The literal budget a+|Z|+1 is retained. Nonnegative error is derived internally, exceptional overlap is removed internally, and larger palettes use proved Vizing. No original regularity, parity, supplied auxiliary graph or supplied coloring is assumed. The current source identity is recorded separately; all 69 older numbered records and their 51 complete statuses remain unchanged.",
+  "review": "docs/ordinary-core-coloring-semantic-review.md",
+  "proof_map": "docs/ordinary-core-coloring.md",
+  "module_count": 2,
+  "public_theorem_count": 4,
+  "modules": [
+    {
+      "module": "Overfull.AuxiliarySimple.OrdinaryThree",
+      "path": "Overfull/AuxiliarySimple/OrdinaryThree.lean",
+      "sha256": "c74dd5309a823b16ae4e2aa34af134b6bff67652c4e95923feba1a6abcc187b5",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.three_core_nonregular_factorization",
+          "source_line": 27
+        },
+        {
+          "name": "Overfull.three_core_coloring",
+          "source_line": 222
+        }
+      ]
+    },
+    {
+      "module": "Overfull.OrdinaryCoreColoring",
+      "path": "Overfull/OrdinaryCoreColoring.lean",
+      "sha256": "3709dd860ef82615e6263bb647b135d60f65d8d8d9c61aeb521de0722206cb52",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.ordinary_cores_normalized_factorization",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.ordinary_cores_coloring",
+          "source_line": 83
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.ordinary_cores_coloring",
+    "Overfull.ordinary_cores_normalized_factorization",
+    "Overfull.three_core_coloring",
+    "Overfull.three_core_nonregular_factorization"
+  ]
+}

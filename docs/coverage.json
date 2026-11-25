@@ -9,7 +9,7 @@
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
   "fully_verified_numbered_assertion_count": 51,
-  "scope": "The current four-core continuation completes the exact pinned Proposition 4.16 and Theorem 4.17, bringing complete numbered coverage to 51 of 69 after a successful genuine full verification and preservation check. The main theorem remains unverified. All other 67 numbered records and all 69 statement identities are preserved. Historical scope descriptions in unchanged earlier records describe their corresponding checkpoints. Complete Proposition 4.16 for the actual CircuitPatterns.FrequentPatternResult, on an arbitrary finite core index type of cardinality three or four. Uniform tolerances and the order threshold precede the host and result. The proof uses the result's actual stored pattern, forest and pair supplies, exhausts all parity cases, and constructs a one-factorization on the original copies. The positive regular no-overfull assumptions imply the ambient even order. Complete Theorem 4.17 for the original even-order finite simple regular host with no overfull set, three or four disjoint robust cores, and the exceptional set. The original linear budget a + |Z| + 1 <= epsilon*n is retained. An arbitrary positive density is normalized internally, the core error's nonnegativity is derived, and all tolerances precede the host. The whole tolerance function is chosen before bounded absorption fixes its exceptional bound. All prefixes are restored on original edge copies.",
+  "scope": "The current continuation proves the separately sourced nonregular ordinary-core coloring theorem for one, two, or three cores and arbitrary palette k, via actual auxiliary completion and the proved regular four-core endpoint. All 69 older numbered records, their statement identities, and the 51 complete statuses remain unchanged because the exact older Theorem 1.2 statement was not recovered. The main theorem remains unverified. The strict full verifier and preservation receipts establish the actual verified source and axiom scope.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -5164,6 +5164,22 @@
       "manuscript_locations": [
         "three:thm:regular-four"
       ]
+    },
+    {
+      "id": "ordinary_core_coloring_current_source",
+      "lean_declarations": [
+        "Overfull.three_core_nonregular_factorization",
+        "Overfull.three_core_coloring",
+        "Overfull.ordinary_cores_normalized_factorization",
+        "Overfull.ordinary_cores_coloring"
+      ],
+      "files": [
+        "Overfull/AuxiliarySimple/OrdinaryThree.lean",
+        "Overfull/OrdinaryCoreColoring.lean"
+      ],
+      "description": "Actual nonregular three-core completion and a common one/two/three-core coloring theorem for arbitrary finite core labels and every palette k at least the maximum degree. The exact current-source theorem is recorded separately from pinned Theorem 1.2; no numbered status changes.",
+      "numbered_assertions_completed": 0,
+      "source_manifest": "docs/ordinary-core-coloring-source.json"
     }
   ],
   "numbered_assertions": [

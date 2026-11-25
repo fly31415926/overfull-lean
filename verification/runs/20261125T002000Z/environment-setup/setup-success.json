@@ -1,0 +1,22 @@
+{
+  "completed_at": "2026-11-25T00:26:01.563200+00:00",
+  "status": "ready",
+  "lean_bin_directory": "/home/agent/.elan/bin",
+  "recommended_environment": {
+    "LEAN_NUM_THREADS": "2",
+    "MATHLIB_NO_CACHE_ON_UPDATE": "1"
+  },
+  "tracked_setup_inputs_unchanged": true,
+  "pinned_git_dependencies": 9,
+  "official_cache_files": 3106,
+  "official_cache_final_returncode": 0,
+  "vizing_setup_returncode": 0,
+  "provenance": "runtime-provenance.json",
+  "cache_success_log": "mathlib-cache-final.log",
+  "notes": [
+    "Initial cache attempt failed because the shallow ProofWidgets checkout lacked its release tag; fetching exact tag v0.0.74 resolved that.",
+    "Parallel cache requests encountered HTTP 429. Successful files were retained and the tail downloaded at a low sequential rate, with complete public URL/response/hash records.",
+    "A deliberately interrupted urllib downloader was replaced by a persistent session to reduce HTTPS connection overhead.",
+    "The initial persistent-client initialization required explicit use of the existing HTTPS_PROXY because the HTTP client could not load its optional SOCKS dependency. Standard proxy and TLS certificate verification remained enabled."
+  ]
+}

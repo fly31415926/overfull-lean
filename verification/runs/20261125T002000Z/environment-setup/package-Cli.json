@@ -1,0 +1,54 @@
+{
+  "name": "Cli",
+  "url": "https://github.com/leanprover/lean4-cli",
+  "rev": "91c18fa62838ad0ab7384c03c9684d99d306e1da",
+  "started": "2026-11-25T00:17:57.546709+00:00",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "init",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/Cli"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/Cli",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/leanprover/lean4-cli"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/Cli",
+        "fetch",
+        "--depth",
+        "1",
+        "origin",
+        "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/Cli",
+        "checkout",
+        "--detach",
+        "FETCH_HEAD"
+      ],
+      "returncode": 0
+    }
+  ],
+  "returncode": 0,
+  "finished": "2026-11-25T00:18:00.320463+00:00"
+}

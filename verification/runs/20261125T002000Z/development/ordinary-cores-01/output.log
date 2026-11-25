@@ -1,0 +1,22 @@
+✔ [3731/3736] Built Overfull.ThreeCoreReduction.Frequent (3.7s)
+✔ [3732/3736] Built Overfull.ThreeCoreReduction.Bounded (3.2s)
+✔ [3733/3736] Built Overfull.ThreeCoreReduction.Regular (5.1s)
+✔ [3734/3736] Built Overfull.AuxiliarySimple.OrdinaryTwo (6.8s)
+✔ [3735/3736] Built Overfull.AuxiliarySimple.OrdinaryOne (6.4s)
+✖ [3736/3736] Building Overfull.OrdinaryCoreColoring (3.2s)
+trace: .> LEAN_PATH=/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/vizing/.lake/build/lib/lean:/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/build/lib/lean /home/agent/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean /workspace/scratch/0e01d9fcb296/overfull-lean/Overfull/OrdinaryCoreColoring.lean -o /workspace/scratch/0e01d9fcb296/overfull-lean/.lake/build/lib/lean/Overfull/OrdinaryCoreColoring.olean -i /workspace/scratch/0e01d9fcb296/overfull-lean/.lake/build/lib/lean/Overfull/OrdinaryCoreColoring.ilean -c /workspace/scratch/0e01d9fcb296/overfull-lean/.lake/build/ir/Overfull/OrdinaryCoreColoring.c --setup /workspace/scratch/0e01d9fcb296/overfull-lean/.lake/build/ir/Overfull/OrdinaryCoreColoring.setup.json --json
+error: Overfull/OrdinaryCoreColoring.lean:170:11: Application type mismatch: The argument
+  VizingAdapter.enlargeColors ?m.950 ⋯
+has type
+  EdgeColoring.{0} ?m.948 3
+of sort `Type` but is expected to have type
+  EdgeColoring.{u} G k
+of sort `Type u` in the application
+  Nonempty.intro
+    (VizingAdapter.enlargeColors ?m.950
+      (have hh := maxDegree_lt_card_verts G;
+      hIle))
+error: Lean exited with code 1
+Some required targets logged failures:
+- Overfull.OrdinaryCoreColoring
+error: build failed

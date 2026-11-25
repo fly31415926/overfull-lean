@@ -1,0 +1,54 @@
+{
+  "name": "Qq",
+  "url": "https://github.com/leanprover-community/quote4",
+  "rev": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+  "started": "2026-11-25T00:17:54.472627+00:00",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "init",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/Qq"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/Qq",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/leanprover-community/quote4"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/Qq",
+        "fetch",
+        "--depth",
+        "1",
+        "origin",
+        "dea6a3361fa36d5a13f87333dc506ada582e025c"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/Qq",
+        "checkout",
+        "--detach",
+        "FETCH_HEAD"
+      ],
+      "returncode": 0
+    }
+  ],
+  "returncode": 0,
+  "finished": "2026-11-25T00:17:57.458026+00:00"
+}

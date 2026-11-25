@@ -1,0 +1,54 @@
+{
+  "name": "aesop",
+  "url": "https://github.com/leanprover-community/aesop",
+  "rev": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+  "started": "2026-11-25T00:17:54.452102+00:00",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "init",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/aesop"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/aesop",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/leanprover-community/aesop"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/aesop",
+        "fetch",
+        "--depth",
+        "1",
+        "origin",
+        "725ac8cd67acd70a7beaf47c3725e23484c1ef50"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/aesop",
+        "checkout",
+        "--detach",
+        "FETCH_HEAD"
+      ],
+      "returncode": 0
+    }
+  ],
+  "returncode": 0,
+  "finished": "2026-11-25T00:17:57.546371+00:00"
+}

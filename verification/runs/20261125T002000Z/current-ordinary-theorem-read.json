@@ -1,0 +1,57 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Action completed."
+    }
+  ],
+  "structuredContent": {
+    "api_tool_source": "files/read",
+    "results": [
+      {
+        "version_id": "25",
+        "name": "Four_Robust_Component_Cases_2026-11-21.tex",
+        "mime_type": "text/x-tex",
+        "size_bytes": 285846,
+        "created_at": "2026-11-20T22:23:21.799650Z",
+        "modified_at": "2026-11-24T02:59:08.242372Z",
+        "file_provider": "native",
+        "library_file_id": "libfile_4c27e104b06081919288a0e745858ccd",
+        "ref_id": "libfile_4c27e104b06081919288a0e745858ccd",
+        "file_id": "file_0000000097c481f68579f1684edd4eea",
+        "surface": "library",
+        "requested_file_id": "libfile_4c27e104b06081919288a0e745858ccd",
+        "start_line": 474,
+        "end_line": 487,
+        "total_lines": 6000,
+        "has_more": true,
+        "pages": [],
+        "num_pages": 0,
+        "warnings": [],
+        "api_tool_source": "files/read",
+        "read_index": 0,
+        "mode": "full",
+        "include_text": true,
+        "include_images": false,
+        "requested_start_page": null,
+        "requested_end_page": null,
+        "next_start_line": 488,
+        "next_start_page": null,
+        "next_read": {
+          "ref_id": "libfile_4c27e104b06081919288a0e745858ccd",
+          "mode": "full",
+          "start_line": 488,
+          "max_lines": 14,
+          "include_images": false
+        },
+        "next_image_read": null,
+        "content": [
+          "\\begin{theorem}\\label{three:thm:main}\nLet $\\alpha>0$. For every sufficiently small $\\tau>0$, depending\non $\\alpha$, and every $0<\\nu\\le\\tau$, there exist $\\eps>0$ and\n$n_0\\in\\mathbb N$ for which the following holds. Let $G$ be a\ngraph of order $n\\ge n_0$, with $\\Delta(G)\\le k$ and $k\\ge\\alpha n$.\nSuppose\n\\[\n V(G)=U_1\\cup\\cdots\\cup U_q\\cup Z,\\qquad q\\in\\{1,2,3\\},\n \\qquad |U_i|\\ge\\alpha n,\\qquad a+|Z|+1\\le\\eps n,\n\\]\nand each $G[U_i]$ contains a spanning robust $(\\nu,\\tau)$-expander\nof minimum degree at least $k-a$. If $G$ has no $k$-overfull set,\nthen $G$ is $k$-edge-colorable.\n\\end{theorem}"
+        ]
+      }
+    ],
+    "warnings": [],
+    "external_connectors_accessed": false
+  },
+  "isError": false
+}

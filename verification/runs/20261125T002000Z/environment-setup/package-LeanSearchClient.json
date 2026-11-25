@@ -1,0 +1,54 @@
+{
+  "name": "LeanSearchClient",
+  "url": "https://github.com/leanprover-community/LeanSearchClient",
+  "rev": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+  "started": "2026-11-25T00:17:43.505119+00:00",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "init",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/LeanSearchClient"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/LeanSearchClient",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/leanprover-community/LeanSearchClient"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/LeanSearchClient",
+        "fetch",
+        "--depth",
+        "1",
+        "origin",
+        "99657ad92e23804e279f77ea6dbdeebaa1317b98"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/LeanSearchClient",
+        "checkout",
+        "--detach",
+        "FETCH_HEAD"
+      ],
+      "returncode": 0
+    }
+  ],
+  "returncode": 0,
+  "finished": "2026-11-25T00:17:49.893934+00:00"
+}

@@ -1,0 +1,54 @@
+{
+  "name": "plausible",
+  "url": "https://github.com/leanprover-community/plausible",
+  "rev": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+  "started": "2026-11-25T00:17:43.504847+00:00",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "init",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/plausible"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/plausible",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/leanprover-community/plausible"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/plausible",
+        "fetch",
+        "--depth",
+        "1",
+        "origin",
+        "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/0e01d9fcb296/overfull-lean/.lake/packages/plausible",
+        "checkout",
+        "--detach",
+        "FETCH_HEAD"
+      ],
+      "returncode": 0
+    }
+  ],
+  "returncode": 0,
+  "finished": "2026-11-25T00:17:49.879567+00:00"
+}

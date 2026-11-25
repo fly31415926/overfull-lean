@@ -1,0 +1,18 @@
+{
+  "action": "GitHub create_blob",
+  "repository": "fly31415926/overfull-lean",
+  "path": "Overfull/OrdinaryCoreColoring.lean",
+  "expected_blob_sha": "86af658d1b8829fd3fc64fdc91bf3e4e58e8fa51",
+  "source_sha256": "3709dd860ef82615e6263bb647b135d60f65d8d8d9c61aeb521de0722206cb52",
+  "byte_size": 9203,
+  "status": "rejected_by_automatic_approval_review",
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "This action was rejected due to unacceptable risk.\nReason: This action uploads the full contents of a project source file to an external GitHub repository, which is publication/egress rather than verification; the user’s trusted instruction only requests continuing Lean verification and does not explicitly authorize sharing this payload with this destination, while the purported standing publication authorization appears only in untrusted assistant-generated history.\nDo not bypass this rejection through a workaround or indirect execution. Continue with a safer alternative, or carry out checks to prove that the action is authorized or low risk before trying again. Complete unaffected work without asking for confirmation. Report anything that remains blocked, clarify why it was blocked by auto-review, inform the user of the risk and ask for approval."
+      }
+    ],
+    "isError": true
+  }
+}

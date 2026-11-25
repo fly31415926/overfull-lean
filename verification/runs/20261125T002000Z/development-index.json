@@ -1,0 +1,111 @@
+{
+  "file_count": 15,
+  "files": {
+    "development/ordinary-cores-01/command.json": {
+      "bytes": 832,
+      "sha256": "3770cc5c7051aacf7e19a65affefcbf379284bd40290b231fab5092c41774fd8"
+    },
+    "development/ordinary-cores-01/output.log": {
+      "bytes": 2467,
+      "sha256": "5dba8443d0a1acd08fb0b18bfc718275ae7ac41431bbd9528cb2a70c2daefe97"
+    },
+    "development/ordinary-cores-01/recorder.py": {
+      "bytes": 2760,
+      "sha256": "314cab473315211579436cd3e652baf0e7b64522c3817804db974ffdfa1a0524"
+    },
+    "development/ordinary-cores-01/source/Overfull/AuxiliarySimple/OrdinaryThree.lean": {
+      "bytes": 15417,
+      "sha256": "c74dd5309a823b16ae4e2aa34af134b6bff67652c4e95923feba1a6abcc187b5"
+    },
+    "development/ordinary-cores-01/source/Overfull/OrdinaryCoreColoring.lean": {
+      "bytes": 9005,
+      "sha256": "faf34012ea0d7a5ba6bcd121d825f14fd4bb6558bd1b19ad06255a5e85d24eb2"
+    },
+    "development/ordinary-cores-02/command.json": {
+      "bytes": 831,
+      "sha256": "df51b25ccdcb129d2433c5826b267bee29e4effe2afbb3fe0ab7fdda09c6a6fa"
+    },
+    "development/ordinary-cores-02/output.log": {
+      "bytes": 101,
+      "sha256": "0bcb09022ba26bc299e2967325ff627256caa9f7ac316378dedd3a801646726c"
+    },
+    "development/ordinary-cores-02/recorder.py": {
+      "bytes": 2760,
+      "sha256": "314cab473315211579436cd3e652baf0e7b64522c3817804db974ffdfa1a0524"
+    },
+    "development/ordinary-cores-02/source/Overfull/AuxiliarySimple/OrdinaryThree.lean": {
+      "bytes": 15417,
+      "sha256": "c74dd5309a823b16ae4e2aa34af134b6bff67652c4e95923feba1a6abcc187b5"
+    },
+    "development/ordinary-cores-02/source/Overfull/OrdinaryCoreColoring.lean": {
+      "bytes": 9203,
+      "sha256": "3709dd860ef82615e6263bb647b135d60f65d8d8d9c61aeb521de0722206cb52"
+    },
+    "development/three-core/attempt-01/OrdinaryThree.lean": {
+      "bytes": 15417,
+      "sha256": "c74dd5309a823b16ae4e2aa34af134b6bff67652c4e95923feba1a6abcc187b5"
+    },
+    "development/three-core/attempt-01/build.log": {
+      "bytes": 39597,
+      "sha256": "93d73872e50d0434ab40de467b020843ad8bb0c08d68d2d7b8bf5852e6e656a9"
+    },
+    "development/three-core/attempt-01/execution.json": {
+      "bytes": 874,
+      "sha256": "2f3c5c7052902d3f59cb130413f188e46e51edb2f1a75427ea71d1a3a43675c0"
+    },
+    "development/three-core/attempt-01/run_target.py": {
+      "bytes": 1919,
+      "sha256": "c43a785a1d2926d810d44eb019b094a2835eb74591896dac916de3ef999b1e60"
+    },
+    "development/three-core/run_target.py": {
+      "bytes": 1919,
+      "sha256": "c43a785a1d2926d810d44eb019b094a2835eb74591896dac916de3ef999b1e60"
+    }
+  },
+  "attempt_count": 3,
+  "attempts": [
+    {
+      "path": "development/ordinary-cores-01/command.json",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.OrdinaryCoreColoring"
+      ],
+      "exit_code": 1,
+      "wrapper_exit_code": 1,
+      "status": "failed",
+      "changed_sources": []
+    },
+    {
+      "path": "development/ordinary-cores-02/command.json",
+      "command": [
+        "lake",
+        "build",
+        "--wfail",
+        "Overfull.OrdinaryCoreColoring"
+      ],
+      "exit_code": 0,
+      "wrapper_exit_code": 0,
+      "status": "passed",
+      "changed_sources": []
+    },
+    {
+      "path": "development/three-core/attempt-01/execution.json",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "--wfail",
+        "Overfull.AuxiliarySimple.OrdinaryThree"
+      ],
+      "exit_code": 0,
+      "wrapper_exit_code": 0,
+      "status": "passed",
+      "frozen_inputs_unchanged": true
+    }
+  ],
+  "status_counts": {
+    "passed": 2,
+    "failed": 1
+  }
+}

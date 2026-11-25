@@ -1,0 +1,50 @@
+{
+  "checked_at_utc": "2026-11-25T01:14:19.092913+00:00",
+  "status": "passed",
+  "baseline_commit": "ac05c3232425399af6c0f29e1f7d3ddc1037424d",
+  "verified_input_count": 861,
+  "frozen_control_count": 17,
+  "all_frozen_inputs_controls_and_outputs_unchanged": true,
+  "setup_evidence_files": 48,
+  "development_evidence_files": 15,
+  "full_attempts": [
+    {
+      "attempt": "full-01",
+      "status": "failed",
+      "exit_code": 1,
+      "terminal_sha256": "72a1897d916cbac86ed9cd2a2e11f51c734dc990aef7173c81e2fa3bd2a41f35"
+    },
+    {
+      "attempt": "full-02",
+      "status": "passed",
+      "exit_code": 0,
+      "terminal_sha256": "89e993b3cc2ef030c6fef59c660bbaa02440af6dab89349c6bb0dc8b79c3dd07"
+    }
+  ],
+  "preservation": {
+    "status": "passed",
+    "old_declarations_preserved": 14820,
+    "new_declarations": 10,
+    "all_declarations": 14830,
+    "old_result_mappings_preserved": 2840,
+    "all_result_mappings": 2844,
+    "new_modules": 2,
+    "public_proofs": 4,
+    "complete_numbered_assertions": 51,
+    "numbered_assertions": 69,
+    "main_theorem_verified": false,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "publication_status": "blocked_by_automatic_approval_review",
+  "successful_remote_blob_uploads": 0,
+  "remote_commits_created": 0,
+  "remote_branch_updates_attempted": 0,
+  "publication_rejection_receipts": [
+    "blocked-upload.json",
+    "reassessed-upload.json"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/home/agent/.elan/bin/lake",
+    "exe",
+    "cache",
+    "get",
+    "Mathlib.Combinatorics.SimpleGraph.Matching",
+    "Mathlib.Combinatorics.SimpleGraph.Coloring",
+    "Mathlib.Combinatorics.SimpleGraph.Tutte",
+    "Mathlib.Tactic",
+    "Mathlib.Data.Real.Archimedean",
+    "Mathlib.Data.Nat.Choose.Basic",
+    "Mathlib.Analysis.Convex.Combination",
+    "Mathlib.Analysis.Normed.Operator.Banach",
+    "Mathlib.Analysis.Normed.Module.FiniteDimension",
+    "Mathlib.Combinatorics.Hall.Finite"
+  ],
+  "started": "2026-11-25T00:20:29.518735+00:00",
+  "environment": {
+    "LEAN_NUM_THREADS": "2",
+    "MATHLIB_NO_CACHE_ON_UPDATE": "1",
+    "CURL_HOME": "/workspace/scratch/0e01d9fcb296/lean-runtime/curl-config"
+  },
+  "curl_configuration": "parallel-max = 4\nrate = 4/s\nretry-delay = 5\n",
+  "returncode": 1,
+  "finished": "2026-11-25T00:21:23.033952+00:00"
+}

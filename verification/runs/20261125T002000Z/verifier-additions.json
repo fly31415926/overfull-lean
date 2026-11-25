@@ -1,0 +1,22 @@
+[
+  {
+    "kind": "additive",
+    "old": "                          (\"global_factorization\", \"global-factorization-source.json\")):",
+    "new": "                          (\"ordinary_core_coloring\", \"ordinary-core-coloring-source.json\"),\n                          (\"global_factorization\", \"global-factorization-source.json\")):"
+  },
+  {
+    "kind": "additive",
+    "old": "    # Every first-party mathematical file must be included in the library build.\n",
+    "new": "    # A current-source theorem is checked separately from the older 69 assertions.\n    core_coloring_source, _, core_coloring_public = extension_maps[\"ordinary_core_coloring\"]\n    current_statement = core_coloring_source[\"current_manuscript_statement\"]\n    if (core_coloring_source[\"kind\"] != \"supporting_continuation\"\n            or core_coloring_source[\"numbered_assertions_completed\"] != 0\n            or core_coloring_source[\"main_theorem_verified\"] is not False\n            or core_coloring_source[\"public_theorems\"] != [\"Overfull.ordinary_cores_coloring\"]\n            or \"Overfull.ordinary_cores_coloring\" not in core_coloring_public\n            or current_statement[\"statement_sha256\"] !=\n                \"43b21f5ea1e98772ee258c145ddb206ca37e72ffa34b7eb13de25739823509b3\"\n            or hashlib.sha256((ROOT / current_statement[\"excerpt_path\"]).read_bytes()).hexdigest()\n                != current_statement[\"statement_sha256\"]):\n        raise SystemExit(\"Ordinary-core coloring must retain its separately checked current-source identity.\")\n\n    # Every first-party mathematical file must be included in the library build.\n"
+  },
+  {
+    "kind": "additive",
+    "old": "                    \"global_factorization\": \"global-factorization\"}[key]",
+    "new": "                    \"ordinary_core_coloring\": \"ordinary-core-coloring\",\n                    \"global_factorization\": \"global-factorization\"}[key]"
+  },
+  {
+    "kind": "additive",
+    "old": "        \"four_core_continuation_declaration_map\": extension_evidence[\"four_core_continuation\"],\n",
+    "new": "        \"four_core_continuation_declaration_map\": extension_evidence[\"four_core_continuation\"],\n        \"ordinary_core_coloring_declaration_map\": extension_evidence[\"ordinary_core_coloring\"],\n"
+  }
+]

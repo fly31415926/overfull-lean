@@ -1,0 +1,34 @@
+{
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "git": "git version 2.56.1",
+  "lean": "Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+  "lake": "Lake version 5.0.0-src+797c613 (Lean version 4.24.0)",
+  "repo": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+  "runtime_path": "/home/agent/.elan/bin",
+  "LEAN_NUM_THREADS": "2",
+  "setup_evidence": "environment-setup",
+  "setup_index": "environment-setup-index.json",
+  "setup_success": {
+    "completed_at": "2026-11-25T00:26:01.563200+00:00",
+    "status": "ready",
+    "lean_bin_directory": "/home/agent/.elan/bin",
+    "recommended_environment": {
+      "LEAN_NUM_THREADS": "2",
+      "MATHLIB_NO_CACHE_ON_UPDATE": "1"
+    },
+    "tracked_setup_inputs_unchanged": true,
+    "pinned_git_dependencies": 9,
+    "official_cache_files": 3106,
+    "official_cache_final_returncode": 0,
+    "vizing_setup_returncode": 0,
+    "provenance": "runtime-provenance.json",
+    "cache_success_log": "mathlib-cache-final.log",
+    "notes": [
+      "Initial cache attempt failed because the shallow ProofWidgets checkout lacked its release tag; fetching exact tag v0.0.74 resolved that.",
+      "Parallel cache requests encountered HTTP 429. Successful files were retained and the tail downloaded at a low sequential rate, with complete public URL/response/hash records.",
+      "A deliberately interrupted urllib downloader was replaced by a persistent session to reduce HTTPS connection overhead.",
+      "The initial persistent-client initialization required explicit use of the existing HTTPS_PROXY because the HTTP client could not load its optional SOCKS dependency. Standard proxy and TLS certificate verification remained enabled."
+    ]
+  }
+}
