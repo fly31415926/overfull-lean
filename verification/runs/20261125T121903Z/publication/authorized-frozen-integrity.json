@@ -1,0 +1,49 @@
+{
+  "checked_at_utc": "2026-11-25T13:47:00.494833+00:00",
+  "status": "passed",
+  "full_attempt": "full-01",
+  "baseline_commit": "f2510d10c114bcf3d0003b5e2e4e35cb0400167d",
+  "baseline_tree": "58fe77f4afaba4b0ab6cf77956afb1c23608cd35",
+  "checks": {
+    "frozen-inputs": {
+      "count": 900,
+      "current_bytes_match": true,
+      "archive_bytes_match": true,
+      "archive_sha256": "7bb29f58b3c96f962c578d59b254374cc970def9b0044a0982fa557bebe84622"
+    },
+    "frozen-controls": {
+      "count": 75,
+      "current_bytes_match": true,
+      "archive_bytes_match": true,
+      "archive_sha256": "4b9f27e00eb83a2af3efbd12159d11a20640fe5b617b1f1bb71ccf4d86082ace"
+    },
+    "outputs": {
+      "count": 29,
+      "current_bytes_match": true,
+      "archive_bytes_match": true,
+      "archive_sha256": "59aa999759c39f8564e42aa820e67c234def7b87593a8ecf5181d4e67fcb374c"
+    }
+  },
+  "preservation": {
+    "status": "passed",
+    "old_declarations_preserved": 14994,
+    "new_declarations": 168,
+    "all_declarations": 15162,
+    "old_result_mappings_preserved": 2926,
+    "old_declaration_maps_preserved": 23,
+    "old_nonroot_mathematical_sources_preserved": 742,
+    "all_result_mappings": 3001,
+    "new_modules": 16,
+    "public_proofs": 75,
+    "complete_numbered_assertions": 51,
+    "numbered_assertions": 69,
+    "main_theorem_verified": false,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "terminal_sha256": "e633b3e10b531496a55e563ffd79ff04b4cdd7e9f6585d4d877dcae804f17113",
+  "scope": "Read-only hash and archive verification of the recorded full execution; not a new Lean build or audit."
+}

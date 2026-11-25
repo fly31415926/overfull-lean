@@ -1,0 +1,22 @@
+{
+  "status": "publication_blocked_by_automatic_approval_review",
+  "local_verified_checkpoint": "c59d4d740bd3a66937e71ee6538216444e63383e",
+  "verified_tree": "6d5ccce3895e186caaf0b85018c30cf1ffe5028b",
+  "repository_full_name": "fly31415926/overfull-lean",
+  "requested_branches": [
+    "main",
+    "verified-bipartite-continuation-2026-11-21"
+  ],
+  "rejected_action": "GitHub create_blob upload of complete scripts/verify.py to the public repository",
+  "rejected_blob_git_sha": "143dc9887b53782f9dfe8a8bf43af1f29cb2b621",
+  "rejection_receipt": "blob-143dc9887b53782f9dfe8a8bf43af1f29cb2b621-rejected.json",
+  "review_reason": "Automatic review treated the current continuation request as lacking explicit authorization for public publication of this new source snapshot.",
+  "authorization_recheck": "A fresh Personal Context search recovered user publication approvals for earlier named snapshots. It did not establish an explicit ongoing grant covering this newly created checkpoint.",
+  "earlier_run_metadata": "The frozen authorization.json records the earlier interpretation made before the rejection and recheck. Its bytes are retained as execution history; this later review records the corrected publication status.",
+  "no_retry_or_alternate_public_upload_attempted": true,
+  "successful_remote_mutations": 0,
+  "branches_updated_by_this_run": false,
+  "verification_complete": true,
+  "full_gate": "verification/runs/20261125T121903Z/full-01/terminal.json",
+  "needed_next_action": "Explicit user approval to publish this checkpoint and its publication receipts, with all sources/manuscript excerpts, documentation, public/private/generated maps, frozen inputs/outputs, genuine successful/failed logs and environment/path metadata, to the named public repository and both branches."
+}

@@ -1,5 +1,11 @@
 # Publication evidence for the protected-trace checkpoint
 
+## Published result
+
+The verified proof is public at [`c685a6ffb08591d048722cf13e4debaff6eb39ea`](https://github.com/fly31415926/overfull-lean/commit/c685a6ffb08591d048722cf13e4debaff6eb39ea), with tree `6d5ccce3895e186caaf0b85018c30cf1ffe5028b`, exactly matching local checkpoint `c59d4d740bd3a66937e71ee6538216444e63383e`. Both requested branches were read back at that proof commit before the receipt-only successor. The full strict build and exhaustive audit passed: 3,930 build jobs and 15,162 proof declarations. Coverage remains 51/69 and the main theorem remains unverified.
+
+`publication-summary.json`, `proof-readback.json`, and `proof-native-readback.json` record the actual publication and readback. The earlier rejection is retained as history; `authorized-publication-authorization.json` records the explicit user approval that resolved it.
+
 This directory records exact-object publication of the supporting
 two-pair external-assembly continuation to `fly31415926/overfull-lean`.
 The authorized branches are `main` and

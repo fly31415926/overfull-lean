@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/publication_integrity",
+  "recorded_at_utc": "2026-11-25T13:48:06.197676+00:00",
+  "status": "passed",
+  "review_type": "Independent read-only local snapshot, archived verification and exact Git-object integrity review",
+  "authorization_context": "The current user turn explicitly authorizes this checkpoint and all specified sources, manuscript excerpts, documentation, maps, frozen data, genuine logs, environment/path metadata and publication receipts to the public named repository and both named branches. This report does not itself grant authorization.",
+  "repository_full_name": "fly31415926/overfull-lean",
+  "requested_branches": [
+    "main",
+    "verified-bipartite-continuation-2026-11-21"
+  ],
+  "proof_commit": "c59d4d740bd3a66937e71ee6538216444e63383e",
+  "proof_tree": "6d5ccce3895e186caaf0b85018c30cf1ffe5028b",
+  "proof_parent": "f2510d10c114bcf3d0003b5e2e4e35cb0400167d",
+  "baseline_tree": "58fe77f4afaba4b0ab6cf77956afb1c23608cd35",
+  "receipt_commit": "7c34833c3000c7de908bbaebcb7ff97a2d7a0af9",
+  "receipt_tree": "8b67614fa05d5547921926c4304dc01f7722705b",
+  "receipt_only_additions": [
+    "verification/runs/20261125T121903Z/publication/authorization-review.json",
+    "verification/runs/20261125T121903Z/publication/blob-143dc9887b53782f9dfe8a8bf43af1f29cb2b621-rejected.json",
+    "verification/runs/20261125T121903Z/publication/blocked-remote-heads.json",
+    "verification/runs/20261125T121903Z/publication/local-commit.json",
+    "verification/runs/20261125T121903Z/publication/local-commit.log",
+    "verification/runs/20261125T121903Z/publication/original-local-commit.txt",
+    "verification/runs/20261125T121903Z/publication/post-review-integrity.json",
+    "verification/runs/20261125T121903Z/publication/resume-publication.md",
+    "verification/runs/20261125T121903Z/publication/transport-plan.json",
+    "verification/runs/20261125T121903Z/publication/upload-object-manifest.json"
+  ],
+  "original_local_commit_body_matches_git_object": true,
+  "snapshot_checks": {
+    "index_paths": 15556,
+    "index_entries_equal_complete_git_ls_tree_of_proof_commit": true,
+    "changed_paths": 248,
+    "root_tree_request_equals_exact_baseline_to_proof_diff": true,
+    "blob_payloads_checked": 160,
+    "tree_payloads_checked": 165,
+    "all_payloads_match_recorded_size_sha1_sha256_and_actual_git_object_bytes": true,
+    "inline_blobs_checked": 151,
+    "individual_uploads_required": 9,
+    "inline_content_rehashes_to_exact_expected_blob_shas": true,
+    "inline_and_upload_sets_partition_all_new_blobs": true,
+    "retained_manifest_and_transport_plan_identical_to_snapshot_files": true
+  },
+  "frozen_verification_checks": {
+    "terminal_status": "passed",
+    "terminal_exit_code": 0,
+    "command_and_terminal_receipts_identical": true,
+    "genuine_output_log_matches_terminal_digest": true,
+    "frozen_input_count": 900,
+    "frozen_control_count": 75,
+    "generated_output_count": 29,
+    "all_current_file_hashes_match_frozen_manifests": true,
+    "archive_member_sets_and_member_hashes_match_manifests": true,
+    "archive_file_hashes_match_full_terminal_receipt": true,
+    "all_checked_frozen_files_match_blobs_in_exact_proof_tree": true
+  },
+  "independent_preservation_checks": {
+    "all_old_declarations_compared_with_baseline": 14994,
+    "new_declarations": 168,
+    "total_declarations": 15162,
+    "all_old_result_mappings_compared": 2926,
+    "total_result_mappings": 3001,
+    "old_map_files_compared_by_git_object_and_sha256": 23,
+    "old_nonroot_mathematical_sources_compared_by_git_object_and_sha256": 742,
+    "stock_audit_git_object_unchanged": true,
+    "numbered_records_compared_with_baseline": 69,
+    "numbered_complete": 51,
+    "main_theorem_verified": false,
+    "new_source_modules_hash_checked": 16,
+    "public_theorem_count": 75,
+    "new_declaration_map_exactly_equals_audit_additions": true,
+    "every_audited_axiom_in_allowed_set": true,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "recorded_full_preservation": {
+    "status": "passed",
+    "old_declarations_preserved": 14994,
+    "new_declarations": 168,
+    "all_declarations": 15162,
+    "old_result_mappings_preserved": 2926,
+    "old_declaration_maps_preserved": 23,
+    "old_nonroot_mathematical_sources_preserved": 742,
+    "all_result_mappings": 3001,
+    "new_modules": 16,
+    "public_proofs": 75,
+    "complete_numbered_assertions": 51,
+    "numbered_assertions": 69,
+    "main_theorem_verified": false,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "evidence_sha256": {
+    "verification/runs/20261125T121903Z/full-01/terminal.json": "e633b3e10b531496a55e563ffd79ff04b4cdd7e9f6585d4d877dcae804f17113",
+    "verification/runs/20261125T121903Z/full-01/preservation.json": "47cde5cf28305bcb7b84adbeec6243c6e19772e9a938a4d73038ca3e0bb4ff56",
+    "verification/runs/20261125T121903Z/publication/upload-object-manifest.json": "af37c08a7bc4c01c5d3d3d2b9c6230c8adb7eeba87420db85111edfb5707a9f3",
+    "verification/runs/20261125T121903Z/publication/transport-plan.json": "c292d68a86eaf6f1973a743f872a4ead7024fd2b4399342aba64ced3fc5364c7",
+    "verification/runs/20261125T121903Z/publication/upload-data-proof/inline-tree-request.json": "ebc083351badddac63a3f003be8b920cfdbdb66cd64410c1d8c5224e84ba9eb4",
+    "docs/protected-trace-source.json": "700ece51dcbee65ff0736a61004930379d19189653160930fbf447828e08d28f",
+    "verification/protected-trace-declarations.json": "b0fbd7e3cd26957f6e29a3edba11043ac8130dd7135889861df2cdb0ec846a92"
+  },
+  "limitations": [
+    "No Lean compiler or axiom audit was rerun; this review checks the existing genuine passed execution and its exact preserved bytes.",
+    "No mathematical source, documentation, existing control or existing receipt was edited. This new report is the only write performed by this reviewer.",
+    "No GitHub object was uploaded or created, and no public branch was updated by this reviewer. Remote publication and readback require their own actual receipts.",
+    "The source scope remains supporting conditional external assembly; the safe residual construction and other remaining theorem branches are not completed."
+  ]
+}
