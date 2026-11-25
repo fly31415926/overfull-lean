@@ -5214,6 +5214,43 @@
       "description": "Actual partner-preserving reserves for up to five exceptions, four assigned fibers and palettes, simultaneous protected pair completion, residual original-copy transport, and terminal gluing of two closed pairs. The native safe residual, protected trace alignment and remaining star branches are not completed.",
       "numbered_assertions_completed": 0,
       "source_manifest": "docs/two-pair-native-source.json"
+    },
+    {
+      "id": "native_protected_traces_two_pair_external_assembly",
+      "kind": "graph_theoretic_supporting_results",
+      "lean_declarations": [
+        "Overfull.NativeReserve.exists_fourTwoOddJoining_decomposition_with_reserved_primary",
+        "Overfull.NativeReserve.exists_four_protected_singleton_palette",
+        "Overfull.NativeReserve.PartnerBoundaryPacking.exists_twoPair_residual_joining_singletons_general",
+        "Overfull.NativeAssembly.exists_partner_twoPair_protected_completion_of_core_degrees",
+        "Overfull.WeightedPalette.exists_star_weighted_matching_grouping_of_four",
+        "Overfull.NativeWeighted.exists_native_twoPair_weighted_protected_palette",
+        "Overfull.AssignedParts.twoPair_zero_or_one_star_geometry",
+        "Overfull.NativeAssembly.exists_partner_two_pair_star_completion",
+        "Overfull.NativeCore.old_core_parity_of_twoPair_joining_cuts",
+        "Overfull.NativeCore.exists_native_two_pair_external_palette"
+      ],
+      "files": [
+        "Overfull/AssignedParts/TwoPairOneStar.lean",
+        "Overfull/NativeAssembly/TwoPairBounds.lean",
+        "Overfull/NativeAssembly/TwoPairGeneralProtected.lean",
+        "Overfull/NativeAssembly/TwoPairProtected.lean",
+        "Overfull/NativeAssembly/TwoPairStar.lean",
+        "Overfull/NativeAssembly/TwoPairStarBase.lean",
+        "Overfull/NativeAssembly/TwoPairStarReserve.lean",
+        "Overfull/NativeCore/TwoPairExternal.lean",
+        "Overfull/NativeCore/TwoPairParity.lean",
+        "Overfull/NativeReserve/PartnerGeneralTraces.lean",
+        "Overfull/NativeReserve/PartnerTraces.lean",
+        "Overfull/NativeWeighted/FourJoining.lean",
+        "Overfull/NativeWeighted/TwoPairNative.lean",
+        "Overfull/ResidualPalette/FourProtectedPalette.lean",
+        "Overfull/ResidualPalette/FourReservedPrimary.lean",
+        "Overfull/WeightedPalette/FourGrouping.lean"
+      ],
+      "description": "Construct exact native protected joining traces, weighted four-label palettes, and the complete two-pair external matching family including the optional fifth exceptional star. Derive exact external coverage, whole-boundary preservation, old-core parity and true core-deficit loads from a supplied safe residual and retained-core/numerical budgets. Native residual construction and zero-/one-pair multi-star branches remain open.",
+      "numbered_assertions_completed": 0,
+      "source_manifest": "docs/protected-trace-source.json"
     }
   ],
   "numbered_assertions": [

@@ -1,0 +1,4 @@
+Overfull/NativeCore/TwoPairExternal.lean:136:55: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a b => a.instDecidableEq b
+inferred
+  fun a b => propDecidable (a = b)

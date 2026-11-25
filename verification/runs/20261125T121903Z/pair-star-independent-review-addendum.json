@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/pair_star_assembly",
+  "review_type": "independent semantic and genuine focused-evidence review addendum",
+  "recorded_at_utc": "2026-11-25T12:32:07.807221+00:00",
+  "baseline_commit": "f2510d10c114bcf3d0003b5e2e4e35cb0400167d",
+  "status": "passed_for_listed_source_hashes",
+  "mathematical_sources_edited_by_reviewer_during_review": false,
+  "extends": {
+    "path": "verification/runs/20261125T121903Z/pair-star-independent-review.json",
+    "sha256": "5db39980de0bab692b3e822b4436c92a27d1fa539f9c8778df79cb4e4e092f97",
+    "bytes_preserved": true
+  },
+  "reviewed_module_count": 2,
+  "modules": [
+    {
+      "path": "Overfull/NativeCore/TwoPairParity.lean",
+      "sha256": "77e881f1107beed10643167f4979059901ab25992dc0faec01cf06ce4461af06",
+      "status": "passed_with_explicit_scope",
+      "reviewer_authored_source": false,
+      "strict_receipts": [
+        {
+          "path": "verification/runs/20261125T121903Z/focused/two-pair-core-parity-01/command.json",
+          "sha256": "69539ef8f9c004f3a8bcb09e0c52c0ca0529ed60df75c622f25e6654771ded33",
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "snapshot_matches_inspected_source": true,
+          "command": [
+            "/home/agent/.elan/bin/lake",
+            "env",
+            "lean",
+            "-DwarningAsError=true",
+            "Overfull/NativeCore/TwoPairParity.lean"
+          ]
+        }
+      ],
+      "semantic_findings": [
+        "The two original pair copies and the actual four assigned fibers determine the parity argument. For any matching class, cut parity implies even uncovered assigned fibers via the existing matching parity identity.",
+        "All exceptional vertices are saturated before the assigned fibers are reduced to the original cores. The equality of uncovered corePart and uncovered old core is used explicitly; no original-core parity is substituted for assigned-core parity.",
+        "The palette wrapper derives each class parity from exact preservation of the original joining cuts. This module is a parity transport theorem and does not construct an external palette or a robust-core completion."
+      ]
+    },
+    {
+      "path": "Overfull/NativeCore/TwoPairExternal.lean",
+      "sha256": "e39608d92ccb73cc0f144866fa74eb1ae7f1355bc68b2272d3ea5e5aa2b954d5",
+      "status": "passed_with_explicit_scope",
+      "reviewer_authored_source": false,
+      "strict_receipts": [
+        {
+          "path": "verification/runs/20261125T121903Z/focused/two-pair-external-04/command.json",
+          "sha256": "9e1de89f03f9522951ee86f82e3392fc2fd79432ace3683d9f3b409690e99b31",
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "snapshot_matches_inspected_source": true,
+          "command": [
+            "/home/agent/.elan/bin/lake",
+            "env",
+            "lean",
+            "-DwarningAsError=true",
+            "Overfull/NativeCore/TwoPairExternal.lean"
+          ]
+        }
+      ],
+      "semantic_findings": [
+        "The endpoint takes an original perfect matching with exactly two distinct internal exceptional copies, |Z| <= 5, the actual partner reserve, and a reserve-avoiding regular non-overfull residual. It derives the zero-or-one-unpaired-exception split from those original objects.",
+        "No joining palette, protected trace, star-weight bound, pair completion, fifth-vertex geometry, or free-color count is assumed. In the no-star branch the native protected pair completion is constructed; in the one-star branch the native weighted protected palette and actual assigned-core star are constructed.",
+        "The one-star branch uses a Fin 1 resource at the actual remaining vertex and bounds its star weight on either assigned old core by the proved weight on the union of the old cores. Both possible core assignments are retained.",
+        "Protected classes equal the entire actual residualBoundary at the original selected reserve index. The proof does not discard the exceptional star copy or preserve only the joining trace.",
+        "The union is exactly all actual joining copies and all exceptional-incident copies in the residual subtype. In the no-star case this equality is derived from h disjoint matching classes saturating each exception in an h-regular graph; no supplied coverage equality is used.",
+        "Each class is a matching; the classes are pairwise edge-disjoint; every exception is saturated in every class; assigned-fiber cut parity gives even uncovered old cores. The endpoint does not assert a factorization of original-core internal edges.",
+        "The class and support bounds are respectively 6*L+3 and 12*L+6. The star branch substitutes palette capacity 2*L and uses |Z| <= 5 and L > 0 to discharge the max bound; no additional product bound involving L and a star-bundle size is assumed.",
+        "Both old embedded core edge sets are disjoint from every external class. The per-vertex total family support load <= D is proved from actual retained-core degrees and exact external containment, rather than inferred from an available-color bound.",
+        "The explicit natural-number budgets are h > 0, 128*D <= h, 2*t <= h, L > 0, and |V|*D <= 2*L*(h-t-40*D). Retained-core degrees >= h-D and h <= r+D remain genuine inputs, as do residual regularity, no-overfullness and reserve avoidance.",
+        "The final normalization changes only Lean instance bridges, set-membership normal forms and casts. The final source statement retains the reviewed scope. This is a conditional external assembly, not safe residual existence, robust-core completion, terminal factorization, Lemma 4.4, Corollary 4.5, or the main theorem."
+      ]
+    }
+  ],
+  "scope_limits": [
+    "The earlier report covers 11 independently reviewed modules; this addendum covers the final two native-core modules. The three pair-star source modules authored by this reviewer require the other independent reviewer.",
+    "All reported strict commands are actual retained executions with matching archived source and output hashes. This report does not replace the full project build, declaration/axiom audit, frozen-input comparison or preservation gate.",
+    "No numbered manuscript assertion is promoted by this continuation; the inventory remains 51/69 and the main theorem remains unverified.",
+    "Full verification and publication status must be read from the actual terminal, preservation and publication receipts. No full-gate or remote publication success is claimed here."
+  ]
+}

@@ -1,0 +1,46 @@
+Overfull/ResidualPalette/FourProtectedPalette.lean:33:36: error: Application type mismatch: The argument
+  hij
+has type
+  g i = g j
+but is expected to have type
+  i = j
+in the application
+  congrArg Fin.val hij
+Overfull/ResidualPalette/FourProtectedPalette.lean:49:43: error: Application type mismatch: The argument
+  heq
+has type
+  ⟨↑i, hi⟩ = ⟨↑j, hj⟩
+but is expected to have type
+  i = j
+in the application
+  congrArg Fin.val heq
+Overfull/ResidualPalette/FourProtectedPalette.lean:91:8: error: Try `simp at hv` instead of `simpa using hv`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Overfull/ResidualPalette/FourProtectedPalette.lean:124:36: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  e ≥ 0
+  e - f ≥ 0
+  e - g ≥ 1
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  b - 8*c - d ≥ 1
+  a ≥ 1
+where
+ a := ↑L
+ b := ↑h
+ c := ↑D
+ d := ↑r
+ e := ↑(2 * L) * ↑(h - 8 * D - r)
+ f := ↑(Fintype.card V) * ↑D
+ g := ↑(2 * L) * ↑(h - r - 8 * D)
+Overfull/ResidualPalette/FourProtectedPalette.lean:126:2: error: Type mismatch: After simplification, term
+  JoiningPalette.exists_empty_extension C r
+ has type
+  ∃ (C' : JoiningPalette G label (h - r + r) D (2 * L) fun x => 0),
+    ∃ f, Function.Injective f ∧ ∀ (i : Fin r), C'.classes (f i) = ∅
+but is expected to have type
+  ∃ (C : JoiningPalette G label h D (2 * L) fun x => 0), ∃ f, Function.Injective f ∧ ∀ (i : Fin r), C.classes (f i) = ∅

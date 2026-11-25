@@ -1,0 +1,1095 @@
+{
+  "schema_version": 1,
+  "indexed_at_utc": "2026-11-25T12:35:56.184499+00:00",
+  "scope": "Checks and indexes retained execution receipts, logs, recorders and saved source bytes; does not rerun Lean or replace full verification.",
+  "total_attempts": 48,
+  "status_counts": {
+    "failed": 16,
+    "passed": 32
+  },
+  "all_outputs_and_recorders_match_recorded_hashes": true,
+  "all_saved_sources_match_recorded_hashes": true,
+  "source_snapshot_count": 33,
+  "attempts": [
+    {
+      "attempt": "four-protected-palette-01",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/ResidualPalette/FourProtectedPalette.lean"
+      ],
+      "elapsed_seconds": 3.462236680999922,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/four-protected-palette-01/command.json",
+      "receipt_sha256": "005dad47d4751d9ae33665cf397fa59733c026533d5d28e8c4c860443942a7c0",
+      "output_sha256": "cc6ad89ae5597ac0324efdea9a26542fd699aa6d1569d28e94b07278b8416010",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/ResidualPalette/FourProtectedPalette.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/four-protected-palette-01/source/Overfull/ResidualPalette/FourProtectedPalette.lean",
+          "sha256": "90de9b6d4f74f9d0833739b9d8307fcba73849eb224281a989841dc37a89266e"
+        }
+      ]
+    },
+    {
+      "attempt": "four-protected-palette-02",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/ResidualPalette/FourProtectedPalette.lean"
+      ],
+      "elapsed_seconds": 3.3706277139999656,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/four-protected-palette-02/command.json",
+      "receipt_sha256": "a5dc9d636c45417ff3425e77f4b0f4159e2ce8ffa08becc8434b320f37f6c66d",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/ResidualPalette/FourProtectedPalette.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/four-protected-palette-02/source/Overfull/ResidualPalette/FourProtectedPalette.lean",
+          "sha256": "da9dacb2f9a2a267ff7d788461eaf651d8aab820fdb6a22dbb6746d723dcc0b1"
+        }
+      ]
+    },
+    {
+      "attempt": "four-protected-palette-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.ResidualPalette.FourProtectedPalette"
+      ],
+      "elapsed_seconds": 4.4600195980001445,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/four-protected-palette-build-01/command.json",
+      "receipt_sha256": "0c4847b323f30234dc38b5d60214641c3aae098324eb855d3b17f99370e3e7ba",
+      "output_sha256": "4a05e12c0ff768f9c83af6e536c0a85fc3b51aaca80dc19a9527464f7d127043",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    },
+    {
+      "attempt": "four-reserved-primary-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/ResidualPalette/FourReservedPrimary.lean"
+      ],
+      "elapsed_seconds": 6.5598281349998615,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/four-reserved-primary-01/command.json",
+      "receipt_sha256": "1e6e042d298e2b840aecf03447ed9aedd4f518acac164d1fb9c6628c15f76c84",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/ResidualPalette/FourReservedPrimary.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/four-reserved-primary-01/source/Overfull/ResidualPalette/FourReservedPrimary.lean",
+          "sha256": "8edf10f3c4f1ac849d36d32a1f2fedd07d75683e64db3b25d8d7564ab6c4f35e"
+        }
+      ]
+    },
+    {
+      "attempt": "four-reserved-primary-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.ResidualPalette.FourReservedPrimary"
+      ],
+      "elapsed_seconds": 5.427149992000068,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/four-reserved-primary-build-01/command.json",
+      "receipt_sha256": "2107f7af3a38165eb27c8ed48aeb27ddaaced4d57edfbc44b4977966a477642e",
+      "output_sha256": "34fab80e74e3edcf299596ba9fe999c0fc694fa8a547144d6592af47a390e159",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    },
+    {
+      "attempt": "pair-star-base-01",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairStarBase.lean"
+      ],
+      "elapsed_seconds": 4.906362408999939,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/pair-star-base-01/command.json",
+      "receipt_sha256": "199318653b4eb255f2d99c6e172754c6917615048f95347d937f63503aa453dc",
+      "output_sha256": "dcb746990e0b66cbfc1b5d9baee544579163fc736624bbed736b6dc930ed9609",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeAssembly/TwoPairStarBase.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/pair-star-base-01/source/Overfull/NativeAssembly/TwoPairStarBase.lean",
+          "sha256": "b96d49389dbf18f14f2bfa27ff67a90b2815f9a40cdfeb45564adeb145da085d"
+        }
+      ]
+    },
+    {
+      "attempt": "pair-star-base-02",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairStarBase.lean"
+      ],
+      "elapsed_seconds": 4.967495307999798,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/pair-star-base-02/command.json",
+      "receipt_sha256": "757444a2d10792197a25158d3f9d552649851ee4c3e8759a73eb23af8fe9a8d9",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeAssembly/TwoPairStarBase.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/pair-star-base-02/source/Overfull/NativeAssembly/TwoPairStarBase.lean",
+          "sha256": "d988f36142b3cd622803910991dfc292e71d66ccfb17f21a32d063fda3f34e14"
+        }
+      ]
+    },
+    {
+      "attempt": "pair-star-base-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeAssembly.TwoPairStarBase"
+      ],
+      "elapsed_seconds": 6.029978664999817,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/pair-star-base-build-01/command.json",
+      "receipt_sha256": "9ef77954d3824acf189b20fce94ee4a422d1bd7b9a11094db7cc1f2b5848e4cc",
+      "output_sha256": "4f6f40f8dcbecbe147e4a0788b7e37be1f65f1ecbb6450d064d0765aa0ddc355",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    },
+    {
+      "attempt": "pair-star-extension-01",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairStar.lean"
+      ],
+      "elapsed_seconds": 3.041315706000205,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/pair-star-extension-01/command.json",
+      "receipt_sha256": "8b77540c5fa815643f7a74940e630ec08d793b4cf87ec92e8923e7db8c4a4ac0",
+      "output_sha256": "962d12eb2242aecc4f9fc127788524c53c4264e5127b1a67144b20f1d9631d1c",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeAssembly/TwoPairStar.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/pair-star-extension-01/source/Overfull/NativeAssembly/TwoPairStar.lean",
+          "sha256": "34a1cb92fe1887c28eeb22fe74e330afa9897de5a3667a71b7935b97b7d2fc8e"
+        }
+      ]
+    },
+    {
+      "attempt": "pair-star-extension-02",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairStar.lean"
+      ],
+      "elapsed_seconds": 3.936904524000056,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/pair-star-extension-02/command.json",
+      "receipt_sha256": "caab5659286834e104e5ef3594c4d61913faff0e25dd6885e1b7263f42fb3a68",
+      "output_sha256": "48156084fe2fc05ade3b7d9837c452da402a7d0122f968c3f456429cda908e04",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeAssembly/TwoPairStar.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/pair-star-extension-02/source/Overfull/NativeAssembly/TwoPairStar.lean",
+          "sha256": "e4ae34c76f8d22fd8bd0d49f144b3ec5e8e1b93fa7eeee48d9665fff96bd0ff3"
+        }
+      ]
+    },
+    {
+      "attempt": "pair-star-extension-03",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairStar.lean"
+      ],
+      "elapsed_seconds": 4.284133172000111,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/pair-star-extension-03/command.json",
+      "receipt_sha256": "0afcd3d8773cfdb2934a599c142714f8e43b9b049ec0cfb73929a057d7934e4e",
+      "output_sha256": "48156084fe2fc05ade3b7d9837c452da402a7d0122f968c3f456429cda908e04",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeAssembly/TwoPairStar.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/pair-star-extension-03/source/Overfull/NativeAssembly/TwoPairStar.lean",
+          "sha256": "ee4bed5372340e7947a275fc544fc7d09cd025374e803e07d69ae72a984fa160"
+        }
+      ]
+    },
+    {
+      "attempt": "pair-star-extension-04",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairStar.lean"
+      ],
+      "elapsed_seconds": 4.742521295000188,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/pair-star-extension-04/command.json",
+      "receipt_sha256": "21f62d206a7e16b676554a3fdd9779ef80c59bbf84fb920567933fa8e44154a1",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeAssembly/TwoPairStar.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/pair-star-extension-04/source/Overfull/NativeAssembly/TwoPairStar.lean",
+          "sha256": "edaac6921b3c9edcb3d0d84c88d4c29a0f17a8462b7c160c5bd6df0897d5e9d6"
+        }
+      ]
+    },
+    {
+      "attempt": "pair-star-extension-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeAssembly.TwoPairStar"
+      ],
+      "elapsed_seconds": 5.063827812999989,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/pair-star-extension-build-01/command.json",
+      "receipt_sha256": "8bd5aa617190b9215933063cf8efe1b0e3ce669cfbcfe41da753bb6e81751d04",
+      "output_sha256": "16d3c19f8053f4651de89b52dbd0707e62b1be55669bc2e9dc69c39fde13896c",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    },
+    {
+      "attempt": "pair-star-reserve-01",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairStarReserve.lean"
+      ],
+      "elapsed_seconds": 3.662670736000109,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/pair-star-reserve-01/command.json",
+      "receipt_sha256": "67609860eace9ef25a649dce0df6c6b6491506bdd57a4086beb80e450303e847",
+      "output_sha256": "51cebe8de09842ccac40b976adc2f5ae6e13398f468cac7143f683cd33ba8da6",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeAssembly/TwoPairStarReserve.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/pair-star-reserve-01/source/Overfull/NativeAssembly/TwoPairStarReserve.lean",
+          "sha256": "d693cc22cc8d1516125a91ecdc542873a0d9662ac8cace4e869f78b9c3e0f5b0"
+        }
+      ]
+    },
+    {
+      "attempt": "pair-star-reserve-02",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairStarReserve.lean"
+      ],
+      "elapsed_seconds": 2.934288526000273,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/pair-star-reserve-02/command.json",
+      "receipt_sha256": "a6503db4511e41816aaaff8f70c1310d3d1cd76def216a8949c72b4e12d90671",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeAssembly/TwoPairStarReserve.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/pair-star-reserve-02/source/Overfull/NativeAssembly/TwoPairStarReserve.lean",
+          "sha256": "4b69989648e6df04146c4e59a4b86132b653e9381c10967d19a832ff01b26602"
+        }
+      ]
+    },
+    {
+      "attempt": "pair-star-reserve-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeAssembly.TwoPairStarReserve"
+      ],
+      "elapsed_seconds": 4.594351464000283,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/pair-star-reserve-build-01/command.json",
+      "receipt_sha256": "4386803db17d960106cee4b9f39582a9c13eb6023bf9c7abf8a5f9544efe6f8f",
+      "output_sha256": "48e927098eb5bfb91ad056387f48f3541e2073b798effc55561ed58b55624539",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    },
+    {
+      "attempt": "partner-general-traces-01",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeReserve/PartnerGeneralTraces.lean"
+      ],
+      "elapsed_seconds": 3.174808349000159,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/partner-general-traces-01/command.json",
+      "receipt_sha256": "4bdeca510409f08004b37b6218c290e23917740df9ea6f5efe5df7a741cd4331",
+      "output_sha256": "92f2b73d4890dd2670fd8cdd769d305d915357a6e837c529064f6047dfba935a",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeReserve/PartnerGeneralTraces.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/partner-general-traces-01/source/Overfull/NativeReserve/PartnerGeneralTraces.lean",
+          "sha256": "7e9c60c6217b215994d660dc3e29a8376ddf952126d5191b1bc1549c74813a0a"
+        }
+      ]
+    },
+    {
+      "attempt": "partner-general-traces-02",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeReserve/PartnerGeneralTraces.lean"
+      ],
+      "elapsed_seconds": 3.0080885500001386,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/partner-general-traces-02/command.json",
+      "receipt_sha256": "624fcb5d4da4f36e4439d0697a10cfc366996ee60d15edcfb00f59f1ae9c3df5",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeReserve/PartnerGeneralTraces.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/partner-general-traces-02/source/Overfull/NativeReserve/PartnerGeneralTraces.lean",
+          "sha256": "62f6aa67223b1d87f3c0370129d0f675e468d28090bf58b73d2c5ca15ceb62ed"
+        }
+      ]
+    },
+    {
+      "attempt": "partner-general-traces-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeReserve.PartnerGeneralTraces"
+      ],
+      "elapsed_seconds": 4.256231348000256,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/partner-general-traces-build-01/command.json",
+      "receipt_sha256": "7a02e1c053bc47486ea38ca92883a1b259879a4144cbba866df4ffd4b1e67a02",
+      "output_sha256": "cae4123416aee76a2d5a0e3d0ae6359d1adf72dafaf9f735e263be4eea0d8ce1",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    },
+    {
+      "attempt": "partner-traces-01",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeReserve/PartnerTraces.lean"
+      ],
+      "elapsed_seconds": 3.1398075019997123,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/partner-traces-01/command.json",
+      "receipt_sha256": "c6aa20a12598193a7a80f2165de6de8ef9f69a6e0a0d2655a50119e0aafc4d8c",
+      "output_sha256": "a9662bec3e9ceff04af82b58c75baa2a81112cee496ffee9afa973c36b371c1a",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeReserve/PartnerTraces.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/partner-traces-01/source/Overfull/NativeReserve/PartnerTraces.lean",
+          "sha256": "e72561fd5d069480a8df9d0bf3f912af8f1584f1d414f573e37f4e429096143b"
+        }
+      ]
+    },
+    {
+      "attempt": "partner-traces-02",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeReserve/PartnerTraces.lean"
+      ],
+      "elapsed_seconds": 2.787535587000093,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/partner-traces-02/command.json",
+      "receipt_sha256": "bc31ee46f7f9f77d66f95c5583ff9f482bd4008f9634f1a65079c6050be9f52a",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeReserve/PartnerTraces.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/partner-traces-02/source/Overfull/NativeReserve/PartnerTraces.lean",
+          "sha256": "489734372c3f0094b4a07cce102317e65af085ccdfde0ddf82a295c0386cffd1"
+        }
+      ]
+    },
+    {
+      "attempt": "partner-traces-03",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeReserve/PartnerTraces.lean"
+      ],
+      "elapsed_seconds": 3.044144856999992,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/partner-traces-03/command.json",
+      "receipt_sha256": "a97e361c87c8f9e6e04a5dba601dc298063c008b3da4c636de3872356591858b",
+      "output_sha256": "bb1020c046d90c0661c392b5085a38b8176a9ffac2fcfed64613237e97acf630",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeReserve/PartnerTraces.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/partner-traces-03/source/Overfull/NativeReserve/PartnerTraces.lean",
+          "sha256": "1efd3bf7c899679ff6a9b5452d95d9c8c3f05d9097b77d7ce78dd4ad9b4cef84"
+        }
+      ]
+    },
+    {
+      "attempt": "partner-traces-04",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeReserve/PartnerTraces.lean"
+      ],
+      "elapsed_seconds": 2.9365518970002995,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/partner-traces-04/command.json",
+      "receipt_sha256": "9e22e4fc7e745de2a199479089330444f65687ffa0c9ef63798d396b1a93df55",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeReserve/PartnerTraces.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/partner-traces-04/source/Overfull/NativeReserve/PartnerTraces.lean",
+          "sha256": "2585921de90c74a01d1cbf6ab19cff4ce24f0494f25ddc8d020322091b9d4b19"
+        }
+      ]
+    },
+    {
+      "attempt": "partner-traces-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeReserve.PartnerTraces"
+      ],
+      "elapsed_seconds": 4.2120800749999034,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/partner-traces-build-01/command.json",
+      "receipt_sha256": "42a1f799f97061a1e1bba0e70b7cae1d6780cc87cab91926c7ac1667d9b15ab1",
+      "output_sha256": "87f1d8d6397f5a0b44b40fa7af41039529cc019b39a90cf9591accc0988dca87",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    },
+    {
+      "attempt": "two-pair-bounds-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairBounds.lean"
+      ],
+      "elapsed_seconds": 3.614539462999801,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-bounds-01/command.json",
+      "receipt_sha256": "448f073c12ce15d8a2668ff86f3635d430dab1720307c2330abd573bc76c9372",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeAssembly/TwoPairBounds.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/two-pair-bounds-01/source/Overfull/NativeAssembly/TwoPairBounds.lean",
+          "sha256": "c810ce4606240d4399e3b8a52456646b742e5a2bd3f40cb018da0378f8d34df3"
+        }
+      ]
+    },
+    {
+      "attempt": "two-pair-bounds-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeAssembly.TwoPairBounds"
+      ],
+      "elapsed_seconds": 3.9390655170000173,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-bounds-build-01/command.json",
+      "receipt_sha256": "84b902318348da02a65239978c626c8945b8e290d0bb49b960556728f38c887c",
+      "output_sha256": "c1c6e4fa4c2a99d738b3c70aae0e28adb70563095a62904f9dd4345786572506",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    },
+    {
+      "attempt": "two-pair-core-parity-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeCore/TwoPairParity.lean"
+      ],
+      "elapsed_seconds": 2.7340074909998293,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-core-parity-01/command.json",
+      "receipt_sha256": "69539ef8f9c004f3a8bcb09e0c52c0ca0529ed60df75c622f25e6654771ded33",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeCore/TwoPairParity.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/two-pair-core-parity-01/source/Overfull/NativeCore/TwoPairParity.lean",
+          "sha256": "77e881f1107beed10643167f4979059901ab25992dc0faec01cf06ce4461af06"
+        }
+      ]
+    },
+    {
+      "attempt": "two-pair-core-parity-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeCore.TwoPairParity"
+      ],
+      "elapsed_seconds": 3.8412122619997717,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-core-parity-build-01/command.json",
+      "receipt_sha256": "1a2516c77174aef564038aed39c8e6ce75521487c511ee23e67067398727c72c",
+      "output_sha256": "10dcbad63c501c045f49996460041c27ef20e7d835a62867bb14a0a01d3e1e86",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    },
+    {
+      "attempt": "two-pair-external-01",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeCore/TwoPairExternal.lean"
+      ],
+      "elapsed_seconds": 5.798776576999899,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-external-01/command.json",
+      "receipt_sha256": "c44c2d2ddf0e3fffce01acd4e3b81a343227a6bf196c396181ce6f71372ce074",
+      "output_sha256": "161393b223fa0f589f21e4e2d13d944a1f939e560e00496260fc65476500ef14",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeCore/TwoPairExternal.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/two-pair-external-01/source/Overfull/NativeCore/TwoPairExternal.lean",
+          "sha256": "897434afc46dfc983b7cdc4844e3adb5384911cfbfa03ab0f363dd29cd5b8c92"
+        }
+      ]
+    },
+    {
+      "attempt": "two-pair-external-02",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeCore/TwoPairExternal.lean"
+      ],
+      "elapsed_seconds": 5.296047812999859,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-external-02/command.json",
+      "receipt_sha256": "4607a9f5f72fe73040561dcb7d6c35d947d047d2b3f1b7f64877db20fb5db2c8",
+      "output_sha256": "fd682c6ad0bbf7c05bd0208ab89e31082eeaf1381b050deb2853ac09124ed17b",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeCore/TwoPairExternal.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/two-pair-external-02/source/Overfull/NativeCore/TwoPairExternal.lean",
+          "sha256": "121e447c8803e073bd75907108b90a878740d0a717c6a8fcbc70e8974350c289"
+        }
+      ]
+    },
+    {
+      "attempt": "two-pair-external-03",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeCore/TwoPairExternal.lean"
+      ],
+      "elapsed_seconds": 4.426442034000047,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-external-03/command.json",
+      "receipt_sha256": "d5d201f1664bc06f7194eb20cde2c1ab97a03683461bdbf1cbd64fa5e07c39fa",
+      "output_sha256": "9d584c6a909824c1f3f9dea66e23cb1c37618720f2e8b21532d69d3197e883c9",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeCore/TwoPairExternal.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/two-pair-external-03/source/Overfull/NativeCore/TwoPairExternal.lean",
+          "sha256": "3cd46bdca2315fdddb79cbe47f540004dfcf3f941e5220c96dc825aab21f7ffe"
+        }
+      ]
+    },
+    {
+      "attempt": "two-pair-external-04",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeCore/TwoPairExternal.lean"
+      ],
+      "elapsed_seconds": 4.474247661999925,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-external-04/command.json",
+      "receipt_sha256": "9e1de89f03f9522951ee86f82e3392fc2fd79432ace3683d9f3b409690e99b31",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeCore/TwoPairExternal.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/two-pair-external-04/source/Overfull/NativeCore/TwoPairExternal.lean",
+          "sha256": "e39608d92ccb73cc0f144866fa74eb1ae7f1355bc68b2272d3ea5e5aa2b954d5"
+        }
+      ]
+    },
+    {
+      "attempt": "two-pair-general-protected-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairGeneralProtected.lean"
+      ],
+      "elapsed_seconds": 2.9898010810002233,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-general-protected-01/command.json",
+      "receipt_sha256": "9eac4d12523359ff90ef2842fd52d24d320d46b0074b9d8ae9c03a6dd9a70db4",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeAssembly/TwoPairGeneralProtected.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/two-pair-general-protected-01/source/Overfull/NativeAssembly/TwoPairGeneralProtected.lean",
+          "sha256": "10e0244869adb97fb945845c4fe5d273a1583fc733e47d0d8b53def2ecd2985a"
+        }
+      ]
+    },
+    {
+      "attempt": "two-pair-general-protected-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeAssembly.TwoPairGeneralProtected"
+      ],
+      "elapsed_seconds": 4.622289769999952,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-general-protected-build-01/command.json",
+      "receipt_sha256": "93e9b4181c7838c7ee686911dc59b098a1feb03f9271be9a0461cbd7b1f6c147",
+      "output_sha256": "c78246db9b425b11212d505a4b80bedd8fb296dd9d790bd3f7681b3eb4e0a936",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    },
+    {
+      "attempt": "two-pair-native-weighted-01",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeWeighted/TwoPairNative.lean"
+      ],
+      "elapsed_seconds": 3.240784012000404,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-native-weighted-01/command.json",
+      "receipt_sha256": "a17a3b6bb0d294088811ccc20f0c31e3f29b5af74c18bdc9524cf42a84338efc",
+      "output_sha256": "21022e0f987b2d271ec990e9cc9b71c650fb9521179bacfd7237b1a847e65f27",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeWeighted/TwoPairNative.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/two-pair-native-weighted-01/source/Overfull/NativeWeighted/TwoPairNative.lean",
+          "sha256": "cdf20abc0099da955720d445b0d5d0038b87566487d6e8e5ff578e30c0df5029"
+        }
+      ]
+    },
+    {
+      "attempt": "two-pair-native-weighted-02",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeWeighted/TwoPairNative.lean"
+      ],
+      "elapsed_seconds": 3.3544532969999636,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-native-weighted-02/command.json",
+      "receipt_sha256": "d1cef5fb0407ef1de961c3f5acc11a768f3985cf30aeb78f203b7bc102401c21",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeWeighted/TwoPairNative.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/two-pair-native-weighted-02/source/Overfull/NativeWeighted/TwoPairNative.lean",
+          "sha256": "31126105af58c2ff84684128e86137594af20280843d48410aa91f76af8c9a04"
+        }
+      ]
+    },
+    {
+      "attempt": "two-pair-native-weighted-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeWeighted.TwoPairNative"
+      ],
+      "elapsed_seconds": 4.084599754999999,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-native-weighted-build-01/command.json",
+      "receipt_sha256": "d123fe29a5fa4c107215ba035f794b8935f1fada73257107b18e3629b2e5fc88",
+      "output_sha256": "b81a801bd5c3b782adbe20ebb964f9ff3224f9b216a524567fa57a9484e322f4",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    },
+    {
+      "attempt": "two-pair-one-star-01",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/AssignedParts/TwoPairOneStar.lean"
+      ],
+      "elapsed_seconds": 3.108489574000032,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-one-star-01/command.json",
+      "receipt_sha256": "7f475fd871e0079676de0bc2343f518659162ebe78aa83067b835edccdc37ead",
+      "output_sha256": "f25fd17f0ef92b21e197b4afaa7a981361bf3ceaceb713e8076e969161626bd2",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/AssignedParts/TwoPairOneStar.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/two-pair-one-star-01/source/Overfull/AssignedParts/TwoPairOneStar.lean",
+          "sha256": "6e69bcd011de0e0b3064dac50365f171186c80696363c2198dbd9c8349e20455"
+        }
+      ]
+    },
+    {
+      "attempt": "two-pair-one-star-02",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/AssignedParts/TwoPairOneStar.lean"
+      ],
+      "elapsed_seconds": 3.304090248999728,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-one-star-02/command.json",
+      "receipt_sha256": "825450f71d56ee4cdc56ecfa6bab0901f2f8edda206d6877b5e1794674b8ac5c",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/AssignedParts/TwoPairOneStar.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/two-pair-one-star-02/source/Overfull/AssignedParts/TwoPairOneStar.lean",
+          "sha256": "f8053a3c1197c29ef08f930c14bb751ce8eadb3fa254b7b25962bf754154e3d5"
+        }
+      ]
+    },
+    {
+      "attempt": "two-pair-one-star-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.AssignedParts.TwoPairOneStar"
+      ],
+      "elapsed_seconds": 3.626035134999711,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-one-star-build-01/command.json",
+      "receipt_sha256": "c63536aa03c915da4f9cefb519d0d5e2f05128c29fe39e0d5b3a15e9c0ba0c2d",
+      "output_sha256": "a77ba89bc2a004337e6b7baa42c18f26b286385fa37eb7fabd2e586b10139dbb",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    },
+    {
+      "attempt": "two-pair-protected-01",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairProtected.lean"
+      ],
+      "elapsed_seconds": 3.002907950000008,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-protected-01/command.json",
+      "receipt_sha256": "70be7abf8a86955547dcd6e7d914344340f34eb9c5f45a80d98ce777318f34e9",
+      "output_sha256": "ea428b34e386aa5c4098a55d75cf0c43c77de8272b2b434cf1a9335091fb6a3f",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeAssembly/TwoPairProtected.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/two-pair-protected-01/source/Overfull/NativeAssembly/TwoPairProtected.lean",
+          "sha256": "6e6ef1dba5e98380e45709e4a5d0e80e7a34d0fcfc8349b3d8907fc6a90ff924"
+        }
+      ]
+    },
+    {
+      "attempt": "two-pair-protected-02",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairProtected.lean"
+      ],
+      "elapsed_seconds": 2.83527580100008,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-protected-02/command.json",
+      "receipt_sha256": "f39f8f2027687c9c94d3d1e2acfcb99b5fb41982bea8e692b4f4fa5dabd77a4e",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeAssembly/TwoPairProtected.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/two-pair-protected-02/source/Overfull/NativeAssembly/TwoPairProtected.lean",
+          "sha256": "e824365e6daff0a8ebbf63102faeec360c27d7bc8651016b3b7419cb4f2c3a6c"
+        }
+      ]
+    },
+    {
+      "attempt": "two-pair-protected-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeAssembly.TwoPairProtected"
+      ],
+      "elapsed_seconds": 3.966459451999981,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-protected-build-01/command.json",
+      "receipt_sha256": "9b5703e51fe8872c340d565f183e3f91257d4fee8bfb272a1c9cc902066b452f",
+      "output_sha256": "6279c2d397cb4ae0da794f6fbef9ef7469e7777a7a28b15ef3c406c376adab50",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    },
+    {
+      "attempt": "weighted-four-grouping-01",
+      "status": "failed",
+      "exit_code": 1,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/WeightedPalette/FourGrouping.lean"
+      ],
+      "elapsed_seconds": 3.093499047000023,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/weighted-four-grouping-01/command.json",
+      "receipt_sha256": "a9688e628f3f3fca0d51a38c82dda67567d53563a87f064865c9384ff684f267",
+      "output_sha256": "494b12c27c4c245fcc604a773756f6d646e7a7a1d45055b76c254bf47294587a",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/WeightedPalette/FourGrouping.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/weighted-four-grouping-01/source/Overfull/WeightedPalette/FourGrouping.lean",
+          "sha256": "52703772e929f38f287f1ab07f1133363043afccad5df9f4d897464cc2aa5992"
+        }
+      ]
+    },
+    {
+      "attempt": "weighted-four-grouping-02",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/WeightedPalette/FourGrouping.lean"
+      ],
+      "elapsed_seconds": 3.2910204320000958,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/weighted-four-grouping-02/command.json",
+      "receipt_sha256": "4cb33d0de2953d4317acd2dd46cd86f4f57f1da1d6b669de20d92f2179b73a04",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/WeightedPalette/FourGrouping.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/weighted-four-grouping-02/source/Overfull/WeightedPalette/FourGrouping.lean",
+          "sha256": "d9794b8d028a3b999ea7c5886e689711c561b4db9c7b8f7f2a9fe154df485e3d"
+        }
+      ]
+    },
+    {
+      "attempt": "weighted-four-grouping-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.WeightedPalette.FourGrouping"
+      ],
+      "elapsed_seconds": 3.8842233239997768,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/weighted-four-grouping-build-01/command.json",
+      "receipt_sha256": "bca0b0432c0324ed097893f725ff1c3d4c1583a33d9d480f3dd5a5066687bdd1",
+      "output_sha256": "a56a46e85305005d5fcc87622d245c4b069e18e751b17d7d6c545922468f6183",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    },
+    {
+      "attempt": "weighted-four-joining-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeWeighted/FourJoining.lean"
+      ],
+      "elapsed_seconds": 3.227447790000042,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/weighted-four-joining-01/command.json",
+      "receipt_sha256": "43c4a2a24e1129c893b5a48e09bef07849f55e6a891aea5d78ee65047d052869",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": [
+        {
+          "source_path": "Overfull/NativeWeighted/FourJoining.lean",
+          "saved_snapshot": "verification/runs/20261125T121903Z/focused/weighted-four-joining-01/source/Overfull/NativeWeighted/FourJoining.lean",
+          "sha256": "c0e5c698d28abaa9861664c2e361303f7af2589fa2ca4278e8aa68adf2670197"
+        }
+      ]
+    },
+    {
+      "attempt": "weighted-four-joining-build-01",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeWeighted.FourJoining"
+      ],
+      "elapsed_seconds": 4.31767132799996,
+      "changed_sources": [],
+      "receipt_path": "verification/runs/20261125T121903Z/focused/weighted-four-joining-build-01/command.json",
+      "receipt_sha256": "697d0a9f1a116484c74e70237e230291aff463a958862af7e9a17be3cc4e6ffb",
+      "output_sha256": "bc492de2b3b36e9e682073c03fd6689dc676837de1b9f4fd39f2a93dfd22851b",
+      "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+      "source_snapshots": []
+    }
+  ]
+}

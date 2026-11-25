@@ -1,0 +1,71 @@
+Try this:
+  ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Overfull/WeightedPalette/FourGrouping.lean:109:44: error: unsolved goals
+V : Type u_1
+E : Type u_2
+I : Type u_3
+κ : Type u_4
+inst✝² : Fintype E
+inst✝¹ : Fintype I
+inst✝ : Fintype κ
+h D b L : ℕ
+G : Multigraph V E
+M : I → Finset E
+S : Finset E
+P : Finset I
+c₀ : I → Fin h
+Q : Finset (Fin h)
+z : κ → V
+U : κ → Finset V
+hresources : Fintype.card κ ≤ 2
+hseedProper : ∀ i ∈ P, ∀ j ∈ P, pieceConflict G M i j → c₀ i ≠ c₀ j
+hseedCount : ∀ (j : Fin h), #({i ∈ P | c₀ i = j}) ≤ L
+hseedWeight : ∀ (r : κ) (j : Fin h), paletteWeight P c₀ (fun i => starWeight G (z r) (U r) (M i)) j ≤ h / 8
+hM : ∀ (i : I), G.IsMatching (M i)
+hsize : ∀ (i : I), #(M i) ≤ 4
+hdisjoint : Pairwise fun i j => Disjoint (M i) (M j)
+hsubset : ∀ (i : I), M i ⊆ S
+hdegree : ∀ (v : V), G.degreeOn S v ≤ D
+hparallel : ∀ (r : κ), ∀ v ∈ U r, #(G.parallelEdges (z r) v) ≤ b
+hexception : ∀ (r : κ), G.degree (z r) ≤ h
+hbD : b ≤ D
+hh : 0 < h
+hDh : 128 * D ≤ h
+hQ : 2 * #Q ≤ h
+hbudget : Fintype.card I ≤ L * (h - #Q - 40 * D)
+w : κ → I → ℕ := fun r i => starWeight G (z r) (U r) (M i)
+hsymm : Symmetric (pieceConflict G M)
+hirrefl : Irreflexive (pieceConflict G M)
+hitem : ∀ (r : κ), ∀ i ∈ univ \ P, w r i ≤ 8 * b
+r : κ
+hactual : ∑ i, w r i ≤ D * h
+⊢ D * 16 + D * (h / 8 - b * 8) * 16 = D * 18 + D * (h / 8 - b * 8) * 18
+Overfull/WeightedPalette/FourGrouping.lean:113:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  j ≥ 0
+  i ≥ 0
+  g ≥ 0
+  g - i ≥ 0
+  f ≥ 0
+  e ≥ 1
+  e - 2*f ≥ 0
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  32*c - j ≤ -1
+  36*c - j ≥ 0
+  128*c - e ≤ 0
+  0 ≤ a ≤ 2
+where
+ a := ↑(Fintype.card κ)
+ c := ↑D
+ d := ↑b
+ e := ↑h
+ f := ↑(#Q)
+ g := ↑L * ↑(h - #Q - 40 * D)
+ i := ↑(Fintype.card I)
+ j := ↑(Fintype.card κ) * ↑(18 * D)

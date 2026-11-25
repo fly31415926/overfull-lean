@@ -1,6 +1,54 @@
 # Lean formalization of the overfull manuscript
 
-## Current continuation: native reserves and two exceptional pairs
+## Current continuation: protected traces and complete two-pair external assembly
+
+This continuation adds **75 public theorem proofs in 16 new modules**. The
+endpoint `Overfull.NativeCore.exists_native_two_pair_external_palette`
+constructs the entire external matching family when the original
+representative has two exceptional pairs and at most one further exception.
+It derives the actual protected joining traces, the weighted four-label
+palette, the zero-or-one-star geometry, and the remaining assigned-core star
+from the native reserve and residual. No palette, trace, star-weight bound,
+or exceptional case split is supplied to this endpoint.
+
+Every color saturates every exception. Selected colors equal the whole actual
+reserved boundaries, with their original reserve indices. The classes are
+pairwise edge-disjoint matchings and cover exactly the residual joining and
+exceptional-incident copies. They preserve the assigned-fiber cut parity,
+leave an even number of uncovered vertices in each original core, and have
+at most `6*L+3` copies and `12*L+6` support vertices. The total support load
+at any original-core vertex is at most `D`.
+
+The theorem still takes an actual reserve-avoiding, regular, non-overfull
+residual and retained cores as input. Its explicit budgets include retained
+core degree at least `h-D`, `h <= r+D`, `0 < h`, `128*D <= h`, `2*t <= h`,
+`0 < L`, and `|V|*D <= 2*L*(h-t-40*D)`. Constructing that safe residual,
+completing colors inside the robust cores, and connecting the terminal
+factorization remain necessary. The zero- and one-pair multi-star branches
+also remain open. **Coverage remains 51/69; Lemma 4.4, Corollary 4.5 and the
+main theorem remain unverified.**
+
+The [proof map](docs/protected-trace-verification.md),
+[semantic review](docs/protected-trace-semantic-review.md),
+[source manifest](docs/protected-trace-source.json), and
+[handoff](docs/continuation-handoff.md) give the exact statements and scope.
+The [current run](verification/runs/20261125T121903Z/) retains all genuine
+focused attempts and source snapshots. The final modules have successful
+strict focused receipts; the full build, declaration/axiom audit and
+preservation gate were pending when this checkpoint text was prepared.
+Read the actual `full-*/terminal.json` and `preservation.json` for their
+subsequent outcome. Publication requires separate remote object and
+both-branch readbacks.
+
+The baseline is public commit
+`f2510d10c114bcf3d0003b5e2e4e35cb0400167d`, tree
+`58fe77f4afaba4b0ab6cf77956afb1c23608cd35`.
+The [next target](docs/next-verification-target.md) is full-partner safe
+residual construction. Its [source-based plan](docs/partner-safe-residual-next-step.md)
+identifies the required refinement into unordered exceptional-pair pools and
+distinguishes proposed lemmas from already proved interfaces.
+
+## Previous continuation: native reserves and two exceptional pairs
 
 This continuation adds **82 public theorem proofs in 13 new modules** toward
 native two-core factorization with up to five exceptional vertices. It constructs

@@ -1,0 +1,110 @@
+Overfull/NativeAssembly/TwoPairStarReserve.lean:158:69: error: Application type mismatch: The argument
+  htrace
+has type
+  ∀ (i : I),
+    @Inter.inter (Finset { e // e ∉ removedCopies N T })
+        (@instInter { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (Q.residualBoundary N T (q i))
+        (joiningCopies (residualGraph G N T) label) =
+      C.classes (f i)
+but is expected to have type
+  ∀ (i : I),
+    @Inter.inter (Finset { e // e ∉ removedCopies N T })
+        (@instInter { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (R i)
+        (joiningCopies (residualGraph G N T) label) =
+      C.classes (f i)
+in the application
+  exists_reserved_two_pair_star_completion C k₀ k₁ hk (G.edge ↑e₀).toFinset (G.edge ↑e₁).toFinset hcard₀ hcard₁ hfiber₀
+    hfiber₁ hp₀ hp₁ (fun v x => hregular v) (fun v x => hregular v) R
+    (fun i => PartnerBoundaryPacking.residualBoundary_matching Q N T (q i))
+    (fun i j hij => PartnerBoundaryPacking.residualBoundary_disjoint Q N T fun heq => hij (hq heq))
+    (fun i => PartnerBoundaryPacking.residualBoundary_card_le Q N T havoid (q i)) f hf g₀ g₁ hg₀ hg₁
+    (fun i => (hgR₀ i).left) (fun i => (hgR₁ i).left) htrace
+Overfull/NativeAssembly/TwoPairStarReserve.lean:169:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  univ.biUnion F
+in the target expression
+  univ.biUnion F = joiningCopies (residualGraph G N T) label ∪ exceptionalCopies (residualGraph G N T) univ Z
+
+case refine_1
+V : Type u_1
+E : Type u_2
+I : Type u_3
+J : Type u_4
+K : Type u_5
+inst✝³ : Fintype V
+inst✝² : Fintype E
+inst✝¹ : Fintype I
+inst✝ : DecidableEq K
+G : Multigraph V E
+A₀ A₁ Z : Finset V
+M : Finset E
+r : ℕ
+Q : PartnerBoundaryPacking G A₀ A₁ Z M r
+hM : G.IsPerfectMatching M
+e₀ e₁ : { x // x ∈ G.internalOn M Z }
+z : { x // x ∈ Z }
+U : Finset V
+hZ : Z = (G.edge ↑e₀).toFinset ∪ (G.edge ↑e₁).toFinset ∪ {↑z}
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+label : V → K
+h D L : ℕ
+p : K → ℕ
+C : JoiningPalette (residualGraph G N T) label h D L p
+k₀ k₁ : K
+hk : k₀ ≠ k₁
+hfiber₀ : labelShore label {k₀} = (G.edge ↑e₀).toFinset
+hfiber₁ : labelShore label {k₁} = (G.edge ↑e₁).toFinset
+hp₀ : p k₀ = 0
+hp₁ : p k₁ = 0
+hz₀ : label ↑z ≠ k₀
+hz₁ : label ↑z ≠ k₁
+hstarfiber : labelShore label {label ↑z} = insert (↑z) U
+a₀ a₁ : K
+ha : a₀ ≠ a₁
+h01 : Disjoint A₀ A₁
+hlabel₀ : ∀ v ∈ A₀, label v = a₀
+hlabel₁ : ∀ v ∈ A₁, label v = a₁
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+q : I → Fin r
+f : I → Fin h
+hq : Function.Injective q
+hf : Function.Injective f
+htrace : ∀ (i : I), Q.residualBoundary N T (q i) ∩ joiningCopies (residualGraph G N T) label = C.classes (f i)
+hD : 128 * D ≤ h
+hs : 2 * Fintype.card I ≤ h
+hweight : ∀ (j : Fin h), starWeight (residualGraph G N T) (↑z) U (C.classes j) ≤ h / 8
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+R : I → Finset { e // e ∉ removedCopies N T } := fun i => Q.residualBoundary N T (q i)
+g₀ : I → { x // x ∈ (residualGraph G N T).internalOn univ (G.edge ↑e₀).toFinset }
+hg₀ : Function.Injective g₀
+hgR₀ : ∀ (i : I), ↑(g₀ i) ∈ Q.residualBoundary N T (q i) ∧ (residualGraph G N T).edge ↑(g₀ i) = G.edge ↑e₀
+g₁ : I → { x // x ∈ (residualGraph G N T).internalOn univ (G.edge ↑e₁).toFinset }
+hg₁ : Function.Injective g₁
+hgR₁ : ∀ (i : I), ↑(g₁ i) ∈ Q.residualBoundary N T (q i) ∧ (residualGraph G N T).edge ↑(g₁ i) = G.edge ↑e₁
+hcard₀ : #(G.edge ↑e₀).toFinset = 2
+hcard₁ : #(G.edge ↑e₁).toFinset = 2
+F : Fin h → Finset { e // e ∉ removedCopies N T }
+hm : ∀ (j : Fin h), (residualGraph G N T).IsMatching (F j)
+hd : Pairwise fun j k => Disjoint (F j) (F k)
+hcov :
+  univ.biUnion F =
+    joiningCopies (residualGraph G N T) label ∪ (residualGraph G N T).internalOn univ (G.edge ↑e₀).toFinset ∪
+          (residualGraph G N T).internalOn univ (G.edge ↑e₁).toFinset ∪
+        univ.biUnion R ∪
+      exceptionCorePool (residualGraph G N T) (↑z) U
+hsub : ∀ (j : Fin h), C.classes j ⊆ F j
+hpres : ∀ (i : I), F (f i) = R i
+hcovers : ∀ (j : Fin h), (G.edge ↑e₀).toFinset ∪ (G.edge ↑e₁).toFinset ∪ {↑z} ⊆ (residualGraph G N T).edgeSupport (F j)
+hcuts :
+  ∀ (j : Fin h) (k : K),
+    (residualGraph G N T).cutOn (F j) (labelShore label {k}) =
+      (residualGraph G N T).cutOn (C.classes j) (labelShore label {k})
+hcard : ∀ (j : Fin h), #(F j) ≤ max (3 * L + 2) (#Z + 1) + 1
+hsupp : ∀ (j : Fin h), #((residualGraph G N T).edgeSupport (F j)) ≤ 2 * max (3 * L + 2) (#Z + 1) + 2
+hRsub : univ.biUnion R ⊆ joiningCopies H label ∪ exceptionalCopies H univ Z
+hext :
+  joiningCopies H label ∪ exceptionalCopies H univ Z =
+    joiningCopies H label ∪ H.internalOn univ (G.edge ↑e₀).toFinset ∪ H.internalOn univ (G.edge ↑e₁).toFinset ∪
+      exceptionCorePool H (↑z) U
+⊢ univ.biUnion F = joiningCopies (residualGraph G N T) label ∪ exceptionalCopies (residualGraph G N T) univ Z

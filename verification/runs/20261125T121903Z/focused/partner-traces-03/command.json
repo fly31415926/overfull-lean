@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/agent/.elan/bin/lake",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "Overfull/NativeReserve/PartnerTraces.lean"
+  ],
+  "cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+  "started_at_utc": "2026-11-25T12:20:51.573711+00:00",
+  "source_sha256": {
+    "Overfull/NativeReserve/PartnerTraces.lean": "1efd3bf7c899679ff6a9b5452d95d9c8c3f05d9097b77d7ce78dd4ad9b4cef84"
+  },
+  "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+  "status": "failed",
+  "exit_code": 1,
+  "finished_at_utc": "2026-11-25T12:20:54.618053+00:00",
+  "elapsed_seconds": 3.044144856999992,
+  "changed_sources": [],
+  "output_sha256": "bb1020c046d90c0661c392b5085a38b8176a9ffac2fcfed64613237e97acf630"
+}

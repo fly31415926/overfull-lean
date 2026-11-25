@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/agent/.elan/bin/lake",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "Overfull/NativeAssembly/TwoPairStarBase.lean"
+  ],
+  "cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+  "started_at_utc": "2026-11-25T12:20:52.974486+00:00",
+  "source_sha256": {
+    "Overfull/NativeAssembly/TwoPairStarBase.lean": "b96d49389dbf18f14f2bfa27ff67a90b2815f9a40cdfeb45564adeb145da085d"
+  },
+  "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+  "status": "failed",
+  "exit_code": 1,
+  "finished_at_utc": "2026-11-25T12:20:57.880985+00:00",
+  "elapsed_seconds": 4.906362408999939,
+  "changed_sources": [],
+  "output_sha256": "dcb746990e0b66cbfc1b5d9baee544579163fc736624bbed736b6dc930ed9609"
+}

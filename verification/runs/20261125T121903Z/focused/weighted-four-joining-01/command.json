@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/agent/.elan/bin/lake",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "Overfull/NativeWeighted/FourJoining.lean"
+  ],
+  "cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+  "started_at_utc": "2026-11-25T12:25:52.020669+00:00",
+  "source_sha256": {
+    "Overfull/NativeWeighted/FourJoining.lean": "c0e5c698d28abaa9861664c2e361303f7af2589fa2ca4278e8aa68adf2670197"
+  },
+  "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+  "status": "passed",
+  "exit_code": 0,
+  "finished_at_utc": "2026-11-25T12:25:55.248412+00:00",
+  "elapsed_seconds": 3.227447790000042,
+  "changed_sources": [],
+  "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

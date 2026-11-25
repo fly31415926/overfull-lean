@@ -1,0 +1,783 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "recorded_at_utc": "2026-11-25T12:31:26.807215+00:00",
+  "baseline_commit": "f2510d10c114bcf3d0003b5e2e4e35cb0400167d",
+  "baseline_tree": "58fe77f4afaba4b0ab6cf77956afb1c23608cd35",
+  "coordinating_reviewer": "/root/proof_target_review",
+  "review_scope": "All current mathematical source additions against the pinned baseline; no author self-review is represented as independent review.",
+  "module_count": 16,
+  "public_theorem_count": 75,
+  "files": [
+    {
+      "path": "Overfull/AssignedParts/TwoPairOneStar.lean",
+      "module": "Overfull.AssignedParts.TwoPairOneStar",
+      "sha256": "f8053a3c1197c29ef08f930c14bb751ce8eadb3fa254b7b25962bf754154e3d5",
+      "primary_author": "/root",
+      "independent_reviewer": "/root/proof_target_review",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 4,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-one-star-02/command.json",
+        "receipt_sha256": "825450f71d56ee4cdc56ecfa6bab0901f2f8edda206d6877b5e1794674b8ac5c",
+        "output_path": "verification/runs/20261125T121903Z/focused/two-pair-one-star-02/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/two-pair-one-star-02/source/Overfull/AssignedParts/TwoPairOneStar.lean",
+        "snapshot_sha256": "f8053a3c1197c29ef08f930c14bb751ce8eadb3fa254b7b25962bf754154e3d5",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/two-pair-one-star-02/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/AssignedParts/TwoPairOneStar.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Derives zero or one actual unpaired exception from two distinct internal matching copies and Z.card <= 5.",
+        "Derives both possible assigned-core insert fibers and the unchanged other core from original matching geometry."
+      ],
+      "retained_hypotheses": [
+        "Original perfect matching, disjoint old cores and exceptional set, full vertex cover, exactly two internal exceptional matching copies, Z.card <= 5."
+      ],
+      "not_established": [
+        "Does not construct a safe regular residual or complete any star matching."
+      ],
+      "review_provenance": {
+        "type": "complete-source independent semantic inspection",
+        "review_document": "docs/protected-trace-semantic-review.md"
+      }
+    },
+    {
+      "path": "Overfull/NativeAssembly/TwoPairBounds.lean",
+      "module": "Overfull.NativeAssembly.TwoPairBounds",
+      "sha256": "c810ce4606240d4399e3b8a52456646b742e5a2bd3f40cb018da0378f8d34df3",
+      "primary_author": "/root/native_boundary_traces",
+      "independent_reviewer": "/root/proof_target_review",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 6,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-bounds-01/command.json",
+        "receipt_sha256": "448f073c12ce15d8a2668ff86f3635d430dab1720307c2330abd573bc76c9372",
+        "output_path": "verification/runs/20261125T121903Z/focused/two-pair-bounds-01/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/two-pair-bounds-01/source/Overfull/NativeAssembly/TwoPairBounds.lean",
+        "snapshot_sha256": "c810ce4606240d4399e3b8a52456646b742e5a2bd3f40cb018da0378f8d34df3",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/two-pair-bounds-01/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/NativeAssembly/TwoPairBounds.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Counts exactly r actual reserved incidences at each exceptional vertex and proves reserve/deletion disjointness.",
+        "Derives exceptional joining degree <= h-r and full joining degree <= D from retained core degree >= h-D and h <= r+D.",
+        "Constructs protected pair-only palettes and completions without a supplied joining-degree certificate."
+      ],
+      "retained_hypotheses": [
+        "Pair-exhaustion hypothesis for specialized exceptional-label bounds and pair-only completion.",
+        "Actual reserve-avoiding regular residual, retained embedded cores with stated degrees, regular/non-overfull safety and explicit palette budgets in constructor endpoints."
+      ],
+      "not_established": [
+        "Does not construct the residual or establish its safety from the original theorem assumptions."
+      ],
+      "review_provenance": {
+        "type": "complete-source independent semantic inspection",
+        "review_document": "docs/protected-trace-semantic-review.md"
+      }
+    },
+    {
+      "path": "Overfull/NativeAssembly/TwoPairGeneralProtected.lean",
+      "module": "Overfull.NativeAssembly.TwoPairGeneralProtected",
+      "sha256": "10e0244869adb97fb945845c4fe5d273a1583fc733e47d0d8b53def2ecd2985a",
+      "primary_author": "/root/native_boundary_traces",
+      "independent_reviewer": "/root/proof_target_review",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 4,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-general-protected-01/command.json",
+        "receipt_sha256": "9eac4d12523359ff90ef2842fd52d24d320d46b0074b9d8ae9c03a6dd9a70db4",
+        "output_path": "verification/runs/20261125T121903Z/focused/two-pair-general-protected-01/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/two-pair-general-protected-01/source/Overfull/NativeAssembly/TwoPairGeneralProtected.lean",
+        "snapshot_sha256": "10e0244869adb97fb945845c4fe5d273a1583fc733e47d0d8b53def2ecd2985a",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/two-pair-general-protected-01/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/NativeAssembly/TwoPairGeneralProtected.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Extends the reserved incidence and joining-degree bounds to unpaired exceptions internal to their assigned core fibers.",
+        "Constructs exact native protected empty/singleton classes and their injective colors without a no-unpaired hypothesis."
+      ],
+      "retained_hypotheses": [
+        "Original matching and full partner reserve; exactly two internal exceptional pairs.",
+        "Reserve-avoiding regular/non-overfull residual, retained core degree deficit bounds, h <= r+D and explicit palette margins."
+      ],
+      "not_established": [
+        "Does not itself assemble the unpaired star copies or construct residual safety."
+      ],
+      "review_provenance": {
+        "type": "complete-source independent semantic inspection",
+        "review_document": "docs/protected-trace-semantic-review.md"
+      }
+    },
+    {
+      "path": "Overfull/NativeAssembly/TwoPairProtected.lean",
+      "module": "Overfull.NativeAssembly.TwoPairProtected",
+      "sha256": "e824365e6daff0a8ebbf63102faeec360c27d7bc8651016b3b7419cb4f2c3a6c",
+      "primary_author": "/root/native_boundary_traces",
+      "independent_reviewer": "/root/proof_target_review",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 2,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-protected-02/command.json",
+        "receipt_sha256": "f39f8f2027687c9c94d3d1e2acfcb99b5fb41982bea8e692b4f4fa5dabd77a4e",
+        "output_path": "verification/runs/20261125T121903Z/focused/two-pair-protected-02/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/two-pair-protected-02/source/Overfull/NativeAssembly/TwoPairProtected.lean",
+        "snapshot_sha256": "e824365e6daff0a8ebbf63102faeec360c27d7bc8651016b3b7419cb4f2c3a6c",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/two-pair-protected-02/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/NativeAssembly/TwoPairProtected.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Constructs protected palette and color injection from actual original/residual reserve trace identities in both parity cases.",
+        "Constructs simultaneous pair-only completion preserving selected complete boundaries with original reserve indices."
+      ],
+      "retained_hypotheses": [
+        "Z is exactly the union of the two exceptional pairs.",
+        "Actual regular non-overfull reserve-avoiding residual, supplied joining-degree and numerical palette bounds."
+      ],
+      "not_established": [
+        "Does not construct a safe residual or complete a fifth exceptional star."
+      ],
+      "review_provenance": {
+        "type": "complete-source independent semantic inspection",
+        "review_document": "docs/protected-trace-semantic-review.md"
+      }
+    },
+    {
+      "path": "Overfull/NativeAssembly/TwoPairStar.lean",
+      "module": "Overfull.NativeAssembly.TwoPairStar",
+      "sha256": "edaac6921b3c9edcb3d0d84c88d4c29a0f17a8462b7c160c5bd6df0897d5e9d6",
+      "primary_author": "/root/pair_star_assembly",
+      "independent_reviewer": "/root/proof_target_review",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 7,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/pair-star-extension-04/command.json",
+        "receipt_sha256": "21f62d206a7e16b676554a3fdd9779ef80c59bbf84fb920567933fa8e44154a1",
+        "output_path": "verification/runs/20261125T121903Z/focused/pair-star-extension-04/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/pair-star-extension-04/source/Overfull/NativeAssembly/TwoPairStar.lean",
+        "snapshot_sha256": "edaac6921b3c9edcb3d0d84c88d4c29a0f17a8462b7c160c5bd6df0897d5e9d6",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/pair-star-extension-04/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/NativeAssembly/TwoPairStar.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Derives remaining-star cardinal balance from regular center degree, matching/disjoint classes, and actual incidence partition.",
+        "Derives that incidence partition from exact fiber insert z U; derives enough available colors.",
+        "Preserves actual available-color loads and star weights under pair additions, then applies Hall extension.",
+        "Constructs pair completion and reserve extension from actual boundaries and pair-copy injections; complete selected boundaries survive."
+      ],
+      "retained_hypotheses": [
+        "Generic actual matching/disjoint boundaries, pair injection and exact joining-trace inputs.",
+        "Single-star fiber geometry, regular center degree, protected center coverage, 128D <= h, twice the reserve size <= h, actual star weight <= h/8."
+      ],
+      "not_established": [
+        "Generic endpoint does not itself derive native fiber geometry or weighted palette; later native modules discharge these inputs."
+      ],
+      "review_provenance": {
+        "type": "complete-source independent semantic inspection",
+        "review_document": "docs/protected-trace-semantic-review.md"
+      }
+    },
+    {
+      "path": "Overfull/NativeAssembly/TwoPairStarBase.lean",
+      "module": "Overfull.NativeAssembly.TwoPairStarBase",
+      "sha256": "d988f36142b3cd622803910991dfc292e71d66ccfb17f21a32d063fda3f34e14",
+      "primary_author": "/root/pair_star_assembly",
+      "independent_reviewer": "/root/proof_target_review",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 13,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/pair-star-base-02/command.json",
+        "receipt_sha256": "757444a2d10792197a25158d3f9d552649851ee4c3e8759a73eb23af8fe9a8d9",
+        "output_path": "verification/runs/20261125T121903Z/focused/pair-star-base-02/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/pair-star-base-02/source/Overfull/NativeAssembly/TwoPairStarBase.lean",
+        "snapshot_sha256": "d988f36142b3cd622803910991dfc292e71d66ccfb17f21a32d063fda3f34e14",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/pair-star-base-02/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/NativeAssembly/TwoPairStarBase.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Restricts full protected boundaries for intermediate pair completion and then restores whole boundaries.",
+        "Proves cross-family copy disjointness through pair saturation and matching uniqueness.",
+        "Proves exact coverage, pair saturation, protected equality, cut identities, size bounds and unchanged footprints outside pair fibers."
+      ],
+      "retained_hypotheses": [
+        "Actual pair fibers, reserved matching boundaries, exact joining traces and pair-copy injections."
+      ],
+      "not_established": [
+        "Does not assume or claim a fifth-star completion at this intermediate stage."
+      ],
+      "review_provenance": {
+        "type": "complete-source independent semantic inspection",
+        "review_document": "docs/protected-trace-semantic-review.md"
+      }
+    },
+    {
+      "path": "Overfull/NativeAssembly/TwoPairStarReserve.lean",
+      "module": "Overfull.NativeAssembly.TwoPairStarReserve",
+      "sha256": "4b69989648e6df04146c4e59a4b86132b653e9381c10967d19a832ff01b26602",
+      "primary_author": "/root/pair_star_assembly",
+      "independent_reviewer": "/root/proof_target_review",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 2,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/pair-star-reserve-02/command.json",
+        "receipt_sha256": "a6503db4511e41816aaaff8f70c1310d3d1cd76def216a8949c72b4e12d90671",
+        "output_path": "verification/runs/20261125T121903Z/focused/pair-star-reserve-02/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/pair-star-reserve-02/source/Overfull/NativeAssembly/TwoPairStarReserve.lean",
+        "snapshot_sha256": "4b69989648e6df04146c4e59a4b86132b653e9381c10967d19a832ff01b26602",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/pair-star-reserve-02/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/NativeAssembly/TwoPairStarReserve.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Derives residual pair-copy injections, boundary matching/disjointness/cardinality and center coverage from PartnerBoundaryPacking.",
+        "Proves exact joining-plus-exceptional coverage for two pair pools and one actual assigned-core star.",
+        "Constructs external classes saturating all Z while preserving whole protected residual boundaries."
+      ],
+      "retained_hypotheses": [
+        "Actual regular reserve-avoiding residual, supplied palette and exact trace and star weight, pair fibers, single-star fiber and Z equal to the two pairs plus z.",
+        "Explicit Hall numerical margins."
+      ],
+      "not_established": [
+        "Native geometry and weighted-palette inputs are discharged only by later composition."
+      ],
+      "review_provenance": {
+        "type": "complete-source independent semantic inspection",
+        "review_document": "docs/protected-trace-semantic-review.md"
+      }
+    },
+    {
+      "path": "Overfull/NativeCore/TwoPairExternal.lean",
+      "module": "Overfull.NativeCore.TwoPairExternal",
+      "sha256": "e39608d92ccb73cc0f144866fa74eb1ae7f1355bc68b2272d3ea5e5aa2b954d5",
+      "primary_author": "/root",
+      "independent_reviewer": "/root/proof_target_review",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 1,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-external-04/command.json",
+        "receipt_sha256": "9e1de89f03f9522951ee86f82e3392fc2fd79432ace3683d9f3b409690e99b31",
+        "output_path": "verification/runs/20261125T121903Z/focused/two-pair-external-04/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/two-pair-external-04/source/Overfull/NativeCore/TwoPairExternal.lean",
+        "snapshot_sha256": "e39608d92ccb73cc0f144866fa74eb1ae7f1355bc68b2272d3ea5e5aa2b954d5",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/two-pair-external-04/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/NativeCore/TwoPairExternal.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Constructs the complete native two-pair external family from retained cores and the actual partner reserve.",
+        "Derives the zero/one-star split, weighted joining palette, protected traces and color map; none is supplied as an input.",
+        "Covers exactly all actual joining and exceptional copies once; all exceptions are saturated in every color.",
+        "Preserves selected whole boundaries at injective colors with original q reserve indices.",
+        "Derives even uncovered original cores, disjointness from embedded cores, full external vertex loads <= D, class size <= 6L+3 and support <= 12L+6."
+      ],
+      "retained_hypotheses": [
+        "Original perfect matching with exactly two exceptional matching copies and Z.card <= 5, disjoint/covering old cores and exceptions, actual PartnerBoundaryPacking.",
+        "Actual reserve-avoiding h-regular non-overfull residual and retained core degree >= h-D.",
+        "h <= r+D, h>0, 128D <= h, 2t <= h, L>0, injective q and |V|D <= 2L(h-t-40D)."
+      ],
+      "not_established": [
+        "Does not construct that residual or discharge its numerical hypotheses from the original theorem.",
+        "Does not complete the external classes to whole-residual perfect matchings, terminal factorization, zero/one-pair branches, or the main theorem."
+      ],
+      "review_provenance": {
+        "type": "complete-source independent semantic inspection",
+        "review_document": "docs/protected-trace-semantic-review.md"
+      }
+    },
+    {
+      "path": "Overfull/NativeCore/TwoPairParity.lean",
+      "module": "Overfull.NativeCore.TwoPairParity",
+      "sha256": "77e881f1107beed10643167f4979059901ab25992dc0faec01cf06ce4461af06",
+      "primary_author": "/root",
+      "independent_reviewer": "/root/proof_target_review",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 2,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-core-parity-01/command.json",
+        "receipt_sha256": "69539ef8f9c004f3a8bcb09e0c52c0ca0529ed60df75c622f25e6654771ded33",
+        "output_path": "verification/runs/20261125T121903Z/focused/two-pair-core-parity-01/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/two-pair-core-parity-01/source/Overfull/NativeCore/TwoPairParity.lean",
+        "snapshot_sha256": "77e881f1107beed10643167f4979059901ab25992dc0faec01cf06ce4461af06",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/two-pair-core-parity-01/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/NativeCore/TwoPairParity.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Transfers actual four-fiber matching cut parity to even uncovered original core sets after all exceptional vertices are covered.",
+        "Specializes this transfer to the cuts of a constructed joining palette."
+      ],
+      "retained_hypotheses": [
+        "Actual four-fiber assignment from the original matching, matchingness of external classes, complete Z saturation and cut equality/parity."
+      ],
+      "not_established": [
+        "Does not replace assigned-core parity by old-core parity before exceptional saturation."
+      ],
+      "review_provenance": {
+        "type": "complete-source independent semantic inspection",
+        "review_document": "docs/protected-trace-semantic-review.md"
+      }
+    },
+    {
+      "path": "Overfull/NativeReserve/PartnerGeneralTraces.lean",
+      "module": "Overfull.NativeReserve.PartnerGeneralTraces",
+      "sha256": "62f6aa67223b1d87f3c0370129d0f675e468d28090bf58b73d2c5ca15ceb62ed",
+      "primary_author": "/root/native_boundary_traces",
+      "independent_reviewer": "/root/proof_target_review",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 7,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/partner-general-traces-02/command.json",
+        "receipt_sha256": "624fcb5d4da4f36e4439d0697a10cfc366996ee60d15edcfb00f59f1ae9c3df5",
+        "output_path": "verification/runs/20261125T121903Z/focused/partner-general-traces-02/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/partner-general-traces-02/source/Overfull/NativeReserve/PartnerGeneralTraces.lean",
+        "snapshot_sha256": "62f6aa67223b1d87f3c0370129d0f675e468d28090bf58b73d2c5ca15ceb62ed",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/partner-general-traces-02/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/NativeReserve/PartnerGeneralTraces.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Proves every selected exceptional matching copy has equal assigned labels at both endpoints, including unpaired exceptions.",
+        "Transports internality across the full partner signature and derives exact empty/singleton joining traces.",
+        "Uses parity of the assigned corePart including exceptions and preserves residual original-copy/reserve-index injections."
+      ],
+      "retained_hypotheses": [
+        "Original perfect matching, disjoint old core and exceptional partition, full cover, exactly two exceptional matching copies and actual partner reserve.",
+        "Reserve avoidance for surviving-copy trace endpoints."
+      ],
+      "not_established": [
+        "Does not assume no unpaired exception or suppress parallel-copy identity."
+      ],
+      "review_provenance": {
+        "type": "complete-source independent semantic inspection",
+        "review_document": "docs/protected-trace-semantic-review.md"
+      }
+    },
+    {
+      "path": "Overfull/NativeReserve/PartnerTraces.lean",
+      "module": "Overfull.NativeReserve.PartnerTraces",
+      "sha256": "2585921de90c74a01d1cbf6ab19cff4ce24f0494f25ddc8d020322091b9d4b19",
+      "primary_author": "/root/native_boundary_traces",
+      "independent_reviewer": "/root/proof_target_review",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 12,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/partner-traces-04/command.json",
+        "receipt_sha256": "9e22e4fc7e745de2a199479089330444f65687ffa0c9ef63798d396b1a93df55",
+        "output_path": "verification/runs/20261125T121903Z/focused/partner-traces-04/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/partner-traces-04/source/Overfull/NativeReserve/PartnerTraces.lean",
+        "snapshot_sha256": "2585921de90c74a01d1cbf6ab19cff4ce24f0494f25ddc8d020322091b9d4b19",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/partner-traces-04/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/NativeReserve/PartnerTraces.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Proves the no-unpaired exact joining trace as the parity-selected core crossing.",
+        "Proves surviving-copy trace equality and image equality; derives empty traces or distinct actual crossing singleton traces."
+      ],
+      "retained_hypotheses": [
+        "Specialized Z pair-exhaustion hypothesis where stated; original perfect matching, actual partner reserve and residual reserve avoidance."
+      ],
+      "not_established": [
+        "General unpaired trace extension is supplied by PartnerGeneralTraces, not this specialized module."
+      ],
+      "review_provenance": {
+        "type": "complete-source independent semantic inspection",
+        "review_document": "docs/protected-trace-semantic-review.md"
+      }
+    },
+    {
+      "path": "Overfull/NativeWeighted/FourJoining.lean",
+      "module": "Overfull.NativeWeighted.FourJoining",
+      "sha256": "c0e5c698d28abaa9861664c2e361303f7af2589fa2ca4278e8aa68adf2670197",
+      "primary_author": "/root/proof_target_review",
+      "independent_reviewer": "/root/pair_star_assembly",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 3,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/weighted-four-joining-01/command.json",
+        "receipt_sha256": "43c4a2a24e1129c893b5a48e09bef07849f55e6a891aea5d78ee65047d052869",
+        "output_path": "verification/runs/20261125T121903Z/focused/weighted-four-joining-01/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/weighted-four-joining-01/source/Overfull/NativeWeighted/FourJoining.lean",
+        "snapshot_sha256": "c0e5c698d28abaa9861664c2e361303f7af2589fa2ca4278e8aa68adf2670197",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/weighted-four-joining-01/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/NativeWeighted/FourJoining.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Derives actual piece count from the incidence budget.",
+        "Constructs an all-even weighted palette with arbitrary protected empty colors in the full h-color palette.",
+        "Constructs a two-odd weighted palette with one injected primary per color; protected primaries stay whole and exact parity is retained.",
+        "Derives <=6b primary seed weight and <=8b other-piece weight, then whole-class star weights <=h/8; capacity is 2L."
+      ],
+      "retained_hypotheses": [
+        "Four-label joining decompositions, actual joining-degree and parallel-copy bounds, at most two resources and center degree <=h.",
+        "b<=D, h>0, 128D<=h, twice protected count<=h, and incidence budget |V|D<=2L(h-protected_count-40D); L>0 in the seeded two-odd endpoint."
+      ],
+      "not_established": [
+        "Does not derive a native safe residual; native trace/core inputs are supplied by TwoPairNative."
+      ],
+      "review_provenance": {
+        "type": "independent cross-review report",
+        "path": "verification/runs/20261125T121903Z/pair-star-independent-review.json",
+        "sha256": "5db39980de0bab692b3e822b4436c92a27d1fa539f9c8778df79cb4e4e092f97",
+        "module_path": "Overfull/NativeWeighted/FourJoining.lean",
+        "semantic_findings": [
+          "The actual piece count is derived from 2*|pieces| <= |V|*D and the capacity budget. The all-even branch uses empty seeds and forbids every protected color while keeping the full h/8 target.",
+          "The two-odd branch puts exactly one original primary in each color via an injective seed. Primary size <=3 and b <= D, 128*D <= h imply the seed weight bound <=h/8.",
+          "All other pieces have even fiber cuts, so the unique primary determines the exact odd-cut parity. Protected primary colors receive no surplus pieces.",
+          "The constructed pieces have true class/support bounds 4*L and 8*L, stored conservatively in JoiningPalette at capacity 2*L. Actual whole-class star weights retain the stronger directly proved bound h/8.",
+          "This construction avoids the unsuitable extra hypothesis 12*L*b <= h/8. Its capacity remains a condition on |V|*D versus L*(h-|Q|-40*D)."
+        ]
+      }
+    },
+    {
+      "path": "Overfull/NativeWeighted/TwoPairNative.lean",
+      "module": "Overfull.NativeWeighted.TwoPairNative",
+      "sha256": "31126105af58c2ff84684128e86137594af20280843d48410aa91f76af8c9a04",
+      "primary_author": "/root/native_boundary_traces",
+      "independent_reviewer": "/root/proof_target_review",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 2,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/two-pair-native-weighted-02/command.json",
+        "receipt_sha256": "d1cef5fb0407ef1de961c3f5acc11a768f3985cf30aeb78f203b7bc102401c21",
+        "output_path": "verification/runs/20261125T121903Z/focused/two-pair-native-weighted-02/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/two-pair-native-weighted-02/source/Overfull/NativeWeighted/TwoPairNative.lean",
+        "snapshot_sha256": "31126105af58c2ff84684128e86137594af20280843d48410aa91f76af8c9a04",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/two-pair-native-weighted-02/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/NativeWeighted/TwoPairNative.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Derives exceptional-to-old-core parallel multiplicities <=D from retained embedded-core incidence deficits.",
+        "Derives joining-degree bounds and exact native protected traces, then constructs weighted palette and injective protected colors.",
+        "Produces actual starWeight<=h/8 for at most two exceptional centers against the union of both old cores, without a no-unpaired assumption."
+      ],
+      "retained_hypotheses": [
+        "Actual reserve-avoiding h-regular non-overfull residual, retained core degree>=h-D, h<=r+D, and original two-pair partner geometry.",
+        "h>0, 128D<=h, 2t<=h, L>0, injective reserve-index map and |V|D<=2L(h-t-40D)."
+      ],
+      "not_established": [
+        "Does not construct residual regularity/safety or the required retained cores."
+      ],
+      "review_provenance": {
+        "type": "complete-source independent semantic inspection",
+        "review_document": "docs/protected-trace-semantic-review.md"
+      }
+    },
+    {
+      "path": "Overfull/ResidualPalette/FourProtectedPalette.lean",
+      "module": "Overfull.ResidualPalette.FourProtectedPalette",
+      "sha256": "da9dacb2f9a2a267ff7d788461eaf651d8aab820fdb6a22dbb6746d723dcc0b1",
+      "primary_author": "/root",
+      "independent_reviewer": "/root/proof_target_review",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 3,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/four-protected-palette-02/command.json",
+        "receipt_sha256": "a5dc9d636c45417ff3425e77f4b0f4159e2ce8ffa08becc8434b320f37f6c66d",
+        "output_path": "verification/runs/20261125T121903Z/focused/four-protected-palette-02/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/four-protected-palette-02/source/Overfull/ResidualPalette/FourProtectedPalette.lean",
+        "snapshot_sha256": "da9dacb2f9a2a267ff7d788461eaf651d8aab820fdb6a22dbb6746d723dcc0b1",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/four-protected-palette-02/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/ResidualPalette/FourProtectedPalette.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Embeds an all-even smaller palette into the full palette with explicit injective genuinely empty reserved colors.",
+        "Constructs two-odd protected singleton classes from prescribed actual crossings and proves protected color injection.",
+        "Preserves all actual copies, matching/disjointness, parity and original vertex loads."
+      ],
+      "retained_hypotheses": [
+        "Actual regular non-overfull host, four-label even/two-odd parity, prescribed distinct crossings for the odd endpoint, joining degree and unweighted incidence margin."
+      ],
+      "not_established": [
+        "Does not by itself establish starWeight<=h/8; later weighted modules do."
+      ],
+      "review_provenance": {
+        "type": "complete-source independent semantic inspection",
+        "review_document": "docs/protected-trace-semantic-review.md"
+      }
+    },
+    {
+      "path": "Overfull/ResidualPalette/FourReservedPrimary.lean",
+      "module": "Overfull.ResidualPalette.FourReservedPrimary",
+      "sha256": "8edf10f3c4f1ac849d36d32a1f2fedd07d75683e64db3b25d8d7564ab6c4f35e",
+      "primary_author": "/root/proof_target_review",
+      "independent_reviewer": "/root/pair_star_assembly",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 2,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/four-reserved-primary-01/command.json",
+        "receipt_sha256": "1e6e042d298e2b840aecf03447ed9aedd4f518acac164d1fb9c6628c15f76c84",
+        "output_path": "verification/runs/20261125T121903Z/focused/four-reserved-primary-01/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/four-reserved-primary-01/source/Overfull/ResidualPalette/FourReservedPrimary.lean",
+        "snapshot_sha256": "8edf10f3c4f1ac849d36d32a1f2fedd07d75683e64db3b25d8d7564ab6c4f35e",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/four-reserved-primary-01/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/ResidualPalette/FourReservedPrimary.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Generalizes reserved actual/virtual parallel two-circuit removal to at most four labels.",
+        "Preserves closed/separating cut inequalities, even degree, original/virtual identity and compatibility through induction.",
+        "Constructs host-level four-label two-odd decompositions with every prescribed actual crossing a singleton primary."
+      ],
+      "retained_hypotheses": [
+        "Original-host regularity/no-overfull, exact two-odd fibers, prescribed distinct actual direct crossings, actual joining degree<=D and D<=h-|A|."
+      ],
+      "not_established": [
+        "Does not create residual safety or identify multiple original parallel copies."
+      ],
+      "review_provenance": {
+        "type": "independent cross-review report",
+        "path": "verification/runs/20261125T121903Z/pair-star-independent-review.json",
+        "sha256": "5db39980de0bab692b3e822b4436c92a27d1fa539f9c8778df79cb4e4e092f97",
+        "module_path": "Overfull/ResidualPalette/FourReservedPrimary.lean",
+        "semantic_findings": [
+          "Each prescribed actual crossing is removed together with a distinct virtual parallel copy. Closed-cut inequalities remain unchanged; separating-cut bounds and even degrees are explicitly maintained by the induction.",
+          "The base uses the already proved unrestricted at-most-four-label compatible-circuit theorem. Restoring the prescribed two-circuits preserves exact original/virtual copies and yields singleton actual primary pieces.",
+          "The regular non-overfull host supplies the closed and separating cut inequalities. D <= h - |A| is an explicit sufficient margin, not an inferred reserve-safety theorem."
+        ]
+      }
+    },
+    {
+      "path": "Overfull/WeightedPalette/FourGrouping.lean",
+      "module": "Overfull.WeightedPalette.FourGrouping",
+      "sha256": "d9794b8d028a3b999ea7c5886e689711c561b4db9c7b8f7f2a9fe154df485e3d",
+      "primary_author": "/root/proof_target_review",
+      "independent_reviewer": "/root/pair_star_assembly",
+      "review_result": "no_semantic_issue_found",
+      "public_theorem_count": 5,
+      "focused_evidence": {
+        "receipt_path": "verification/runs/20261125T121903Z/focused/weighted-four-grouping-02/command.json",
+        "receipt_sha256": "4cb33d0de2953d4317acd2dd46cd86f4f57f1da1d6b669de20d92f2179b73a04",
+        "output_path": "verification/runs/20261125T121903Z/focused/weighted-four-grouping-02/output.log",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "snapshot_path": "verification/runs/20261125T121903Z/focused/weighted-four-grouping-02/source/Overfull/WeightedPalette/FourGrouping.lean",
+        "snapshot_sha256": "d9794b8d028a3b999ea7c5886e689711c561b4db9c7b8f7f2a9fe154df485e3d",
+        "recorder_path": "verification/runs/20261125T121903Z/focused/weighted-four-grouping-02/recorder.py",
+        "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "command": [
+          "/home/agent/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "Overfull/WeightedPalette/FourGrouping.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "changed_sources": []
+      },
+      "constructed": [
+        "Bounds actual star weight of a <=4-copy piece by 8b and proves the integer threshold under b<=D and 128D<=h.",
+        "Uses <=8D endpoint conflicts and at most two <=16D resource-overload exclusions, giving margin h-|Q|-40D.",
+        "Groups all actual pieces with exact protected seed unions, matchingness, disjointness, incidence load and whole-class starWeight<=h/8 in the full palette."
+      ],
+      "retained_hypotheses": [
+        "Actual pairwise copy-disjoint matching pieces of size<=4, degree load<=D, parallel<=b, center degree<=h, <=2 resources.",
+        "Supplied seed matching/capacity/weight certificates, b<=D, h>0, 128D<=h, 2|Q|<=h and piece-count budget."
+      ],
+      "not_established": [
+        "Generic seeds remain inputs here; FourJoining constructs the relevant seeds in each parity case."
+      ],
+      "review_provenance": {
+        "type": "independent cross-review report",
+        "path": "verification/runs/20261125T121903Z/pair-star-independent-review.json",
+        "sha256": "5db39980de0bab692b3e822b4436c92a27d1fa539f9c8778df79cb4e4e092f97",
+        "module_path": "Overfull/WeightedPalette/FourGrouping.lean",
+        "semantic_findings": [
+          "A piece of at most four actual copies occupies at most eight vertices, so its star-copy weight is at most 8*b. Parallel multiplicities are counted as distinct copies.",
+          "The total resource weight is bounded by D*h through double-counting actual incidence loads, rather than bounding a whole group by a product of L and b.",
+          "Under b <= D and 128*D <= h, the integer threshold h < 16*(h/8-8*b+1) bounds overloaded colors by 16*D per resource. At most two resources and at most 8*D endpoint conflicts give the protected margin h-|Q|-40*D.",
+          "The weight target is h/8 for the full palette throughout. Seed weights, piece counts and protected colors are retained, and every grouped class is an actual matching with the exact original union.",
+          "The generic endpoint explicitly accepts seed certificates; the FourJoining module constructs the relevant seed certificates in each parity case."
+        ]
+      }
+    }
+  ],
+  "semantic_review_document": {
+    "path": "docs/protected-trace-semantic-review.md",
+    "sha256": "1165074199fded317368f8241e917504cdecf36500707c237538ba5ef61a272d"
+  },
+  "strict_focused_evidence": {
+    "all_final_source_hashes_match_successful_strict_receipts": true,
+    "all_archived_source_snapshots_match": true,
+    "all_actual_output_logs_match_recorded_hashes": true,
+    "all_recorders_match_recorded_hashes": true,
+    "all_changed_source_lists_empty": true,
+    "failed_attempts_retained_in_focused_directory": true
+  },
+  "preservation_contract": {
+    "nonroot_mathematical_sources": 742,
+    "audited_declarations": 14994,
+    "completed_result_mappings": 2926,
+    "declaration_maps": 23,
+    "numbered_assertions": 69,
+    "complete_numbered_assertions": 51,
+    "numbered_assertions_completed_by_this_continuation": 0,
+    "main_theorem_verified": false,
+    "pinned_current_source_excerpt_preserved": true
+  },
+  "remaining_obligations": [
+    "Construct the reserve-avoiding regular non-overfull residual and retained cores satisfying the quantitative budgets from original theorem hypotheses.",
+    "Complete external classes inside robust cores and prove terminal geometry, terminal factorization and original-copy reassembly in the complete theorem.",
+    "Complete zero-pair and one-pair branches with potentially five and three unpaired exceptional vertices.",
+    "No numbered assertion or main-theorem promotion follows from this supporting continuation."
+  ],
+  "verification_limit": "This records independent semantic review and genuine focused compiler evidence. The full frozen build, exhaustive axiom/declaration audit, preservation gate and publication have separate execution receipts; this report does not claim they have already run."
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/agent/.elan/bin/lake",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "Overfull/NativeCore/TwoPairParity.lean"
+  ],
+  "cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+  "started_at_utc": "2026-11-25T12:26:24.826313+00:00",
+  "source_sha256": {
+    "Overfull/NativeCore/TwoPairParity.lean": "77e881f1107beed10643167f4979059901ab25992dc0faec01cf06ce4461af06"
+  },
+  "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+  "status": "passed",
+  "exit_code": 0,
+  "finished_at_utc": "2026-11-25T12:26:27.560466+00:00",
+  "elapsed_seconds": 2.7340074909998293,
+  "changed_sources": [],
+  "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

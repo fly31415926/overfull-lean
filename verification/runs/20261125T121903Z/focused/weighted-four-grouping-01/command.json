@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/agent/.elan/bin/lake",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "Overfull/WeightedPalette/FourGrouping.lean"
+  ],
+  "cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+  "started_at_utc": "2026-11-25T12:25:20.883368+00:00",
+  "source_sha256": {
+    "Overfull/WeightedPalette/FourGrouping.lean": "52703772e929f38f287f1ab07f1133363043afccad5df9f4d897464cc2aa5992"
+  },
+  "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+  "status": "failed",
+  "exit_code": 1,
+  "finished_at_utc": "2026-11-25T12:25:23.977041+00:00",
+  "elapsed_seconds": 3.093499047000023,
+  "changed_sources": [],
+  "output_sha256": "494b12c27c4c245fcc604a773756f6d646e7a7a1d45055b76c254bf47294587a"
+}

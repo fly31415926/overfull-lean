@@ -1,0 +1,162 @@
+Overfull/NativeCore/TwoPairExternal.lean:102:12: error: Application type mismatch: The argument
+  joining_exceptional_disjoint_core H label U₀ Z C₀ h0Z 0 hlabel₀
+has type
+  Disjoint
+    (@Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (joiningCopies H label)
+      (exceptionalCopies H univ Z))
+    (OneCore.coreEdges C₀)
+but is expected to have type
+  Disjoint
+    (@Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (joiningCopies H label)
+      (exceptionalCopies H univ Z))
+    (OneCore.coreEdges C₀)
+in the application
+  Disjoint.mono_left (hsub j) (joining_exceptional_disjoint_core H label U₀ Z C₀ h0Z 0 hlabel₀)
+Overfull/NativeCore/TwoPairExternal.lean:104:12: error: Application type mismatch: The argument
+  joining_exceptional_disjoint_core H label U₁ Z C₁ h1Z 1 hlabel₁
+has type
+  Disjoint
+    (@Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (joiningCopies H label)
+      (exceptionalCopies H univ Z))
+    (OneCore.coreEdges C₁)
+but is expected to have type
+  Disjoint
+    (@Union.union (Finset { e // e ∉ removedCopies N T })
+      (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (joiningCopies H label)
+      (exceptionalCopies H univ Z))
+    (OneCore.coreEdges C₁)
+in the application
+  Disjoint.mono_left (hsub j) (joining_exceptional_disjoint_core H label U₁ Z C₁ h1Z 1 hlabel₁)
+Overfull/NativeCore/TwoPairExternal.lean:107:29: error: Application type mismatch: The argument
+  hsub
+has type
+  ∀ (j : Fin h),
+    F j ⊆
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (joiningCopies H label)
+        (exceptionalCopies H univ Z)
+but is expected to have type
+  ∀ (j : Fin h),
+    F j ⊆
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (joiningCopies H label)
+        (exceptionalCopies H univ Z)
+in the application
+  external_family_load_le_error H label U₀ Z C₀ h0Z 0 hlabel₀ h (↑D) hregular hcore₀ F hd hsub
+Overfull/NativeCore/TwoPairExternal.lean:111:29: error: Application type mismatch: The argument
+  hsub
+has type
+  ∀ (j : Fin h),
+    F j ⊆
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b) (joiningCopies H label)
+        (exceptionalCopies H univ Z)
+but is expected to have type
+  ∀ (j : Fin h),
+    F j ⊆
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b)) (joiningCopies H label)
+        (exceptionalCopies H univ Z)
+in the application
+  external_family_load_le_error H label U₁ Z C₁ h1Z 1 hlabel₁ h (↑D) hregular hcore₁ F hd hsub
+Overfull/NativeCore/TwoPairExternal.lean:132:12: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  joiningCopies (residualGraph G N T) (twoPairAssignedLabel G M U₀ U₁ Z e₀) ∪
+      (residualGraph G N T).internalOn univ (exceptionalPairPart G e₀) ∪
+    (residualGraph G N T).internalOn univ (exceptionalPairPart G e₁)
+in the target expression
+  e ∈
+    joiningCopies (residualGraph G N T) (twoPairAssignedLabel G M U₀ U₁ Z e₀) ∪
+        (residualGraph G N T).internalOn univ (exceptionalPairPart G e₀) ∪
+      (residualGraph G N T).internalOn univ (exceptionalPairPart G e₁)
+
+V : Type u_1
+E : Type u_2
+J : Type u_3
+inst✝¹ : Fintype V
+inst✝ : Fintype E
+G : Multigraph V E
+U₀ U₁ Z : Finset V
+M : Finset E
+r : ℕ
+Q : PartnerBoundaryPacking G U₀ U₁ Z M r
+hM : G.IsPerfectMatching M
+h01 : Disjoint U₀ U₁
+h0Z : Disjoint U₀ Z
+h1Z : Disjoint U₁ Z
+hcover : ∀ (v : V), v ∈ U₀ ∨ v ∈ U₁ ∨ v ∈ Z
+hZ : #Z ≤ 5
+e₀ e₁ : E
+he : e₀ ≠ e₁
+hpair : G.internalOn M Z = {e₀, e₁}
+N : J → Finset E
+T : Finset J
+havoid : ∀ j ∈ T, Disjoint (N j) (removedCopies Q.boundary univ)
+h D L t : ℕ
+hregular : ∀ (v : V), (residualGraph G N T).degree v = h
+hno : ∀ (X : Finset V), ¬(residualGraph G N T).IsOverfull h X
+C₀ : Core (residualGraph G N T) U₀
+C₁ : Core (residualGraph G N T) U₁
+hcore₀ : ∀ (v : { x // x ∈ U₀ }), ↑h - ↑D ≤ ↑(C₀.graph.degree v)
+hcore₁ : ∀ (v : { x // x ∈ U₁ }), ↑h - ↑D ≤ ↑(C₁.graph.degree v)
+herror : h ≤ r + D
+q : Fin t → Fin r
+hq : Function.Injective q
+hh : 0 < h
+hDh : 128 * D ≤ h
+ht : 2 * t ≤ h
+hL : 0 < L
+hbudget : Fintype.card V * D ≤ 2 * L * (h - t - 40 * D)
+H : Multigraph V { e // e ∉ removedCopies N T } := residualGraph G N T
+label : V → Fin 4 := twoPairAssignedLabel G M U₀ U₁ Z e₀
+p : Fin 4 → ℕ := fun i => #{v | label v = i} % 2
+hlabel₀ : ∀ v ∈ U₀, label v = 0
+hlabel₁ : ∀ v ∈ U₁, label v = 1
+hfibers :
+  labelShore (twoPairAssignedLabel G M U₀ U₁ Z e₀) {0} = corePart G M Z U₀ ∧
+    labelShore (twoPairAssignedLabel G M U₀ U₁ Z e₀) {1} = corePart G M Z U₁ ∧
+      labelShore (twoPairAssignedLabel G M U₀ U₁ Z e₀) {2} = exceptionalPairPart G e₀ ∧
+        labelShore (twoPairAssignedLabel G M U₀ U₁ Z e₀) {3} = exceptionalPairPart G e₁
+hnone : Z = exceptionalPairPart G e₀ ∪ exceptionalPairPart G e₁
+hbudget' : Fintype.card V * D ≤ 2 * L * (h - 8 * D - t)
+C :
+  JoiningPalette (residualGraph G N T) (twoPairAssignedLabel G M U₀ U₁ Z e₀) h D (2 * L) fun i =>
+    #{v | twoPairAssignedLabel G M U₀ U₁ Z e₀ v = i} % 2
+f : Fin t → Fin h
+hf : Function.Injective f
+B : TwoPairFiberCompletion C (exceptionalPairPart G e₀) (exceptionalPairPart G e₁)
+hpres : ∀ (i : Fin t), B.classes (f i) = Q.residualBoundary N T (q i)
+hcovers : ∀ (j : Fin h), Z ⊆ H.edgeSupport (B.classes j)
+j : Fin h
+e : { e // e ∉ removedCopies N T }
+heB : e ∈ B.classes j
+⊢ e ∈
+    joiningCopies (residualGraph G N T) (twoPairAssignedLabel G M U₀ U₁ Z e₀) ∪
+        (residualGraph G N T).internalOn univ (exceptionalPairPart G e₀) ∪
+      (residualGraph G N T).internalOn univ (exceptionalPairPart G e₁)
+Overfull/NativeCore/TwoPairExternal.lean:150:25: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a b => a.instDecidableEq b
+inferred
+  fun a b => propDecidable (a = b)
+Overfull/NativeCore/TwoPairExternal.lean:153:38: error: Application type mismatch: The argument
+  hjoining
+has type
+  joiningCopies H label ⊆
+    @Finset.biUnion (Fin h) { e // e ∉ removedCopies N T } (fun a b => a.instDecidableEq b) univ B.classes
+but is expected to have type
+  joiningCopies H label ⊆
+    @Finset.biUnion (Fin h) { e // e ∉ removedCopies N T } (fun a b => propDecidable (a = b)) univ B.classes
+in the application
+  external_union_eq_of_saturation H label h B.classes Z B.disjoint (fun v x => hregular v) hcovers hjoining
+Overfull/NativeCore/TwoPairExternal.lean:154:80: error: Application type mismatch: The argument
+  hcov
+has type
+  @Finset.biUnion (Fin h) { e // e ∉ removedCopies N T } (fun a b => propDecidable (a = b)) univ B.classes =
+    joiningCopies H label ∪ exceptionalCopies H univ Z
+but is expected to have type
+  @Finset.biUnion (Fin h) { e // e ∉ removedCopies N T } (fun a b => a.instDecidableEq b) univ B.classes =
+    joiningCopies H label ∪ exceptionalCopies H univ Z
+in the application
+  ⟨?m.1474, hcov⟩

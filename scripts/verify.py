@@ -127,6 +127,7 @@ def main() -> None:
                           ("four_core_continuation", "four-core-continuation-source.json"),
                           ("ordinary_core_coloring", "ordinary-core-coloring-source.json"),
                           ("two_pair_native", "two-pair-native-source.json"),
+                          ("protected_trace", "protected-trace-source.json"),
                           ("global_factorization", "global-factorization-source.json")):
         source = json.loads((ROOT / "docs" / filename).read_text())
         source_modules = {item["module"]: item for item in source["modules"]}
@@ -299,6 +300,17 @@ def main() -> None:
             or "Overfull.NativeReserve.JoiningPalette.exists_two_pairFiber_completion" not in pair_native_public
             or "Overfull.NativeTerminal.exists_uniform_two_shore_two_pair_factorization" not in pair_native_public):
         raise SystemExit("Native two-pair sources must retain their explicit supporting scope.")
+
+    # The protected-trace construction is supporting work with pinned scope.
+    trace_source, _, trace_public = extension_maps["protected_trace"]
+    if (trace_source["kind"] != "supporting_continuation"
+            or trace_source["numbered_assertions_completed"] != 0
+            or trace_source["main_theorem_verified"] is not False
+            or trace_source["source_assertions"] != pair_native_source["source_assertions"]
+            or trace_source["public_theorems"] != sorted(trace_public)
+            or "Overfull.NativeReserve.exists_fourTwoOddJoining_decomposition_with_reserved_primary"
+                not in trace_public):
+        raise SystemExit("Protected-trace sources must retain their explicit supporting scope.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1830,6 +1842,7 @@ def main() -> None:
                     "four_core_continuation": "four-core-continuation",
                     "ordinary_core_coloring": "ordinary-core-coloring",
                     "two_pair_native": "two-pair-native",
+                    "protected_trace": "protected-trace",
                     "global_factorization": "global-factorization"}[key]
         map_path = OUTPUT / f"{basename}-declarations.json"
         map_path.write_text(json.dumps({
@@ -1916,6 +1929,7 @@ def main() -> None:
         "four_core_continuation_declaration_map": extension_evidence["four_core_continuation"],
         "ordinary_core_coloring_declaration_map": extension_evidence["ordinary_core_coloring"],
         "two_pair_native_declaration_map": extension_evidence["two_pair_native"],
+        "protected_trace_declaration_map": extension_evidence["protected_trace"],
         "checkpoint_reconstruction": {
             "original_checkpoint": reconstruction["original_checkpoint"],
             "original_tree_reproduced": False,

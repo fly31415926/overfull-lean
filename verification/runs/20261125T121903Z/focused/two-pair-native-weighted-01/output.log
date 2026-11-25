@@ -1,0 +1,8 @@
+Overfull/NativeWeighted/TwoPairNative.lean:98:38: error: Application type mismatch: The argument
+  hij
+has type
+  f i = f j
+but is expected to have type
+  i = j
+in the application
+  congrArg Fin.val hij

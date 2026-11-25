@@ -304,6 +304,22 @@ import Overfull.NativeAssembly.TwoPairBoundary
 import Overfull.NativeAssembly.TwoPairs
 import Overfull.NativeAssembly.TwoPairReserve
 import Overfull.NativeTerminal.TwoPairs
+import Overfull.AssignedParts.TwoPairOneStar
+import Overfull.NativeAssembly.TwoPairBounds
+import Overfull.NativeAssembly.TwoPairGeneralProtected
+import Overfull.NativeAssembly.TwoPairProtected
+import Overfull.NativeAssembly.TwoPairStar
+import Overfull.NativeAssembly.TwoPairStarBase
+import Overfull.NativeAssembly.TwoPairStarReserve
+import Overfull.NativeCore.TwoPairExternal
+import Overfull.NativeCore.TwoPairParity
+import Overfull.NativeReserve.PartnerGeneralTraces
+import Overfull.NativeReserve.PartnerTraces
+import Overfull.NativeWeighted.FourJoining
+import Overfull.NativeWeighted.TwoPairNative
+import Overfull.ResidualPalette.FourProtectedPalette
+import Overfull.ResidualPalette.FourReservedPrimary
+import Overfull.WeightedPalette.FourGrouping
 
 /-!
 # Partial formalization of the overfull manuscript
