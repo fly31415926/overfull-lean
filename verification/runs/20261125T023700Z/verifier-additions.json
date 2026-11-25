@@ -1,0 +1,22 @@
+[
+  {
+    "kind": "additive",
+    "old": "                          (\"global_factorization\", \"global-factorization-source.json\")):",
+    "new": "                          (\"two_pair_native\", \"two-pair-native-source.json\"),\n                          (\"global_factorization\", \"global-factorization-source.json\")):"
+  },
+  {
+    "kind": "additive",
+    "old": "    # Every first-party mathematical file must be included in the library build.\n",
+    "new": "    # The native two-pair chain is supporting work, not a numbered closure.\n    pair_native_source, _, pair_native_public = extension_maps[\"two_pair_native\"]\n    if (pair_native_source[\"numbered_assertions_completed\"] != 0\n            or pair_native_source[\"main_theorem_verified\"] is not False\n            or {a[\"number\"] for a in pair_native_source[\"source_assertions\"]} != {\"4.4\", \"4.5\"}\n            or any(a[\"full_assertion_verified\"] for a in pair_native_source[\"source_assertions\"])\n            or \"Overfull.NativeReserve.exists_linear_partner_boundary_reserve\" not in pair_native_public\n            or \"Overfull.NativeReserve.JoiningPalette.exists_two_pairFiber_completion\" not in pair_native_public\n            or \"Overfull.NativeTerminal.exists_uniform_two_shore_two_pair_factorization\" not in pair_native_public):\n        raise SystemExit(\"Native two-pair sources must retain their explicit supporting scope.\")\n\n    # Every first-party mathematical file must be included in the library build.\n"
+  },
+  {
+    "kind": "additive",
+    "old": "                    \"global_factorization\": \"global-factorization\"}[key]",
+    "new": "                    \"two_pair_native\": \"two-pair-native\",\n                    \"global_factorization\": \"global-factorization\"}[key]"
+  },
+  {
+    "kind": "additive",
+    "old": "        \"ordinary_core_coloring_declaration_map\": extension_evidence[\"ordinary_core_coloring\"],\n",
+    "new": "        \"ordinary_core_coloring_declaration_map\": extension_evidence[\"ordinary_core_coloring\"],\n        \"two_pair_native_declaration_map\": extension_evidence[\"two_pair_native\"],\n"
+  }
+]

@@ -126,6 +126,7 @@ def main() -> None:
                           ("four_label_existence", "four-label-existence-source.json"),
                           ("four_core_continuation", "four-core-continuation-source.json"),
                           ("ordinary_core_coloring", "ordinary-core-coloring-source.json"),
+                          ("two_pair_native", "two-pair-native-source.json"),
                           ("global_factorization", "global-factorization-source.json")):
         source = json.loads((ROOT / "docs" / filename).read_text())
         source_modules = {item["module"]: item for item in source["modules"]}
@@ -287,6 +288,17 @@ def main() -> None:
             or hashlib.sha256((ROOT / current_statement["excerpt_path"]).read_bytes()).hexdigest()
                 != current_statement["statement_sha256"]):
         raise SystemExit("Ordinary-core coloring must retain its separately checked current-source identity.")
+
+    # The native two-pair chain is supporting work, not a numbered closure.
+    pair_native_source, _, pair_native_public = extension_maps["two_pair_native"]
+    if (pair_native_source["numbered_assertions_completed"] != 0
+            or pair_native_source["main_theorem_verified"] is not False
+            or {a["number"] for a in pair_native_source["source_assertions"]} != {"4.4", "4.5"}
+            or any(a["full_assertion_verified"] for a in pair_native_source["source_assertions"])
+            or "Overfull.NativeReserve.exists_linear_partner_boundary_reserve" not in pair_native_public
+            or "Overfull.NativeReserve.JoiningPalette.exists_two_pairFiber_completion" not in pair_native_public
+            or "Overfull.NativeTerminal.exists_uniform_two_shore_two_pair_factorization" not in pair_native_public):
+        raise SystemExit("Native two-pair sources must retain their explicit supporting scope.")
 
     # Every first-party mathematical file must be included in the library build.
     modules = {"Overfull": ROOT / "Overfull.lean"}
@@ -1817,6 +1829,7 @@ def main() -> None:
                     "four_label_existence": "four-label-existence",
                     "four_core_continuation": "four-core-continuation",
                     "ordinary_core_coloring": "ordinary-core-coloring",
+                    "two_pair_native": "two-pair-native",
                     "global_factorization": "global-factorization"}[key]
         map_path = OUTPUT / f"{basename}-declarations.json"
         map_path.write_text(json.dumps({
@@ -1902,6 +1915,7 @@ def main() -> None:
         "four_label_existence_declaration_map": extension_evidence["four_label_existence"],
         "four_core_continuation_declaration_map": extension_evidence["four_core_continuation"],
         "ordinary_core_coloring_declaration_map": extension_evidence["ordinary_core_coloring"],
+        "two_pair_native_declaration_map": extension_evidence["two_pair_native"],
         "checkpoint_reconstruction": {
             "original_checkpoint": reconstruction["original_checkpoint"],
             "original_tree_reproduced": False,

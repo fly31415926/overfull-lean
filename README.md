@@ -1,6 +1,43 @@
 # Lean formalization of the overfull manuscript
 
-## Current continuation: nonregular coloring with up to three ordinary cores
+## Current continuation: native reserves and two exceptional pairs
+
+This continuation adds **82 public theorem proofs in 13 new modules** toward
+native two-core factorization with up to five exceptional vertices. It constructs
+four actual assigned fibers, a partner code preserving each exceptional pair,
+a linear disjoint reserve of actual compressed boundaries, surviving residual
+pair injections, four-label joining palettes with protected grouping,
+simultaneous pair completion in common protected colors, and terminal coloring
+with two separately closed pair components.
+
+The partner reserve considers every possible code and therefore includes
+zero-pair, one-pair and two-pair representatives. It does not assume that a
+heavy pattern has two pairs. Original parallel edge copies and selected reserve
+indices remain distinct throughout. Under the explicit native trace inputs,
+the no-unpaired two-pair endpoint retains whole actual reserved boundaries.
+
+**Coverage remains 51/69.** The safe residual and its budgets, alignment of
+protected native joining traces, the two-pair-plus-one-star assembly, and the
+zero-/one-pair multi-star branches still need construction. Lemma 4.4,
+Corollary 4.5 and the main theorem remain unverified. The earlier ordinary-core
+coloring theorem and every previously verified declaration are preserved.
+
+The [proof notes](docs/two-pair-native-verification.md),
+[semantic review](docs/two-pair-native-semantic-review.md),
+[source manifest](docs/two-pair-native-source.json), and
+[handoff](docs/continuation-handoff.md) give the exact statements and limits.
+The [actual verification run](verification/runs/20261125T023700Z/) retains
+successful and failed focused attempts and the full verification gate. Its
+`full-*/terminal.json` and preservation receipts establish the full status;
+publication requires separate remote object and both-branch readbacks.
+
+The baseline is public commit
+`5679471018d5d087d942c592c72fca3d24e7ea32`, tree
+`918663f3827a27a29312835f7b2218d850326a0d`.
+The sections below retain the scope and counts recorded at earlier checkpoints.
+
+
+## Previous continuation: nonregular coloring with up to three ordinary cores
 
 `Overfull.ordinary_cores_coloring` constructs a proper coloring of the original
 simple graph from one, two, or three ordinary robust cores. One positive error

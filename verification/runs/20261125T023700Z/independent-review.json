@@ -1,0 +1,171 @@
+{
+  "reviewed_at_utc": "2026-11-25T02:45:53.707755+00:00",
+  "baseline_commit": "5679471018d5d087d942c592c72fca3d24e7ea32",
+  "baseline_tree": "918663f3827a27a29312835f7b2218d850326a0d",
+  "review_document": "docs/two-pair-native-semantic-review.md",
+  "review_type": "read-only mathematical and statement-scope review, with documented cross-review for reviewer-authored modules",
+  "semantic_findings": "No semantic defect found under the displayed hypotheses. Native residual safety, joining and star budgets, exact protected traces, the extra-star assembly, and remaining multi-star branches are still obligations.",
+  "reviewed_module_count": 13,
+  "modules": [
+    {
+      "path": "Overfull/AssignedParts/PartnerLabels.lean",
+      "sha256": "785eb092d2fe57e944cb11d1481366fec8ab87e69cd636036e196e85d039fb94",
+      "successful_focused_receipt": "verification/runs/20261125T023700Z/focused/partner-labels-01.json",
+      "focused_exit_code": 0,
+      "source_hash_in_receipt_matches": null,
+      "semantic_reviewers": [
+        "terminal_two_pairs"
+      ],
+      "authored_by_primary_reviewer": false
+    },
+    {
+      "path": "Overfull/AssignedParts/PartnerSignatures.lean",
+      "sha256": "59f0c28a8528e9909c66c0c55be5c36f154afa405642f9b34b807f6348d12200",
+      "successful_focused_receipt": "verification/runs/20261125T023700Z/focused/partner-signatures-02/command.json",
+      "focused_exit_code": 0,
+      "source_hash_in_receipt_matches": true,
+      "semantic_reviewers": [
+        "terminal_two_pairs"
+      ],
+      "authored_by_primary_reviewer": false
+    },
+    {
+      "path": "Overfull/AssignedParts/TwoPairPalette.lean",
+      "sha256": "b6834bd278b7c67a2c3e2d6f757b3132a118745f5e62e7616cfd78aa8556b5b7",
+      "successful_focused_receipt": "verification/runs/20261125T023700Z/focused/two-pair-palette-01.json",
+      "focused_exit_code": 0,
+      "source_hash_in_receipt_matches": null,
+      "semantic_reviewers": [
+        "terminal_two_pairs"
+      ],
+      "authored_by_primary_reviewer": false
+    },
+    {
+      "path": "Overfull/AssignedParts/TwoPairs.lean",
+      "sha256": "178c8caaa9e0193ce6f81310018096fd644e0577240b1b9794389d217d20e233",
+      "successful_focused_receipt": "verification/runs/20261125T023700Z/focused/assigned-two-pairs-01.json",
+      "focused_exit_code": 0,
+      "source_hash_in_receipt_matches": null,
+      "semantic_reviewers": [
+        "terminal_two_pairs"
+      ],
+      "authored_by_primary_reviewer": false
+    },
+    {
+      "path": "Overfull/ExceptionalPalette/TwoPairs.lean",
+      "sha256": "06638c96721da3985ca8e7a1732801b88ffd0337b303950beafc16ff69e39bf7",
+      "successful_focused_receipt": "verification/runs/20261125T023700Z/focused/two-pairs-002/terminal.json",
+      "focused_exit_code": 0,
+      "source_hash_in_receipt_matches": true,
+      "semantic_reviewers": [
+        "terminal_two_pairs"
+      ],
+      "authored_by_primary_reviewer": false
+    },
+    {
+      "path": "Overfull/NativeAssembly/TwoPairBoundary.lean",
+      "sha256": "2e1c2f84714f69d2c50e9fbcc57b42616cb4412c41b698c0fcc57f5e50d7db24",
+      "successful_focused_receipt": "verification/runs/20261125T023700Z/focused/terminal-boundary-02.json",
+      "focused_exit_code": 0,
+      "source_hash_in_receipt_matches": null,
+      "semantic_reviewers": [
+        "root",
+        "remote_audit"
+      ],
+      "authored_by_primary_reviewer": true
+    },
+    {
+      "path": "Overfull/NativeAssembly/TwoPairReserve.lean",
+      "sha256": "2d07aeaed847b92559c991e162a81a5e171903216c179e8577f5ed8318108a4e",
+      "successful_focused_receipt": "verification/runs/20261125T023700Z/focused/two-pairs-010/terminal.json",
+      "focused_exit_code": 0,
+      "source_hash_in_receipt_matches": true,
+      "semantic_reviewers": [
+        "terminal_two_pairs"
+      ],
+      "authored_by_primary_reviewer": false
+    },
+    {
+      "path": "Overfull/NativeAssembly/TwoPairs.lean",
+      "sha256": "6c663eca5434a60ffa904ec2af47c6999aec5bed0f2aa6bd62aba5cd0dde4739",
+      "successful_focused_receipt": "verification/runs/20261125T023700Z/focused/two-pairs-004/terminal.json",
+      "focused_exit_code": 0,
+      "source_hash_in_receipt_matches": true,
+      "semantic_reviewers": [
+        "terminal_two_pairs"
+      ],
+      "authored_by_primary_reviewer": false
+    },
+    {
+      "path": "Overfull/NativeReserve/PartnerPacking.lean",
+      "sha256": "c5fe9ebfde237496d411b29a8dfdf671b20c1a22f5ca76910ce961cf60241e3c",
+      "successful_focused_receipt": "verification/runs/20261125T023700Z/focused/partner-packing-01/command.json",
+      "focused_exit_code": 0,
+      "source_hash_in_receipt_matches": true,
+      "semantic_reviewers": [
+        "terminal_two_pairs"
+      ],
+      "authored_by_primary_reviewer": false
+    },
+    {
+      "path": "Overfull/NativeReserve/PartnerResidual.lean",
+      "sha256": "c62cd53c843afb465ae49087350becd605d1de791b67df19c932b17180f55034",
+      "successful_focused_receipt": "verification/runs/20261125T023700Z/focused/two-pairs-007/terminal.json",
+      "focused_exit_code": 0,
+      "source_hash_in_receipt_matches": true,
+      "semantic_reviewers": [
+        "terminal_two_pairs"
+      ],
+      "authored_by_primary_reviewer": false
+    },
+    {
+      "path": "Overfull/NativeTerminal/TwoPairs.lean",
+      "sha256": "e890bedc939223921464ba9b0afa6b2a55bc2fb555dd6b77924cca6c91294b4f",
+      "successful_focused_receipt": "verification/runs/20261125T023700Z/focused/terminal-two-pairs-03.json",
+      "focused_exit_code": 0,
+      "source_hash_in_receipt_matches": null,
+      "semantic_reviewers": [
+        "root",
+        "remote_audit"
+      ],
+      "authored_by_primary_reviewer": true
+    },
+    {
+      "path": "Overfull/ResidualPalette/FourProtectedGrouping.lean",
+      "sha256": "f6bf748f0ebe9850284310e787ee61e447b50becb0701719355eb351a5b3a848",
+      "successful_focused_receipt": "verification/runs/20261125T023700Z/focused/four-protected-grouping-01.json",
+      "focused_exit_code": 0,
+      "source_hash_in_receipt_matches": null,
+      "semantic_reviewers": [
+        "terminal_two_pairs"
+      ],
+      "authored_by_primary_reviewer": false
+    },
+    {
+      "path": "Overfull/ResidualPalette/FourTwoOddGrouping.lean",
+      "sha256": "21306a885d3780f808cc48776387e722650bc7a4cd8a7cef60d5686059c7898a",
+      "successful_focused_receipt": "verification/runs/20261125T023700Z/focused/four-two-odd-grouping-01.json",
+      "focused_exit_code": 0,
+      "source_hash_in_receipt_matches": null,
+      "semantic_reviewers": [
+        "terminal_two_pairs"
+      ],
+      "authored_by_primary_reviewer": false
+    }
+  ],
+  "numbered_assertions_completed": 0,
+  "numbered_assertion_count": 69,
+  "fully_verified_numbered_assertion_count": 51,
+  "main_theorem_verified": false,
+  "full_gate_launched_by_reviewer": false,
+  "full_gate_evidence_required": "verification/runs/20261125T023700Z/full-*/terminal.json and preservation.json",
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "cross_review_observations": {
+    "root": "Independently read both reviewer-authored complete proof modules and confirmed closed-component same-palette gluing, odd crossing alignment, exact boundary support hypotheses, and reserve freedom.",
+    "remote_audit": "Independently read all five terminal and all three boundary theorems; found no semantic issue; confirmed supplied terminal geometry and protected trace construction remain separate obligations."
+  }
+}

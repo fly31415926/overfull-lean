@@ -1,0 +1,41 @@
+{
+  "status": "fully_verified_checkpoint_ready_for_authorized_publication",
+  "baseline_commit": "5679471018d5d087d942c592c72fca3d24e7ea32",
+  "baseline_tree": "918663f3827a27a29312835f7b2218d850326a0d",
+  "full_verification_receipt": "../full-01/terminal.json",
+  "full_verification_receipt_sha256": "abca5f6fd2cc1c5f2f55dc94820bbeb55c312aff7aa7e1f2d58d83cf5ea5bce0",
+  "full_verification_finished_at_utc": "2026-11-25T03:05:59.524994+00:00",
+  "strict_build_jobs": 3914,
+  "frozen_input_count": 878,
+  "frozen_control_count": 10,
+  "frozen_inputs_and_controls_unchanged": true,
+  "current_output_count": 28,
+  "preservation": {
+    "status": "passed",
+    "old_declarations_preserved": 14830,
+    "new_declarations": 164,
+    "all_declarations": 14994,
+    "old_result_mappings_preserved": 2844,
+    "all_result_mappings": 2926,
+    "new_modules": 13,
+    "public_proofs": 82,
+    "complete_numbered_assertions": 51,
+    "numbered_assertions": 69,
+    "main_theorem_verified": false,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "focused_mathematical_attempts": {
+    "passed": 27,
+    "failed": 5
+  },
+  "publication_transport_dry_run": {
+    "exit_code": 128,
+    "reason": "No usable command-line Git password; connected GitHub publication access confirmed."
+  },
+  "remaining_scope": "Supporting continuation only: 51/69 numbered assertions; Lemma 4.4, Corollary 4.5, and the main theorem remain unverified.",
+  "transport_preparation": "The upload helpers and publication metadata are outside the frozen mathematical inputs and run controls. Exact published proof-tree identity will be checked separately."
+}

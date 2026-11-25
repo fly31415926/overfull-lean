@@ -1,0 +1,61 @@
+{
+  "observed_at_utc": "2026-11-25T02:51:22.212Z",
+  "source": "GitHub Git Data API; read-only",
+  "observations": [
+    {
+      "ref": "refs/heads/main",
+      "node_id": "REF_kwDOV2rdlq9yZWZzL2hlYWRzL21haW4",
+      "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/main",
+      "object": {
+        "sha": "5679471018d5d087d942c592c72fca3d24e7ea32",
+        "type": "commit",
+        "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/commits/5679471018d5d087d942c592c72fca3d24e7ea32"
+      }
+    },
+    {
+      "ref": "refs/heads/verified-bipartite-continuation-2026-11-21",
+      "node_id": "REF_kwDOV2rdltoANXJlZnMvaGVhZHMvdmVyaWZpZWQtYmlwYXJ0aXRlLWNvbnRpbnVhdGlvbi0yMDI2LTExLTIx",
+      "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/refs/heads/verified-bipartite-continuation-2026-11-21",
+      "object": {
+        "sha": "5679471018d5d087d942c592c72fca3d24e7ea32",
+        "type": "commit",
+        "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/commits/5679471018d5d087d942c592c72fca3d24e7ea32"
+      }
+    },
+    {
+      "sha": "5679471018d5d087d942c592c72fca3d24e7ea32",
+      "node_id": "C_kwDOV2rdltoAKDU2Nzk0NzEwMThkNWQwODdkOTQyYzU5MmM3MmZjYTNkMjRlN2VhMzI",
+      "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/commits/5679471018d5d087d942c592c72fca3d24e7ea32",
+      "html_url": "https://github.com/fly31415926/overfull-lean/commit/5679471018d5d087d942c592c72fca3d24e7ea32",
+      "author": {
+        "name": "fly31415926",
+        "email": "fly271828@gmail.com",
+        "date": "2026-11-25T02:20:29Z"
+      },
+      "committer": {
+        "name": "fly31415926",
+        "email": "fly271828@gmail.com",
+        "date": "2026-11-25T02:20:29Z"
+      },
+      "tree": {
+        "sha": "918663f3827a27a29312835f7b2218d850326a0d",
+        "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/trees/918663f3827a27a29312835f7b2218d850326a0d"
+      },
+      "message": "Record publication of the ordinary-core checkpoint\n\nAdd the direct authorization, independent integrity check, object/tree acknowledgments, exact local-to-public commit mapping, and both-branch update/readback receipts for approved checkpoint 339c69d356a8bd4c4945afec085af1f794da5c4a.\n\nThe verified proof snapshot is public commit fffee212de70f2a4c7eb988b9453f5d4a90a4445, tree fad7fbd161680326be5c4a7834d37cfa89ec096b. This commit adds 27 publication-record files only; all verified mathematical sources, frozen inputs, controls, and outputs remain unchanged.",
+      "parents": [
+        {
+          "sha": "fffee212de70f2a4c7eb988b9453f5d4a90a4445",
+          "url": "https://api.github.com/repos/fly31415926/overfull-lean/git/commits/fffee212de70f2a4c7eb988b9453f5d4a90a4445",
+          "html_url": "https://github.com/fly31415926/overfull-lean/commit/fffee212de70f2a4c7eb988b9453f5d4a90a4445"
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    }
+  ]
+}

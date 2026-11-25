@@ -291,6 +291,19 @@ import Overfull.CompatibleCircuits.FourJoiningComplete
 import Overfull.CompatibleCircuits.FourCharacterization
 import Overfull.FourCoreReduction.Regular
 import Overfull.OrdinaryCoreColoring
+import Overfull.AssignedParts.TwoPairs
+import Overfull.AssignedParts.PartnerSignatures
+import Overfull.AssignedParts.PartnerLabels
+import Overfull.AssignedParts.TwoPairPalette
+import Overfull.ResidualPalette.FourProtectedGrouping
+import Overfull.ResidualPalette.FourTwoOddGrouping
+import Overfull.ExceptionalPalette.TwoPairs
+import Overfull.NativeReserve.PartnerPacking
+import Overfull.NativeReserve.PartnerResidual
+import Overfull.NativeAssembly.TwoPairBoundary
+import Overfull.NativeAssembly.TwoPairs
+import Overfull.NativeAssembly.TwoPairReserve
+import Overfull.NativeTerminal.TwoPairs
 
 /-!
 # Partial formalization of the overfull manuscript

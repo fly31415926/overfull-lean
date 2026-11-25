@@ -1,0 +1,18 @@
+info: Version 4.4.0 of elan is available! Use `elan self update` to update.
+info: waiting for previous installation request to finish (/home/agent/.elan/toolchains/leanprover--lean4---v4.24.lock, held by PID 6)
+Overfull/NativeTerminal/TwoPairs.lean:54:44: error: Application type mismatch: The argument
+  cA.proper hc hev hfv
+has type
+  ⟨↑e, heA⟩ = ⟨↑f, hfA⟩
+but is expected to have type
+  e = f
+in the application
+  congrArg Subtype.val (cA.proper hc hev hfv)
+Overfull/NativeTerminal/TwoPairs.lean:61:44: error: Application type mismatch: The argument
+  cB.proper hc hev hfv
+has type
+  ⟨↑e, ⋯⟩ = ⟨↑f, ⋯⟩
+but is expected to have type
+  e = f
+in the application
+  congrArg Subtype.val (cB.proper hc hev hfv)

@@ -1,0 +1,48 @@
+{
+  "command": [
+    "python3",
+    "scripts/verify.py"
+  ],
+  "cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+  "started_at_utc": "2026-11-25T02:46:47.748592+00:00",
+  "baseline_commit": "5679471018d5d087d942c592c72fca3d24e7ea32",
+  "baseline_tree": "918663f3827a27a29312835f7b2218d850326a0d",
+  "verifier_launched": true,
+  "exit_code": 0,
+  "status": "passed",
+  "finished_at_utc": "2026-11-25T03:05:59.524994+00:00",
+  "elapsed_seconds": 1151.7764803500004,
+  "frozen_input_count": 878,
+  "frozen_control_count": 10,
+  "output_count": 28,
+  "missing_required_outputs": [],
+  "inputs_unchanged": true,
+  "controls_unchanged": true,
+  "changed_inputs": [],
+  "changed_controls": [],
+  "output_sha256": "29d5a09adaedfa324d742de1571c19516dde81f8ba0a02e72c2e44a5dc434e52",
+  "archives": {
+    "outputs.tar.gz": "ab0018f8c485e86ee70f3b48b76c3245f04775bcbf109d669baec9c6182f692a",
+    "frozen-inputs.tar.gz": "957128b3c10abb8d8e7110741f8244d1e6e22852dadbe58cf03f2d831a9d6afa",
+    "frozen-controls.tar.gz": "e61f59db9f86e9060d39e448527aab1b5bc9240e40c6e3b1e0dd579ec7705ae7"
+  },
+  "wrapper_errors": [],
+  "preservation": {
+    "status": "passed",
+    "old_declarations_preserved": 14830,
+    "new_declarations": 164,
+    "all_declarations": 14994,
+    "old_result_mappings_preserved": 2844,
+    "all_result_mappings": 2926,
+    "new_modules": 13,
+    "public_proofs": 82,
+    "complete_numbered_assertions": 51,
+    "numbered_assertions": 69,
+    "main_theorem_verified": false,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  }
+}

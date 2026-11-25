@@ -1,0 +1,26 @@
+{
+  "command": [
+    "env",
+    "GIT_TERMINAL_PROMPT=0",
+    "git",
+    "-c",
+    "credential.interactive=false",
+    "push",
+    "--dry-run",
+    "--atomic",
+    "--porcelain",
+    "origin",
+    "HEAD:refs/heads/main",
+    "HEAD:refs/heads/verified-bipartite-continuation-2026-11-21"
+  ],
+  "cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+  "started_at_utc": "2026-11-25T02:50:20.412505+00:00",
+  "source_sha256": {},
+  "recorder_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+  "status": "failed",
+  "exit_code": 128,
+  "finished_at_utc": "2026-11-25T02:50:27.143651+00:00",
+  "elapsed_seconds": 6.730879728000218,
+  "changed_sources": [],
+  "output_sha256": "df3408a8d5c3d94711c9bfa4361390576571cc8b42c28f477784ffaac922d128"
+}

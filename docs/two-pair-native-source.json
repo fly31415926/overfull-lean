@@ -1,0 +1,561 @@
+{
+  "schema_version": 1,
+  "kind": "supporting_continuation",
+  "baseline_commit": "5679471018d5d087d942c592c72fca3d24e7ea32",
+  "baseline_tree": "918663f3827a27a29312835f7b2218d850326a0d",
+  "numbered_assertions_completed": 0,
+  "main_theorem_verified": false,
+  "public_theorems": [
+    "Overfull.AssignedParts.exists_two_pair_assigned_labels",
+    "Overfull.AssignedParts.exists_two_pair_assigned_label_transfer",
+    "Overfull.AssignedParts.exists_twoPair_joiningPalette_in_host",
+    "Overfull.FourOdd.FourTwoOddJoiningDecomposition.exists_protected_palette",
+    "Overfull.NativeReserve.exists_linear_partner_boundary_reserve",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.exists_residual_pair_injection",
+    "Overfull.NativeReserve.JoiningPalette.exists_two_pairFiber_completion",
+    "Overfull.NativeAssembly.exists_reserved_two_pair_completion",
+    "Overfull.NativeAssembly.exists_partner_two_pair_completion_of_no_unpaired",
+    "Overfull.NativeTerminal.exists_uniform_two_shore_two_pair_factorization"
+  ],
+  "source_assertions": [
+    {
+      "number": "4.4",
+      "labels": [
+        "two:short:fixed-pattern"
+      ],
+      "statement_sha256": "653e8b0aa8fa12f4368816ce9d9ce8b9d84a49015bce07638fd9c49e94523c2b",
+      "full_assertion_verified": false
+    },
+    {
+      "number": "4.5",
+      "labels": [
+        "two:thm:two-four-exceptions"
+      ],
+      "statement_sha256": "89d8e8281fc3e4b7d8b6a81bccac3eb1d49f92622106228a5bee504d3eff1d61",
+      "full_assertion_verified": false
+    }
+  ],
+  "scope": "Construct four actual assigned fibers for two exceptional matching pairs, a finite partner code preserving both pair identities and both core assignments, and a linear disjoint reserve of actual compressed boundaries for every exceptional set of size at most five. Transport actual pair copies into reserve-avoiding residuals. Construct four-label joining palettes from the completed circuit decomposition, with protected-primary grouping, and simultaneously complete two internal pair pools relative to one original joining palette, allowing both prescribed copies to share a protected color. Native assembly preserves exact whole boundaries under its explicit joining-trace and pair-support hypotheses. Extend terminal factorization to two separately closed pair components using the original edge copies. The native safe residual, protected traces and degree budgets, two-pair-plus-one-star assembly, and the zero-/one-pair multi-star branches remain unfinished. All 69 pinned numbered records, including their 51 complete statuses, remain unchanged; the main theorem is unverified.",
+  "review": "docs/two-pair-native-semantic-review.md",
+  "proof_map": "docs/two-pair-native-verification.md",
+  "module_count": 13,
+  "public_theorem_count": 82,
+  "modules": [
+    {
+      "module": "Overfull.AssignedParts.TwoPairs",
+      "path": "Overfull/AssignedParts/TwoPairs.lean",
+      "sha256": "178c8caaa9e0193ce6f81310018096fd644e0577240b1b9794389d217d20e233",
+      "public_theorem_count": 16,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.AssignedParts.mem_exceptionalPairPart",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.AssignedParts.exceptionalPairPart_card",
+          "source_line": 33
+        },
+        {
+          "name": "Overfull.AssignedParts.exceptionalPairPart_eq_of_edge_eq",
+          "source_line": 38
+        },
+        {
+          "name": "Overfull.AssignedParts.exceptionalPairPart_subset_pairPart",
+          "source_line": 45
+        },
+        {
+          "name": "Overfull.AssignedParts.exceptionalPairPart_subset_exceptions",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.AssignedParts.exceptionalPairParts_disjoint",
+          "source_line": 57
+        },
+        {
+          "name": "Overfull.AssignedParts.corePart_exceptionalPairPart_disjoint",
+          "source_line": 66
+        },
+        {
+          "name": "Overfull.AssignedParts.pairPart_eq_two_pair_union",
+          "source_line": 77
+        },
+        {
+          "name": "Overfull.AssignedParts.twoPairParts_cover",
+          "source_line": 87
+        },
+        {
+          "name": "Overfull.AssignedParts.internalOn_card_le_two",
+          "source_line": 98
+        },
+        {
+          "name": "Overfull.AssignedParts.unpaired_card_le_one_of_two_pairs",
+          "source_line": 106
+        },
+        {
+          "name": "Overfull.AssignedParts.twoPairAssignedLabel_eq_of_parts",
+          "source_line": 123
+        },
+        {
+          "name": "Overfull.AssignedParts.twoPairAssignedLabel_fibers",
+          "source_line": 136
+        },
+        {
+          "name": "Overfull.AssignedParts.core_fiber_parity_eq_of_two_even_pairs",
+          "source_line": 197
+        },
+        {
+          "name": "Overfull.AssignedParts.fiber_parity_cases_of_two_even_pairs",
+          "source_line": 211
+        },
+        {
+          "name": "Overfull.AssignedParts.exists_two_pair_assigned_labels",
+          "source_line": 239
+        }
+      ]
+    },
+    {
+      "module": "Overfull.AssignedParts.PartnerSignatures",
+      "path": "Overfull/AssignedParts/PartnerSignatures.lean",
+      "sha256": "59f0c28a8528e9909c66c0c55be5c36f154afa405642f9b34b807f6348d12200",
+      "public_theorem_count": 12,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.AssignedParts.matchingPartner_eq_of_mem",
+          "source_line": 28
+        },
+        {
+          "name": "Overfull.AssignedParts.partnerSignature_pair_iff",
+          "source_line": 44
+        },
+        {
+          "name": "Overfull.AssignedParts.partnerSignature_core_iff",
+          "source_line": 57
+        },
+        {
+          "name": "Overfull.AssignedParts.partner_mem_iff_pairPart",
+          "source_line": 65
+        },
+        {
+          "name": "Overfull.AssignedParts.partnerSignature_paired_iff",
+          "source_line": 80
+        },
+        {
+          "name": "Overfull.AssignedParts.partnerSignature_first_core_iff",
+          "source_line": 93
+        },
+        {
+          "name": "Overfull.AssignedParts.pairPart_eq_of_partnerSignature_eq",
+          "source_line": 106
+        },
+        {
+          "name": "Overfull.AssignedParts.firstCorePart_eq_of_partnerSignature_eq",
+          "source_line": 119
+        },
+        {
+          "name": "Overfull.AssignedParts.assignedParts_eq_of_partnerSignature_eq",
+          "source_line": 131
+        },
+        {
+          "name": "Overfull.AssignedParts.exists_parallel_of_partnerSignature_eq",
+          "source_line": 146
+        },
+        {
+          "name": "Overfull.AssignedParts.card_partnerSignature",
+          "source_line": 171
+        },
+        {
+          "name": "Overfull.AssignedParts.card_partnerSignature_le_seven_pow_five",
+          "source_line": 175
+        }
+      ]
+    },
+    {
+      "module": "Overfull.AssignedParts.PartnerLabels",
+      "path": "Overfull/AssignedParts/PartnerLabels.lean",
+      "sha256": "785eb092d2fe57e944cb11d1481366fec8ab87e69cd636036e196e85d039fb94",
+      "public_theorem_count": 4,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.AssignedParts.internalOn_card_eq_of_partnerSignature_eq",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.AssignedParts.exists_two_parallel_pairs_of_partnerSignature_eq",
+          "source_line": 35
+        },
+        {
+          "name": "Overfull.AssignedParts.twoPairAssignedLabel_eq_of_partnerSignature_eq",
+          "source_line": 76
+        },
+        {
+          "name": "Overfull.AssignedParts.exists_two_pair_assigned_label_transfer",
+          "source_line": 93
+        }
+      ]
+    },
+    {
+      "module": "Overfull.AssignedParts.TwoPairPalette",
+      "path": "Overfull/AssignedParts/TwoPairPalette.lean",
+      "sha256": "b6834bd278b7c67a2c3e2d6f757b3132a118745f5e62e7616cfd78aa8556b5b7",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.AssignedParts.twoPairAssignedLabel_parity",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.AssignedParts.exists_twoPair_joiningPalette_in_host",
+          "source_line": 50
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.FourProtectedGrouping",
+      "path": "Overfull/ResidualPalette/FourProtectedGrouping.lean",
+      "sha256": "f6bf748f0ebe9850284310e787ee61e447b50becb0701719355eb351a5b3a848",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.protectedPieceConflict_card_le_of_size",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_protected_matching_grouping_of_size",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.NativeReserve.protected_palette_capacity_of_incidence_budget_of_size",
+          "source_line": 107
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ResidualPalette.FourTwoOddGrouping",
+      "path": "Overfull/ResidualPalette/FourTwoOddGrouping.lean",
+      "sha256": "21306a885d3780f808cc48776387e722650bc7a4cd8a7cef60d5686059c7898a",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.FourOdd.FourTwoOddJoiningDecomposition.exists_protected_palette",
+          "source_line": 25
+        },
+        {
+          "name": "Overfull.FourOdd.FourTwoOddJoiningDecomposition.exists_palette",
+          "source_line": 136
+        }
+      ]
+    },
+    {
+      "module": "Overfull.ExceptionalPalette.TwoPairs",
+      "path": "Overfull/ExceptionalPalette/TwoPairs.lean",
+      "sha256": "06638c96721da3985ca8e7a1732801b88ffd0337b303950beafc16ff69e39bf7",
+      "public_theorem_count": 11,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.PairFiberCompletion.classes_subset_base_internal",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.NativeReserve.PairFiberCompletion.class_eq_base_union_internal",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.NativeReserve.PairFiberCompletion.support_outside_iff",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.NativeReserve.PairFiberCompletion.union_isMatching",
+          "source_line": 72
+        },
+        {
+          "name": "Overfull.NativeReserve.PairFiberCompletion.union_disjoint",
+          "source_line": 97
+        },
+        {
+          "name": "Overfull.NativeReserve.PairFiberCompletion.union_card_le",
+          "source_line": 120
+        },
+        {
+          "name": "Overfull.NativeReserve.TwoPairFiberCompletion.first_copy_mem",
+          "source_line": 232
+        },
+        {
+          "name": "Overfull.NativeReserve.TwoPairFiberCompletion.second_copy_mem",
+          "source_line": 239
+        },
+        {
+          "name": "Overfull.NativeReserve.TwoPairFiberCompletion.class_of_two_copies",
+          "source_line": 247
+        },
+        {
+          "name": "Overfull.NativeReserve.TwoPairFiberCompletion.prescribed_class",
+          "source_line": 265
+        },
+        {
+          "name": "Overfull.NativeReserve.JoiningPalette.exists_two_pairFiber_completion",
+          "source_line": 281
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.PartnerPacking",
+      "path": "Overfull/NativeReserve/PartnerPacking.lean",
+      "sha256": "c5fe9ebfde237496d411b29a8dfdf671b20c1a22f5ca76910ce961cf60241e3c",
+      "public_theorem_count": 11,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.isMatching",
+          "source_line": 39
+        },
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.card_le",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.exceptional_degree",
+          "source_line": 45
+        },
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.assignedParts",
+          "source_line": 49
+        },
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.exists_pair_injection",
+          "source_line": 60
+        },
+        {
+          "name": "Overfull.NativeReserve.partnerSignatureWeight_nonneg",
+          "source_line": 85
+        },
+        {
+          "name": "Overfull.NativeReserve.partnerSignatureWeight_sum",
+          "source_line": 89
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_heavy_partner_signature",
+          "source_line": 94
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_partner_boundaryPacking",
+          "source_line": 105
+        },
+        {
+          "name": "Overfull.NativeReserve.linear_partner_reserve_bounds",
+          "source_line": 119
+        },
+        {
+          "name": "Overfull.NativeReserve.exists_linear_partner_boundary_reserve",
+          "source_line": 129
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeReserve.PartnerResidual",
+      "path": "Overfull/NativeReserve/PartnerResidual.lean",
+      "sha256": "c62cd53c843afb465ae49087350becd605d1de791b67df19c932b17180f55034",
+      "public_theorem_count": 10,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.mem_residualBoundary",
+          "source_line": 26
+        },
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.boundary_disjoint_removed",
+          "source_line": 33
+        },
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.residualBoundary_image",
+          "source_line": 42
+        },
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.residualBoundary_matching",
+          "source_line": 47
+        },
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.residualBoundary_disjoint",
+          "source_line": 51
+        },
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.residualBoundary_support",
+          "source_line": 56
+        },
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.residualBoundary_card_le",
+          "source_line": 63
+        },
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.residualBoundary_covers_exceptional",
+          "source_line": 69
+        },
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.exists_residual_pair_injection",
+          "source_line": 77
+        },
+        {
+          "name": "Overfull.NativeReserve.PartnerBoundaryPacking.residualBoundary_subset_joining_exceptional",
+          "source_line": 111
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeAssembly.TwoPairBoundary",
+      "path": "Overfull/NativeAssembly/TwoPairBoundary.lean",
+      "sha256": "2e1c2f84714f69d2c50e9fbcc57b42616cb4412c41b698c0fcc57f5e50d7db24",
+      "public_theorem_count": 3,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeAssembly.reserved_pairFiber_free",
+          "source_line": 23
+        },
+        {
+          "name": "Overfull.NativeAssembly.reserved_two_pair_class",
+          "source_line": 44
+        },
+        {
+          "name": "Overfull.NativeAssembly.reserved_two_pairFiber_class",
+          "source_line": 115
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeAssembly.TwoPairs",
+      "path": "Overfull/NativeAssembly/TwoPairs.lean",
+      "sha256": "6c663eca5434a60ffa904ec2af47c6999aec5bed0f2aa6bd62aba5cd0dde4739",
+      "public_theorem_count": 1,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeAssembly.exists_reserved_two_pair_completion",
+          "source_line": 26
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeAssembly.TwoPairReserve",
+      "path": "Overfull/NativeAssembly/TwoPairReserve.lean",
+      "sha256": "2d07aeaed847b92559c991e162a81a5e171903216c179e8577f5ed8318108a4e",
+      "public_theorem_count": 2,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeAssembly.exists_partner_two_pair_completion",
+          "source_line": 24
+        },
+        {
+          "name": "Overfull.NativeAssembly.exists_partner_two_pair_completion_of_no_unpaired",
+          "source_line": 70
+        }
+      ]
+    },
+    {
+      "module": "Overfull.NativeTerminal.TwoPairs",
+      "path": "Overfull/NativeTerminal/TwoPairs.lean",
+      "sha256": "e890bedc939223921464ba9b0afa6b2a55bc2fb555dd6b77924cca6c91294b4f",
+      "public_theorem_count": 5,
+      "public_proof_declarations": [
+        {
+          "name": "Overfull.NativeTerminal.incident_mem_of_retained_closed",
+          "source_line": 22
+        },
+        {
+          "name": "Overfull.NativeTerminal.retained_closed_union_colorable",
+          "source_line": 34
+        },
+        {
+          "name": "Overfull.NativeTerminal.retained_two_pairs_colorable",
+          "source_line": 69
+        },
+        {
+          "name": "Overfull.NativeTerminal.cutEdges_union_eq_empty",
+          "source_line": 82
+        },
+        {
+          "name": "Overfull.NativeTerminal.exists_uniform_two_shore_two_pair_factorization",
+          "source_line": 104
+        }
+      ]
+    }
+  ],
+  "required_proof_declarations": [
+    "Overfull.AssignedParts.assignedParts_eq_of_partnerSignature_eq",
+    "Overfull.AssignedParts.card_partnerSignature",
+    "Overfull.AssignedParts.card_partnerSignature_le_seven_pow_five",
+    "Overfull.AssignedParts.corePart_exceptionalPairPart_disjoint",
+    "Overfull.AssignedParts.core_fiber_parity_eq_of_two_even_pairs",
+    "Overfull.AssignedParts.exceptionalPairPart_card",
+    "Overfull.AssignedParts.exceptionalPairPart_eq_of_edge_eq",
+    "Overfull.AssignedParts.exceptionalPairPart_subset_exceptions",
+    "Overfull.AssignedParts.exceptionalPairPart_subset_pairPart",
+    "Overfull.AssignedParts.exceptionalPairParts_disjoint",
+    "Overfull.AssignedParts.exists_parallel_of_partnerSignature_eq",
+    "Overfull.AssignedParts.exists_twoPair_joiningPalette_in_host",
+    "Overfull.AssignedParts.exists_two_pair_assigned_label_transfer",
+    "Overfull.AssignedParts.exists_two_pair_assigned_labels",
+    "Overfull.AssignedParts.exists_two_parallel_pairs_of_partnerSignature_eq",
+    "Overfull.AssignedParts.fiber_parity_cases_of_two_even_pairs",
+    "Overfull.AssignedParts.firstCorePart_eq_of_partnerSignature_eq",
+    "Overfull.AssignedParts.internalOn_card_eq_of_partnerSignature_eq",
+    "Overfull.AssignedParts.internalOn_card_le_two",
+    "Overfull.AssignedParts.matchingPartner_eq_of_mem",
+    "Overfull.AssignedParts.mem_exceptionalPairPart",
+    "Overfull.AssignedParts.pairPart_eq_of_partnerSignature_eq",
+    "Overfull.AssignedParts.pairPart_eq_two_pair_union",
+    "Overfull.AssignedParts.partnerSignature_core_iff",
+    "Overfull.AssignedParts.partnerSignature_first_core_iff",
+    "Overfull.AssignedParts.partnerSignature_pair_iff",
+    "Overfull.AssignedParts.partnerSignature_paired_iff",
+    "Overfull.AssignedParts.partner_mem_iff_pairPart",
+    "Overfull.AssignedParts.twoPairAssignedLabel_eq_of_partnerSignature_eq",
+    "Overfull.AssignedParts.twoPairAssignedLabel_eq_of_parts",
+    "Overfull.AssignedParts.twoPairAssignedLabel_fibers",
+    "Overfull.AssignedParts.twoPairAssignedLabel_parity",
+    "Overfull.AssignedParts.twoPairParts_cover",
+    "Overfull.AssignedParts.unpaired_card_le_one_of_two_pairs",
+    "Overfull.FourOdd.FourTwoOddJoiningDecomposition.exists_palette",
+    "Overfull.FourOdd.FourTwoOddJoiningDecomposition.exists_protected_palette",
+    "Overfull.NativeAssembly.exists_partner_two_pair_completion",
+    "Overfull.NativeAssembly.exists_partner_two_pair_completion_of_no_unpaired",
+    "Overfull.NativeAssembly.exists_reserved_two_pair_completion",
+    "Overfull.NativeAssembly.reserved_pairFiber_free",
+    "Overfull.NativeAssembly.reserved_two_pairFiber_class",
+    "Overfull.NativeAssembly.reserved_two_pair_class",
+    "Overfull.NativeReserve.JoiningPalette.exists_two_pairFiber_completion",
+    "Overfull.NativeReserve.PairFiberCompletion.class_eq_base_union_internal",
+    "Overfull.NativeReserve.PairFiberCompletion.classes_subset_base_internal",
+    "Overfull.NativeReserve.PairFiberCompletion.support_outside_iff",
+    "Overfull.NativeReserve.PairFiberCompletion.union_card_le",
+    "Overfull.NativeReserve.PairFiberCompletion.union_disjoint",
+    "Overfull.NativeReserve.PairFiberCompletion.union_isMatching",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.assignedParts",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.boundary_disjoint_removed",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.card_le",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.exceptional_degree",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.exists_pair_injection",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.exists_residual_pair_injection",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.isMatching",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.mem_residualBoundary",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.residualBoundary_card_le",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.residualBoundary_covers_exceptional",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.residualBoundary_disjoint",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.residualBoundary_image",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.residualBoundary_matching",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.residualBoundary_subset_joining_exceptional",
+    "Overfull.NativeReserve.PartnerBoundaryPacking.residualBoundary_support",
+    "Overfull.NativeReserve.TwoPairFiberCompletion.class_of_two_copies",
+    "Overfull.NativeReserve.TwoPairFiberCompletion.first_copy_mem",
+    "Overfull.NativeReserve.TwoPairFiberCompletion.prescribed_class",
+    "Overfull.NativeReserve.TwoPairFiberCompletion.second_copy_mem",
+    "Overfull.NativeReserve.exists_heavy_partner_signature",
+    "Overfull.NativeReserve.exists_linear_partner_boundary_reserve",
+    "Overfull.NativeReserve.exists_partner_boundaryPacking",
+    "Overfull.NativeReserve.exists_protected_matching_grouping_of_size",
+    "Overfull.NativeReserve.linear_partner_reserve_bounds",
+    "Overfull.NativeReserve.partnerSignatureWeight_nonneg",
+    "Overfull.NativeReserve.partnerSignatureWeight_sum",
+    "Overfull.NativeReserve.protectedPieceConflict_card_le_of_size",
+    "Overfull.NativeReserve.protected_palette_capacity_of_incidence_budget_of_size",
+    "Overfull.NativeTerminal.cutEdges_union_eq_empty",
+    "Overfull.NativeTerminal.exists_uniform_two_shore_two_pair_factorization",
+    "Overfull.NativeTerminal.incident_mem_of_retained_closed",
+    "Overfull.NativeTerminal.retained_closed_union_colorable",
+    "Overfull.NativeTerminal.retained_two_pairs_colorable"
+  ]
+}

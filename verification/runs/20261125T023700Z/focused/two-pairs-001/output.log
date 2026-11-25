@@ -1,0 +1,19 @@
+Overfull/ExceptionalPalette/TwoPairs.lean:125:55: error: unsolved goals
+V : Type u_1
+E : Type u_2
+K : Type u_3
+inst✝² : Fintype V
+inst✝¹ : Fintype E
+inst✝ : DecidableEq K
+G : Multigraph V E
+label : V → K
+h D L : ℕ
+p : K → ℕ
+C : JoiningPalette G label h D L p
+U₀ U₁ : Finset V
+B₀ : PairFiberCompletion C U₀
+B₁ : PairFiberCompletion C U₁
+hU₁ : #U₁ ≤ 2
+j : Fin h
+⊢ B₀.classes j ∪ G.internalOn (B₁.classes j) U₁ =
+    B₀.classes j ∪ G.internalOn (C.classes j ∪ G.internalOn (B₁.classes j) U₁) U₁

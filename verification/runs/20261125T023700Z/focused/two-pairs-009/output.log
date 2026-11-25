@@ -1,0 +1,21 @@
+Overfull/NativeAssembly/TwoPairReserve.lean:57:48: error: Application type mismatch: The argument
+  hsubset
+has type
+  ∀ (i : I),
+    Q.residualBoundary N T (q i) ⊆
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => a.instDecidableEq b)
+        (joiningCopies (residualGraph G N T) label)
+        (exceptionalCopies (residualGraph G N T) univ ((G.edge ↑e₀).toFinset ∪ (G.edge ↑e₁).toFinset))
+but is expected to have type
+  ∀ (i : I),
+    Q.residualBoundary N T (q i) ⊆
+      @Union.union (Finset { e // e ∉ removedCopies N T })
+        (@instUnion { e // e ∉ removedCopies N T } fun a b => propDecidable (a = b))
+        (joiningCopies (residualGraph G N T) label)
+        (exceptionalCopies (residualGraph G N T) univ ((G.edge ↑e₀).toFinset ∪ (G.edge ↑e₁).toFinset))
+in the application
+  exists_reserved_two_pair_completion C k₀ k₁ hk (G.edge ↑e₀).toFinset (G.edge ↑e₁).toFinset hcard₀ hcard₁ hfiber₀
+    hfiber₁ hp₀ hp₁ (fun v x => hregular v) (fun v x => hregular v) (fun i => Q.residualBoundary N T (q i))
+    (fun i => PartnerBoundaryPacking.residualBoundary_matching Q N T (q i)) f hf g₀ g₁ hg₀ hg₁ (fun i => (hgR₀ i).left)
+    (fun i => (hgR₁ i).left) hsubset

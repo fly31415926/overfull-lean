@@ -9,7 +9,7 @@
   "full_sharpness_proposition_verified": true,
   "numbered_assertion_count": 69,
   "fully_verified_numbered_assertion_count": 51,
-  "scope": "The current continuation proves the separately sourced nonregular ordinary-core coloring theorem for one, two, or three cores and arbitrary palette k, via actual auxiliary completion and the proved regular four-core endpoint. All 69 older numbered records, their statement identities, and the 51 complete statuses remain unchanged because the exact older Theorem 1.2 statement was not recovered. The main theorem remains unverified. The strict full verifier and preservation receipts establish the actual verified source and axiom scope.",
+  "scope": "The current continuation proves the separately sourced nonregular ordinary-core coloring theorem for one, two, or three cores and arbitrary palette k, via actual auxiliary completion and the proved regular four-core endpoint. All 69 older numbered records, their statement identities, and the 51 complete statuses remain unchanged because the exact older Theorem 1.2 statement was not recovered. The main theorem remains unverified. The strict full verifier and preservation receipts establish the actual verified source and axiom scope. Supporting native two-pair construction is recorded separately; all 69 numbered records and their 51 completed statuses remain unchanged.",
   "verification_evidence": "../verification/results.json",
   "checked_component_catalog": [
     {
@@ -5180,6 +5180,40 @@
       "description": "Actual nonregular three-core completion and a common one/two/three-core coloring theorem for arbitrary finite core labels and every palette k at least the maximum degree. The exact current-source theorem is recorded separately from pinned Theorem 1.2; no numbered status changes.",
       "numbered_assertions_completed": 0,
       "source_manifest": "docs/ordinary-core-coloring-source.json"
+    },
+    {
+      "id": "native_two_pair_construction",
+      "kind": "graph_theoretic_supporting_results",
+      "lean_declarations": [
+        "Overfull.AssignedParts.exists_two_pair_assigned_labels",
+        "Overfull.AssignedParts.exists_two_pair_assigned_label_transfer",
+        "Overfull.AssignedParts.exists_twoPair_joiningPalette_in_host",
+        "Overfull.FourOdd.FourTwoOddJoiningDecomposition.exists_protected_palette",
+        "Overfull.NativeReserve.exists_linear_partner_boundary_reserve",
+        "Overfull.NativeReserve.PartnerBoundaryPacking.exists_residual_pair_injection",
+        "Overfull.NativeReserve.JoiningPalette.exists_two_pairFiber_completion",
+        "Overfull.NativeAssembly.exists_reserved_two_pair_completion",
+        "Overfull.NativeAssembly.exists_partner_two_pair_completion_of_no_unpaired",
+        "Overfull.NativeTerminal.exists_uniform_two_shore_two_pair_factorization"
+      ],
+      "files": [
+        "Overfull/AssignedParts/TwoPairs.lean",
+        "Overfull/AssignedParts/PartnerSignatures.lean",
+        "Overfull/AssignedParts/PartnerLabels.lean",
+        "Overfull/AssignedParts/TwoPairPalette.lean",
+        "Overfull/ResidualPalette/FourProtectedGrouping.lean",
+        "Overfull/ResidualPalette/FourTwoOddGrouping.lean",
+        "Overfull/ExceptionalPalette/TwoPairs.lean",
+        "Overfull/NativeReserve/PartnerPacking.lean",
+        "Overfull/NativeReserve/PartnerResidual.lean",
+        "Overfull/NativeAssembly/TwoPairBoundary.lean",
+        "Overfull/NativeAssembly/TwoPairs.lean",
+        "Overfull/NativeAssembly/TwoPairReserve.lean",
+        "Overfull/NativeTerminal/TwoPairs.lean"
+      ],
+      "description": "Actual partner-preserving reserves for up to five exceptions, four assigned fibers and palettes, simultaneous protected pair completion, residual original-copy transport, and terminal gluing of two closed pairs. The native safe residual, protected trace alignment and remaining star branches are not completed.",
+      "numbered_assertions_completed": 0,
+      "source_manifest": "docs/two-pair-native-source.json"
     }
   ],
   "numbered_assertions": [

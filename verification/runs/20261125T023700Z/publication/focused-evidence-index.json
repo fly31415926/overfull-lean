@@ -1,0 +1,1645 @@
+{
+  "schema_version": 1,
+  "indexed_at_utc": "2026-11-25T02:53:07.883372+00:00",
+  "repository_root": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+  "focused_root": "verification/runs/20261125T023700Z/focused",
+  "scope": "Index of existing focused-attempt receipts, genuine logs, and saved source snapshots; not a rerun, full-gate outcome, or publication-success receipt.",
+  "method": {
+    "receipt_patterns": [
+      "focused/*.json",
+      "focused/*/terminal.json",
+      "focused/*/command.json"
+    ],
+    "attempt_identity": "Flat receipt basename or containing attempt-directory basename; multiple layouts for the same identity are combined, not double-counted.",
+    "hash_algorithm": "sha256",
+    "observed_file_hashes": "Computed from the files present at indexing time. Saved source snapshots are never substituted with current source files.",
+    "outcome": "Derived from the recorded process exit_code, retaining the original status separately.",
+    "source_snapshot_association": "Actual attempt/source/ subtree, or an existing sibling .lean file with the same basename as a flat receipt. Recorded source hashes without a snapshot remain explicitly separate."
+  },
+  "counts": {
+    "total_attempts": 33,
+    "total_receipts": 33,
+    "by_kind": {
+      "lake_build": {
+        "total": 12,
+        "successful": 12,
+        "failed": 0,
+        "unknown": 0
+      },
+      "lean_compiler": {
+        "total": 20,
+        "successful": 15,
+        "failed": 5,
+        "unknown": 0
+      },
+      "publication_dry_run": {
+        "total": 1,
+        "successful": 0,
+        "failed": 1,
+        "unknown": 0
+      }
+    },
+    "by_receipt_layout": {
+      "flat_json": 16,
+      "directory_terminal_json": 11,
+      "directory_command_json": 6
+    },
+    "all_outcomes": {
+      "successful": 27,
+      "failed": 6
+    },
+    "genuine_log_files": 33,
+    "attempts_with_saved_source_snapshot": 19,
+    "attempts_without_saved_source_snapshot": 14,
+    "saved_source_snapshot_files": 19,
+    "source_snapshot_hashes_checked_against_receipts": 14,
+    "recorded_source_hashes_without_saved_snapshot": 2,
+    "log_hashes_checked_against_receipts": 17,
+    "recorder_hashes_checked_against_receipts": 6,
+    "compiler_and_build_combined": {
+      "total": 32,
+      "successful": 27,
+      "failed": 5
+    }
+  },
+  "anomalies": [],
+  "limitations": [
+    "Some actual attempts have no saved source snapshot; the index records absence and does not reconstruct or substitute source bytes.",
+    "Some receipts lack original source/log digests or timestamps; absent fields remain null.",
+    "The publication dry run failed with exit 128 because CLI credentials were unavailable; it is not a Lean failure and does not establish publication.",
+    "The full verification gate is outside this focused-evidence index."
+  ],
+  "attempts": [
+    {
+      "attempt_id": "assigned-two-pairs-01",
+      "kind": "lean_compiler",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/assigned-two-pairs-01.json",
+          "bytes": 402,
+          "sha256": "3cd2ea3b19e1e980a97b14d750b128f211db32d143a9650a7a295ec6bce37eb5",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": "passed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/AssignedParts/TwoPairs.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:38:57.572010+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:39:06.390074+00:00",
+      "recorded_elapsed_seconds": 8.81763606899949,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/assigned-two-pairs-01.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [],
+      "source_snapshot_status": "absent",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "assigned-two-pairs-build-01",
+      "kind": "lake_build",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/assigned-two-pairs-build-01.json",
+          "bytes": 360,
+          "sha256": "72a685af091f63f6476bc9297102375705a7b2fbc0b59c18b20a3d920fad564d",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": "passed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.AssignedParts.TwoPairs"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:39:24.513945+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:39:35.008975+00:00",
+      "recorded_elapsed_seconds": 10.494716381999751,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/assigned-two-pairs-build-01.log",
+        "bytes": 103,
+        "sha256": "17f202df0803fc515a9e1b20ba173f91e0cdeb6dc97f85deb7a8744e491f27eb",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [],
+      "source_snapshot_status": "absent",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "four-protected-grouping-01",
+      "kind": "lean_compiler",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/four-protected-grouping-01.json",
+          "bytes": 418,
+          "sha256": "7b4475eb4a0cf6a48655cc0ee9a77aa3c030b072e3a57245cf2a292bc50419e4",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": "passed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/ResidualPalette/FourProtectedGrouping.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:42:48.091707+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:42:51.582986+00:00",
+      "recorded_elapsed_seconds": 3.491100158000336,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/four-protected-grouping-01.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [],
+      "source_snapshot_status": "absent",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "four-protected-grouping-build-01",
+      "kind": "lake_build",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/four-protected-grouping-build-01.json",
+          "bytes": 374,
+          "sha256": "033e1b860113d31b7e4bf026ae52c8ea2cf8254a1e25997cb49d3c44b1e8c77d",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": "passed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.ResidualPalette.FourProtectedGrouping"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:43:29.818649+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:43:33.864212+00:00",
+      "recorded_elapsed_seconds": 4.045422387999679,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/four-protected-grouping-build-01.log",
+        "bytes": 118,
+        "sha256": "92e77a7749ad528a241030bf806b8d03b1341e111bfb95b5b5b6fc9cfdcd8a90",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [],
+      "source_snapshot_status": "absent",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "four-two-odd-grouping-01",
+      "kind": "lean_compiler",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/four-two-odd-grouping-01.json",
+          "bytes": 415,
+          "sha256": "e78552cfe89fe17578b78f071c4b618eda6314fe6327687f8fd921b84bc54730",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": "passed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/ResidualPalette/FourTwoOddGrouping.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:43:33.864817+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:43:36.700892+00:00",
+      "recorded_elapsed_seconds": 2.835972126999877,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/four-two-odd-grouping-01.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [],
+      "source_snapshot_status": "absent",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "four-two-odd-grouping-build-01",
+      "kind": "lake_build",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/four-two-odd-grouping-build-01.json",
+          "bytes": 371,
+          "sha256": "80d1e226fd90762b034ad5f1105c99897a6f2fd9e6e53161e1857cb5e7cd49da",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": "passed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.ResidualPalette.FourTwoOddGrouping"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:43:36.701305+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:43:40.634305+00:00",
+      "recorded_elapsed_seconds": 3.932928434999667,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/four-two-odd-grouping-build-01.log",
+        "bytes": 115,
+        "sha256": "d8f850473a9d60ee7116c60dbd7ec0ed9a2654805cae68a0556d07f3ed409769",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [],
+      "source_snapshot_status": "absent",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "partner-labels-01",
+      "kind": "lean_compiler",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/partner-labels-01.json",
+          "bytes": 409,
+          "sha256": "53bee58c8e013a28661f72f95f1e02861d14bd9f42dd6e0001d579d71a99ac13",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": "passed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/AssignedParts/PartnerLabels.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:40:52.919697+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:40:55.672011+00:00",
+      "recorded_elapsed_seconds": 2.7507306520001293,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/partner-labels-01.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [],
+      "source_snapshot_status": "absent",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "partner-labels-build-01",
+      "kind": "lake_build",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/partner-labels-build-01.json",
+          "bytes": 365,
+          "sha256": "74ecdb61c533c246ce92096d909d041cb9c1668bfc6938557941f7d377df4877",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": "passed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.AssignedParts.PartnerLabels"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:41:06.615299+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:41:10.144044+00:00",
+      "recorded_elapsed_seconds": 3.5284933590000946,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/partner-labels-build-01.log",
+        "bytes": 108,
+        "sha256": "b6e58b271f4650a790e36ccba494708fff2d81f2a499e99380fff5e5d70f4a0e",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [],
+      "source_snapshot_status": "absent",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "partner-packing-01",
+      "kind": "lean_compiler",
+      "receipt_layout": "directory_command_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/partner-packing-01/command.json",
+          "bytes": 754,
+          "sha256": "ecfad48942d3d71251c6341e1278b9e9e427522c3da22a9b5e9ce67acef5cffd",
+          "layout": "directory_command_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": "passed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeReserve/PartnerPacking.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:41:17.466431+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:41:20.875284+00:00",
+      "recorded_elapsed_seconds": 3.4086254819994792,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/partner-packing-01/output.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/partner-packing-01/source/Overfull/NativeReserve/PartnerPacking.lean",
+          "bytes": 7260,
+          "sha256": "c5fe9ebfde237496d411b29a8dfdf671b20c1a22f5ca76910ce961cf60241e3c",
+          "source_path": "Overfull/NativeReserve/PartnerPacking.lean",
+          "association_basis": "source/ subtree of attempt directory",
+          "recorded_sha256": "c5fe9ebfde237496d411b29a8dfdf671b20c1a22f5ca76910ce961cf60241e3c",
+          "matches_recorded_sha256": true
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {
+        "Overfull/NativeReserve/PartnerPacking.lean": "c5fe9ebfde237496d411b29a8dfdf671b20c1a22f5ca76910ce961cf60241e3c"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": [],
+      "recorder": {
+        "path": "verification/runs/20261125T023700Z/focused/partner-packing-01/recorder.py",
+        "bytes": 2708,
+        "sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "recorded_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "matches_recorded_sha256": true
+      }
+    },
+    {
+      "attempt_id": "partner-packing-build-01",
+      "kind": "lake_build",
+      "receipt_layout": "directory_command_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/partner-packing-build-01/command.json",
+          "bytes": 589,
+          "sha256": "629c282b49e8ee2c03d84d59a40192b95389f15f3dcb0a72a7d530d3e6cccd99",
+          "layout": "directory_command_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": "passed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeReserve.PartnerPacking"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:41:42.438754+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:41:47.466470+00:00",
+      "recorded_elapsed_seconds": 5.027527393000128,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/partner-packing-build-01/output.log",
+        "bytes": 109,
+        "sha256": "e2f5805cc44be30afe346d885f98547bfa3e9b98d1da220c6c30ea02065915e4",
+        "recorded_sha256": "e2f5805cc44be30afe346d885f98547bfa3e9b98d1da220c6c30ea02065915e4",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [],
+      "source_snapshot_status": "absent",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": [],
+      "recorder": {
+        "path": "verification/runs/20261125T023700Z/focused/partner-packing-build-01/recorder.py",
+        "bytes": 2708,
+        "sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "recorded_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "matches_recorded_sha256": true
+      }
+    },
+    {
+      "attempt_id": "partner-signatures-01",
+      "kind": "lean_compiler",
+      "receipt_layout": "directory_command_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/partner-signatures-01/command.json",
+          "bytes": 760,
+          "sha256": "309e85b8183f628ed9e6ce81daf6ba8f29a82b84dc3c5eb32e3e82f8b5ea4b9b",
+          "layout": "directory_command_json"
+        }
+      ],
+      "observed_exit_code": 1,
+      "outcome_from_exit_code": "failed",
+      "recorded_status": "failed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/AssignedParts/PartnerSignatures.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:39:36.665489+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:39:39.874466+00:00",
+      "recorded_elapsed_seconds": 3.2087892750005267,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/partner-signatures-01/output.log",
+        "bytes": 1675,
+        "sha256": "79ea46b4ddab16803089bc8a79da77d872ba10552d22827b36d9d1d6c55a70a8",
+        "recorded_sha256": "79ea46b4ddab16803089bc8a79da77d872ba10552d22827b36d9d1d6c55a70a8",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/partner-signatures-01/source/Overfull/AssignedParts/PartnerSignatures.lean",
+          "bytes": 8180,
+          "sha256": "556ebb8db8454c0cf31e6d444b768f0bba9f6a5d441fdcc5b0b52626b730814f",
+          "source_path": "Overfull/AssignedParts/PartnerSignatures.lean",
+          "association_basis": "source/ subtree of attempt directory",
+          "recorded_sha256": "556ebb8db8454c0cf31e6d444b768f0bba9f6a5d441fdcc5b0b52626b730814f",
+          "matches_recorded_sha256": true
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {
+        "Overfull/AssignedParts/PartnerSignatures.lean": "556ebb8db8454c0cf31e6d444b768f0bba9f6a5d441fdcc5b0b52626b730814f"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": [],
+      "recorder": {
+        "path": "verification/runs/20261125T023700Z/focused/partner-signatures-01/recorder.py",
+        "bytes": 2708,
+        "sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "recorded_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "matches_recorded_sha256": true
+      }
+    },
+    {
+      "attempt_id": "partner-signatures-02",
+      "kind": "lean_compiler",
+      "receipt_layout": "directory_command_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/partner-signatures-02/command.json",
+          "bytes": 759,
+          "sha256": "d7cd3af6ecf84180b869031f63c4fcb77ea775da26fc315e08227279155a6de5",
+          "layout": "directory_command_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": "passed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/AssignedParts/PartnerSignatures.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:40:11.208747+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:40:15.168386+00:00",
+      "recorded_elapsed_seconds": 3.959468656000354,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/partner-signatures-02/output.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/partner-signatures-02/source/Overfull/AssignedParts/PartnerSignatures.lean",
+          "bytes": 8201,
+          "sha256": "59f0c28a8528e9909c66c0c55be5c36f154afa405642f9b34b807f6348d12200",
+          "source_path": "Overfull/AssignedParts/PartnerSignatures.lean",
+          "association_basis": "source/ subtree of attempt directory",
+          "recorded_sha256": "59f0c28a8528e9909c66c0c55be5c36f154afa405642f9b34b807f6348d12200",
+          "matches_recorded_sha256": true
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {
+        "Overfull/AssignedParts/PartnerSignatures.lean": "59f0c28a8528e9909c66c0c55be5c36f154afa405642f9b34b807f6348d12200"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": [],
+      "recorder": {
+        "path": "verification/runs/20261125T023700Z/focused/partner-signatures-02/recorder.py",
+        "bytes": 2708,
+        "sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "recorded_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "matches_recorded_sha256": true
+      }
+    },
+    {
+      "attempt_id": "partner-signatures-build-01",
+      "kind": "lake_build",
+      "receipt_layout": "directory_command_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/partner-signatures-build-01/command.json",
+          "bytes": 592,
+          "sha256": "fa02d8d9fe82431a670e28b8d59e444fcae0c57f7639e9a1d2debeda889b14d5",
+          "layout": "directory_command_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": "passed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.AssignedParts.PartnerSignatures"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:40:31.496582+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:40:35.608387+00:00",
+      "recorded_elapsed_seconds": 4.111576399000114,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/partner-signatures-build-01/output.log",
+        "bytes": 112,
+        "sha256": "6bea6524d26eba46955fd9a6e02c982ffbbfed348d05a5afde0ff304ad5c52fc",
+        "recorded_sha256": "6bea6524d26eba46955fd9a6e02c982ffbbfed348d05a5afde0ff304ad5c52fc",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [],
+      "source_snapshot_status": "absent",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": [],
+      "recorder": {
+        "path": "verification/runs/20261125T023700Z/focused/partner-signatures-build-01/recorder.py",
+        "bytes": 2708,
+        "sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "recorded_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "matches_recorded_sha256": true
+      }
+    },
+    {
+      "attempt_id": "publication-dry-run-01",
+      "kind": "publication_dry_run",
+      "receipt_layout": "directory_command_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/publication-dry-run-01/command.json",
+          "bytes": 768,
+          "sha256": "868ff346bd79e6110e56ea79dd4560ed750575973f1e0c2ec29c4ec745454f8d",
+          "layout": "directory_command_json"
+        }
+      ],
+      "observed_exit_code": 128,
+      "outcome_from_exit_code": "failed",
+      "recorded_status": "failed",
+      "command": [
+        "env",
+        "GIT_TERMINAL_PROMPT=0",
+        "git",
+        "-c",
+        "credential.interactive=false",
+        "push",
+        "--dry-run",
+        "--atomic",
+        "--porcelain",
+        "origin",
+        "HEAD:refs/heads/main",
+        "HEAD:refs/heads/verified-bipartite-continuation-2026-11-21"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:50:20.412505+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:50:27.143651+00:00",
+      "recorded_elapsed_seconds": 6.730879728000218,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/publication-dry-run-01/output.log",
+        "bytes": 40,
+        "sha256": "df3408a8d5c3d94711c9bfa4361390576571cc8b42c28f477784ffaac922d128",
+        "recorded_sha256": "df3408a8d5c3d94711c9bfa4361390576571cc8b42c28f477784ffaac922d128",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [],
+      "source_snapshot_status": "absent",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": [],
+      "recorder": {
+        "path": "verification/runs/20261125T023700Z/focused/publication-dry-run-01/recorder.py",
+        "bytes": 2708,
+        "sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "recorded_sha256": "caee9962988041f47b0f7019138f6144ae0b1a67d1290f9e581c9d86559fea02",
+        "matches_recorded_sha256": true
+      },
+      "interpretation": {
+        "category": "CLI credential failure",
+        "observed_log": "fatal: unable to get password from user\n",
+        "is_compiler_or_build_failure": false,
+        "publication_performed": false,
+        "approval_rejection_claimed": false
+      }
+    },
+    {
+      "attempt_id": "terminal-boundary-01",
+      "kind": "lean_compiler",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/terminal-boundary-01.json",
+          "bytes": 392,
+          "sha256": "a0f7f72dea578ff8f29f8c72c4a5b53f80062067cec580ef54007661dcc971ca",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairBoundary.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": "2026-11-25T02:39:04.437424+00:00",
+      "recorded_elapsed_seconds": 3.68015768100031,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/terminal-boundary-01.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/terminal-boundary-01.lean",
+          "bytes": 5474,
+          "sha256": "2f3cb209288098315394ee166908348b61ce0d3a58644c500c2ac3cfee832df2",
+          "source_path": "Overfull/NativeAssembly/TwoPairBoundary.lean",
+          "association_basis": "flat receipt basename with .lean extension",
+          "recorded_sha256": null,
+          "matches_recorded_sha256": null
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "terminal-boundary-02",
+      "kind": "lean_compiler",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/terminal-boundary-02.json",
+          "bytes": 393,
+          "sha256": "64e4e1bb2b9305bb16ea8d4d143c792209c80ba5917086289ece2b39fdaf8a40",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairBoundary.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": "2026-11-25T02:40:16.268943+00:00",
+      "recorded_elapsed_seconds": 3.554881803999706,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/terminal-boundary-02.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/terminal-boundary-02.lean",
+          "bytes": 6569,
+          "sha256": "2e1c2f84714f69d2c50e9fbcc57b42616cb4412c41b698c0fcc57f5e50d7db24",
+          "source_path": "Overfull/NativeAssembly/TwoPairBoundary.lean",
+          "association_basis": "flat receipt basename with .lean extension",
+          "recorded_sha256": null,
+          "matches_recorded_sha256": null
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "terminal-two-pairs-01",
+      "kind": "lean_compiler",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/terminal-two-pairs-01.json",
+          "bytes": 380,
+          "sha256": "60853b379ad96f9b29df0174b8f50ce10bc9c28dd51c36665dd6bf556e18741b",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 1,
+      "outcome_from_exit_code": "failed",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeTerminal/TwoPairs.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": "2026-11-25T02:38:29.996075+00:00",
+      "recorded_elapsed_seconds": 27.255959262000033,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/terminal-two-pairs-01.log",
+        "bytes": 735,
+        "sha256": "b7681808eee7911e8e9b717ef443bf216819b1986390fb2301716e99fb4718a9",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/terminal-two-pairs-01.lean",
+          "bytes": 3579,
+          "sha256": "4a34d7f50022ab20253b781838d389f274d5a7fabcf1d828299d357cfac643f5",
+          "source_path": "Overfull/NativeTerminal/TwoPairs.lean",
+          "association_basis": "flat receipt basename with .lean extension",
+          "recorded_sha256": null,
+          "matches_recorded_sha256": null
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "terminal-two-pairs-02",
+      "kind": "lean_compiler",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/terminal-two-pairs-02.json",
+          "bytes": 380,
+          "sha256": "70def7afcadcf0fe4c58251dd2db328e03bbddcea5f90d715d9a857e4edaf99c",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeTerminal/TwoPairs.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": "2026-11-25T02:39:04.387132+00:00",
+      "recorded_elapsed_seconds": 3.6198421990002316,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/terminal-two-pairs-02.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/terminal-two-pairs-02.lean",
+          "bytes": 3639,
+          "sha256": "1208d738c43f7334fddd31f19bb827ba49598a3b35fb88d76868227219e3277f",
+          "source_path": "Overfull/NativeTerminal/TwoPairs.lean",
+          "association_basis": "flat receipt basename with .lean extension",
+          "recorded_sha256": null,
+          "matches_recorded_sha256": null
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "terminal-two-pairs-03",
+      "kind": "lean_compiler",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/terminal-two-pairs-03.json",
+          "bytes": 379,
+          "sha256": "53c91713d937f818eafdc665ae635c92ecb103ed36182f2a4edf74c697f4ff87",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeTerminal/TwoPairs.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": "2026-11-25T02:39:45.650520+00:00",
+      "recorded_elapsed_seconds": 2.928529628999968,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/terminal-two-pairs-03.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/terminal-two-pairs-03.lean",
+          "bytes": 7980,
+          "sha256": "e890bedc939223921464ba9b0afa6b2a55bc2fb555dd6b77924cca6c91294b4f",
+          "source_path": "Overfull/NativeTerminal/TwoPairs.lean",
+          "association_basis": "flat receipt basename with .lean extension",
+          "recorded_sha256": null,
+          "matches_recorded_sha256": null
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "terminal-two-pairs-build-01",
+      "kind": "lake_build",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/terminal-two-pairs-build-01.json",
+          "bytes": 581,
+          "sha256": "615e471953ebc207eee13d2076071c8cfa33d64fe7ce265c8c4a8666687e6f06",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeTerminal.TwoPairs",
+        "Overfull.NativeAssembly.TwoPairBoundary"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": "2026-11-25T02:40:23.417366+00:00",
+      "recorded_elapsed_seconds": 4.141348483999536,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/terminal-two-pairs-build-01.log",
+        "bytes": 173,
+        "sha256": "1ab714572419b505d92d263d6c0a7fceaf58387c6371b7813d2c456266eee123",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [],
+      "source_snapshot_status": "absent",
+      "recorded_source_hashes": {
+        "Overfull/NativeTerminal/TwoPairs.lean": "e890bedc939223921464ba9b0afa6b2a55bc2fb555dd6b77924cca6c91294b4f",
+        "Overfull/NativeAssembly/TwoPairBoundary.lean": "2e1c2f84714f69d2c50e9fbcc57b42616cb4412c41b698c0fcc57f5e50d7db24"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {
+        "Overfull/NativeTerminal/TwoPairs.lean": "e890bedc939223921464ba9b0afa6b2a55bc2fb555dd6b77924cca6c91294b4f",
+        "Overfull/NativeAssembly/TwoPairBoundary.lean": "2e1c2f84714f69d2c50e9fbcc57b42616cb4412c41b698c0fcc57f5e50d7db24"
+      },
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "two-pair-palette-01",
+      "kind": "lean_compiler",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pair-palette-01.json",
+          "bytes": 410,
+          "sha256": "23f127602900c125cc07eb1c0222593fdfab00f879366cddd8923bd85c50d910",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": "passed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/AssignedParts/TwoPairPalette.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:43:40.634872+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:43:43.392889+00:00",
+      "recorded_elapsed_seconds": 2.7579428859999098,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/two-pair-palette-01.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [],
+      "source_snapshot_status": "absent",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "two-pair-palette-build-01",
+      "kind": "lake_build",
+      "receipt_layout": "flat_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pair-palette-build-01.json",
+          "bytes": 366,
+          "sha256": "fe524922187195e2a6646b735742c88fd2abcb4481a16efc7ddf3a19669607be",
+          "layout": "flat_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": "passed",
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.AssignedParts.TwoPairPalette"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": "2026-11-25T02:43:43.393468+00:00",
+      "recorded_finished_at_utc": "2026-11-25T02:43:47.045265+00:00",
+      "recorded_elapsed_seconds": 3.6517108319994804,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/two-pair-palette-build-01.log",
+        "bytes": 109,
+        "sha256": "e42f3b506371724bfc972737f4cb892be933177be6100043f8a36ddb6cb2fe5a",
+        "recorded_sha256": null,
+        "matches_recorded_sha256": null
+      },
+      "source_snapshots": [],
+      "source_snapshot_status": "absent",
+      "recorded_source_hashes": {},
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "two-pairs-001",
+      "kind": "lean_compiler",
+      "receipt_layout": "directory_terminal_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-001/terminal.json",
+          "bytes": 474,
+          "sha256": "f9882898691ba0c4764807d17c98feb42a2f80e0b65121761411f2c3d4be5f01",
+          "layout": "directory_terminal_json"
+        }
+      ],
+      "observed_exit_code": 1,
+      "outcome_from_exit_code": "failed",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/ExceptionalPalette/TwoPairs.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": null,
+      "recorded_elapsed_seconds": 9.913215637207031,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/two-pairs-001/output.log",
+        "bytes": 548,
+        "sha256": "96042b304cbfad5e8151b4a94d27f4e56650b8181a7e48a8b4406b0d84e26e31",
+        "recorded_sha256": "96042b304cbfad5e8151b4a94d27f4e56650b8181a7e48a8b4406b0d84e26e31",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-001/source/Overfull/ExceptionalPalette/TwoPairs.lean",
+          "bytes": 14796,
+          "sha256": "e58a15361cc8ec7804ed651c310ac9e2b62e38d86c390596e35dbf1c3cdcf83b",
+          "source_path": "Overfull/ExceptionalPalette/TwoPairs.lean",
+          "association_basis": "source/ subtree of attempt directory",
+          "recorded_sha256": "e58a15361cc8ec7804ed651c310ac9e2b62e38d86c390596e35dbf1c3cdcf83b",
+          "matches_recorded_sha256": true
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {
+        "Overfull/ExceptionalPalette/TwoPairs.lean": "e58a15361cc8ec7804ed651c310ac9e2b62e38d86c390596e35dbf1c3cdcf83b"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "two-pairs-002",
+      "kind": "lean_compiler",
+      "receipt_layout": "directory_terminal_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-002/terminal.json",
+          "bytes": 474,
+          "sha256": "a8f3a894745624995bd0c0e2aa698b250e775459215076a064b33d7844a317c2",
+          "layout": "directory_terminal_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/ExceptionalPalette/TwoPairs.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": null,
+      "recorded_elapsed_seconds": 9.705398321151733,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/two-pairs-002/output.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-002/source/Overfull/ExceptionalPalette/TwoPairs.lean",
+          "bytes": 14948,
+          "sha256": "06638c96721da3985ca8e7a1732801b88ffd0337b303950beafc16ff69e39bf7",
+          "source_path": "Overfull/ExceptionalPalette/TwoPairs.lean",
+          "association_basis": "source/ subtree of attempt directory",
+          "recorded_sha256": "06638c96721da3985ca8e7a1732801b88ffd0337b303950beafc16ff69e39bf7",
+          "matches_recorded_sha256": true
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {
+        "Overfull/ExceptionalPalette/TwoPairs.lean": "06638c96721da3985ca8e7a1732801b88ffd0337b303950beafc16ff69e39bf7"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "two-pairs-003",
+      "kind": "lake_build",
+      "receipt_layout": "directory_terminal_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-003/terminal.json",
+          "bytes": 430,
+          "sha256": "121862993d5beff3a8de276066f328e0b1cb56b18b58c3ccf89ead0efc7a3b8d",
+          "layout": "directory_terminal_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.ExceptionalPalette.TwoPairs"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": null,
+      "recorded_elapsed_seconds": 11.00039553642273,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/two-pairs-003/output.log",
+        "bytes": 108,
+        "sha256": "beeec6133c2b8aa97c461a00cc1d47c8cdf6505d4f15fc2e30e551b10b0211e6",
+        "recorded_sha256": "beeec6133c2b8aa97c461a00cc1d47c8cdf6505d4f15fc2e30e551b10b0211e6",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-003/source/Overfull/ExceptionalPalette/TwoPairs.lean",
+          "bytes": 14948,
+          "sha256": "06638c96721da3985ca8e7a1732801b88ffd0337b303950beafc16ff69e39bf7",
+          "source_path": "Overfull/ExceptionalPalette/TwoPairs.lean",
+          "association_basis": "source/ subtree of attempt directory",
+          "recorded_sha256": "06638c96721da3985ca8e7a1732801b88ffd0337b303950beafc16ff69e39bf7",
+          "matches_recorded_sha256": true
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {
+        "Overfull/ExceptionalPalette/TwoPairs.lean": "06638c96721da3985ca8e7a1732801b88ffd0337b303950beafc16ff69e39bf7"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "two-pairs-004",
+      "kind": "lean_compiler",
+      "receipt_layout": "directory_terminal_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-004/terminal.json",
+          "bytes": 469,
+          "sha256": "5b28997d9e49be8fd1284408b46fcea2c2814bc1e1b1bbca990b75193692e7bf",
+          "layout": "directory_terminal_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairs.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": null,
+      "recorded_elapsed_seconds": 2.99483060836792,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/two-pairs-004/output.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-004/source/Overfull/NativeAssembly/TwoPairs.lean",
+          "bytes": 5976,
+          "sha256": "6c663eca5434a60ffa904ec2af47c6999aec5bed0f2aa6bd62aba5cd0dde4739",
+          "source_path": "Overfull/NativeAssembly/TwoPairs.lean",
+          "association_basis": "source/ subtree of attempt directory",
+          "recorded_sha256": "6c663eca5434a60ffa904ec2af47c6999aec5bed0f2aa6bd62aba5cd0dde4739",
+          "matches_recorded_sha256": true
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {
+        "Overfull/NativeAssembly/TwoPairs.lean": "6c663eca5434a60ffa904ec2af47c6999aec5bed0f2aa6bd62aba5cd0dde4739"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "two-pairs-005",
+      "kind": "lake_build",
+      "receipt_layout": "directory_terminal_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-005/terminal.json",
+          "bytes": 426,
+          "sha256": "61a2491ede74aa75b40e6dfaffb3381fe7fd4bd78094b50c594ac472c9a89dcd",
+          "layout": "directory_terminal_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeAssembly.TwoPairs"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": null,
+      "recorded_elapsed_seconds": 4.154482364654541,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/two-pairs-005/output.log",
+        "bytes": 104,
+        "sha256": "033ed05611b1f31bbf7e0d57275a4032918138bb8ebf1c3b75fffa51879f2004",
+        "recorded_sha256": "033ed05611b1f31bbf7e0d57275a4032918138bb8ebf1c3b75fffa51879f2004",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-005/source/Overfull/NativeAssembly/TwoPairs.lean",
+          "bytes": 5976,
+          "sha256": "6c663eca5434a60ffa904ec2af47c6999aec5bed0f2aa6bd62aba5cd0dde4739",
+          "source_path": "Overfull/NativeAssembly/TwoPairs.lean",
+          "association_basis": "source/ subtree of attempt directory",
+          "recorded_sha256": "6c663eca5434a60ffa904ec2af47c6999aec5bed0f2aa6bd62aba5cd0dde4739",
+          "matches_recorded_sha256": true
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {
+        "Overfull/NativeAssembly/TwoPairs.lean": "6c663eca5434a60ffa904ec2af47c6999aec5bed0f2aa6bd62aba5cd0dde4739"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "two-pairs-006",
+      "kind": "lean_compiler",
+      "receipt_layout": "directory_terminal_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-006/terminal.json",
+          "bytes": 477,
+          "sha256": "265b19bdbdd0445fb1883fc60291cfef275c7f88c5296b9fc51bd15f6ec34885",
+          "layout": "directory_terminal_json"
+        }
+      ],
+      "observed_exit_code": 1,
+      "outcome_from_exit_code": "failed",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeReserve/PartnerResidual.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": null,
+      "recorded_elapsed_seconds": 2.8490607738494873,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/two-pairs-006/output.log",
+        "bytes": 441,
+        "sha256": "fcacbfb3a334903d9f909b9e663e43ae1dd941866ba06536d1cd5bdad9b37201",
+        "recorded_sha256": "fcacbfb3a334903d9f909b9e663e43ae1dd941866ba06536d1cd5bdad9b37201",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-006/source/Overfull/NativeReserve/PartnerResidual.lean",
+          "bytes": 6403,
+          "sha256": "36c9e534793b31fb61ff1e49e031ca5fadf01b8b2a63234c5c45bf08bf1fcad8",
+          "source_path": "Overfull/NativeReserve/PartnerResidual.lean",
+          "association_basis": "source/ subtree of attempt directory",
+          "recorded_sha256": "36c9e534793b31fb61ff1e49e031ca5fadf01b8b2a63234c5c45bf08bf1fcad8",
+          "matches_recorded_sha256": true
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {
+        "Overfull/NativeReserve/PartnerResidual.lean": "36c9e534793b31fb61ff1e49e031ca5fadf01b8b2a63234c5c45bf08bf1fcad8"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "two-pairs-007",
+      "kind": "lean_compiler",
+      "receipt_layout": "directory_terminal_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-007/terminal.json",
+          "bytes": 477,
+          "sha256": "f6d7895378e19acb32e05f69c72b111c20745f25c30abf9c733f927ecb36c8eb",
+          "layout": "directory_terminal_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeReserve/PartnerResidual.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": null,
+      "recorded_elapsed_seconds": 3.0113019943237305,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/two-pairs-007/output.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-007/source/Overfull/NativeReserve/PartnerResidual.lean",
+          "bytes": 6423,
+          "sha256": "c62cd53c843afb465ae49087350becd605d1de791b67df19c932b17180f55034",
+          "source_path": "Overfull/NativeReserve/PartnerResidual.lean",
+          "association_basis": "source/ subtree of attempt directory",
+          "recorded_sha256": "c62cd53c843afb465ae49087350becd605d1de791b67df19c932b17180f55034",
+          "matches_recorded_sha256": true
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {
+        "Overfull/NativeReserve/PartnerResidual.lean": "c62cd53c843afb465ae49087350becd605d1de791b67df19c932b17180f55034"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "two-pairs-008",
+      "kind": "lake_build",
+      "receipt_layout": "directory_terminal_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-008/terminal.json",
+          "bytes": 433,
+          "sha256": "d964f4693273f1b21f20bce79ea910d68e9a05006311ee37abc2ae3d90736322",
+          "layout": "directory_terminal_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeReserve.PartnerResidual"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": null,
+      "recorded_elapsed_seconds": 3.7394425868988037,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/two-pairs-008/output.log",
+        "bytes": 110,
+        "sha256": "971608960f83704b8a1255203780d2ec3f91f881b765bf9f3449ca91c88ae9ea",
+        "recorded_sha256": "971608960f83704b8a1255203780d2ec3f91f881b765bf9f3449ca91c88ae9ea",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-008/source/Overfull/NativeReserve/PartnerResidual.lean",
+          "bytes": 6423,
+          "sha256": "c62cd53c843afb465ae49087350becd605d1de791b67df19c932b17180f55034",
+          "source_path": "Overfull/NativeReserve/PartnerResidual.lean",
+          "association_basis": "source/ subtree of attempt directory",
+          "recorded_sha256": "c62cd53c843afb465ae49087350becd605d1de791b67df19c932b17180f55034",
+          "matches_recorded_sha256": true
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {
+        "Overfull/NativeReserve/PartnerResidual.lean": "c62cd53c843afb465ae49087350becd605d1de791b67df19c932b17180f55034"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "two-pairs-009",
+      "kind": "lean_compiler",
+      "receipt_layout": "directory_terminal_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-009/terminal.json",
+          "bytes": 476,
+          "sha256": "a1aced077c89bc19e4e64d58c7ad02b066ede313f94612c2bd88920b2d5b9395",
+          "layout": "directory_terminal_json"
+        }
+      ],
+      "observed_exit_code": 1,
+      "outcome_from_exit_code": "failed",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairReserve.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": null,
+      "recorded_elapsed_seconds": 3.155846118927002,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/two-pairs-009/output.log",
+        "bytes": 1309,
+        "sha256": "5c6bb7508c67131879e13002dcd868e42b0937d0b19a9121ae403497a2ce8f48",
+        "recorded_sha256": "5c6bb7508c67131879e13002dcd868e42b0937d0b19a9121ae403497a2ce8f48",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-009/source/Overfull/NativeAssembly/TwoPairReserve.lean",
+          "bytes": 4906,
+          "sha256": "a8714d22555b08591bd648be3bedabbdeb3ace0c941f3421cfc8c7a27daed6d5",
+          "source_path": "Overfull/NativeAssembly/TwoPairReserve.lean",
+          "association_basis": "source/ subtree of attempt directory",
+          "recorded_sha256": "a8714d22555b08591bd648be3bedabbdeb3ace0c941f3421cfc8c7a27daed6d5",
+          "matches_recorded_sha256": true
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {
+        "Overfull/NativeAssembly/TwoPairReserve.lean": "a8714d22555b08591bd648be3bedabbdeb3ace0c941f3421cfc8c7a27daed6d5"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "two-pairs-010",
+      "kind": "lean_compiler",
+      "receipt_layout": "directory_terminal_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-010/terminal.json",
+          "bytes": 476,
+          "sha256": "27c3e6cc7d73b0f82c06197449a0735d26ec055aee9fe22ac9908d09f2464870",
+          "layout": "directory_terminal_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Overfull/NativeAssembly/TwoPairReserve.lean"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": null,
+      "recorded_elapsed_seconds": 3.066279411315918,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/two-pairs-010/output.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-010/source/Overfull/NativeAssembly/TwoPairReserve.lean",
+          "bytes": 5068,
+          "sha256": "2d07aeaed847b92559c991e162a81a5e171903216c179e8577f5ed8318108a4e",
+          "source_path": "Overfull/NativeAssembly/TwoPairReserve.lean",
+          "association_basis": "source/ subtree of attempt directory",
+          "recorded_sha256": "2d07aeaed847b92559c991e162a81a5e171903216c179e8577f5ed8318108a4e",
+          "matches_recorded_sha256": true
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {
+        "Overfull/NativeAssembly/TwoPairReserve.lean": "2d07aeaed847b92559c991e162a81a5e171903216c179e8577f5ed8318108a4e"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    },
+    {
+      "attempt_id": "two-pairs-011",
+      "kind": "lake_build",
+      "receipt_layout": "directory_terminal_json",
+      "receipts": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-011/terminal.json",
+          "bytes": 433,
+          "sha256": "d275ef0f6649a3067e17461c3fb48f1f81ed4a889c42a364f255fc07fdb9c4f8",
+          "layout": "directory_terminal_json"
+        }
+      ],
+      "observed_exit_code": 0,
+      "outcome_from_exit_code": "successful",
+      "recorded_status": null,
+      "command": [
+        "/home/agent/.elan/bin/lake",
+        "build",
+        "Overfull.NativeAssembly.TwoPairReserve"
+      ],
+      "recorded_cwd": "/workspace/scratch/0e01d9fcb296/overfull-lean",
+      "recorded_started_at_utc": null,
+      "recorded_finished_at_utc": null,
+      "recorded_elapsed_seconds": 3.4426112174987793,
+      "log": {
+        "path": "verification/runs/20261125T023700Z/focused/two-pairs-011/output.log",
+        "bytes": 110,
+        "sha256": "e95ae88bd136d431a782ea384ca6a54fb70c0ba645f11e9cb1e5d83755ed9a8c",
+        "recorded_sha256": "e95ae88bd136d431a782ea384ca6a54fb70c0ba645f11e9cb1e5d83755ed9a8c",
+        "matches_recorded_sha256": true
+      },
+      "source_snapshots": [
+        {
+          "path": "verification/runs/20261125T023700Z/focused/two-pairs-011/source/Overfull/NativeAssembly/TwoPairReserve.lean",
+          "bytes": 5068,
+          "sha256": "2d07aeaed847b92559c991e162a81a5e171903216c179e8577f5ed8318108a4e",
+          "source_path": "Overfull/NativeAssembly/TwoPairReserve.lean",
+          "association_basis": "source/ subtree of attempt directory",
+          "recorded_sha256": "2d07aeaed847b92559c991e162a81a5e171903216c179e8577f5ed8318108a4e",
+          "matches_recorded_sha256": true
+        }
+      ],
+      "source_snapshot_status": "present",
+      "recorded_source_hashes": {
+        "Overfull/NativeAssembly/TwoPairReserve.lean": "2d07aeaed847b92559c991e162a81a5e171903216c179e8577f5ed8318108a4e"
+      },
+      "recorded_source_hashes_without_saved_snapshot": {},
+      "recorded_changed_sources": null,
+      "recorder": null
+    }
+  ]
+}

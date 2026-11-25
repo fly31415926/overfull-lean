@@ -1,0 +1,42 @@
+Overfull/AssignedParts/PartnerSignatures.lean:49:2: error: unsolved goals
+case pos
+V : Type u_1
+E : Type u_2
+G : Multigraph V E
+M : Finset E
+U₀ Z : Finset V
+z w : { x // x ∈ Z }
+hp : matchingPartner G M ↑z ∈ Z
+⊢ ⟨matchingPartner G M ↑z, hp⟩ = w ↔ matchingPartner G M ↑z = ↑w
+Overfull/AssignedParts/PartnerSignatures.lean:49:30: error: This simp argument is unused:
+  Subtype.mk.injEq
+
+Hint: Omit it from the simp argument list.
+  simp only [Sum.inr.injEq,̵ ̵S̵u̵b̵t̵y̵p̵e̵.̵m̵k̵.̵i̵n̵j̵E̵q̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/AssignedParts/PartnerSignatures.lean:50:15: error: This simp argument is unused:
+  Sum.inl_ne_inr
+
+Hint: Omit it from the simp argument list.
+  simp only [S̵u̵m̵.̵i̵n̵l̵_̵n̵e̵_̵i̵n̵r̵,̵ ̵false_iff]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Overfull/AssignedParts/PartnerSignatures.lean:155:46: error: Application type mismatch: The argument
+  Multigraph.edge_eq G e
+has type
+  s(G.firstEnd e, G.secondEnd e) = G.edge e
+but is expected to have type
+  G.edge e = s(↑z, ↑w)
+in the application
+  Multigraph.otherEnd_eq_of_edge G e (↑z) (↑w) (Multigraph.edge_eq G e)
+Overfull/AssignedParts/PartnerSignatures.lean:165:2: error: Type mismatch
+  Eq.symm (Multigraph.edge_eq G e)
+has type
+  G.edge e = s(G.firstEnd e, G.secondEnd e)
+but is expected to have type
+  s(↑z, ↑w) = G.edge e
+Overfull/AssignedParts/PartnerSignatures.lean:175:8: error: Invalid field `trans`: The environment does not contain `Function.trans`
+  Nat.pow_le_pow_left ?m.40
+has type
+  ∀ (i : ℕ), (2 + #Z) ^ i ≤ 7 ^ i
