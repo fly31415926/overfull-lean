@@ -1,0 +1,39 @@
+{
+  "recorded_at_utc": "2026-11-25T03:43:47.233786+00:00",
+  "status": "published_and_read_back",
+  "local_checkpoint": "2f772802b06983c100bd9101ce7e2adcc039e13a",
+  "public_proof_commit": "2334349e1aca51efa9deeeb40dbb30bb40b9e40a",
+  "proof_tree": "122633011a768e72f2849f2a79a6896a1d44dcfd",
+  "proof_parent": "5679471018d5d087d942c592c72fca3d24e7ea32",
+  "local_and_public_proof_trees_identical": true,
+  "both_requested_branches_read_back_at_proof_commit": true,
+  "requested_branches": [
+    "main",
+    "verified-bipartite-continuation-2026-11-21"
+  ],
+  "frozen_inputs_controls_and_outputs_unchanged": true,
+  "strict_build_jobs": 3914,
+  "preservation": {
+    "status": "passed",
+    "old_declarations_preserved": 14830,
+    "new_declarations": 164,
+    "all_declarations": 14994,
+    "old_result_mappings_preserved": 2844,
+    "all_result_mappings": 2926,
+    "new_modules": 13,
+    "public_proofs": 82,
+    "complete_numbered_assertions": 51,
+    "numbered_assertions": 69,
+    "main_theorem_verified": false,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "notes": [
+    "GitHub supplied public commit author/time metadata; the entire published tree and parent match the local checkpoint.",
+    "The original local commit object text is preserved in original-local-commit.txt.",
+    "The following receipt-only successor adds these publication records without changing any verified mathematical source, frozen input, control or output."
+  ]
+}
